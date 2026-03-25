@@ -1,0 +1,3 @@
+sistema su windows per log azioni malevole
+
+https://github.com/SwiftOnSecurity/sysmon-config

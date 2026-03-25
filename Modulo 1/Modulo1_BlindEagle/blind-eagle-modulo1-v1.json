@@ -1,0 +1,260 @@
+{
+	"name": "Blind Eagle - Modulo 1",
+	"versions": {
+		"attack": "18",
+		"navigator": "5.3.0",
+		"layer": "4.5"
+	},
+	"domain": "enterprise-attack",
+	"description": "Enterprise techniques used by APT-C-36, ATT&CK group G0099 (v1.1)",
+	"filters": {
+		"platforms": [
+			"Windows",
+			"Linux",
+			"macOS",
+			"Network Devices",
+			"ESXi",
+			"PRE",
+			"Containers",
+			"IaaS",
+			"Office Suite",
+			"SaaS",
+			"Identity Provider"
+		]
+	},
+	"sorting": 0,
+	"layout": {
+		"layout": "side",
+		"aggregateFunction": "average",
+		"showID": false,
+		"showName": true,
+		"showAggregateScores": false,
+		"countUnscored": false,
+		"expandedSubtechniques": "none"
+	},
+	"hideDisabled": false,
+	"techniques": [
+		{
+			"techniqueID": "T1059",
+			"tactic": "execution",
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1059.005",
+			"tactic": "execution",
+			"score": 1,
+			"color": "#66b1ff",
+			"comment": "[APT-C-36](https://attack.mitre.org/groups/G0099) has embedded a VBScript within a malicious Word document which is executed upon the document opening.(Citation: QiAnXin APT-C-36 Feb2019)",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1105",
+			"tactic": "command-and-control",
+			"score": 1,
+			"color": "#66b1ff",
+			"comment": "[APT-C-36](https://attack.mitre.org/groups/G0099) has downloaded binary data from a specified domain after the malicious document is opened.(Citation: QiAnXin APT-C-36 Feb2019)",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1036",
+			"tactic": "defense-evasion",
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1036.004",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "#66b1ff",
+			"comment": "[APT-C-36](https://attack.mitre.org/groups/G0099) has disguised its scheduled tasks as those used by Google.(Citation: QiAnXin APT-C-36 Feb2019)",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1571",
+			"tactic": "command-and-control",
+			"score": 1,
+			"color": "#66b1ff",
+			"comment": "[APT-C-36](https://attack.mitre.org/groups/G0099) has used port 4050 for C2 communications.(Citation: QiAnXin APT-C-36 Feb2019)",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1027",
+			"tactic": "defense-evasion",
+			"score": 1,
+			"color": "#66b1ff",
+			"comment": "[APT-C-36](https://attack.mitre.org/groups/G0099) has used ConfuserEx to obfuscate its variant of [Imminent Monitor](https://attack.mitre.org/software/S0434), compressed payload and RAT packages, and password protected encrypted email attachments to avoid detection.(Citation: QiAnXin APT-C-36 Feb2019)",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1588",
+			"tactic": "resource-development",
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1588.002",
+			"tactic": "resource-development",
+			"score": 1,
+			"color": "#66b1ff",
+			"comment": "[APT-C-36](https://attack.mitre.org/groups/G0099) obtained and used a modified variant of [Imminent Monitor](https://attack.mitre.org/software/S0434).(Citation: QiAnXin APT-C-36 Feb2019)",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1566",
+			"tactic": "initial-access",
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1566.001",
+			"tactic": "initial-access",
+			"score": 1,
+			"color": "#66b1ff",
+			"comment": "[APT-C-36](https://attack.mitre.org/groups/G0099) has used spearphishing emails with password protected RAR attachment to avoid being detected by the email gateway.(Citation: QiAnXin APT-C-36 Feb2019) ",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1053",
+			"tactic": "execution",
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1053",
+			"tactic": "persistence",
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1053",
+			"tactic": "privilege-escalation",
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1053.005",
+			"tactic": "execution",
+			"score": 1,
+			"color": "#66b1ff",
+			"comment": "[APT-C-36](https://attack.mitre.org/groups/G0099) has used a macro function to set scheduled tasks, disguised as those used by Google.(Citation: QiAnXin APT-C-36 Feb2019)",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1053.005",
+			"tactic": "persistence",
+			"score": 1,
+			"color": "#66b1ff",
+			"comment": "[APT-C-36](https://attack.mitre.org/groups/G0099) has used a macro function to set scheduled tasks, disguised as those used by Google.(Citation: QiAnXin APT-C-36 Feb2019)",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1053.005",
+			"tactic": "privilege-escalation",
+			"score": 1,
+			"color": "#66b1ff",
+			"comment": "[APT-C-36](https://attack.mitre.org/groups/G0099) has used a macro function to set scheduled tasks, disguised as those used by Google.(Citation: QiAnXin APT-C-36 Feb2019)",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1204",
+			"tactic": "execution",
+			"color": "",
+			"comment": "",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": true
+		},
+		{
+			"techniqueID": "T1204.002",
+			"tactic": "execution",
+			"score": 1,
+			"color": "#66b1ff",
+			"comment": "[APT-C-36](https://attack.mitre.org/groups/G0099) has prompted victims to accept macros in order to execute the subsequent payload.(Citation: QiAnXin APT-C-36 Feb2019)",
+			"enabled": true,
+			"metadata": [],
+			"links": [],
+			"showSubtechniques": true
+		}
+	],
+	"gradient": {
+		"colors": [
+			"#ffffffff",
+			"#66b1ffff"
+		],
+		"minValue": 0,
+		"maxValue": 1
+	},
+	"legendItems": [
+		{
+			"color": "#66b1ff",
+			"label": "used by APT-C-36"
+		}
+	],
+	"metadata": [],
+	"links": [],
+	"showTacticRowBackground": false,
+	"tacticRowBackground": "#dddddd",
+	"selectTechniquesAcrossTactics": true,
+	"selectSubtechniquesWithParent": false,
+	"selectVisibleTechniques": false
+}

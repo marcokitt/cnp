@@ -1,0 +1,5 @@
+Ubuntu desktop
+
+abilitare pip ad installare pacchetti:
+python3 -m pip config set global.break-system-packages true
+

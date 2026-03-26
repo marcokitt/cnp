@@ -1,0 +1,1 @@
+installazione wazuh per il controllo dei log

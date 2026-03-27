@@ -1,0 +1,31 @@
+caldera:
+  host: "192.168.1.100"
+  port: 8888
+  api_key: "INSERISCI_LA_TUA_API_KEY"
+  use_https: false
+  verify_tls: false
+  timeout_seconds: 15
+
+operation_defaults:
+  planner_id: "PLANNER_ID_DA_CALDERA"
+  jitter: "2/5"
+  visibility: 50
+  auto_close_after_completion: false
+  poll_interval_seconds: 5
+  max_wait_seconds: 300
+
+logging:
+  log_dir: "./logs"
+  report_dir: "./reports"
+  save_jsonl: true
+  save_csv: true
+  save_markdown: true
+  save_pdf: true
+
+profile:
+  name: "APT29-lab-profile"
+  adversary_id: "ADVERSARY_ID_DA_CALDERA"
+  target_name: "Windows-10-Lab"
+  target_agent_paw: ""
+  justification: "Profilo coerente con le TTP mappate nel corso"
+  ttp_allowlist_file: "./sample_profile.json"

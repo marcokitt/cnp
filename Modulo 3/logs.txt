@@ -1,0 +1,7 @@
+27032026 1033
+
+Scelta APT41
+
+Dowload json da MITRE
+
+Upload Abilità in Caldera tramite script python

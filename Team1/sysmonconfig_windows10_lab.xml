@@ -1,0 +1,16 @@
+<Sysmon schemaversion="4.90">
+  <HashAlgorithms>sha256,imphash</HashAlgorithms>
+  <EventFiltering>
+    <ProcessCreate onmatch="include" />
+    <NetworkConnect onmatch="include" />
+    <FileCreate onmatch="include" />
+    <RegistryEvent onmatch="include" />
+    <DnsQuery onmatch="include" />
+    <ProcessTerminate onmatch="include" />
+    <CreateRemoteThread onmatch="include" />
+    <ProcessAccess onmatch="include" />
+    <PipeEvent onmatch="include" />
+    <WmiEvent onmatch="include" />
+    <DriverLoad onmatch="include" />
+  </EventFiltering>
+</Sysmon>

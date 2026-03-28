@@ -1,0 +1,45 @@
+QUERY E LOG DA LEGGERE IN WAZUH
+
+1) Log Sysmon da leggere per primi
+- Event ID 1  : Process Create
+- Event ID 3  : Network Connect
+- Event ID 11 : File Create
+- Event ID 12 : Registry Event (create/delete)
+- Event ID 13 : Registry Value Set
+- Event ID 14 : Registry key/value renamed
+- Event ID 22 : DNS Query
+
+2) Cosa cercare in ciascun log
+- Event ID 1:
+  Image, CommandLine, ParentImage, User, Hashes, CurrentDirectory
+- Event ID 3:
+  Image, SourceIp, DestinationIp, DestinationPort, Protocol
+- Event ID 11:
+  Image, TargetFilename
+- Event ID 12/13/14:
+  Image, TargetObject, Details
+- Event ID 22:
+  Image, QueryName, QueryStatus, QueryResults
+
+3) Query pratiche Wazuh dashboard / WQL
+- status=active
+- name=WIN10-LAB
+- agent.name=WIN10-LAB and rule.groups~windows
+- rule.groups~sysmon and data.win.system.eventID=1
+- rule.groups~sysmon and data.win.system.eventID=3
+- rule.groups~sysmon and data.win.system.eventID=22
+- rule.groups~sysmon and (data.win.system.eventID=12 or data.win.system.eventID=13 or data.win.system.eventID=14)
+
+4) Query XPath da usare in ossec.conf se vuoi ridurre il rumore
+<QueryList>
+  <Query Id="0" Path="Microsoft-Windows-Sysmon/Operational">
+    <Select Path="Microsoft-Windows-Sysmon/Operational">
+      *[System[(EventID=1 or EventID=3 or EventID=11 or EventID=12 or EventID=13 or EventID=14 or EventID=22)]]
+    </Select>
+  </Query>
+</QueryList>
+
+5) Lettura consigliata della timeline
+- prima Event ID 1
+- poi Event ID 22 o Event ID 3
+- poi Event ID 11 e/o 12/13/14

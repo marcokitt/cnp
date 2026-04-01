@@ -1,0 +1,152 @@
+ssh:
+  host: "192.168.30.46"
+  port: 22
+  username: "root"
+  password: "password"
+  key_file: ""
+  key_passphrase: ""
+  timeout: 10
+  allow_unknown_host: false
+  known_hosts: "C:/Users/shc-user/.ssh/known_hosts"
+
+wazuh:
+  source: "archives"   # alerts | archives | custom
+  custom_path: ""
+  remote_alerts_path: "/var/ossec/logs/alerts/alerts.json"
+  remote_archives_path: "/var/ossec/logs/archives/archives.json"
+
+filters:
+  min_level: 0
+  contains: ""
+  only_groups: []
+  exclude_groups: []
+  only_rule_ids: []
+  exclude_rule_ids: []
+
+ui:
+  max_rows_main: 35
+  max_rows_suspicious: 15
+  refresh_per_second: 4
+  show_full_log_preview: false
+  full_log_preview_len: 160
+  compact_mode: false
+
+runtime:
+  reconnect_delay_sec: 3
+  remote_tail_from_end: true
+  keepalive_sec: 30
+
+export:
+  enable_csv: true
+  csv_path: "wazuh_live_export.csv"
+  enable_jsonl: true
+  jsonl_path: "wazuh_live_export.jsonl"
+  flush_every: 1
+
+mitre:
+  enabled: true
+  tactics_map:
+    execution:
+      - "t1059"
+      - "powershell"
+      - "cmd.exe"
+      - "pwsh"
+      - "wscript"
+      - "cscript"
+      - "mshta"
+      - "rundll32"
+      - "regsvr32"
+    discovery:
+      - "whoami"
+      - "ipconfig"
+      - "net user"
+      - "net localgroup"
+      - "systeminfo"
+      - "tasklist"
+      - "hostname"
+      - "arp -a"
+      - "route print"
+    credential-access:
+      - "mimikatz"
+      - "lsass"
+      - "sekurlsa"
+      - "sam"
+      - "vault"
+    lateral-movement:
+      - "psexec"
+      - "wmic"
+      - "winrm"
+      - "sc.exe"
+      - "schtasks"
+    defense-evasion:
+      - "encodedcommand"
+      - "base64"
+      - "bypass"
+      - "certutil"
+      - "bitsadmin"
+      - "t1218"
+    persistence:
+      - "run key"
+      - "startup"
+      - "scheduled task"
+      - "schtasks"
+      - "registry run"
+    collection:
+      - "clipboard"
+      - "screenshot"
+      - "keylogging"
+      - "browser"
+
+sysmon:
+  enabled: true
+  event_map:
+    "1": "Process Create"
+    "3": "Network Connection"
+    "7": "Image Loaded"
+    "8": "CreateRemoteThread"
+    "10": "Process Access"
+    "11": "File Create"
+    "12": "Registry Create/Delete"
+    "13": "Registry Set Value"
+    "22": "DNS Query"
+
+caldera:
+  enabled: true
+  keywords:
+    - "caldera"
+    - "sandcat"
+    - "manx"
+    - "54ndc47"
+    - "agent.exe"
+    - "splunkd"
+    - "serverpaw"
+
+detection:
+  suspicious_keywords:
+    - "caldera"
+    - "sandcat"
+    - "manx"
+    - "powershell"
+    - "pwsh"
+    - "cmd.exe"
+    - "whoami"
+    - "net user"
+    - "net localgroup"
+    - "rundll32"
+    - "regsvr32"
+    - "certutil"
+    - "bitsadmin"
+    - "wmic"
+    - "psexec"
+    - "mimikatz"
+    - "invoke-"
+    - "base64"
+    - "encodedcommand"
+    - "t1059"
+    - "sysmon"
+  suspicious_rule_ids: []
+  suspicious_groups:
+    - "sysmon"
+    - "attack"
+    - "windows"
+  suspicious_min_level: 5

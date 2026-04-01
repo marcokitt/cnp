@@ -1,0 +1,307 @@
+{
+  "id": "c0d4fa4a-4522-42f7-940d-9bc95dc04c7c",
+  "name": "apt-sim-20260401-122213",
+  "host_group": [
+    {
+      "paw": "dcdvcj",
+      "sleep_min": 30,
+      "sleep_max": 60,
+      "watchdog": 0,
+      "group": "red",
+      "architecture": "amd64",
+      "platform": "windows",
+      "server": "http://192.168.30.45:8888",
+      "upstream_dest": "http://192.168.30.45:8888",
+      "username": "WS10\\Administrator",
+      "location": "C:\\Users\\Public\\splunkd.exe",
+      "pid": 3716,
+      "ppid": 8424,
+      "trusted": true,
+      "executors": [
+        "cmd",
+        "psh",
+        "proc"
+      ],
+      "privilege": "Elevated",
+      "exe_name": "splunkd.exe",
+      "host": "WS10",
+      "contact": "HTTP",
+      "proxy_receivers": {},
+      "proxy_chain": [],
+      "origin_link_id": "",
+      "deadman_enabled": true,
+      "available_contacts": [
+        "HTTP"
+      ],
+      "host_ip_addrs": [
+        "192.168.30.24"
+      ],
+      "display_name": "WS10$WS10\\Administrator",
+      "created": "2026-04-01T07:16:53Z",
+      "last_seen": "2026-04-01T10:21:31Z",
+      "links": [
+        {
+          "id": "7b2b49ea-2292-4a7d-9282-45ace761aed6",
+          "paw": "dcdvcj",
+          "command": "Q2xlYXItSGlzdG9yeTtDbGVhcg==",
+          "plaintext_command": "Q2xlYXItSGlzdG9yeTtDbGVhcg==",
+          "status": 0,
+          "score": 0,
+          "jitter": 0,
+          "decide": "2026-04-01T07:16:53Z",
+          "pin": 0,
+          "pid": "8128",
+          "facts": [],
+          "relationships": [],
+          "used": [],
+          "unique": "7b2b49ea-2292-4a7d-9282-45ace761aed6",
+          "collect": "2026-04-01T07:16:53Z",
+          "finish": "2026-04-01T07:16:53Z",
+          "ability": {
+            "ability_id": "43b3754c-def4-4699-a673-1d85648fda6a",
+            "tactic": "defense-evasion",
+            "technique_name": "Indicator Removal on Host: Clear Command History",
+            "technique_id": "T1070.003",
+            "name": "Avoid logs",
+            "description": "Stop terminal from logging history",
+            "executors": [
+              {
+                "name": "sh",
+                "platform": "darwin",
+                "command": "> $HOME/.bash_history && unset HISTFILE",
+                "code": null,
+                "language": null,
+                "build_target": null,
+                "payloads": [],
+                "uploads": [],
+                "timeout": 60,
+                "parsers": [],
+                "cleanup": [],
+                "variations": [],
+                "additional_info": {}
+              },
+              {
+                "name": "sh",
+                "platform": "linux",
+                "command": "> $HOME/.bash_history && unset HISTFILE",
+                "code": null,
+                "language": null,
+                "build_target": null,
+                "payloads": [],
+                "uploads": [],
+                "timeout": 60,
+                "parsers": [],
+                "cleanup": [],
+                "variations": [],
+                "additional_info": {}
+              },
+              {
+                "name": "psh",
+                "platform": "windows",
+                "command": "Clear-History;Clear",
+                "code": null,
+                "language": null,
+                "build_target": null,
+                "payloads": [],
+                "uploads": [],
+                "timeout": 60,
+                "parsers": [],
+                "cleanup": [],
+                "variations": [],
+                "additional_info": {}
+              }
+            ],
+            "requirements": [],
+            "privilege": null,
+            "repeatable": false,
+            "buckets": [
+              "defense-evasion"
+            ],
+            "additional_info": {},
+            "access": {},
+            "singleton": false,
+            "plugin": "stockpile",
+            "delete_payload": true
+          },
+          "executor": {
+            "name": "psh",
+            "platform": "windows",
+            "command": "Clear-History;Clear",
+            "code": null,
+            "language": null,
+            "build_target": null,
+            "payloads": [],
+            "uploads": [],
+            "timeout": 60,
+            "parsers": [],
+            "cleanup": [],
+            "variations": [],
+            "additional_info": {}
+          },
+          "cleanup": 0,
+          "visibility": {
+            "score": 50,
+            "adjustments": []
+          },
+          "host": "WS10",
+          "output": "False",
+          "deadman": false,
+          "agent_reported_time": "2026-04-01T07:16:53Z"
+        }
+      ],
+      "pending_contact": "HTTP",
+      "status": "alive"
+    }
+  ],
+  "adversary": {
+    "adversary_id": "01d77744-2515-401a-a497-d9f7241aac3c",
+    "name": "Check",
+    "description": "Profile to check proper platform configuration. Observe outputs to verify.",
+    "atomic_ordering": [
+      "bd527b63-9f9e-46e0-9816-b8434d2b8989",
+      "6e1a53c0-7352-4899-be35-fa7f364d5722",
+      "52177cc1-b9ab-4411-ac21-2eadc4b5d3b8",
+      "335cea7b-bec0-48c6-adfb-6066070f5f68",
+      "e8017c46-acb8-400c-a4b5-b3362b5b5baa",
+      "9849d956-37ea-49f2-a8b5-f2ca080b315d",
+      "830bb6ed-9594-4817-b1a1-c298c0f9f425",
+      "b18e8767-b7ea-41a3-8e80-baf65a5ddef5"
+    ],
+    "objective": "495a9828-cab1-44dd-a0ca-66e58177d8cc",
+    "tags": [],
+    "has_repeatable_abilities": false,
+    "plugin": "stockpile"
+  },
+  "jitter": "2/8",
+  "planner": {
+    "id": "788107d5-dc1e-4204-9269-38df0186d3e7",
+    "name": "batch",
+    "module": "plugins.stockpile.app.planners.batch",
+    "params": {},
+    "description": "During each phase of the operation, the batch planner loops through all agents (which are part of the\noperation's group) and sends each of them a list of all ability commands the planner thinks it can complete. This\ndecision is based on the agent matching the operating system (execution platform) of the ability and the ability \ncommand having no unsatisfied variables. It then waits for each agent to complete their list of commands before\nmoving on to the next phase. In phaseless operations, all applicable commands are executed in a single phase which\nwill then run to completion and finish the operation.\n",
+    "stopping_conditions": [],
+    "ignore_enforcement_modules": [],
+    "allow_repeatable_abilities": true,
+    "plugin": "stockpile"
+  },
+  "start": "2026-04-01T10:22:15Z",
+  "state": "running",
+  "obfuscator": "plain-text",
+  "autonomous": 1,
+  "chain": [],
+  "auto_close": true,
+  "visibility": 51,
+  "objective": "",
+  "use_learning_parsers": false,
+  "group": "red",
+  "source": {
+    "id": "ed32b9c3-9593-4c33-b0db-e2007315096b",
+    "name": "basic",
+    "facts": [
+      {
+        "unique": "file.sensitive.extensionwav",
+        "trait": "file.sensitive.extension",
+        "name": "file.sensitive.extension",
+        "value": "wav",
+        "created": "2026-03-25T11:27:24Z",
+        "score": 1,
+        "source": "ed32b9c3-9593-4c33-b0db-e2007315096b",
+        "origin_type": "IMPORTED",
+        "links": [],
+        "relationships": [],
+        "limit_count": -1,
+        "collected_by": [],
+        "technique_id": null
+      },
+      {
+        "unique": "file.sensitive.extensionyml",
+        "trait": "file.sensitive.extension",
+        "name": "file.sensitive.extension",
+        "value": "yml",
+        "created": "2026-03-25T11:27:24Z",
+        "score": 1,
+        "source": "ed32b9c3-9593-4c33-b0db-e2007315096b",
+        "origin_type": "IMPORTED",
+        "links": [],
+        "relationships": [],
+        "limit_count": -1,
+        "collected_by": [],
+        "technique_id": null
+      },
+      {
+        "unique": "file.sensitive.extensionpng",
+        "trait": "file.sensitive.extension",
+        "name": "file.sensitive.extension",
+        "value": "png",
+        "created": "2026-03-25T11:27:24Z",
+        "score": 1,
+        "source": "ed32b9c3-9593-4c33-b0db-e2007315096b",
+        "origin_type": "IMPORTED",
+        "links": [],
+        "relationships": [],
+        "limit_count": -1,
+        "collected_by": [],
+        "technique_id": null
+      },
+      {
+        "unique": "server.malicious.urlkeyloggedsite.com",
+        "trait": "server.malicious.url",
+        "name": "server.malicious.url",
+        "value": "keyloggedsite.com",
+        "created": "2026-03-25T11:27:24Z",
+        "score": 1,
+        "source": "ed32b9c3-9593-4c33-b0db-e2007315096b",
+        "origin_type": "IMPORTED",
+        "links": [],
+        "relationships": [],
+        "limit_count": -1,
+        "collected_by": [],
+        "technique_id": null
+      }
+    ],
+    "rules": [
+      {
+        "action": "DENY",
+        "trait": "file.sensitive.extension",
+        "match": ".*"
+      },
+      {
+        "action": "ALLOW",
+        "trait": "file.sensitive.extension",
+        "match": "png"
+      },
+      {
+        "action": "ALLOW",
+        "trait": "file.sensitive.extension",
+        "match": "yml"
+      },
+      {
+        "action": "ALLOW",
+        "trait": "file.sensitive.extension",
+        "match": "wav"
+      }
+    ],
+    "adjustments": [
+      {
+        "ability_id": "1b4fb81c-8090-426c-93ab-0a633e7a16a7",
+        "trait": "host.installed.av",
+        "value": "symantec",
+        "offset": 3
+      },
+      {
+        "ability_id": "1b4fb81c-8090-426c-93ab-0a633e7a16a7",
+        "trait": "host.installed.av",
+        "value": "mcafee",
+        "offset": 3
+      }
+    ],
+    "relationships": [],
+    "plugin": "stockpile"
+  },
+  "_selector": {
+    "agent_paw": "dcdvcj",
+    "group": "red",
+    "selected_adversary_id": "01d77744-2515-401a-a497-d9f7241aac3c",
+    "operation_adversary_id": "01d77744-2515-401a-a497-d9f7241aac3c"
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "agent_paw": "dcdvcj",
+  "agent_host": "WS10",
+  "agent_platform": "windows",
+  "agent_executors": [
+    "cmd",
+    "psh",
+    "proc"
+  ],
+  "adversary_id": "0f4c3c67-845e-49a0-927e-90ed33c044e0",
+  "adversary_name": "Discovery",
+  "referenced_ability_count": 12,
+  "compatible_count": 9,
+  "incompatible_count": 3,
+  "missing_count": 0,
+  "fixed_embedded_count": 0,
+  "compatible": [
+    {
+      "ability_id": "c0da588f-79f0-4263-8998-7496b1a40596",
+      "name": "Identify active user",
+      "tactic": "discovery",
+      "technique_id": "T1033",
+      "resolution": "live",
+      "reason": "compatible"
+    },
+    {
+      "ability_id": "feaced8f-f43f-452a-9500-a5219488abb8",
+      "name": "Identify local users",
+      "tactic": "discovery",
+      "technique_id": "T1087.001",
+      "resolution": "live",
+      "reason": "compatible"
+    },
+    {
+      "ability_id": "3b5db901-2cb8-4df7-8043-c4628a6a5d5a",
+      "name": "Find user processes",
+      "tactic": "discovery",
+      "technique_id": "T1057",
+      "resolution": "live",
+      "reason": "compatible"
+    },
+    {
+      "ability_id": "530e47c6-8592-42bf-91df-c59ffbd8541b",
+      "name": "View admin shares",
+      "tactic": "discovery",
+      "technique_id": "T1135",
+      "resolution": "live",
+      "reason": "compatible"
+    },
+    {
+      "ability_id": "26c8b8b5-7b5b-4de1-a128-7d37fb14f517",
+      "name": "Discover domain controller",
+      "tactic": "discovery",
+      "technique_id": "T1018",
+      "resolution": "live",
+      "reason": "compatible"
+    },
+    {
+      "ability_id": "2dece965-37a0-4f70-a391-0f30e3331aba",
+      "name": "Discover antivirus programs",
+      "tactic": "discovery",
+      "technique_id": "T1518.001",
+      "resolution": "live",
+      "reason": "compatible"
+    },
+    {
+      "ability_id": "5c4dd985-89e3-4590-9b57-71fed66ff4e2",
+      "name": "Permission Groups Discovery",
+      "tactic": "discovery",
+      "technique_id": "T1069.001",
+      "resolution": "live",
+      "reason": "compatible"
+    },
+    {
+      "ability_id": "8c06ebf8-bacf-486b-bd77-21ba8c5a5777",
+      "name": "Identify Firewalls",
+      "tactic": "discovery",
+      "technique_id": "T1518.001",
+      "resolution": "live",
+      "reason": "compatible"
+    },
+    {
+      "ability_id": "ce485320-41a4-42e8-a510-f5a8fe96a644",
+      "name": "Discover Mail Server",
+      "tactic": "discovery",
+      "technique_id": "T1018",
+      "resolution": "live",
+      "reason": "compatible"
+    }
+  ],
+  "incompatible": [
+    {
+      "ability_id": "c1cd6388-3ced-48c7-a511-0434c6ba8f48",
+      "name": "Find local users",
+      "tactic": "discovery",
+      "technique_id": "T1087.001",
+      "resolution": "live",
+      "reason": "platform mismatch (windows)"
+    },
+    {
+      "ability_id": "b6f545ef-f802-4537-b59d-2cb19831c8ed",
+      "name": "Snag broadcast IP",
+      "tactic": "discovery",
+      "technique_id": "T1016",
+      "resolution": "live",
+      "reason": "platform mismatch (windows)"
+    },
+    {
+      "ability_id": "b007fc38-9eb7-4320-92b3-9a3ad3e6ec25",
+      "name": "Get Chrome Bookmarks",
+      "tactic": "discovery",
+      "technique_id": "T1217",
+      "resolution": "live",
+      "reason": "platform mismatch (windows)"
+    }
+  ],
+  "missing": []
+}

@@ -1,0 +1,1390 @@
+[
+  {
+    "timestamp": "2026-04-01T12:56:25.887+0000",
+    "rule": {
+      "level": 6,
+      "description": "Executable dropped in Windows root folder",
+      "id": "92217",
+      "mitre": {
+        "id": [
+          "T1570"
+        ],
+        "tactic": [
+          "Lateral Movement"
+        ],
+        "technique": [
+          "Lateral Tool Transfer"
+        ]
+      },
+      "firedtimes": 10,
+      "mail": false,
+      "groups": [
+        "sysmon",
+        "sysmon_eid11_detections",
+        "windows"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775048185.4720944",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-Sysmon",
+          "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+          "eventID": "11",
+          "version": "2",
+          "level": "4",
+          "task": "11",
+          "opcode": "0",
+          "keywords": "0x8000000000000000",
+          "systemTime": "2026-04-01T10:56:55.3194513Z",
+          "eventRecordID": "365959",
+          "processID": "7940",
+          "threadID": "8064",
+          "channel": "Microsoft-Windows-Sysmon/Operational",
+          "computer": "WS10",
+          "severityValue": "INFORMATION",
+          "message": "\"File created:\r\nRuleName: DLL\r\nUtcTime: 2026-04-01 10:56:55.318\r\nProcessGuid: {d9a99926-f9f7-69cc-8d0a-000000000600}\r\nProcessId: 6488\r\nImage: C:\\Windows\\System32\\mousocoreworker.exe\r\nTargetFilename: C:\\Windows\\SoftwareDistribution\\Download\\0e81198876b8eb725cd93d1816536732\\Metadata\\UpdateAgent.dll\r\nCreationUtcTime: 2025-11-05 16:00:44.000\r\nUser: NT AUTHORITY\\SYSTEM\""
+        },
+        "eventdata": {
+          "ruleName": "DLL",
+          "utcTime": "2026-04-01 10:56:55.318",
+          "processGuid": "{d9a99926-f9f7-69cc-8d0a-000000000600}",
+          "processId": "6488",
+          "image": "C:\\\\Windows\\\\System32\\\\mousocoreworker.exe",
+          "targetFilename": "C:\\\\Windows\\\\SoftwareDistribution\\\\Download\\\\0e81198876b8eb725cd93d1816536732\\\\Metadata\\\\UpdateAgent.dll",
+          "creationUtcTime": "2025-11-05 16:00:44.000",
+          "user": "NT AUTHORITY\\\\SYSTEM"
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260401-124935_20260401_124935",
+    "_captured_at_utc": "2026-04-01T10:56:55Z"
+  },
+  {
+    "timestamp": "2026-04-01T12:56:25.903+0000",
+    "rule": {
+      "level": 6,
+      "description": "Executable dropped in Windows root folder",
+      "id": "92217",
+      "mitre": {
+        "id": [
+          "T1570"
+        ],
+        "tactic": [
+          "Lateral Movement"
+        ],
+        "technique": [
+          "Lateral Tool Transfer"
+        ]
+      },
+      "firedtimes": 11,
+      "mail": false,
+      "groups": [
+        "sysmon",
+        "sysmon_eid11_detections",
+        "windows"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775048185.4723744",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-Sysmon",
+          "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+          "eventID": "11",
+          "version": "2",
+          "level": "4",
+          "task": "11",
+          "opcode": "0",
+          "keywords": "0x8000000000000000",
+          "systemTime": "2026-04-01T10:56:55.3406321Z",
+          "eventRecordID": "365960",
+          "processID": "7940",
+          "threadID": "8064",
+          "channel": "Microsoft-Windows-Sysmon/Operational",
+          "computer": "WS10",
+          "severityValue": "INFORMATION",
+          "message": "\"File created:\r\nRuleName: DLL\r\nUtcTime: 2026-04-01 10:56:55.340\r\nProcessGuid: {d9a99926-f9f7-69cc-8d0a-000000000600}\r\nProcessId: 6488\r\nImage: C:\\Windows\\System32\\mousocoreworker.exe\r\nTargetFilename: C:\\Windows\\SoftwareDistribution\\Download\\0e81198876b8eb725cd93d1816536732\\Metadata\\dpx.dll\r\nCreationUtcTime: 2025-11-05 16:00:42.000\r\nUser: NT AUTHORITY\\SYSTEM\""
+        },
+        "eventdata": {
+          "ruleName": "DLL",
+          "utcTime": "2026-04-01 10:56:55.340",
+          "processGuid": "{d9a99926-f9f7-69cc-8d0a-000000000600}",
+          "processId": "6488",
+          "image": "C:\\\\Windows\\\\System32\\\\mousocoreworker.exe",
+          "targetFilename": "C:\\\\Windows\\\\SoftwareDistribution\\\\Download\\\\0e81198876b8eb725cd93d1816536732\\\\Metadata\\\\dpx.dll",
+          "creationUtcTime": "2025-11-05 16:00:42.000",
+          "user": "NT AUTHORITY\\\\SYSTEM"
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260401-124935_20260401_124935",
+    "_captured_at_utc": "2026-04-01T10:56:55Z"
+  },
+  {
+    "timestamp": "2026-04-01T12:56:25.918+0000",
+    "rule": {
+      "level": 6,
+      "description": "Executable dropped in Windows root folder",
+      "id": "92217",
+      "mitre": {
+        "id": [
+          "T1570"
+        ],
+        "tactic": [
+          "Lateral Movement"
+        ],
+        "technique": [
+          "Lateral Tool Transfer"
+        ]
+      },
+      "firedtimes": 12,
+      "mail": false,
+      "groups": [
+        "sysmon",
+        "sysmon_eid11_detections",
+        "windows"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775048185.4726512",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-Sysmon",
+          "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+          "eventID": "11",
+          "version": "2",
+          "level": "4",
+          "task": "11",
+          "opcode": "0",
+          "keywords": "0x8000000000000000",
+          "systemTime": "2026-04-01T10:56:55.3472268Z",
+          "eventRecordID": "365961",
+          "processID": "7940",
+          "threadID": "8064",
+          "channel": "Microsoft-Windows-Sysmon/Operational",
+          "computer": "WS10",
+          "severityValue": "INFORMATION",
+          "message": "\"File created:\r\nRuleName: DLL\r\nUtcTime: 2026-04-01 10:56:55.347\r\nProcessGuid: {d9a99926-f9f7-69cc-8d0a-000000000600}\r\nProcessId: 6488\r\nImage: C:\\Windows\\System32\\mousocoreworker.exe\r\nTargetFilename: C:\\Windows\\SoftwareDistribution\\Download\\0e81198876b8eb725cd93d1816536732\\Metadata\\Mitigation.dll\r\nCreationUtcTime: 2025-11-05 16:00:42.000\r\nUser: NT AUTHORITY\\SYSTEM\""
+        },
+        "eventdata": {
+          "ruleName": "DLL",
+          "utcTime": "2026-04-01 10:56:55.347",
+          "processGuid": "{d9a99926-f9f7-69cc-8d0a-000000000600}",
+          "processId": "6488",
+          "image": "C:\\\\Windows\\\\System32\\\\mousocoreworker.exe",
+          "targetFilename": "C:\\\\Windows\\\\SoftwareDistribution\\\\Download\\\\0e81198876b8eb725cd93d1816536732\\\\Metadata\\\\Mitigation.dll",
+          "creationUtcTime": "2025-11-05 16:00:42.000",
+          "user": "NT AUTHORITY\\\\SYSTEM"
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260401-124935_20260401_124935",
+    "_captured_at_utc": "2026-04-01T10:56:55Z"
+  },
+  {
+    "timestamp": "2026-04-01T12:56:25.949+0000",
+    "rule": {
+      "level": 6,
+      "description": "Executable dropped in Windows root folder",
+      "id": "92217",
+      "mitre": {
+        "id": [
+          "T1570"
+        ],
+        "tactic": [
+          "Lateral Movement"
+        ],
+        "technique": [
+          "Lateral Tool Transfer"
+        ]
+      },
+      "firedtimes": 13,
+      "mail": false,
+      "groups": [
+        "sysmon",
+        "sysmon_eid11_detections",
+        "windows"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775048185.4729308",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-Sysmon",
+          "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+          "eventID": "11",
+          "version": "2",
+          "level": "4",
+          "task": "11",
+          "opcode": "0",
+          "keywords": "0x8000000000000000",
+          "systemTime": "2026-04-01T10:56:55.3544265Z",
+          "eventRecordID": "365963",
+          "processID": "7940",
+          "threadID": "8064",
+          "channel": "Microsoft-Windows-Sysmon/Operational",
+          "computer": "WS10",
+          "severityValue": "INFORMATION",
+          "message": "\"File created:\r\nRuleName: DLL\r\nUtcTime: 2026-04-01 10:56:55.353\r\nProcessGuid: {d9a99926-f9f7-69cc-8d0a-000000000600}\r\nProcessId: 6488\r\nImage: C:\\Windows\\System32\\mousocoreworker.exe\r\nTargetFilename: C:\\Windows\\SoftwareDistribution\\Download\\0e81198876b8eb725cd93d1816536732\\Metadata\\wcp.dll\r\nCreationUtcTime: 2025-11-05 16:00:44.000\r\nUser: NT AUTHORITY\\SYSTEM\""
+        },
+        "eventdata": {
+          "ruleName": "DLL",
+          "utcTime": "2026-04-01 10:56:55.353",
+          "processGuid": "{d9a99926-f9f7-69cc-8d0a-000000000600}",
+          "processId": "6488",
+          "image": "C:\\\\Windows\\\\System32\\\\mousocoreworker.exe",
+          "targetFilename": "C:\\\\Windows\\\\SoftwareDistribution\\\\Download\\\\0e81198876b8eb725cd93d1816536732\\\\Metadata\\\\wcp.dll",
+          "creationUtcTime": "2025-11-05 16:00:44.000",
+          "user": "NT AUTHORITY\\\\SYSTEM"
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260401-124935_20260401_124935",
+    "_captured_at_utc": "2026-04-01T10:56:55Z"
+  },
+  {
+    "timestamp": "2026-04-01T12:56:25.949+0000",
+    "rule": {
+      "level": 6,
+      "description": "Executable dropped in Windows root folder",
+      "id": "92217",
+      "mitre": {
+        "id": [
+          "T1570"
+        ],
+        "tactic": [
+          "Lateral Movement"
+        ],
+        "technique": [
+          "Lateral Tool Transfer"
+        ]
+      },
+      "firedtimes": 14,
+      "mail": false,
+      "groups": [
+        "sysmon",
+        "sysmon_eid11_detections",
+        "windows"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775048185.4732076",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-Sysmon",
+          "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+          "eventID": "11",
+          "version": "2",
+          "level": "4",
+          "task": "11",
+          "opcode": "0",
+          "keywords": "0x8000000000000000",
+          "systemTime": "2026-04-01T10:56:55.3511646Z",
+          "eventRecordID": "365962",
+          "processID": "7940",
+          "threadID": "8064",
+          "channel": "Microsoft-Windows-Sysmon/Operational",
+          "computer": "WS10",
+          "severityValue": "INFORMATION",
+          "message": "\"File created:\r\nRuleName: DLL\r\nUtcTime: 2026-04-01 10:56:55.350\r\nProcessGuid: {d9a99926-f9f7-69cc-8d0a-000000000600}\r\nProcessId: 6488\r\nImage: C:\\Windows\\System32\\mousocoreworker.exe\r\nTargetFilename: C:\\Windows\\SoftwareDistribution\\Download\\0e81198876b8eb725cd93d1816536732\\Metadata\\UAOneSettings.dll\r\nCreationUtcTime: 2025-11-05 16:00:42.000\r\nUser: NT AUTHORITY\\SYSTEM\""
+        },
+        "eventdata": {
+          "ruleName": "DLL",
+          "utcTime": "2026-04-01 10:56:55.350",
+          "processGuid": "{d9a99926-f9f7-69cc-8d0a-000000000600}",
+          "processId": "6488",
+          "image": "C:\\\\Windows\\\\System32\\\\mousocoreworker.exe",
+          "targetFilename": "C:\\\\Windows\\\\SoftwareDistribution\\\\Download\\\\0e81198876b8eb725cd93d1816536732\\\\Metadata\\\\UAOneSettings.dll",
+          "creationUtcTime": "2025-11-05 16:00:42.000",
+          "user": "NT AUTHORITY\\\\SYSTEM"
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260401-124935_20260401_124935",
+    "_captured_at_utc": "2026-04-01T10:56:55Z"
+  },
+  {
+    "timestamp": "2026-04-01T12:56:25.980+0000",
+    "rule": {
+      "level": 6,
+      "description": "Executable dropped in Windows root folder",
+      "id": "92217",
+      "mitre": {
+        "id": [
+          "T1570"
+        ],
+        "tactic": [
+          "Lateral Movement"
+        ],
+        "technique": [
+          "Lateral Tool Transfer"
+        ]
+      },
+      "firedtimes": 15,
+      "mail": false,
+      "groups": [
+        "sysmon",
+        "sysmon_eid11_detections",
+        "windows"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775048185.4734884",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-Sysmon",
+          "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+          "eventID": "11",
+          "version": "2",
+          "level": "4",
+          "task": "11",
+          "opcode": "0",
+          "keywords": "0x8000000000000000",
+          "systemTime": "2026-04-01T10:56:55.3856714Z",
+          "eventRecordID": "365965",
+          "processID": "7940",
+          "threadID": "8064",
+          "channel": "Microsoft-Windows-Sysmon/Operational",
+          "computer": "WS10",
+          "severityValue": "INFORMATION",
+          "message": "\"File created:\r\nRuleName: DLL\r\nUtcTime: 2026-04-01 10:56:55.384\r\nProcessGuid: {d9a99926-f9f7-69cc-8d0a-000000000600}\r\nProcessId: 6488\r\nImage: C:\\Windows\\System32\\mousocoreworker.exe\r\nTargetFilename: C:\\Windows\\SoftwareDistribution\\Download\\0e81198876b8eb725cd93d1816536732\\Metadata\\TurboStack.dll\r\nCreationUtcTime: 2025-11-05 16:00:42.000\r\nUser: NT AUTHORITY\\SYSTEM\""
+        },
+        "eventdata": {
+          "ruleName": "DLL",
+          "utcTime": "2026-04-01 10:56:55.384",
+          "processGuid": "{d9a99926-f9f7-69cc-8d0a-000000000600}",
+          "processId": "6488",
+          "image": "C:\\\\Windows\\\\System32\\\\mousocoreworker.exe",
+          "targetFilename": "C:\\\\Windows\\\\SoftwareDistribution\\\\Download\\\\0e81198876b8eb725cd93d1816536732\\\\Metadata\\\\TurboStack.dll",
+          "creationUtcTime": "2025-11-05 16:00:42.000",
+          "user": "NT AUTHORITY\\\\SYSTEM"
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260401-124935_20260401_124935",
+    "_captured_at_utc": "2026-04-01T10:56:55Z"
+  },
+  {
+    "timestamp": "2026-04-01T12:56:26.026+0000",
+    "rule": {
+      "level": 6,
+      "description": "Executable dropped in Windows root folder",
+      "id": "92217",
+      "mitre": {
+        "id": [
+          "T1570"
+        ],
+        "tactic": [
+          "Lateral Movement"
+        ],
+        "technique": [
+          "Lateral Tool Transfer"
+        ]
+      },
+      "firedtimes": 16,
+      "mail": false,
+      "groups": [
+        "sysmon",
+        "sysmon_eid11_detections",
+        "windows"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775048186.4737680",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-Sysmon",
+          "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+          "eventID": "11",
+          "version": "2",
+          "level": "4",
+          "task": "11",
+          "opcode": "0",
+          "keywords": "0x8000000000000000",
+          "systemTime": "2026-04-01T10:56:55.3983904Z",
+          "eventRecordID": "365967",
+          "processID": "7940",
+          "threadID": "8064",
+          "channel": "Microsoft-Windows-Sysmon/Operational",
+          "computer": "WS10",
+          "severityValue": "INFORMATION",
+          "message": "\"File created:\r\nRuleName: DLL\r\nUtcTime: 2026-04-01 10:56:55.398\r\nProcessGuid: {d9a99926-f9f7-69cc-8d0a-000000000600}\r\nProcessId: 6488\r\nImage: C:\\Windows\\System32\\mousocoreworker.exe\r\nTargetFilename: C:\\Windows\\SoftwareDistribution\\Download\\0e81198876b8eb725cd93d1816536732\\Metadata\\WinREAgent.dll\r\nCreationUtcTime: 2025-11-05 16:00:42.000\r\nUser: NT AUTHORITY\\SYSTEM\""
+        },
+        "eventdata": {
+          "ruleName": "DLL",
+          "utcTime": "2026-04-01 10:56:55.398",
+          "processGuid": "{d9a99926-f9f7-69cc-8d0a-000000000600}",
+          "processId": "6488",
+          "image": "C:\\\\Windows\\\\System32\\\\mousocoreworker.exe",
+          "targetFilename": "C:\\\\Windows\\\\SoftwareDistribution\\\\Download\\\\0e81198876b8eb725cd93d1816536732\\\\Metadata\\\\WinREAgent.dll",
+          "creationUtcTime": "2025-11-05 16:00:42.000",
+          "user": "NT AUTHORITY\\\\SYSTEM"
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260401-124935_20260401_124935",
+    "_captured_at_utc": "2026-04-01T10:56:55Z"
+  },
+  {
+    "timestamp": "2026-04-01T12:56:26.026+0000",
+    "rule": {
+      "level": 6,
+      "description": "Executable dropped in Windows root folder",
+      "id": "92217",
+      "mitre": {
+        "id": [
+          "T1570"
+        ],
+        "tactic": [
+          "Lateral Movement"
+        ],
+        "technique": [
+          "Lateral Tool Transfer"
+        ]
+      },
+      "firedtimes": 17,
+      "mail": false,
+      "groups": [
+        "sysmon",
+        "sysmon_eid11_detections",
+        "windows"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775048186.4740476",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-Sysmon",
+          "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+          "eventID": "11",
+          "version": "2",
+          "level": "4",
+          "task": "11",
+          "opcode": "0",
+          "keywords": "0x8000000000000000",
+          "systemTime": "2026-04-01T10:56:55.3948554Z",
+          "eventRecordID": "365966",
+          "processID": "7940",
+          "threadID": "8064",
+          "channel": "Microsoft-Windows-Sysmon/Operational",
+          "computer": "WS10",
+          "severityValue": "INFORMATION",
+          "message": "\"File created:\r\nRuleName: DLL\r\nUtcTime: 2026-04-01 10:56:55.393\r\nProcessGuid: {d9a99926-f9f7-69cc-8d0a-000000000600}\r\nProcessId: 6488\r\nImage: C:\\Windows\\System32\\mousocoreworker.exe\r\nTargetFilename: C:\\Windows\\SoftwareDistribution\\Download\\0e81198876b8eb725cd93d1816536732\\Metadata\\ReserveManager.dll\r\nCreationUtcTime: 2025-11-05 16:00:42.000\r\nUser: NT AUTHORITY\\SYSTEM\""
+        },
+        "eventdata": {
+          "ruleName": "DLL",
+          "utcTime": "2026-04-01 10:56:55.393",
+          "processGuid": "{d9a99926-f9f7-69cc-8d0a-000000000600}",
+          "processId": "6488",
+          "image": "C:\\\\Windows\\\\System32\\\\mousocoreworker.exe",
+          "targetFilename": "C:\\\\Windows\\\\SoftwareDistribution\\\\Download\\\\0e81198876b8eb725cd93d1816536732\\\\Metadata\\\\ReserveManager.dll",
+          "creationUtcTime": "2025-11-05 16:00:42.000",
+          "user": "NT AUTHORITY\\\\SYSTEM"
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260401-124935_20260401_124935",
+    "_captured_at_utc": "2026-04-01T10:56:55Z"
+  },
+  {
+    "timestamp": "2026-04-01T12:56:26.042+0000",
+    "rule": {
+      "level": 6,
+      "description": "Executable dropped in Windows root folder",
+      "id": "92217",
+      "mitre": {
+        "id": [
+          "T1570"
+        ],
+        "tactic": [
+          "Lateral Movement"
+        ],
+        "technique": [
+          "Lateral Tool Transfer"
+        ]
+      },
+      "firedtimes": 18,
+      "mail": false,
+      "groups": [
+        "sysmon",
+        "sysmon_eid11_detections",
+        "windows"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775048186.4743288",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-Sysmon",
+          "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+          "eventID": "11",
+          "version": "2",
+          "level": "4",
+          "task": "11",
+          "opcode": "0",
+          "keywords": "0x8000000000000000",
+          "systemTime": "2026-04-01T10:56:55.4036943Z",
+          "eventRecordID": "365968",
+          "processID": "7940",
+          "threadID": "8064",
+          "channel": "Microsoft-Windows-Sysmon/Operational",
+          "computer": "WS10",
+          "severityValue": "INFORMATION",
+          "message": "\"File created:\r\nRuleName: DLL\r\nUtcTime: 2026-04-01 10:56:55.403\r\nProcessGuid: {d9a99926-f9f7-69cc-8d0a-000000000600}\r\nProcessId: 6488\r\nImage: C:\\Windows\\System32\\mousocoreworker.exe\r\nTargetFilename: C:\\Windows\\SoftwareDistribution\\Download\\0e81198876b8eb725cd93d1816536732\\Metadata\\fvereseal.dll\r\nCreationUtcTime: 2025-11-05 16:00:44.000\r\nUser: NT AUTHORITY\\SYSTEM\""
+        },
+        "eventdata": {
+          "ruleName": "DLL",
+          "utcTime": "2026-04-01 10:56:55.403",
+          "processGuid": "{d9a99926-f9f7-69cc-8d0a-000000000600}",
+          "processId": "6488",
+          "image": "C:\\\\Windows\\\\System32\\\\mousocoreworker.exe",
+          "targetFilename": "C:\\\\Windows\\\\SoftwareDistribution\\\\Download\\\\0e81198876b8eb725cd93d1816536732\\\\Metadata\\\\fvereseal.dll",
+          "creationUtcTime": "2025-11-05 16:00:44.000",
+          "user": "NT AUTHORITY\\\\SYSTEM"
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260401-124935_20260401_124935",
+    "_captured_at_utc": "2026-04-01T10:56:55Z"
+  },
+  {
+    "timestamp": "2026-04-01T12:56:42.691+0000",
+    "rule": {
+      "level": 6,
+      "description": "Executable dropped in Windows root folder",
+      "id": "92217",
+      "mitre": {
+        "id": [
+          "T1570"
+        ],
+        "tactic": [
+          "Lateral Movement"
+        ],
+        "technique": [
+          "Lateral Tool Transfer"
+        ]
+      },
+      "firedtimes": 19,
+      "mail": false,
+      "groups": [
+        "sysmon",
+        "sysmon_eid11_detections",
+        "windows"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775048202.4746900",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-Sysmon",
+          "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+          "eventID": "11",
+          "version": "2",
+          "level": "4",
+          "task": "11",
+          "opcode": "0",
+          "keywords": "0x8000000000000000",
+          "systemTime": "2026-04-01T10:56:57.5460011Z",
+          "eventRecordID": "367026",
+          "processID": "7940",
+          "threadID": "8064",
+          "channel": "Microsoft-Windows-Sysmon/Operational",
+          "computer": "WS10",
+          "severityValue": "INFORMATION",
+          "message": "\"File created:\r\nRuleName: DLL\r\nUtcTime: 2026-04-01 10:56:57.545\r\nProcessGuid: {d9a99926-f9f7-69cc-8d0a-000000000600}\r\nProcessId: 6488\r\nImage: C:\\Windows\\System32\\mousocoreworker.exe\r\nTargetFilename: C:\\Windows\\SoftwareDistribution\\Download\\0e81198876b8eb725cd93d1816536732\\Metadata\\UpdateAgent.dll\r\nCreationUtcTime: 2025-11-05 16:00:44.000\r\nUser: NT AUTHORITY\\SYSTEM\""
+        },
+        "eventdata": {
+          "ruleName": "DLL",
+          "utcTime": "2026-04-01 10:56:57.545",
+          "processGuid": "{d9a99926-f9f7-69cc-8d0a-000000000600}",
+          "processId": "6488",
+          "image": "C:\\\\Windows\\\\System32\\\\mousocoreworker.exe",
+          "targetFilename": "C:\\\\Windows\\\\SoftwareDistribution\\\\Download\\\\0e81198876b8eb725cd93d1816536732\\\\Metadata\\\\UpdateAgent.dll",
+          "creationUtcTime": "2025-11-05 16:00:44.000",
+          "user": "NT AUTHORITY\\\\SYSTEM"
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260401-124935_20260401_124935",
+    "_captured_at_utc": "2026-04-01T10:57:11Z"
+  },
+  {
+    "timestamp": "2026-04-01T12:56:42.722+0000",
+    "rule": {
+      "level": 6,
+      "description": "Executable dropped in Windows root folder",
+      "id": "92217",
+      "mitre": {
+        "id": [
+          "T1570"
+        ],
+        "tactic": [
+          "Lateral Movement"
+        ],
+        "technique": [
+          "Lateral Tool Transfer"
+        ]
+      },
+      "firedtimes": 20,
+      "mail": false,
+      "groups": [
+        "sysmon",
+        "sysmon_eid11_detections",
+        "windows"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775048202.4749700",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-Sysmon",
+          "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+          "eventID": "11",
+          "version": "2",
+          "level": "4",
+          "task": "11",
+          "opcode": "0",
+          "keywords": "0x8000000000000000",
+          "systemTime": "2026-04-01T10:56:57.5651113Z",
+          "eventRecordID": "367027",
+          "processID": "7940",
+          "threadID": "8064",
+          "channel": "Microsoft-Windows-Sysmon/Operational",
+          "computer": "WS10",
+          "severityValue": "INFORMATION",
+          "message": "\"File created:\r\nRuleName: DLL\r\nUtcTime: 2026-04-01 10:56:57.563\r\nProcessGuid: {d9a99926-f9f7-69cc-8d0a-000000000600}\r\nProcessId: 6488\r\nImage: C:\\Windows\\System32\\mousocoreworker.exe\r\nTargetFilename: C:\\Windows\\SoftwareDistribution\\Download\\0e81198876b8eb725cd93d1816536732\\Metadata\\dpx.dll\r\nCreationUtcTime: 2025-11-05 16:00:42.000\r\nUser: NT AUTHORITY\\SYSTEM\""
+        },
+        "eventdata": {
+          "ruleName": "DLL",
+          "utcTime": "2026-04-01 10:56:57.563",
+          "processGuid": "{d9a99926-f9f7-69cc-8d0a-000000000600}",
+          "processId": "6488",
+          "image": "C:\\\\Windows\\\\System32\\\\mousocoreworker.exe",
+          "targetFilename": "C:\\\\Windows\\\\SoftwareDistribution\\\\Download\\\\0e81198876b8eb725cd93d1816536732\\\\Metadata\\\\dpx.dll",
+          "creationUtcTime": "2025-11-05 16:00:42.000",
+          "user": "NT AUTHORITY\\\\SYSTEM"
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260401-124935_20260401_124935",
+    "_captured_at_utc": "2026-04-01T10:57:11Z"
+  },
+  {
+    "timestamp": "2026-04-01T12:56:42.737+0000",
+    "rule": {
+      "level": 6,
+      "description": "Executable dropped in Windows root folder",
+      "id": "92217",
+      "mitre": {
+        "id": [
+          "T1570"
+        ],
+        "tactic": [
+          "Lateral Movement"
+        ],
+        "technique": [
+          "Lateral Tool Transfer"
+        ]
+      },
+      "firedtimes": 21,
+      "mail": false,
+      "groups": [
+        "sysmon",
+        "sysmon_eid11_detections",
+        "windows"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775048202.4752468",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-Sysmon",
+          "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+          "eventID": "11",
+          "version": "2",
+          "level": "4",
+          "task": "11",
+          "opcode": "0",
+          "keywords": "0x8000000000000000",
+          "systemTime": "2026-04-01T10:56:57.5715303Z",
+          "eventRecordID": "367028",
+          "processID": "7940",
+          "threadID": "8064",
+          "channel": "Microsoft-Windows-Sysmon/Operational",
+          "computer": "WS10",
+          "severityValue": "INFORMATION",
+          "message": "\"File created:\r\nRuleName: DLL\r\nUtcTime: 2026-04-01 10:56:57.570\r\nProcessGuid: {d9a99926-f9f7-69cc-8d0a-000000000600}\r\nProcessId: 6488\r\nImage: C:\\Windows\\System32\\mousocoreworker.exe\r\nTargetFilename: C:\\Windows\\SoftwareDistribution\\Download\\0e81198876b8eb725cd93d1816536732\\Metadata\\Mitigation.dll\r\nCreationUtcTime: 2025-11-05 16:00:42.000\r\nUser: NT AUTHORITY\\SYSTEM\""
+        },
+        "eventdata": {
+          "ruleName": "DLL",
+          "utcTime": "2026-04-01 10:56:57.570",
+          "processGuid": "{d9a99926-f9f7-69cc-8d0a-000000000600}",
+          "processId": "6488",
+          "image": "C:\\\\Windows\\\\System32\\\\mousocoreworker.exe",
+          "targetFilename": "C:\\\\Windows\\\\SoftwareDistribution\\\\Download\\\\0e81198876b8eb725cd93d1816536732\\\\Metadata\\\\Mitigation.dll",
+          "creationUtcTime": "2025-11-05 16:00:42.000",
+          "user": "NT AUTHORITY\\\\SYSTEM"
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260401-124935_20260401_124935",
+    "_captured_at_utc": "2026-04-01T10:57:11Z"
+  },
+  {
+    "timestamp": "2026-04-01T12:56:42.752+0000",
+    "rule": {
+      "level": 6,
+      "description": "Executable dropped in Windows root folder",
+      "id": "92217",
+      "mitre": {
+        "id": [
+          "T1570"
+        ],
+        "tactic": [
+          "Lateral Movement"
+        ],
+        "technique": [
+          "Lateral Tool Transfer"
+        ]
+      },
+      "firedtimes": 22,
+      "mail": false,
+      "groups": [
+        "sysmon",
+        "sysmon_eid11_detections",
+        "windows"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775048202.4755264",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-Sysmon",
+          "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+          "eventID": "11",
+          "version": "2",
+          "level": "4",
+          "task": "11",
+          "opcode": "0",
+          "keywords": "0x8000000000000000",
+          "systemTime": "2026-04-01T10:56:57.5762978Z",
+          "eventRecordID": "367029",
+          "processID": "7940",
+          "threadID": "8064",
+          "channel": "Microsoft-Windows-Sysmon/Operational",
+          "computer": "WS10",
+          "severityValue": "INFORMATION",
+          "message": "\"File created:\r\nRuleName: DLL\r\nUtcTime: 2026-04-01 10:56:57.575\r\nProcessGuid: {d9a99926-f9f7-69cc-8d0a-000000000600}\r\nProcessId: 6488\r\nImage: C:\\Windows\\System32\\mousocoreworker.exe\r\nTargetFilename: C:\\Windows\\SoftwareDistribution\\Download\\0e81198876b8eb725cd93d1816536732\\Metadata\\UAOneSettings.dll\r\nCreationUtcTime: 2025-11-05 16:00:42.000\r\nUser: NT AUTHORITY\\SYSTEM\""
+        },
+        "eventdata": {
+          "ruleName": "DLL",
+          "utcTime": "2026-04-01 10:56:57.575",
+          "processGuid": "{d9a99926-f9f7-69cc-8d0a-000000000600}",
+          "processId": "6488",
+          "image": "C:\\\\Windows\\\\System32\\\\mousocoreworker.exe",
+          "targetFilename": "C:\\\\Windows\\\\SoftwareDistribution\\\\Download\\\\0e81198876b8eb725cd93d1816536732\\\\Metadata\\\\UAOneSettings.dll",
+          "creationUtcTime": "2025-11-05 16:00:42.000",
+          "user": "NT AUTHORITY\\\\SYSTEM"
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260401-124935_20260401_124935",
+    "_captured_at_utc": "2026-04-01T10:57:11Z"
+  },
+  {
+    "timestamp": "2026-04-01T12:56:42.798+0000",
+    "rule": {
+      "level": 6,
+      "description": "Executable dropped in Windows root folder",
+      "id": "92217",
+      "mitre": {
+        "id": [
+          "T1570"
+        ],
+        "tactic": [
+          "Lateral Movement"
+        ],
+        "technique": [
+          "Lateral Tool Transfer"
+        ]
+      },
+      "firedtimes": 23,
+      "mail": false,
+      "groups": [
+        "sysmon",
+        "sysmon_eid11_detections",
+        "windows"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775048202.4758072",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-Sysmon",
+          "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+          "eventID": "11",
+          "version": "2",
+          "level": "4",
+          "task": "11",
+          "opcode": "0",
+          "keywords": "0x8000000000000000",
+          "systemTime": "2026-04-01T10:56:57.5787532Z",
+          "eventRecordID": "367030",
+          "processID": "7940",
+          "threadID": "8064",
+          "channel": "Microsoft-Windows-Sysmon/Operational",
+          "computer": "WS10",
+          "severityValue": "INFORMATION",
+          "message": "\"File created:\r\nRuleName: DLL\r\nUtcTime: 2026-04-01 10:56:57.578\r\nProcessGuid: {d9a99926-f9f7-69cc-8d0a-000000000600}\r\nProcessId: 6488\r\nImage: C:\\Windows\\System32\\mousocoreworker.exe\r\nTargetFilename: C:\\Windows\\SoftwareDistribution\\Download\\0e81198876b8eb725cd93d1816536732\\Metadata\\wcp.dll\r\nCreationUtcTime: 2025-11-05 16:00:44.000\r\nUser: NT AUTHORITY\\SYSTEM\""
+        },
+        "eventdata": {
+          "ruleName": "DLL",
+          "utcTime": "2026-04-01 10:56:57.578",
+          "processGuid": "{d9a99926-f9f7-69cc-8d0a-000000000600}",
+          "processId": "6488",
+          "image": "C:\\\\Windows\\\\System32\\\\mousocoreworker.exe",
+          "targetFilename": "C:\\\\Windows\\\\SoftwareDistribution\\\\Download\\\\0e81198876b8eb725cd93d1816536732\\\\Metadata\\\\wcp.dll",
+          "creationUtcTime": "2025-11-05 16:00:44.000",
+          "user": "NT AUTHORITY\\\\SYSTEM"
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260401-124935_20260401_124935",
+    "_captured_at_utc": "2026-04-01T10:57:11Z"
+  },
+  {
+    "timestamp": "2026-04-01T12:56:42.799+0000",
+    "rule": {
+      "level": 6,
+      "description": "Executable dropped in Windows root folder",
+      "id": "92217",
+      "mitre": {
+        "id": [
+          "T1570"
+        ],
+        "tactic": [
+          "Lateral Movement"
+        ],
+        "technique": [
+          "Lateral Tool Transfer"
+        ]
+      },
+      "firedtimes": 24,
+      "mail": false,
+      "groups": [
+        "sysmon",
+        "sysmon_eid11_detections",
+        "windows"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775048202.4760840",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-Sysmon",
+          "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+          "eventID": "11",
+          "version": "2",
+          "level": "4",
+          "task": "11",
+          "opcode": "0",
+          "keywords": "0x8000000000000000",
+          "systemTime": "2026-04-01T10:56:57.6072338Z",
+          "eventRecordID": "367031",
+          "processID": "7940",
+          "threadID": "8064",
+          "channel": "Microsoft-Windows-Sysmon/Operational",
+          "computer": "WS10",
+          "severityValue": "INFORMATION",
+          "message": "\"File created:\r\nRuleName: DLL\r\nUtcTime: 2026-04-01 10:56:57.606\r\nProcessGuid: {d9a99926-f9f7-69cc-8d0a-000000000600}\r\nProcessId: 6488\r\nImage: C:\\Windows\\System32\\mousocoreworker.exe\r\nTargetFilename: C:\\Windows\\SoftwareDistribution\\Download\\0e81198876b8eb725cd93d1816536732\\Metadata\\TurboStack.dll\r\nCreationUtcTime: 2025-11-05 16:00:42.000\r\nUser: NT AUTHORITY\\SYSTEM\""
+        },
+        "eventdata": {
+          "ruleName": "DLL",
+          "utcTime": "2026-04-01 10:56:57.606",
+          "processGuid": "{d9a99926-f9f7-69cc-8d0a-000000000600}",
+          "processId": "6488",
+          "image": "C:\\\\Windows\\\\System32\\\\mousocoreworker.exe",
+          "targetFilename": "C:\\\\Windows\\\\SoftwareDistribution\\\\Download\\\\0e81198876b8eb725cd93d1816536732\\\\Metadata\\\\TurboStack.dll",
+          "creationUtcTime": "2025-11-05 16:00:42.000",
+          "user": "NT AUTHORITY\\\\SYSTEM"
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260401-124935_20260401_124935",
+    "_captured_at_utc": "2026-04-01T10:57:11Z"
+  },
+  {
+    "timestamp": "2026-04-01T12:56:42.829+0000",
+    "rule": {
+      "level": 6,
+      "description": "Executable dropped in Windows root folder",
+      "id": "92217",
+      "mitre": {
+        "id": [
+          "T1570"
+        ],
+        "tactic": [
+          "Lateral Movement"
+        ],
+        "technique": [
+          "Lateral Tool Transfer"
+        ]
+      },
+      "firedtimes": 25,
+      "mail": false,
+      "groups": [
+        "sysmon",
+        "sysmon_eid11_detections",
+        "windows"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775048202.4763636",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-Sysmon",
+          "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+          "eventID": "11",
+          "version": "2",
+          "level": "4",
+          "task": "11",
+          "opcode": "0",
+          "keywords": "0x8000000000000000",
+          "systemTime": "2026-04-01T10:56:57.6156952Z",
+          "eventRecordID": "367032",
+          "processID": "7940",
+          "threadID": "8064",
+          "channel": "Microsoft-Windows-Sysmon/Operational",
+          "computer": "WS10",
+          "severityValue": "INFORMATION",
+          "message": "\"File created:\r\nRuleName: DLL\r\nUtcTime: 2026-04-01 10:56:57.614\r\nProcessGuid: {d9a99926-f9f7-69cc-8d0a-000000000600}\r\nProcessId: 6488\r\nImage: C:\\Windows\\System32\\mousocoreworker.exe\r\nTargetFilename: C:\\Windows\\SoftwareDistribution\\Download\\0e81198876b8eb725cd93d1816536732\\Metadata\\ReserveManager.dll\r\nCreationUtcTime: 2025-11-05 16:00:42.000\r\nUser: NT AUTHORITY\\SYSTEM\""
+        },
+        "eventdata": {
+          "ruleName": "DLL",
+          "utcTime": "2026-04-01 10:56:57.614",
+          "processGuid": "{d9a99926-f9f7-69cc-8d0a-000000000600}",
+          "processId": "6488",
+          "image": "C:\\\\Windows\\\\System32\\\\mousocoreworker.exe",
+          "targetFilename": "C:\\\\Windows\\\\SoftwareDistribution\\\\Download\\\\0e81198876b8eb725cd93d1816536732\\\\Metadata\\\\ReserveManager.dll",
+          "creationUtcTime": "2025-11-05 16:00:42.000",
+          "user": "NT AUTHORITY\\\\SYSTEM"
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260401-124935_20260401_124935",
+    "_captured_at_utc": "2026-04-01T10:57:11Z"
+  },
+  {
+    "timestamp": "2026-04-01T12:56:42.844+0000",
+    "rule": {
+      "level": 6,
+      "description": "Executable dropped in Windows root folder",
+      "id": "92217",
+      "mitre": {
+        "id": [
+          "T1570"
+        ],
+        "tactic": [
+          "Lateral Movement"
+        ],
+        "technique": [
+          "Lateral Tool Transfer"
+        ]
+      },
+      "firedtimes": 26,
+      "mail": false,
+      "groups": [
+        "sysmon",
+        "sysmon_eid11_detections",
+        "windows"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775048202.4766448",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-Sysmon",
+          "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+          "eventID": "11",
+          "version": "2",
+          "level": "4",
+          "task": "11",
+          "opcode": "0",
+          "keywords": "0x8000000000000000",
+          "systemTime": "2026-04-01T10:56:57.6200136Z",
+          "eventRecordID": "367033",
+          "processID": "7940",
+          "threadID": "8064",
+          "channel": "Microsoft-Windows-Sysmon/Operational",
+          "computer": "WS10",
+          "severityValue": "INFORMATION",
+          "message": "\"File created:\r\nRuleName: DLL\r\nUtcTime: 2026-04-01 10:56:57.619\r\nProcessGuid: {d9a99926-f9f7-69cc-8d0a-000000000600}\r\nProcessId: 6488\r\nImage: C:\\Windows\\System32\\mousocoreworker.exe\r\nTargetFilename: C:\\Windows\\SoftwareDistribution\\Download\\0e81198876b8eb725cd93d1816536732\\Metadata\\WinREAgent.dll\r\nCreationUtcTime: 2025-11-05 16:00:42.000\r\nUser: NT AUTHORITY\\SYSTEM\""
+        },
+        "eventdata": {
+          "ruleName": "DLL",
+          "utcTime": "2026-04-01 10:56:57.619",
+          "processGuid": "{d9a99926-f9f7-69cc-8d0a-000000000600}",
+          "processId": "6488",
+          "image": "C:\\\\Windows\\\\System32\\\\mousocoreworker.exe",
+          "targetFilename": "C:\\\\Windows\\\\SoftwareDistribution\\\\Download\\\\0e81198876b8eb725cd93d1816536732\\\\Metadata\\\\WinREAgent.dll",
+          "creationUtcTime": "2025-11-05 16:00:42.000",
+          "user": "NT AUTHORITY\\\\SYSTEM"
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260401-124935_20260401_124935",
+    "_captured_at_utc": "2026-04-01T10:57:12Z"
+  },
+  {
+    "timestamp": "2026-04-01T12:56:42.876+0000",
+    "rule": {
+      "level": 6,
+      "description": "Executable dropped in Windows root folder",
+      "id": "92217",
+      "mitre": {
+        "id": [
+          "T1570"
+        ],
+        "tactic": [
+          "Lateral Movement"
+        ],
+        "technique": [
+          "Lateral Tool Transfer"
+        ]
+      },
+      "firedtimes": 27,
+      "mail": false,
+      "groups": [
+        "sysmon",
+        "sysmon_eid11_detections",
+        "windows"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775048202.4769244",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-Sysmon",
+          "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+          "eventID": "11",
+          "version": "2",
+          "level": "4",
+          "task": "11",
+          "opcode": "0",
+          "keywords": "0x8000000000000000",
+          "systemTime": "2026-04-01T10:56:57.6256953Z",
+          "eventRecordID": "367034",
+          "processID": "7940",
+          "threadID": "8064",
+          "channel": "Microsoft-Windows-Sysmon/Operational",
+          "computer": "WS10",
+          "severityValue": "INFORMATION",
+          "message": "\"File created:\r\nRuleName: DLL\r\nUtcTime: 2026-04-01 10:56:57.624\r\nProcessGuid: {d9a99926-f9f7-69cc-8d0a-000000000600}\r\nProcessId: 6488\r\nImage: C:\\Windows\\System32\\mousocoreworker.exe\r\nTargetFilename: C:\\Windows\\SoftwareDistribution\\Download\\0e81198876b8eb725cd93d1816536732\\Metadata\\fvereseal.dll\r\nCreationUtcTime: 2025-11-05 16:00:44.000\r\nUser: NT AUTHORITY\\SYSTEM\""
+        },
+        "eventdata": {
+          "ruleName": "DLL",
+          "utcTime": "2026-04-01 10:56:57.624",
+          "processGuid": "{d9a99926-f9f7-69cc-8d0a-000000000600}",
+          "processId": "6488",
+          "image": "C:\\\\Windows\\\\System32\\\\mousocoreworker.exe",
+          "targetFilename": "C:\\\\Windows\\\\SoftwareDistribution\\\\Download\\\\0e81198876b8eb725cd93d1816536732\\\\Metadata\\\\fvereseal.dll",
+          "creationUtcTime": "2025-11-05 16:00:44.000",
+          "user": "NT AUTHORITY\\\\SYSTEM"
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260401-124935_20260401_124935",
+    "_captured_at_utc": "2026-04-01T10:57:12Z"
+  },
+  {
+    "timestamp": "2026-04-01T12:56:56.378+0000",
+    "rule": {
+      "level": 3,
+      "description": "Software protection service scheduled successfully.",
+      "id": "60642",
+      "firedtimes": 2,
+      "mail": false,
+      "groups": [
+        "windows",
+        "windows_application"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775048216.4772036",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-Security-SPP",
+          "providerGuid": "{E23B33B0-C8C9-472C-A5F9-F2BDFEA0F156}",
+          "eventSourceName": "Software Protection Platform Service",
+          "eventID": "16384",
+          "version": "0",
+          "level": "4",
+          "task": "0",
+          "opcode": "0",
+          "keywords": "0x80000000000000",
+          "systemTime": "2026-04-01T10:57:27.0953245Z",
+          "eventRecordID": "1896",
+          "processID": "0",
+          "threadID": "0",
+          "channel": "Application",
+          "computer": "WS10",
+          "severityValue": "INFORMATION",
+          "message": "\"Pianificazione del riavvio del servizio di protezione software per le ore 2026-04-02T06:56:27Z completata. Motivo: RulesEngine.\""
+        },
+        "eventdata": {
+          "data": "2026-04-02T06:56:27Z, RulesEngine"
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260401-124935_20260401_124935",
+    "_captured_at_utc": "2026-04-01T10:57:25Z"
+  }
+]

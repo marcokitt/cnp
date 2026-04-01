@@ -1,0 +1,95 @@
+{
+  "agent_paw": "dcdvcj",
+  "agent_host": "WS10",
+  "agent_platform": "windows",
+  "agent_executors": [
+    "cmd",
+    "psh",
+    "proc"
+  ],
+  "adversary_id": "01d77744-2515-401a-a497-d9f7241aac3c",
+  "adversary_name": "Check",
+  "referenced_ability_count": 8,
+  "compatible_count": 6,
+  "incompatible_count": 2,
+  "missing_count": 0,
+  "fixed_embedded_count": 0,
+  "compatible": [
+    {
+      "ability_id": "bd527b63-9f9e-46e0-9816-b8434d2b8989",
+      "name": "Current User",
+      "tactic": "discovery",
+      "technique_id": "T1033",
+      "resolution": "live",
+      "reason": "compatible",
+      "noisy_score": 5
+    },
+    {
+      "ability_id": "e8017c46-acb8-400c-a4b5-b3362b5b5baa",
+      "name": "Network Interface Configuration",
+      "tactic": "discovery",
+      "technique_id": "T1016",
+      "resolution": "live",
+      "reason": "compatible",
+      "noisy_score": 5
+    },
+    {
+      "ability_id": "335cea7b-bec0-48c6-adfb-6066070f5f68",
+      "name": "View Processes",
+      "tactic": "discovery",
+      "technique_id": "T1057",
+      "resolution": "live",
+      "reason": "compatible",
+      "noisy_score": 5
+    },
+    {
+      "ability_id": "b18e8767-b7ea-41a3-8e80-baf65a5ddef5",
+      "name": "Check Python",
+      "tactic": "discovery",
+      "technique_id": "T1518",
+      "resolution": "live",
+      "reason": "compatible",
+      "noisy_score": 1
+    },
+    {
+      "ability_id": "52177cc1-b9ab-4411-ac21-2eadc4b5d3b8",
+      "name": "List Directory",
+      "tactic": "discovery",
+      "technique_id": "T1083",
+      "resolution": "live",
+      "reason": "compatible",
+      "noisy_score": 1
+    },
+    {
+      "ability_id": "6e1a53c0-7352-4899-be35-fa7f364d5722",
+      "name": "Print Working Directory",
+      "tactic": "discovery",
+      "technique_id": "T1083",
+      "resolution": "live",
+      "reason": "compatible",
+      "noisy_score": 1
+    }
+  ],
+  "incompatible": [
+    {
+      "ability_id": "9849d956-37ea-49f2-a8b5-f2ca080b315d",
+      "name": "Check Go",
+      "tactic": "discovery",
+      "technique_id": "T1518",
+      "resolution": "live",
+      "reason": "platform mismatch (windows)",
+      "noisy_score": 1
+    },
+    {
+      "ability_id": "830bb6ed-9594-4817-b1a1-c298c0f9f425",
+      "name": "Check Chrome",
+      "tactic": "discovery",
+      "technique_id": "T1518",
+      "resolution": "live",
+      "reason": "platform mismatch (windows)",
+      "noisy_score": 1
+    }
+  ],
+  "missing": [],
+  "noisy_only_mode": true
+}

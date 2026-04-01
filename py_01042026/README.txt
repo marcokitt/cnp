@@ -1,0 +1,1 @@
+python .\attack_to_d3fend_mapper.py --input .\enterprise-attack.json --output .\report_d3fend.csv

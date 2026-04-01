@@ -1,0 +1,48 @@
+caldera:
+  url: "http://192.168.30.45:8888"
+  api_key: "ADMIN123"
+  username: "admin"
+  password: "admin"
+  operation_name_prefix: "apt-sim"
+  adversary_ids: []
+  target_agent_paw: null
+
+wazuh:
+  host: "192.168.30.46"
+  port: 22
+  username: "root"
+  password: "password"
+  key_path: null
+  log_path: "/var/ossec/logs/alerts/alerts.json"
+
+lab:
+  target_ip: "192.168.30.24"
+  target_host_aliases:
+    - "WS10"
+
+tpot:
+  ip: null
+
+mitre:
+  d3fend_mappings_url: "https://d3fend.mitre.org/api/ontology/inference/d3fend-full-mappings.json"
+  attack_lookup_base: "https://attack.mitre.org/techniques/"
+
+runtime:
+  monitor_seconds: 240
+  extra_monitor_seconds: 360
+  output_dir: "output"
+  launch_monitor_window: true
+  preferred_source_ips:
+    - "192.168.30.45"
+  known_lab_ips:
+    - "192.168.30.46"
+    - "192.168.30.24"
+  table_refresh_seconds: 1
+  table_max_rows: 15
+  status_refresh_seconds: 2
+  auto_build_temp_adversary: true
+  max_temp_abilities: 8
+  noisy_only_mode: true
+  seed_only_mode: true
+  force_seed_adversary: true
+  strict_seed_limit: 5

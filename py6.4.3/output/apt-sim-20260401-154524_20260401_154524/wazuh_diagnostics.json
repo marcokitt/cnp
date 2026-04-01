@@ -1,0 +1,115 @@
+{
+  "total_lines_seen": 76,
+  "matched_lines_seen": 19,
+  "unmatched_lines_seen": 57,
+  "target_markers": [
+    "192.168.30.24",
+    "C:\\Users\\Public\\splunkd.exe",
+    "WS10",
+    "WS10$WS10\\Administrator",
+    "WS10\\Administrator",
+    "fgdafj"
+  ],
+  "unmatched_samples": [
+    {
+      "ts": "2026-04-01T15:44:56.328+0000",
+      "src": "192.168.30.90",
+      "preview": "Service startup type was changed"
+    },
+    {
+      "ts": "2026-04-01T15:44:57.814+0000",
+      "src": "unknown",
+      "preview": "PAM: Login session opened."
+    },
+    {
+      "ts": "2026-04-01T15:44:57.814+0000",
+      "src": "192.168.30.14",
+      "preview": "sshd: authentication success."
+    },
+    {
+      "ts": "2026-04-01T15:44:57.814+0000",
+      "src": "unknown",
+      "preview": "Successful sudo to ROOT executed."
+    },
+    {
+      "ts": "2026-04-01T15:44:57.814+0000",
+      "src": "unknown",
+      "preview": "PAM: Login session opened."
+    },
+    {
+      "ts": "2026-04-01T15:45:05.687+0000",
+      "src": "192.168.30.47",
+      "preview": "Apparmor DENIED"
+    },
+    {
+      "ts": "2026-04-01T15:45:09.711+0000",
+      "src": "192.168.30.47",
+      "preview": "Apparmor DENIED"
+    },
+    {
+      "ts": "2026-04-01T15:45:15.704+0000",
+      "src": "192.168.30.47",
+      "preview": "Apparmor DENIED"
+    },
+    {
+      "ts": "2026-04-01T15:45:19.706+0000",
+      "src": "192.168.30.47",
+      "preview": "Apparmor DENIED"
+    },
+    {
+      "ts": "2026-04-01T15:45:25.714+0000",
+      "src": "192.168.30.47",
+      "preview": "Apparmor DENIED"
+    },
+    {
+      "ts": "2026-04-01T15:45:31.722+0000",
+      "src": "192.168.30.47",
+      "preview": "Apparmor DENIED"
+    },
+    {
+      "ts": "2026-04-01T15:45:35.727+0000",
+      "src": "192.168.30.47",
+      "preview": "Apparmor DENIED"
+    },
+    {
+      "ts": "2026-04-01T15:45:47.738+0000",
+      "src": "192.168.30.47",
+      "preview": "Apparmor DENIED"
+    },
+    {
+      "ts": "2026-04-01T15:45:57.771+0000",
+      "src": "192.168.30.47",
+      "preview": "Apparmor DENIED"
+    },
+    {
+      "ts": "2026-04-01T15:46:03.762+0000",
+      "src": "192.168.30.47",
+      "preview": "Apparmor DENIED"
+    },
+    {
+      "ts": "2026-04-01T15:46:07.764+0000",
+      "src": "192.168.30.47",
+      "preview": "Apparmor DENIED"
+    },
+    {
+      "ts": "2026-04-01T15:46:13.779+0000",
+      "src": "192.168.30.47",
+      "preview": "Apparmor DENIED"
+    },
+    {
+      "ts": "2026-04-01T15:46:17.785+0000",
+      "src": "192.168.30.47",
+      "preview": "Apparmor DENIED"
+    },
+    {
+      "ts": "2026-04-01T15:46:23.809+0000",
+      "src": "192.168.30.47",
+      "preview": "Apparmor DENIED"
+    },
+    {
+      "ts": "2026-04-01T15:46:27.808+0000",
+      "src": "192.168.30.47",
+      "preview": "Apparmor DENIED"
+    }
+  ]
+}

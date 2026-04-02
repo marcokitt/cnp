@@ -1,0 +1,26 @@
+{
+  "api_mode": "v2",
+  "operation_id": "b5989196-5d0b-4eb8-9571-0dc52e4c654b",
+  "operation_name": "apt-sim-20260402-100632",
+  "operation_state": "finished",
+  "selected_agent_paw": "fgdafj",
+  "selected_group": "red",
+  "host_group_count": 1,
+  "compatible_count": 5,
+  "referenced_ability_count": 5,
+  "links_total": 5,
+  "links_relevant_to_selected_agent": 5,
+  "potential_links_total": 0,
+  "event_logs_total": 0,
+  "report_present": false,
+  "link_status_counts": {
+    "1": 3,
+    "0": 2
+  },
+  "errors": {
+    "poll_error": "HTTPConnectionPool(host='192.168.30.45', port=8888): Max retries exceeded with url: /api/rest (Caused by NewConnectionError(\"HTTPConnection(host='192.168.30.45', port=8888): Failed to establish a new connection: [WinError 10061] Impossibile stabilire la connessione. Rifiuto persistente del computer di destinazione\"))"
+  },
+  "probable_causes": [
+    "Operation in stato finished, non propriamente in esecuzione."
+  ]
+}

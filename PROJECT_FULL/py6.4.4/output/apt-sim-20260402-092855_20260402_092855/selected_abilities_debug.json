@@ -1,0 +1,39 @@
+{
+  "selected_agent": {
+    "paw": "fgdafj",
+    "group": "red",
+    "platform": "windows"
+  },
+  "selected_adversary_id": "c220a8e6-609c-4d5b-9e1c-068ca01c2eec",
+  "operation_adversary_id": "temp-seed-fgdafj-1775114934",
+  "compatible_count": 3,
+  "referenced_ability_count": 3,
+  "selected_abilities": [
+    {
+      "ability_id": "13379ae1-d20e-4162-91f8-320d78a35e7f",
+      "name": "Discover local hosts",
+      "tactic": "discovery",
+      "technique_id": "T1018",
+      "noisy_score": 3,
+      "command_preview": "Import-Module .\\powerview.ps1; Get-DomainComputer"
+    },
+    {
+      "ability_id": "74d1b640-7f1e-4b36-beba-23a8228f39e0",
+      "name": "Local FQDN",
+      "tactic": "discovery",
+      "technique_id": "TA0007",
+      "noisy_score": 3,
+      "command_preview": "[System.Net.Dns]::GetHostByName($env:computerName).HostName"
+    },
+    {
+      "ability_id": "96d3c175-5e58-424c-8350-d7514b28a075",
+      "name": "Lateral Movement - Certutil",
+      "tactic": "lateral-movement",
+      "technique_id": "T1570",
+      "noisy_score": 2,
+      "command_preview": "certutil -encode #{location} C:\\users\\public\\com.crt | out-null; invoke-command #{remote.host.fqdn}…"
+    }
+  ],
+  "temp_adversary_saved": true,
+  "temp_adversary_error": null
+}

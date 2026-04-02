@@ -1,0 +1,2729 @@
+[
+  {
+    "timestamp": "2026-04-02T08:38:23.997+0000",
+    "rule": {
+      "level": 10,
+      "description": "Multiple Windows error application events.",
+      "id": "61061",
+      "frequency": 8,
+      "firedtimes": 5,
+      "mail": false,
+      "groups": [
+        "windows",
+        "windows_application"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775119103.1288181",
+    "previous_output": "{\"win\":{\"system\":{\"providerName\":\"Microsoft-Windows-CAPI2\",\"providerGuid\":\"{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}\",\"eventSourceName\":\"Microsoft-Windows-CAPI2\",\"eventID\":\"4107\",\"version\":\"0\",\"level\":\"2\",\"task\":\"0\",\"opcode\":\"0\",\"keywords\":\"0x8080000000000000\",\"systemTime\":\"2026-04-02T08:38:16.4378150Z\",\"eventRecordID\":\"2043\",\"processID\":\"1364\",\"threadID\":\"1992\",\"channel\":\"Application\",\"computer\":\"WS10\",\"severityValue\":\"ERROR\",\"message\":\"\\\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\\r\\n.\\\"\"},\"eventdata\":{\"data\":\"http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi.\"}}}\n{\"win\":{\"system\":{\"providerName\":\"Microsoft-Windows-CAPI2\",\"providerGuid\":\"{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}\",\"eventSourceName\":\"Microsoft-Windows-CAPI2\",\"eventID\":\"4107\",\"version\":\"0\",\"level\":\"2\",\"task\":\"0\",\"opcode\":\"0\",\"keywords\":\"0x8080000000000000\",\"systemTime\":\"2026-04-02T08:38:16.4221425Z\",\"eventRecordID\":\"2042\",\"processID\":\"1364\",\"threadID\":\"1992\",\"channel\":\"Application\",\"computer\":\"WS10\",\"severityValue\":\"ERROR\",\"message\":\"\\\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\\r\\n.\\\"\"},\"eventdata\":{\"data\":\"http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi.\"}}}\n{\"win\":{\"system\":{\"providerName\":\"Microsoft-Windows-CAPI2\",\"providerGuid\":\"{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}\",\"eventSourceName\":\"Microsoft-Windows-CAPI2\",\"eventID\":\"4107\",\"version\":\"0\",\"level\":\"2\",\"task\":\"0\",\"opcode\":\"0\",\"keywords\":\"0x8080000000000000\",\"systemTime\":\"2026-04-02T08:38:16.4221425Z\",\"eventRecordID\":\"2041\",\"processID\":\"1364\",\"threadID\":\"1992\",\"channel\":\"Application\",\"computer\":\"WS10\",\"severityValue\":\"ERROR\",\"message\":\"\\\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\\r\\n.\\\"\"},\"eventdata\":{\"data\":\"http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi.\"}}}\n{\"win\":{\"system\":{\"providerName\":\"Microsoft-Windows-CAPI2\",\"providerGuid\":\"{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}\",\"eventSourceName\":\"Microsoft-Windows-CAPI2\",\"eventID\":\"4107\",\"version\":\"0\",\"level\":\"2\",\"task\":\"0\",\"opcode\":\"0\",\"keywords\":\"0x8080000000000000\",\"systemTime\":\"2026-04-02T08:38:07.5620055Z\",\"eventRecordID\":\"2040\",\"processID\":\"1364\",\"threadID\":\"1436\",\"channel\":\"Application\",\"computer\":\"WS10\",\"severityValue\":\"ERROR\",\"message\":\"\\\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\\r\\n.\\\"\"},\"eventdata\":{\"data\":\"http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi.\"}}}\n{\"win\":{\"system\":{\"providerName\":\"Microsoft-Windows-CAPI2\",\"providerGuid\":\"{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}\",\"eventSourceName\":\"Microsoft-Windows-CAPI2\",\"eventID\":\"4107\",\"version\":\"0\",\"level\":\"2\",\"task\":\"0\",\"opcode\":\"0\",\"keywords\":\"0x8080000000000000\",\"systemTime\":\"2026-04-02T08:38:07.5461371Z\",\"eventRecordID\":\"2038\",\"processID\":\"1364\",\"threadID\":\"1436\",\"channel\":\"Application\",\"computer\":\"WS10\",\"severityValue\":\"ERROR\",\"message\":\"\\\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\\r\\n.\\\"\"},\"eventdata\":{\"data\":\"http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi.\"}}}\n{\"win\":{\"system\":{\"providerName\":\"Microsoft-Windows-CAPI2\",\"providerGuid\":\"{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}\",\"eventSourceName\":\"Microsoft-Windows-CAPI2\",\"eventID\":\"4107\",\"version\":\"0\",\"level\":\"2\",\"task\":\"0\",\"opcode\":\"0\",\"keywords\":\"0x8080000000000000\",\"systemTime\":\"2026-04-02T08:38:07.5461371Z\",\"eventRecordID\":\"2039\",\"processID\":\"1364\",\"threadID\":\"1436\",\"channel\":\"Application\",\"computer\":\"WS10\",\"severityValue\":\"ERROR\",\"message\":\"\\\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\\r\\n.\\\"\"},\"eventdata\":{\"data\":\"http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi.\"}}}\n{\"win\":{\"system\":{\"providerName\":\"Microsoft-Windows-CAPI2\",\"providerGuid\":\"{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}\",\"eventSourceName\":\"Microsoft-Windows-CAPI2\",\"eventID\":\"4107\",\"version\":\"0\",\"level\":\"2\",\"task\":\"0\",\"opcode\":\"0\",\"keywords\":\"0x8080000000000000\",\"systemTime\":\"2026-04-02T08:38:00.3652243Z\",\"eventRecordID\":\"2037\",\"processID\":\"1364\",\"threadID\":\"1436\",\"channel\":\"Application\",\"computer\":\"WS10\",\"severityValue\":\"ERROR\",\"message\":\"\\\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\\r\\n.\\\"\"},\"eventdata\":{\"data\":\"http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi.\"}}}",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-CAPI2",
+          "providerGuid": "{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}",
+          "eventSourceName": "Microsoft-Windows-CAPI2",
+          "eventID": "4107",
+          "version": "0",
+          "level": "2",
+          "task": "0",
+          "opcode": "0",
+          "keywords": "0x8080000000000000",
+          "systemTime": "2026-04-02T08:38:22.9716032Z",
+          "eventRecordID": "2044",
+          "processID": "1364",
+          "threadID": "1992",
+          "channel": "Application",
+          "computer": "WS10",
+          "severityValue": "ERROR",
+          "message": "\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\r\n.\""
+        },
+        "eventdata": {
+          "data": "http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi."
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-103821_20260402_103821",
+    "_captured_at_utc": "2026-04-02T08:38:24Z"
+  },
+  {
+    "timestamp": "2026-04-02T08:38:24.026+0000",
+    "rule": {
+      "level": 9,
+      "description": "Windows application error event.",
+      "id": "60602",
+      "firedtimes": 36,
+      "mail": false,
+      "groups": [
+        "windows",
+        "windows_application",
+        "system_error"
+      ],
+      "gdpr": [
+        "IV_35.7.d"
+      ],
+      "gpg13": [
+        "4.3"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775119104.1295775",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-CAPI2",
+          "providerGuid": "{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}",
+          "eventSourceName": "Microsoft-Windows-CAPI2",
+          "eventID": "4107",
+          "version": "0",
+          "level": "2",
+          "task": "0",
+          "opcode": "0",
+          "keywords": "0x8080000000000000",
+          "systemTime": "2026-04-02T08:38:22.9869849Z",
+          "eventRecordID": "2045",
+          "processID": "1364",
+          "threadID": "1992",
+          "channel": "Application",
+          "computer": "WS10",
+          "severityValue": "ERROR",
+          "message": "\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\r\n.\""
+        },
+        "eventdata": {
+          "data": "http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi."
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-103821_20260402_103821",
+    "_captured_at_utc": "2026-04-02T08:38:24Z"
+  },
+  {
+    "timestamp": "2026-04-02T08:38:24.088+0000",
+    "rule": {
+      "level": 9,
+      "description": "Windows application error event.",
+      "id": "60602",
+      "firedtimes": 37,
+      "mail": false,
+      "groups": [
+        "windows",
+        "windows_application",
+        "system_error"
+      ],
+      "gdpr": [
+        "IV_35.7.d"
+      ],
+      "gpg13": [
+        "4.3"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775119104.1297712",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-CAPI2",
+          "providerGuid": "{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}",
+          "eventSourceName": "Microsoft-Windows-CAPI2",
+          "eventID": "4107",
+          "version": "0",
+          "level": "2",
+          "task": "0",
+          "opcode": "0",
+          "keywords": "0x8080000000000000",
+          "systemTime": "2026-04-02T08:38:23.0003159Z",
+          "eventRecordID": "2046",
+          "processID": "1364",
+          "threadID": "1992",
+          "channel": "Application",
+          "computer": "WS10",
+          "severityValue": "ERROR",
+          "message": "\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\r\n.\""
+        },
+        "eventdata": {
+          "data": "http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi."
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-103821_20260402_103821",
+    "_captured_at_utc": "2026-04-02T08:38:24Z"
+  },
+  {
+    "timestamp": "2026-04-02T08:38:31.328+0000",
+    "rule": {
+      "level": 9,
+      "description": "Windows application error event.",
+      "id": "60602",
+      "firedtimes": 38,
+      "mail": false,
+      "groups": [
+        "windows",
+        "windows_application",
+        "system_error"
+      ],
+      "gdpr": [
+        "IV_35.7.d"
+      ],
+      "gpg13": [
+        "4.3"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775119111.1301525",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-CAPI2",
+          "providerGuid": "{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}",
+          "eventSourceName": "Microsoft-Windows-CAPI2",
+          "eventID": "4107",
+          "version": "0",
+          "level": "2",
+          "task": "0",
+          "opcode": "0",
+          "keywords": "0x8080000000000000",
+          "systemTime": "2026-04-02T08:38:30.2580321Z",
+          "eventRecordID": "2047",
+          "processID": "1364",
+          "threadID": "1436",
+          "channel": "Application",
+          "computer": "WS10",
+          "severityValue": "ERROR",
+          "message": "\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\r\n.\""
+        },
+        "eventdata": {
+          "data": "http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi."
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-103821_20260402_103821",
+    "_captured_at_utc": "2026-04-02T08:38:32Z"
+  },
+  {
+    "timestamp": "2026-04-02T08:38:31.343+0000",
+    "rule": {
+      "level": 9,
+      "description": "Windows application error event.",
+      "id": "60602",
+      "firedtimes": 39,
+      "mail": false,
+      "groups": [
+        "windows",
+        "windows_application",
+        "system_error"
+      ],
+      "gdpr": [
+        "IV_35.7.d"
+      ],
+      "gpg13": [
+        "4.3"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775119111.1303462",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-CAPI2",
+          "providerGuid": "{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}",
+          "eventSourceName": "Microsoft-Windows-CAPI2",
+          "eventID": "4107",
+          "version": "0",
+          "level": "2",
+          "task": "0",
+          "opcode": "0",
+          "keywords": "0x8080000000000000",
+          "systemTime": "2026-04-02T08:38:30.2693012Z",
+          "eventRecordID": "2048",
+          "processID": "1364",
+          "threadID": "1436",
+          "channel": "Application",
+          "computer": "WS10",
+          "severityValue": "ERROR",
+          "message": "\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\r\n.\""
+        },
+        "eventdata": {
+          "data": "http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi."
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-103821_20260402_103821",
+    "_captured_at_utc": "2026-04-02T08:38:32Z"
+  },
+  {
+    "timestamp": "2026-04-02T08:38:31.359+0000",
+    "rule": {
+      "level": 9,
+      "description": "Windows application error event.",
+      "id": "60602",
+      "firedtimes": 40,
+      "mail": false,
+      "groups": [
+        "windows",
+        "windows_application",
+        "system_error"
+      ],
+      "gdpr": [
+        "IV_35.7.d"
+      ],
+      "gpg13": [
+        "4.3"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775119111.1305399",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-CAPI2",
+          "providerGuid": "{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}",
+          "eventSourceName": "Microsoft-Windows-CAPI2",
+          "eventID": "4107",
+          "version": "0",
+          "level": "2",
+          "task": "0",
+          "opcode": "0",
+          "keywords": "0x8080000000000000",
+          "systemTime": "2026-04-02T08:38:30.2693012Z",
+          "eventRecordID": "2049",
+          "processID": "1364",
+          "threadID": "1436",
+          "channel": "Application",
+          "computer": "WS10",
+          "severityValue": "ERROR",
+          "message": "\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\r\n.\""
+        },
+        "eventdata": {
+          "data": "http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi."
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-103821_20260402_103821",
+    "_captured_at_utc": "2026-04-02T08:38:32Z"
+  },
+  {
+    "timestamp": "2026-04-02T08:38:38.632+0000",
+    "rule": {
+      "level": 9,
+      "description": "Windows application error event.",
+      "id": "60602",
+      "firedtimes": 41,
+      "mail": false,
+      "groups": [
+        "windows",
+        "windows_application",
+        "system_error"
+      ],
+      "gdpr": [
+        "IV_35.7.d"
+      ],
+      "gpg13": [
+        "4.3"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775119118.1307336",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-CAPI2",
+          "providerGuid": "{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}",
+          "eventSourceName": "Microsoft-Windows-CAPI2",
+          "eventID": "4107",
+          "version": "0",
+          "level": "2",
+          "task": "0",
+          "opcode": "0",
+          "keywords": "0x8080000000000000",
+          "systemTime": "2026-04-02T08:38:37.5828297Z",
+          "eventRecordID": "2050",
+          "processID": "1364",
+          "threadID": "1992",
+          "channel": "Application",
+          "computer": "WS10",
+          "severityValue": "ERROR",
+          "message": "\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\r\n.\""
+        },
+        "eventdata": {
+          "data": "http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi."
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-103821_20260402_103821",
+    "_captured_at_utc": "2026-04-02T08:38:38Z"
+  },
+  {
+    "timestamp": "2026-04-02T08:38:38.648+0000",
+    "rule": {
+      "level": 9,
+      "description": "Windows application error event.",
+      "id": "60602",
+      "firedtimes": 42,
+      "mail": false,
+      "groups": [
+        "windows",
+        "windows_application",
+        "system_error"
+      ],
+      "gdpr": [
+        "IV_35.7.d"
+      ],
+      "gpg13": [
+        "4.3"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775119118.1309273",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-CAPI2",
+          "providerGuid": "{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}",
+          "eventSourceName": "Microsoft-Windows-CAPI2",
+          "eventID": "4107",
+          "version": "0",
+          "level": "2",
+          "task": "0",
+          "opcode": "0",
+          "keywords": "0x8080000000000000",
+          "systemTime": "2026-04-02T08:38:37.5981505Z",
+          "eventRecordID": "2051",
+          "processID": "1364",
+          "threadID": "1992",
+          "channel": "Application",
+          "computer": "WS10",
+          "severityValue": "ERROR",
+          "message": "\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\r\n.\""
+        },
+        "eventdata": {
+          "data": "http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi."
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-103821_20260402_103821",
+    "_captured_at_utc": "2026-04-02T08:38:38Z"
+  },
+  {
+    "timestamp": "2026-04-02T08:38:38.679+0000",
+    "rule": {
+      "level": 10,
+      "description": "Multiple Windows error application events.",
+      "id": "61061",
+      "frequency": 8,
+      "firedtimes": 6,
+      "mail": false,
+      "groups": [
+        "windows",
+        "windows_application"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775119118.1311210",
+    "previous_output": "{\"win\":{\"system\":{\"providerName\":\"Microsoft-Windows-CAPI2\",\"providerGuid\":\"{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}\",\"eventSourceName\":\"Microsoft-Windows-CAPI2\",\"eventID\":\"4107\",\"version\":\"0\",\"level\":\"2\",\"task\":\"0\",\"opcode\":\"0\",\"keywords\":\"0x8080000000000000\",\"systemTime\":\"2026-04-02T08:38:37.5981505Z\",\"eventRecordID\":\"2051\",\"processID\":\"1364\",\"threadID\":\"1992\",\"channel\":\"Application\",\"computer\":\"WS10\",\"severityValue\":\"ERROR\",\"message\":\"\\\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\\r\\n.\\\"\"},\"eventdata\":{\"data\":\"http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi.\"}}}\n{\"win\":{\"system\":{\"providerName\":\"Microsoft-Windows-CAPI2\",\"providerGuid\":\"{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}\",\"eventSourceName\":\"Microsoft-Windows-CAPI2\",\"eventID\":\"4107\",\"version\":\"0\",\"level\":\"2\",\"task\":\"0\",\"opcode\":\"0\",\"keywords\":\"0x8080000000000000\",\"systemTime\":\"2026-04-02T08:38:37.5828297Z\",\"eventRecordID\":\"2050\",\"processID\":\"1364\",\"threadID\":\"1992\",\"channel\":\"Application\",\"computer\":\"WS10\",\"severityValue\":\"ERROR\",\"message\":\"\\\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\\r\\n.\\\"\"},\"eventdata\":{\"data\":\"http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi.\"}}}\n{\"win\":{\"system\":{\"providerName\":\"Microsoft-Windows-CAPI2\",\"providerGuid\":\"{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}\",\"eventSourceName\":\"Microsoft-Windows-CAPI2\",\"eventID\":\"4107\",\"version\":\"0\",\"level\":\"2\",\"task\":\"0\",\"opcode\":\"0\",\"keywords\":\"0x8080000000000000\",\"systemTime\":\"2026-04-02T08:38:30.2693012Z\",\"eventRecordID\":\"2049\",\"processID\":\"1364\",\"threadID\":\"1436\",\"channel\":\"Application\",\"computer\":\"WS10\",\"severityValue\":\"ERROR\",\"message\":\"\\\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\\r\\n.\\\"\"},\"eventdata\":{\"data\":\"http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi.\"}}}\n{\"win\":{\"system\":{\"providerName\":\"Microsoft-Windows-CAPI2\",\"providerGuid\":\"{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}\",\"eventSourceName\":\"Microsoft-Windows-CAPI2\",\"eventID\":\"4107\",\"version\":\"0\",\"level\":\"2\",\"task\":\"0\",\"opcode\":\"0\",\"keywords\":\"0x8080000000000000\",\"systemTime\":\"2026-04-02T08:38:30.2693012Z\",\"eventRecordID\":\"2048\",\"processID\":\"1364\",\"threadID\":\"1436\",\"channel\":\"Application\",\"computer\":\"WS10\",\"severityValue\":\"ERROR\",\"message\":\"\\\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\\r\\n.\\\"\"},\"eventdata\":{\"data\":\"http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi.\"}}}\n{\"win\":{\"system\":{\"providerName\":\"Microsoft-Windows-CAPI2\",\"providerGuid\":\"{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}\",\"eventSourceName\":\"Microsoft-Windows-CAPI2\",\"eventID\":\"4107\",\"version\":\"0\",\"level\":\"2\",\"task\":\"0\",\"opcode\":\"0\",\"keywords\":\"0x8080000000000000\",\"systemTime\":\"2026-04-02T08:38:30.2580321Z\",\"eventRecordID\":\"2047\",\"processID\":\"1364\",\"threadID\":\"1436\",\"channel\":\"Application\",\"computer\":\"WS10\",\"severityValue\":\"ERROR\",\"message\":\"\\\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\\r\\n.\\\"\"},\"eventdata\":{\"data\":\"http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi.\"}}}\n{\"win\":{\"system\":{\"providerName\":\"Microsoft-Windows-CAPI2\",\"providerGuid\":\"{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}\",\"eventSourceName\":\"Microsoft-Windows-CAPI2\",\"eventID\":\"4107\",\"version\":\"0\",\"level\":\"2\",\"task\":\"0\",\"opcode\":\"0\",\"keywords\":\"0x8080000000000000\",\"systemTime\":\"2026-04-02T08:38:23.0003159Z\",\"eventRecordID\":\"2046\",\"processID\":\"1364\",\"threadID\":\"1992\",\"channel\":\"Application\",\"computer\":\"WS10\",\"severityValue\":\"ERROR\",\"message\":\"\\\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\\r\\n.\\\"\"},\"eventdata\":{\"data\":\"http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi.\"}}}\n{\"win\":{\"system\":{\"providerName\":\"Microsoft-Windows-CAPI2\",\"providerGuid\":\"{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}\",\"eventSourceName\":\"Microsoft-Windows-CAPI2\",\"eventID\":\"4107\",\"version\":\"0\",\"level\":\"2\",\"task\":\"0\",\"opcode\":\"0\",\"keywords\":\"0x8080000000000000\",\"systemTime\":\"2026-04-02T08:38:22.9869849Z\",\"eventRecordID\":\"2045\",\"processID\":\"1364\",\"threadID\":\"1992\",\"channel\":\"Application\",\"computer\":\"WS10\",\"severityValue\":\"ERROR\",\"message\":\"\\\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\\r\\n.\\\"\"},\"eventdata\":{\"data\":\"http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi.\"}}}",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-CAPI2",
+          "providerGuid": "{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}",
+          "eventSourceName": "Microsoft-Windows-CAPI2",
+          "eventID": "4107",
+          "version": "0",
+          "level": "2",
+          "task": "0",
+          "opcode": "0",
+          "keywords": "0x8080000000000000",
+          "systemTime": "2026-04-02T08:38:37.6137192Z",
+          "eventRecordID": "2052",
+          "processID": "1364",
+          "threadID": "1992",
+          "channel": "Application",
+          "computer": "WS10",
+          "severityValue": "ERROR",
+          "message": "\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\r\n.\""
+        },
+        "eventdata": {
+          "data": "http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi."
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-103821_20260402_103821",
+    "_captured_at_utc": "2026-04-02T08:38:39Z"
+  },
+  {
+    "timestamp": "2026-04-02T08:38:46.307+0000",
+    "rule": {
+      "level": 9,
+      "description": "Windows application error event.",
+      "id": "60602",
+      "firedtimes": 43,
+      "mail": false,
+      "groups": [
+        "windows",
+        "windows_application",
+        "system_error"
+      ],
+      "gdpr": [
+        "IV_35.7.d"
+      ],
+      "gpg13": [
+        "4.3"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775119126.1318804",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-CAPI2",
+          "providerGuid": "{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}",
+          "eventSourceName": "Microsoft-Windows-CAPI2",
+          "eventID": "4107",
+          "version": "0",
+          "level": "2",
+          "task": "0",
+          "opcode": "0",
+          "keywords": "0x8080000000000000",
+          "systemTime": "2026-04-02T08:38:45.2921196Z",
+          "eventRecordID": "2053",
+          "processID": "1364",
+          "threadID": "1992",
+          "channel": "Application",
+          "computer": "WS10",
+          "severityValue": "ERROR",
+          "message": "\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\r\n.\""
+        },
+        "eventdata": {
+          "data": "http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi."
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-103821_20260402_103821",
+    "_captured_at_utc": "2026-04-02T08:38:47Z"
+  },
+  {
+    "timestamp": "2026-04-02T08:38:46.321+0000",
+    "rule": {
+      "level": 9,
+      "description": "Windows application error event.",
+      "id": "60602",
+      "firedtimes": 44,
+      "mail": false,
+      "groups": [
+        "windows",
+        "windows_application",
+        "system_error"
+      ],
+      "gdpr": [
+        "IV_35.7.d"
+      ],
+      "gpg13": [
+        "4.3"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775119126.1320741",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-CAPI2",
+          "providerGuid": "{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}",
+          "eventSourceName": "Microsoft-Windows-CAPI2",
+          "eventID": "4107",
+          "version": "0",
+          "level": "2",
+          "task": "0",
+          "opcode": "0",
+          "keywords": "0x8080000000000000",
+          "systemTime": "2026-04-02T08:38:45.2921196Z",
+          "eventRecordID": "2054",
+          "processID": "1364",
+          "threadID": "1992",
+          "channel": "Application",
+          "computer": "WS10",
+          "severityValue": "ERROR",
+          "message": "\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\r\n.\""
+        },
+        "eventdata": {
+          "data": "http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi."
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-103821_20260402_103821",
+    "_captured_at_utc": "2026-04-02T08:38:47Z"
+  },
+  {
+    "timestamp": "2026-04-02T08:38:59.867+0000",
+    "rule": {
+      "level": 15,
+      "description": "Executable file dropped in folder commonly used by malware",
+      "id": "92213",
+      "mitre": {
+        "id": [
+          "T1105"
+        ],
+        "tactic": [
+          "Command and Control"
+        ],
+        "technique": [
+          "Ingress Tool Transfer"
+        ]
+      },
+      "firedtimes": 58,
+      "mail": true,
+      "groups": [
+        "sysmon",
+        "sysmon_eid11_detections",
+        "windows"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775119139.1322678",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-Sysmon",
+          "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+          "eventID": "11",
+          "version": "2",
+          "level": "4",
+          "task": "11",
+          "opcode": "0",
+          "keywords": "0x8000000000000000",
+          "systemTime": "2026-04-02T08:38:59.8308102Z",
+          "eventRecordID": "490531",
+          "processID": "7940",
+          "threadID": "8064",
+          "channel": "Microsoft-Windows-Sysmon/Operational",
+          "computer": "WS10",
+          "severityValue": "INFORMATION",
+          "message": "\"File created:\r\nRuleName: -\r\nUtcTime: 2026-04-02 08:38:59.812\r\nProcessGuid: {d9a99926-2b23-69ce-5b0f-000000000600}\r\nProcessId: 6576\r\nImage: C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetFilename: C:\\Users\\Administrator\\AppData\\Local\\Temp\\__PSScriptPolicyTest_h22pttva.of1.ps1\r\nCreationUtcTime: 2026-04-02 08:38:59.812\r\nUser: WS10\\Administrator\""
+        },
+        "eventdata": {
+          "utcTime": "2026-04-02 08:38:59.812",
+          "processGuid": "{d9a99926-2b23-69ce-5b0f-000000000600}",
+          "processId": "6576",
+          "image": "C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+          "targetFilename": "C:\\\\Users\\\\Administrator\\\\AppData\\\\Local\\\\Temp\\\\__PSScriptPolicyTest_h22pttva.of1.ps1",
+          "creationUtcTime": "2026-04-02 08:38:59.812",
+          "user": "WS10\\\\Administrator"
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-103821_20260402_103821",
+    "_captured_at_utc": "2026-04-02T08:39:00Z"
+  },
+  {
+    "timestamp": "2026-04-02T08:39:42.650+0000",
+    "rule": {
+      "level": 15,
+      "description": "Executable file dropped in folder commonly used by malware",
+      "id": "92213",
+      "mitre": {
+        "id": [
+          "T1105"
+        ],
+        "tactic": [
+          "Command and Control"
+        ],
+        "technique": [
+          "Ingress Tool Transfer"
+        ]
+      },
+      "firedtimes": 59,
+      "mail": true,
+      "groups": [
+        "sysmon",
+        "sysmon_eid11_detections",
+        "windows"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775119182.1325455",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-Sysmon",
+          "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+          "eventID": "11",
+          "version": "2",
+          "level": "4",
+          "task": "11",
+          "opcode": "0",
+          "keywords": "0x8000000000000000",
+          "systemTime": "2026-04-02T08:39:41.9432924Z",
+          "eventRecordID": "490854",
+          "processID": "7940",
+          "threadID": "8064",
+          "channel": "Microsoft-Windows-Sysmon/Operational",
+          "computer": "WS10",
+          "severityValue": "INFORMATION",
+          "message": "\"File created:\r\nRuleName: -\r\nUtcTime: 2026-04-02 08:39:41.929\r\nProcessGuid: {d9a99926-2b4d-69ce-5c0f-000000000600}\r\nProcessId: 2076\r\nImage: C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetFilename: C:\\Users\\Administrator\\AppData\\Local\\Temp\\__PSScriptPolicyTest_xe1qdsln.eqr.ps1\r\nCreationUtcTime: 2026-04-02 08:39:41.929\r\nUser: WS10\\Administrator\""
+        },
+        "eventdata": {
+          "utcTime": "2026-04-02 08:39:41.929",
+          "processGuid": "{d9a99926-2b4d-69ce-5c0f-000000000600}",
+          "processId": "2076",
+          "image": "C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+          "targetFilename": "C:\\\\Users\\\\Administrator\\\\AppData\\\\Local\\\\Temp\\\\__PSScriptPolicyTest_xe1qdsln.eqr.ps1",
+          "creationUtcTime": "2026-04-02 08:39:41.929",
+          "user": "WS10\\\\Administrator"
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-103821_20260402_103821",
+    "_captured_at_utc": "2026-04-02T08:39:43Z"
+  },
+  {
+    "timestamp": "2026-04-02T08:39:46.712+0000",
+    "rule": {
+      "level": 15,
+      "description": "Executable file dropped in folder commonly used by malware",
+      "id": "92213",
+      "mitre": {
+        "id": [
+          "T1105"
+        ],
+        "tactic": [
+          "Command and Control"
+        ],
+        "technique": [
+          "Ingress Tool Transfer"
+        ]
+      },
+      "firedtimes": 60,
+      "mail": true,
+      "groups": [
+        "sysmon",
+        "sysmon_eid11_detections",
+        "windows"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775119186.1328232",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-Sysmon",
+          "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+          "eventID": "11",
+          "version": "2",
+          "level": "4",
+          "task": "11",
+          "opcode": "0",
+          "keywords": "0x8000000000000000",
+          "systemTime": "2026-04-02T08:39:42.0888265Z",
+          "eventRecordID": "491087",
+          "processID": "7940",
+          "threadID": "8064",
+          "channel": "Microsoft-Windows-Sysmon/Operational",
+          "computer": "WS10",
+          "severityValue": "INFORMATION",
+          "message": "\"File created:\r\nRuleName: -\r\nUtcTime: 2026-04-02 08:39:42.069\r\nProcessGuid: {d9a99926-2b4e-69ce-5d0f-000000000600}\r\nProcessId: 8920\r\nImage: C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetFilename: C:\\Users\\Administrator\\AppData\\Local\\Temp\\__PSScriptPolicyTest_vzcppspl.ch4.ps1\r\nCreationUtcTime: 2026-04-02 08:39:42.069\r\nUser: WS10\\Administrator\""
+        },
+        "eventdata": {
+          "utcTime": "2026-04-02 08:39:42.069",
+          "processGuid": "{d9a99926-2b4e-69ce-5d0f-000000000600}",
+          "processId": "8920",
+          "image": "C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+          "targetFilename": "C:\\\\Users\\\\Administrator\\\\AppData\\\\Local\\\\Temp\\\\__PSScriptPolicyTest_vzcppspl.ch4.ps1",
+          "creationUtcTime": "2026-04-02 08:39:42.069",
+          "user": "WS10\\\\Administrator"
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-103821_20260402_103821",
+    "_captured_at_utc": "2026-04-02T08:39:47Z"
+  },
+  {
+    "timestamp": "2026-04-02T08:39:47.698+0000",
+    "rule": {
+      "level": 15,
+      "description": "Executable file dropped in folder commonly used by malware",
+      "id": "92213",
+      "mitre": {
+        "id": [
+          "T1105"
+        ],
+        "tactic": [
+          "Command and Control"
+        ],
+        "technique": [
+          "Ingress Tool Transfer"
+        ]
+      },
+      "firedtimes": 61,
+      "mail": true,
+      "groups": [
+        "sysmon",
+        "sysmon_eid11_detections",
+        "windows"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775119187.1331009",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-Sysmon",
+          "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+          "eventID": "11",
+          "version": "2",
+          "level": "4",
+          "task": "11",
+          "opcode": "0",
+          "keywords": "0x8000000000000000",
+          "systemTime": "2026-04-02T08:39:42.5109544Z",
+          "eventRecordID": "491148",
+          "processID": "7940",
+          "threadID": "8064",
+          "channel": "Microsoft-Windows-Sysmon/Operational",
+          "computer": "WS10",
+          "severityValue": "INFORMATION",
+          "message": "\"File created:\r\nRuleName: -\r\nUtcTime: 2026-04-02 08:39:42.498\r\nProcessGuid: {d9a99926-2b4e-69ce-5e0f-000000000600}\r\nProcessId: 2780\r\nImage: C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetFilename: C:\\Users\\Administrator\\AppData\\Local\\Temp\\__PSScriptPolicyTest_4kgjdklw.cr4.ps1\r\nCreationUtcTime: 2026-04-02 08:39:42.498\r\nUser: WS10\\Administrator\""
+        },
+        "eventdata": {
+          "utcTime": "2026-04-02 08:39:42.498",
+          "processGuid": "{d9a99926-2b4e-69ce-5e0f-000000000600}",
+          "processId": "2780",
+          "image": "C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+          "targetFilename": "C:\\\\Users\\\\Administrator\\\\AppData\\\\Local\\\\Temp\\\\__PSScriptPolicyTest_4kgjdklw.cr4.ps1",
+          "creationUtcTime": "2026-04-02 08:39:42.498",
+          "user": "WS10\\\\Administrator"
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-103821_20260402_103821",
+    "_captured_at_utc": "2026-04-02T08:39:48Z"
+  },
+  {
+    "timestamp": "2026-04-02T08:40:05.886+0000",
+    "rule": {
+      "level": 15,
+      "description": "Executable file dropped in folder commonly used by malware",
+      "id": "92213",
+      "mitre": {
+        "id": [
+          "T1105"
+        ],
+        "tactic": [
+          "Command and Control"
+        ],
+        "technique": [
+          "Ingress Tool Transfer"
+        ]
+      },
+      "firedtimes": 62,
+      "mail": true,
+      "groups": [
+        "sysmon",
+        "sysmon_eid11_detections",
+        "windows"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775119205.1333786",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-Sysmon",
+          "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+          "eventID": "11",
+          "version": "2",
+          "level": "4",
+          "task": "11",
+          "opcode": "0",
+          "keywords": "0x8000000000000000",
+          "systemTime": "2026-04-02T08:40:05.8472172Z",
+          "eventRecordID": "491326",
+          "processID": "7940",
+          "threadID": "8064",
+          "channel": "Microsoft-Windows-Sysmon/Operational",
+          "computer": "WS10",
+          "severityValue": "INFORMATION",
+          "message": "\"File created:\r\nRuleName: -\r\nUtcTime: 2026-04-02 08:40:05.838\r\nProcessGuid: {d9a99926-2b65-69ce-600f-000000000600}\r\nProcessId: 8172\r\nImage: C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetFilename: C:\\Users\\Administrator\\AppData\\Local\\Temp\\__PSScriptPolicyTest_5lppxdf0.wmb.ps1\r\nCreationUtcTime: 2026-04-02 08:40:05.838\r\nUser: WS10\\Administrator\""
+        },
+        "eventdata": {
+          "utcTime": "2026-04-02 08:40:05.838",
+          "processGuid": "{d9a99926-2b65-69ce-600f-000000000600}",
+          "processId": "8172",
+          "image": "C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+          "targetFilename": "C:\\\\Users\\\\Administrator\\\\AppData\\\\Local\\\\Temp\\\\__PSScriptPolicyTest_5lppxdf0.wmb.ps1",
+          "creationUtcTime": "2026-04-02 08:40:05.838",
+          "user": "WS10\\\\Administrator"
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-103821_20260402_103821",
+    "_captured_at_utc": "2026-04-02T08:40:06Z"
+  },
+  {
+    "timestamp": "2026-04-02T08:40:23.391+0000",
+    "rule": {
+      "level": 15,
+      "description": "Executable file dropped in folder commonly used by malware",
+      "id": "92213",
+      "mitre": {
+        "id": [
+          "T1105"
+        ],
+        "tactic": [
+          "Command and Control"
+        ],
+        "technique": [
+          "Ingress Tool Transfer"
+        ]
+      },
+      "firedtimes": 63,
+      "mail": true,
+      "groups": [
+        "sysmon",
+        "sysmon_eid11_detections",
+        "windows"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775119223.1336563",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-Sysmon",
+          "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+          "eventID": "11",
+          "version": "2",
+          "level": "4",
+          "task": "11",
+          "opcode": "0",
+          "keywords": "0x8000000000000000",
+          "systemTime": "2026-04-02T08:40:22.9708673Z",
+          "eventRecordID": "491538",
+          "processID": "7940",
+          "threadID": "8064",
+          "channel": "Microsoft-Windows-Sysmon/Operational",
+          "computer": "WS10",
+          "severityValue": "INFORMATION",
+          "message": "\"File created:\r\nRuleName: -\r\nUtcTime: 2026-04-02 08:40:22.944\r\nProcessGuid: {d9a99926-2b76-69ce-610f-000000000600}\r\nProcessId: 7700\r\nImage: C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetFilename: C:\\Users\\Administrator\\AppData\\Local\\Temp\\__PSScriptPolicyTest_ixjwxlic.uct.ps1\r\nCreationUtcTime: 2026-04-02 08:40:22.944\r\nUser: WS10\\Administrator\""
+        },
+        "eventdata": {
+          "utcTime": "2026-04-02 08:40:22.944",
+          "processGuid": "{d9a99926-2b76-69ce-610f-000000000600}",
+          "processId": "7700",
+          "image": "C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+          "targetFilename": "C:\\\\Users\\\\Administrator\\\\AppData\\\\Local\\\\Temp\\\\__PSScriptPolicyTest_ixjwxlic.uct.ps1",
+          "creationUtcTime": "2026-04-02 08:40:22.944",
+          "user": "WS10\\\\Administrator"
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-103821_20260402_103821",
+    "_captured_at_utc": "2026-04-02T08:40:24Z"
+  },
+  {
+    "timestamp": "2026-04-02T08:40:27.765+0000",
+    "rule": {
+      "level": 15,
+      "description": "Executable file dropped in folder commonly used by malware",
+      "id": "92213",
+      "mitre": {
+        "id": [
+          "T1105"
+        ],
+        "tactic": [
+          "Command and Control"
+        ],
+        "technique": [
+          "Ingress Tool Transfer"
+        ]
+      },
+      "firedtimes": 64,
+      "mail": true,
+      "groups": [
+        "sysmon",
+        "sysmon_eid11_detections",
+        "windows"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775119227.1339340",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-Sysmon",
+          "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+          "eventID": "11",
+          "version": "2",
+          "level": "4",
+          "task": "11",
+          "opcode": "0",
+          "keywords": "0x8000000000000000",
+          "systemTime": "2026-04-02T08:40:23.1149939Z",
+          "eventRecordID": "491787",
+          "processID": "7940",
+          "threadID": "8064",
+          "channel": "Microsoft-Windows-Sysmon/Operational",
+          "computer": "WS10",
+          "severityValue": "INFORMATION",
+          "message": "\"File created:\r\nRuleName: -\r\nUtcTime: 2026-04-02 08:40:23.100\r\nProcessGuid: {d9a99926-2b77-69ce-620f-000000000600}\r\nProcessId: 5128\r\nImage: C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetFilename: C:\\Users\\Administrator\\AppData\\Local\\Temp\\__PSScriptPolicyTest_0f1haa3u.oj1.ps1\r\nCreationUtcTime: 2026-04-02 08:40:23.100\r\nUser: WS10\\Administrator\""
+        },
+        "eventdata": {
+          "utcTime": "2026-04-02 08:40:23.100",
+          "processGuid": "{d9a99926-2b77-69ce-620f-000000000600}",
+          "processId": "5128",
+          "image": "C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+          "targetFilename": "C:\\\\Users\\\\Administrator\\\\AppData\\\\Local\\\\Temp\\\\__PSScriptPolicyTest_0f1haa3u.oj1.ps1",
+          "creationUtcTime": "2026-04-02 08:40:23.100",
+          "user": "WS10\\\\Administrator"
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-103821_20260402_103821",
+    "_captured_at_utc": "2026-04-02T08:40:28Z"
+  },
+  {
+    "timestamp": "2026-04-02T08:40:30.391+0000",
+    "rule": {
+      "level": 15,
+      "description": "Executable file dropped in folder commonly used by malware",
+      "id": "92213",
+      "mitre": {
+        "id": [
+          "T1105"
+        ],
+        "tactic": [
+          "Command and Control"
+        ],
+        "technique": [
+          "Ingress Tool Transfer"
+        ]
+      },
+      "firedtimes": 65,
+      "mail": true,
+      "groups": [
+        "sysmon",
+        "sysmon_eid11_detections",
+        "windows"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775119230.1342117",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-Sysmon",
+          "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+          "eventID": "11",
+          "version": "2",
+          "level": "4",
+          "task": "11",
+          "opcode": "0",
+          "keywords": "0x8000000000000000",
+          "systemTime": "2026-04-02T08:40:23.5048323Z",
+          "eventRecordID": "491937",
+          "processID": "7940",
+          "threadID": "8064",
+          "channel": "Microsoft-Windows-Sysmon/Operational",
+          "computer": "WS10",
+          "severityValue": "INFORMATION",
+          "message": "\"File created:\r\nRuleName: -\r\nUtcTime: 2026-04-02 08:40:23.469\r\nProcessGuid: {d9a99926-2b77-69ce-630f-000000000600}\r\nProcessId: 1828\r\nImage: C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetFilename: C:\\Users\\Administrator\\AppData\\Local\\Temp\\__PSScriptPolicyTest_oo0isr1w.3xb.ps1\r\nCreationUtcTime: 2026-04-02 08:40:23.469\r\nUser: WS10\\Administrator\""
+        },
+        "eventdata": {
+          "utcTime": "2026-04-02 08:40:23.469",
+          "processGuid": "{d9a99926-2b77-69ce-630f-000000000600}",
+          "processId": "1828",
+          "image": "C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+          "targetFilename": "C:\\\\Users\\\\Administrator\\\\AppData\\\\Local\\\\Temp\\\\__PSScriptPolicyTest_oo0isr1w.3xb.ps1",
+          "creationUtcTime": "2026-04-02 08:40:23.469",
+          "user": "WS10\\\\Administrator"
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-103821_20260402_103821",
+    "_captured_at_utc": "2026-04-02T08:40:31Z"
+  },
+  {
+    "timestamp": "2026-04-02T08:41:21.146+0000",
+    "rule": {
+      "level": 15,
+      "description": "Executable file dropped in folder commonly used by malware",
+      "id": "92213",
+      "mitre": {
+        "id": [
+          "T1105"
+        ],
+        "tactic": [
+          "Command and Control"
+        ],
+        "technique": [
+          "Ingress Tool Transfer"
+        ]
+      },
+      "firedtimes": 66,
+      "mail": true,
+      "groups": [
+        "sysmon",
+        "sysmon_eid11_detections",
+        "windows"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775119281.1344894",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-Sysmon",
+          "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+          "eventID": "11",
+          "version": "2",
+          "level": "4",
+          "task": "11",
+          "opcode": "0",
+          "keywords": "0x8000000000000000",
+          "systemTime": "2026-04-02T08:41:20.9801480Z",
+          "eventRecordID": "492392",
+          "processID": "7940",
+          "threadID": "8064",
+          "channel": "Microsoft-Windows-Sysmon/Operational",
+          "computer": "WS10",
+          "severityValue": "INFORMATION",
+          "message": "\"File created:\r\nRuleName: -\r\nUtcTime: 2026-04-02 08:41:20.975\r\nProcessGuid: {d9a99926-2bb0-69ce-750f-000000000600}\r\nProcessId: 1108\r\nImage: C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetFilename: C:\\Users\\Administrator\\AppData\\Local\\Temp\\__PSScriptPolicyTest_epdvvker.34z.ps1\r\nCreationUtcTime: 2026-04-02 08:41:20.975\r\nUser: WS10\\Administrator\""
+        },
+        "eventdata": {
+          "utcTime": "2026-04-02 08:41:20.975",
+          "processGuid": "{d9a99926-2bb0-69ce-750f-000000000600}",
+          "processId": "1108",
+          "image": "C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+          "targetFilename": "C:\\\\Users\\\\Administrator\\\\AppData\\\\Local\\\\Temp\\\\__PSScriptPolicyTest_epdvvker.34z.ps1",
+          "creationUtcTime": "2026-04-02 08:41:20.975",
+          "user": "WS10\\\\Administrator"
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-103821_20260402_103821",
+    "_captured_at_utc": "2026-04-02T08:41:21Z"
+  },
+  {
+    "timestamp": "2026-04-02T08:41:25.848+0000",
+    "rule": {
+      "level": 15,
+      "description": "Executable file dropped in folder commonly used by malware",
+      "id": "92213",
+      "mitre": {
+        "id": [
+          "T1105"
+        ],
+        "tactic": [
+          "Command and Control"
+        ],
+        "technique": [
+          "Ingress Tool Transfer"
+        ]
+      },
+      "firedtimes": 67,
+      "mail": true,
+      "groups": [
+        "sysmon",
+        "sysmon_eid11_detections",
+        "windows"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775119285.1347671",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-Sysmon",
+          "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+          "eventID": "11",
+          "version": "2",
+          "level": "4",
+          "task": "11",
+          "opcode": "0",
+          "keywords": "0x8000000000000000",
+          "systemTime": "2026-04-02T08:41:21.1353907Z",
+          "eventRecordID": "492656",
+          "processID": "7940",
+          "threadID": "8064",
+          "channel": "Microsoft-Windows-Sysmon/Operational",
+          "computer": "WS10",
+          "severityValue": "INFORMATION",
+          "message": "\"File created:\r\nRuleName: -\r\nUtcTime: 2026-04-02 08:41:21.121\r\nProcessGuid: {d9a99926-2bb1-69ce-760f-000000000600}\r\nProcessId: 5384\r\nImage: C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetFilename: C:\\Users\\Administrator\\AppData\\Local\\Temp\\__PSScriptPolicyTest_kngfqmw1.5lq.ps1\r\nCreationUtcTime: 2026-04-02 08:41:21.121\r\nUser: WS10\\Administrator\""
+        },
+        "eventdata": {
+          "utcTime": "2026-04-02 08:41:21.121",
+          "processGuid": "{d9a99926-2bb1-69ce-760f-000000000600}",
+          "processId": "5384",
+          "image": "C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+          "targetFilename": "C:\\\\Users\\\\Administrator\\\\AppData\\\\Local\\\\Temp\\\\__PSScriptPolicyTest_kngfqmw1.5lq.ps1",
+          "creationUtcTime": "2026-04-02 08:41:21.121",
+          "user": "WS10\\\\Administrator"
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-103821_20260402_103821",
+    "_captured_at_utc": "2026-04-02T08:41:26Z"
+  },
+  {
+    "timestamp": "2026-04-02T08:41:29.130+0000",
+    "rule": {
+      "level": 15,
+      "description": "Executable file dropped in folder commonly used by malware",
+      "id": "92213",
+      "mitre": {
+        "id": [
+          "T1105"
+        ],
+        "tactic": [
+          "Command and Control"
+        ],
+        "technique": [
+          "Ingress Tool Transfer"
+        ]
+      },
+      "firedtimes": 68,
+      "mail": true,
+      "groups": [
+        "sysmon",
+        "sysmon_eid11_detections",
+        "windows"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775119289.1350448",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-Sysmon",
+          "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+          "eventID": "11",
+          "version": "2",
+          "level": "4",
+          "task": "11",
+          "opcode": "0",
+          "keywords": "0x8000000000000000",
+          "systemTime": "2026-04-02T08:41:21.5263440Z",
+          "eventRecordID": "492840",
+          "processID": "7940",
+          "threadID": "8064",
+          "channel": "Microsoft-Windows-Sysmon/Operational",
+          "computer": "WS10",
+          "severityValue": "INFORMATION",
+          "message": "\"File created:\r\nRuleName: -\r\nUtcTime: 2026-04-02 08:41:21.503\r\nProcessGuid: {d9a99926-2bb1-69ce-770f-000000000600}\r\nProcessId: 7660\r\nImage: C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetFilename: C:\\Users\\Administrator\\AppData\\Local\\Temp\\__PSScriptPolicyTest_wryygfpi.rwb.ps1\r\nCreationUtcTime: 2026-04-02 08:41:21.503\r\nUser: WS10\\Administrator\""
+        },
+        "eventdata": {
+          "utcTime": "2026-04-02 08:41:21.503",
+          "processGuid": "{d9a99926-2bb1-69ce-770f-000000000600}",
+          "processId": "7660",
+          "image": "C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+          "targetFilename": "C:\\\\Users\\\\Administrator\\\\AppData\\\\Local\\\\Temp\\\\__PSScriptPolicyTest_wryygfpi.rwb.ps1",
+          "creationUtcTime": "2026-04-02 08:41:21.503",
+          "user": "WS10\\\\Administrator"
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-103821_20260402_103821",
+    "_captured_at_utc": "2026-04-02T08:41:29Z"
+  },
+  {
+    "timestamp": "2026-04-02T08:41:55.212+0000",
+    "rule": {
+      "level": 15,
+      "description": "Executable file dropped in folder commonly used by malware",
+      "id": "92213",
+      "mitre": {
+        "id": [
+          "T1105"
+        ],
+        "tactic": [
+          "Command and Control"
+        ],
+        "technique": [
+          "Ingress Tool Transfer"
+        ]
+      },
+      "firedtimes": 69,
+      "mail": true,
+      "groups": [
+        "sysmon",
+        "sysmon_eid11_detections",
+        "windows"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775119315.1353225",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-Sysmon",
+          "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+          "eventID": "11",
+          "version": "2",
+          "level": "4",
+          "task": "11",
+          "opcode": "0",
+          "keywords": "0x8000000000000000",
+          "systemTime": "2026-04-02T08:41:53.9793655Z",
+          "eventRecordID": "492984",
+          "processID": "7940",
+          "threadID": "8064",
+          "channel": "Microsoft-Windows-Sysmon/Operational",
+          "computer": "WS10",
+          "severityValue": "INFORMATION",
+          "message": "\"File created:\r\nRuleName: -\r\nUtcTime: 2026-04-02 08:41:53.967\r\nProcessGuid: {d9a99926-2bd1-69ce-790f-000000000600}\r\nProcessId: 6912\r\nImage: C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetFilename: C:\\Users\\Administrator\\AppData\\Local\\Temp\\__PSScriptPolicyTest_0hjsajyu.yno.ps1\r\nCreationUtcTime: 2026-04-02 08:41:53.967\r\nUser: WS10\\Administrator\""
+        },
+        "eventdata": {
+          "utcTime": "2026-04-02 08:41:53.967",
+          "processGuid": "{d9a99926-2bd1-69ce-790f-000000000600}",
+          "processId": "6912",
+          "image": "C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+          "targetFilename": "C:\\\\Users\\\\Administrator\\\\AppData\\\\Local\\\\Temp\\\\__PSScriptPolicyTest_0hjsajyu.yno.ps1",
+          "creationUtcTime": "2026-04-02 08:41:53.967",
+          "user": "WS10\\\\Administrator"
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-103821_20260402_103821",
+    "_captured_at_utc": "2026-04-02T08:41:55Z"
+  },
+  {
+    "timestamp": "2026-04-02T08:42:06.156+0000",
+    "rule": {
+      "level": 15,
+      "description": "Executable file dropped in folder commonly used by malware",
+      "id": "92213",
+      "mitre": {
+        "id": [
+          "T1105"
+        ],
+        "tactic": [
+          "Command and Control"
+        ],
+        "technique": [
+          "Ingress Tool Transfer"
+        ]
+      },
+      "firedtimes": 70,
+      "mail": true,
+      "groups": [
+        "sysmon",
+        "sysmon_eid11_detections",
+        "windows"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775119326.1356002",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-Sysmon",
+          "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+          "eventID": "11",
+          "version": "2",
+          "level": "4",
+          "task": "11",
+          "opcode": "0",
+          "keywords": "0x8000000000000000",
+          "systemTime": "2026-04-02T08:42:04.0188206Z",
+          "eventRecordID": "493236",
+          "processID": "7940",
+          "threadID": "8064",
+          "channel": "Microsoft-Windows-Sysmon/Operational",
+          "computer": "WS10",
+          "severityValue": "INFORMATION",
+          "message": "\"File created:\r\nRuleName: -\r\nUtcTime: 2026-04-02 08:42:04.006\r\nProcessGuid: {d9a99926-2bdb-69ce-7b0f-000000000600}\r\nProcessId: 3192\r\nImage: C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetFilename: C:\\Users\\Administrator\\AppData\\Local\\Temp\\__PSScriptPolicyTest_oyfaccc2.lem.ps1\r\nCreationUtcTime: 2026-04-02 08:42:04.006\r\nUser: WS10\\Administrator\""
+        },
+        "eventdata": {
+          "utcTime": "2026-04-02 08:42:04.006",
+          "processGuid": "{d9a99926-2bdb-69ce-7b0f-000000000600}",
+          "processId": "3192",
+          "image": "C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+          "targetFilename": "C:\\\\Users\\\\Administrator\\\\AppData\\\\Local\\\\Temp\\\\__PSScriptPolicyTest_oyfaccc2.lem.ps1",
+          "creationUtcTime": "2026-04-02 08:42:04.006",
+          "user": "WS10\\\\Administrator"
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-103821_20260402_103821",
+    "_captured_at_utc": "2026-04-02T08:42:06Z"
+  },
+  {
+    "timestamp": "2026-04-02T08:42:07.517+0000",
+    "rule": {
+      "level": 15,
+      "description": "Executable file dropped in folder commonly used by malware",
+      "id": "92213",
+      "mitre": {
+        "id": [
+          "T1105"
+        ],
+        "tactic": [
+          "Command and Control"
+        ],
+        "technique": [
+          "Ingress Tool Transfer"
+        ]
+      },
+      "firedtimes": 71,
+      "mail": true,
+      "groups": [
+        "sysmon",
+        "sysmon_eid11_detections",
+        "windows"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775119327.1358779",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-Sysmon",
+          "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+          "eventID": "11",
+          "version": "2",
+          "level": "4",
+          "task": "11",
+          "opcode": "0",
+          "keywords": "0x8000000000000000",
+          "systemTime": "2026-04-02T08:42:04.1478577Z",
+          "eventRecordID": "493316",
+          "processID": "7940",
+          "threadID": "8064",
+          "channel": "Microsoft-Windows-Sysmon/Operational",
+          "computer": "WS10",
+          "severityValue": "INFORMATION",
+          "message": "\"File created:\r\nRuleName: -\r\nUtcTime: 2026-04-02 08:42:04.131\r\nProcessGuid: {d9a99926-2bdc-69ce-7c0f-000000000600}\r\nProcessId: 8372\r\nImage: C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetFilename: C:\\Users\\Administrator\\AppData\\Local\\Temp\\__PSScriptPolicyTest_evuubkhr.j2a.ps1\r\nCreationUtcTime: 2026-04-02 08:42:04.131\r\nUser: WS10\\Administrator\""
+        },
+        "eventdata": {
+          "utcTime": "2026-04-02 08:42:04.131",
+          "processGuid": "{d9a99926-2bdc-69ce-7c0f-000000000600}",
+          "processId": "8372",
+          "image": "C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+          "targetFilename": "C:\\\\Users\\\\Administrator\\\\AppData\\\\Local\\\\Temp\\\\__PSScriptPolicyTest_evuubkhr.j2a.ps1",
+          "creationUtcTime": "2026-04-02 08:42:04.131",
+          "user": "WS10\\\\Administrator"
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-103821_20260402_103821",
+    "_captured_at_utc": "2026-04-02T08:42:08Z"
+  },
+  {
+    "timestamp": "2026-04-02T08:42:09.830+0000",
+    "rule": {
+      "level": 15,
+      "description": "Executable file dropped in folder commonly used by malware",
+      "id": "92213",
+      "mitre": {
+        "id": [
+          "T1105"
+        ],
+        "tactic": [
+          "Command and Control"
+        ],
+        "technique": [
+          "Ingress Tool Transfer"
+        ]
+      },
+      "firedtimes": 72,
+      "mail": true,
+      "groups": [
+        "sysmon",
+        "sysmon_eid11_detections",
+        "windows"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775119329.1361556",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-Sysmon",
+          "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+          "eventID": "11",
+          "version": "2",
+          "level": "4",
+          "task": "11",
+          "opcode": "0",
+          "keywords": "0x8000000000000000",
+          "systemTime": "2026-04-02T08:42:04.5382206Z",
+          "eventRecordID": "493452",
+          "processID": "7940",
+          "threadID": "8064",
+          "channel": "Microsoft-Windows-Sysmon/Operational",
+          "computer": "WS10",
+          "severityValue": "INFORMATION",
+          "message": "\"File created:\r\nRuleName: -\r\nUtcTime: 2026-04-02 08:42:04.511\r\nProcessGuid: {d9a99926-2bdc-69ce-7d0f-000000000600}\r\nProcessId: 4876\r\nImage: C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetFilename: C:\\Users\\Administrator\\AppData\\Local\\Temp\\__PSScriptPolicyTest_34sc5mqp.ggh.ps1\r\nCreationUtcTime: 2026-04-02 08:42:04.511\r\nUser: WS10\\Administrator\""
+        },
+        "eventdata": {
+          "utcTime": "2026-04-02 08:42:04.511",
+          "processGuid": "{d9a99926-2bdc-69ce-7d0f-000000000600}",
+          "processId": "4876",
+          "image": "C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+          "targetFilename": "C:\\\\Users\\\\Administrator\\\\AppData\\\\Local\\\\Temp\\\\__PSScriptPolicyTest_34sc5mqp.ggh.ps1",
+          "creationUtcTime": "2026-04-02 08:42:04.511",
+          "user": "WS10\\\\Administrator"
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-103821_20260402_103821",
+    "_captured_at_utc": "2026-04-02T08:42:10Z"
+  },
+  {
+    "timestamp": "2026-04-02T08:42:43.122+0000",
+    "rule": {
+      "level": 15,
+      "description": "Executable file dropped in folder commonly used by malware",
+      "id": "92213",
+      "mitre": {
+        "id": [
+          "T1105"
+        ],
+        "tactic": [
+          "Command and Control"
+        ],
+        "technique": [
+          "Ingress Tool Transfer"
+        ]
+      },
+      "firedtimes": 73,
+      "mail": true,
+      "groups": [
+        "sysmon",
+        "sysmon_eid11_detections",
+        "windows"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775119363.1364333",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-Sysmon",
+          "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+          "eventID": "11",
+          "version": "2",
+          "level": "4",
+          "task": "11",
+          "opcode": "0",
+          "keywords": "0x8000000000000000",
+          "systemTime": "2026-04-02T08:42:42.0527169Z",
+          "eventRecordID": "493805",
+          "processID": "7940",
+          "threadID": "8064",
+          "channel": "Microsoft-Windows-Sysmon/Operational",
+          "computer": "WS10",
+          "severityValue": "INFORMATION",
+          "message": "\"File created:\r\nRuleName: -\r\nUtcTime: 2026-04-02 08:42:42.041\r\nProcessGuid: {d9a99926-2c01-69ce-8a0f-000000000600}\r\nProcessId: 6080\r\nImage: C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetFilename: C:\\Users\\Administrator\\AppData\\Local\\Temp\\__PSScriptPolicyTest_om1trroy.2ll.ps1\r\nCreationUtcTime: 2026-04-02 08:42:42.041\r\nUser: WS10\\Administrator\""
+        },
+        "eventdata": {
+          "utcTime": "2026-04-02 08:42:42.041",
+          "processGuid": "{d9a99926-2c01-69ce-8a0f-000000000600}",
+          "processId": "6080",
+          "image": "C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+          "targetFilename": "C:\\\\Users\\\\Administrator\\\\AppData\\\\Local\\\\Temp\\\\__PSScriptPolicyTest_om1trroy.2ll.ps1",
+          "creationUtcTime": "2026-04-02 08:42:42.041",
+          "user": "WS10\\\\Administrator"
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-103821_20260402_103821",
+    "_captured_at_utc": "2026-04-02T08:42:43Z"
+  },
+  {
+    "timestamp": "2026-04-02T08:42:46.658+0000",
+    "rule": {
+      "level": 15,
+      "description": "Executable file dropped in folder commonly used by malware",
+      "id": "92213",
+      "mitre": {
+        "id": [
+          "T1105"
+        ],
+        "tactic": [
+          "Command and Control"
+        ],
+        "technique": [
+          "Ingress Tool Transfer"
+        ]
+      },
+      "firedtimes": 74,
+      "mail": true,
+      "groups": [
+        "sysmon",
+        "sysmon_eid11_detections",
+        "windows"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775119366.1367110",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-Sysmon",
+          "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+          "eventID": "11",
+          "version": "2",
+          "level": "4",
+          "task": "11",
+          "opcode": "0",
+          "keywords": "0x8000000000000000",
+          "systemTime": "2026-04-02T08:42:42.2210662Z",
+          "eventRecordID": "494019",
+          "processID": "7940",
+          "threadID": "8064",
+          "channel": "Microsoft-Windows-Sysmon/Operational",
+          "computer": "WS10",
+          "severityValue": "INFORMATION",
+          "message": "\"File created:\r\nRuleName: -\r\nUtcTime: 2026-04-02 08:42:42.202\r\nProcessGuid: {d9a99926-2c02-69ce-8b0f-000000000600}\r\nProcessId: 5136\r\nImage: C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetFilename: C:\\Users\\Administrator\\AppData\\Local\\Temp\\__PSScriptPolicyTest_g3ppprdc.vod.ps1\r\nCreationUtcTime: 2026-04-02 08:42:42.202\r\nUser: WS10\\Administrator\""
+        },
+        "eventdata": {
+          "utcTime": "2026-04-02 08:42:42.202",
+          "processGuid": "{d9a99926-2c02-69ce-8b0f-000000000600}",
+          "processId": "5136",
+          "image": "C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+          "targetFilename": "C:\\\\Users\\\\Administrator\\\\AppData\\\\Local\\\\Temp\\\\__PSScriptPolicyTest_g3ppprdc.vod.ps1",
+          "creationUtcTime": "2026-04-02 08:42:42.202",
+          "user": "WS10\\\\Administrator"
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-103821_20260402_103821",
+    "_captured_at_utc": "2026-04-02T08:42:47Z"
+  },
+  {
+    "timestamp": "2026-04-02T08:42:49.809+0000",
+    "rule": {
+      "level": 15,
+      "description": "Executable file dropped in folder commonly used by malware",
+      "id": "92213",
+      "mitre": {
+        "id": [
+          "T1105"
+        ],
+        "tactic": [
+          "Command and Control"
+        ],
+        "technique": [
+          "Ingress Tool Transfer"
+        ]
+      },
+      "firedtimes": 75,
+      "mail": true,
+      "groups": [
+        "sysmon",
+        "sysmon_eid11_detections",
+        "windows"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775119369.1369887",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-Sysmon",
+          "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+          "eventID": "11",
+          "version": "2",
+          "level": "4",
+          "task": "11",
+          "opcode": "0",
+          "keywords": "0x8000000000000000",
+          "systemTime": "2026-04-02T08:42:42.6108179Z",
+          "eventRecordID": "494203",
+          "processID": "7940",
+          "threadID": "8064",
+          "channel": "Microsoft-Windows-Sysmon/Operational",
+          "computer": "WS10",
+          "severityValue": "INFORMATION",
+          "message": "\"File created:\r\nRuleName: -\r\nUtcTime: 2026-04-02 08:42:42.588\r\nProcessGuid: {d9a99926-2c02-69ce-8c0f-000000000600}\r\nProcessId: 8984\r\nImage: C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetFilename: C:\\Users\\Administrator\\AppData\\Local\\Temp\\__PSScriptPolicyTest_5flu4efp.miy.ps1\r\nCreationUtcTime: 2026-04-02 08:42:42.588\r\nUser: WS10\\Administrator\""
+        },
+        "eventdata": {
+          "utcTime": "2026-04-02 08:42:42.588",
+          "processGuid": "{d9a99926-2c02-69ce-8c0f-000000000600}",
+          "processId": "8984",
+          "image": "C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+          "targetFilename": "C:\\\\Users\\\\Administrator\\\\AppData\\\\Local\\\\Temp\\\\__PSScriptPolicyTest_5flu4efp.miy.ps1",
+          "creationUtcTime": "2026-04-02 08:42:42.588",
+          "user": "WS10\\\\Administrator"
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-103821_20260402_103821",
+    "_captured_at_utc": "2026-04-02T08:42:50Z"
+  },
+  {
+    "timestamp": "2026-04-02T08:42:58.188+0000",
+    "rule": {
+      "level": 15,
+      "description": "Executable file dropped in folder commonly used by malware",
+      "id": "92213",
+      "mitre": {
+        "id": [
+          "T1105"
+        ],
+        "tactic": [
+          "Command and Control"
+        ],
+        "technique": [
+          "Ingress Tool Transfer"
+        ]
+      },
+      "firedtimes": 76,
+      "mail": true,
+      "groups": [
+        "sysmon",
+        "sysmon_eid11_detections",
+        "windows"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775119378.1372664",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-Sysmon",
+          "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+          "eventID": "11",
+          "version": "2",
+          "level": "4",
+          "task": "11",
+          "opcode": "0",
+          "keywords": "0x8000000000000000",
+          "systemTime": "2026-04-02T08:42:55.9951498Z",
+          "eventRecordID": "494369",
+          "processID": "7940",
+          "threadID": "8064",
+          "channel": "Microsoft-Windows-Sysmon/Operational",
+          "computer": "WS10",
+          "severityValue": "INFORMATION",
+          "message": "\"File created:\r\nRuleName: -\r\nUtcTime: 2026-04-02 08:42:55.969\r\nProcessGuid: {d9a99926-2c0f-69ce-8f0f-000000000600}\r\nProcessId: 5856\r\nImage: C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetFilename: C:\\Users\\Administrator\\AppData\\Local\\Temp\\__PSScriptPolicyTest_mhpbun1t.nau.ps1\r\nCreationUtcTime: 2026-04-02 08:42:55.969\r\nUser: WS10\\Administrator\""
+        },
+        "eventdata": {
+          "utcTime": "2026-04-02 08:42:55.969",
+          "processGuid": "{d9a99926-2c0f-69ce-8f0f-000000000600}",
+          "processId": "5856",
+          "image": "C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+          "targetFilename": "C:\\\\Users\\\\Administrator\\\\AppData\\\\Local\\\\Temp\\\\__PSScriptPolicyTest_mhpbun1t.nau.ps1",
+          "creationUtcTime": "2026-04-02 08:42:55.969",
+          "user": "WS10\\\\Administrator"
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-103821_20260402_103821",
+    "_captured_at_utc": "2026-04-02T08:42:58Z"
+  },
+  {
+    "timestamp": "2026-04-02T08:43:45.304+0000",
+    "rule": {
+      "level": 15,
+      "description": "Executable file dropped in folder commonly used by malware",
+      "id": "92213",
+      "mitre": {
+        "id": [
+          "T1105"
+        ],
+        "tactic": [
+          "Command and Control"
+        ],
+        "technique": [
+          "Ingress Tool Transfer"
+        ]
+      },
+      "firedtimes": 77,
+      "mail": true,
+      "groups": [
+        "sysmon",
+        "sysmon_eid11_detections",
+        "windows"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775119425.1375441",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-Sysmon",
+          "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+          "eventID": "11",
+          "version": "2",
+          "level": "4",
+          "task": "11",
+          "opcode": "0",
+          "keywords": "0x8000000000000000",
+          "systemTime": "2026-04-02T08:43:43.0838861Z",
+          "eventRecordID": "494657",
+          "processID": "7940",
+          "threadID": "8064",
+          "channel": "Microsoft-Windows-Sysmon/Operational",
+          "computer": "WS10",
+          "severityValue": "INFORMATION",
+          "message": "\"File created:\r\nRuleName: -\r\nUtcTime: 2026-04-02 08:43:43.078\r\nProcessGuid: {d9a99926-2c3f-69ce-910f-000000000600}\r\nProcessId: 3716\r\nImage: C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetFilename: C:\\Users\\Administrator\\AppData\\Local\\Temp\\__PSScriptPolicyTest_ph2ym1ba.pl1.ps1\r\nCreationUtcTime: 2026-04-02 08:43:43.078\r\nUser: WS10\\Administrator\""
+        },
+        "eventdata": {
+          "utcTime": "2026-04-02 08:43:43.078",
+          "processGuid": "{d9a99926-2c3f-69ce-910f-000000000600}",
+          "processId": "3716",
+          "image": "C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+          "targetFilename": "C:\\\\Users\\\\Administrator\\\\AppData\\\\Local\\\\Temp\\\\__PSScriptPolicyTest_ph2ym1ba.pl1.ps1",
+          "creationUtcTime": "2026-04-02 08:43:43.078",
+          "user": "WS10\\\\Administrator"
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-103821_20260402_103821",
+    "_captured_at_utc": "2026-04-02T08:43:46Z"
+  },
+  {
+    "timestamp": "2026-04-02T08:43:47.657+0000",
+    "rule": {
+      "level": 15,
+      "description": "Executable file dropped in folder commonly used by malware",
+      "id": "92213",
+      "mitre": {
+        "id": [
+          "T1105"
+        ],
+        "tactic": [
+          "Command and Control"
+        ],
+        "technique": [
+          "Ingress Tool Transfer"
+        ]
+      },
+      "firedtimes": 78,
+      "mail": true,
+      "groups": [
+        "sysmon",
+        "sysmon_eid11_detections",
+        "windows"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775119427.1378218",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-Sysmon",
+          "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+          "eventID": "11",
+          "version": "2",
+          "level": "4",
+          "task": "11",
+          "opcode": "0",
+          "keywords": "0x8000000000000000",
+          "systemTime": "2026-04-02T08:43:43.2385824Z",
+          "eventRecordID": "494803",
+          "processID": "7940",
+          "threadID": "8064",
+          "channel": "Microsoft-Windows-Sysmon/Operational",
+          "computer": "WS10",
+          "severityValue": "INFORMATION",
+          "message": "\"File created:\r\nRuleName: -\r\nUtcTime: 2026-04-02 08:43:43.218\r\nProcessGuid: {d9a99926-2c3f-69ce-920f-000000000600}\r\nProcessId: 5284\r\nImage: C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetFilename: C:\\Users\\Administrator\\AppData\\Local\\Temp\\__PSScriptPolicyTest_box2tr1u.pge.ps1\r\nCreationUtcTime: 2026-04-02 08:43:43.218\r\nUser: WS10\\Administrator\""
+        },
+        "eventdata": {
+          "utcTime": "2026-04-02 08:43:43.218",
+          "processGuid": "{d9a99926-2c3f-69ce-920f-000000000600}",
+          "processId": "5284",
+          "image": "C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+          "targetFilename": "C:\\\\Users\\\\Administrator\\\\AppData\\\\Local\\\\Temp\\\\__PSScriptPolicyTest_box2tr1u.pge.ps1",
+          "creationUtcTime": "2026-04-02 08:43:43.218",
+          "user": "WS10\\\\Administrator"
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-103821_20260402_103821",
+    "_captured_at_utc": "2026-04-02T08:43:48Z"
+  },
+  {
+    "timestamp": "2026-04-02T08:43:49.626+0000",
+    "rule": {
+      "level": 15,
+      "description": "Executable file dropped in folder commonly used by malware",
+      "id": "92213",
+      "mitre": {
+        "id": [
+          "T1105"
+        ],
+        "tactic": [
+          "Command and Control"
+        ],
+        "technique": [
+          "Ingress Tool Transfer"
+        ]
+      },
+      "firedtimes": 79,
+      "mail": true,
+      "groups": [
+        "sysmon",
+        "sysmon_eid11_detections",
+        "windows"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775119429.1380995",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-Sysmon",
+          "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+          "eventID": "11",
+          "version": "2",
+          "level": "4",
+          "task": "11",
+          "opcode": "0",
+          "keywords": "0x8000000000000000",
+          "systemTime": "2026-04-02T08:43:43.6430110Z",
+          "eventRecordID": "494922",
+          "processID": "7940",
+          "threadID": "8064",
+          "channel": "Microsoft-Windows-Sysmon/Operational",
+          "computer": "WS10",
+          "severityValue": "INFORMATION",
+          "message": "\"File created:\r\nRuleName: -\r\nUtcTime: 2026-04-02 08:43:43.628\r\nProcessGuid: {d9a99926-2c3f-69ce-930f-000000000600}\r\nProcessId: 4788\r\nImage: C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetFilename: C:\\Users\\Administrator\\AppData\\Local\\Temp\\__PSScriptPolicyTest_hoqi4meb.sso.ps1\r\nCreationUtcTime: 2026-04-02 08:43:43.628\r\nUser: WS10\\Administrator\""
+        },
+        "eventdata": {
+          "utcTime": "2026-04-02 08:43:43.628",
+          "processGuid": "{d9a99926-2c3f-69ce-930f-000000000600}",
+          "processId": "4788",
+          "image": "C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+          "targetFilename": "C:\\\\Users\\\\Administrator\\\\AppData\\\\Local\\\\Temp\\\\__PSScriptPolicyTest_hoqi4meb.sso.ps1",
+          "creationUtcTime": "2026-04-02 08:43:43.628",
+          "user": "WS10\\\\Administrator"
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-103821_20260402_103821",
+    "_captured_at_utc": "2026-04-02T08:43:50Z"
+  },
+  {
+    "timestamp": "2026-04-02T08:43:59.132+0000",
+    "rule": {
+      "level": 15,
+      "description": "Executable file dropped in folder commonly used by malware",
+      "id": "92213",
+      "mitre": {
+        "id": [
+          "T1105"
+        ],
+        "tactic": [
+          "Command and Control"
+        ],
+        "technique": [
+          "Ingress Tool Transfer"
+        ]
+      },
+      "firedtimes": 80,
+      "mail": true,
+      "groups": [
+        "sysmon",
+        "sysmon_eid11_detections",
+        "windows"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775119439.1383772",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-Sysmon",
+          "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+          "eventID": "11",
+          "version": "2",
+          "level": "4",
+          "task": "11",
+          "opcode": "0",
+          "keywords": "0x8000000000000000",
+          "systemTime": "2026-04-02T08:43:57.0416401Z",
+          "eventRecordID": "495152",
+          "processID": "7940",
+          "threadID": "8064",
+          "channel": "Microsoft-Windows-Sysmon/Operational",
+          "computer": "WS10",
+          "severityValue": "INFORMATION",
+          "message": "\"File created:\r\nRuleName: -\r\nUtcTime: 2026-04-02 08:43:57.040\r\nProcessGuid: {d9a99926-2c4c-69ce-950f-000000000600}\r\nProcessId: 6384\r\nImage: C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetFilename: C:\\Users\\Administrator\\AppData\\Local\\Temp\\__PSScriptPolicyTest_bfylt1vs.id0.ps1\r\nCreationUtcTime: 2026-04-02 08:43:57.040\r\nUser: WS10\\Administrator\""
+        },
+        "eventdata": {
+          "utcTime": "2026-04-02 08:43:57.040",
+          "processGuid": "{d9a99926-2c4c-69ce-950f-000000000600}",
+          "processId": "6384",
+          "image": "C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+          "targetFilename": "C:\\\\Users\\\\Administrator\\\\AppData\\\\Local\\\\Temp\\\\__PSScriptPolicyTest_bfylt1vs.id0.ps1",
+          "creationUtcTime": "2026-04-02 08:43:57.040",
+          "user": "WS10\\\\Administrator"
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-103821_20260402_103821",
+    "_captured_at_utc": "2026-04-02T08:43:59Z"
+  },
+  {
+    "timestamp": "2026-04-02T08:44:45.263+0000",
+    "rule": {
+      "level": 15,
+      "description": "Executable file dropped in folder commonly used by malware",
+      "id": "92213",
+      "mitre": {
+        "id": [
+          "T1105"
+        ],
+        "tactic": [
+          "Command and Control"
+        ],
+        "technique": [
+          "Ingress Tool Transfer"
+        ]
+      },
+      "firedtimes": 81,
+      "mail": true,
+      "groups": [
+        "sysmon",
+        "sysmon_eid11_detections",
+        "windows"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775119485.1386549",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-Sysmon",
+          "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+          "eventID": "11",
+          "version": "2",
+          "level": "4",
+          "task": "11",
+          "opcode": "0",
+          "keywords": "0x8000000000000000",
+          "systemTime": "2026-04-02T08:44:43.1095514Z",
+          "eventRecordID": "495443",
+          "processID": "7940",
+          "threadID": "8064",
+          "channel": "Microsoft-Windows-Sysmon/Operational",
+          "computer": "WS10",
+          "severityValue": "INFORMATION",
+          "message": "\"File created:\r\nRuleName: -\r\nUtcTime: 2026-04-02 08:44:43.093\r\nProcessGuid: {d9a99926-2c7b-69ce-960f-000000000600}\r\nProcessId: 7560\r\nImage: C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetFilename: C:\\Users\\Administrator\\AppData\\Local\\Temp\\__PSScriptPolicyTest_0gfcykm2.ihw.ps1\r\nCreationUtcTime: 2026-04-02 08:44:43.093\r\nUser: WS10\\Administrator\""
+        },
+        "eventdata": {
+          "utcTime": "2026-04-02 08:44:43.093",
+          "processGuid": "{d9a99926-2c7b-69ce-960f-000000000600}",
+          "processId": "7560",
+          "image": "C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+          "targetFilename": "C:\\\\Users\\\\Administrator\\\\AppData\\\\Local\\\\Temp\\\\__PSScriptPolicyTest_0gfcykm2.ihw.ps1",
+          "creationUtcTime": "2026-04-02 08:44:43.093",
+          "user": "WS10\\\\Administrator"
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-103821_20260402_103821",
+    "_captured_at_utc": "2026-04-02T08:44:45Z"
+  },
+  {
+    "timestamp": "2026-04-02T08:45:27.283+0000",
+    "rule": {
+      "level": 15,
+      "description": "Executable file dropped in folder commonly used by malware",
+      "id": "92213",
+      "mitre": {
+        "id": [
+          "T1105"
+        ],
+        "tactic": [
+          "Command and Control"
+        ],
+        "technique": [
+          "Ingress Tool Transfer"
+        ]
+      },
+      "firedtimes": 82,
+      "mail": true,
+      "groups": [
+        "sysmon",
+        "sysmon_eid11_detections",
+        "windows"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775119527.1389326",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-Sysmon",
+          "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+          "eventID": "11",
+          "version": "2",
+          "level": "4",
+          "task": "11",
+          "opcode": "0",
+          "keywords": "0x8000000000000000",
+          "systemTime": "2026-04-02T08:45:25.1624973Z",
+          "eventRecordID": "495657",
+          "processID": "7940",
+          "threadID": "8064",
+          "channel": "Microsoft-Windows-Sysmon/Operational",
+          "computer": "WS10",
+          "severityValue": "INFORMATION",
+          "message": "\"File created:\r\nRuleName: -\r\nUtcTime: 2026-04-02 08:45:25.150\r\nProcessGuid: {d9a99926-2ca5-69ce-970f-000000000600}\r\nProcessId: 3196\r\nImage: C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetFilename: C:\\Users\\Administrator\\AppData\\Local\\Temp\\__PSScriptPolicyTest_1c1nc3dx.gzl.ps1\r\nCreationUtcTime: 2026-04-02 08:45:25.150\r\nUser: WS10\\Administrator\""
+        },
+        "eventdata": {
+          "utcTime": "2026-04-02 08:45:25.150",
+          "processGuid": "{d9a99926-2ca5-69ce-970f-000000000600}",
+          "processId": "3196",
+          "image": "C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+          "targetFilename": "C:\\\\Users\\\\Administrator\\\\AppData\\\\Local\\\\Temp\\\\__PSScriptPolicyTest_1c1nc3dx.gzl.ps1",
+          "creationUtcTime": "2026-04-02 08:45:25.150",
+          "user": "WS10\\\\Administrator"
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-103821_20260402_103821",
+    "_captured_at_utc": "2026-04-02T08:45:27Z"
+  },
+  {
+    "timestamp": "2026-04-02T08:45:29.182+0000",
+    "rule": {
+      "level": 15,
+      "description": "Executable file dropped in folder commonly used by malware",
+      "id": "92213",
+      "mitre": {
+        "id": [
+          "T1105"
+        ],
+        "tactic": [
+          "Command and Control"
+        ],
+        "technique": [
+          "Ingress Tool Transfer"
+        ]
+      },
+      "firedtimes": 83,
+      "mail": true,
+      "groups": [
+        "sysmon",
+        "sysmon_eid11_detections",
+        "windows"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775119529.1392103",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-Sysmon",
+          "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+          "eventID": "11",
+          "version": "2",
+          "level": "4",
+          "task": "11",
+          "opcode": "0",
+          "keywords": "0x8000000000000000",
+          "systemTime": "2026-04-02T08:45:29.1539405Z",
+          "eventRecordID": "495744",
+          "processID": "7940",
+          "threadID": "8064",
+          "channel": "Microsoft-Windows-Sysmon/Operational",
+          "computer": "WS10",
+          "severityValue": "INFORMATION",
+          "message": "\"File created:\r\nRuleName: -\r\nUtcTime: 2026-04-02 08:45:29.137\r\nProcessGuid: {d9a99926-2ca9-69ce-9a0f-000000000600}\r\nProcessId: 5772\r\nImage: C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetFilename: C:\\Users\\Administrator\\AppData\\Local\\Temp\\__PSScriptPolicyTest_pkru1pjj.e5d.ps1\r\nCreationUtcTime: 2026-04-02 08:45:29.137\r\nUser: WS10\\Administrator\""
+        },
+        "eventdata": {
+          "utcTime": "2026-04-02 08:45:29.137",
+          "processGuid": "{d9a99926-2ca9-69ce-9a0f-000000000600}",
+          "processId": "5772",
+          "image": "C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+          "targetFilename": "C:\\\\Users\\\\Administrator\\\\AppData\\\\Local\\\\Temp\\\\__PSScriptPolicyTest_pkru1pjj.e5d.ps1",
+          "creationUtcTime": "2026-04-02 08:45:29.137",
+          "user": "WS10\\\\Administrator"
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-103821_20260402_103821",
+    "_captured_at_utc": "2026-04-02T08:45:29Z"
+  },
+  {
+    "timestamp": "2026-04-02T08:45:32.756+0000",
+    "rule": {
+      "level": 15,
+      "description": "Executable file dropped in folder commonly used by malware",
+      "id": "92213",
+      "mitre": {
+        "id": [
+          "T1105"
+        ],
+        "tactic": [
+          "Command and Control"
+        ],
+        "technique": [
+          "Ingress Tool Transfer"
+        ]
+      },
+      "firedtimes": 84,
+      "mail": true,
+      "groups": [
+        "sysmon",
+        "sysmon_eid11_detections",
+        "windows"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775119532.1394880",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-Sysmon",
+          "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+          "eventID": "11",
+          "version": "2",
+          "level": "4",
+          "task": "11",
+          "opcode": "0",
+          "keywords": "0x8000000000000000",
+          "systemTime": "2026-04-02T08:45:31.1722812Z",
+          "eventRecordID": "495960",
+          "processID": "7940",
+          "threadID": "8064",
+          "channel": "Microsoft-Windows-Sysmon/Operational",
+          "computer": "WS10",
+          "severityValue": "INFORMATION",
+          "message": "\"File created:\r\nRuleName: -\r\nUtcTime: 2026-04-02 08:45:31.147\r\nProcessGuid: {d9a99926-2cab-69ce-9b0f-000000000600}\r\nProcessId: 6676\r\nImage: C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetFilename: C:\\Users\\Administrator\\AppData\\Local\\Temp\\__PSScriptPolicyTest_iiyjx5ai.olv.ps1\r\nCreationUtcTime: 2026-04-02 08:45:31.147\r\nUser: WS10\\Administrator\""
+        },
+        "eventdata": {
+          "utcTime": "2026-04-02 08:45:31.147",
+          "processGuid": "{d9a99926-2cab-69ce-9b0f-000000000600}",
+          "processId": "6676",
+          "image": "C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+          "targetFilename": "C:\\\\Users\\\\Administrator\\\\AppData\\\\Local\\\\Temp\\\\__PSScriptPolicyTest_iiyjx5ai.olv.ps1",
+          "creationUtcTime": "2026-04-02 08:45:31.147",
+          "user": "WS10\\\\Administrator"
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-103821_20260402_103821",
+    "_captured_at_utc": "2026-04-02T08:45:33Z"
+  },
+  {
+    "timestamp": "2026-04-02T08:47:14.998+0000",
+    "rule": {
+      "level": 15,
+      "description": "Executable file dropped in folder commonly used by malware",
+      "id": "92213",
+      "mitre": {
+        "id": [
+          "T1105"
+        ],
+        "tactic": [
+          "Command and Control"
+        ],
+        "technique": [
+          "Ingress Tool Transfer"
+        ]
+      },
+      "firedtimes": 85,
+      "mail": true,
+      "groups": [
+        "sysmon",
+        "sysmon_eid11_detections",
+        "windows"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775119634.1397657",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-Sysmon",
+          "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+          "eventID": "11",
+          "version": "2",
+          "level": "4",
+          "task": "11",
+          "opcode": "0",
+          "keywords": "0x8000000000000000",
+          "systemTime": "2026-04-02T08:47:10.1244311Z",
+          "eventRecordID": "496705",
+          "processID": "7940",
+          "threadID": "8064",
+          "channel": "Microsoft-Windows-Sysmon/Operational",
+          "computer": "WS10",
+          "severityValue": "INFORMATION",
+          "message": "\"File created:\r\nRuleName: -\r\nUtcTime: 2026-04-02 08:47:10.119\r\nProcessGuid: {d9a99926-2d0d-69ce-9e0f-000000000600}\r\nProcessId: 3184\r\nImage: C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetFilename: C:\\Users\\Administrator\\AppData\\Local\\Temp\\__PSScriptPolicyTest_qhh4fpkf.jlx.ps1\r\nCreationUtcTime: 2026-04-02 08:47:10.119\r\nUser: WS10\\Administrator\""
+        },
+        "eventdata": {
+          "utcTime": "2026-04-02 08:47:10.119",
+          "processGuid": "{d9a99926-2d0d-69ce-9e0f-000000000600}",
+          "processId": "3184",
+          "image": "C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+          "targetFilename": "C:\\\\Users\\\\Administrator\\\\AppData\\\\Local\\\\Temp\\\\__PSScriptPolicyTest_qhh4fpkf.jlx.ps1",
+          "creationUtcTime": "2026-04-02 08:47:10.119",
+          "user": "WS10\\\\Administrator"
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-103821_20260402_103821",
+    "_captured_at_utc": "2026-04-02T08:47:15Z"
+  }
+]

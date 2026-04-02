@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="refresh" content="5">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wazuh Live Defensive Report</title>
+<style>
+body { font-family: Arial, Helvetica, sans-serif; background:#0b1220; color:#e5e7eb; margin:0; padding:18px; }
+header { margin-bottom:16px; }
+h1 { margin:0 0 6px 0; font-size:24px; }
+.small { color:#94a3b8; font-size:12px; }
+.panel { background:#111827; border:1px solid #1f2937; border-radius:10px; padding:14px; margin-bottom:16px; }
+table { width:100%; border-collapse:collapse; table-layout:fixed; }
+th, td { padding:8px 10px; border-bottom:1px solid #1f2937; vertical-align:top; word-wrap:break-word; }
+th { text-align:left; background:#0f172a; position:sticky; top:0; }
+tr:nth-child(even) { background:#0f172a; }
+.badge { display:inline-block; padding:2px 8px; border-radius:999px; font-size:12px; font-weight:bold; }
+.level-low { background:#14532d; color:#dcfce7; }
+.level-med { background:#78350f; color:#fef3c7; }
+.level-high { background:#7f1d1d; color:#fee2e2; }
+.level-crit { background:#7c2d12; color:#ffedd5; }
+.suspicious td { border-left:4px solid #ef4444; }
+.ip { color:#67e8f9; font-weight:bold; }
+.mitre { color:#f5d0fe; font-weight:bold; }
+.reason { color:#fca5a5; }
+.desc { white-space:pre-wrap; }
+</style>
+</head>
+<body>
+<header>
+<h1>Wazuh Live Defensive Report</h1>
+<div class="small">Aggiornamento automatico ogni 5 secondi. Report inizializzato: 2026-04-02 11:58:51</div>
+</header>
+<div class="panel">
+<table>
+<thead>
+<tr><th>Time</th><th>Agent</th><th>Rule</th><th>Lvl</th><th>Src IP</th><th>MITRE</th><th>Tactic</th><th>Technique</th><th>Reason</th><th>Description</th></tr>
+</thead>
+<tbody>
+<!--EVENT_ROWS_START-->
+<tr class="event-row suspicious"><td>2026-04-02T11:58:57.500+0000</td><td>wazuh-server</td><td>5715</td><td><span class="badge level-low">3</span></td><td class="ip">192.168.30.14</td><td class="mitre">T1078, T1021</td><td>Defense Evasion, Persistence, Privilege Escalation, Initial Access, Lateral Movement</td><td>Valid Accounts, Remote Services</td><td class="reason">mitre, srcip</td><td class="desc">sshd: authentication success.</td></tr>
+<tr class="event-row suspicious"><td>2026-04-02T11:58:57.500+0000</td><td>wazuh-server</td><td>5501</td><td><span class="badge level-low">3</span></td><td class="ip">-</td><td class="mitre">T1078</td><td>Defense Evasion, Persistence, Privilege Escalation, Initial Access</td><td>Valid Accounts</td><td class="reason">mitre</td><td class="desc">PAM: Login session opened.</td></tr>
+<tr class="event-row suspicious"><td>2026-04-02T11:58:57.500+0000</td><td>wazuh-server</td><td>5501</td><td><span class="badge level-low">3</span></td><td class="ip">-</td><td class="mitre">T1078</td><td>Defense Evasion, Persistence, Privilege Escalation, Initial Access</td><td>Valid Accounts</td><td class="reason">mitre</td><td class="desc">PAM: Login session opened.</td></tr>
+<!--EVENT_ROWS_END-->
+</tbody>
+</table>
+</div>
+</body>
+</html>

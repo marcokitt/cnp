@@ -1,0 +1,24 @@
+{
+  "api_mode": "v2",
+  "operation_id": "c5911a68-7c29-471a-a964-f119c2ca949d",
+  "operation_name": "apt-sim-20260402-110343",
+  "operation_state": "finished",
+  "selected_agent_paw": "qdodkl",
+  "selected_group": "red",
+  "host_group_count": 3,
+  "compatible_count": 5,
+  "referenced_ability_count": 5,
+  "links_total": 6,
+  "links_relevant_to_selected_agent": 5,
+  "potential_links_total": 0,
+  "event_logs_total": 0,
+  "report_present": false,
+  "link_status_counts": {
+    "1": 3,
+    "0": 2
+  },
+  "errors": {},
+  "probable_causes": [
+    "Operation in stato finished, non propriamente in esecuzione."
+  ]
+}

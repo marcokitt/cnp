@@ -1,0 +1,73 @@
+ssh:
+  host: "192.168.30.46"
+  port: 22
+  username: "fede"
+  password: ""
+  key_file: "C:/Users/shc-user/.ssh/id_rsa"
+  key_passphrase: ""
+  timeout: 10
+  allow_unknown_host: false
+  known_hosts: "C:/Users/shc-user/.ssh/known_hosts"
+
+wazuh:
+  source: "archives"   # alerts | archives | custom
+  custom_path: ""
+  remote_alerts_path: "/var/ossec/logs/alerts/alerts.json"
+  remote_archives_path: "/var/ossec/logs/archives/archives.json"
+
+filters:
+  min_level: 0
+  contains: ""
+  only_groups: []
+  exclude_groups: []
+  only_with_source_ip: false
+  only_with_mitre: false
+
+ui:
+  max_rows_main: 30
+  max_rows_suspicious: 12
+  refresh_per_second: 4
+  show_full_log_preview: false
+  full_log_preview_len: 140
+
+runtime:
+  reconnect_delay_sec: 3
+  remote_tail_from_end: true
+  keepalive_sec: 30
+
+export:
+  enable_csv: true
+  csv_path: "wazuh_live_export.csv"
+  flush_every: 1
+  enable_jsonl: true
+  jsonl_path: "wazuh_live_export.jsonl"
+
+detection:
+  suspicious_keywords:
+    - "caldera"
+    - "sandcat"
+    - "manx"
+    - "powershell"
+    - "pwsh"
+    - "cmd.exe"
+    - "whoami"
+    - "net user"
+    - "net localgroup"
+    - "rundll32"
+    - "regsvr32"
+    - "certutil"
+    - "bitsadmin"
+    - "wmic"
+    - "psexec"
+    - "mimikatz"
+    - "invoke-"
+    - "base64"
+    - "encodedcommand"
+    - "t1059"
+    - "sysmon"
+  suspicious_rule_ids: []
+  suspicious_groups:
+    - "sysmon"
+    - "attack"
+    - "windows"
+  suspicious_min_level: 5

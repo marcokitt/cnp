@@ -1,0 +1,4130 @@
+[
+  {
+    "timestamp": "2026-04-02T07:29:16.544+0000",
+    "rule": {
+      "level": 15,
+      "description": "Executable file dropped in folder commonly used by malware",
+      "id": "92213",
+      "mitre": {
+        "id": [
+          "T1105"
+        ],
+        "tactic": [
+          "Command and Control"
+        ],
+        "technique": [
+          "Ingress Tool Transfer"
+        ]
+      },
+      "firedtimes": 13,
+      "mail": true,
+      "groups": [
+        "sysmon",
+        "sysmon_eid11_detections",
+        "windows"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775114956.711816",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-Sysmon",
+          "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+          "eventID": "11",
+          "version": "2",
+          "level": "4",
+          "task": "11",
+          "opcode": "0",
+          "keywords": "0x8000000000000000",
+          "systemTime": "2026-04-02T07:29:14.3041489Z",
+          "eventRecordID": "453113",
+          "processID": "7940",
+          "threadID": "8064",
+          "channel": "Microsoft-Windows-Sysmon/Operational",
+          "computer": "WS10",
+          "severityValue": "INFORMATION",
+          "message": "\"File created:\r\nRuleName: -\r\nUtcTime: 2026-04-02 07:29:14.295\r\nProcessGuid: {d9a99926-1aca-69ce-410e-000000000600}\r\nProcessId: 8212\r\nImage: C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetFilename: C:\\Users\\Administrator\\AppData\\Local\\Temp\\__PSScriptPolicyTest_nvmonmsz.2th.ps1\r\nCreationUtcTime: 2026-04-02 07:29:14.295\r\nUser: WS10\\Administrator\""
+        },
+        "eventdata": {
+          "utcTime": "2026-04-02 07:29:14.295",
+          "processGuid": "{d9a99926-1aca-69ce-410e-000000000600}",
+          "processId": "8212",
+          "image": "C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+          "targetFilename": "C:\\\\Users\\\\Administrator\\\\AppData\\\\Local\\\\Temp\\\\__PSScriptPolicyTest_nvmonmsz.2th.ps1",
+          "creationUtcTime": "2026-04-02 07:29:14.295",
+          "user": "WS10\\\\Administrator"
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-092855_20260402_092855",
+    "_captured_at_utc": "2026-04-02T07:29:17Z"
+  },
+  {
+    "timestamp": "2026-04-02T07:29:18.158+0000",
+    "rule": {
+      "level": 6,
+      "description": "Executable file created by powershell: C:\\\\Users\\\\Administrator\\\\Downloads\\\\PowerShellCore.msi",
+      "id": "92203",
+      "mitre": {
+        "id": [
+          "T1105"
+        ],
+        "tactic": [
+          "Command and Control"
+        ],
+        "technique": [
+          "Ingress Tool Transfer"
+        ]
+      },
+      "firedtimes": 1,
+      "mail": false,
+      "groups": [
+        "sysmon",
+        "sysmon_eid11_detections",
+        "windows"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775114958.714592",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-Sysmon",
+          "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+          "eventID": "11",
+          "version": "2",
+          "level": "4",
+          "task": "11",
+          "opcode": "0",
+          "keywords": "0x8000000000000000",
+          "systemTime": "2026-04-02T07:29:14.4534516Z",
+          "eventRecordID": "453211",
+          "processID": "7940",
+          "threadID": "8064",
+          "channel": "Microsoft-Windows-Sysmon/Operational",
+          "computer": "WS10",
+          "severityValue": "INFORMATION",
+          "message": "\"File created:\r\nRuleName: Downloads\r\nUtcTime: 2026-04-02 07:29:14.453\r\nProcessGuid: {d9a99926-1aca-69ce-410e-000000000600}\r\nProcessId: 8212\r\nImage: C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetFilename: C:\\Users\\Administrator\\Downloads\\PowerShellCore.msi\r\nCreationUtcTime: 2026-04-02 07:29:14.439\r\nUser: WS10\\Administrator\""
+        },
+        "eventdata": {
+          "ruleName": "Downloads",
+          "utcTime": "2026-04-02 07:29:14.453",
+          "processGuid": "{d9a99926-1aca-69ce-410e-000000000600}",
+          "processId": "8212",
+          "image": "C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+          "targetFilename": "C:\\\\Users\\\\Administrator\\\\Downloads\\\\PowerShellCore.msi",
+          "creationUtcTime": "2026-04-02 07:29:14.439",
+          "user": "WS10\\\\Administrator"
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-092855_20260402_092855",
+    "_captured_at_utc": "2026-04-02T07:29:18Z"
+  },
+  {
+    "timestamp": "2026-04-02T07:29:18.758+0000",
+    "rule": {
+      "level": 3,
+      "description": "Windows installer began an installation process.",
+      "id": "60610",
+      "firedtimes": 1,
+      "mail": false,
+      "groups": [
+        "windows",
+        "windows_application"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775114958.717348",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "MsiInstaller",
+          "eventID": "1040",
+          "version": "0",
+          "level": "4",
+          "task": "0",
+          "opcode": "0",
+          "keywords": "0x80000000000000",
+          "systemTime": "2026-04-02T07:29:14.7789546Z",
+          "eventRecordID": "1936",
+          "processID": "0",
+          "threadID": "0",
+          "channel": "Application",
+          "computer": "WS10",
+          "severityValue": "INFORMATION",
+          "message": "\"Inizio di una transazione di Windows Installer in corso: C:\\Users\\Administrator\\Downloads\\PowerShellCore.msi. ID processo client: 2752.\""
+        },
+        "eventdata": {
+          "data": "C:\\\\Users\\\\Administrator\\\\Downloads\\\\PowerShellCore.msi, 2752"
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-092855_20260402_092855",
+    "_captured_at_utc": "2026-04-02T07:29:19Z"
+  },
+  {
+    "timestamp": "2026-04-02T07:29:20.406+0000",
+    "rule": {
+      "level": 6,
+      "description": "Scripting file created under Windows Temp or User folder",
+      "id": "92200",
+      "mitre": {
+        "id": [
+          "T1059",
+          "T1105"
+        ],
+        "tactic": [
+          "Execution",
+          "Command and Control"
+        ],
+        "technique": [
+          "Command and Scripting Interpreter",
+          "Ingress Tool Transfer"
+        ]
+      },
+      "firedtimes": 5,
+      "mail": false,
+      "groups": [
+        "sysmon",
+        "sysmon_eid11_detections",
+        "windows"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775114960.718746",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-Sysmon",
+          "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+          "eventID": "11",
+          "version": "2",
+          "level": "4",
+          "task": "11",
+          "opcode": "0",
+          "keywords": "0x8000000000000000",
+          "systemTime": "2026-04-02T07:29:20.3238428Z",
+          "eventRecordID": "453274",
+          "processID": "7940",
+          "threadID": "8064",
+          "channel": "Microsoft-Windows-Sysmon/Operational",
+          "computer": "WS10",
+          "severityValue": "INFORMATION",
+          "message": "\"File created:\r\nRuleName: Downloads\r\nUtcTime: 2026-04-02 07:29:20.323\r\nProcessGuid: {d9a99926-2156-69cd-0b0b-000000000600}\r\nProcessId: 6676\r\nImage: C:\\Users\\Public\\splunkd.exe\r\nTargetFilename: C:\\Users\\Administrator\\Downloads\\powerview.ps1\r\nCreationUtcTime: 2026-04-02 07:29:20.323\r\nUser: WS10\\Administrator\""
+        },
+        "eventdata": {
+          "ruleName": "Downloads",
+          "utcTime": "2026-04-02 07:29:20.323",
+          "processGuid": "{d9a99926-2156-69cd-0b0b-000000000600}",
+          "processId": "6676",
+          "image": "C:\\\\Users\\\\Public\\\\splunkd.exe",
+          "targetFilename": "C:\\\\Users\\\\Administrator\\\\Downloads\\\\powerview.ps1",
+          "creationUtcTime": "2026-04-02 07:29:20.323",
+          "user": "WS10\\\\Administrator"
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-092855_20260402_092855",
+    "_captured_at_utc": "2026-04-02T07:29:20Z"
+  },
+  {
+    "timestamp": "2026-04-02T07:29:22.788+0000",
+    "rule": {
+      "level": 15,
+      "description": "Executable file dropped in folder commonly used by malware",
+      "id": "92213",
+      "mitre": {
+        "id": [
+          "T1105"
+        ],
+        "tactic": [
+          "Command and Control"
+        ],
+        "technique": [
+          "Ingress Tool Transfer"
+        ]
+      },
+      "firedtimes": 14,
+      "mail": true,
+      "groups": [
+        "sysmon",
+        "sysmon_eid11_detections",
+        "windows"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775114962.721314",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-Sysmon",
+          "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+          "eventID": "11",
+          "version": "2",
+          "level": "4",
+          "task": "11",
+          "opcode": "0",
+          "keywords": "0x8000000000000000",
+          "systemTime": "2026-04-02T07:29:20.3948331Z",
+          "eventRecordID": "453400",
+          "processID": "7940",
+          "threadID": "8064",
+          "channel": "Microsoft-Windows-Sysmon/Operational",
+          "computer": "WS10",
+          "severityValue": "INFORMATION",
+          "message": "\"File created:\r\nRuleName: -\r\nUtcTime: 2026-04-02 07:29:20.387\r\nProcessGuid: {d9a99926-1ad0-69ce-440e-000000000600}\r\nProcessId: 7188\r\nImage: C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetFilename: C:\\Users\\Administrator\\AppData\\Local\\Temp\\__PSScriptPolicyTest_zqjgiwnl.old.ps1\r\nCreationUtcTime: 2026-04-02 07:29:20.387\r\nUser: WS10\\Administrator\""
+        },
+        "eventdata": {
+          "utcTime": "2026-04-02 07:29:20.387",
+          "processGuid": "{d9a99926-1ad0-69ce-440e-000000000600}",
+          "processId": "7188",
+          "image": "C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+          "targetFilename": "C:\\\\Users\\\\Administrator\\\\AppData\\\\Local\\\\Temp\\\\__PSScriptPolicyTest_zqjgiwnl.old.ps1",
+          "creationUtcTime": "2026-04-02 07:29:20.387",
+          "user": "WS10\\\\Administrator"
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-092855_20260402_092855",
+    "_captured_at_utc": "2026-04-02T07:29:23Z"
+  },
+  {
+    "timestamp": "2026-04-02T07:30:15.771+0000",
+    "rule": {
+      "level": 15,
+      "description": "Executable file dropped in folder commonly used by malware",
+      "id": "92213",
+      "mitre": {
+        "id": [
+          "T1105"
+        ],
+        "tactic": [
+          "Command and Control"
+        ],
+        "technique": [
+          "Ingress Tool Transfer"
+        ]
+      },
+      "firedtimes": 15,
+      "mail": true,
+      "groups": [
+        "sysmon",
+        "sysmon_eid11_detections",
+        "windows"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775115015.724090",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-Sysmon",
+          "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+          "eventID": "11",
+          "version": "2",
+          "level": "4",
+          "task": "11",
+          "opcode": "0",
+          "keywords": "0x8000000000000000",
+          "systemTime": "2026-04-02T07:30:13.5859696Z",
+          "eventRecordID": "453678",
+          "processID": "7940",
+          "threadID": "8064",
+          "channel": "Microsoft-Windows-Sysmon/Operational",
+          "computer": "WS10",
+          "severityValue": "INFORMATION",
+          "message": "\"File created:\r\nRuleName: -\r\nUtcTime: 2026-04-02 07:30:13.577\r\nProcessGuid: {d9a99926-1b05-69ce-470e-000000000600}\r\nProcessId: 6504\r\nImage: C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetFilename: C:\\Users\\Administrator\\AppData\\Local\\Temp\\__PSScriptPolicyTest_4t25wq5z.t24.ps1\r\nCreationUtcTime: 2026-04-02 07:30:13.577\r\nUser: WS10\\Administrator\""
+        },
+        "eventdata": {
+          "utcTime": "2026-04-02 07:30:13.577",
+          "processGuid": "{d9a99926-1b05-69ce-470e-000000000600}",
+          "processId": "6504",
+          "image": "C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+          "targetFilename": "C:\\\\Users\\\\Administrator\\\\AppData\\\\Local\\\\Temp\\\\__PSScriptPolicyTest_4t25wq5z.t24.ps1",
+          "creationUtcTime": "2026-04-02 07:30:13.577",
+          "user": "WS10\\\\Administrator"
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-092855_20260402_092855",
+    "_captured_at_utc": "2026-04-02T07:30:16Z"
+  },
+  {
+    "timestamp": "2026-04-02T07:34:59.660+0000",
+    "rule": {
+      "level": 9,
+      "description": "Windows application error event.",
+      "id": "60602",
+      "firedtimes": 1,
+      "mail": false,
+      "groups": [
+        "windows",
+        "windows_application",
+        "system_error"
+      ],
+      "gdpr": [
+        "IV_35.7.d"
+      ],
+      "gpg13": [
+        "4.3"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775115299.726866",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-CAPI2",
+          "providerGuid": "{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}",
+          "eventSourceName": "Microsoft-Windows-CAPI2",
+          "eventID": "4107",
+          "version": "0",
+          "level": "2",
+          "task": "0",
+          "opcode": "0",
+          "keywords": "0x8080000000000000",
+          "systemTime": "2026-04-02T07:34:58.6038004Z",
+          "eventRecordID": "1938",
+          "processID": "1364",
+          "threadID": "1636",
+          "channel": "Application",
+          "computer": "WS10",
+          "severityValue": "ERROR",
+          "message": "\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\r\n.\""
+        },
+        "eventdata": {
+          "data": "http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi."
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-092855_20260402_092855",
+    "_captured_at_utc": "2026-04-02T07:35:00Z"
+  },
+  {
+    "timestamp": "2026-04-02T07:34:59.676+0000",
+    "rule": {
+      "level": 9,
+      "description": "Windows application error event.",
+      "id": "60602",
+      "firedtimes": 2,
+      "mail": false,
+      "groups": [
+        "windows",
+        "windows_application",
+        "system_error"
+      ],
+      "gdpr": [
+        "IV_35.7.d"
+      ],
+      "gpg13": [
+        "4.3"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775115299.728802",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-CAPI2",
+          "providerGuid": "{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}",
+          "eventSourceName": "Microsoft-Windows-CAPI2",
+          "eventID": "4107",
+          "version": "0",
+          "level": "2",
+          "task": "0",
+          "opcode": "0",
+          "keywords": "0x8080000000000000",
+          "systemTime": "2026-04-02T07:34:58.6038004Z",
+          "eventRecordID": "1939",
+          "processID": "1364",
+          "threadID": "1636",
+          "channel": "Application",
+          "computer": "WS10",
+          "severityValue": "ERROR",
+          "message": "\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\r\n.\""
+        },
+        "eventdata": {
+          "data": "http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi."
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-092855_20260402_092855",
+    "_captured_at_utc": "2026-04-02T07:35:00Z"
+  },
+  {
+    "timestamp": "2026-04-02T07:34:59.693+0000",
+    "rule": {
+      "level": 9,
+      "description": "Windows application error event.",
+      "id": "60602",
+      "firedtimes": 3,
+      "mail": false,
+      "groups": [
+        "windows",
+        "windows_application",
+        "system_error"
+      ],
+      "gdpr": [
+        "IV_35.7.d"
+      ],
+      "gpg13": [
+        "4.3"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775115299.730738",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-CAPI2",
+          "providerGuid": "{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}",
+          "eventSourceName": "Microsoft-Windows-CAPI2",
+          "eventID": "4107",
+          "version": "0",
+          "level": "2",
+          "task": "0",
+          "opcode": "0",
+          "keywords": "0x8080000000000000",
+          "systemTime": "2026-04-02T07:34:58.6195169Z",
+          "eventRecordID": "1940",
+          "processID": "1364",
+          "threadID": "1636",
+          "channel": "Application",
+          "computer": "WS10",
+          "severityValue": "ERROR",
+          "message": "\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\r\n.\""
+        },
+        "eventdata": {
+          "data": "http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi."
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-092855_20260402_092855",
+    "_captured_at_utc": "2026-04-02T07:35:00Z"
+  },
+  {
+    "timestamp": "2026-04-02T07:35:07.771+0000",
+    "rule": {
+      "level": 9,
+      "description": "Windows application error event.",
+      "id": "60602",
+      "firedtimes": 4,
+      "mail": false,
+      "groups": [
+        "windows",
+        "windows_application",
+        "system_error"
+      ],
+      "gdpr": [
+        "IV_35.7.d"
+      ],
+      "gpg13": [
+        "4.3"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775115307.732674",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-CAPI2",
+          "providerGuid": "{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}",
+          "eventSourceName": "Microsoft-Windows-CAPI2",
+          "eventID": "4107",
+          "version": "0",
+          "level": "2",
+          "task": "0",
+          "opcode": "0",
+          "keywords": "0x8080000000000000",
+          "systemTime": "2026-04-02T07:35:06.7605797Z",
+          "eventRecordID": "1941",
+          "processID": "1364",
+          "threadID": "1636",
+          "channel": "Application",
+          "computer": "WS10",
+          "severityValue": "ERROR",
+          "message": "\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\r\n.\""
+        },
+        "eventdata": {
+          "data": "http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi."
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-092855_20260402_092855",
+    "_captured_at_utc": "2026-04-02T07:35:08Z"
+  },
+  {
+    "timestamp": "2026-04-02T07:35:07.786+0000",
+    "rule": {
+      "level": 9,
+      "description": "Windows application error event.",
+      "id": "60602",
+      "firedtimes": 5,
+      "mail": false,
+      "groups": [
+        "windows",
+        "windows_application",
+        "system_error"
+      ],
+      "gdpr": [
+        "IV_35.7.d"
+      ],
+      "gpg13": [
+        "4.3"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775115307.734610",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-CAPI2",
+          "providerGuid": "{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}",
+          "eventSourceName": "Microsoft-Windows-CAPI2",
+          "eventID": "4107",
+          "version": "0",
+          "level": "2",
+          "task": "0",
+          "opcode": "0",
+          "keywords": "0x8080000000000000",
+          "systemTime": "2026-04-02T07:35:06.7605797Z",
+          "eventRecordID": "1942",
+          "processID": "1364",
+          "threadID": "1636",
+          "channel": "Application",
+          "computer": "WS10",
+          "severityValue": "ERROR",
+          "message": "\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\r\n.\""
+        },
+        "eventdata": {
+          "data": "http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi."
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-092855_20260402_092855",
+    "_captured_at_utc": "2026-04-02T07:35:08Z"
+  },
+  {
+    "timestamp": "2026-04-02T07:35:07.801+0000",
+    "rule": {
+      "level": 9,
+      "description": "Windows application error event.",
+      "id": "60602",
+      "firedtimes": 6,
+      "mail": false,
+      "groups": [
+        "windows",
+        "windows_application",
+        "system_error"
+      ],
+      "gdpr": [
+        "IV_35.7.d"
+      ],
+      "gpg13": [
+        "4.3"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775115307.736546",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-CAPI2",
+          "providerGuid": "{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}",
+          "eventSourceName": "Microsoft-Windows-CAPI2",
+          "eventID": "4107",
+          "version": "0",
+          "level": "2",
+          "task": "0",
+          "opcode": "0",
+          "keywords": "0x8080000000000000",
+          "systemTime": "2026-04-02T07:35:06.7763574Z",
+          "eventRecordID": "1943",
+          "processID": "1364",
+          "threadID": "1636",
+          "channel": "Application",
+          "computer": "WS10",
+          "severityValue": "ERROR",
+          "message": "\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\r\n.\""
+        },
+        "eventdata": {
+          "data": "http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi."
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-092855_20260402_092855",
+    "_captured_at_utc": "2026-04-02T07:35:08Z"
+  },
+  {
+    "timestamp": "2026-04-02T07:35:15.334+0000",
+    "rule": {
+      "level": 9,
+      "description": "Windows application error event.",
+      "id": "60602",
+      "firedtimes": 7,
+      "mail": false,
+      "groups": [
+        "windows",
+        "windows_application",
+        "system_error"
+      ],
+      "gdpr": [
+        "IV_35.7.d"
+      ],
+      "gpg13": [
+        "4.3"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775115315.738482",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-CAPI2",
+          "providerGuid": "{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}",
+          "eventSourceName": "Microsoft-Windows-CAPI2",
+          "eventID": "4107",
+          "version": "0",
+          "level": "2",
+          "task": "0",
+          "opcode": "0",
+          "keywords": "0x8080000000000000",
+          "systemTime": "2026-04-02T07:35:14.2801345Z",
+          "eventRecordID": "1944",
+          "processID": "1364",
+          "threadID": "1636",
+          "channel": "Application",
+          "computer": "WS10",
+          "severityValue": "ERROR",
+          "message": "\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\r\n.\""
+        },
+        "eventdata": {
+          "data": "http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi."
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-092855_20260402_092855",
+    "_captured_at_utc": "2026-04-02T07:35:15Z"
+  },
+  {
+    "timestamp": "2026-04-02T07:35:15.349+0000",
+    "rule": {
+      "level": 10,
+      "description": "Multiple Windows error application events.",
+      "id": "61061",
+      "frequency": 8,
+      "firedtimes": 1,
+      "mail": false,
+      "groups": [
+        "windows",
+        "windows_application"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775115315.740418",
+    "previous_output": "{\"win\":{\"system\":{\"providerName\":\"Microsoft-Windows-CAPI2\",\"providerGuid\":\"{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}\",\"eventSourceName\":\"Microsoft-Windows-CAPI2\",\"eventID\":\"4107\",\"version\":\"0\",\"level\":\"2\",\"task\":\"0\",\"opcode\":\"0\",\"keywords\":\"0x8080000000000000\",\"systemTime\":\"2026-04-02T07:35:14.2801345Z\",\"eventRecordID\":\"1944\",\"processID\":\"1364\",\"threadID\":\"1636\",\"channel\":\"Application\",\"computer\":\"WS10\",\"severityValue\":\"ERROR\",\"message\":\"\\\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\\r\\n.\\\"\"},\"eventdata\":{\"data\":\"http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi.\"}}}\n{\"win\":{\"system\":{\"providerName\":\"Microsoft-Windows-CAPI2\",\"providerGuid\":\"{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}\",\"eventSourceName\":\"Microsoft-Windows-CAPI2\",\"eventID\":\"4107\",\"version\":\"0\",\"level\":\"2\",\"task\":\"0\",\"opcode\":\"0\",\"keywords\":\"0x8080000000000000\",\"systemTime\":\"2026-04-02T07:35:06.7763574Z\",\"eventRecordID\":\"1943\",\"processID\":\"1364\",\"threadID\":\"1636\",\"channel\":\"Application\",\"computer\":\"WS10\",\"severityValue\":\"ERROR\",\"message\":\"\\\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\\r\\n.\\\"\"},\"eventdata\":{\"data\":\"http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi.\"}}}\n{\"win\":{\"system\":{\"providerName\":\"Microsoft-Windows-CAPI2\",\"providerGuid\":\"{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}\",\"eventSourceName\":\"Microsoft-Windows-CAPI2\",\"eventID\":\"4107\",\"version\":\"0\",\"level\":\"2\",\"task\":\"0\",\"opcode\":\"0\",\"keywords\":\"0x8080000000000000\",\"systemTime\":\"2026-04-02T07:35:06.7605797Z\",\"eventRecordID\":\"1942\",\"processID\":\"1364\",\"threadID\":\"1636\",\"channel\":\"Application\",\"computer\":\"WS10\",\"severityValue\":\"ERROR\",\"message\":\"\\\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\\r\\n.\\\"\"},\"eventdata\":{\"data\":\"http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi.\"}}}\n{\"win\":{\"system\":{\"providerName\":\"Microsoft-Windows-CAPI2\",\"providerGuid\":\"{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}\",\"eventSourceName\":\"Microsoft-Windows-CAPI2\",\"eventID\":\"4107\",\"version\":\"0\",\"level\":\"2\",\"task\":\"0\",\"opcode\":\"0\",\"keywords\":\"0x8080000000000000\",\"systemTime\":\"2026-04-02T07:35:06.7605797Z\",\"eventRecordID\":\"1941\",\"processID\":\"1364\",\"threadID\":\"1636\",\"channel\":\"Application\",\"computer\":\"WS10\",\"severityValue\":\"ERROR\",\"message\":\"\\\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\\r\\n.\\\"\"},\"eventdata\":{\"data\":\"http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi.\"}}}\n{\"win\":{\"system\":{\"providerName\":\"Microsoft-Windows-CAPI2\",\"providerGuid\":\"{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}\",\"eventSourceName\":\"Microsoft-Windows-CAPI2\",\"eventID\":\"4107\",\"version\":\"0\",\"level\":\"2\",\"task\":\"0\",\"opcode\":\"0\",\"keywords\":\"0x8080000000000000\",\"systemTime\":\"2026-04-02T07:34:58.6195169Z\",\"eventRecordID\":\"1940\",\"processID\":\"1364\",\"threadID\":\"1636\",\"channel\":\"Application\",\"computer\":\"WS10\",\"severityValue\":\"ERROR\",\"message\":\"\\\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\\r\\n.\\\"\"},\"eventdata\":{\"data\":\"http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi.\"}}}\n{\"win\":{\"system\":{\"providerName\":\"Microsoft-Windows-CAPI2\",\"providerGuid\":\"{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}\",\"eventSourceName\":\"Microsoft-Windows-CAPI2\",\"eventID\":\"4107\",\"version\":\"0\",\"level\":\"2\",\"task\":\"0\",\"opcode\":\"0\",\"keywords\":\"0x8080000000000000\",\"systemTime\":\"2026-04-02T07:34:58.6038004Z\",\"eventRecordID\":\"1939\",\"processID\":\"1364\",\"threadID\":\"1636\",\"channel\":\"Application\",\"computer\":\"WS10\",\"severityValue\":\"ERROR\",\"message\":\"\\\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\\r\\n.\\\"\"},\"eventdata\":{\"data\":\"http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi.\"}}}\n{\"win\":{\"system\":{\"providerName\":\"Microsoft-Windows-CAPI2\",\"providerGuid\":\"{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}\",\"eventSourceName\":\"Microsoft-Windows-CAPI2\",\"eventID\":\"4107\",\"version\":\"0\",\"level\":\"2\",\"task\":\"0\",\"opcode\":\"0\",\"keywords\":\"0x8080000000000000\",\"systemTime\":\"2026-04-02T07:34:58.6038004Z\",\"eventRecordID\":\"1938\",\"processID\":\"1364\",\"threadID\":\"1636\",\"channel\":\"Application\",\"computer\":\"WS10\",\"severityValue\":\"ERROR\",\"message\":\"\\\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\\r\\n.\\\"\"},\"eventdata\":{\"data\":\"http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi.\"}}}",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-CAPI2",
+          "providerGuid": "{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}",
+          "eventSourceName": "Microsoft-Windows-CAPI2",
+          "eventID": "4107",
+          "version": "0",
+          "level": "2",
+          "task": "0",
+          "opcode": "0",
+          "keywords": "0x8080000000000000",
+          "systemTime": "2026-04-02T07:35:14.2923344Z",
+          "eventRecordID": "1945",
+          "processID": "1364",
+          "threadID": "1636",
+          "channel": "Application",
+          "computer": "WS10",
+          "severityValue": "ERROR",
+          "message": "\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\r\n.\""
+        },
+        "eventdata": {
+          "data": "http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi."
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-092855_20260402_092855",
+    "_captured_at_utc": "2026-04-02T07:35:15Z"
+  },
+  {
+    "timestamp": "2026-04-02T07:35:15.365+0000",
+    "rule": {
+      "level": 9,
+      "description": "Windows application error event.",
+      "id": "60602",
+      "firedtimes": 8,
+      "mail": false,
+      "groups": [
+        "windows",
+        "windows_application",
+        "system_error"
+      ],
+      "gdpr": [
+        "IV_35.7.d"
+      ],
+      "gpg13": [
+        "4.3"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775115315.748011",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-CAPI2",
+          "providerGuid": "{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}",
+          "eventSourceName": "Microsoft-Windows-CAPI2",
+          "eventID": "4107",
+          "version": "0",
+          "level": "2",
+          "task": "0",
+          "opcode": "0",
+          "keywords": "0x8080000000000000",
+          "systemTime": "2026-04-02T07:35:14.3068825Z",
+          "eventRecordID": "1946",
+          "processID": "1364",
+          "threadID": "1636",
+          "channel": "Application",
+          "computer": "WS10",
+          "severityValue": "ERROR",
+          "message": "\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\r\n.\""
+        },
+        "eventdata": {
+          "data": "http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi."
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-092855_20260402_092855",
+    "_captured_at_utc": "2026-04-02T07:35:15Z"
+  },
+  {
+    "timestamp": "2026-04-02T07:35:17.747+0000",
+    "rule": {
+      "level": 9,
+      "description": "Windows application error event.",
+      "id": "60602",
+      "firedtimes": 9,
+      "mail": false,
+      "groups": [
+        "windows",
+        "windows_application",
+        "system_error"
+      ],
+      "gdpr": [
+        "IV_35.7.d"
+      ],
+      "gpg13": [
+        "4.3"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775115317.749947",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-CAPI2",
+          "providerGuid": "{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}",
+          "eventSourceName": "Microsoft-Windows-CAPI2",
+          "eventID": "4107",
+          "version": "0",
+          "level": "2",
+          "task": "0",
+          "opcode": "0",
+          "keywords": "0x8080000000000000",
+          "systemTime": "2026-04-02T07:35:16.5881829Z",
+          "eventRecordID": "1947",
+          "processID": "1364",
+          "threadID": "10128",
+          "channel": "Application",
+          "computer": "WS10",
+          "severityValue": "ERROR",
+          "message": "\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\r\n.\""
+        },
+        "eventdata": {
+          "data": "http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi."
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-092855_20260402_092855",
+    "_captured_at_utc": "2026-04-02T07:35:18Z"
+  },
+  {
+    "timestamp": "2026-04-02T07:35:17.763+0000",
+    "rule": {
+      "level": 9,
+      "description": "Windows application error event.",
+      "id": "60602",
+      "firedtimes": 10,
+      "mail": false,
+      "groups": [
+        "windows",
+        "windows_application",
+        "system_error"
+      ],
+      "gdpr": [
+        "IV_35.7.d"
+      ],
+      "gpg13": [
+        "4.3"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775115317.751885",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-CAPI2",
+          "providerGuid": "{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}",
+          "eventSourceName": "Microsoft-Windows-CAPI2",
+          "eventID": "4107",
+          "version": "0",
+          "level": "2",
+          "task": "0",
+          "opcode": "0",
+          "keywords": "0x8080000000000000",
+          "systemTime": "2026-04-02T07:35:16.6043658Z",
+          "eventRecordID": "1948",
+          "processID": "1364",
+          "threadID": "10128",
+          "channel": "Application",
+          "computer": "WS10",
+          "severityValue": "ERROR",
+          "message": "\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\r\n.\""
+        },
+        "eventdata": {
+          "data": "http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi."
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-092855_20260402_092855",
+    "_captured_at_utc": "2026-04-02T07:35:18Z"
+  },
+  {
+    "timestamp": "2026-04-02T07:35:17.778+0000",
+    "rule": {
+      "level": 9,
+      "description": "Windows application error event.",
+      "id": "60602",
+      "firedtimes": 11,
+      "mail": false,
+      "groups": [
+        "windows",
+        "windows_application",
+        "system_error"
+      ],
+      "gdpr": [
+        "IV_35.7.d"
+      ],
+      "gpg13": [
+        "4.3"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775115317.753823",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-CAPI2",
+          "providerGuid": "{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}",
+          "eventSourceName": "Microsoft-Windows-CAPI2",
+          "eventID": "4107",
+          "version": "0",
+          "level": "2",
+          "task": "0",
+          "opcode": "0",
+          "keywords": "0x8080000000000000",
+          "systemTime": "2026-04-02T07:35:16.6043658Z",
+          "eventRecordID": "1949",
+          "processID": "1364",
+          "threadID": "10128",
+          "channel": "Application",
+          "computer": "WS10",
+          "severityValue": "ERROR",
+          "message": "\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\r\n.\""
+        },
+        "eventdata": {
+          "data": "http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi."
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-092855_20260402_092855",
+    "_captured_at_utc": "2026-04-02T07:35:18Z"
+  },
+  {
+    "timestamp": "2026-04-02T07:35:22.163+0000",
+    "rule": {
+      "level": 9,
+      "description": "Windows application error event.",
+      "id": "60602",
+      "firedtimes": 12,
+      "mail": false,
+      "groups": [
+        "windows",
+        "windows_application",
+        "system_error"
+      ],
+      "gdpr": [
+        "IV_35.7.d"
+      ],
+      "gpg13": [
+        "4.3"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775115322.755761",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-CAPI2",
+          "providerGuid": "{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}",
+          "eventSourceName": "Microsoft-Windows-CAPI2",
+          "eventID": "4107",
+          "version": "0",
+          "level": "2",
+          "task": "0",
+          "opcode": "0",
+          "keywords": "0x8080000000000000",
+          "systemTime": "2026-04-02T07:35:21.1382169Z",
+          "eventRecordID": "1950",
+          "processID": "1364",
+          "threadID": "10128",
+          "channel": "Application",
+          "computer": "WS10",
+          "severityValue": "ERROR",
+          "message": "\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\r\n.\""
+        },
+        "eventdata": {
+          "data": "http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi."
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-092855_20260402_092855",
+    "_captured_at_utc": "2026-04-02T07:35:22Z"
+  },
+  {
+    "timestamp": "2026-04-02T07:35:22.164+0000",
+    "rule": {
+      "level": 9,
+      "description": "Windows application error event.",
+      "id": "60602",
+      "firedtimes": 13,
+      "mail": false,
+      "groups": [
+        "windows",
+        "windows_application",
+        "system_error"
+      ],
+      "gdpr": [
+        "IV_35.7.d"
+      ],
+      "gpg13": [
+        "4.3"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775115322.757699",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-CAPI2",
+          "providerGuid": "{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}",
+          "eventSourceName": "Microsoft-Windows-CAPI2",
+          "eventID": "4107",
+          "version": "0",
+          "level": "2",
+          "task": "0",
+          "opcode": "0",
+          "keywords": "0x8080000000000000",
+          "systemTime": "2026-04-02T07:35:21.1533188Z",
+          "eventRecordID": "1951",
+          "processID": "1364",
+          "threadID": "10128",
+          "channel": "Application",
+          "computer": "WS10",
+          "severityValue": "ERROR",
+          "message": "\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\r\n.\""
+        },
+        "eventdata": {
+          "data": "http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi."
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-092855_20260402_092855",
+    "_captured_at_utc": "2026-04-02T07:35:22Z"
+  },
+  {
+    "timestamp": "2026-04-02T07:35:22.193+0000",
+    "rule": {
+      "level": 9,
+      "description": "Windows application error event.",
+      "id": "60602",
+      "firedtimes": 14,
+      "mail": false,
+      "groups": [
+        "windows",
+        "windows_application",
+        "system_error"
+      ],
+      "gdpr": [
+        "IV_35.7.d"
+      ],
+      "gpg13": [
+        "4.3"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775115322.759637",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-CAPI2",
+          "providerGuid": "{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}",
+          "eventSourceName": "Microsoft-Windows-CAPI2",
+          "eventID": "4107",
+          "version": "0",
+          "level": "2",
+          "task": "0",
+          "opcode": "0",
+          "keywords": "0x8080000000000000",
+          "systemTime": "2026-04-02T07:35:21.1688812Z",
+          "eventRecordID": "1952",
+          "processID": "1364",
+          "threadID": "10128",
+          "channel": "Application",
+          "computer": "WS10",
+          "severityValue": "ERROR",
+          "message": "\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\r\n.\""
+        },
+        "eventdata": {
+          "data": "http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi."
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-092855_20260402_092855",
+    "_captured_at_utc": "2026-04-02T07:35:22Z"
+  },
+  {
+    "timestamp": "2026-04-02T07:35:30.999+0000",
+    "rule": {
+      "level": 10,
+      "description": "Multiple Windows error application events.",
+      "id": "61061",
+      "frequency": 8,
+      "firedtimes": 2,
+      "mail": false,
+      "groups": [
+        "windows",
+        "windows_application"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775115330.761575",
+    "previous_output": "{\"win\":{\"system\":{\"providerName\":\"Microsoft-Windows-CAPI2\",\"providerGuid\":\"{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}\",\"eventSourceName\":\"Microsoft-Windows-CAPI2\",\"eventID\":\"4107\",\"version\":\"0\",\"level\":\"2\",\"task\":\"0\",\"opcode\":\"0\",\"keywords\":\"0x8080000000000000\",\"systemTime\":\"2026-04-02T07:35:21.1688812Z\",\"eventRecordID\":\"1952\",\"processID\":\"1364\",\"threadID\":\"10128\",\"channel\":\"Application\",\"computer\":\"WS10\",\"severityValue\":\"ERROR\",\"message\":\"\\\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\\r\\n.\\\"\"},\"eventdata\":{\"data\":\"http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi.\"}}}\n{\"win\":{\"system\":{\"providerName\":\"Microsoft-Windows-CAPI2\",\"providerGuid\":\"{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}\",\"eventSourceName\":\"Microsoft-Windows-CAPI2\",\"eventID\":\"4107\",\"version\":\"0\",\"level\":\"2\",\"task\":\"0\",\"opcode\":\"0\",\"keywords\":\"0x8080000000000000\",\"systemTime\":\"2026-04-02T07:35:21.1533188Z\",\"eventRecordID\":\"1951\",\"processID\":\"1364\",\"threadID\":\"10128\",\"channel\":\"Application\",\"computer\":\"WS10\",\"severityValue\":\"ERROR\",\"message\":\"\\\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\\r\\n.\\\"\"},\"eventdata\":{\"data\":\"http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi.\"}}}\n{\"win\":{\"system\":{\"providerName\":\"Microsoft-Windows-CAPI2\",\"providerGuid\":\"{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}\",\"eventSourceName\":\"Microsoft-Windows-CAPI2\",\"eventID\":\"4107\",\"version\":\"0\",\"level\":\"2\",\"task\":\"0\",\"opcode\":\"0\",\"keywords\":\"0x8080000000000000\",\"systemTime\":\"2026-04-02T07:35:21.1382169Z\",\"eventRecordID\":\"1950\",\"processID\":\"1364\",\"threadID\":\"10128\",\"channel\":\"Application\",\"computer\":\"WS10\",\"severityValue\":\"ERROR\",\"message\":\"\\\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\\r\\n.\\\"\"},\"eventdata\":{\"data\":\"http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi.\"}}}\n{\"win\":{\"system\":{\"providerName\":\"Microsoft-Windows-CAPI2\",\"providerGuid\":\"{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}\",\"eventSourceName\":\"Microsoft-Windows-CAPI2\",\"eventID\":\"4107\",\"version\":\"0\",\"level\":\"2\",\"task\":\"0\",\"opcode\":\"0\",\"keywords\":\"0x8080000000000000\",\"systemTime\":\"2026-04-02T07:35:16.6043658Z\",\"eventRecordID\":\"1949\",\"processID\":\"1364\",\"threadID\":\"10128\",\"channel\":\"Application\",\"computer\":\"WS10\",\"severityValue\":\"ERROR\",\"message\":\"\\\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\\r\\n.\\\"\"},\"eventdata\":{\"data\":\"http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi.\"}}}\n{\"win\":{\"system\":{\"providerName\":\"Microsoft-Windows-CAPI2\",\"providerGuid\":\"{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}\",\"eventSourceName\":\"Microsoft-Windows-CAPI2\",\"eventID\":\"4107\",\"version\":\"0\",\"level\":\"2\",\"task\":\"0\",\"opcode\":\"0\",\"keywords\":\"0x8080000000000000\",\"systemTime\":\"2026-04-02T07:35:16.6043658Z\",\"eventRecordID\":\"1948\",\"processID\":\"1364\",\"threadID\":\"10128\",\"channel\":\"Application\",\"computer\":\"WS10\",\"severityValue\":\"ERROR\",\"message\":\"\\\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\\r\\n.\\\"\"},\"eventdata\":{\"data\":\"http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi.\"}}}\n{\"win\":{\"system\":{\"providerName\":\"Microsoft-Windows-CAPI2\",\"providerGuid\":\"{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}\",\"eventSourceName\":\"Microsoft-Windows-CAPI2\",\"eventID\":\"4107\",\"version\":\"0\",\"level\":\"2\",\"task\":\"0\",\"opcode\":\"0\",\"keywords\":\"0x8080000000000000\",\"systemTime\":\"2026-04-02T07:35:16.5881829Z\",\"eventRecordID\":\"1947\",\"processID\":\"1364\",\"threadID\":\"10128\",\"channel\":\"Application\",\"computer\":\"WS10\",\"severityValue\":\"ERROR\",\"message\":\"\\\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\\r\\n.\\\"\"},\"eventdata\":{\"data\":\"http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi.\"}}}\n{\"win\":{\"system\":{\"providerName\":\"Microsoft-Windows-CAPI2\",\"providerGuid\":\"{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}\",\"eventSourceName\":\"Microsoft-Windows-CAPI2\",\"eventID\":\"4107\",\"version\":\"0\",\"level\":\"2\",\"task\":\"0\",\"opcode\":\"0\",\"keywords\":\"0x8080000000000000\",\"systemTime\":\"2026-04-02T07:35:14.3068825Z\",\"eventRecordID\":\"1946\",\"processID\":\"1364\",\"threadID\":\"1636\",\"channel\":\"Application\",\"computer\":\"WS10\",\"severityValue\":\"ERROR\",\"message\":\"\\\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\\r\\n.\\\"\"},\"eventdata\":{\"data\":\"http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi.\"}}}",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-CAPI2",
+          "providerGuid": "{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}",
+          "eventSourceName": "Microsoft-Windows-CAPI2",
+          "eventID": "4107",
+          "version": "0",
+          "level": "2",
+          "task": "0",
+          "opcode": "0",
+          "keywords": "0x8080000000000000",
+          "systemTime": "2026-04-02T07:35:29.7941447Z",
+          "eventRecordID": "1953",
+          "processID": "1364",
+          "threadID": "10128",
+          "channel": "Application",
+          "computer": "WS10",
+          "severityValue": "ERROR",
+          "message": "\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\r\n.\""
+        },
+        "eventdata": {
+          "data": "http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi."
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-092855_20260402_092855",
+    "_captured_at_utc": "2026-04-02T07:35:31Z"
+  },
+  {
+    "timestamp": "2026-04-02T07:35:31.015+0000",
+    "rule": {
+      "level": 9,
+      "description": "Windows application error event.",
+      "id": "60602",
+      "firedtimes": 15,
+      "mail": false,
+      "groups": [
+        "windows",
+        "windows_application",
+        "system_error"
+      ],
+      "gdpr": [
+        "IV_35.7.d"
+      ],
+      "gpg13": [
+        "4.3"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775115331.769176",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-CAPI2",
+          "providerGuid": "{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}",
+          "eventSourceName": "Microsoft-Windows-CAPI2",
+          "eventID": "4107",
+          "version": "0",
+          "level": "2",
+          "task": "0",
+          "opcode": "0",
+          "keywords": "0x8080000000000000",
+          "systemTime": "2026-04-02T07:35:29.8099243Z",
+          "eventRecordID": "1954",
+          "processID": "1364",
+          "threadID": "10128",
+          "channel": "Application",
+          "computer": "WS10",
+          "severityValue": "ERROR",
+          "message": "\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\r\n.\""
+        },
+        "eventdata": {
+          "data": "http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi."
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-092855_20260402_092855",
+    "_captured_at_utc": "2026-04-02T07:35:31Z"
+  },
+  {
+    "timestamp": "2026-04-02T07:35:31.046+0000",
+    "rule": {
+      "level": 9,
+      "description": "Windows application error event.",
+      "id": "60602",
+      "firedtimes": 16,
+      "mail": false,
+      "groups": [
+        "windows",
+        "windows_application",
+        "system_error"
+      ],
+      "gdpr": [
+        "IV_35.7.d"
+      ],
+      "gpg13": [
+        "4.3"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775115331.771114",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-CAPI2",
+          "providerGuid": "{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}",
+          "eventSourceName": "Microsoft-Windows-CAPI2",
+          "eventID": "4107",
+          "version": "0",
+          "level": "2",
+          "task": "0",
+          "opcode": "0",
+          "keywords": "0x8080000000000000",
+          "systemTime": "2026-04-02T07:35:29.8099243Z",
+          "eventRecordID": "1955",
+          "processID": "1364",
+          "threadID": "10128",
+          "channel": "Application",
+          "computer": "WS10",
+          "severityValue": "ERROR",
+          "message": "\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\r\n.\""
+        },
+        "eventdata": {
+          "data": "http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi."
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-092855_20260402_092855",
+    "_captured_at_utc": "2026-04-02T07:35:31Z"
+  },
+  {
+    "timestamp": "2026-04-02T07:35:39.718+0000",
+    "rule": {
+      "level": 9,
+      "description": "Windows application error event.",
+      "id": "60602",
+      "firedtimes": 17,
+      "mail": false,
+      "groups": [
+        "windows",
+        "windows_application",
+        "system_error"
+      ],
+      "gdpr": [
+        "IV_35.7.d"
+      ],
+      "gpg13": [
+        "4.3"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775115339.773052",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-CAPI2",
+          "providerGuid": "{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}",
+          "eventSourceName": "Microsoft-Windows-CAPI2",
+          "eventID": "4107",
+          "version": "0",
+          "level": "2",
+          "task": "0",
+          "opcode": "0",
+          "keywords": "0x8080000000000000",
+          "systemTime": "2026-04-02T07:35:38.6622228Z",
+          "eventRecordID": "1956",
+          "processID": "1364",
+          "threadID": "1436",
+          "channel": "Application",
+          "computer": "WS10",
+          "severityValue": "ERROR",
+          "message": "\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\r\n.\""
+        },
+        "eventdata": {
+          "data": "http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi."
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-092855_20260402_092855",
+    "_captured_at_utc": "2026-04-02T07:35:40Z"
+  },
+  {
+    "timestamp": "2026-04-02T07:35:39.719+0000",
+    "rule": {
+      "level": 9,
+      "description": "Windows application error event.",
+      "id": "60602",
+      "firedtimes": 18,
+      "mail": false,
+      "groups": [
+        "windows",
+        "windows_application",
+        "system_error"
+      ],
+      "gdpr": [
+        "IV_35.7.d"
+      ],
+      "gpg13": [
+        "4.3"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775115339.774988",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-CAPI2",
+          "providerGuid": "{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}",
+          "eventSourceName": "Microsoft-Windows-CAPI2",
+          "eventID": "4107",
+          "version": "0",
+          "level": "2",
+          "task": "0",
+          "opcode": "0",
+          "keywords": "0x8080000000000000",
+          "systemTime": "2026-04-02T07:35:38.6747765Z",
+          "eventRecordID": "1957",
+          "processID": "1364",
+          "threadID": "1436",
+          "channel": "Application",
+          "computer": "WS10",
+          "severityValue": "ERROR",
+          "message": "\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\r\n.\""
+        },
+        "eventdata": {
+          "data": "http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi."
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-092855_20260402_092855",
+    "_captured_at_utc": "2026-04-02T07:35:40Z"
+  },
+  {
+    "timestamp": "2026-04-02T07:35:39.734+0000",
+    "rule": {
+      "level": 9,
+      "description": "Windows application error event.",
+      "id": "60602",
+      "firedtimes": 19,
+      "mail": false,
+      "groups": [
+        "windows",
+        "windows_application",
+        "system_error"
+      ],
+      "gdpr": [
+        "IV_35.7.d"
+      ],
+      "gpg13": [
+        "4.3"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775115339.776924",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-CAPI2",
+          "providerGuid": "{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}",
+          "eventSourceName": "Microsoft-Windows-CAPI2",
+          "eventID": "4107",
+          "version": "0",
+          "level": "2",
+          "task": "0",
+          "opcode": "0",
+          "keywords": "0x8080000000000000",
+          "systemTime": "2026-04-02T07:35:38.6747765Z",
+          "eventRecordID": "1958",
+          "processID": "1364",
+          "threadID": "1436",
+          "channel": "Application",
+          "computer": "WS10",
+          "severityValue": "ERROR",
+          "message": "\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\r\n.\""
+        },
+        "eventdata": {
+          "data": "http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi."
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-092855_20260402_092855",
+    "_captured_at_utc": "2026-04-02T07:35:40Z"
+  },
+  {
+    "timestamp": "2026-04-02T07:35:47.310+0000",
+    "rule": {
+      "level": 9,
+      "description": "Windows application error event.",
+      "id": "60602",
+      "firedtimes": 20,
+      "mail": false,
+      "groups": [
+        "windows",
+        "windows_application",
+        "system_error"
+      ],
+      "gdpr": [
+        "IV_35.7.d"
+      ],
+      "gpg13": [
+        "4.3"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775115347.778860",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-CAPI2",
+          "providerGuid": "{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}",
+          "eventSourceName": "Microsoft-Windows-CAPI2",
+          "eventID": "4107",
+          "version": "0",
+          "level": "2",
+          "task": "0",
+          "opcode": "0",
+          "keywords": "0x8080000000000000",
+          "systemTime": "2026-04-02T07:35:46.1652355Z",
+          "eventRecordID": "1959",
+          "processID": "1364",
+          "threadID": "1436",
+          "channel": "Application",
+          "computer": "WS10",
+          "severityValue": "ERROR",
+          "message": "\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\r\n.\""
+        },
+        "eventdata": {
+          "data": "http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi."
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-092855_20260402_092855",
+    "_captured_at_utc": "2026-04-02T07:35:47Z"
+  },
+  {
+    "timestamp": "2026-04-02T07:35:47.326+0000",
+    "rule": {
+      "level": 9,
+      "description": "Windows application error event.",
+      "id": "60602",
+      "firedtimes": 21,
+      "mail": false,
+      "groups": [
+        "windows",
+        "windows_application",
+        "system_error"
+      ],
+      "gdpr": [
+        "IV_35.7.d"
+      ],
+      "gpg13": [
+        "4.3"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775115347.780796",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-CAPI2",
+          "providerGuid": "{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}",
+          "eventSourceName": "Microsoft-Windows-CAPI2",
+          "eventID": "4107",
+          "version": "0",
+          "level": "2",
+          "task": "0",
+          "opcode": "0",
+          "keywords": "0x8080000000000000",
+          "systemTime": "2026-04-02T07:35:46.1808708Z",
+          "eventRecordID": "1960",
+          "processID": "1364",
+          "threadID": "1436",
+          "channel": "Application",
+          "computer": "WS10",
+          "severityValue": "ERROR",
+          "message": "\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\r\n.\""
+        },
+        "eventdata": {
+          "data": "http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi."
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-092855_20260402_092855",
+    "_captured_at_utc": "2026-04-02T07:35:47Z"
+  },
+  {
+    "timestamp": "2026-04-02T07:35:47.342+0000",
+    "rule": {
+      "level": 10,
+      "description": "Multiple Windows error application events.",
+      "id": "61061",
+      "frequency": 8,
+      "firedtimes": 3,
+      "mail": false,
+      "groups": [
+        "windows",
+        "windows_application"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775115347.782732",
+    "previous_output": "{\"win\":{\"system\":{\"providerName\":\"Microsoft-Windows-CAPI2\",\"providerGuid\":\"{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}\",\"eventSourceName\":\"Microsoft-Windows-CAPI2\",\"eventID\":\"4107\",\"version\":\"0\",\"level\":\"2\",\"task\":\"0\",\"opcode\":\"0\",\"keywords\":\"0x8080000000000000\",\"systemTime\":\"2026-04-02T07:35:46.1808708Z\",\"eventRecordID\":\"1960\",\"processID\":\"1364\",\"threadID\":\"1436\",\"channel\":\"Application\",\"computer\":\"WS10\",\"severityValue\":\"ERROR\",\"message\":\"\\\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\\r\\n.\\\"\"},\"eventdata\":{\"data\":\"http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi.\"}}}\n{\"win\":{\"system\":{\"providerName\":\"Microsoft-Windows-CAPI2\",\"providerGuid\":\"{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}\",\"eventSourceName\":\"Microsoft-Windows-CAPI2\",\"eventID\":\"4107\",\"version\":\"0\",\"level\":\"2\",\"task\":\"0\",\"opcode\":\"0\",\"keywords\":\"0x8080000000000000\",\"systemTime\":\"2026-04-02T07:35:46.1652355Z\",\"eventRecordID\":\"1959\",\"processID\":\"1364\",\"threadID\":\"1436\",\"channel\":\"Application\",\"computer\":\"WS10\",\"severityValue\":\"ERROR\",\"message\":\"\\\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\\r\\n.\\\"\"},\"eventdata\":{\"data\":\"http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi.\"}}}\n{\"win\":{\"system\":{\"providerName\":\"Microsoft-Windows-CAPI2\",\"providerGuid\":\"{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}\",\"eventSourceName\":\"Microsoft-Windows-CAPI2\",\"eventID\":\"4107\",\"version\":\"0\",\"level\":\"2\",\"task\":\"0\",\"opcode\":\"0\",\"keywords\":\"0x8080000000000000\",\"systemTime\":\"2026-04-02T07:35:38.6747765Z\",\"eventRecordID\":\"1958\",\"processID\":\"1364\",\"threadID\":\"1436\",\"channel\":\"Application\",\"computer\":\"WS10\",\"severityValue\":\"ERROR\",\"message\":\"\\\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\\r\\n.\\\"\"},\"eventdata\":{\"data\":\"http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi.\"}}}\n{\"win\":{\"system\":{\"providerName\":\"Microsoft-Windows-CAPI2\",\"providerGuid\":\"{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}\",\"eventSourceName\":\"Microsoft-Windows-CAPI2\",\"eventID\":\"4107\",\"version\":\"0\",\"level\":\"2\",\"task\":\"0\",\"opcode\":\"0\",\"keywords\":\"0x8080000000000000\",\"systemTime\":\"2026-04-02T07:35:38.6747765Z\",\"eventRecordID\":\"1957\",\"processID\":\"1364\",\"threadID\":\"1436\",\"channel\":\"Application\",\"computer\":\"WS10\",\"severityValue\":\"ERROR\",\"message\":\"\\\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\\r\\n.\\\"\"},\"eventdata\":{\"data\":\"http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi.\"}}}\n{\"win\":{\"system\":{\"providerName\":\"Microsoft-Windows-CAPI2\",\"providerGuid\":\"{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}\",\"eventSourceName\":\"Microsoft-Windows-CAPI2\",\"eventID\":\"4107\",\"version\":\"0\",\"level\":\"2\",\"task\":\"0\",\"opcode\":\"0\",\"keywords\":\"0x8080000000000000\",\"systemTime\":\"2026-04-02T07:35:38.6622228Z\",\"eventRecordID\":\"1956\",\"processID\":\"1364\",\"threadID\":\"1436\",\"channel\":\"Application\",\"computer\":\"WS10\",\"severityValue\":\"ERROR\",\"message\":\"\\\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\\r\\n.\\\"\"},\"eventdata\":{\"data\":\"http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi.\"}}}\n{\"win\":{\"system\":{\"providerName\":\"Microsoft-Windows-CAPI2\",\"providerGuid\":\"{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}\",\"eventSourceName\":\"Microsoft-Windows-CAPI2\",\"eventID\":\"4107\",\"version\":\"0\",\"level\":\"2\",\"task\":\"0\",\"opcode\":\"0\",\"keywords\":\"0x8080000000000000\",\"systemTime\":\"2026-04-02T07:35:29.8099243Z\",\"eventRecordID\":\"1955\",\"processID\":\"1364\",\"threadID\":\"10128\",\"channel\":\"Application\",\"computer\":\"WS10\",\"severityValue\":\"ERROR\",\"message\":\"\\\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\\r\\n.\\\"\"},\"eventdata\":{\"data\":\"http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi.\"}}}\n{\"win\":{\"system\":{\"providerName\":\"Microsoft-Windows-CAPI2\",\"providerGuid\":\"{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}\",\"eventSourceName\":\"Microsoft-Windows-CAPI2\",\"eventID\":\"4107\",\"version\":\"0\",\"level\":\"2\",\"task\":\"0\",\"opcode\":\"0\",\"keywords\":\"0x8080000000000000\",\"systemTime\":\"2026-04-02T07:35:29.8099243Z\",\"eventRecordID\":\"1954\",\"processID\":\"1364\",\"threadID\":\"10128\",\"channel\":\"Application\",\"computer\":\"WS10\",\"severityValue\":\"ERROR\",\"message\":\"\\\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\\r\\n.\\\"\"},\"eventdata\":{\"data\":\"http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi.\"}}}",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-CAPI2",
+          "providerGuid": "{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}",
+          "eventSourceName": "Microsoft-Windows-CAPI2",
+          "eventID": "4107",
+          "version": "0",
+          "level": "2",
+          "task": "0",
+          "opcode": "0",
+          "keywords": "0x8080000000000000",
+          "systemTime": "2026-04-02T07:35:46.1808708Z",
+          "eventRecordID": "1961",
+          "processID": "1364",
+          "threadID": "1436",
+          "channel": "Application",
+          "computer": "WS10",
+          "severityValue": "ERROR",
+          "message": "\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\r\n.\""
+        },
+        "eventdata": {
+          "data": "http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi."
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-092855_20260402_092855",
+    "_captured_at_utc": "2026-04-02T07:35:47Z"
+  },
+  {
+    "timestamp": "2026-04-02T07:35:54.352+0000",
+    "rule": {
+      "level": 9,
+      "description": "Windows application error event.",
+      "id": "60602",
+      "firedtimes": 22,
+      "mail": false,
+      "groups": [
+        "windows",
+        "windows_application",
+        "system_error"
+      ],
+      "gdpr": [
+        "IV_35.7.d"
+      ],
+      "gpg13": [
+        "4.3"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775115354.790327",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-CAPI2",
+          "providerGuid": "{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}",
+          "eventSourceName": "Microsoft-Windows-CAPI2",
+          "eventID": "4107",
+          "version": "0",
+          "level": "2",
+          "task": "0",
+          "opcode": "0",
+          "keywords": "0x8080000000000000",
+          "systemTime": "2026-04-02T07:35:53.3275607Z",
+          "eventRecordID": "1962",
+          "processID": "1364",
+          "threadID": "1436",
+          "channel": "Application",
+          "computer": "WS10",
+          "severityValue": "ERROR",
+          "message": "\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\r\n.\""
+        },
+        "eventdata": {
+          "data": "http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi."
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-092855_20260402_092855",
+    "_captured_at_utc": "2026-04-02T07:35:54Z"
+  },
+  {
+    "timestamp": "2026-04-02T07:35:54.353+0000",
+    "rule": {
+      "level": 9,
+      "description": "Windows application error event.",
+      "id": "60602",
+      "firedtimes": 23,
+      "mail": false,
+      "groups": [
+        "windows",
+        "windows_application",
+        "system_error"
+      ],
+      "gdpr": [
+        "IV_35.7.d"
+      ],
+      "gpg13": [
+        "4.3"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775115354.792263",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-CAPI2",
+          "providerGuid": "{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}",
+          "eventSourceName": "Microsoft-Windows-CAPI2",
+          "eventID": "4107",
+          "version": "0",
+          "level": "2",
+          "task": "0",
+          "opcode": "0",
+          "keywords": "0x8080000000000000",
+          "systemTime": "2026-04-02T07:35:53.3433935Z",
+          "eventRecordID": "1963",
+          "processID": "1364",
+          "threadID": "1436",
+          "channel": "Application",
+          "computer": "WS10",
+          "severityValue": "ERROR",
+          "message": "\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\r\n.\""
+        },
+        "eventdata": {
+          "data": "http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi."
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-092855_20260402_092855",
+    "_captured_at_utc": "2026-04-02T07:35:54Z"
+  },
+  {
+    "timestamp": "2026-04-02T07:35:54.382+0000",
+    "rule": {
+      "level": 9,
+      "description": "Windows application error event.",
+      "id": "60602",
+      "firedtimes": 24,
+      "mail": false,
+      "groups": [
+        "windows",
+        "windows_application",
+        "system_error"
+      ],
+      "gdpr": [
+        "IV_35.7.d"
+      ],
+      "gpg13": [
+        "4.3"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775115354.794199",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-CAPI2",
+          "providerGuid": "{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}",
+          "eventSourceName": "Microsoft-Windows-CAPI2",
+          "eventID": "4107",
+          "version": "0",
+          "level": "2",
+          "task": "0",
+          "opcode": "0",
+          "keywords": "0x8080000000000000",
+          "systemTime": "2026-04-02T07:35:53.3433935Z",
+          "eventRecordID": "1964",
+          "processID": "1364",
+          "threadID": "1436",
+          "channel": "Application",
+          "computer": "WS10",
+          "severityValue": "ERROR",
+          "message": "\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\r\n.\""
+        },
+        "eventdata": {
+          "data": "http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi."
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-092855_20260402_092855",
+    "_captured_at_utc": "2026-04-02T07:35:54Z"
+  },
+  {
+    "timestamp": "2026-04-02T07:36:01.413+0000",
+    "rule": {
+      "level": 9,
+      "description": "Windows application error event.",
+      "id": "60602",
+      "firedtimes": 25,
+      "mail": false,
+      "groups": [
+        "windows",
+        "windows_application",
+        "system_error"
+      ],
+      "gdpr": [
+        "IV_35.7.d"
+      ],
+      "gpg13": [
+        "4.3"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775115361.796135",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-CAPI2",
+          "providerGuid": "{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}",
+          "eventSourceName": "Microsoft-Windows-CAPI2",
+          "eventID": "4107",
+          "version": "0",
+          "level": "2",
+          "task": "0",
+          "opcode": "0",
+          "keywords": "0x8080000000000000",
+          "systemTime": "2026-04-02T07:36:00.3901759Z",
+          "eventRecordID": "1965",
+          "processID": "1364",
+          "threadID": "1636",
+          "channel": "Application",
+          "computer": "WS10",
+          "severityValue": "ERROR",
+          "message": "\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\r\n.\""
+        },
+        "eventdata": {
+          "data": "http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi."
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-092855_20260402_092855",
+    "_captured_at_utc": "2026-04-02T07:36:01Z"
+  },
+  {
+    "timestamp": "2026-04-02T07:36:01.413+0000",
+    "rule": {
+      "level": 9,
+      "description": "Windows application error event.",
+      "id": "60602",
+      "firedtimes": 26,
+      "mail": false,
+      "groups": [
+        "windows",
+        "windows_application",
+        "system_error"
+      ],
+      "gdpr": [
+        "IV_35.7.d"
+      ],
+      "gpg13": [
+        "4.3"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775115361.798071",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-CAPI2",
+          "providerGuid": "{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}",
+          "eventSourceName": "Microsoft-Windows-CAPI2",
+          "eventID": "4107",
+          "version": "0",
+          "level": "2",
+          "task": "0",
+          "opcode": "0",
+          "keywords": "0x8080000000000000",
+          "systemTime": "2026-04-02T07:36:00.4057706Z",
+          "eventRecordID": "1966",
+          "processID": "1364",
+          "threadID": "1636",
+          "channel": "Application",
+          "computer": "WS10",
+          "severityValue": "ERROR",
+          "message": "\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\r\n.\""
+        },
+        "eventdata": {
+          "data": "http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi."
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-092855_20260402_092855",
+    "_captured_at_utc": "2026-04-02T07:36:01Z"
+  },
+  {
+    "timestamp": "2026-04-02T07:36:01.428+0000",
+    "rule": {
+      "level": 9,
+      "description": "Windows application error event.",
+      "id": "60602",
+      "firedtimes": 27,
+      "mail": false,
+      "groups": [
+        "windows",
+        "windows_application",
+        "system_error"
+      ],
+      "gdpr": [
+        "IV_35.7.d"
+      ],
+      "gpg13": [
+        "4.3"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775115361.800007",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-CAPI2",
+          "providerGuid": "{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}",
+          "eventSourceName": "Microsoft-Windows-CAPI2",
+          "eventID": "4107",
+          "version": "0",
+          "level": "2",
+          "task": "0",
+          "opcode": "0",
+          "keywords": "0x8080000000000000",
+          "systemTime": "2026-04-02T07:36:00.4057706Z",
+          "eventRecordID": "1967",
+          "processID": "1364",
+          "threadID": "1636",
+          "channel": "Application",
+          "computer": "WS10",
+          "severityValue": "ERROR",
+          "message": "\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\r\n.\""
+        },
+        "eventdata": {
+          "data": "http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi."
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-092855_20260402_092855",
+    "_captured_at_utc": "2026-04-02T07:36:01Z"
+  },
+  {
+    "timestamp": "2026-04-02T07:36:08.828+0000",
+    "rule": {
+      "level": 9,
+      "description": "Windows application error event.",
+      "id": "60602",
+      "firedtimes": 28,
+      "mail": false,
+      "groups": [
+        "windows",
+        "windows_application",
+        "system_error"
+      ],
+      "gdpr": [
+        "IV_35.7.d"
+      ],
+      "gpg13": [
+        "4.3"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775115368.801943",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-CAPI2",
+          "providerGuid": "{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}",
+          "eventSourceName": "Microsoft-Windows-CAPI2",
+          "eventID": "4107",
+          "version": "0",
+          "level": "2",
+          "task": "0",
+          "opcode": "0",
+          "keywords": "0x8080000000000000",
+          "systemTime": "2026-04-02T07:36:07.7830567Z",
+          "eventRecordID": "1968",
+          "processID": "1364",
+          "threadID": "1636",
+          "channel": "Application",
+          "computer": "WS10",
+          "severityValue": "ERROR",
+          "message": "\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\r\n.\""
+        },
+        "eventdata": {
+          "data": "http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi."
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-092855_20260402_092855",
+    "_captured_at_utc": "2026-04-02T07:36:08Z"
+  },
+  {
+    "timestamp": "2026-04-02T07:36:08.843+0000",
+    "rule": {
+      "level": 10,
+      "description": "Multiple Windows error application events.",
+      "id": "61061",
+      "frequency": 8,
+      "firedtimes": 4,
+      "mail": false,
+      "groups": [
+        "windows",
+        "windows_application"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775115368.803879",
+    "previous_output": "{\"win\":{\"system\":{\"providerName\":\"Microsoft-Windows-CAPI2\",\"providerGuid\":\"{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}\",\"eventSourceName\":\"Microsoft-Windows-CAPI2\",\"eventID\":\"4107\",\"version\":\"0\",\"level\":\"2\",\"task\":\"0\",\"opcode\":\"0\",\"keywords\":\"0x8080000000000000\",\"systemTime\":\"2026-04-02T07:36:07.7830567Z\",\"eventRecordID\":\"1968\",\"processID\":\"1364\",\"threadID\":\"1636\",\"channel\":\"Application\",\"computer\":\"WS10\",\"severityValue\":\"ERROR\",\"message\":\"\\\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\\r\\n.\\\"\"},\"eventdata\":{\"data\":\"http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi.\"}}}\n{\"win\":{\"system\":{\"providerName\":\"Microsoft-Windows-CAPI2\",\"providerGuid\":\"{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}\",\"eventSourceName\":\"Microsoft-Windows-CAPI2\",\"eventID\":\"4107\",\"version\":\"0\",\"level\":\"2\",\"task\":\"0\",\"opcode\":\"0\",\"keywords\":\"0x8080000000000000\",\"systemTime\":\"2026-04-02T07:36:00.4057706Z\",\"eventRecordID\":\"1967\",\"processID\":\"1364\",\"threadID\":\"1636\",\"channel\":\"Application\",\"computer\":\"WS10\",\"severityValue\":\"ERROR\",\"message\":\"\\\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\\r\\n.\\\"\"},\"eventdata\":{\"data\":\"http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi.\"}}}\n{\"win\":{\"system\":{\"providerName\":\"Microsoft-Windows-CAPI2\",\"providerGuid\":\"{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}\",\"eventSourceName\":\"Microsoft-Windows-CAPI2\",\"eventID\":\"4107\",\"version\":\"0\",\"level\":\"2\",\"task\":\"0\",\"opcode\":\"0\",\"keywords\":\"0x8080000000000000\",\"systemTime\":\"2026-04-02T07:36:00.4057706Z\",\"eventRecordID\":\"1966\",\"processID\":\"1364\",\"threadID\":\"1636\",\"channel\":\"Application\",\"computer\":\"WS10\",\"severityValue\":\"ERROR\",\"message\":\"\\\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\\r\\n.\\\"\"},\"eventdata\":{\"data\":\"http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi.\"}}}\n{\"win\":{\"system\":{\"providerName\":\"Microsoft-Windows-CAPI2\",\"providerGuid\":\"{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}\",\"eventSourceName\":\"Microsoft-Windows-CAPI2\",\"eventID\":\"4107\",\"version\":\"0\",\"level\":\"2\",\"task\":\"0\",\"opcode\":\"0\",\"keywords\":\"0x8080000000000000\",\"systemTime\":\"2026-04-02T07:36:00.3901759Z\",\"eventRecordID\":\"1965\",\"processID\":\"1364\",\"threadID\":\"1636\",\"channel\":\"Application\",\"computer\":\"WS10\",\"severityValue\":\"ERROR\",\"message\":\"\\\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\\r\\n.\\\"\"},\"eventdata\":{\"data\":\"http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi.\"}}}\n{\"win\":{\"system\":{\"providerName\":\"Microsoft-Windows-CAPI2\",\"providerGuid\":\"{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}\",\"eventSourceName\":\"Microsoft-Windows-CAPI2\",\"eventID\":\"4107\",\"version\":\"0\",\"level\":\"2\",\"task\":\"0\",\"opcode\":\"0\",\"keywords\":\"0x8080000000000000\",\"systemTime\":\"2026-04-02T07:35:53.3433935Z\",\"eventRecordID\":\"1964\",\"processID\":\"1364\",\"threadID\":\"1436\",\"channel\":\"Application\",\"computer\":\"WS10\",\"severityValue\":\"ERROR\",\"message\":\"\\\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\\r\\n.\\\"\"},\"eventdata\":{\"data\":\"http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi.\"}}}\n{\"win\":{\"system\":{\"providerName\":\"Microsoft-Windows-CAPI2\",\"providerGuid\":\"{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}\",\"eventSourceName\":\"Microsoft-Windows-CAPI2\",\"eventID\":\"4107\",\"version\":\"0\",\"level\":\"2\",\"task\":\"0\",\"opcode\":\"0\",\"keywords\":\"0x8080000000000000\",\"systemTime\":\"2026-04-02T07:35:53.3433935Z\",\"eventRecordID\":\"1963\",\"processID\":\"1364\",\"threadID\":\"1436\",\"channel\":\"Application\",\"computer\":\"WS10\",\"severityValue\":\"ERROR\",\"message\":\"\\\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\\r\\n.\\\"\"},\"eventdata\":{\"data\":\"http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi.\"}}}\n{\"win\":{\"system\":{\"providerName\":\"Microsoft-Windows-CAPI2\",\"providerGuid\":\"{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}\",\"eventSourceName\":\"Microsoft-Windows-CAPI2\",\"eventID\":\"4107\",\"version\":\"0\",\"level\":\"2\",\"task\":\"0\",\"opcode\":\"0\",\"keywords\":\"0x8080000000000000\",\"systemTime\":\"2026-04-02T07:35:53.3275607Z\",\"eventRecordID\":\"1962\",\"processID\":\"1364\",\"threadID\":\"1436\",\"channel\":\"Application\",\"computer\":\"WS10\",\"severityValue\":\"ERROR\",\"message\":\"\\\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\\r\\n.\\\"\"},\"eventdata\":{\"data\":\"http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi.\"}}}",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-CAPI2",
+          "providerGuid": "{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}",
+          "eventSourceName": "Microsoft-Windows-CAPI2",
+          "eventID": "4107",
+          "version": "0",
+          "level": "2",
+          "task": "0",
+          "opcode": "0",
+          "keywords": "0x8080000000000000",
+          "systemTime": "2026-04-02T07:36:07.7964096Z",
+          "eventRecordID": "1969",
+          "processID": "1364",
+          "threadID": "1636",
+          "channel": "Application",
+          "computer": "WS10",
+          "severityValue": "ERROR",
+          "message": "\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\r\n.\""
+        },
+        "eventdata": {
+          "data": "http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi."
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-092855_20260402_092855",
+    "_captured_at_utc": "2026-04-02T07:36:09Z"
+  },
+  {
+    "timestamp": "2026-04-02T07:36:08.858+0000",
+    "rule": {
+      "level": 9,
+      "description": "Windows application error event.",
+      "id": "60602",
+      "firedtimes": 29,
+      "mail": false,
+      "groups": [
+        "windows",
+        "windows_application",
+        "system_error"
+      ],
+      "gdpr": [
+        "IV_35.7.d"
+      ],
+      "gpg13": [
+        "4.3"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775115368.811472",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-CAPI2",
+          "providerGuid": "{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}",
+          "eventSourceName": "Microsoft-Windows-CAPI2",
+          "eventID": "4107",
+          "version": "0",
+          "level": "2",
+          "task": "0",
+          "opcode": "0",
+          "keywords": "0x8080000000000000",
+          "systemTime": "2026-04-02T07:36:07.7964096Z",
+          "eventRecordID": "1970",
+          "processID": "1364",
+          "threadID": "1636",
+          "channel": "Application",
+          "computer": "WS10",
+          "severityValue": "ERROR",
+          "message": "\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\r\n.\""
+        },
+        "eventdata": {
+          "data": "http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi."
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-092855_20260402_092855",
+    "_captured_at_utc": "2026-04-02T07:36:09Z"
+  },
+  {
+    "timestamp": "2026-04-02T07:36:17.609+0000",
+    "rule": {
+      "level": 9,
+      "description": "Windows application error event.",
+      "id": "60602",
+      "firedtimes": 30,
+      "mail": false,
+      "groups": [
+        "windows",
+        "windows_application",
+        "system_error"
+      ],
+      "gdpr": [
+        "IV_35.7.d"
+      ],
+      "gpg13": [
+        "4.3"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775115377.813408",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-CAPI2",
+          "providerGuid": "{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}",
+          "eventSourceName": "Microsoft-Windows-CAPI2",
+          "eventID": "4107",
+          "version": "0",
+          "level": "2",
+          "task": "0",
+          "opcode": "0",
+          "keywords": "0x8080000000000000",
+          "systemTime": "2026-04-02T07:36:16.4832116Z",
+          "eventRecordID": "1971",
+          "processID": "1364",
+          "threadID": "1436",
+          "channel": "Application",
+          "computer": "WS10",
+          "severityValue": "ERROR",
+          "message": "\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\r\n.\""
+        },
+        "eventdata": {
+          "data": "http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi."
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-092855_20260402_092855",
+    "_captured_at_utc": "2026-04-02T07:36:17Z"
+  },
+  {
+    "timestamp": "2026-04-02T07:36:17.627+0000",
+    "rule": {
+      "level": 9,
+      "description": "Windows application error event.",
+      "id": "60602",
+      "firedtimes": 31,
+      "mail": false,
+      "groups": [
+        "windows",
+        "windows_application",
+        "system_error"
+      ],
+      "gdpr": [
+        "IV_35.7.d"
+      ],
+      "gpg13": [
+        "4.3"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775115377.815344",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-CAPI2",
+          "providerGuid": "{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}",
+          "eventSourceName": "Microsoft-Windows-CAPI2",
+          "eventID": "4107",
+          "version": "0",
+          "level": "2",
+          "task": "0",
+          "opcode": "0",
+          "keywords": "0x8080000000000000",
+          "systemTime": "2026-04-02T07:36:16.4990233Z",
+          "eventRecordID": "1972",
+          "processID": "1364",
+          "threadID": "1436",
+          "channel": "Application",
+          "computer": "WS10",
+          "severityValue": "ERROR",
+          "message": "\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\r\n.\""
+        },
+        "eventdata": {
+          "data": "http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi."
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-092855_20260402_092855",
+    "_captured_at_utc": "2026-04-02T07:36:17Z"
+  },
+  {
+    "timestamp": "2026-04-02T07:36:17.642+0000",
+    "rule": {
+      "level": 9,
+      "description": "Windows application error event.",
+      "id": "60602",
+      "firedtimes": 32,
+      "mail": false,
+      "groups": [
+        "windows",
+        "windows_application",
+        "system_error"
+      ],
+      "gdpr": [
+        "IV_35.7.d"
+      ],
+      "gpg13": [
+        "4.3"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775115377.817280",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-CAPI2",
+          "providerGuid": "{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}",
+          "eventSourceName": "Microsoft-Windows-CAPI2",
+          "eventID": "4107",
+          "version": "0",
+          "level": "2",
+          "task": "0",
+          "opcode": "0",
+          "keywords": "0x8080000000000000",
+          "systemTime": "2026-04-02T07:36:16.4990233Z",
+          "eventRecordID": "1973",
+          "processID": "1364",
+          "threadID": "1436",
+          "channel": "Application",
+          "computer": "WS10",
+          "severityValue": "ERROR",
+          "message": "\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\r\n.\""
+        },
+        "eventdata": {
+          "data": "http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi."
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-092855_20260402_092855",
+    "_captured_at_utc": "2026-04-02T07:36:18Z"
+  },
+  {
+    "timestamp": "2026-04-02T07:36:26.207+0000",
+    "rule": {
+      "level": 9,
+      "description": "Windows application error event.",
+      "id": "60602",
+      "firedtimes": 33,
+      "mail": false,
+      "groups": [
+        "windows",
+        "windows_application",
+        "system_error"
+      ],
+      "gdpr": [
+        "IV_35.7.d"
+      ],
+      "gpg13": [
+        "4.3"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775115386.819216",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-CAPI2",
+          "providerGuid": "{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}",
+          "eventSourceName": "Microsoft-Windows-CAPI2",
+          "eventID": "4107",
+          "version": "0",
+          "level": "2",
+          "task": "0",
+          "opcode": "0",
+          "keywords": "0x8080000000000000",
+          "systemTime": "2026-04-02T07:36:25.1882512Z",
+          "eventRecordID": "1974",
+          "processID": "1364",
+          "threadID": "1636",
+          "channel": "Application",
+          "computer": "WS10",
+          "severityValue": "ERROR",
+          "message": "\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\r\n.\""
+        },
+        "eventdata": {
+          "data": "http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi."
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-092855_20260402_092855",
+    "_captured_at_utc": "2026-04-02T07:36:26Z"
+  },
+  {
+    "timestamp": "2026-04-02T07:36:26.207+0000",
+    "rule": {
+      "level": 9,
+      "description": "Windows application error event.",
+      "id": "60602",
+      "firedtimes": 34,
+      "mail": false,
+      "groups": [
+        "windows",
+        "windows_application",
+        "system_error"
+      ],
+      "gdpr": [
+        "IV_35.7.d"
+      ],
+      "gpg13": [
+        "4.3"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775115386.821152",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-CAPI2",
+          "providerGuid": "{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}",
+          "eventSourceName": "Microsoft-Windows-CAPI2",
+          "eventID": "4107",
+          "version": "0",
+          "level": "2",
+          "task": "0",
+          "opcode": "0",
+          "keywords": "0x8080000000000000",
+          "systemTime": "2026-04-02T07:36:25.2038348Z",
+          "eventRecordID": "1975",
+          "processID": "1364",
+          "threadID": "1636",
+          "channel": "Application",
+          "computer": "WS10",
+          "severityValue": "ERROR",
+          "message": "\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\r\n.\""
+        },
+        "eventdata": {
+          "data": "http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi."
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-092855_20260402_092855",
+    "_captured_at_utc": "2026-04-02T07:36:26Z"
+  },
+  {
+    "timestamp": "2026-04-02T07:36:26.222+0000",
+    "rule": {
+      "level": 9,
+      "description": "Windows application error event.",
+      "id": "60602",
+      "firedtimes": 35,
+      "mail": false,
+      "groups": [
+        "windows",
+        "windows_application",
+        "system_error"
+      ],
+      "gdpr": [
+        "IV_35.7.d"
+      ],
+      "gpg13": [
+        "4.3"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775115386.823088",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-CAPI2",
+          "providerGuid": "{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}",
+          "eventSourceName": "Microsoft-Windows-CAPI2",
+          "eventID": "4107",
+          "version": "0",
+          "level": "2",
+          "task": "0",
+          "opcode": "0",
+          "keywords": "0x8080000000000000",
+          "systemTime": "2026-04-02T07:36:25.2038348Z",
+          "eventRecordID": "1976",
+          "processID": "1364",
+          "threadID": "1636",
+          "channel": "Application",
+          "computer": "WS10",
+          "severityValue": "ERROR",
+          "message": "\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\r\n.\""
+        },
+        "eventdata": {
+          "data": "http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi."
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-092855_20260402_092855",
+    "_captured_at_utc": "2026-04-02T07:36:26Z"
+  },
+  {
+    "timestamp": "2026-04-02T07:36:34.788+0000",
+    "rule": {
+      "level": 10,
+      "description": "Multiple Windows error application events.",
+      "id": "61061",
+      "frequency": 8,
+      "firedtimes": 5,
+      "mail": false,
+      "groups": [
+        "windows",
+        "windows_application"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775115394.825024",
+    "previous_output": "{\"win\":{\"system\":{\"providerName\":\"Microsoft-Windows-CAPI2\",\"providerGuid\":\"{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}\",\"eventSourceName\":\"Microsoft-Windows-CAPI2\",\"eventID\":\"4107\",\"version\":\"0\",\"level\":\"2\",\"task\":\"0\",\"opcode\":\"0\",\"keywords\":\"0x8080000000000000\",\"systemTime\":\"2026-04-02T07:36:25.2038348Z\",\"eventRecordID\":\"1976\",\"processID\":\"1364\",\"threadID\":\"1636\",\"channel\":\"Application\",\"computer\":\"WS10\",\"severityValue\":\"ERROR\",\"message\":\"\\\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\\r\\n.\\\"\"},\"eventdata\":{\"data\":\"http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi.\"}}}\n{\"win\":{\"system\":{\"providerName\":\"Microsoft-Windows-CAPI2\",\"providerGuid\":\"{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}\",\"eventSourceName\":\"Microsoft-Windows-CAPI2\",\"eventID\":\"4107\",\"version\":\"0\",\"level\":\"2\",\"task\":\"0\",\"opcode\":\"0\",\"keywords\":\"0x8080000000000000\",\"systemTime\":\"2026-04-02T07:36:25.2038348Z\",\"eventRecordID\":\"1975\",\"processID\":\"1364\",\"threadID\":\"1636\",\"channel\":\"Application\",\"computer\":\"WS10\",\"severityValue\":\"ERROR\",\"message\":\"\\\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\\r\\n.\\\"\"},\"eventdata\":{\"data\":\"http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi.\"}}}\n{\"win\":{\"system\":{\"providerName\":\"Microsoft-Windows-CAPI2\",\"providerGuid\":\"{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}\",\"eventSourceName\":\"Microsoft-Windows-CAPI2\",\"eventID\":\"4107\",\"version\":\"0\",\"level\":\"2\",\"task\":\"0\",\"opcode\":\"0\",\"keywords\":\"0x8080000000000000\",\"systemTime\":\"2026-04-02T07:36:25.1882512Z\",\"eventRecordID\":\"1974\",\"processID\":\"1364\",\"threadID\":\"1636\",\"channel\":\"Application\",\"computer\":\"WS10\",\"severityValue\":\"ERROR\",\"message\":\"\\\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\\r\\n.\\\"\"},\"eventdata\":{\"data\":\"http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi.\"}}}\n{\"win\":{\"system\":{\"providerName\":\"Microsoft-Windows-CAPI2\",\"providerGuid\":\"{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}\",\"eventSourceName\":\"Microsoft-Windows-CAPI2\",\"eventID\":\"4107\",\"version\":\"0\",\"level\":\"2\",\"task\":\"0\",\"opcode\":\"0\",\"keywords\":\"0x8080000000000000\",\"systemTime\":\"2026-04-02T07:36:16.4990233Z\",\"eventRecordID\":\"1973\",\"processID\":\"1364\",\"threadID\":\"1436\",\"channel\":\"Application\",\"computer\":\"WS10\",\"severityValue\":\"ERROR\",\"message\":\"\\\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\\r\\n.\\\"\"},\"eventdata\":{\"data\":\"http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi.\"}}}\n{\"win\":{\"system\":{\"providerName\":\"Microsoft-Windows-CAPI2\",\"providerGuid\":\"{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}\",\"eventSourceName\":\"Microsoft-Windows-CAPI2\",\"eventID\":\"4107\",\"version\":\"0\",\"level\":\"2\",\"task\":\"0\",\"opcode\":\"0\",\"keywords\":\"0x8080000000000000\",\"systemTime\":\"2026-04-02T07:36:16.4990233Z\",\"eventRecordID\":\"1972\",\"processID\":\"1364\",\"threadID\":\"1436\",\"channel\":\"Application\",\"computer\":\"WS10\",\"severityValue\":\"ERROR\",\"message\":\"\\\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\\r\\n.\\\"\"},\"eventdata\":{\"data\":\"http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi.\"}}}\n{\"win\":{\"system\":{\"providerName\":\"Microsoft-Windows-CAPI2\",\"providerGuid\":\"{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}\",\"eventSourceName\":\"Microsoft-Windows-CAPI2\",\"eventID\":\"4107\",\"version\":\"0\",\"level\":\"2\",\"task\":\"0\",\"opcode\":\"0\",\"keywords\":\"0x8080000000000000\",\"systemTime\":\"2026-04-02T07:36:16.4832116Z\",\"eventRecordID\":\"1971\",\"processID\":\"1364\",\"threadID\":\"1436\",\"channel\":\"Application\",\"computer\":\"WS10\",\"severityValue\":\"ERROR\",\"message\":\"\\\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\\r\\n.\\\"\"},\"eventdata\":{\"data\":\"http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi.\"}}}\n{\"win\":{\"system\":{\"providerName\":\"Microsoft-Windows-CAPI2\",\"providerGuid\":\"{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}\",\"eventSourceName\":\"Microsoft-Windows-CAPI2\",\"eventID\":\"4107\",\"version\":\"0\",\"level\":\"2\",\"task\":\"0\",\"opcode\":\"0\",\"keywords\":\"0x8080000000000000\",\"systemTime\":\"2026-04-02T07:36:07.7964096Z\",\"eventRecordID\":\"1970\",\"processID\":\"1364\",\"threadID\":\"1636\",\"channel\":\"Application\",\"computer\":\"WS10\",\"severityValue\":\"ERROR\",\"message\":\"\\\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\\r\\n.\\\"\"},\"eventdata\":{\"data\":\"http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi.\"}}}",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-CAPI2",
+          "providerGuid": "{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}",
+          "eventSourceName": "Microsoft-Windows-CAPI2",
+          "eventID": "4107",
+          "version": "0",
+          "level": "2",
+          "task": "0",
+          "opcode": "0",
+          "keywords": "0x8080000000000000",
+          "systemTime": "2026-04-02T07:36:33.7222676Z",
+          "eventRecordID": "1977",
+          "processID": "1364",
+          "threadID": "1636",
+          "channel": "Application",
+          "computer": "WS10",
+          "severityValue": "ERROR",
+          "message": "\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\r\n.\""
+        },
+        "eventdata": {
+          "data": "http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi."
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-092855_20260402_092855",
+    "_captured_at_utc": "2026-04-02T07:36:34Z"
+  },
+  {
+    "timestamp": "2026-04-02T07:36:34.818+0000",
+    "rule": {
+      "level": 9,
+      "description": "Windows application error event.",
+      "id": "60602",
+      "firedtimes": 36,
+      "mail": false,
+      "groups": [
+        "windows",
+        "windows_application",
+        "system_error"
+      ],
+      "gdpr": [
+        "IV_35.7.d"
+      ],
+      "gpg13": [
+        "4.3"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775115394.832617",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-CAPI2",
+          "providerGuid": "{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}",
+          "eventSourceName": "Microsoft-Windows-CAPI2",
+          "eventID": "4107",
+          "version": "0",
+          "level": "2",
+          "task": "0",
+          "opcode": "0",
+          "keywords": "0x8080000000000000",
+          "systemTime": "2026-04-02T07:36:33.7222676Z",
+          "eventRecordID": "1978",
+          "processID": "1364",
+          "threadID": "1636",
+          "channel": "Application",
+          "computer": "WS10",
+          "severityValue": "ERROR",
+          "message": "\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\r\n.\""
+        },
+        "eventdata": {
+          "data": "http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi."
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-092855_20260402_092855",
+    "_captured_at_utc": "2026-04-02T07:36:35Z"
+  },
+  {
+    "timestamp": "2026-04-02T07:36:34.834+0000",
+    "rule": {
+      "level": 9,
+      "description": "Windows application error event.",
+      "id": "60602",
+      "firedtimes": 37,
+      "mail": false,
+      "groups": [
+        "windows",
+        "windows_application",
+        "system_error"
+      ],
+      "gdpr": [
+        "IV_35.7.d"
+      ],
+      "gpg13": [
+        "4.3"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775115394.834553",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-CAPI2",
+          "providerGuid": "{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}",
+          "eventSourceName": "Microsoft-Windows-CAPI2",
+          "eventID": "4107",
+          "version": "0",
+          "level": "2",
+          "task": "0",
+          "opcode": "0",
+          "keywords": "0x8080000000000000",
+          "systemTime": "2026-04-02T07:36:33.7375273Z",
+          "eventRecordID": "1979",
+          "processID": "1364",
+          "threadID": "1636",
+          "channel": "Application",
+          "computer": "WS10",
+          "severityValue": "ERROR",
+          "message": "\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\r\n.\""
+        },
+        "eventdata": {
+          "data": "http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi."
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-092855_20260402_092855",
+    "_captured_at_utc": "2026-04-02T07:36:35Z"
+  },
+  {
+    "timestamp": "2026-04-02T07:36:42.103+0000",
+    "rule": {
+      "level": 9,
+      "description": "Windows application error event.",
+      "id": "60602",
+      "firedtimes": 38,
+      "mail": false,
+      "groups": [
+        "windows",
+        "windows_application",
+        "system_error"
+      ],
+      "gdpr": [
+        "IV_35.7.d"
+      ],
+      "gpg13": [
+        "4.3"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775115402.836489",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-CAPI2",
+          "providerGuid": "{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}",
+          "eventSourceName": "Microsoft-Windows-CAPI2",
+          "eventID": "4107",
+          "version": "0",
+          "level": "2",
+          "task": "0",
+          "opcode": "0",
+          "keywords": "0x8080000000000000",
+          "systemTime": "2026-04-02T07:36:41.0346275Z",
+          "eventRecordID": "1980",
+          "processID": "1364",
+          "threadID": "1636",
+          "channel": "Application",
+          "computer": "WS10",
+          "severityValue": "ERROR",
+          "message": "\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\r\n.\""
+        },
+        "eventdata": {
+          "data": "http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi."
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-092855_20260402_092855",
+    "_captured_at_utc": "2026-04-02T07:36:42Z"
+  },
+  {
+    "timestamp": "2026-04-02T07:36:42.118+0000",
+    "rule": {
+      "level": 9,
+      "description": "Windows application error event.",
+      "id": "60602",
+      "firedtimes": 39,
+      "mail": false,
+      "groups": [
+        "windows",
+        "windows_application",
+        "system_error"
+      ],
+      "gdpr": [
+        "IV_35.7.d"
+      ],
+      "gpg13": [
+        "4.3"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775115402.838425",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-CAPI2",
+          "providerGuid": "{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}",
+          "eventSourceName": "Microsoft-Windows-CAPI2",
+          "eventID": "4107",
+          "version": "0",
+          "level": "2",
+          "task": "0",
+          "opcode": "0",
+          "keywords": "0x8080000000000000",
+          "systemTime": "2026-04-02T07:36:41.0595751Z",
+          "eventRecordID": "1981",
+          "processID": "1364",
+          "threadID": "1636",
+          "channel": "Application",
+          "computer": "WS10",
+          "severityValue": "ERROR",
+          "message": "\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\r\n.\""
+        },
+        "eventdata": {
+          "data": "http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi."
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-092855_20260402_092855",
+    "_captured_at_utc": "2026-04-02T07:36:42Z"
+  },
+  {
+    "timestamp": "2026-04-02T07:36:42.133+0000",
+    "rule": {
+      "level": 9,
+      "description": "Windows application error event.",
+      "id": "60602",
+      "firedtimes": 40,
+      "mail": false,
+      "groups": [
+        "windows",
+        "windows_application",
+        "system_error"
+      ],
+      "gdpr": [
+        "IV_35.7.d"
+      ],
+      "gpg13": [
+        "4.3"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775115402.840361",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-CAPI2",
+          "providerGuid": "{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}",
+          "eventSourceName": "Microsoft-Windows-CAPI2",
+          "eventID": "4107",
+          "version": "0",
+          "level": "2",
+          "task": "0",
+          "opcode": "0",
+          "keywords": "0x8080000000000000",
+          "systemTime": "2026-04-02T07:36:41.0663083Z",
+          "eventRecordID": "1982",
+          "processID": "1364",
+          "threadID": "1636",
+          "channel": "Application",
+          "computer": "WS10",
+          "severityValue": "ERROR",
+          "message": "\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\r\n.\""
+        },
+        "eventdata": {
+          "data": "http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi."
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-092855_20260402_092855",
+    "_captured_at_utc": "2026-04-02T07:36:42Z"
+  },
+  {
+    "timestamp": "2026-04-02T07:36:48.987+0000",
+    "rule": {
+      "level": 9,
+      "description": "Windows application error event.",
+      "id": "60602",
+      "firedtimes": 41,
+      "mail": false,
+      "groups": [
+        "windows",
+        "windows_application",
+        "system_error"
+      ],
+      "gdpr": [
+        "IV_35.7.d"
+      ],
+      "gpg13": [
+        "4.3"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775115408.842297",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-CAPI2",
+          "providerGuid": "{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}",
+          "eventSourceName": "Microsoft-Windows-CAPI2",
+          "eventID": "4107",
+          "version": "0",
+          "level": "2",
+          "task": "0",
+          "opcode": "0",
+          "keywords": "0x8080000000000000",
+          "systemTime": "2026-04-02T07:36:48.7159787Z",
+          "eventRecordID": "1983",
+          "processID": "1364",
+          "threadID": "1636",
+          "channel": "Application",
+          "computer": "WS10",
+          "severityValue": "ERROR",
+          "message": "\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\r\n.\""
+        },
+        "eventdata": {
+          "data": "http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi."
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-092855_20260402_092855",
+    "_captured_at_utc": "2026-04-02T07:36:49Z"
+  },
+  {
+    "timestamp": "2026-04-02T07:36:49.002+0000",
+    "rule": {
+      "level": 9,
+      "description": "Windows application error event.",
+      "id": "60602",
+      "firedtimes": 42,
+      "mail": false,
+      "groups": [
+        "windows",
+        "windows_application",
+        "system_error"
+      ],
+      "gdpr": [
+        "IV_35.7.d"
+      ],
+      "gpg13": [
+        "4.3"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775115409.844233",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-CAPI2",
+          "providerGuid": "{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}",
+          "eventSourceName": "Microsoft-Windows-CAPI2",
+          "eventID": "4107",
+          "version": "0",
+          "level": "2",
+          "task": "0",
+          "opcode": "0",
+          "keywords": "0x8080000000000000",
+          "systemTime": "2026-04-02T07:36:48.7292683Z",
+          "eventRecordID": "1984",
+          "processID": "1364",
+          "threadID": "1636",
+          "channel": "Application",
+          "computer": "WS10",
+          "severityValue": "ERROR",
+          "message": "\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\r\n.\""
+        },
+        "eventdata": {
+          "data": "http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi."
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-092855_20260402_092855",
+    "_captured_at_utc": "2026-04-02T07:36:49Z"
+  },
+  {
+    "timestamp": "2026-04-02T07:36:49.033+0000",
+    "rule": {
+      "level": 10,
+      "description": "Multiple Windows error application events.",
+      "id": "61061",
+      "frequency": 8,
+      "firedtimes": 6,
+      "mail": false,
+      "groups": [
+        "windows",
+        "windows_application"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775115409.846169",
+    "previous_output": "{\"win\":{\"system\":{\"providerName\":\"Microsoft-Windows-CAPI2\",\"providerGuid\":\"{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}\",\"eventSourceName\":\"Microsoft-Windows-CAPI2\",\"eventID\":\"4107\",\"version\":\"0\",\"level\":\"2\",\"task\":\"0\",\"opcode\":\"0\",\"keywords\":\"0x8080000000000000\",\"systemTime\":\"2026-04-02T07:36:48.7292683Z\",\"eventRecordID\":\"1984\",\"processID\":\"1364\",\"threadID\":\"1636\",\"channel\":\"Application\",\"computer\":\"WS10\",\"severityValue\":\"ERROR\",\"message\":\"\\\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\\r\\n.\\\"\"},\"eventdata\":{\"data\":\"http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi.\"}}}\n{\"win\":{\"system\":{\"providerName\":\"Microsoft-Windows-CAPI2\",\"providerGuid\":\"{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}\",\"eventSourceName\":\"Microsoft-Windows-CAPI2\",\"eventID\":\"4107\",\"version\":\"0\",\"level\":\"2\",\"task\":\"0\",\"opcode\":\"0\",\"keywords\":\"0x8080000000000000\",\"systemTime\":\"2026-04-02T07:36:48.7159787Z\",\"eventRecordID\":\"1983\",\"processID\":\"1364\",\"threadID\":\"1636\",\"channel\":\"Application\",\"computer\":\"WS10\",\"severityValue\":\"ERROR\",\"message\":\"\\\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\\r\\n.\\\"\"},\"eventdata\":{\"data\":\"http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi.\"}}}\n{\"win\":{\"system\":{\"providerName\":\"Microsoft-Windows-CAPI2\",\"providerGuid\":\"{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}\",\"eventSourceName\":\"Microsoft-Windows-CAPI2\",\"eventID\":\"4107\",\"version\":\"0\",\"level\":\"2\",\"task\":\"0\",\"opcode\":\"0\",\"keywords\":\"0x8080000000000000\",\"systemTime\":\"2026-04-02T07:36:41.0663083Z\",\"eventRecordID\":\"1982\",\"processID\":\"1364\",\"threadID\":\"1636\",\"channel\":\"Application\",\"computer\":\"WS10\",\"severityValue\":\"ERROR\",\"message\":\"\\\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\\r\\n.\\\"\"},\"eventdata\":{\"data\":\"http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi.\"}}}\n{\"win\":{\"system\":{\"providerName\":\"Microsoft-Windows-CAPI2\",\"providerGuid\":\"{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}\",\"eventSourceName\":\"Microsoft-Windows-CAPI2\",\"eventID\":\"4107\",\"version\":\"0\",\"level\":\"2\",\"task\":\"0\",\"opcode\":\"0\",\"keywords\":\"0x8080000000000000\",\"systemTime\":\"2026-04-02T07:36:41.0595751Z\",\"eventRecordID\":\"1981\",\"processID\":\"1364\",\"threadID\":\"1636\",\"channel\":\"Application\",\"computer\":\"WS10\",\"severityValue\":\"ERROR\",\"message\":\"\\\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\\r\\n.\\\"\"},\"eventdata\":{\"data\":\"http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi.\"}}}\n{\"win\":{\"system\":{\"providerName\":\"Microsoft-Windows-CAPI2\",\"providerGuid\":\"{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}\",\"eventSourceName\":\"Microsoft-Windows-CAPI2\",\"eventID\":\"4107\",\"version\":\"0\",\"level\":\"2\",\"task\":\"0\",\"opcode\":\"0\",\"keywords\":\"0x8080000000000000\",\"systemTime\":\"2026-04-02T07:36:41.0346275Z\",\"eventRecordID\":\"1980\",\"processID\":\"1364\",\"threadID\":\"1636\",\"channel\":\"Application\",\"computer\":\"WS10\",\"severityValue\":\"ERROR\",\"message\":\"\\\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\\r\\n.\\\"\"},\"eventdata\":{\"data\":\"http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi.\"}}}\n{\"win\":{\"system\":{\"providerName\":\"Microsoft-Windows-CAPI2\",\"providerGuid\":\"{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}\",\"eventSourceName\":\"Microsoft-Windows-CAPI2\",\"eventID\":\"4107\",\"version\":\"0\",\"level\":\"2\",\"task\":\"0\",\"opcode\":\"0\",\"keywords\":\"0x8080000000000000\",\"systemTime\":\"2026-04-02T07:36:33.7375273Z\",\"eventRecordID\":\"1979\",\"processID\":\"1364\",\"threadID\":\"1636\",\"channel\":\"Application\",\"computer\":\"WS10\",\"severityValue\":\"ERROR\",\"message\":\"\\\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\\r\\n.\\\"\"},\"eventdata\":{\"data\":\"http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi.\"}}}\n{\"win\":{\"system\":{\"providerName\":\"Microsoft-Windows-CAPI2\",\"providerGuid\":\"{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}\",\"eventSourceName\":\"Microsoft-Windows-CAPI2\",\"eventID\":\"4107\",\"version\":\"0\",\"level\":\"2\",\"task\":\"0\",\"opcode\":\"0\",\"keywords\":\"0x8080000000000000\",\"systemTime\":\"2026-04-02T07:36:33.7222676Z\",\"eventRecordID\":\"1978\",\"processID\":\"1364\",\"threadID\":\"1636\",\"channel\":\"Application\",\"computer\":\"WS10\",\"severityValue\":\"ERROR\",\"message\":\"\\\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\\r\\n.\\\"\"},\"eventdata\":{\"data\":\"http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi.\"}}}",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-CAPI2",
+          "providerGuid": "{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}",
+          "eventSourceName": "Microsoft-Windows-CAPI2",
+          "eventID": "4107",
+          "version": "0",
+          "level": "2",
+          "task": "0",
+          "opcode": "0",
+          "keywords": "0x8080000000000000",
+          "systemTime": "2026-04-02T07:36:48.7292683Z",
+          "eventRecordID": "1985",
+          "processID": "1364",
+          "threadID": "1636",
+          "channel": "Application",
+          "computer": "WS10",
+          "severityValue": "ERROR",
+          "message": "\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\r\n.\""
+        },
+        "eventdata": {
+          "data": "http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi."
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-092855_20260402_092855",
+    "_captured_at_utc": "2026-04-02T07:36:49Z"
+  },
+  {
+    "timestamp": "2026-04-02T07:36:57.396+0000",
+    "rule": {
+      "level": 9,
+      "description": "Windows application error event.",
+      "id": "60602",
+      "firedtimes": 43,
+      "mail": false,
+      "groups": [
+        "windows",
+        "windows_application",
+        "system_error"
+      ],
+      "gdpr": [
+        "IV_35.7.d"
+      ],
+      "gpg13": [
+        "4.3"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775115417.853762",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-CAPI2",
+          "providerGuid": "{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}",
+          "eventSourceName": "Microsoft-Windows-CAPI2",
+          "eventID": "4107",
+          "version": "0",
+          "level": "2",
+          "task": "0",
+          "opcode": "0",
+          "keywords": "0x8080000000000000",
+          "systemTime": "2026-04-02T07:36:56.3247661Z",
+          "eventRecordID": "1987",
+          "processID": "1364",
+          "threadID": "1436",
+          "channel": "Application",
+          "computer": "WS10",
+          "severityValue": "ERROR",
+          "message": "\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\r\n.\""
+        },
+        "eventdata": {
+          "data": "http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi."
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-092855_20260402_092855",
+    "_captured_at_utc": "2026-04-02T07:36:57Z"
+  },
+  {
+    "timestamp": "2026-04-02T07:36:57.396+0000",
+    "rule": {
+      "level": 9,
+      "description": "Windows application error event.",
+      "id": "60602",
+      "firedtimes": 44,
+      "mail": false,
+      "groups": [
+        "windows",
+        "windows_application",
+        "system_error"
+      ],
+      "gdpr": [
+        "IV_35.7.d"
+      ],
+      "gpg13": [
+        "4.3"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775115417.855698",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-CAPI2",
+          "providerGuid": "{5bbca4a8-b209-48dc-a8c7-b23d3e5216fb}",
+          "eventSourceName": "Microsoft-Windows-CAPI2",
+          "eventID": "4107",
+          "version": "0",
+          "level": "2",
+          "task": "0",
+          "opcode": "0",
+          "keywords": "0x8080000000000000",
+          "systemTime": "2026-04-02T07:36:56.3102596Z",
+          "eventRecordID": "1986",
+          "processID": "1364",
+          "threadID": "1436",
+          "channel": "Application",
+          "computer": "WS10",
+          "severityValue": "ERROR",
+          "message": "\"Impossibile estrarre l'elenco radice di terze parti dal file CAB di aggiornamento automatico in <http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab> a causa dell'errore seguente: Dati non validi.\r\n.\""
+        },
+        "eventdata": {
+          "data": "http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/authrootstl.cab, Dati non validi."
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-092855_20260402_092855",
+    "_captured_at_utc": "2026-04-02T07:36:57Z"
+  },
+  {
+    "timestamp": "2026-04-02T07:38:03.895+0000",
+    "rule": {
+      "level": 9,
+      "description": "Powershell process created an executable file in Windows root folder",
+      "id": "92205",
+      "mitre": {
+        "id": [
+          "T1105"
+        ],
+        "tactic": [
+          "Command and Control"
+        ],
+        "technique": [
+          "Ingress Tool Transfer"
+        ]
+      },
+      "firedtimes": 1,
+      "mail": false,
+      "groups": [
+        "sysmon",
+        "sysmon_eid11_detections",
+        "windows"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775115483.857634",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-Sysmon",
+          "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+          "eventID": "11",
+          "version": "2",
+          "level": "4",
+          "task": "11",
+          "opcode": "0",
+          "keywords": "0x8000000000000000",
+          "systemTime": "2026-04-02T07:38:02.2275039Z",
+          "eventRecordID": "454368",
+          "processID": "7940",
+          "threadID": "8064",
+          "channel": "Microsoft-Windows-Sysmon/Operational",
+          "computer": "WS10",
+          "severityValue": "INFORMATION",
+          "message": "\"File created:\r\nRuleName: -\r\nUtcTime: 2026-04-02 07:38:02.213\r\nProcessGuid: {d9a99926-1cda-69ce-4a0e-000000000600}\r\nProcessId: 7784\r\nImage: C:\\Windows\\SysWOW64\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetFilename: C:\\Windows\\SystemTemp\\__PSScriptPolicyTest_rwk4ep5f.qis.ps1\r\nCreationUtcTime: 2026-04-02 07:38:02.213\r\nUser: NT AUTHORITY\\SYSTEM\""
+        },
+        "eventdata": {
+          "utcTime": "2026-04-02 07:38:02.213",
+          "processGuid": "{d9a99926-1cda-69ce-4a0e-000000000600}",
+          "processId": "7784",
+          "image": "C:\\\\Windows\\\\SysWOW64\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+          "targetFilename": "C:\\\\Windows\\\\SystemTemp\\\\__PSScriptPolicyTest_rwk4ep5f.qis.ps1",
+          "creationUtcTime": "2026-04-02 07:38:02.213",
+          "user": "NT AUTHORITY\\\\SYSTEM"
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-092855_20260402_092855",
+    "_captured_at_utc": "2026-04-02T07:38:04Z"
+  },
+  {
+    "timestamp": "2026-04-02T07:38:11.067+0000",
+    "rule": {
+      "level": 9,
+      "description": "Powershell process created an executable file in Windows root folder",
+      "id": "92205",
+      "mitre": {
+        "id": [
+          "T1105"
+        ],
+        "tactic": [
+          "Command and Control"
+        ],
+        "technique": [
+          "Ingress Tool Transfer"
+        ]
+      },
+      "firedtimes": 2,
+      "mail": false,
+      "groups": [
+        "sysmon",
+        "sysmon_eid11_detections",
+        "windows"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775115491.860322",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-Sysmon",
+          "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+          "eventID": "11",
+          "version": "2",
+          "level": "4",
+          "task": "11",
+          "opcode": "0",
+          "keywords": "0x8000000000000000",
+          "systemTime": "2026-04-02T07:38:03.4375163Z",
+          "eventRecordID": "454770",
+          "processID": "7940",
+          "threadID": "8064",
+          "channel": "Microsoft-Windows-Sysmon/Operational",
+          "computer": "WS10",
+          "severityValue": "INFORMATION",
+          "message": "\"File created:\r\nRuleName: -\r\nUtcTime: 2026-04-02 07:38:03.432\r\nProcessGuid: {d9a99926-1cdb-69ce-4d0e-000000000600}\r\nProcessId: 2832\r\nImage: C:\\Windows\\SysWOW64\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetFilename: C:\\Windows\\SystemTemp\\__PSScriptPolicyTest_acfrauwr.vkx.ps1\r\nCreationUtcTime: 2026-04-02 07:38:03.432\r\nUser: NT AUTHORITY\\SYSTEM\""
+        },
+        "eventdata": {
+          "utcTime": "2026-04-02 07:38:03.432",
+          "processGuid": "{d9a99926-1cdb-69ce-4d0e-000000000600}",
+          "processId": "2832",
+          "image": "C:\\\\Windows\\\\SysWOW64\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+          "targetFilename": "C:\\\\Windows\\\\SystemTemp\\\\__PSScriptPolicyTest_acfrauwr.vkx.ps1",
+          "creationUtcTime": "2026-04-02 07:38:03.432",
+          "user": "NT AUTHORITY\\\\SYSTEM"
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-092855_20260402_092855",
+    "_captured_at_utc": "2026-04-02T07:38:11Z"
+  },
+  {
+    "timestamp": "2026-04-02T07:38:17.000+0000",
+    "rule": {
+      "level": 9,
+      "description": "Powershell process created an executable file in Windows root folder",
+      "id": "92205",
+      "mitre": {
+        "id": [
+          "T1105"
+        ],
+        "tactic": [
+          "Command and Control"
+        ],
+        "technique": [
+          "Ingress Tool Transfer"
+        ]
+      },
+      "firedtimes": 3,
+      "mail": false,
+      "groups": [
+        "sysmon",
+        "sysmon_eid11_detections",
+        "windows"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775115497.863010",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-Sysmon",
+          "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+          "eventID": "11",
+          "version": "2",
+          "level": "4",
+          "task": "11",
+          "opcode": "0",
+          "keywords": "0x8000000000000000",
+          "systemTime": "2026-04-02T07:38:04.5965579Z",
+          "eventRecordID": "455112",
+          "processID": "7940",
+          "threadID": "8064",
+          "channel": "Microsoft-Windows-Sysmon/Operational",
+          "computer": "WS10",
+          "severityValue": "INFORMATION",
+          "message": "\"File created:\r\nRuleName: -\r\nUtcTime: 2026-04-02 07:38:04.588\r\nProcessGuid: {d9a99926-1cdc-69ce-500e-000000000600}\r\nProcessId: 9664\r\nImage: C:\\Windows\\SysWOW64\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetFilename: C:\\Windows\\SystemTemp\\__PSScriptPolicyTest_25k1whw2.ckf.ps1\r\nCreationUtcTime: 2026-04-02 07:38:04.588\r\nUser: NT AUTHORITY\\SYSTEM\""
+        },
+        "eventdata": {
+          "utcTime": "2026-04-02 07:38:04.588",
+          "processGuid": "{d9a99926-1cdc-69ce-500e-000000000600}",
+          "processId": "9664",
+          "image": "C:\\\\Windows\\\\SysWOW64\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+          "targetFilename": "C:\\\\Windows\\\\SystemTemp\\\\__PSScriptPolicyTest_25k1whw2.ckf.ps1",
+          "creationUtcTime": "2026-04-02 07:38:04.588",
+          "user": "NT AUTHORITY\\\\SYSTEM"
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-092855_20260402_092855",
+    "_captured_at_utc": "2026-04-02T07:38:17Z"
+  },
+  {
+    "timestamp": "2026-04-02T07:38:22.428+0000",
+    "rule": {
+      "level": 9,
+      "description": "Powershell process created an executable file in Windows root folder",
+      "id": "92205",
+      "mitre": {
+        "id": [
+          "T1105"
+        ],
+        "tactic": [
+          "Command and Control"
+        ],
+        "technique": [
+          "Ingress Tool Transfer"
+        ]
+      },
+      "firedtimes": 4,
+      "mail": false,
+      "groups": [
+        "sysmon",
+        "sysmon_eid11_detections",
+        "windows"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775115502.865698",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-Sysmon",
+          "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+          "eventID": "11",
+          "version": "2",
+          "level": "4",
+          "task": "11",
+          "opcode": "0",
+          "keywords": "0x8000000000000000",
+          "systemTime": "2026-04-02T07:38:05.8006434Z",
+          "eventRecordID": "455430",
+          "processID": "7940",
+          "threadID": "8064",
+          "channel": "Microsoft-Windows-Sysmon/Operational",
+          "computer": "WS10",
+          "severityValue": "INFORMATION",
+          "message": "\"File created:\r\nRuleName: -\r\nUtcTime: 2026-04-02 07:38:05.791\r\nProcessGuid: {d9a99926-1cdd-69ce-530e-000000000600}\r\nProcessId: 8212\r\nImage: C:\\Windows\\SysWOW64\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetFilename: C:\\Windows\\SystemTemp\\__PSScriptPolicyTest_1rkzap0n.zgn.ps1\r\nCreationUtcTime: 2026-04-02 07:38:05.791\r\nUser: NT AUTHORITY\\SYSTEM\""
+        },
+        "eventdata": {
+          "utcTime": "2026-04-02 07:38:05.791",
+          "processGuid": "{d9a99926-1cdd-69ce-530e-000000000600}",
+          "processId": "8212",
+          "image": "C:\\\\Windows\\\\SysWOW64\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+          "targetFilename": "C:\\\\Windows\\\\SystemTemp\\\\__PSScriptPolicyTest_1rkzap0n.zgn.ps1",
+          "creationUtcTime": "2026-04-02 07:38:05.791",
+          "user": "NT AUTHORITY\\\\SYSTEM"
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-092855_20260402_092855",
+    "_captured_at_utc": "2026-04-02T07:38:22Z"
+  },
+  {
+    "timestamp": "2026-04-02T07:38:28.517+0000",
+    "rule": {
+      "level": 9,
+      "description": "Powershell process created an executable file in Windows root folder",
+      "id": "92205",
+      "mitre": {
+        "id": [
+          "T1105"
+        ],
+        "tactic": [
+          "Command and Control"
+        ],
+        "technique": [
+          "Ingress Tool Transfer"
+        ]
+      },
+      "firedtimes": 5,
+      "mail": false,
+      "groups": [
+        "sysmon",
+        "sysmon_eid11_detections",
+        "windows"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775115508.868386",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-Sysmon",
+          "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+          "eventID": "11",
+          "version": "2",
+          "level": "4",
+          "task": "11",
+          "opcode": "0",
+          "keywords": "0x8000000000000000",
+          "systemTime": "2026-04-02T07:38:06.9883876Z",
+          "eventRecordID": "455796",
+          "processID": "7940",
+          "threadID": "8064",
+          "channel": "Microsoft-Windows-Sysmon/Operational",
+          "computer": "WS10",
+          "severityValue": "INFORMATION",
+          "message": "\"File created:\r\nRuleName: -\r\nUtcTime: 2026-04-02 07:38:06.979\r\nProcessGuid: {d9a99926-1cde-69ce-560e-000000000600}\r\nProcessId: 4276\r\nImage: C:\\Windows\\SysWOW64\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetFilename: C:\\Windows\\SystemTemp\\__PSScriptPolicyTest_jxguaqt3.e5s.ps1\r\nCreationUtcTime: 2026-04-02 07:38:06.979\r\nUser: NT AUTHORITY\\SYSTEM\""
+        },
+        "eventdata": {
+          "utcTime": "2026-04-02 07:38:06.979",
+          "processGuid": "{d9a99926-1cde-69ce-560e-000000000600}",
+          "processId": "4276",
+          "image": "C:\\\\Windows\\\\SysWOW64\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+          "targetFilename": "C:\\\\Windows\\\\SystemTemp\\\\__PSScriptPolicyTest_jxguaqt3.e5s.ps1",
+          "creationUtcTime": "2026-04-02 07:38:06.979",
+          "user": "NT AUTHORITY\\\\SYSTEM"
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-092855_20260402_092855",
+    "_captured_at_utc": "2026-04-02T07:38:28Z"
+  },
+  {
+    "timestamp": "2026-04-02T07:38:34.343+0000",
+    "rule": {
+      "level": 9,
+      "description": "Powershell process created an executable file in Windows root folder",
+      "id": "92205",
+      "mitre": {
+        "id": [
+          "T1105"
+        ],
+        "tactic": [
+          "Command and Control"
+        ],
+        "technique": [
+          "Ingress Tool Transfer"
+        ]
+      },
+      "firedtimes": 6,
+      "mail": false,
+      "groups": [
+        "sysmon",
+        "sysmon_eid11_detections",
+        "windows"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775115514.871074",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-Sysmon",
+          "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+          "eventID": "11",
+          "version": "2",
+          "level": "4",
+          "task": "11",
+          "opcode": "0",
+          "keywords": "0x8000000000000000",
+          "systemTime": "2026-04-02T07:38:08.2267338Z",
+          "eventRecordID": "456143",
+          "processID": "7940",
+          "threadID": "8064",
+          "channel": "Microsoft-Windows-Sysmon/Operational",
+          "computer": "WS10",
+          "severityValue": "INFORMATION",
+          "message": "\"File created:\r\nRuleName: -\r\nUtcTime: 2026-04-02 07:38:08.213\r\nProcessGuid: {d9a99926-1ce0-69ce-590e-000000000600}\r\nProcessId: 9272\r\nImage: C:\\Windows\\SysWOW64\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetFilename: C:\\Windows\\SystemTemp\\__PSScriptPolicyTest_gf4r5e1x.juj.ps1\r\nCreationUtcTime: 2026-04-02 07:38:08.213\r\nUser: NT AUTHORITY\\SYSTEM\""
+        },
+        "eventdata": {
+          "utcTime": "2026-04-02 07:38:08.213",
+          "processGuid": "{d9a99926-1ce0-69ce-590e-000000000600}",
+          "processId": "9272",
+          "image": "C:\\\\Windows\\\\SysWOW64\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+          "targetFilename": "C:\\\\Windows\\\\SystemTemp\\\\__PSScriptPolicyTest_gf4r5e1x.juj.ps1",
+          "creationUtcTime": "2026-04-02 07:38:08.213",
+          "user": "NT AUTHORITY\\\\SYSTEM"
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-092855_20260402_092855",
+    "_captured_at_utc": "2026-04-02T07:38:34Z"
+  },
+  {
+    "timestamp": "2026-04-02T07:38:39.825+0000",
+    "rule": {
+      "level": 9,
+      "description": "Powershell process created an executable file in Windows root folder",
+      "id": "92205",
+      "mitre": {
+        "id": [
+          "T1105"
+        ],
+        "tactic": [
+          "Command and Control"
+        ],
+        "technique": [
+          "Ingress Tool Transfer"
+        ]
+      },
+      "firedtimes": 7,
+      "mail": false,
+      "groups": [
+        "sysmon",
+        "sysmon_eid11_detections",
+        "windows"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775115519.873762",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-Sysmon",
+          "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+          "eventID": "11",
+          "version": "2",
+          "level": "4",
+          "task": "11",
+          "opcode": "0",
+          "keywords": "0x8000000000000000",
+          "systemTime": "2026-04-02T07:38:09.3900682Z",
+          "eventRecordID": "456462",
+          "processID": "7940",
+          "threadID": "8064",
+          "channel": "Microsoft-Windows-Sysmon/Operational",
+          "computer": "WS10",
+          "severityValue": "INFORMATION",
+          "message": "\"File created:\r\nRuleName: -\r\nUtcTime: 2026-04-02 07:38:09.385\r\nProcessGuid: {d9a99926-1ce1-69ce-5c0e-000000000600}\r\nProcessId: 6092\r\nImage: C:\\Windows\\SysWOW64\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetFilename: C:\\Windows\\SystemTemp\\__PSScriptPolicyTest_e5olvk1n.dbo.ps1\r\nCreationUtcTime: 2026-04-02 07:38:09.385\r\nUser: NT AUTHORITY\\SYSTEM\""
+        },
+        "eventdata": {
+          "utcTime": "2026-04-02 07:38:09.385",
+          "processGuid": "{d9a99926-1ce1-69ce-5c0e-000000000600}",
+          "processId": "6092",
+          "image": "C:\\\\Windows\\\\SysWOW64\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+          "targetFilename": "C:\\\\Windows\\\\SystemTemp\\\\__PSScriptPolicyTest_e5olvk1n.dbo.ps1",
+          "creationUtcTime": "2026-04-02 07:38:09.385",
+          "user": "NT AUTHORITY\\\\SYSTEM"
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-092855_20260402_092855",
+    "_captured_at_utc": "2026-04-02T07:38:40Z"
+  },
+  {
+    "timestamp": "2026-04-02T07:38:45.472+0000",
+    "rule": {
+      "level": 9,
+      "description": "Powershell process created an executable file in Windows root folder",
+      "id": "92205",
+      "mitre": {
+        "id": [
+          "T1105"
+        ],
+        "tactic": [
+          "Command and Control"
+        ],
+        "technique": [
+          "Ingress Tool Transfer"
+        ]
+      },
+      "firedtimes": 8,
+      "mail": false,
+      "groups": [
+        "sysmon",
+        "sysmon_eid11_detections",
+        "windows"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775115525.876450",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-Sysmon",
+          "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+          "eventID": "11",
+          "version": "2",
+          "level": "4",
+          "task": "11",
+          "opcode": "0",
+          "keywords": "0x8000000000000000",
+          "systemTime": "2026-04-02T07:38:10.6208174Z",
+          "eventRecordID": "456803",
+          "processID": "7940",
+          "threadID": "8064",
+          "channel": "Microsoft-Windows-Sysmon/Operational",
+          "computer": "WS10",
+          "severityValue": "INFORMATION",
+          "message": "\"File created:\r\nRuleName: -\r\nUtcTime: 2026-04-02 07:38:10.619\r\nProcessGuid: {d9a99926-1ce2-69ce-5f0e-000000000600}\r\nProcessId: 9944\r\nImage: C:\\Windows\\SysWOW64\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetFilename: C:\\Windows\\SystemTemp\\__PSScriptPolicyTest_evwouyhb.yvp.ps1\r\nCreationUtcTime: 2026-04-02 07:38:10.619\r\nUser: NT AUTHORITY\\SYSTEM\""
+        },
+        "eventdata": {
+          "utcTime": "2026-04-02 07:38:10.619",
+          "processGuid": "{d9a99926-1ce2-69ce-5f0e-000000000600}",
+          "processId": "9944",
+          "image": "C:\\\\Windows\\\\SysWOW64\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+          "targetFilename": "C:\\\\Windows\\\\SystemTemp\\\\__PSScriptPolicyTest_evwouyhb.yvp.ps1",
+          "creationUtcTime": "2026-04-02 07:38:10.619",
+          "user": "NT AUTHORITY\\\\SYSTEM"
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-092855_20260402_092855",
+    "_captured_at_utc": "2026-04-02T07:38:45Z"
+  }
+]

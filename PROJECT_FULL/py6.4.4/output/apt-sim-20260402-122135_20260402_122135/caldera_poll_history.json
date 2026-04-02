@@ -1,0 +1,212 @@
+[
+  {
+    "ts": "2026-04-02T10:21:52Z",
+    "state": "running",
+    "links": 10,
+    "potential_links": 11240,
+    "event_logs": 0
+  },
+  {
+    "ts": "2026-04-02T10:22:12Z",
+    "state": "running",
+    "links": 10,
+    "potential_links": 11240,
+    "event_logs": 0
+  },
+  {
+    "ts": "2026-04-02T10:22:30Z",
+    "state": "running",
+    "links": 10,
+    "potential_links": 11240,
+    "event_logs": 0
+  },
+  {
+    "ts": "2026-04-02T10:22:49Z",
+    "state": "running",
+    "links": 10,
+    "potential_links": 11240,
+    "event_logs": 0
+  },
+  {
+    "ts": "2026-04-02T10:23:09Z",
+    "state": "running",
+    "links": 20,
+    "potential_links": 11240,
+    "event_logs": 0
+  },
+  {
+    "ts": "2026-04-02T10:23:29Z",
+    "state": "running",
+    "links": 20,
+    "potential_links": 11240,
+    "event_logs": 0
+  },
+  {
+    "ts": "2026-04-02T10:23:49Z",
+    "state": "running",
+    "links": 20,
+    "potential_links": 11240,
+    "event_logs": 0
+  },
+  {
+    "ts": "2026-04-02T10:24:08Z",
+    "state": "running",
+    "links": 30,
+    "potential_links": 11240,
+    "event_logs": 0
+  },
+  {
+    "ts": "2026-04-02T10:24:27Z",
+    "state": "running",
+    "links": 30,
+    "potential_links": 11240,
+    "event_logs": 0
+  },
+  {
+    "ts": "2026-04-02T10:24:47Z",
+    "state": "running",
+    "links": 30,
+    "potential_links": 11240,
+    "event_logs": 0
+  },
+  {
+    "ts": "2026-04-02T10:25:08Z",
+    "state": "running",
+    "links": 40,
+    "potential_links": 11240,
+    "event_logs": 0
+  },
+  {
+    "ts": "2026-04-02T10:25:28Z",
+    "state": "running",
+    "links": 40,
+    "potential_links": 11240,
+    "event_logs": 0
+  },
+  {
+    "ts": "2026-04-02T10:25:49Z",
+    "state": "running",
+    "links": 40,
+    "potential_links": 11240,
+    "event_logs": 0
+  },
+  {
+    "ts": "2026-04-02T10:26:09Z",
+    "state": "running",
+    "links": 50,
+    "potential_links": 11240,
+    "event_logs": 0
+  },
+  {
+    "ts": "2026-04-02T10:26:29Z",
+    "state": "running",
+    "links": 50,
+    "potential_links": 11240,
+    "event_logs": 0
+  },
+  {
+    "ts": "2026-04-02T10:26:48Z",
+    "state": "running",
+    "links": 50,
+    "potential_links": 11240,
+    "event_logs": 0
+  },
+  {
+    "ts": "2026-04-02T10:27:08Z",
+    "state": "running",
+    "links": 50,
+    "potential_links": 11240,
+    "event_logs": 0
+  },
+  {
+    "ts": "2026-04-02T10:27:28Z",
+    "state": "running",
+    "links": 50,
+    "potential_links": 11240,
+    "event_logs": 0
+  },
+  {
+    "ts": "2026-04-02T10:27:48Z",
+    "state": "running",
+    "links": 60,
+    "potential_links": 11240,
+    "event_logs": 0
+  },
+  {
+    "ts": "2026-04-02T10:28:07Z",
+    "state": "running",
+    "links": 60,
+    "potential_links": 11240,
+    "event_logs": 0
+  },
+  {
+    "ts": "2026-04-02T10:28:27Z",
+    "state": "running",
+    "links": 60,
+    "potential_links": 11240,
+    "event_logs": 0
+  },
+  {
+    "ts": "2026-04-02T10:28:47Z",
+    "state": "cleanup",
+    "links": 80,
+    "potential_links": 11240,
+    "event_logs": 0
+  },
+  {
+    "ts": "2026-04-02T10:29:07Z",
+    "state": "cleanup",
+    "links": 80,
+    "potential_links": 11240,
+    "event_logs": 0
+  },
+  {
+    "ts": "2026-04-02T10:29:27Z",
+    "state": "cleanup",
+    "links": 80,
+    "potential_links": 11240,
+    "event_logs": 0
+  },
+  {
+    "ts": "2026-04-02T10:29:48Z",
+    "state": "cleanup",
+    "links": 80,
+    "potential_links": 11240,
+    "event_logs": 0
+  },
+  {
+    "ts": "2026-04-02T10:30:07Z",
+    "state": "cleanup",
+    "links": 80,
+    "potential_links": 11240,
+    "event_logs": 0
+  },
+  {
+    "ts": "2026-04-02T10:30:27Z",
+    "state": "cleanup",
+    "links": 80,
+    "potential_links": 11240,
+    "event_logs": 0
+  },
+  {
+    "ts": "2026-04-02T10:30:47Z",
+    "state": "cleanup",
+    "links": 80,
+    "potential_links": 11240,
+    "event_logs": 0
+  },
+  {
+    "ts": "2026-04-02T10:31:06Z",
+    "state": "cleanup",
+    "links": 80,
+    "potential_links": 11240,
+    "event_logs": 0
+  },
+  {
+    "ts": "2026-04-02T10:31:25Z",
+    "state": "cleanup",
+    "links": 80,
+    "potential_links": 11240,
+    "event_logs": 0
+  }
+]

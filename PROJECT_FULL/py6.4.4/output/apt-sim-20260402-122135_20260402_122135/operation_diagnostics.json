@@ -1,0 +1,24 @@
+{
+  "api_mode": "v2",
+  "operation_id": "f6a96605-8f82-4273-8a26-00104e4eac08",
+  "operation_name": "apt-sim-20260402-122135",
+  "operation_state": "cleanup",
+  "selected_agent_paw": "zqahqp",
+  "selected_group": "red",
+  "host_group_count": 12,
+  "compatible_count": 8,
+  "referenced_ability_count": 8,
+  "links_total": 80,
+  "links_relevant_to_selected_agent": 8,
+  "potential_links_total": 11240,
+  "event_logs_total": 0,
+  "report_present": false,
+  "link_status_counts": {
+    "0": 6,
+    "1": 2
+  },
+  "errors": {},
+  "probable_causes": [
+    "Operation in stato cleanup, non propriamente in esecuzione."
+  ]
+}

@@ -12,12 +12,6 @@ Le attività sono state condotte in modo incrementale. Ogni fase ha richiesto ve
 26/03/2026 12:00	Studio interfacce API
 [Analisi tecnica Caldera]	Esame del funzionamento delle API REST di MITRE Caldera, della documentazione e delle modalità di autenticazione. Chiariti i concetti di endpoint, API key, import di adversary e gestione abilities.	Consolidata la base tecnica per l'orchestrazione automatica degli attacchi.
 
-30/03/2026 18:00	Installazione T-Pot CE
-[Espansione del laboratorio]	Avvio dell'installazione di T-Pot CE come componente honeypot del laboratorio. Analisi dei container e del loro stato operativo.	Integrazione del modulo deception/honeypot nel perimetro di test.
-
-30/03/2026 21:00	Verifica container T-Pot
-[Troubleshooting]	Rilevazione di criticità sui permessi e su alcune directory nginx durante l'avvio dei servizi del cluster T-Pot.	Sistema avviato in forma parziale; aperta fase di correzione operativa.
-
 31/03/2026 08:00	Configurazione Wazuh
 [Blue Team enablement]	Attivazione dei log lato Wazuh server, verifica archivi, controllo dell'indice e della visibilità degli eventi nella GUI.	Log presenti sul filesystem ma non correttamente esposti in Discovery.
 
@@ -36,7 +30,7 @@ Le attività sono state condotte in modo incrementale. Ogni fase ha richiesto ve
 01/04/2026 11:00	Import APT e adversary
 [Threat emulation]	Valutazione dell'importazione di APT da MITRE, studio del dataset e verifica del caricamento delle abilities in Caldera.	Confermato il percorso per caricare APT29 tramite script Python.
 
-01/04/2026 14:00	Versione 6.4 script
+01/04/2026 14:00	Versione 6.4 script [PROJECT FULL]
 [Sviluppo]	Produzione delle revisioni 6.4, 6.4.1, 6.4.2 e 6.4.3 dello script per automatizzare attacco, monitoraggio e reporting.	Ottenuta una base di lavoro coerente, ma con criticità residue su ordine di esecuzione abilities e reportistica.
 
 01/04/2026 19:21	Versione 6_4_3
@@ -68,3 +62,4 @@ Il momento di maturazione del progetto coincide con l’attivazione di un attacc
    Criticità residue e sviluppi futuri:
    Permangono margini di miglioramento nella stabilità di alcune abilities, nell’ordine di esecuzione degli attacchi, nella robustezza del parsing lato monitor e nella piena automazione della generazione del CAD difensivo. Tuttavia, l’ossatura del progetto è ormai definita: non un semplice laboratorio di test, ma un banco di prova per una difesa capace di leggere il nemico mentre si muove.
 Permangono margini di miglioramento nella stabilità di alcune abilities, nell’ordine di esecuzione degli attacchi, nella robustezza del parsing lato monitor e nella piena automazione della generazione del CAD difensivo. Tuttavia, l’ossatura del progetto è ormai definita: non un semplice laboratorio di test, ma un banco di prova per una difesa capace di leggere il nemico mentre si muove.
+

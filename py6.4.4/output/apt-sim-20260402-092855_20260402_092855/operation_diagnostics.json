@@ -1,0 +1,23 @@
+{
+  "api_mode": "v2",
+  "operation_id": "acbbe1c8-2780-4451-86ce-71a7362e7986",
+  "operation_name": "apt-sim-20260402-092855",
+  "operation_state": "finished",
+  "selected_agent_paw": "fgdafj",
+  "selected_group": "red",
+  "host_group_count": 1,
+  "compatible_count": 3,
+  "referenced_ability_count": 3,
+  "links_total": 2,
+  "links_relevant_to_selected_agent": 2,
+  "potential_links_total": 0,
+  "event_logs_total": 0,
+  "report_present": false,
+  "link_status_counts": {
+    "0": 2
+  },
+  "errors": {},
+  "probable_causes": [
+    "Operation in stato finished, non propriamente in esecuzione."
+  ]
+}

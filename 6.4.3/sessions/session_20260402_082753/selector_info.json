@@ -1,0 +1,6 @@
+{
+  "api_mode": "legacy",
+  "agent_platform": "windows",
+  "agent_executor": "psh",
+  "agent_group": "red"
+}

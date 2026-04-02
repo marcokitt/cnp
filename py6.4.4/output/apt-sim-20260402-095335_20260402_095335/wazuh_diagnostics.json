@@ -1,0 +1,35 @@
+{
+  "total_lines_seen": 21,
+  "matched_lines_seen": 17,
+  "unmatched_lines_seen": 4,
+  "target_markers": [
+    "192.168.30.24",
+    "C:\\Users\\Public\\splunkd.exe",
+    "WS10",
+    "WS10$WS10\\Administrator",
+    "WS10\\Administrator",
+    "fgdafj"
+  ],
+  "unmatched_samples": [
+    {
+      "ts": "2026-04-02T07:53:37.624+0000",
+      "src": "unknown",
+      "preview": "PAM: Login session opened."
+    },
+    {
+      "ts": "2026-04-02T07:53:37.624+0000",
+      "src": "192.168.30.14",
+      "preview": "sshd: authentication success."
+    },
+    {
+      "ts": "2026-04-02T07:53:37.624+0000",
+      "src": "unknown",
+      "preview": "PAM: Login session opened."
+    },
+    {
+      "ts": "2026-04-02T07:53:37.624+0000",
+      "src": "unknown",
+      "preview": "Successful sudo to ROOT executed."
+    }
+  ]
+}

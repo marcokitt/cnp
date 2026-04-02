@@ -1,0 +1,65 @@
+{
+  "agent_paw": "fgdafj",
+  "agent_host": "WS10",
+  "agent_platform": "windows",
+  "agent_executors": [
+    "cmd",
+    "psh",
+    "proc"
+  ],
+  "adversary_id": "temp-seed-fgdafj-1775113326",
+  "adversary_name": "Temp Seed Windows - Alice 2.0",
+  "referenced_ability_count": 3,
+  "compatible_count": 3,
+  "incompatible_count": 0,
+  "missing_count": 0,
+  "fixed_embedded_count": 0,
+  "compatible": [
+    {
+      "ability_id": "13379ae1-d20e-4162-91f8-320d78a35e7f",
+      "name": "Discover local hosts",
+      "tactic": "discovery",
+      "technique_id": "T1018",
+      "resolution": "live",
+      "reason": "compatible",
+      "noisy_score": 3,
+      "windows_command": "Import-Module .\\powerview.ps1;\nGet-DomainComputer",
+      "has_requirements": false,
+      "unresolved_placeholders": [],
+      "seed_ready": true,
+      "seed_reason": "seed-ready"
+    },
+    {
+      "ability_id": "14a21534-350f-4d83-9dd7-3c56b93a0c17",
+      "name": "Find Domain",
+      "tactic": "discovery",
+      "technique_id": "T1016",
+      "resolution": "live",
+      "reason": "compatible",
+      "noisy_score": 3,
+      "windows_command": "nbtstat -n",
+      "has_requirements": false,
+      "unresolved_placeholders": [],
+      "seed_ready": true,
+      "seed_reason": "seed-ready"
+    },
+    {
+      "ability_id": "7049e3ec-b822-4fdf-a4ac-18190f9b66d1",
+      "name": "Powerkatz (Staged)",
+      "tactic": "credential-access",
+      "technique_id": "T1003.001",
+      "resolution": "live",
+      "reason": "compatible",
+      "noisy_score": 1,
+      "windows_command": "Import-Module .\\invoke-mimi.ps1;\nInvoke-Mimikatz -DumpCreds",
+      "has_requirements": false,
+      "unresolved_placeholders": [],
+      "seed_ready": true,
+      "seed_reason": "seed-ready"
+    }
+  ],
+  "incompatible": [],
+  "missing": [],
+  "noisy_only_mode": true,
+  "seed_only_mode": true
+}

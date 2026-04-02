@@ -1,0 +1,230 @@
+[
+  {
+    "id": "0e9cb243-575c-4f38-be09-b36e9d5a3860",
+    "paw": "fgdafj",
+    "command": "Import-Module .\\powerview.ps1;Get-DomainComputer",
+    "plaintext_command": "Import-Module .\\powerview.ps1;Get-DomainComputer",
+    "status": 0,
+    "score": 0,
+    "decide": "2026-04-02T07:28:55Z",
+    "pin": 0,
+    "pid": "7188",
+    "facts": [],
+    "relationships": [],
+    "used": [],
+    "unique": "0e9cb243-575c-4f38-be09-b36e9d5a3860",
+    "collect": "2026-04-02T07:29:14Z",
+    "finish": "2026-04-02T07:29:27Z",
+    "ability": {
+      "ability_id": "13379ae1-d20e-4162-91f8-320d78a35e7f",
+      "tactic": "discovery",
+      "technique_name": "Remote System Discovery",
+      "technique_id": "T1018",
+      "name": "Discover local hosts",
+      "description": "Use PowerView to query the Active Directory server for a list of computers in the Domain",
+      "executors": [
+        {
+          "name": "psh",
+          "platform": "windows",
+          "command": "Import-Module .\\powerview.ps1;\nGet-DomainComputer",
+          "code": null,
+          "language": null,
+          "build_target": null,
+          "payloads": [
+            "powerview.ps1"
+          ],
+          "uploads": [],
+          "timeout": 60,
+          "parsers": [
+            {
+              "module": "plugins.stockpile.app.parsers.gdomain",
+              "parserconfigs": [
+                {
+                  "source": "remote.host.fqdn",
+                  "edge": "",
+                  "target": "",
+                  "custom_parser_vals": {}
+                }
+              ]
+            }
+          ],
+          "cleanup": [],
+          "variations": [],
+          "additional_info": {}
+        }
+      ],
+      "requirements": [],
+      "privilege": null,
+      "repeatable": false,
+      "buckets": [
+        "discovery"
+      ],
+      "additional_info": {},
+      "access": {},
+      "singleton": false,
+      "plugin": "stockpile",
+      "delete_payload": true
+    },
+    "executor": {
+      "name": "psh",
+      "platform": "windows",
+      "command": "Import-Module .\\powerview.ps1;\nGet-DomainComputer",
+      "code": null,
+      "language": null,
+      "build_target": null,
+      "payloads": [
+        "powerview.ps1"
+      ],
+      "uploads": [],
+      "timeout": 60,
+      "parsers": [
+        {
+          "module": "plugins.stockpile.app.parsers.gdomain",
+          "parserconfigs": [
+            {
+              "source": "remote.host.fqdn",
+              "edge": "",
+              "target": "",
+              "custom_parser_vals": {}
+            }
+          ]
+        }
+      ],
+      "cleanup": [],
+      "variations": [],
+      "additional_info": {}
+    },
+    "cleanup": 0,
+    "visibility": {
+      "score": 50,
+      "adjustments": []
+    },
+    "host": "WS10",
+    "output": "True",
+    "deadman": false,
+    "agent_reported_time": "2026-04-02T07:29:20Z"
+  },
+  {
+    "id": "f74c756d-3b55-4762-8bd0-fa5686edb25d",
+    "paw": "fgdafj",
+    "command": "[System.Net.Dns]::GetHostByName($env:computerName).HostName",
+    "plaintext_command": "[System.Net.Dns]::GetHostByName($env:computerName).HostName",
+    "status": 0,
+    "score": 0,
+    "decide": "2026-04-02T07:29:28Z",
+    "pin": 0,
+    "pid": "6504",
+    "facts": [
+      {
+        "unique": "local.host.fqdnWS10",
+        "trait": "local.host.fqdn",
+        "name": "local.host.fqdn",
+        "value": "WS10",
+        "created": "2026-04-02T07:30:14Z",
+        "score": 1,
+        "source": "acbbe1c8-2780-4451-86ce-71a7362e7986",
+        "origin_type": "LEARNED",
+        "links": [
+          "f74c756d-3b55-4762-8bd0-fa5686edb25d"
+        ],
+        "relationships": [
+          "local.host.fqdn(WS10)"
+        ],
+        "limit_count": -1,
+        "collected_by": [
+          "fgdafj"
+        ],
+        "technique_id": "TA0007"
+      }
+    ],
+    "relationships": [],
+    "used": [],
+    "unique": "f74c756d-3b55-4762-8bd0-fa5686edb25d",
+    "collect": "2026-04-02T07:30:13Z",
+    "finish": "2026-04-02T07:30:14Z",
+    "ability": {
+      "ability_id": "74d1b640-7f1e-4b36-beba-23a8228f39e0",
+      "tactic": "discovery",
+      "technique_name": "host discovery",
+      "technique_id": "TA0007",
+      "name": "Local FQDN",
+      "description": "Uses windows libraries to get FQDN of infected host",
+      "executors": [
+        {
+          "name": "psh",
+          "platform": "windows",
+          "command": "[System.Net.Dns]::GetHostByName($env:computerName).HostName",
+          "code": null,
+          "language": null,
+          "build_target": null,
+          "payloads": [],
+          "uploads": [],
+          "timeout": 60,
+          "parsers": [
+            {
+              "module": "plugins.stockpile.app.parsers.basic",
+              "parserconfigs": [
+                {
+                  "source": "local.host.fqdn",
+                  "edge": "",
+                  "target": "",
+                  "custom_parser_vals": {}
+                }
+              ]
+            }
+          ],
+          "cleanup": [],
+          "variations": [],
+          "additional_info": {}
+        }
+      ],
+      "requirements": [],
+      "privilege": "",
+      "repeatable": false,
+      "buckets": [],
+      "additional_info": {
+        "cleanup": "[]"
+      },
+      "access": {},
+      "singleton": true,
+      "plugin": "stockpile",
+      "delete_payload": false
+    },
+    "executor": {
+      "name": "psh",
+      "platform": "windows",
+      "command": "[System.Net.Dns]::GetHostByName($env:computerName).HostName",
+      "code": null,
+      "language": null,
+      "build_target": null,
+      "payloads": [],
+      "uploads": [],
+      "timeout": 60,
+      "parsers": [
+        {
+          "module": "plugins.stockpile.app.parsers.basic",
+          "parserconfigs": [
+            {
+              "source": "local.host.fqdn",
+              "edge": "",
+              "target": "",
+              "custom_parser_vals": {}
+            }
+          ]
+        }
+      ],
+      "cleanup": [],
+      "variations": [],
+      "additional_info": {}
+    },
+    "cleanup": 0,
+    "visibility": {
+      "score": 50,
+      "adjustments": []
+    },
+    "host": "WS10",
+    "output": "True",
+    "deadman": false,
+    "agent_reported_time": "2026-04-02T07:30:13Z"
+  }
+]
